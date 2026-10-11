@@ -1,0 +1,211 @@
+'use client';
+
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+interface ArcNode {
+  year: number;
+  label: string;
+  slug: string;
+  chapterNumber: number;
+  chapterTitle: string;
+  summary: string;
+  isLandmark?: boolean;
+}
+
+const ARC_NODES: ArcNode[] = [
+  {
+    year: 1945,
+    label: 'DRV Proclamation',
+    slug: 'french-indochina-dien-bien-phu',
+    chapterNumber: 1,
+    chapterTitle: 'French Indochina & Dien Bien Phu',
+    summary: 'Ho Chi Minh proclaims independence; France moves to restore colonial sovereignty.',
+    isLandmark: false,
+  },
+  {
+    year: 1954,
+    label: 'Dien Bien Phu',
+    slug: 'french-indochina-dien-bien-phu',
+    chapterNumber: 1,
+    chapterTitle: 'French Indochina & Dien Bien Phu',
+    summary: 'Cataclysmic 55-day siege shatters French colonial rule on the eve of Geneva.',
+    isLandmark: true,
+  },
+  {
+    year: 1956,
+    label: 'Partition Hardens',
+    slug: 'geneva-south-vietnam',
+    chapterNumber: 2,
+    chapterTitle: 'Geneva & The Creation of South Vietnam',
+    summary: 'Nationwide reunification elections are aborted; North and South harden into separate Cold War states.',
+    isLandmark: false,
+  },
+  {
+    year: 1963,
+    label: 'Ap Bac & Diem Coup',
+    slug: 'kennedy-and-diem',
+    chapterNumber: 3,
+    chapterTitle: 'Kennedy, Counterinsurgency, & Diem',
+    summary: 'U.S. advisory commitment expands to 16,300; Diem is overthrown and assassinated.',
+    isLandmark: false,
+  },
+  {
+    year: 1964,
+    label: 'Gulf of Tonkin',
+    slug: 'gulf-of-tonkin',
+    chapterNumber: 4,
+    chapterTitle: 'The Gulf of Tonkin: Pretext & Blank Check',
+    summary: 'Contested naval incidents lead Congress to grant LBJ broad war-making authorization.',
+    isLandmark: true,
+  },
+  {
+    year: 1965,
+    label: 'Rolling Thunder',
+    slug: 'americanization-attrition',
+    chapterNumber: 5,
+    chapterTitle: 'Americanization, Attrition, & Hanoi’s Inner War',
+    summary: 'U.S. combat troops deploy; Westmoreland initiates search-and-destroy attrition warfare.',
+    isLandmark: false,
+  },
+  {
+    year: 1968,
+    label: 'The Tet Offensive',
+    slug: 'tet-offensive',
+    chapterNumber: 7,
+    chapterTitle: 'The Tet Offensive & The Crisis of Credibility',
+    summary: 'Synchronized assaults across 36 provincial capitals shatter Washington’s official optimism.',
+    isLandmark: true,
+  },
+  {
+    year: 1970,
+    label: 'Vietnamization & Cambodia',
+    slug: 'nixon-and-vietnamization',
+    chapterNumber: 8,
+    chapterTitle: 'Nixon, Vietnamization, & The Widening War',
+    summary: 'Ground troop withdrawals paired with expanded air war and Cambodian incursion.',
+    isLandmark: false,
+  },
+  {
+    year: 1973,
+    label: 'Paris Peace Accords',
+    slug: 'paris-peace-accords',
+    chapterNumber: 9,
+    chapterTitle: 'The Paris Peace Accords: Peace at Hand?',
+    summary: 'U.S. combat forces withdraw while 150,000+ North Vietnamese troops remain in the South.',
+    isLandmark: true,
+  },
+  {
+    year: 1975,
+    label: 'Fall of Saigon',
+    slug: 'the-collapse',
+    chapterNumber: 10,
+    chapterTitle: 'The Final Offensive & The Collapse',
+    summary: 'A 55-day conventional campaign leads to the unconditional surrender of the South Vietnamese government.',
+    isLandmark: true,
+  },
+  {
+    year: 1986,
+    label: 'Doi Moi Reforms',
+    slug: 'aftermath-1975',
+    chapterNumber: 11,
+    chapterTitle: 'Aftermath: Vietnam After 1975',
+    summary: 'Following post-war hardship, re-education, and refugee flight, Vietnam adopts market economic reforms.',
+    isLandmark: false,
+  },
+];
+
+export default function TimelineArc() {
+  const [selectedNode, setSelectedNode] = useState<ArcNode>(ARC_NODES[1]); // Default to Dien Bien Phu 1954
+
+  return (
+    <div className="border border-stone-300 dark:border-stone-800 bg-[#f9f7f2] dark:bg-[#161514] p-6 sm:p-8 rounded-sm">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-stone-200 dark:border-stone-800/80 gap-2">
+        <div>
+          <span className="font-archival-mono text-[11px] uppercase tracking-widest text-stone-500 block">
+            The Chronological Backbone · 1945–1986
+          </span>
+          <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100">
+            Thirty-Year Arc of Decision &amp; Escalation
+          </h3>
+        </div>
+        <div className="font-archival-mono text-xs text-stone-500">
+          Click any milestone to inspect historical context
+        </div>
+      </div>
+
+      {/* Interactive Horizontal Vector Track */}
+      <div className="py-8 overflow-x-auto">
+        <div className="min-w-[680px] relative px-4">
+          {/* Baseline Rail */}
+          <div className="h-0.5 w-full bg-stone-300 dark:bg-stone-700 absolute top-4 left-0 -z-0" />
+
+          {/* Nodes */}
+          <div className="flex justify-between items-start relative z-10">
+            {ARC_NODES.map((node) => {
+              const isSelected = selectedNode.year === node.year && selectedNode.label === node.label;
+              return (
+                <button
+                  key={`${node.year}-${node.label}`}
+                  onClick={() => setSelectedNode(node)}
+                  className="group flex flex-col items-center focus-visible:outline-none"
+                  aria-label={`${node.year}: ${node.label}`}
+                >
+                  <div
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-archival-mono font-bold transition-all border ${
+                      isSelected
+                        ? 'bg-stone-950 text-stone-50 border-stone-950 dark:bg-stone-100 dark:text-stone-900 dark:border-stone-100 scale-110 shadow-sm'
+                        : node.isLandmark
+                        ? 'bg-amber-100 text-amber-900 border-amber-600 dark:bg-amber-950/60 dark:text-amber-200 dark:border-amber-600 group-hover:scale-105'
+                        : 'bg-white text-stone-600 border-stone-400 dark:bg-stone-900 dark:text-stone-300 dark:border-stone-700 group-hover:border-stone-900 dark:group-hover:border-stone-300'
+                    }`}
+                  >
+                    {node.year.toString().slice(2)}
+                  </div>
+                  <span
+                    className={`mt-2 font-archival-mono text-[10px] tracking-tight whitespace-nowrap transition-colors max-w-[64px] text-center truncate ${
+                      isSelected
+                        ? 'font-bold text-stone-950 dark:text-stone-100'
+                        : 'text-stone-500 group-hover:text-stone-800 dark:text-stone-400 dark:group-hover:text-stone-200'
+                    }`}
+                  >
+                    {node.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Selected Milestone Inspection Plate */}
+      <div className="mt-4 p-5 bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 rounded-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <span className="font-archival-mono text-xs font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300">
+              {selectedNode.year} · Chapter {selectedNode.chapterNumber.toString().padStart(2, '0')}
+            </span>
+            {selectedNode.isLandmark && (
+              <span className="px-1.5 py-0.5 bg-amber-100 dark:bg-amber-950 text-amber-900 dark:text-amber-300 text-[10px] font-archival-mono uppercase tracking-wider rounded-xs border border-amber-300 dark:border-amber-800">
+                Landmark Turning Point
+              </span>
+            )}
+          </div>
+          <h4 className="font-editorial-serif text-lg font-bold text-stone-900 dark:text-stone-100">
+            {selectedNode.label}: {selectedNode.chapterTitle}
+          </h4>
+          <p className="font-editorial-serif text-sm text-stone-600 dark:text-stone-400 max-w-2xl leading-relaxed">
+            {selectedNode.summary}
+          </p>
+        </div>
+
+        <Link
+          href={`/vietnam/${selectedNode.slug}`}
+          className="inline-flex items-center justify-center shrink-0 px-4 py-2.5 bg-stone-900 hover:bg-stone-800 text-stone-100 dark:bg-stone-100 dark:hover:bg-stone-200 dark:text-stone-900 font-archival-mono text-xs font-bold uppercase tracking-wider transition-colors rounded-sm"
+        >
+          Enter Chapter {selectedNode.chapterNumber} &rarr;
+        </Link>
+      </div>
+    </div>
+  );
+}
