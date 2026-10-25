@@ -162,6 +162,8 @@ export interface ChapterData {
   title: string;
   subtitle: string;
   summary: string;
+  /** 'investigation' renders the evidence-led TonkinPilotView instead of the standard chapter layout. */
+  layout?: 'standard' | 'investigation';
   isLandmark?: boolean;
   landmarkMoment?: LandmarkMoment;
   hookLead?: string;

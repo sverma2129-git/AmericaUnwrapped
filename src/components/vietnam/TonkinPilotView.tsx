@@ -148,26 +148,26 @@ export default function TonkinPilotView({
   ];
 
   return (
-    <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 text-[#2C2523] transition-colors">
+    <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 text-ink transition-colors">
       {/* ─────────────────────────────────────────────────────────────
           1. COMPELLING OPENING HERO
       ───────────────────────────────────────────────────────────── */}
-      <header className="border-b border-[#E8DDC8] pb-8 sm:pb-12">
-        <div className="flex flex-wrap items-center gap-2 text-xs text-[#5C524E] mb-3">
-          <span className="font-semibold text-[#8B252D]">Chapter 04</span>
+      <header className="border-b border-rule pb-8 sm:pb-12">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-ink-muted mb-3">
+          <span className="font-semibold text-brand">Chapter 04</span>
           <span>&bull;</span>
           <span>August 1964</span>
           <span>&bull;</span>
-          <span className="text-[#8B252D] font-bold bg-[#FDF3F3] border border-[#F0C4C7] px-2 py-0.5 rounded-xs">
+          <span className="text-brand font-bold bg-brand-tint border border-brand-rule px-2 py-0.5 rounded-xs">
             Turning Point
           </span>
         </div>
 
-        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2C2523] leading-[1.12]">
+        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink leading-[1.12]">
           The Gulf of Tonkin: Incident, Resolution, and Escalation
         </h1>
 
-        <p className="mt-3 font-editorial-serif italic text-lg sm:text-2xl text-[#5C524E]">
+        <p className="mt-3 font-editorial-serif italic text-lg sm:text-2xl text-ink-muted">
           How two reported naval clashes and ambiguous radar returns launched a ten-year undeclared war.
         </p>
 
@@ -175,25 +175,25 @@ export default function TonkinPilotView({
         <div className="mt-6 flex flex-wrap items-center gap-2 text-xs">
           <a
             href="#quick-briefing"
-            className="px-3 py-1.5 rounded-xs bg-[#FDF3F3] text-[#8B252D] border border-[#F0C4C7] font-semibold hover:bg-[#FBE8EA] transition-colors"
+            className="px-3 py-1.5 rounded-xs bg-brand-tint text-brand border border-brand-rule font-semibold hover:bg-[#FBE8EA] transition-colors"
           >
             ⚡ 60-Second Briefing
           </a>
           <a
             href="#interactive-evidence"
-            className="px-3 py-1.5 rounded-xs bg-[#FAF7F2] text-[#2C2523] border border-[#E8DDC8] font-medium hover:border-[#8B252D] transition-colors"
+            className="px-3 py-1.5 rounded-xs bg-parchment text-ink border border-rule font-medium hover:border-brand transition-colors"
           >
             🗺️ Radar Investigation
           </a>
           <a
             href="#the-story"
-            className="px-3 py-1.5 rounded-xs bg-[#FAF7F2] text-[#2C2523] border border-[#E8DDC8] font-medium hover:border-[#8B252D] transition-colors"
+            className="px-3 py-1.5 rounded-xs bg-parchment text-ink border border-rule font-medium hover:border-brand transition-colors"
           >
             📖 The Core Story
           </a>
           <a
             href="#chapter-quiz"
-            className="px-3 py-1.5 rounded-xs bg-[#8B252D] text-white font-semibold hover:bg-[#731E25] transition-colors shadow-xs"
+            className="px-3 py-1.5 rounded-xs bg-brand text-white font-semibold hover:bg-brand-hover transition-colors shadow-xs"
           >
             ✍️ Practice Quiz (4 Qs)
           </a>
@@ -217,11 +217,11 @@ export default function TonkinPilotView({
           3. THE READABLE CORE STORY (SUBHEADED, UNBURIED)
       ───────────────────────────────────────────────────────────── */}
       <section id="the-story" aria-label="Historical Narrative" className="my-12 scroll-mt-24 space-y-12">
-        <div className="border-b border-[#E8DDC8] pb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#8B252D] block mb-1">
+        <div className="border-b border-rule pb-3">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
             Historical Narrative &bull; The Full Account
           </span>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-[#2C2523]">
+          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
             The Road to the Resolution
           </h2>
         </div>
@@ -229,24 +229,24 @@ export default function TonkinPilotView({
         {storySections.map((section, sIdx) => (
           <div key={sIdx} className="space-y-4">
             <div>
-              <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-[#2C2523]">
+              <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink">
                 {section.title}
               </h3>
-              <p className="font-editorial-serif italic text-sm text-[#5C524E] mt-0.5">
+              <p className="font-editorial-serif italic text-sm text-ink-muted mt-0.5">
                 {section.subtitle}
               </p>
             </div>
 
-            <div className="space-y-5 font-sans text-base sm:text-lg text-[#2C2523] leading-[1.8]">
+            <div className="space-y-5 font-sans text-base sm:text-lg text-ink leading-[1.8]">
               {section.paragraphs.map((p, pIdx) => {
                 // If it's the famous Herrick cable text, format as archival quote block
                 if (p.startsWith('Review of action makes many reported contacts')) {
                   return (
                     <div
                       key={pIdx}
-                      className="my-5 p-5 bg-[#FAF7F2] border-l-4 border-[#8B252D] border-t border-r border-b border-[#E8DDC8] rounded-r-xs font-editorial-serif text-base sm:text-lg italic text-[#2C2523] leading-relaxed shadow-xs"
+                      className="my-5 p-5 bg-parchment border-l-4 border-brand border-t border-r border-b border-rule rounded-r-xs font-editorial-serif text-base sm:text-lg italic text-ink leading-relaxed shadow-xs"
                     >
-                      <div className="font-mono text-xs uppercase tracking-wider text-[#8B252D] font-bold mb-2 not-italic">
+                      <div className="font-mono text-xs uppercase tracking-wider text-brand font-bold mb-2 not-italic">
                         CAPTAIN HERRICK FLASH CABLE DTG 041727Z AUG 64 (FRUS VOL. I, DOC 117)
                       </div>
                       &ldquo;{p}&rdquo;
@@ -301,13 +301,13 @@ export default function TonkinPilotView({
       {/* ─────────────────────────────────────────────────────────────
           8. DEEPER INVESTIGATION & PRIMARY SOURCE DOSSIER
       ───────────────────────────────────────────────────────────── */}
-      <section aria-label="Primary Source Evidence" className="my-16 pt-8 border-t border-[#E8DDC8]">
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-[#E8DDC8] gap-2 mb-6">
+      <section aria-label="Primary Source Evidence" className="my-16 pt-8 border-t border-rule">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-rule gap-2 mb-6">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#8B252D] block mb-1">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
               Scholarly Evidence &bull; DBQ Research Layer
             </span>
-            <h2 className="font-editorial-serif text-2xl font-bold text-[#2C2523]">
+            <h2 className="font-editorial-serif text-2xl font-bold text-ink">
               Primary Sources &amp; Archival Records
             </h2>
           </div>
@@ -315,7 +315,7 @@ export default function TonkinPilotView({
           <button
             type="button"
             onClick={() => setShowDeepResearch(!showDeepResearch)}
-            className="px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider rounded-xs border border-[#E8DDC8] bg-[#FAF7F2] hover:bg-[#E8DDC8] text-[#2C2523] transition-colors cursor-pointer"
+            className="px-3.5 py-1.5 text-xs font-medium uppercase tracking-wider rounded-xs border border-rule bg-parchment hover:bg-rule text-ink transition-colors cursor-pointer"
           >
             {showDeepResearch ? 'Collapse Research Layer ▲' : 'Expand Research Layer ▼'}
           </button>
@@ -333,7 +333,7 @@ export default function TonkinPilotView({
 
           {/* Collapsible Deep Historiography & Bilateral Strategy */}
           {showDeepResearch && (
-            <div className="mt-8 pt-6 border-t border-[#E8DDC8] space-y-8 animate-in fade-in duration-200">
+            <div className="mt-8 pt-6 border-t border-rule space-y-8 animate-in fade-in duration-200">
               <DualPerspectiveViewer
                 timeframe={chapter.timeframe}
                 washington={chapter.washington}
@@ -345,24 +345,24 @@ export default function TonkinPilotView({
 
           {/* Complete Scholarly References List */}
           {chapter.citations && chapter.citations.length > 0 && (
-            <div className="pt-6 border-t border-[#E8DDC8]">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#8B252D] block mb-3">
+            <div className="pt-6 border-t border-rule">
+              <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-3">
                 Registered Scholarly Citations &bull; Verified References
               </span>
-              <ul className="space-y-2.5 text-xs text-[#5C524E]">
+              <ul className="space-y-2.5 text-xs text-ink-muted">
                 {chapter.citations.map((c) => (
                   <li
                     key={c.id}
-                    className="flex items-start justify-between gap-3 p-3 rounded-xs border border-[#E8DDC8] bg-[#FAF7F2] hover:border-[#8B252D] transition-colors"
+                    className="flex items-start justify-between gap-3 p-3 rounded-xs border border-rule bg-parchment hover:border-brand transition-colors"
                   >
                     <div className="flex items-start gap-2.5">
                       <CitationMarker id={c.id} label={c.marker} />
                       <div>
-                        <span className="text-[#2C2523] font-medium">
+                        <span className="text-ink font-medium">
                           {c.citation}
                         </span>
                         {c.supportsClaim && (
-                          <p className="font-sans text-xs text-[#5C524E] mt-0.5">
+                          <p className="font-sans text-xs text-ink-muted mt-0.5">
                             Supports: {c.supportsClaim}
                           </p>
                         )}
@@ -371,7 +371,7 @@ export default function TonkinPilotView({
                     <button
                       type="button"
                       onClick={() => openCitation(c)}
-                      className="text-xs font-semibold text-[#8B252D] hover:underline uppercase whitespace-nowrap cursor-pointer px-2 py-0.5 bg-white border border-[#E8DDC8] rounded-xs"
+                      className="text-xs font-semibold text-brand hover:underline uppercase whitespace-nowrap cursor-pointer px-2 py-0.5 bg-white border border-rule rounded-xs"
                     >
                       Dossier &rarr;
                     </button>
@@ -386,28 +386,28 @@ export default function TonkinPilotView({
       {/* ─────────────────────────────────────────────────────────────
           9. FORWARD CHAPTER BRIDGE
       ───────────────────────────────────────────────────────────── */}
-      <footer className="border-t border-[#E8DDC8] pt-8 pb-12 mt-12">
-        <span className="text-xs font-bold uppercase tracking-wider text-[#8B252D] block mb-2">
+      <footer className="border-t border-rule pt-8 pb-12 mt-12">
+        <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-2">
           The Next Dilemma &rarr;
         </span>
-        <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-[#2C2523] mb-3">
+        <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink mb-3">
           {chapter.nextQuestion.question}
         </h3>
-        <p className="font-sans text-base text-[#5C524E] leading-relaxed mb-6 max-w-2xl">
+        <p className="font-sans text-base text-ink-muted leading-relaxed mb-6 max-w-2xl">
           {chapter.nextQuestion.framing}
         </p>
 
         {nextChapterId ? (
           <Link
             href={`/vietnam/${nextChapterId}`}
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#8B252D] hover:bg-[#731E25] text-white text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
           >
             <span>Proceed to Chapter 05: {nextChapterTitle || 'Americanization & Attrition'} &rarr;</span>
           </Link>
         ) : (
           <Link
             href="/vietnam"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#8B252D] hover:bg-[#731E25] text-white text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
           >
             <span>Return to Vietnam Overview &rarr;</span>
           </Link>

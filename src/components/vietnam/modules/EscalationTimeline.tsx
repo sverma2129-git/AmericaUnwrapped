@@ -53,35 +53,35 @@ export default function EscalationTimeline() {
   const current = escalationData[selectedYear];
 
   return (
-    <figure className="my-10 border border-[#E8DDC8] bg-[#FAF7F2] rounded-xs shadow-xs text-[#2C2523]">
+    <figure className="my-10 border border-rule bg-parchment rounded-xs shadow-xs text-ink">
       {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-[#E8DDC8] bg-[#F7F3EB] flex flex-wrap items-center justify-between gap-2 text-xs">
+      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-[#2C2523]">
+          <span className="font-bold uppercase tracking-wider text-ink">
             Escalation Ledger
           </span>
-          <span className="text-[#6B5E59] ml-2">&bull; The Advisory Commitment (1960–1963)</span>
+          <span className="text-ink-soft ml-2">&bull; The Advisory Commitment (1960–1963)</span>
         </div>
-        <span className="text-[#6B5E59] uppercase tracking-widest text-[11px] font-semibold">
+        <span className="text-ink-soft uppercase tracking-widest text-[11px] font-semibold">
           Select Year
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <span className="text-xs uppercase tracking-wider text-[#8B252D] font-bold block">
+          <span className="text-xs uppercase tracking-wider text-brand font-bold block">
             Incremental Expansion
           </span>
-          <h4 className="font-editorial-serif text-2xl font-bold text-[#2C2523] mt-1">
+          <h4 className="font-editorial-serif text-2xl font-bold text-ink mt-1">
             How 875 Military Advisers Became 16,300 Combatants
           </h4>
-          <p className="mt-2 font-editorial-serif text-base text-[#5C524E] leading-relaxed">
+          <p className="mt-2 font-editorial-serif text-base text-ink-muted leading-relaxed">
             President Kennedy consistently refused to commit conventional American ground combat divisions, yet sought to prevent communist victory through incremental increases in military advisers, helicopters, and covert special operations.
           </p>
         </div>
 
         {/* Year Buttons */}
-        <div className="grid grid-cols-4 gap-2 pt-2 border-t border-[#E8DDC8]">
+        <div className="grid grid-cols-4 gap-2 pt-2 border-t border-rule">
           {[1960, 1961, 1962, 1963].map((yr) => (
             <button
               key={yr}
@@ -89,8 +89,8 @@ export default function EscalationTimeline() {
               onClick={() => setSelectedYear(yr)}
               className={`p-3 text-left transition-colors cursor-pointer border rounded-xs ${
                 selectedYear === yr
-                  ? 'bg-[#8B252D] text-white border-[#8B252D] font-bold shadow-xs'
-                  : 'bg-[#FFFEFA] text-[#5C524E] border-[#E8DDC8] hover:border-[#8B252D]'
+                  ? 'bg-brand text-white border-brand font-bold shadow-xs'
+                  : 'bg-paper text-ink-muted border-rule hover:border-brand'
               }`}
             >
               <div className="font-mono text-xs font-bold">{yr}</div>
@@ -102,41 +102,41 @@ export default function EscalationTimeline() {
         </div>
 
         {/* Selected Year Data Ledger */}
-        <div className="p-6 bg-[#FFFEFA] border border-[#E8DDC8] rounded-xs space-y-5 shadow-xs">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-[#E8DDC8] pb-3">
-            <h5 className="font-editorial-serif text-xl font-bold text-[#2C2523]">
+        <div className="p-6 bg-paper border border-rule rounded-xs space-y-5 shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
+            <h5 className="font-editorial-serif text-xl font-bold text-ink">
               {current.label}
             </h5>
-            <span className="font-mono text-xs text-[#8B252D] font-bold">
+            <span className="font-mono text-xs text-brand font-bold">
               U.S. Casualties in {selectedYear}: {current.casualties} KIA
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
             <div>
-              <span className="uppercase font-bold text-[#6B5E59] block mb-1 text-[11px]">
+              <span className="uppercase font-bold text-ink-soft block mb-1 text-[11px]">
                 Rules of Engagement:
               </span>
-              <p className="font-editorial-serif text-[#2C2523] leading-relaxed">
+              <p className="font-editorial-serif text-ink leading-relaxed">
                 {current.operationalRule}
               </p>
             </div>
             <div>
-              <span className="uppercase font-bold text-[#6B5E59] block mb-1 text-[11px]">
+              <span className="uppercase font-bold text-ink-soft block mb-1 text-[11px]">
                 Strategic Milestone:
               </span>
-              <p className="font-editorial-serif text-[#2C2523] leading-relaxed">
+              <p className="font-editorial-serif text-ink leading-relaxed">
                 {current.milestone}
               </p>
             </div>
           </div>
 
           {/* Kennedy Documented Position */}
-          <div className="p-4 bg-[#FAF7F2] border border-[#E8DDC8] border-l-4 border-l-[#8B252D] rounded-r-xs shadow-2xs">
-            <span className="text-[11px] uppercase tracking-wider text-[#8B252D] font-bold block mb-1">
+          <div className="p-4 bg-parchment border border-rule border-l-4 border-l-brand rounded-r-xs shadow-2xs">
+            <span className="text-[11px] uppercase tracking-wider text-brand font-bold block mb-1">
               Documented Administration Position (Paraphrase):
             </span>
-            <p className="font-editorial-serif italic text-[#2C2523] leading-relaxed">
+            <p className="font-editorial-serif italic text-ink leading-relaxed">
               {current.kennedyQuote}
             </p>
           </div>

@@ -113,8 +113,8 @@ export default function DienBienPhuMap() {
           onClick={() => setShowFiringArcs(!showFiringArcs)}
           className={`px-3 py-1 rounded-xs border transition-colors cursor-pointer text-xs ${
             showFiringArcs
-              ? 'bg-[#8B252D] text-white border-[#8B252D] font-semibold shadow-xs'
-              : 'bg-[#FFFEFA] text-[#5C524E] border-[#E8DDC8]'
+              ? 'bg-brand text-white border-brand font-semibold shadow-xs'
+              : 'bg-paper text-ink-muted border-rule'
           }`}
         >
           {showFiringArcs ? '● Firing Trajectories: Visible' : '○ Firing Trajectories: Hidden'}
@@ -344,11 +344,11 @@ export default function DienBienPhuMap() {
             </p>
           </div>
 
-          <div className="p-3 bg-[#FAF7F2] border border-[#E8DDC8] rounded-xs shadow-xs">
-            <span className="uppercase tracking-wider font-bold text-[#8B252D] block mb-1 text-[10px]">
+          <div className="p-3 bg-parchment border border-rule rounded-xs shadow-xs">
+            <span className="uppercase tracking-wider font-bold text-brand block mb-1 text-[10px]">
               Viet Minh Counter-Logistics:
             </span>
-            <p className="font-editorial-serif text-[#2C2523] leading-relaxed text-sm">
+            <p className="font-editorial-serif text-ink leading-relaxed text-sm">
               {detail.vietMinhReality}
             </p>
           </div>

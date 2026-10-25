@@ -1,0 +1,75 @@
+import { ChapterCitation, SourceRegistryEntry } from '@/types/vietnam';
+
+// Chapter 11 entries, aggregated into SOURCE_REGISTRY / CITATION_REGISTRY by ../sourceRegistry.ts
+
+// ─── CHAPTER 11: CASUALTIES & RECONCILIATION ────────────────────────────────
+export const sources: SourceRegistryEntry[] = [
+  {
+    id: 'Q011',
+    chapter: 11,
+    type: 'claim',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+    text: 'On April 4, 1995, an Associated Press wire reported that the Vietnamese government had officially released its comprehensive war casualty figures, disclosing that 1.1 million North Vietnamese and Viet Cong combatants died, 600,000 were wounded, and approximately 2 million civilians died on both sides during the 1954–1975 war.',
+    source: 'Associated Press Wire: "Vietnam Releases First Official War Casualty Figures"',
+    authorOrCreator: 'Associated Press Wire Service',
+    institution: 'The Associated Press (Hanoi Bureau)',
+    date: 'April 4, 1995',
+    sourceUrl: 'https://apnews.com/',
+    locator: 'The Virginian-Pilot / AP Wire Archive, April 4, 1995',
+    locatorStatus: 'supported',
+    verified: true,
+    sourceType: 'CONTEMPORARY_REPORTING',
+    supportsClaim: 'Documents the official post-war disclosure of Vietnamese military and civilian casualties released by the Hanoi government on the 20th anniversary of the war’s end.',
+    limitations: 'Reflects official government figures published twenty years after the conflict; previous site draft contained internal editorial commentary inside quotation marks. Preserved as an attributed journalistic report.',
+    conversionStatus: 'converted_to_paraphrase',
+    notes: 'Casualty figures verified against AP dispatch of April 4, 1995. Quotation marks removed.',
+  },
+];
+
+export const citations: Record<string, ChapterCitation> = {
+  'c11-1': {
+    id: 'c11-1',
+    marker: 1,
+    citation: 'Robinson, W. Courtland. Terms of Refuge: The Indochinese Exodus and the International Response. Zed Books, 1998.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'W. Courtland Robinson',
+    title: 'Terms of Refuge: The Indochinese Exodus and the International Response',
+    date: '1998',
+    publicationOrArchive: 'Zed Books / UNHCR Study',
+    locator: 'Chapters 2–5, pp. 35–140',
+    supportsClaim: 'Comprehensive demographic and policy study of the post-1975 exodus of over 1.5 million refugees from Vietnam, Laos, and Cambodia, documenting the "boat people" crisis.',
+    limitations: 'Focuses on international refugee resettlement and United Nations humanitarian response rather than internal postwar Vietnam economic conditions.',
+    originalUrl: 'https://www.worldcat.org/title/terms-of-refuge/oclc/39281987',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c11-2': {
+    id: 'c11-2',
+    marker: 2,
+    citation: 'Hirschman, Charles, et al. "Vietnamese Casualties During the American War: A New Estimate." Population and Development Review, 1995.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'Charles Hirschman, Samuel Preston, and Vu Manh Loi',
+    title: 'Vietnamese Casualties During the American War: A New Estimate',
+    date: '1995',
+    publicationOrArchive: 'Population and Development Review, Vol. 21, No. 4',
+    locator: 'Vol. 21, No. 4, pp. 783–812',
+    supportsClaim: 'Rigorous demographic mortality analysis calculating approximately 1 million Vietnamese combat deaths and up to 2 million civilian deaths during the conflict.',
+    limitations: 'Demographic model estimating total excess mortality from survey samples and census data rather than verified body-by-body registers.',
+    originalUrl: 'https://www.jstor.org/stable/2137774',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c11-3': {
+    id: 'c11-3',
+    marker: 3,
+    citation: 'Evans, Grant, and Kelvin Rowley. Red Brotherhood at War: Vietnam, Cambodia and Laos since 1975. Verso, 1990.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'Grant Evans and Kelvin Rowley',
+    title: 'Red Brotherhood at War: Vietnam, Cambodia and Laos since 1975',
+    date: '1990',
+    publicationOrArchive: 'Verso Books (Revised Edition)',
+    locator: 'Chapters 3–6, pp. 80–190',
+    supportsClaim: 'Analyzes the geopolitical conflicts between communist states following 1975, including Vietnam’s invasion of Cambodia to topple the Khmer Rouge and China’s border war against Vietnam.',
+    limitations: 'Regional political analysis of the Third Indochina War emphasizing interstate rivalries rather than domestic reconciliation.',
+    originalUrl: 'https://www.versobooks.com/',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+};

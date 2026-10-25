@@ -136,16 +136,16 @@ export default function AttritionModel() {
             {/* Resulting Balance Card */}
             <div className={`p-4 border rounded-xs transition-colors shadow-xs ${
               netMonthlyChange > 0
-                ? 'bg-[#FAF7F2] border-[#E8DDC8]'
+                ? 'bg-parchment border-rule'
                 : 'bg-emerald-50 border-emerald-300'
             }`}>
-              <div className="text-[10px] uppercase font-bold tracking-wider text-[#6B5E59]">
+              <div className="text-[10px] uppercase font-bold tracking-wider text-ink-soft">
                 Net Monthly Manpower Trajectory:
               </div>
-              <div className="font-editorial-serif text-2xl font-bold mt-1 text-[#2C2523]">
+              <div className="font-editorial-serif text-2xl font-bold mt-1 text-ink">
                 {netMonthlyChange > 0 ? `+${netMonthlyChange.toLocaleString()} cadres / mo` : `${netMonthlyChange.toLocaleString()} cadres / mo`}
               </div>
-              <p className="font-editorial-serif text-xs text-[#5C524E] mt-1">
+              <p className="font-editorial-serif text-xs text-ink-muted mt-1">
                 {netMonthlyChange > 0
                   ? 'At these parameters, draft replenishment exceeds effective combat attrition. Communist force strength continues to expand or stabilize.'
                   : 'At these parameters, attrition exceeds the annual biological replenishment rate, creating a net deficit in regular cadre formations.'}

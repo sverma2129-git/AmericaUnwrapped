@@ -11,6 +11,10 @@ if (isGithubActions) {
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: basePath,
+  env: {
+    // Needed for raw URLs (e.g. meta refresh) that next/link can't prefix.
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   images: {
     unoptimized: true,
   },

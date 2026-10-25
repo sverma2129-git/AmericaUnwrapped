@@ -119,19 +119,19 @@ export default function TonkinInvestigationModule() {
   return (
     <div className="space-y-6">
       {/* Educational Orientation Banner */}
-      <div className="p-4 sm:p-5 rounded-xs bg-[#FAF7F2] border border-[#E8DDC8] text-[#2C2523] space-y-2">
+      <div className="p-4 sm:p-5 rounded-xs bg-parchment border border-rule text-ink space-y-2">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#8B252D]">
+          <span className="text-xs font-bold uppercase tracking-wider text-brand">
             Interactive Investigation &bull; The Dual-Clock Timeline
           </span>
-          <span className="text-[11px] text-[#6B5E59]">
+          <span className="text-[11px] text-ink-soft">
             Step {activeStepIndex + 1} of 5
           </span>
         </div>
-        <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-[#2C2523]">
+        <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink">
           What Really Happened on the Night of August 4, 1964?
         </h3>
-        <p className="font-editorial-serif text-xs sm:text-sm text-[#5C524E] leading-relaxed">
+        <p className="font-editorial-serif text-xs sm:text-sm text-ink-muted leading-relaxed">
           The Gulf of Tonkin is <strong>11 hours ahead</strong> of Washington, D.C. Follow the step-by-step chronology below to see how confusion at sea in the dead of night collided with election-year politics in daytime Washington.
         </p>
       </div>
@@ -145,8 +145,8 @@ export default function TonkinInvestigationModule() {
             onClick={() => setActiveStepIndex(idx)}
             className={`p-2.5 rounded-xs border text-left transition-all cursor-pointer flex flex-col justify-between ${
               activeStepIndex === idx
-                ? 'bg-[#8B252D] text-white border-[#8B252D] font-bold shadow-xs'
-                : 'bg-[#FFFEFA] text-[#5C524E] border-[#E8DDC8] hover:border-[#8B252D]'
+                ? 'bg-brand text-white border-brand font-bold shadow-xs'
+                : 'bg-paper text-ink-muted border-rule hover:border-brand'
             }`}
           >
             <div className="flex items-center justify-between w-full text-[10px] opacity-85">
@@ -161,25 +161,25 @@ export default function TonkinInvestigationModule() {
       </div>
 
       {/* Active Step Dossier Plate */}
-      <div className="border border-[#E8DDC8] rounded-xs bg-[#FFFEFA] p-5 sm:p-7 shadow-xs space-y-6 text-[#2C2523]">
+      <div className="border border-rule rounded-xs bg-paper p-5 sm:p-7 shadow-xs space-y-6 text-ink">
         {/* Timezone Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-[#E8DDC8] gap-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-3">
           <div className="space-y-0.5">
-            <span className="text-[10px] uppercase tracking-widest text-[#6B5E59] font-bold block">
+            <span className="text-[10px] uppercase tracking-widest text-ink-soft font-bold block">
               Synchronized Timestamps:
             </span>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs">
-              <span className="text-[#8B252D] font-bold">
+              <span className="text-brand font-bold">
                 Sea Time (ICT): <span dangerouslySetInnerHTML={{ __html: current.timeICT }} />
               </span>
-              <span className="text-[#E8DDC8]">&bull;</span>
+              <span className="text-rule">&bull;</span>
               <span className="text-[#1E3A8A] font-bold">
                 Washington (EDT): <span dangerouslySetInnerHTML={{ __html: current.timeEDT }} />
               </span>
             </div>
           </div>
 
-          <div className="font-archival-mono text-xs text-[#5C524E]">
+          <div className="font-archival-mono text-xs text-ink-muted">
             <span className="font-bold">Location: </span>
             {current.location}
           </div>
@@ -187,10 +187,10 @@ export default function TonkinInvestigationModule() {
 
         {/* Step Title & Summary */}
         <div className="space-y-2">
-          <h4 className="font-editorial-serif text-xl sm:text-2xl font-bold text-[#2C2523]">
+          <h4 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink">
             {current.title}
           </h4>
-          <p className="font-editorial-serif text-sm sm:text-base text-[#2C2523] leading-relaxed">
+          <p className="font-editorial-serif text-sm sm:text-base text-ink leading-relaxed">
             {current.summary}
           </p>
         </div>
@@ -198,24 +198,24 @@ export default function TonkinInvestigationModule() {
         {/* Interactive Visual Canvas / Radar Display */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           {/* Left Canvas: Naval Radar & Plotting Chart */}
-          <div className="md:col-span-5 bg-[#FAF7F2] border border-[#E8DDC8] rounded-xs p-4 aspect-square flex flex-col justify-between relative overflow-hidden shadow-xs text-[#2C2523]">
+          <div className="md:col-span-5 bg-parchment border border-rule rounded-xs p-4 aspect-square flex flex-col justify-between relative overflow-hidden shadow-xs text-ink">
             {/* Radar Circular Grid & Range Rings */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-[85%] h-[85%] rounded-full border border-[#E8DDC8]" />
-              <div className="w-[60%] h-[60%] rounded-full border border-[#E8DDC8] absolute" />
-              <div className="w-[35%] h-[35%] rounded-full border border-[#8B252D]/20 absolute" />
-              <div className="w-full h-px bg-[#E8DDC8] absolute" />
-              <div className="h-full w-px bg-[#E8DDC8] absolute" />
-              <div className="absolute top-2 right-2 text-[9px] font-mono text-[#8B252D]/60 uppercase tracking-widest">
+              <div className="w-[85%] h-[85%] rounded-full border border-rule" />
+              <div className="w-[60%] h-[60%] rounded-full border border-rule absolute" />
+              <div className="w-[35%] h-[35%] rounded-full border border-brand/20 absolute" />
+              <div className="w-full h-px bg-rule absolute" />
+              <div className="h-full w-px bg-rule absolute" />
+              <div className="absolute top-2 right-2 text-[9px] font-mono text-brand/60 uppercase tracking-widest">
                 Range: 40 NM
               </div>
             </div>
 
             {/* Top Radar Status */}
-            <div className="relative z-10 flex items-center justify-between text-[10px] font-mono text-[#8B252D] font-bold">
+            <div className="relative z-10 flex items-center justify-between text-[10px] font-mono text-brand font-bold">
               <span>USS MADDOX // RADAR PPI</span>
-              <span className="animate-pulse flex items-center gap-1 text-[#8B252D]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#8B252D]" />
+              <span className="animate-pulse flex items-center gap-1 text-brand">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand" />
                 SWEEP: 360°
               </span>
             </div>
@@ -225,7 +225,7 @@ export default function TonkinInvestigationModule() {
               <div className="w-3.5 h-3.5 rounded-full bg-[#1E3A8A] ring-4 ring-[#1E3A8A]/20 flex items-center justify-center shadow-xs">
                 <div className="w-1.5 h-1.5 bg-white rounded-full" />
               </div>
-              <span className="absolute mt-6 text-[10px] font-mono text-[#1E3A8A] font-bold bg-[#FFFEFA]/90 px-1 py-0.5 rounded-xs border border-[#E8DDC8] whitespace-nowrap shadow-2xs">
+              <span className="absolute mt-6 text-[10px] font-mono text-[#1E3A8A] font-bold bg-paper/90 px-1 py-0.5 rounded-xs border border-rule whitespace-nowrap shadow-2xs">
                 Maddox (Own Ship)
               </span>
 
@@ -239,7 +239,7 @@ export default function TonkinInvestigationModule() {
                     top: `${(blip.y / 350) * 100}%`,
                   }}
                 >
-                  <div className="w-2.5 h-2.5 rounded-full bg-[#8B252D]" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-brand" />
                 </div>
               ))}
               {current.radarBlips.map((blip, bIdx) => (
@@ -251,8 +251,8 @@ export default function TonkinInvestigationModule() {
                     top: `${(blip.y / 350) * 100}%`,
                   }}
                 >
-                  <div className="w-2 h-2 rounded-full bg-[#8B252D] inline-block shadow-xs" />
-                  <span className="text-[10px] font-mono text-[#8B252D] font-bold ml-1.5 whitespace-nowrap bg-[#FFFEFA]/95 px-1.5 py-0.5 rounded-xs border border-[#E8DDC8] shadow-2xs">
+                  <div className="w-2 h-2 rounded-full bg-brand inline-block shadow-xs" />
+                  <span className="text-[10px] font-mono text-brand font-bold ml-1.5 whitespace-nowrap bg-paper/95 px-1.5 py-0.5 rounded-xs border border-rule shadow-2xs">
                     {blip.label} {blip.isGhost ? '(Ghost Return)' : ''}
                   </span>
                 </div>
@@ -260,43 +260,43 @@ export default function TonkinInvestigationModule() {
             </div>
 
             {/* Bottom Radar Log */}
-            <div className="relative z-10 font-mono text-[10px] text-[#5C524E] pt-2 border-t border-[#E8DDC8] bg-[#FAF7F2]/90">
-              <span className="text-[#8B252D] font-bold">STATUS: </span>
+            <div className="relative z-10 font-mono text-[10px] text-ink-muted pt-2 border-t border-rule bg-parchment/90">
+              <span className="text-brand font-bold">STATUS: </span>
               {current.radarStatus}
             </div>
           </div>
 
           {/* Right Text: The Historical Discrepancy & Documentary Evidence */}
           <div className="md:col-span-7 space-y-4">
-            <div className="p-4 rounded-xs bg-[#FAF7F2] border border-[#E8DDC8] space-y-1.5">
-              <span className="text-[10px] uppercase tracking-widest text-[#8B252D] font-bold block">
+            <div className="p-4 rounded-xs bg-parchment border border-rule space-y-1.5">
+              <span className="text-[10px] uppercase tracking-widest text-brand font-bold block">
                 The Historical Discrepancy:
               </span>
-              <p className="font-editorial-serif text-sm text-[#2C2523] leading-relaxed">
+              <p className="font-editorial-serif text-sm text-ink leading-relaxed">
                 {current.discrepancyNote}
               </p>
             </div>
 
             {/* Verified Quotation / Primary Source Excerpt if present */}
             {current.evidenceQuote && (
-              <div className="p-4 rounded-xs bg-[#FAF7F2] border border-[#E8DDC8] space-y-2">
+              <div className="p-4 rounded-xs bg-parchment border border-rule space-y-2">
                 <div className="flex items-center justify-between text-[10px]">
-                  <span className="uppercase tracking-widest font-bold text-[#5C524E]">
+                  <span className="uppercase tracking-widest font-bold text-ink-muted">
                     Primary Source Record:
                   </span>
                   <CitationMarker id={current.evidenceQuote.citationId} />
                 </div>
-                <blockquote className="font-editorial-serif italic text-sm text-[#2C2523] leading-relaxed border-l-2 border-[#8B252D] pl-3">
+                <blockquote className="font-editorial-serif italic text-sm text-ink leading-relaxed border-l-2 border-brand pl-3">
                   &ldquo;{current.evidenceQuote.text}&rdquo;
                 </blockquote>
                 <div className="flex items-center justify-between pt-1">
-                  <span className="text-xs text-[#5C524E]">
+                  <span className="text-xs text-ink-muted">
                     &mdash; {current.evidenceQuote.speaker}
                   </span>
                   <button
                     type="button"
                     onClick={() => openCitation(current.evidenceQuote!.citationId)}
-                    className="text-[11px] font-bold text-[#8B252D] hover:underline uppercase cursor-pointer"
+                    className="text-[11px] font-bold text-brand hover:underline uppercase cursor-pointer"
                   >
                     View Dossier &rarr;
                   </button>
@@ -307,21 +307,21 @@ export default function TonkinInvestigationModule() {
         </div>
 
         {/* Step Navigation Bar */}
-        <div className="flex items-center justify-between pt-4 border-t border-[#E8DDC8]">
+        <div className="flex items-center justify-between pt-4 border-t border-rule">
           <button
             type="button"
             onClick={() => setActiveStepIndex((prev) => Math.max(0, prev - 1))}
             disabled={activeStepIndex === 0}
             className={`text-xs uppercase tracking-wider px-3 py-1.5 rounded-xs transition-colors cursor-pointer ${
               activeStepIndex === 0
-                ? 'opacity-30 cursor-not-allowed text-[#6B5E59]'
-                : 'text-[#5C524E] hover:text-[#2C2523]'
+                ? 'opacity-30 cursor-not-allowed text-ink-soft'
+                : 'text-ink-muted hover:text-ink'
             }`}
           >
             &larr; Previous Step
           </button>
 
-          <span className="text-xs text-[#6B5E59]">
+          <span className="text-xs text-ink-soft">
             Step {activeStepIndex + 1} of {INVESTIGATION_STEPS.length}
           </span>
 
@@ -331,8 +331,8 @@ export default function TonkinInvestigationModule() {
             disabled={activeStepIndex === INVESTIGATION_STEPS.length - 1}
             className={`px-4 py-1.5 text-xs font-bold uppercase tracking-wider rounded-xs transition-colors cursor-pointer ${
               activeStepIndex === INVESTIGATION_STEPS.length - 1
-                ? 'opacity-30 cursor-not-allowed text-[#6B5E59]'
-                : 'bg-[#8B252D] hover:bg-[#731E25] text-white shadow-xs'
+                ? 'opacity-30 cursor-not-allowed text-ink-soft'
+                : 'bg-brand hover:bg-brand-hover text-white shadow-xs'
             }`}
           >
             Next Step &rarr;

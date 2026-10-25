@@ -29,7 +29,7 @@ export default function VocabTooltip({
         tabIndex={0}
         role="button"
         aria-label={`${term}: ${definition}`}
-        className="underline decoration-[#8B252D]/80 decoration-dotted underline-offset-4 cursor-help font-medium text-[#2C2523] hover:text-[#8B252D] transition-colors"
+        className="underline decoration-brand/80 decoration-dotted underline-offset-4 cursor-help font-medium text-ink hover:text-brand transition-colors"
       >
         {children || term}
       </span>
@@ -37,21 +37,21 @@ export default function VocabTooltip({
       {isVisible && (
         <span
           role="tooltip"
-          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 sm:w-72 p-3.5 bg-[#FFFEFA] border border-[#E8DDC8] text-[#2C2523] rounded-xs shadow-xl text-xs z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-100 block"
+          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 sm:w-72 p-3.5 bg-paper border border-rule text-ink rounded-xs shadow-xl text-xs z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-100 block"
         >
-          <strong className="font-editorial-serif text-sm block mb-1 text-[#8B252D]">
+          <strong className="font-editorial-serif text-sm block mb-1 text-brand">
             {term}
           </strong>
-          <span className="font-sans block leading-relaxed text-[#5C524E]">
+          <span className="font-sans block leading-relaxed text-ink-muted">
             {definition}
           </span>
           {significance && (
-            <span className="mt-1.5 pt-1.5 border-t border-[#E8DDC8] font-sans text-[11px] block italic text-[#6B5E59]">
+            <span className="mt-1.5 pt-1.5 border-t border-rule font-sans text-[11px] block italic text-ink-soft">
               Significance: {significance}
             </span>
           )}
           {/* Arrow */}
-          <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-[#E8DDC8] block" />
+          <span className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-rule block" />
         </span>
       )}
     </span>

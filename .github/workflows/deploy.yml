@@ -3,6 +3,8 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches: ["main"]
+  pull_request:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -18,12 +20,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version-file: ".nvmrc"
           cache: "npm"
           cache-dependency-path: "package-lock.json"
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test (includes source & citation integrity checks)
+        run: npm test
 
       - name: Build Next.js
         run: |
@@ -31,6 +39,7 @@ jobs:
           touch ./out/.nojekyll
 
       - name: Deploy to gh-pages branch
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

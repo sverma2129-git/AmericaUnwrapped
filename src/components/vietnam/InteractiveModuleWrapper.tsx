@@ -4,8 +4,8 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 const ModuleLoading = () => (
-  <div className="p-12 border border-[#E8DDC8] bg-[#FAF7F2] text-center rounded-xs shadow-xs">
-    <div className="text-xs uppercase tracking-widest text-[#8B252D] font-bold animate-pulse">
+  <div className="p-12 border border-rule bg-parchment text-center rounded-xs shadow-xs">
+    <div className="text-xs uppercase tracking-widest text-brand font-bold animate-pulse">
       Loading Archival Evidence Module...
     </div>
   </div>

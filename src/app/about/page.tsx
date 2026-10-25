@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Editorial Standards & Educational Charter · America Unwrapped',
+  title: 'Editorial Standards & Educational Charter',
   description:
     'Our charter: evidence before conclusion, equal intellectual scrutiny of all historical actors, separation of fact from interpretation, and primary source primacy.',
 };
@@ -74,56 +74,56 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-12">
       {/* Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-wider text-[#6B5E59]">
+      <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-wider text-ink-soft">
         <ol className="flex items-center space-x-2">
           <li>
             <Link
               href="/"
-              className="hover:text-[#8B252D] transition-colors"
+              className="hover:text-brand transition-colors"
             >
               Home
             </Link>
           </li>
           <li aria-hidden="true">&bull;</li>
-          <li className="text-[#8B252D] font-bold" aria-current="page">
+          <li className="text-brand font-bold" aria-current="page">
             Editorial Charter &amp; Standards
           </li>
         </ol>
       </nav>
 
       {/* Header */}
-      <header className="border-b border-[#E8DDC8] pb-10">
-        <span className="text-xs uppercase tracking-widest text-[#8B252D] font-bold">
+      <header className="border-b border-rule pb-10">
+        <span className="text-xs uppercase tracking-widest text-brand font-bold">
           Charter &bull; Scholarly Rigor &bull; Educational Mission
         </span>
-        <h1 className="mt-3 font-editorial-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#2C2523] leading-tight">
+        <h1 className="mt-3 font-editorial-serif text-3xl sm:text-5xl font-bold tracking-tight text-ink leading-tight">
           The America Unwrapped Editorial Standard
         </h1>
-        <p className="mt-4 font-editorial-serif italic text-lg sm:text-2xl text-[#5C524E] leading-relaxed">
+        <p className="mt-4 font-editorial-serif italic text-lg sm:text-2xl text-ink-muted leading-relaxed">
           History made genuinely understandable through evidence, causation, and intellectual honesty—never through dogmatic moralizing or artificial simplicity.
         </p>
       </header>
 
       {/* Core Philosophy */}
-      <section className="py-6 border-b border-[#E8DDC8] space-y-4">
-        <h2 className="font-editorial-serif text-2xl font-bold text-[#2C2523]">
+      <section className="py-6 border-b border-rule space-y-4">
+        <h2 className="font-editorial-serif text-2xl font-bold text-ink">
           Our Educational &amp; Historical Mission
         </h2>
-        <p className="font-editorial-serif text-base sm:text-lg text-[#2C2523] leading-relaxed">
+        <p className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed">
           Most historical coverage online falls into two unsatisfactory camps: dry academic databases that overwhelm students without providing clarity, or partisan commentary that treats history as a weapon for modern culture wars.
         </p>
-        <p className="font-editorial-serif text-base sm:text-lg text-[#2C2523] leading-relaxed">
+        <p className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed">
           America Unwrapped was founded on the belief that American history is most compelling when presented with complete intellectual honesty, museum-grade visual storytelling, primary source transparency, and an unwavering focus on causation: <strong>Decision &rarr; Assumption &rarr; Result &rarr; Consequence</strong>.
         </p>
       </section>
 
       {/* The 10 Editorial Rules */}
-      <section className="py-6 border-b border-[#E8DDC8]">
+      <section className="py-6 border-b border-rule">
         <div className="mb-8">
-          <span className="text-xs uppercase tracking-widest text-[#6B5E59] block mb-1">
+          <span className="text-xs uppercase tracking-widest text-ink-soft block mb-1">
             Methodological Principles
           </span>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-[#2C2523]">
+          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
             The Ten Editorial Standards
           </h2>
         </div>
@@ -132,17 +132,17 @@ export default function AboutPage() {
           {editorialRules.map((rule) => (
             <div
               key={rule.number}
-              className="p-5 border border-[#E8DDC8] rounded-xs bg-[#FAF7F2] space-y-2 shadow-xs"
+              className="p-5 border border-rule rounded-xs bg-parchment space-y-2 shadow-xs"
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#8B252D]">
+                <span className="text-xs font-bold text-brand">
                   STANDARD {rule.number}
                 </span>
               </div>
-              <h3 className="font-editorial-serif text-lg font-bold text-[#2C2523]">
+              <h3 className="font-editorial-serif text-lg font-bold text-ink">
                 {rule.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#5C524E] leading-relaxed">
+              <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                 {rule.description}
               </p>
             </div>
@@ -152,28 +152,28 @@ export default function AboutPage() {
 
       {/* Technical Architecture & Privacy Commitment */}
       <section className="py-6 space-y-6">
-        <h2 className="font-editorial-serif text-2xl font-bold text-[#2C2523]">
+        <h2 className="font-editorial-serif text-2xl font-bold text-ink">
           Digital Publication &amp; Privacy Architecture
         </h2>
-        <p className="text-base text-[#2C2523] leading-relaxed">
+        <p className="text-base text-ink leading-relaxed">
           In keeping with our documentary and bookish aesthetic, America Unwrapped is built as an ultra-fast, static digital publication:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
-          <div className="p-4 bg-[#FAF7F2] rounded-xs border border-[#E8DDC8]">
-            <span className="font-bold text-[#2C2523] block mb-1">
+          <div className="p-4 bg-parchment rounded-xs border border-rule">
+            <span className="font-bold text-ink block mb-1">
               Zero Surveillance
             </span>
             No third-party trackers, telemetry, or advertising pixels. Student privacy is fully preserved.
           </div>
-          <div className="p-4 bg-[#FAF7F2] rounded-xs border border-[#E8DDC8]">
-            <span className="font-bold text-[#2C2523] block mb-1">
+          <div className="p-4 bg-parchment rounded-xs border border-rule">
+            <span className="font-bold text-ink block mb-1">
               Structured Local Data
             </span>
             No external database or fragile CMS dependencies; all historical records are typed and verified.
           </div>
-          <div className="p-4 bg-[#FAF7F2] rounded-xs border border-[#E8DDC8]">
-            <span className="font-bold text-[#2C2523] block mb-1">
+          <div className="p-4 bg-parchment rounded-xs border border-rule">
+            <span className="font-bold text-ink block mb-1">
               Permanent Accessibility
             </span>
             Prerendered static markup ensures complete longevity and sub-second load times on school Chromebooks.
@@ -182,16 +182,16 @@ export default function AboutPage() {
       </section>
 
       {/* Return Links */}
-      <div className="pt-8 border-t border-[#E8DDC8] flex flex-wrap gap-4 items-center justify-between text-xs">
+      <div className="pt-8 border-t border-rule flex flex-wrap gap-4 items-center justify-between text-xs">
         <Link
           href="/"
-          className="text-[#5C524E] hover:text-[#8B252D] uppercase tracking-wider font-bold transition-colors"
+          className="text-ink-muted hover:text-brand uppercase tracking-wider font-bold transition-colors"
         >
           &larr; Return to Home
         </Link>
         <Link
           href="/vietnam"
-          className="px-5 py-2.5 bg-[#8B252D] hover:bg-[#731E25] text-white uppercase tracking-wider font-bold rounded-xs shadow-xs transition-colors"
+          className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white uppercase tracking-wider font-bold rounded-xs shadow-xs transition-colors"
         >
           Explore History &rarr;
         </Link>
