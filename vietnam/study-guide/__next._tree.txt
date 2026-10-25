@@ -1,2 +1,5 @@
-:HL["/AmericaUnwrapped/_next/static/chunks/10pnmdmgt048q.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4112,"slots":{"children":{"name":"vietnam","param":null,"prefetchHints":4160,"slots":{"children":{"name":"study-guide","param":null,"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"VAvkKPry9lRph1XBNjh0_"}
+:HL["/AmericaUnwrapped/_next/static/chunks/2xddzai5k5jf7.css","style"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":"study-guide","h":96,"c":"$Q3"}]]
+1:[["children",{"s":"vietnam","h":64,"c":"$Q2"}]]
+0:{"b":"IKl0cU0Nl9FrnFuN7VBSE","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
