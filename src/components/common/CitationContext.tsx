@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useCallback, useMemo } from 'react';
 import { ChapterCitation } from '@/types/vietnam';
-import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
+import { resolveCitation } from '@/lib/citations';
 
 interface CitationContextValue {
   activeCitation: ChapterCitation | null;
@@ -19,7 +19,7 @@ export function CitationProvider({ children }: { children: React.ReactNode }) {
 
   const openCitation = useCallback((citationOrId: ChapterCitation | string) => {
     if (typeof citationOrId === 'string') {
-      const found = CITATION_REGISTRY[citationOrId];
+      const found = resolveCitation(citationOrId);
       if (found) {
         setActiveCitation(found);
         setIsOpen(true);

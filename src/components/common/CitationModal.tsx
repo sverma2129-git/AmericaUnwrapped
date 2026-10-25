@@ -1,107 +1,72 @@
 'use client';
 
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useCitation } from './CitationContext';
-import { SourceClassificationType } from '@/types/vietnam';
+import { getSourceTypeBadge, isVerbatimQuotation, SourceTypeBadge } from '@/lib/citations';
+
+const BADGE_TONE_CLASSES: Record<SourceTypeBadge['tone'], string> = {
+  primary: 'bg-brand-tint text-brand border-brand-rule',
+  reporting: 'bg-parchment text-[#78350f] border-rule',
+  scholarly: 'bg-parchment text-ink border-rule',
+  reference: 'bg-parchment text-ink-muted border-rule',
+};
 
 export default function CitationModal() {
   const { activeCitation, isOpen, closeCitation } = useCitation();
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
-  // Close on Escape key press
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        closeCitation();
-      }
-    },
-    [closeCitation]
-  );
-
+  // The native <dialog> provides focus trapping, Escape handling, and focus
+  // restoration to the triggering element when closed.
   useEffect(() => {
-    if (isOpen) {
-      document.addEventListener('keydown', handleKeyDown);
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (isOpen && activeCitation && !dialog.open) {
+      dialog.showModal();
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    } else if (!isOpen && dialog.open) {
+      dialog.close();
     }
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
-    };
-  }, [isOpen, handleKeyDown]);
+  }, [isOpen, activeCitation]);
 
-  if (!isOpen || !activeCitation) {
-    return null;
-  }
-
-  // Format source type badge and human-readable label
-  const getSourceTypeBadge = (type?: SourceClassificationType | string) => {
-    switch (type) {
-      case 'PRIMARY_SOURCE':
-      case 'archival':
-      case 'declassified':
-        return {
-          label: 'Primary Archival Source',
-          className: 'bg-[#FDF3F3] text-[#8B252D] border-[#F0C4C7]',
-          description: 'Contemporary government cable, resolution, treaty, or declassified record.',
-        };
-      case 'CONTEMPORARY_REPORTING':
-        return {
-          label: 'Contemporary Reporting',
-          className: 'bg-[#FAF7F2] text-[#78350f] border-[#E8DDC8]',
-          description: 'Journalistic dispatch, broadcast news, or wire filed during the war.',
-        };
-      case 'SCHOLARLY_SECONDARY_SOURCE':
-      case 'academic-monograph':
-        return {
-          label: 'Scholarly Secondary Source',
-          className: 'bg-[#FAF7F2] text-[#2C2523] border-[#E8DDC8]',
-          description: 'Peer-reviewed academic monograph, university press publication, or archival study.',
-        };
-      default:
-        return {
-          label: 'Historical Reference',
-          className: 'bg-[#FAF7F2] text-[#5C524E] border-[#E8DDC8]',
-          description: 'Historical monograph, official documentation, or archive.',
-        };
-    }
-  };
-
-  const badge = getSourceTypeBadge(activeCitation.sourceType);
-  const isVerifiedQuotation = activeCitation.verificationCategory === 'VERIFIED_QUOTATION' || Boolean(activeCitation.exactQuotation);
+  const badge = activeCitation ? getSourceTypeBadge(activeCitation.sourceType) : null;
+  const isVerbatim = activeCitation ? isVerbatimQuotation(activeCitation) : false;
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
+    <dialog
+      ref={dialogRef}
       aria-labelledby="citation-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/50 backdrop-blur-xs transition-opacity animate-in fade-in duration-150"
-      onClick={closeCitation}
+      onClose={() => {
+        document.body.style.overflow = '';
+        closeCitation();
+      }}
+      onClick={(e) => {
+        // Clicks on the backdrop target the <dialog> element itself
+        if (e.target === e.currentTarget) closeCitation();
+      }}
+      className="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[90vh] overflow-y-auto bg-paper border border-rule text-ink shadow-2xl rounded-xs p-0 backdrop:bg-black/50 backdrop:backdrop-blur-xs"
     >
-      <div
-        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#FFFEFA] border border-[#E8DDC8] text-[#2C2523] shadow-2xl rounded-xs p-6 sm:p-8 space-y-6"
-        onClick={(e) => e.stopPropagation()}
-      >
+      {activeCitation && badge && (
+      <div className="p-6 sm:p-8 space-y-6">
         {/* Modal Header & Close Button */}
-        <div className="flex items-start justify-between gap-4 border-b border-[#E8DDC8] pb-4">
+        <div className="flex items-start justify-between gap-4 border-b border-rule pb-4">
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-center gap-2">
               <span
-                className={`font-mono text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-xs border ${badge.className}`}
+                className={`font-mono text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-xs border ${BADGE_TONE_CLASSES[badge.tone]}`}
               >
                 {badge.label}
               </span>
-              {isVerifiedQuotation ? (
-                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-[#FAF7F2] text-[#2C2523] border border-[#E8DDC8]">
+              {isVerbatim ? (
+                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
                   Verified Verbatim Source
                 </span>
               ) : (
-                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-[#FAF7F2] text-[#5C524E] border border-[#E8DDC8]">
+                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
                   Documented Source Paraphrase
                 </span>
               )}
             </div>
-            <p className="font-sans text-xs text-[#5C524E]">
+            <p className="font-sans text-xs text-ink-muted">
               {badge.description}
             </p>
           </div>
@@ -110,7 +75,7 @@ export default function CitationModal() {
             type="button"
             onClick={closeCitation}
             aria-label="Close citation modal"
-            className="p-1.5 text-[#5C524E] hover:text-[#8B252D] transition-colors cursor-pointer rounded-xs"
+            className="p-1.5 text-ink-muted hover:text-brand transition-colors cursor-pointer rounded-xs"
           >
             <svg
               className="w-5 h-5"
@@ -128,7 +93,7 @@ export default function CitationModal() {
         <section aria-labelledby="section-source" className="space-y-2">
           <span
             id="section-source"
-            className="font-mono text-[10px] uppercase tracking-widest text-[#8B252D] font-bold block"
+            className="font-mono text-[10px] uppercase tracking-widest text-brand font-bold block"
           >
             Source Provenance
           </span>
@@ -136,36 +101,36 @@ export default function CitationModal() {
           <div className="space-y-1">
             <h3
               id="citation-modal-title"
-              className="font-editorial-serif text-xl sm:text-2xl font-bold text-[#2C2523] leading-snug"
+              className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug"
             >
               {activeCitation.title || activeCitation.citation}
             </h3>
 
             {activeCitation.authorOrInstitution && (
-              <p className="font-sans text-xs sm:text-sm text-[#5C524E]">
-                <span className="font-semibold text-[#2C2523]">Author / Creator:</span> {activeCitation.authorOrInstitution}
+              <p className="font-sans text-xs sm:text-sm text-ink-muted">
+                <span className="font-semibold text-ink">Author / Creator:</span> {activeCitation.authorOrInstitution}
               </p>
             )}
 
-            <div className="flex flex-wrap gap-x-4 gap-y-1 font-sans text-xs text-[#5C524E]">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 font-sans text-xs text-ink-muted">
               {activeCitation.date && (
                 <span>
-                  <strong className="text-[#2C2523]">Date:</strong> {activeCitation.date}
+                  <strong className="text-ink">Date:</strong> {activeCitation.date}
                 </span>
               )}
               {activeCitation.publicationOrArchive && (
                 <span>
-                  <strong className="text-[#2C2523]">Archive / Publication:</strong> {activeCitation.publicationOrArchive}
+                  <strong className="text-ink">Archive / Publication:</strong> {activeCitation.publicationOrArchive}
                 </span>
               )}
             </div>
 
             {activeCitation.locator && (
-              <div className="pt-1 font-mono text-xs text-[#2C2523]">
-                <strong className="text-[#5C524E] uppercase tracking-wider text-[10px] block">
+              <div className="pt-1 font-mono text-xs text-ink">
+                <strong className="text-ink-muted uppercase tracking-wider text-[10px] block">
                   Precise Locator:
                 </strong>
-                <span className="bg-[#FAF7F2] px-2 py-0.5 rounded-xs border border-[#E8DDC8] inline-block mt-0.5 font-medium">
+                <span className="bg-parchment px-2 py-0.5 rounded-xs border border-rule inline-block mt-0.5 font-medium">
                   {activeCitation.locator}
                 </span>
               </div>
@@ -173,31 +138,31 @@ export default function CitationModal() {
           </div>
         </section>
 
-        {/* 2. VERBATIM EXCERPT OR PARAPHRASE */}
-        {(activeCitation.exactQuotation || isVerifiedQuotation) ? (
-          <section aria-labelledby="section-exact-quote" className="p-4 bg-[#FAF7F2] border border-[#E8DDC8] rounded-xs space-y-1.5 border-l-4 border-l-[#8B252D]">
+        {/* 2. VERBATIM EXCERPT (verified quotations with exact text only) */}
+        {isVerbatim && (
+          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-xs space-y-1.5 border-l-4 border-l-brand">
             <span
               id="section-exact-quote"
-              className="font-mono text-[10px] uppercase tracking-widest text-[#8B252D] font-bold block"
+              className="font-mono text-[10px] uppercase tracking-widest text-brand font-bold block"
             >
               Verified Exact Verbatim Excerpt
             </span>
-            <blockquote className="font-editorial-serif italic text-base sm:text-lg text-[#2C2523] leading-relaxed pl-1 py-0.5">
-              &ldquo;{activeCitation.exactQuotation || activeCitation.citation}&rdquo;
+            <blockquote className="font-editorial-serif italic text-base sm:text-lg text-ink leading-relaxed pl-1 py-0.5">
+              &ldquo;{activeCitation.exactQuotation}&rdquo;
             </blockquote>
           </section>
-        ) : null}
+        )}
 
         {/* 3. WHAT THIS SOURCE SUPPORTS */}
         {activeCitation.supportsClaim && (
-          <section aria-labelledby="section-supports" className="space-y-1.5 border-t border-[#E8DDC8] pt-4">
+          <section aria-labelledby="section-supports" className="space-y-1.5 border-t border-rule pt-4">
             <span
               id="section-supports"
-              className="font-mono text-[10px] uppercase tracking-widest text-[#5C524E] font-bold block"
+              className="font-mono text-[10px] uppercase tracking-widest text-ink-muted font-bold block"
             >
               What This Source Supports
             </span>
-            <p className="font-sans text-sm sm:text-base text-[#2C2523] leading-relaxed">
+            <p className="font-sans text-sm sm:text-base text-ink leading-relaxed">
               {activeCitation.supportsClaim}
             </p>
           </section>
@@ -205,22 +170,22 @@ export default function CitationModal() {
 
         {/* 4. LIMITATIONS */}
         {activeCitation.limitations && (
-          <section aria-labelledby="section-limitations" className="space-y-1.5 border-t border-[#E8DDC8] pt-4">
+          <section aria-labelledby="section-limitations" className="space-y-1.5 border-t border-rule pt-4">
             <span
               id="section-limitations"
-              className="font-mono text-[10px] uppercase tracking-widest text-[#8B252D] font-bold block"
+              className="font-mono text-[10px] uppercase tracking-widest text-brand font-bold block"
             >
               Documentary Limitations &amp; Context
             </span>
-            <p className="font-sans italic text-sm text-[#5C524E] leading-relaxed bg-[#FDF3F3] p-3 rounded-xs border border-[#F0C4C7]">
+            <p className="font-sans italic text-sm text-ink-muted leading-relaxed bg-brand-tint p-3 rounded-xs border border-brand-rule">
               {activeCitation.limitations}
             </p>
           </section>
         )}
 
         {/* 5. VIEW ORIGINAL LINK / ARCHIVE ACCESS */}
-        <footer className="border-t border-[#E8DDC8] pt-5 flex flex-wrap items-center justify-between gap-3">
-          <div className="font-mono text-xs text-[#5C524E]">
+        <footer className="border-t border-rule pt-5 flex flex-wrap items-center justify-between gap-3">
+          <div className="font-mono text-xs text-ink-muted">
             America Unwrapped Citation Archive &bull; Ref [{activeCitation.marker || activeCitation.id}]
           </div>
 
@@ -229,7 +194,7 @@ export default function CitationModal() {
               href={activeCitation.originalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#8B252D] hover:bg-[#731E25] text-white font-sans text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white font-sans text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
             >
               <span>View Original Archive</span>
               <svg
@@ -243,12 +208,13 @@ export default function CitationModal() {
               </svg>
             </a>
           ) : (
-            <span className="font-sans text-xs text-[#5C524E] italic">
+            <span className="font-sans text-xs text-ink-muted italic">
               Original document in physical repository
             </span>
           )}
         </footer>
       </div>
-    </div>
+      )}
+    </dialog>
   );
 }

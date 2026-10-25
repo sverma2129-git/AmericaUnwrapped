@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { VIETNAM_CHAPTERS } from '@/data/vietnam/chapters';
+import { VIETNAM_CHAPTERS, getAdjacentChapters } from '@/data/vietnam/chapters';
 import { ChapterData } from '@/types/vietnam';
 
 interface ChapterNavBarProps {
@@ -12,15 +12,7 @@ interface ChapterNavBarProps {
 export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const prevChapter =
-    currentChapter.number > 1
-      ? VIETNAM_CHAPTERS.find((c) => c.number === currentChapter.number - 1)
-      : null;
-
-  const nextChapter =
-    currentChapter.number < 12
-      ? VIETNAM_CHAPTERS.find((c) => c.number === currentChapter.number + 1)
-      : null;
+  const { prev: prevChapter, next: nextChapter } = getAdjacentChapters(currentChapter);
 
   // Close drawer on Escape key
   useEffect(() => {
@@ -35,21 +27,21 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
     <>
       <nav
         aria-label="Chapter Reading Bar"
-        className="sticky top-16 z-30 backdrop-blur-md bg-[#FFFEFA]/95 border-b border-[#E8DDC8] text-[#2C2523] transition-colors"
+        className="sticky top-16 z-30 backdrop-blur-md bg-paper/95 border-b border-rule text-ink transition-colors"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-xs">
           {/* Left: Previous chapter or Hub */}
           <div className="flex items-center gap-3">
             <Link
               href="/vietnam"
-              className="text-[#5C524E] hover:text-[#8B252D] transition-colors hidden sm:inline-block font-medium"
+              className="text-ink-muted hover:text-brand transition-colors hidden sm:inline-block font-medium"
             >
               &larr; Explore History
             </Link>
             {prevChapter && (
               <Link
                 href={`/vietnam/${prevChapter.id}`}
-                className="flex items-center gap-1 font-semibold text-[#2C2523] hover:text-[#8B252D] transition-colors"
+                className="flex items-center gap-1 font-semibold text-ink hover:text-brand transition-colors"
                 title={`Previous: Chapter ${prevChapter.number} - ${prevChapter.title}`}
               >
                 <span>&larr; Ch. {prevChapter.number.toString().padStart(2, '0')}</span>
@@ -60,14 +52,14 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
           {/* Center: Current Chapter Name & Drawer Trigger */}
           <button
             onClick={() => setDrawerOpen(!drawerOpen)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-xs transition-colors font-semibold bg-[#FAF7F2] border border-[#E8DDC8] hover:border-[#8B252D] text-[#2C2523] cursor-pointer"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xs transition-colors font-semibold bg-parchment border border-rule hover:border-brand text-ink cursor-pointer"
             aria-expanded={drawerOpen}
             aria-controls="chapter-drawer"
           >
             <span className="truncate max-w-[200px] sm:max-w-md">
               Ch. {currentChapter.number.toString().padStart(2, '0')}: {currentChapter.title}
             </span>
-            <span className="text-[10px] text-[#8B252D]">{drawerOpen ? '▲' : '▼'}</span>
+            <span className="text-[10px] text-brand">{drawerOpen ? '▲' : '▼'}</span>
           </button>
 
           {/* Right: Next chapter */}
@@ -75,7 +67,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
             {nextChapter ? (
               <Link
                 href={`/vietnam/${nextChapter.id}`}
-                className="flex items-center gap-1 font-semibold text-[#2C2523] hover:text-[#8B252D] transition-colors"
+                className="flex items-center gap-1 font-semibold text-ink hover:text-brand transition-colors"
                 title={`Next: Chapter ${nextChapter.number} - ${nextChapter.title}`}
               >
                 <span>Ch. {nextChapter.number.toString().padStart(2, '0')} &rarr;</span>
@@ -83,7 +75,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
             ) : (
               <Link
                 href="/vietnam/study-guide"
-                className="text-[#8B252D] font-semibold hover:underline"
+                className="text-brand font-semibold hover:underline"
               >
                 Study Guide &rarr;
               </Link>
@@ -100,21 +92,21 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
           onClick={() => setDrawerOpen(false)}
         >
           <div
-            className="bg-[#FFFEFA] border border-[#E8DDC8] w-full max-w-4xl max-h-[85vh] overflow-y-auto p-6 shadow-xl rounded-xs"
+            className="bg-paper border border-rule w-full max-w-4xl max-h-[85vh] overflow-y-auto p-6 shadow-xl rounded-xs"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#E8DDC8]">
+            <div className="flex items-center justify-between pb-4 mb-4 border-b border-rule">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#8B252D] block">
+                <span className="text-xs font-bold uppercase tracking-wider text-brand block">
                   The Vietnam War
                 </span>
-                <h3 className="font-editorial-serif text-xl font-bold text-[#2C2523]">
+                <h3 className="font-editorial-serif text-xl font-bold text-ink">
                   Select a Chapter
                 </h3>
               </div>
               <button
                 onClick={() => setDrawerOpen(false)}
-                className="text-xs px-3 py-1 border border-[#E8DDC8] bg-[#FAF7F2] hover:bg-[#E8DDC8] rounded-xs text-[#2C2523] cursor-pointer"
+                className="text-xs px-3 py-1 border border-rule bg-parchment hover:bg-rule rounded-xs text-ink cursor-pointer"
               >
                 Close (ESC)
               </button>
@@ -130,15 +122,15 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
                     onClick={() => setDrawerOpen(false)}
                     className={`p-3.5 border transition-all rounded-xs flex flex-col justify-between ${
                       isCurrent
-                        ? 'border-[#8B252D] bg-[#FDF3F3] text-[#8B252D] font-semibold'
-                        : 'border-[#E8DDC8] bg-[#FAF7F2] hover:border-[#8B252D] text-[#2C2523]'
+                        ? 'border-brand bg-brand-tint text-brand font-semibold'
+                        : 'border-rule bg-parchment hover:border-brand text-ink'
                     }`}
                   >
                     <div>
-                      <div className="flex items-center justify-between text-[11px] text-[#5C524E] mb-1">
+                      <div className="flex items-center justify-between text-[11px] text-ink-muted mb-1">
                         <span>Ch. {ch.number.toString().padStart(2, '0')} &bull; {ch.timeframe}</span>
                         {ch.isLandmark && (
-                          <span className="text-[#8B252D] font-bold text-[10px]">★ Turning Point</span>
+                          <span className="text-brand font-bold text-[10px]">★ Turning Point</span>
                         )}
                       </div>
                       <div className="font-editorial-serif text-sm leading-snug line-clamp-2">

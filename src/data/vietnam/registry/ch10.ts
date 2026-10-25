@@ -1,0 +1,75 @@
+import { ChapterCitation, SourceRegistryEntry } from '@/types/vietnam';
+
+// Chapter 10 entries, aggregated into SOURCE_REGISTRY / CITATION_REGISTRY by ../sourceRegistry.ts
+
+// ─── CHAPTER 10: THE 1975 COLLAPSE ──────────────────────────────────────────
+export const sources: SourceRegistryEntry[] = [
+  {
+    id: 'Q016',
+    chapter: 10,
+    type: 'claim',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+    text: 'In Black April, military historian George J. Veith documents how North Vietnamese armored units rammed through the iron gates of Saigon’s Presidential Palace at 11:30 a.m. on April 30, 1975, capturing President Duong Van Minh and concluding the military collapse of the Republic of Vietnam.',
+    source: 'Black April: The Fall of South Vietnam, 1973–1975',
+    authorOrCreator: 'George J. Veith',
+    institution: 'Encounter Books / Historical Monograph',
+    date: '2012',
+    sourceUrl: 'https://www.encounterbooks.com/books/black-april/',
+    locator: 'Encounter Books, 2012, Chapter 19, pp. 488–492',
+    locatorStatus: 'supported',
+    verified: true,
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    supportsClaim: 'Details the tactical climax of the Ho Chi Minh Campaign and the final surrender of the South Vietnamese government on April 30, 1975.',
+    limitations: 'The dramatic quote previously attributed to Veith was an editorial narrative; preserved as an attributed historical account without quotation marks.',
+    conversionStatus: 'converted_to_paraphrase',
+    notes: 'Historical narrative verified against Veith (2012). Quotation marks permanently removed.',
+  },
+];
+
+export const citations: Record<string, ChapterCitation> = {
+  'c10-1': {
+    id: 'c10-1',
+    marker: 1,
+    citation: 'Veith, George J. Black April: The Fall of South Vietnam, 1973–1975. Encounter Books, 2012.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'George J. Veith',
+    title: 'Black April: The Fall of South Vietnam, 1973–1975',
+    date: '2012',
+    publicationOrArchive: 'Encounter Books',
+    locator: 'Chapters 12–19, pp. 280–495',
+    supportsClaim: 'Details the military collapse of South Vietnam across 55 days, documenting the impact of congressional aid cuts, fuel/ammo rationing, and the disastrous Central Highlands retreat.',
+    limitations: 'Sympathetic to the South Vietnamese armed forces; argues Saigon could have sustained defense had American logistical and air support continued.',
+    originalUrl: 'https://www.encounterbooks.com/books/black-april/',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c10-2': {
+    id: 'c10-2',
+    marker: 2,
+    citation: 'Dung, Van Tien. Our Great Spring Victory: An Account of the Liberation of South Vietnam. Monthly Review Press, 1977.',
+    sourceType: 'PRIMARY_SOURCE',
+    authorOrInstitution: 'General Van Tien Dung',
+    title: 'Our Great Spring Victory: An Account of the Liberation of South Vietnam',
+    date: '1977',
+    publicationOrArchive: 'Monthly Review Press (English translation)',
+    locator: 'Chapters 2–6, pp. 30–125',
+    supportsClaim: 'First-hand account by the North Vietnamese chief of staff detailing PAVN’s strategic planning for the 1975 Spring Offensive and the capture of Saigon.',
+    limitations: 'Official triumphalist memoir written by the victorious military commander; downplays southern resistance and internal communist command frictions.',
+    originalUrl: 'https://monthlyreview.org/',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c10-3': {
+    id: 'c10-3',
+    marker: 3,
+    citation: 'Snepp, Frank. Decent Interval: An Insider’s Account of Saigon’s Indecent End. Random House, 1977.',
+    sourceType: 'PRIMARY_SOURCE',
+    authorOrInstitution: 'Frank Snepp',
+    title: 'Decent Interval: An Insider’s Account of Saigon’s Indecent End',
+    date: '1977',
+    publicationOrArchive: 'Random House',
+    locator: 'Chapters 14–22, pp. 350–500',
+    supportsClaim: 'Eyewitness insider account by CIA Saigon analyst Frank Snepp documenting intelligence denial, ambassadorial paralysis, and the chaotic abandonment of Vietnamese allies.',
+    limitations: 'First-person memoir by a disaffected intelligence officer, which prompted legal battles with the CIA over pre-publication clearance.',
+    originalUrl: 'https://www.worldcat.org/title/decent-interval/oclc/3345422',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+};

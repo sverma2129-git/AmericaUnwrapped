@@ -1,0 +1,68 @@
+import { ChapterCitation, SourceRegistryEntry } from '@/types/vietnam';
+
+// Chapter 12 entries, aggregated into SOURCE_REGISTRY / CITATION_REGISTRY by ../sourceRegistry.ts
+
+export const sources: SourceRegistryEntry[] = [];
+
+export const citations: Record<string, ChapterCitation> = {
+  'c12-1': {
+    id: 'c12-1',
+    marker: 1,
+    citation: 'Halberstam, David. The Best and the Brightest. Random House, 1972.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'David Halberstam',
+    title: 'The Best and the Brightest',
+    date: '1972',
+    publicationOrArchive: 'Random House',
+    locator: 'Chapters 18–24, pp. 380–520',
+    supportsClaim: 'Foundational orthodox history demonstrating how intellectual arrogance, bureaucratic incentives, and technocratic hubris in the Kennedy and Johnson administrations propelled escalation.',
+    limitations: 'Journalistic monograph published in 1972 before key White House tapes and foreign archives were declassified.',
+    originalUrl: 'https://www.penguinrandomhouse.com/books/73479/the-best-and-the-brightest-by-david-halberstam/',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c12-2': {
+    id: 'c12-2',
+    marker: 2,
+    citation: 'Summers, Harry G. On Strategy: A Critical Analysis of the Vietnam War. Presidio Press, 1982.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'Colonel Harry G. Summers Jr.',
+    title: 'On Strategy: A Critical Analysis of the Vietnam War',
+    date: '1982',
+    publicationOrArchive: 'Presidio Press / U.S. Army War College',
+    locator: 'Chapters 5–9, pp. 85–160',
+    supportsClaim: 'Classic military revisionist critique applying Clausewitzian theory to argue the U.S. military failed by treating the conflict as a counterinsurgency rather than a conventional war against North Vietnam.',
+    limitations: 'Critiqued by subsequent scholars for underestimating the political resilience of the southern insurgency and the risks of direct war with China.',
+    originalUrl: 'https://www.worldcat.org/title/on-strategy-a-critical-analysis-of-the-vietnam-war/oclc/7735392',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c12-3': {
+    id: 'c12-3',
+    marker: 3,
+    citation: 'Logevall, Fredrik. Choosing War: The Lost Chance for Peace and the Escalation of War in Vietnam. University of California Press, 1999.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'Fredrik Logevall',
+    title: 'Choosing War: The Lost Chance for Peace and the Escalation of War in Vietnam',
+    date: '1999',
+    publicationOrArchive: 'University of California Press',
+    locator: 'Chapters 7–12, pp. 220–390',
+    supportsClaim: 'Re-evaluates the critical decision window of 1963–1965, demonstrating that American intervention was not inevitable but chosen by leaders motivated by domestic credibility and partisan fear.',
+    limitations: 'Emphasizes international diplomatic options and presidential choices over military operational momentum.',
+    originalUrl: 'https://www.ucpress.edu/book/9780520229198/choosing-war',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+  'c12-4': {
+    id: 'c12-4',
+    marker: 4,
+    citation: 'Nguyen, Lien-Hang T. Hanoi’s War: An International History of the War for Peace in Vietnam. University of North Carolina Press, 2012.',
+    sourceType: 'SCHOLARLY_SECONDARY_SOURCE',
+    authorOrInstitution: 'Lien-Hang T. Nguyen',
+    title: 'Hanoi’s War: An International History of the War for Peace in Vietnam',
+    date: '2012',
+    publicationOrArchive: 'University of North Carolina Press',
+    locator: 'Chapters 5–8, pp. 150–260',
+    supportsClaim: 'Presents the groundbreaking post-revisionist international history utilizing Vietnamese archives to reveal that Hanoi’s leadership was an assertive, calculating international actor driving its own war strategy.',
+    limitations: 'Focuses on the Vietnamese Communist Party’s internal power struggles and international diplomacy rather than domestic American public opinion.',
+    originalUrl: 'https://uncpress.org/book/9781469628356/hanois-war/',
+    verificationCategory: 'VERIFIED_PARAPHRASE',
+  },
+};

@@ -21,12 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className="min-h-full flex flex-col bg-[#FFFEFA] text-[#2C2523] font-sans antialiased selection:bg-[#E8DDC8] selection:text-[#2C2523]">
+      <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased selection:bg-rule selection:text-ink">
         <CitationProvider>
           {/* Accessible Skip Link */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#8B252D] focus:text-white focus:rounded-xs focus:shadow-md focus:outline-none focus:ring-2 focus:ring-[#8B252D]"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-xs focus:shadow-md focus:outline-none focus:ring-2 focus:ring-brand"
           >
             Skip to main content
           </a>

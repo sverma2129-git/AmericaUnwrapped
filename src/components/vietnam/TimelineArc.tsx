@@ -119,17 +119,17 @@ export default function TimelineArc() {
   const [selectedNode, setSelectedNode] = useState<ArcNode>(ARC_NODES[1]); // Default to Dien Bien Phu 1954
 
   return (
-    <div className="border border-[#E8DDC8] bg-[#FAF7F2] text-[#2C2523] p-6 sm:p-8 rounded-xs">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#E8DDC8] gap-2">
+    <div className="border border-rule bg-parchment text-ink p-6 sm:p-8 rounded-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-rule gap-2">
         <div>
-          <span className="font-archival-mono text-[11px] uppercase tracking-widest text-[#8B252D] font-bold block">
+          <span className="font-archival-mono text-[11px] uppercase tracking-widest text-brand font-bold block">
             The Chronological Backbone · 1945–1986
           </span>
-          <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-[#2C2523]">
+          <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink">
             Thirty-Year Arc of Decision &amp; Escalation
           </h3>
         </div>
-        <div className="font-archival-mono text-xs text-[#5C524E]">
+        <div className="font-archival-mono text-xs text-ink-muted">
           Click any milestone to inspect historical context
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function TimelineArc() {
       <div className="py-8 overflow-x-auto">
         <div className="min-w-[680px] relative px-4">
           {/* Baseline Rail */}
-          <div className="h-0.5 w-full bg-[#E8DDC8] absolute top-4 left-0 -z-0" />
+          <div className="h-0.5 w-full bg-rule absolute top-4 left-0 -z-0" />
 
           {/* Nodes */}
           <div className="flex justify-between items-start relative z-10">
@@ -154,10 +154,10 @@ export default function TimelineArc() {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-mono font-bold transition-all border ${
                       isSelected
-                        ? 'bg-[#8B252D] text-white border-[#8B252D] scale-110 shadow-xs'
+                        ? 'bg-brand text-white border-brand scale-110 shadow-xs'
                         : node.isLandmark
-                        ? 'bg-[#8B252D]/10 text-[#8B252D] border-[#8B252D] group-hover:scale-105'
-                        : 'bg-[#FFFEFA] text-[#5C524E] border-[#E8DDC8] group-hover:border-[#8B252D]'
+                        ? 'bg-brand/10 text-brand border-brand group-hover:scale-105'
+                        : 'bg-paper text-ink-muted border-rule group-hover:border-brand'
                     }`}
                   >
                     {node.year.toString().slice(2)}
@@ -165,8 +165,8 @@ export default function TimelineArc() {
                   <span
                     className={`mt-2 font-mono text-[10px] tracking-tight whitespace-nowrap transition-colors max-w-[64px] text-center truncate ${
                       isSelected
-                        ? 'font-bold text-[#8B252D]'
-                        : 'text-[#6B5E59] group-hover:text-[#2C2523]'
+                        ? 'font-bold text-brand'
+                        : 'text-ink-soft group-hover:text-ink'
                     }`}
                   >
                     {node.label}
@@ -179,29 +179,29 @@ export default function TimelineArc() {
       </div>
 
       {/* Selected Milestone Inspection Plate */}
-      <div className="mt-4 p-5 bg-[#FFFEFA] border border-[#E8DDC8] rounded-xs flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-xs">
+      <div className="mt-4 p-5 bg-paper border border-rule rounded-xs flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-xs">
         <div className="space-y-1">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#5C524E]">
+            <span className="text-xs font-bold uppercase tracking-wider text-ink-muted">
               {selectedNode.year} · Chapter {selectedNode.chapterNumber.toString().padStart(2, '0')}
             </span>
             {selectedNode.isLandmark && (
-              <span className="px-1.5 py-0.5 bg-[#8B252D]/10 text-[#8B252D] text-[10px] uppercase tracking-wider rounded-xs border border-[#8B252D]/30 font-bold">
+              <span className="px-1.5 py-0.5 bg-brand/10 text-brand text-[10px] uppercase tracking-wider rounded-xs border border-brand/30 font-bold">
                 Landmark Turning Point
               </span>
             )}
           </div>
-          <h4 className="font-editorial-serif text-lg font-bold text-[#2C2523]">
+          <h4 className="font-editorial-serif text-lg font-bold text-ink">
             {selectedNode.label}: {selectedNode.chapterTitle}
           </h4>
-          <p className="font-editorial-serif text-sm text-[#5C524E] max-w-2xl leading-relaxed">
+          <p className="font-editorial-serif text-sm text-ink-muted max-w-2xl leading-relaxed">
             {selectedNode.summary}
           </p>
         </div>
 
         <Link
           href={`/vietnam/${selectedNode.slug}`}
-          className="inline-flex items-center justify-center shrink-0 px-4 py-2.5 bg-[#8B252D] hover:bg-[#731E25] text-white text-xs font-bold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+          className="inline-flex items-center justify-center shrink-0 px-4 py-2.5 bg-brand hover:bg-brand-hover text-white text-xs font-bold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
         >
           Enter Chapter {selectedNode.chapterNumber} &rarr;
         </Link>
