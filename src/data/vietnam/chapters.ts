@@ -1,5 +1,6 @@
 import { ChapterData } from '@/types/vietnam';
 import { PRIMARY_DOCUMENTS } from './sources';
+import { CITATION_REGISTRY } from './sourceRegistry';
 
 export const VIETNAM_CHAPTERS: ChapterData[] = [
   {
@@ -15,15 +16,15 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       bannerTitle: 'The Cataclysmic Siege at Dien Bien Phu',
       dateline: 'March 13 – May 7, 1954',
       location: 'Muong Thanh Valley Basin, Northwestern Vietnam',
-      quote: 'The valley floor had become a slaughterhouse. Navarre’s fortress was an open grave.',
+      quote: 'Navarre’s entrenched valley bastion was systematically overwhelmed by artillery assembled on surrounding heights, turning the French stronghold into an untenable siege position.',
       quoteSpeaker: 'Bernard B. Fall',
-      quoteContext: 'Hell in a Very Small Place (1966)',
+      quoteContext: 'Historical synthesis from Hell in a Very Small Place (1966)',
     },
     whatHappened: {
       narrative: [
         'On September 2, 1945, in Hanoi’s Ba Dinh Square, Ho Chi Minh proclaimed the establishment of the Democratic Republic of Vietnam (DRV), quoting directly from the American Declaration of Independence. French colonial authorities, determined to reassert sovereignty after wartime Japanese occupation, launched a military campaign to regain control, driving Ho’s Viet Minh into the northern mountains and initiating the First Indochina War in late 1946.',
-        'Between 1945 and 1949, Washington largely viewed the conflict as a regional European colonial war. However, the communist victory in China in 1949 and the outbreak of the Korean War in 1950 fundamentally altered American strategic calculations. Reframing the Viet Minh not as nationalist insurgents but as the vanguard of Sino-Soviet expansion in Southeast Asia, President Truman authorized direct military aid. By 1954, the United States was underwriting roughly 78 to 80 percent of France’s war expenditures—having committed nearly $2 billion—yet Washington exercised virtually no command authority over French battlefield strategy.',
-        'In late 1953, French Commander Henri Navarre established a fortified base in the remote valley basin of Dien Bien Phu. Navarre’s operational premise was that superior French airpower, armor, and artillery in the valley would lure the Viet Minh into open ground and destroy them. French planners assumed the surrounding ring of jungle-covered mountains was impassable to heavy enemy artillery. Instead, General Vo Nguyen Giap mobilized over 250,000 civilian porters to dismantle heavy howitzers and haul them up the reverse slopes of the mountains, concealing them in dug-in caves overlooking the French garrison. After a 55-day siege in which French airstrips were severed, the fortress fell on May 7, 1954, on the eve of the Geneva Conference.',
+        'Between 1945 and 1949, Washington largely viewed the conflict as a regional European colonial war. However, the communist victory in China in 1949 and the outbreak of the Korean War in 1950 fundamentally altered American strategic calculations. Reframing the Viet Minh not as nationalist insurgents but as the vanguard of Sino-Soviet expansion in Southeast Asia, President Truman authorized direct military aid. By 1954, the United States was underwriting roughly 78 to 80 percent of France’s war expenditures—having committed nearly $2 billion[^c1-1]—yet Washington exercised virtually no command authority over French battlefield strategy.',
+        'In late 1953, French Commander Henri Navarre established a fortified base in the remote valley basin of Dien Bien Phu. Navarre’s operational premise was that superior French airpower, armor, and artillery in the valley would lure the Viet Minh into open ground and destroy them. French planners assumed the surrounding ring of jungle-covered mountains was impassable to heavy enemy artillery. Instead, General Vo Nguyen Giap mobilized over 250,000 civilian porters to dismantle heavy howitzers and haul them up the reverse slopes of the mountains, concealing them in dug-in caves overlooking the French garrison.[^c1-2] After a 55-day siege in which French airstrips were severed, the fortress fell on May 7, 1954, on the eve of the Geneva Conference.[^c1-3]',
       ],
       keyEvents: [
         { date: 'Sept 2, 1945', title: 'DRV Declaration of Independence', detail: 'Ho Chi Minh proclaims Vietnamese independence in Hanoi, appealing to the Atlantic Charter.' },
@@ -104,9 +105,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'The 1954 Geneva declaration explicitly noted that the 17th parallel was provisional and not a territorial boundary. What combination of Cold War pressures, domestic politics, and regional decisions prevented reunification elections in 1956?',
     },
     citations: [
-      { id: 'c1-1', marker: 1, citation: 'Logevall, Fredrik. Embers of War: The Fall of an Empire and the Making of America’s Vietnam. Random House, 2012.', sourceType: 'academic-monograph' },
-      { id: 'c1-2', marker: 2, citation: 'Fall, Bernard B. Hell in a Very Small Place: The Siege of Dien Bien Phu. Lippincott, 1966.', sourceType: 'academic-monograph' },
-      { id: 'c1-3', marker: 3, citation: 'Herring, George C. America’s Longest War: The United States and Vietnam, 1950–1975. McGraw-Hill, 2013.', sourceType: 'academic-monograph' },
+      CITATION_REGISTRY['c1-1'],
+      CITATION_REGISTRY['c1-2'],
+      CITATION_REGISTRY['c1-3'],
     ],
   },
   {
@@ -119,9 +120,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       'The 1954 Geneva Accords temporarily divided Vietnam at the 17th parallel pending nationwide elections in 1956. As Ngo Dinh Diem consolidated power in Saigon, the partition hardened into a permanent frontline through a confluence of Cold War calculations, Diem’s rejection of elections, northern reconstruction priorities, and the lack of international enforcement. Diem’s land policies and anti-communist campaigns catalyzed genuine local grievances, leading to the formation of the National Liberation Front (NLF) with Hanoi’s backing.',
     whatHappened: {
       narrative: [
-        'The Geneva Conference concluded in July 1954 with an armistice dividing Vietnam temporarily at the 17th parallel. A 300-day open-border period produced "Operation Passage to Freedom," during which roughly 890,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist families—migrated south with U.S. Navy transport, while approximately 100,000 southern Viet Minh fighters moved north for regroupment.',
-        'In Saigon, Ngo Dinh Diem, an austere Catholic nationalist, became prime minister under Emperor Bao Dai. With American financial and advisory backing, Diem defeated the Binh Xuyen syndicate and religious sects, staged a rigged 1955 referendum to depose Bao Dai, and proclaimed the Republic of Vietnam (RVN). When the July 1956 deadline for nationwide reunification elections arrived, Diem refused to consult with Hanoi, asserting that genuine democratic voting was impossible in the communist North. President Eisenhower acknowledged in his memoirs that had nationwide elections occurred, Ho Chi Minh would have likely received 80 percent of the vote.',
-        'Crucially, the permanent division was not caused by Diem’s refusal alone: Geneva was an international compromise where neither superpower was committed to enforcing unification; Hanoi was internally consumed by post-war economic restoration and the turbulent 1953–56 land reform campaign; and no neutral mechanism existed to oversee a nationwide vote. In the South, Diem’s regime reversed Viet Minh land reforms, returning land to traditional landlords and fueling intense rural anger, while his "Denounce the Communists" campaign decimated southern cadre networks. In January 1959, Hanoi passed Resolution 15, officially authorizing armed revolutionary struggle, which culminated in the creation of the National Liberation Front (NLF / "Viet Cong") in December 1960.',
+        'The Geneva Conference concluded in July 1954 with an armistice dividing Vietnam temporarily at the 17th parallel. A 300-day open-border period produced "Operation Passage to Freedom," during which roughly 890,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist families—migrated south with U.S. Navy transport, while approximately 100,000 southern Viet Minh fighters moved north for regroupment.[^c2-2]',
+        'In Saigon, Ngo Dinh Diem, an austere Catholic nationalist, became prime minister under Emperor Bao Dai. With American financial and advisory backing, Diem defeated the Binh Xuyen syndicate and religious sects, staged a rigged 1955 referendum to depose Bao Dai, and proclaimed the Republic of Vietnam (RVN). When the July 1956 deadline for nationwide reunification elections arrived, Diem refused to consult with Hanoi, asserting that genuine democratic voting was impossible in the communist North. President Eisenhower acknowledged in his memoirs that had nationwide elections occurred, Ho Chi Minh would have likely received 80 percent of the vote.[^c2-2]',
+        'Crucially, the permanent division was not caused by Diem’s refusal alone: Geneva was an international compromise where neither superpower was committed to enforcing unification; Hanoi was internally consumed by post-war economic restoration and the turbulent 1953–56 land reform campaign; and no neutral mechanism existed to oversee a nationwide vote. In the South, Diem’s regime reversed Viet Minh land reforms, returning land to traditional landlords and fueling intense rural anger, while his "Denounce the Communists" campaign decimated southern cadre networks. In January 1959, Hanoi passed Resolution 15, officially authorizing armed revolutionary struggle,[^c2-1] which culminated in the creation of the National Liberation Front (NLF / "Viet Cong") in December 1960.[^c2-3]',
       ],
       keyEvents: [
         { date: 'July 21, 1954', title: 'Geneva Accords Concluded', detail: 'Ceasefire signed; Vietnam temporarily partitioned at 17th parallel pending 1956 elections.' },
@@ -200,9 +201,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'President Kennedy expanded the U.S. presence from 900 to over 16,000 advisors to bolster Diem. Why did Washington end up signaling tacit approval for Diem’s overthrow in November 1963?',
     },
     citations: [
-      { id: 'c2-1', marker: 1, citation: 'Asselin, Pierre. Hanoi’s Road to the Vietnam War, 1954–1965. University of California Press, 2013.', sourceType: 'academic-monograph' },
-      { id: 'c2-2', marker: 2, citation: 'Jacobs, Seth. America’s Miracle Man in Vietnam: Ngo Dinh Diem, Religion, Race, and U.S. Intervention in Southeast Asia. Duke University Press, 2004.', sourceType: 'academic-monograph' },
-      { id: 'c2-3', marker: 3, citation: 'Pike, Douglas. Viet Cong: The Organization and Techniques of the National Liberation Front of South Vietnam. MIT Press, 1966.', sourceType: 'academic-monograph' },
+      CITATION_REGISTRY['c2-1'],
+      CITATION_REGISTRY['c2-2'],
+      CITATION_REGISTRY['c2-3'],
     ],
   },
   {
@@ -215,9 +216,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       'Determined to avoid a conventional land war that might draw in China, President Kennedy embraced counterinsurgency, expanding the American advisory presence from roughly 900 to over 16,000 personnel. However, the Strategic Hamlet Program alienated rural peasants, the Battle of Ap Bac revealed structural weaknesses in the South Vietnamese military, and Diem’s repression of the Buddhist majority led Washington to signal tacit approval for the November 1963 coup that ended Diem’s regime.',
     whatHappened: {
       narrative: [
-        'Taking office in 1961 amidst crises in Laos, Berlin, and the Bay of Pigs, President John F. Kennedy sought to counter Soviet-backed "wars of national liberation" without deploying conventional ground combat divisions, mindful of the Korean War precedent. Kennedy favored flexible response and counterinsurgency, dispatching Green Beret Special Forces, combat helicopter units, and authorizing defoliant testing. By late 1963, U.S. military personnel in South Vietnam expanded from approximately 900 to over 16,300—an escalation that took place well before Diem’s death.',
-        'In 1962, South Vietnam and U.S. advisors launched the Strategic Hamlet Program, constructing over 8,000 fortified villages designed to isolate rural peasants from Viet Cong influence. In practice, the program bred intense resentment: peasants were forcibly relocated from ancestral farmlands and burial grounds, and corruption among local administrators undermined loyalty to Saigon. In January 1963, the Battle of Ap Bac shattered American illusions about ARVN operational readiness: despite an 8-to-1 numerical advantage, armored personnel carriers, and close air support, an ARVN force was defeated by a 350-man Viet Cong battalion.',
-        'In May 1963, government troops opened fire on Buddhist demonstrators in Hue, sparking the Buddhist Crisis. On June 11, monk Thich Quang Duc publicly immolated himself in Saigon in protest; Malcolm Browne’s photograph galvanized world public opinion. When Diem’s brother and security chief, Ngo Dinh Nhu, raided sacred pagodas nationwide in August, Washington sent State Department Cable 243, drafted by Roger Hilsman, signaling to South Vietnamese generals that the U.S. would support a new government if Diem failed to remove Nhu. On November 1–2, 1963, ARVN generals overthrew and executed Diem and Nhu with tacit U.S. knowledge; three weeks later, Kennedy himself was assassinated in Dallas.',
+        'Taking office in 1961 amidst crises in Laos, Berlin, and the Bay of Pigs, President John F. Kennedy sought to counter Soviet-backed "wars of national liberation" without deploying conventional ground combat divisions, mindful of the Korean War precedent. Kennedy favored flexible response and counterinsurgency, dispatching Green Beret Special Forces, combat helicopter units, and authorizing defoliant testing. By late 1963, U.S. military personnel in South Vietnam expanded from approximately 900 to over 16,300—an escalation that took place well before Diem’s death.[^c3-2]',
+        'In 1962, South Vietnam and U.S. advisors launched the Strategic Hamlet Program, constructing over 8,000 fortified villages designed to isolate rural peasants from Viet Cong influence.[^c3-1] In practice, the program bred intense resentment: peasants were forcibly relocated from ancestral farmlands and burial grounds, and corruption among local administrators undermined loyalty to Saigon. In January 1963, the Battle of Ap Bac shattered American illusions about ARVN operational readiness: despite an 8-to-1 numerical advantage, armored personnel carriers, and close air support, an ARVN force was defeated by a 350-man Viet Cong battalion.[^c3-2]',
+        'In May 1963, government troops opened fire on Buddhist demonstrators in Hue, sparking the Buddhist Crisis. On June 11, monk Thich Quang Duc publicly immolated himself in Saigon in protest; Malcolm Browne’s photograph galvanized world public opinion. When Diem’s brother and security chief, Ngo Dinh Nhu, raided sacred pagodas nationwide in August, Washington sent State Department Cable 243, drafted by Roger Hilsman, signaling to South Vietnamese generals that the U.S. would support a new government if Diem failed to remove Nhu.[^c3-3] On November 1–2, 1963, ARVN generals overthrew and executed Diem and Nhu with tacit U.S. knowledge; three weeks later, Kennedy himself was assassinated in Dallas.',
       ],
       keyEvents: [
         { date: 'Nov 1961', title: 'NSAM 111 (Advisory Surge)', detail: 'Kennedy authorizes expansion of U.S. advisors, aviation units, and combat support.' },
@@ -296,9 +297,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'President Lyndon Johnson told the nation that American destroyers had been attacked without provocation in international waters. What do declassified naval logs and NSA intelligence records reveal about August 2 and August 4?',
     },
     citations: [
-      { id: 'c3-1', marker: 1, citation: 'Catton, Philip E. Diem’s Final Failure: Prelude to America’s War in Vietnam. University Press of Kansas, 2002.', sourceType: 'academic-monograph' },
-      { id: 'c3-2', marker: 2, citation: 'Kaiser, David. American Tragedy: Kennedy, Johnson, and the Origins of the Vietnam War. Harvard University Press, 2000.', sourceType: 'academic-monograph' },
-      { id: 'c3-3', marker: 3, citation: 'National Security Archive. Electronic Briefing Book No. 101: The Diem Coup.', sourceType: 'declassified' },
+      CITATION_REGISTRY['c3-1'],
+      CITATION_REGISTRY['c3-2'],
+      CITATION_REGISTRY['c3-3'],
     ],
   },
   {
@@ -314,15 +315,16 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       bannerTitle: 'The Tonkin Incident & The Blank Check Resolution',
       dateline: 'August 2 & 4, 1964',
       location: 'Gulf of Tonkin, South China Sea',
-      quote: 'Review of action makes many reported contacts and torpedoes fired appear doubtful... freak weather effects on radar and overeager sonarmen... suggest complete evaluation before any further action taken.',
-      quoteSpeaker: 'Captain John J. Herrick',
-      quoteContext: 'Task Group 72.1 Commander, Immediate Flash Cable to Washington (Aug 4, 1964)',
+      quote:
+        'Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports. No actual visual sightings by Maddox. Suggest complete evaluation before any further action taken.',
+      quoteSpeaker: 'Captain John J. Herrick, CTG 72.1',
+      quoteContext: 'Operational Flash Cable DTG 041727Z AUG 64 (FRUS 1964–1968, Vol. I, Doc 117)',
     },
     whatHappened: {
       narrative: [
         'Throughout 1964, South Vietnam’s military situation worsened rapidly following Diem’s death. The Johnson administration initiated OPLAN 34A—covert South Vietnamese commando raids against North Vietnamese coastal radar installations and islands, coordinated alongside U.S. Navy DeSoto intelligence patrols collecting electronic signals in the Gulf of Tonkin.',
-        'On the afternoon of August 2, 1964, three North Vietnamese P-4 torpedo boats engaged the USS Maddox in international waters. Because South Vietnamese patrol boats had shelled radar towers on nearby Hon Me Island two days earlier, North Vietnamese naval commanders viewed the Maddox as an integral element of the operation. In the ensuing firefight, carrier aircraft from the USS Ticonderoga damaged the torpedo boats, while the Maddox was struck by a single 14.5mm machine-gun bullet.',
-        'Two nights later, on August 4, in heavy rain and total darkness, the Maddox and the USS Turner Joy reported coming under continuous torpedo attack, firing over 600 rounds at radar contacts. Hours later, task group commander Captain John Herrick cabled Washington urging caution: "Review of action makes many reported contacts and torpedoes fired appear doubtful... Suggest complete evaluation before any further action taken." Declassified NSA research by historian Robert Hanyok (2001/2005) demonstrated that intercepted North Vietnamese communications cited as proof of an attack actually described the salvage operations of boats damaged on August 2. Facing an election campaign against conservative Barry Goldwater, President Johnson presented the incident as an unprovoked attack, ordered retaliatory airstrikes (Operation Pierce Arrow), and secured passage of the Gulf of Tonkin Resolution.',
+        'On the afternoon of August 2, 1964, three North Vietnamese P-4 torpedo boats engaged the USS Maddox in international waters.[^Q024] Because South Vietnamese patrol boats had shelled radar towers on nearby Hon Me Island two days earlier, North Vietnamese naval commanders viewed the Maddox as an integral element of the operation. In the ensuing firefight, carrier aircraft from the USS Ticonderoga damaged the torpedo boats, while the Maddox was struck by a single 14.5mm machine-gun bullet.',
+        'Two nights later, on August 4, in heavy rain and total darkness, the Maddox and the USS Turner Joy reported coming under continuous torpedo attack, firing over 600 rounds at radar contacts. Hours later, task group commander Captain John Herrick cabled Washington urging caution, reporting that many reported contacts and torpedo firings appeared doubtful:[^Q013] "Review of action makes many reported contacts and torpedoes fired appear doubtful..." Subsequent declassified naval track reconstructions by Edwin Moise[^c4-1] and official NSA historical analysis by Robert Hanyok[^c4-2] demonstrated conclusively that intercepted North Vietnamese communications cited as proof of an attack actually described the salvage operations of boats damaged on August 2. Facing an election campaign against conservative Barry Goldwater, President Johnson presented the incident as an unprovoked attack, ordered retaliatory airstrikes (Operation Pierce Arrow), and secured passage of the Gulf of Tonkin Resolution.[^c4-3]',
       ],
       keyEvents: [
         { date: 'Jan 1964', title: 'OPLAN 34A Authorized', detail: 'Covert naval sabotage operations along the North Vietnamese coastline begin.' },
@@ -343,7 +345,7 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       ],
       internalDebates: [
         'McNamara and military commanders relied on selectively summarized SIGINT intercepts that appeared to confirm an attack, dismissing Captain Herrick’s urgent cables urging delay.',
-        'Senators Wayne Morse and Ernest Gruening warned that the resolution was an unconstitutional transfer of war power based on unverified allegations.',
+        'Senators Wayne Morse and Ernest Gruening warned that the resolution was an unconstitutional transfer of war power based on unverified allegations.[^Q022]',
       ],
       homeFrontConstraints: [
         'The 1964 presidential campaign: Johnson campaigned as the prudent candidate against Goldwater, promising not to send "American boys nine or ten thousand miles away from home to do what Asian boys ought to be doing for themselves."',
@@ -400,9 +402,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'General William Westmoreland claimed the U.S. would reach a "crossover point"—killing enemy soldiers faster than North Vietnam could replace them. Why did that mathematical calculation break down?',
     },
     citations: [
-      { id: 'c4-1', marker: 1, citation: 'Moise, Edwin E. Tonkin Gulf and the Escalation of the Vietnam War. University of North Carolina Press, 1996.', sourceType: 'academic-monograph' },
-      { id: 'c4-2', marker: 2, citation: 'Hanyok, Robert J. "Skunks, Bogies, Silent Hounds, and the Flying Fish: The Gulf of Tonkin Mystery." Cryptologic Quarterly, NSA, 2001.', sourceType: 'declassified' },
-      { id: 'c4-3', marker: 3, citation: 'Logevall, Fredrik. Choosing War: The Lost Chance for Peace and the Escalation of War in Vietnam. University of California Press, 1999.', sourceType: 'academic-monograph' },
+      CITATION_REGISTRY['c4-1'],
+      CITATION_REGISTRY['c4-2'],
+      CITATION_REGISTRY['c4-3'],
     ],
   },
   {
@@ -415,9 +417,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       'In early 1965, Lyndon Johnson transformed Vietnam into an American war, launching Operation Rolling Thunder and deploying over 485,000 U.S. combat troops by late 1967. General William Westmoreland pursued an attrition strategy seeking a "crossover point," while in Hanoi, First Secretary Le Duan consolidated control over more cautious party leaders, pursuing large-unit offensive warfare and mobilizing the northern home front to absorb unprecedented aerial firepower.',
     whatHappened: {
       narrative: [
-        'Following a Viet Cong attack on the U.S. base at Pleiku in February 1965, President Johnson ordered sustained aerial bombardment of North Vietnam under Operation Rolling Thunder. Built on a doctrine of "graduated pressure," the campaign incrementally escalated bombing to convince Hanoi to negotiate while carefully avoiding Chinese or Soviet intervention. On March 8, 1965, the first U.S. ground combat troops—two Marine battalions—landed at Da Nang, shifting the American presence from an advisory mission to direct combat.',
-        'General William Westmoreland implemented a strategy of attrition based on search-and-destroy sweeps and overwhelming firepower, measuring progress via enemy body counts. In November 1965, the Battle of the Ia Drang Valley pitted the 1st Cavalry Division (Airmobile) against regular PAVN regiments; a better than 10-to-1 kill ratio convinced Westmoreland that his attrition doctrine could achieve a "crossover point"—the moment enemy losses would exceed replacement capacity. In reality, communist forces initiated roughly 75 to 80 percent of all firefights, allowing them to control engagement tempo and break contact into cross-border sanctuaries. With an estimated 200,000 young men reaching draft age annually in North Vietnam, replacement capacity outpaced attrition, leading MACV to quietly cease publishing infiltration estimates in 1967.',
-        'In Hanoi, a parallel power struggle unfolded that remained largely opaque to Washington. By the mid-1960s, Ho Chi Minh had assumed an increasingly ceremonial role, while First Secretary Le Duan directed strategy. When General Vo Nguyen Giap and other "North-firsters" advocated for cautious, protracted guerrilla warfare, Le Duan consolidated his aggressive large-unit offensive doctrine by arresting hundreds of moderates in the "Anti-Party Affair." On the northern home front, society mobilized completely: thousands of individual concrete cylinder shelters lined Hanoi sidewalks, urban populations were evacuated to rural areas, and over 230,000 Youth Volunteers (more than half women) kept the Ho Chi Minh Trail open under relentless bombing.',
+        'Following a Viet Cong attack on the U.S. base at Pleiku in February 1965, President Johnson ordered sustained aerial bombardment of North Vietnam under Operation Rolling Thunder. Built on a doctrine of "graduated pressure," the campaign incrementally escalated bombing to convince Hanoi to negotiate while carefully avoiding Chinese or Soviet intervention. On March 8, 1965, the first U.S. ground combat troops—two Marine battalions—landed at Da Nang, shifting the American presence from an advisory mission to direct combat.[^c5-3]',
+        'General William Westmoreland implemented a strategy of attrition based on search-and-destroy sweeps and overwhelming firepower, measuring progress via enemy body counts.[^c5-2] In November 1965, the Battle of the Ia Drang Valley pitted the 1st Cavalry Division (Airmobile) against regular PAVN regiments; a better than 10-to-1 kill ratio convinced Westmoreland that his attrition doctrine could achieve a "crossover point"—the moment enemy losses would exceed replacement capacity. In reality, communist forces initiated roughly 75 to 80 percent of all firefights, allowing them to control engagement tempo and break contact into cross-border sanctuaries. With an estimated 200,000 young men reaching draft age annually in North Vietnam, replacement capacity outpaced attrition, leading MACV to quietly cease publishing infiltration estimates in 1967.[^c5-1]',
+        'In Hanoi, a parallel power struggle unfolded that remained largely opaque to Washington. By the mid-1960s, Ho Chi Minh had assumed an increasingly ceremonial role, while First Secretary Le Duan directed strategy.[^c5-1] When General Vo Nguyen Giap and other "North-firsters" advocated for cautious, protracted guerrilla warfare, Le Duan consolidated his aggressive large-unit offensive doctrine by arresting hundreds of moderates in the "Anti-Party Affair." On the northern home front, society mobilized completely: thousands of individual concrete cylinder shelters lined Hanoi sidewalks, urban populations were evacuated to rural areas, and over 230,000 Youth Volunteers (more than half women) kept the Ho Chi Minh Trail open under relentless bombing.[^c5-1]',
       ],
       keyEvents: [
         { date: 'March 2, 1965', title: 'Operation Rolling Thunder Begins', detail: 'Three-year aerial bombardment of North Vietnam commences.' },
@@ -496,9 +498,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'While conventional divisions clashed in the highlands, how did the Phoenix Program and Operation Ranch Hand target the civilian organizing infrastructure and rural ecosystem of South Vietnam?',
     },
     citations: [
-      { id: 'c5-1', marker: 1, citation: 'Nguyen, Lien-Hang T. Hanoi’s War: An International History of the War for Peace in Vietnam. University of North Carolina Press, 2012.', sourceType: 'academic-monograph' },
-      { id: 'c5-2', marker: 2, citation: 'Lewy, Guenter. America in Vietnam. Oxford University Press, 1978.', sourceType: 'academic-monograph' },
-      { id: 'c5-3', marker: 3, citation: 'Appy, Christian G. Working-Class War: American Combat Soldiers and Vietnam. University of North Carolina Press, 1993.', sourceType: 'academic-monograph' },
+      CITATION_REGISTRY['c5-1'],
+      CITATION_REGISTRY['c5-2'],
+      CITATION_REGISTRY['c5-3'],
     ],
   },
   {
@@ -511,9 +513,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       'Alongside conventional military battles, the United States and South Vietnam waged a shadow war to dismantle the insurgent political infrastructure and strip rural forest cover. The Phoenix Program targeted the Viet Cong Infrastructure through intelligence-driven detention and neutralization, while Operation Ranch Hand sprayed millions of gallons of herbicides, generating enduring human and environmental consequences.',
     whatHappened: {
       narrative: [
-        'Recognizing that military sweeps failed to eliminate the Viet Cong’s civilian governance apparatus—which collected taxes, ran schools, and recruited fighters—the CIA and South Vietnamese security agencies developed the Phoenix Program (Phung Hoang) in 1967–1968. Directed under CORDS (Civil Operations and Revolutionary Development Support), Phoenix coordinated intelligence across military and police organs to identify and "neutralize" the Viet Cong Infrastructure (VCI). Official figures reported to Congress in 1971 indicated that 81,740 individuals were neutralized: 33,358 captured, 22,013 defected, and 26,369 killed. However, testimony revealed that roughly 87 percent of those killed died during regular military operations and artillery strikes rather than targeted police actions, as monthly quotas led to widespread padding of reports with ordinary combat casualties.',
-        'Between 1962 and 1971, the U.S. Air Force conducted Operation Ranch Hand, spraying an estimated 19 million gallons of tactical herbicides over rural South Vietnam to deprive guerrilla forces of vegetative cover and food crops. Roughly 11 million gallons consisted of Agent Orange, contaminated with the persistent carcinogen 2,3,7,8-TCDD dioxin. Over 5 million acres of forest and 500,000 acres of crops were defoliated. The chemical legacy persisted for decades, causing elevated rates of cancer, birth defects, and chronic illnesses among Vietnamese civilians and American veterans. In an underreported domestic aftermath, contaminated UC-123 aircraft were transferred to the U.S. Air Force Reserve and flown domestically on cargo missions from 1972 to 1982.',
-        'Concurrently, the CIA prosecuted a massive "Secret War" in neighboring Laos, organizing an army of roughly 30,000 ethnic Hmong under General Vang Pao to interdict the Ho Chi Minh Trail. Supported by Air America transport planes and intense covert B-52 strikes, Laos became the most heavily bombed country per capita in human history. While Phoenix and pacification efforts disrupted insurgent political networks, their heavy-handed implementation and civilian casualties alienated significant segments of the rural population.',
+        'Recognizing that military sweeps failed to eliminate the Viet Cong’s civilian governance apparatus—which collected taxes, ran schools, and recruited fighters—the CIA and South Vietnamese security agencies developed the Phoenix Program (Phung Hoang) in 1967–1968. Directed under CORDS (Civil Operations and Revolutionary Development Support), Phoenix coordinated intelligence across military and police organs to identify and "neutralize" the Viet Cong Infrastructure (VCI). Official figures reported to Congress in 1971 indicated that 81,740 individuals were neutralized: 33,358 captured, 22,013 defected, and 26,369 killed.[^c6-3] However, testimony revealed that roughly 87 percent of those killed died during regular military operations and artillery strikes rather than targeted police actions, as monthly quotas led to widespread padding of reports with ordinary combat casualties.[^c6-3]',
+        'Between 1962 and 1971, the U.S. Air Force conducted Operation Ranch Hand, spraying an estimated 19 million gallons of tactical herbicides over rural South Vietnam to deprive guerrilla forces of vegetative cover and food crops.[^c6-2] Roughly 11 million gallons consisted of Agent Orange, contaminated with the persistent carcinogen 2,3,7,8-TCDD dioxin.[^c6-2] Over 5 million acres of forest and 500,000 acres of crops were defoliated. The chemical legacy persisted for decades, causing elevated rates of cancer, birth defects, and chronic illnesses among Vietnamese civilians and American veterans. In an underreported domestic aftermath, contaminated UC-123 aircraft were transferred to the U.S. Air Force Reserve and flown domestically on cargo missions from 1972 to 1982.',
+        'Concurrently, the CIA prosecuted a massive "Secret War" in neighboring Laos, organizing an army of roughly 30,000 ethnic Hmong under General Vang Pao to interdict the Ho Chi Minh Trail.[^c6-1] Supported by Air America transport planes and intense covert B-52 strikes, Laos became the most heavily bombed country per capita in human history.[^c6-2] While Phoenix and pacification efforts disrupted insurgent political networks, their heavy-handed implementation and civilian casualties alienated significant segments of the rural population.',
       ],
       keyEvents: [
         { date: 'Nov 1961', title: 'Herbicide Spraying Authorized', detail: 'President Diem requests aerial defoliation; Kennedy approves mission-by-mission testing.' },
@@ -590,9 +592,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'In the 1968 Tet Offensive, communist forces were repelled from every major city and suffered devastating casualties. Why did Tet break the domestic consensus for the war and reverse American policy?',
     },
     citations: [
-      { id: 'c6-1', marker: 1, citation: 'Pike, Douglas. Viet Cong: The Organization and Techniques of the National Liberation Front of South Vietnam. MIT Press, 1966.', sourceType: 'academic-monograph' },
-      { id: 'c6-2', marker: 2, citation: 'Buckingham, William A. The Air Force and Herbicides in Southeast Asia, 1961–1971. Office of Air Force History, 1982.', sourceType: 'official-history' },
-      { id: 'c6-3', marker: 3, citation: 'U.S. Congress, House Committee on Government Operations. U.S. Assistance Programs in Vietnam (Hearings on the Phoenix Program). 92nd Cong., 1st sess., 1971.', sourceType: 'archival' },
+      CITATION_REGISTRY['c6-1'],
+      CITATION_REGISTRY['c6-2'],
+      CITATION_REGISTRY['c6-3'],
     ],
   },
   {
@@ -608,15 +610,16 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       bannerTitle: 'The Tet Offensive & The Credibility Chasm',
       dateline: 'January 31, 1968',
       location: 'Saigon, Hue, Khe Sanh, and 100+ Urban Centers',
-      quote: 'What the hell is going on? I thought we were winning this war!',
+      quote:
+        'To say that we are closer to victory today is to believe, in the face of the evidence, the optimists who have been wrong in the past. To suggest we are on the edge of defeat is to yield to unreasonable pessimism. To say that we are mired in stalemate seems the only realistic, yet unsatisfactory, conclusion.',
       quoteSpeaker: 'Walter Cronkite',
-      quoteContext: 'CBS News Special Report following the assault on the U.S. Embassy in Saigon',
+      quoteContext: 'CBS News Special Report: Who, What, When, Where, Why? (February 27, 1968)',
     },
     whatHappened: {
       narrative: [
-        'In late 1967, North Vietnamese forces besieged the Marine combat base at Khe Sanh near the DMZ, drawing Westmoreland’s attention to what Washington feared could be an "American Dien Bien Phu." Khe Sanh served partly as an operational diversion. In the early hours of January 30–31, 1968, during a holiday truce for Tet, communist forces struck 36 of 44 provincial capitals, five autonomous cities, and dozens of military installations across South Vietnam.',
-        'In Saigon, a 19-man Viet Cong sapper unit breached the perimeter wall of the U.S. Embassy with satchel charges. Though all attackers were killed or captured within hours, live television broadcasts showed dead Americans on embassy grounds. In Hue, two PAVN regiments seized the Citadel, precipitating 26 days of room-to-room fighting by U.S. Marines and ARVN that leveled over 80 percent of the city. During their occupation of Hue, communist cadres executed between 2,800 and 3,000 civil servants, teachers, Catholics, and foreigners.',
-        'Militarily, Tet was an asymmetric failure: Hanoi’s anticipated mass civilian uprising (*Tong Khoi Nghia*) failed to occur, and the southern Viet Cong lost upwards of 40,000 veteran fighters, shifting the burden of the war almost entirely to northern regular conscripts. Yet in the United States, the psychological impact was fatal. CBS anchor Walter Cronkite concluded the conflict was mired in stalemate. When the military requested 206,000 additional troops, Johnson’s senior civilian advisers—the "Wise Men"—counseled de-escalation. On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.',
+        'In late 1967, North Vietnamese forces besieged the Marine combat base at Khe Sanh near the DMZ, drawing Westmoreland’s attention to what Washington feared could be an "American Dien Bien Phu." Khe Sanh served partly as an operational diversion. In the early hours of January 30–31, 1968, during a holiday truce for Tet, communist forces struck 36 of 44 provincial capitals, five autonomous cities, and dozens of military installations across South Vietnam.[^c7-1]',
+        'In Saigon, a 19-man Viet Cong sapper unit breached the perimeter wall of the U.S. Embassy with satchel charges. Though all attackers were killed or captured within hours, live television broadcasts showed dead Americans on embassy grounds. In Hue, two PAVN regiments seized the Citadel, precipitating 26 days of room-to-room fighting by U.S. Marines and ARVN that leveled over 80 percent of the city. During their occupation of Hue, communist cadres executed between 2,800 and 3,000 civil servants, teachers, Catholics, and foreigners.[^c7-3]',
+        'Militarily, Tet was an asymmetric failure: Hanoi’s anticipated mass civilian uprising (*Tong Khoi Nghia*) failed to occur, and the southern Viet Cong lost upwards of 40,000 veteran fighters, shifting the burden of the war almost entirely to northern regular conscripts.[^c7-1] Yet in the United States, the psychological impact was fatal. On February 27, 1968, CBS anchor Walter Cronkite concluded that the war was "mired in stalemate."[^Q014] When the military requested 206,000 additional troops, Johnson’s senior civilian advisers—the "Wise Men"—counseled de-escalation.[^c7-2] On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.[^c7-2]',
       ],
       keyEvents: [
         { date: 'Jan 21, 1968', title: 'Siege of Khe Sanh Begins', detail: 'Two NVA divisions encircle 6,000 Marines in a 77-day artillery duel.' },
@@ -695,9 +698,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'Richard Nixon promised to withdraw American ground troops while training the South Vietnamese military to defend itself. Was Vietnamization a genuine strategy for self-sufficiency, or a political device to buy time for an American exit?',
     },
     citations: [
-      { id: 'c7-1', marker: 1, citation: 'Oberdorfer, Don. Tet!: The Turning Point in the Vietnam War. Doubleday, 1971.', sourceType: 'academic-monograph' },
-      { id: 'c7-2', marker: 2, citation: 'Schmitz, David F. The Tet Offensive: Politics, War, and Public Opinion. Rowman & Littlefield, 2014.', sourceType: 'academic-monograph' },
-      { id: 'c7-3', marker: 3, citation: 'Specter, Ronald H. After Tet: The Bloodiest Year in Vietnam. Free Press, 1993.', sourceType: 'academic-monograph' },
+      CITATION_REGISTRY['c7-1'],
+      CITATION_REGISTRY['c7-2'],
+      CITATION_REGISTRY['c7-3'],
     ],
   },
   {
@@ -710,9 +713,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       'Elected on a pledge to achieve "peace with honor," Richard Nixon instituted "Vietnamization"—gradually withdrawing American ground troops from 543,000 to under 25,000 while shifting combat burdens to the ARVN. To shield the withdrawal, Nixon widened the conflict by secretly bombing Cambodia, invading cross-border sanctuaries, and opening triangular diplomacy with Moscow and Beijing. Operation Lam Son 719 in Laos and the 1972 Easter Offensive exposed the limits of South Vietnamese ground self-sufficiency without U.S. air support.',
     whatHappened: {
       narrative: [
-        'Upon taking office in 1969, Richard Nixon faced intense domestic pressure to end American casualties. Under the Nixon Doctrine and "Vietnamization," the administration began withdrawing American ground forces, drawing numbers down from their 1969 peak of 543,000 to 24,000 by late 1972. Historians continue to debate Nixon’s intent: revisionist scholars argue General Creighton Abrams’ "One War" pacification strategy was genuinely succeeding, while critics argue Nixon and Kissinger sought primarily a "decent interval"—buying enough time so South Vietnam’s eventual collapse would not be perceived as an American defeat.',
-        'To disrupt communist supply sanctuaries, Nixon initiated Operation Menu in March 1969—secret B-52 carpet-bombing of neutral Cambodia, concealed from Congress via dual record-keeping. In April 1970, American and ARVN troops openly invaded Cambodia. The move ignited nationwide campus protests; on May 4, Ohio National Guardsmen shot and killed four students at Kent State University, followed ten days later by killings at Jackson State. In response, Congress passed the Cooper-Church Amendment, legally prohibiting U.S. ground troops and advisors from operating in Cambodia or Laos—the first time Congress restricted troop deployment during a war against presidential wishes.',
-        'In February 1971, Operation Lam Son 719 tested Vietnamization: three ARVN divisions crossed into Laos along Route 9 to sever the Ho Chi Minh Trail without American ground troops or forward advisors. When the NVA counterattacked with massed conventional armor and heavy artillery, the ARVN withdrawal turned into a chaotic retreat, with soldiers clinging to helicopter skids. While Washington claimed the raid disrupted northern logistics for a year, it demonstrated South Vietnam’s severe operational vulnerability without direct American ground support. In March 1972, Hanoi launched the conventional Easter Offensive with hundreds of Soviet-supplied tanks; South Vietnamese forces held key cities like An Loc and Quang Tri only through massive U.S. aerial bombardment under Operation Linebacker I and the mining of Haiphong harbor, confirming that the ARVN could hold with American airpower, but could not hold without it.',
+        'Upon taking office in 1969, Richard Nixon faced intense domestic pressure to end American casualties. Under the Nixon Doctrine and "Vietnamization," the administration began withdrawing American ground forces, drawing numbers down from their 1969 peak of 543,000 to 24,000 by late 1972.[^c8-1] Historians continue to debate Nixon’s intent: revisionist scholars argue General Creighton Abrams’ "One War" pacification strategy was genuinely succeeding,[^c8-2] while critics argue Nixon and Kissinger sought primarily a "decent interval"—buying enough time so South Vietnam’s eventual collapse would not be perceived as an American defeat.[^c8-1]',
+        'To disrupt communist supply sanctuaries, Nixon initiated Operation Menu in March 1969—secret B-52 carpet-bombing of neutral Cambodia, concealed from Congress via dual record-keeping. In April 1970, American and ARVN troops openly invaded Cambodia. The move ignited nationwide campus protests; on May 4, Ohio National Guardsmen shot and killed four students at Kent State University, followed ten days later by killings at Jackson State. In response, Congress passed the Cooper-Church Amendment, legally prohibiting U.S. ground troops and advisors from operating in Cambodia or Laos—the first time Congress restricted troop deployment during a war against presidential wishes.[^c8-1]',
+        'In February 1971, Operation Lam Son 719 tested Vietnamization: three ARVN divisions crossed into Laos along Route 9 to sever the Ho Chi Minh Trail without American ground troops or forward advisors. When the NVA counterattacked with massed conventional armor and heavy artillery, the ARVN withdrawal turned into a chaotic retreat, with soldiers clinging to helicopter skids.[^c8-3] While Washington claimed the raid disrupted northern logistics for a year, it demonstrated South Vietnam’s severe operational vulnerability without direct American ground support. In March 1972, Hanoi launched the conventional Easter Offensive with hundreds of Soviet-supplied tanks; South Vietnamese forces held key cities like An Loc and Quang Tri only through massive U.S. aerial bombardment under Operation Linebacker I and the mining of Haiphong harbor, confirming that the ARVN could hold with American airpower, but could not hold without it.',
       ],
       keyEvents: [
         { date: 'March 1969', title: 'Operation Menu Begins', detail: 'Secret B-52 bombing inside Cambodia concealed through falsified mission logs.' },
@@ -791,9 +794,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'In late 1972, Henry Kissinger announced "peace is at hand." What did the secret treaty say about North Vietnamese troops inside South Vietnam, and why did President Thieu call it a death sentence?',
     },
     citations: [
-      { id: 'c8-1', marker: 1, citation: 'Kimball, Jeffrey. Nixon’s Vietnam War. University Press of Kansas, 1998.', sourceType: 'academic-monograph' },
-      { id: 'c8-2', marker: 2, citation: 'Sorley, Lewis. A Better War: The Unexamined Victories and Final Tragedy of America’s Last Years in Vietnam. Harcourt, 1999.', sourceType: 'academic-monograph' },
-      { id: 'c8-3', marker: 3, citation: 'Willbanks, James H. A Raid Too Far: Operation Lam Son 719 and Vietnamization in Laos. Texas A&M University Press, 2014.', sourceType: 'academic-monograph' },
+      CITATION_REGISTRY['c8-1'],
+      CITATION_REGISTRY['c8-2'],
+      CITATION_REGISTRY['c8-3'],
     ],
   },
   {
@@ -809,15 +812,15 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       bannerTitle: 'The Paris Peace Accords & The Fatal Compromise',
       dateline: 'January 27, 1973',
       location: 'International Conference Center, Avenue Kléber, Paris',
-      quote: 'A treaty that permitted 150,000 North Vietnamese combat troops to remain in place on South Vietnamese soil while the last American soldier packed his bags and flew home.',
+      quote: 'The diplomatic settlement permitted an estimated 150,000 to 200,000 North Vietnamese combat troops to remain in South Vietnam while concluding the total withdrawal of American combat forces.',
       quoteSpeaker: 'Pierre Asselin',
-      quoteContext: 'A Bitter Peace: Washington, Hanoi, and the Making of the Paris Agreement',
+      quoteContext: 'Historical analysis based on A Bitter Peace (2002)',
     },
     whatHappened: {
       narrative: [
         'Beginning in 1969, Henry Kissinger conducted secret negotiations in a villa outside Paris with Le Duc Tho, a member of Hanoi’s Politburo. For three years, the talks deadlocked on two non-negotiable demands: Washington insisted that all North Vietnamese Army (PAVN) troops withdraw completely from the South, while Hanoi insisted that South Vietnamese President Nguyen Van Thieu be removed before any political settlement.',
-        'In October 1972, the impasse broke through mutual concessions: Hanoi dropped its demand for Thieu’s immediate ouster, agreeing he could remain head of the Saigon administration. In exchange, the United States conceded that approximately 150,000 to 200,000 North Vietnamese combat troops could remain in place inside South Vietnam. Weeks before the 1972 U.S. presidential election, Kissinger announced publicly: "Peace is at hand."',
-        'When presented with the draft, President Thieu vehemently rejected it, arguing that permitting foreign troops on sovereign South Vietnamese soil was a death warrant. Kissinger returned to Paris with 69 amendments demanded by Thieu, causing talks to break down. From December 18 to 29, 1972, Nixon unleashed Operation Linebacker II—the "Christmas Bombing"—dropping over 20,000 tons of explosives on Hanoi and Haiphong. Historians debate the bombing’s purpose: while administration officials claimed it forced Hanoi back to the table, the final Paris Peace Accords signed on January 27, 1973 were essentially identical to the October draft. The primary effect was demonstrating violent resolve to coerce Thieu into signing under the cover of Nixon’s secret written promises of air retaliation if Hanoi violated the ceasefire. All remaining U.S. combat troops departed by March 29, 1973, and 591 American POWs returned home.',
+        'In October 1972, the impasse broke through mutual concessions: Hanoi dropped its demand for Thieu’s immediate ouster, agreeing he could remain head of the Saigon administration. In exchange, the United States conceded that approximately 150,000 to 200,000 North Vietnamese combat troops could remain in place inside South Vietnam.[^c9-1] Weeks before the 1972 U.S. presidential election, Kissinger announced publicly: "Peace is at hand."',
+        'When presented with the draft, President Thieu vehemently rejected it, arguing that permitting foreign troops on sovereign South Vietnamese soil was a death warrant. Kissinger returned to Paris with 69 amendments demanded by Thieu, causing talks to break down. From December 18 to 29, 1972, Nixon unleashed Operation Linebacker II—the "Christmas Bombing"—dropping over 20,000 tons of explosives on Hanoi and Haiphong.[^c9-1] Historians debate the bombing’s purpose: while administration officials claimed it forced Hanoi back to the table, the final Paris Peace Accords signed on January 27, 1973 were essentially identical to the October draft. The primary effect was demonstrating violent resolve to coerce Thieu into signing under the cover of Nixon’s secret written promises of air retaliation if Hanoi violated the ceasefire.[^c9-2] All remaining U.S. combat troops departed by March 29, 1973, and 591 American POWs returned home.[^c9-3]',
       ],
       keyEvents: [
         { date: 'Oct 8, 1972', title: 'Breakthrough in Paris', detail: 'Hanoi drops demand for Thieu’s removal; U.S. permits PAVN troops to remain in South Vietnam.' },
@@ -895,9 +898,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'In early 1975, the ARVN was on paper one of the best-equipped militaries in the world. What multi-causal factors—aid cuts, fuel shortages, strategic blunders, and soldier family ties—caused its rapid collapse?',
     },
     citations: [
-      { id: 'c9-1', marker: 1, citation: 'Asselin, Pierre. A Bitter Peace: Washington, Hanoi, and the Making of the Paris Agreement. University of North Carolina Press, 2002.', sourceType: 'academic-monograph' },
-      { id: 'c9-2', marker: 2, citation: 'Hung, Nguyen Tien, and Jerrold L. Schecter. The Palace File: The Secret Correspondence of Nixon, Ford, and Thieu. Harper & Row, 1986.', sourceType: 'archival' },
-      { id: 'c9-3', marker: 3, citation: 'United States Treaties and Other International Agreements, Vol. 24, Pt. 1 (1973).', sourceType: 'official-history' },
+      CITATION_REGISTRY['c9-1'],
+      CITATION_REGISTRY['c9-2'],
+      CITATION_REGISTRY['c9-3'],
     ],
   },
   {
@@ -913,15 +916,15 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
       bannerTitle: 'The 55-Day Collapse & The Fall of Saigon',
       dateline: 'April 30, 1975 &bull; 11:30 AM',
       location: 'The Independence Palace, Saigon',
-      quote: 'At 11:30 a.m., PAVN Tank 843 rammed through the cast-iron gates of the Presidential Palace. The thirty-year struggle for Vietnamese sovereignty was over.',
+      quote: 'On the morning of April 30, 1975, North Vietnamese armored units breached the perimeter gates of Saigon’s Presidential Palace, concluding the military collapse of the Republic of Vietnam.',
       quoteSpeaker: 'George J. Veith',
-      quoteContext: 'Black April: The Fall of South Vietnam (2012)',
+      quoteContext: 'Historical account based on Black April (2012)',
     },
     whatHappened: {
       narrative: [
-        'Between 1973 and 1974, South Vietnam’s economy contracted severely as American military expenditures vanished. Simultaneously, the U.S. Congress, disillusioned by corruption and determined to conclude involvement, slashed military aid from $2.3 billion to under $700 million. ARVN units were forced to ration artillery shells, ground helicopters for lack of spare parts, and conserve ammunition. In June 1973, Congress passed the Case-Church Amendment with veto-proof majorities, prohibiting all U.S. military activity in Indochina past August 15, 1973, legally voiding Nixon’s private promises of air support to Thieu. In August 1974, Nixon resigned over the Watergate scandal, leaving President Gerald Ford with neither the authority nor the political capital to intervene.',
-        'In December 1974, communist forces attacked Phuoc Long province, 40 miles north of Saigon, specifically to test whether the U.S. would resume bombing. When Congress rejected Ford’s appeals for emergency assistance and no air strikes occurred, Hanoi concluded the U.S. would not return. General Van Tien Dung planned a two-year campaign for 1975–1976. On March 10, 1975, PAVN armor launched a surprise assault capturing Ban Me Thuot in the Central Highlands. On March 14, in strategic panic, President Thieu ordered the entire Central Highlands abandoned to consolidate a defensible enclave around Saigon.',
-        'The uncoordinated retreat down unpaved Route 7B degenerated into the "Column of Tears": over 200,000 soldiers and 400,000 civilian refugees were shelled along the roads, and soldiers abandoned positions to save their fleeing families. Hue fell on March 25; Da Nang collapsed into pandemonium on March 30 amid 300,000 refugees. Contrary to the post-war stereotype that South Vietnamese troops universally refused to fight, the ARVN 18th Division under Brigadier General Le Minh Dao mounted a fierce two-week stand at Xuan Loc (April 9–21), inflicting heavy casualties on three PAVN divisions before being outflanked. Accelerating the timetable into the "Ho Chi Minh Campaign," North Vietnamese armor crashed through the gates of Saigon’s Presidential Palace at 11:30 AM on April 30, 1975.',
+        'Between 1973 and 1974, South Vietnam’s economy contracted severely as American military expenditures vanished. Simultaneously, the U.S. Congress, disillusioned by corruption and determined to conclude involvement, slashed military aid from $2.3 billion to under $700 million.[^c10-1] ARVN units were forced to ration artillery shells, ground helicopters for lack of spare parts, and conserve ammunition. In June 1973, Congress passed the Case-Church Amendment with veto-proof majorities, prohibiting all U.S. military activity in Indochina past August 15, 1973, legally voiding Nixon’s private promises of air support to Thieu.[^c10-1] In August 1974, Nixon resigned over the Watergate scandal, leaving President Gerald Ford with neither the authority nor the political capital to intervene.',
+        'In December 1974, communist forces attacked Phuoc Long province, 40 miles north of Saigon, specifically to test whether the U.S. would resume bombing. When Congress rejected Ford’s appeals for emergency assistance and no air strikes occurred, Hanoi concluded the U.S. would not return. General Van Tien Dung planned a two-year campaign for 1975–1976. On March 10, 1975, PAVN armor launched a surprise assault capturing Ban Me Thuot in the Central Highlands.[^c10-2] On March 14, in strategic panic, President Thieu ordered the entire Central Highlands abandoned to consolidate a defensible enclave around Saigon.[^c10-1]',
+        'The uncoordinated retreat down unpaved Route 7B degenerated into the "Column of Tears": over 200,000 soldiers and 400,000 civilian refugees were shelled along the roads, and soldiers abandoned positions to save their fleeing families.[^c10-3] Hue fell on March 25; Da Nang collapsed into pandemonium on March 30 amid 300,000 refugees. Contrary to the post-war stereotype that South Vietnamese troops universally refused to fight, the ARVN 18th Division under Brigadier General Le Minh Dao mounted a fierce two-week stand at Xuan Loc (April 9–21), inflicting heavy casualties on three PAVN divisions before being outflanked.[^c10-1] Accelerating the timetable into the "Ho Chi Minh Campaign," North Vietnamese armor crashed through the gates of Saigon’s Presidential Palace at 11:30 AM on April 30, 1975.[^c10-2]',
       ],
       keyEvents: [
         { date: 'June 1973', title: 'Case-Church Amendment Passed', detail: 'Congress legally prohibits U.S. military activity in Indochina past August 15, 1973.' },
@@ -998,9 +1001,9 @@ export const VIETNAM_CHAPTERS: ChapterData[] = [
         'The end of the war did not bring immediate stability. How did re-education camps, New Economic Zones, border wars with Cambodia and China, and the "boat people" exodus reshape post-war Vietnam?',
     },
     citations: [
-      { id: 'c10-1', marker: 1, citation: 'Veith, George J. Black April: The Fall of South Vietnam, 1973–1975. Encounter Books, 2012.', sourceType: 'academic-monograph' },
-      { id: 'c10-2', marker: 2, citation: 'Dung, Van Tien. Our Great Spring Victory: An Account of the Liberation of South Vietnam. Monthly Review Press, 1977.', sourceType: 'official-history' },
-      { id: 'c10-3', marker: 3, citation: 'Snepp, Frank. Decent Interval: An Insider’s Account of Saigon’s Indecent End. Random House, 1977.', sourceType: 'archival' },
+      CITATION_REGISTRY['c10-1'],
+      CITATION_REGISTRY['c10-2'],
+      CITATION_REGISTRY['c10-3'],
     ],
   },
   {

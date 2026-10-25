@@ -20,6 +20,78 @@ export interface PrimarySourceExcerpt {
   historicalContext: string;
   whyItMatters: string;
   originalDocumentUrl?: string;
+  isVerified?: boolean;
+  transcriptionStatus?: 'source_transcription' | 'unverified_paraphrase' | 'pending_verification';
+  registryId?: string;
+}
+
+export type SourceClassificationType =
+  | 'PRIMARY_SOURCE'
+  | 'CONTEMPORARY_REPORTING'
+  | 'SCHOLARLY_SECONDARY_SOURCE'
+  | 'LATER_HISTORICAL_ANALYSIS'
+  | 'REFERENCE_SOURCE';
+
+export type VerificationCategory =
+  | 'VERIFIED_QUOTATION'
+  | 'VERIFIED_PARAPHRASE'
+  | 'UNVERIFIABLE';
+
+export interface SourceRegistryEntry {
+  id: string; // e.g. "Q001"
+  chapter: number;
+  type: 'quotation' | 'claim';
+  verificationCategory: VerificationCategory;
+  text: string;
+  exactQuotation?: string;
+  source: string;
+  sourceUrl?: string;
+  authorOrCreator?: string;
+  institution?: string;
+  date?: string;
+  locator: string; // page/line/box or precise locator
+  verified: boolean;
+  sourceType: SourceClassificationType | string;
+  supportsClaim: string; // "WHAT THIS SOURCE SUPPORTS"
+  limitations?: string; // "LIMITATIONS"
+  notes: string;
+  conversionStatus: 'verified_verbatim' | 'converted_to_paraphrase' | 'unverified_pending_verification' | 'unverifiable_unsupported';
+  locatorStatus: 'supported' | 'unsupported' | 'unverified_conflated';
+}
+
+export interface ChapterCitation {
+  id: string;
+  marker: number;
+  citation: string;
+  sourceType: SourceClassificationType | 'archival' | 'official-history' | 'academic-monograph' | 'declassified';
+  authorOrInstitution?: string;
+  title?: string;
+  date?: string;
+  publicationOrArchive?: string;
+  locator?: string;
+  supportsClaim?: string;
+  limitations?: string;
+  originalUrl?: string;
+  exactQuotation?: string;
+  verificationCategory?: VerificationCategory;
+}
+
+export interface FlaggedClaimEntry {
+  id: string;
+  chapter: number;
+  claimText: string;
+  category: 'interpretive_narrative' | 'causal_assertion' | 'historiographical_dispute';
+  context: string;
+  editorialConcern: string;
+  recommendedAction: string;
+}
+
+export interface TonkinEditorialAudit {
+  id: string;
+  issue: string;
+  currentPresentation: string;
+  requiredFramework: string;
+  actionItems: string[];
 }
 
 export interface CausalStep {
@@ -129,12 +201,7 @@ export interface ChapterData {
     question: string;
     framing: string;
   };
-  citations: {
-    id: string;
-    marker: number;
-    citation: string;
-    sourceType: 'archival' | 'official-history' | 'academic-monograph' | 'declassified';
-  }[];
+  citations: ChapterCitation[];
 }
 
 export interface TimelineEventItem {

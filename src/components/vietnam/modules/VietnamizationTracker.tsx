@@ -303,7 +303,7 @@ export default function VietnamizationTracker() {
         </div>
 
         <div className="pt-3 border-t border-stone-100 dark:border-stone-800">
-          <span className="font-archival-mono text-[10px] uppercase tracking-widest text-amber-800 dark:text-amber-400 font-bold block mb-1">
+          <span className="text-[10px] uppercase tracking-widest text-[#8B252D] font-bold block mb-1">
             Historiographical Controversy:
           </span>
           <p className="font-editorial-serif text-sm text-stone-700 dark:text-stone-300 leading-relaxed italic">

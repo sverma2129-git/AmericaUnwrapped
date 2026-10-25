@@ -31,14 +31,14 @@ export default function TimelineScrubber() {
   };
 
   return (
-    <figure className="my-14 sm:my-20 border border-stone-300 dark:border-stone-800 bg-[#f9f7f2] dark:bg-[#161514]">
+    <figure className="my-14 sm:my-20 border border-[#E8DDC8] bg-[#FAF7F2] rounded-xs shadow-xs text-[#2C2523]">
       {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-stone-200 dark:border-stone-800 bg-stone-100/90 dark:bg-stone-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-archival-mono">
+      <div className="px-5 py-3 border-b border-[#E8DDC8] bg-[#F7F3EB] flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          <span className="font-bold uppercase tracking-wider text-[#2C2523]">
             Chronological Backbone
           </span>
-          <span className="text-stone-500 ml-2">&bull; Thirty-Year Parallel Chronology (1945–1995)</span>
+          <span className="text-[#6B5E59] ml-2">&bull; Thirty-Year Parallel Chronology (1945–1995)</span>
         </div>
 
         {/* Search */}
@@ -47,7 +47,7 @@ export default function TimelineScrubber() {
           placeholder="Filter year, treaty, battle..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="text-xs px-3 py-1 border border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-100 placeholder-stone-400 focus:outline-none w-full sm:w-56"
+          className="text-xs px-3 py-1.5 border border-[#E8DDC8] bg-[#FFFEFA] text-[#2C2523] placeholder-[#5C524E]/60 focus:outline-none focus:border-[#8B252D] w-full sm:w-56 rounded-xs"
         />
       </div>
 
@@ -66,10 +66,10 @@ export default function TimelineScrubber() {
               key={th.key}
               type="button"
               onClick={() => setFilterTheater(th.key)}
-              className={`text-xs font-archival-mono uppercase tracking-wider px-2.5 py-1 border transition-colors cursor-pointer ${
+              className={`text-xs uppercase tracking-wider px-2.5 py-1 border transition-colors cursor-pointer rounded-xs ${
                 filterTheater === th.key
-                  ? 'border-stone-900 dark:border-stone-100 bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900 font-bold'
-                  : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 hover:border-stone-500'
+                  ? 'bg-[#8B252D] text-white border-[#8B252D] font-bold shadow-xs'
+                  : 'bg-[#FFFEFA] text-[#5C524E] border-[#E8DDC8] hover:border-[#8B252D]'
               }`}
             >
               {th.label}
@@ -82,21 +82,21 @@ export default function TimelineScrubber() {
           {filteredEvents.map((item) => (
             <div
               key={item.id}
-              className="p-3.5 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 text-xs"
+              className="p-3.5 bg-[#FFFEFA] border border-[#E8DDC8] rounded-xs shadow-xs flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 text-xs"
             >
               <div className="space-y-1 flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-archival-mono font-bold text-stone-900 dark:text-stone-100">
+                  <span className="font-mono font-bold text-[#8B252D]">
                     {item.dateStr}
                   </span>
-                  <span className="font-archival-mono text-[10px] uppercase text-stone-500 border border-stone-200 dark:border-stone-800 px-1.5 py-0.5">
+                  <span className="font-mono text-[10px] uppercase text-[#6B5E59] border border-[#E8DDC8] bg-[#FAF7F2] px-1.5 py-0.5 rounded-xs">
                     {item.theater}
                   </span>
                 </div>
-                <div className="font-editorial-serif text-sm font-bold text-stone-900 dark:text-stone-100">
+                <div className="font-editorial-serif text-sm font-bold text-[#2C2523]">
                   {item.title}
                 </div>
-                <p className="font-sans text-stone-600 dark:text-stone-400 leading-snug">
+                <p className="font-sans text-[#5C524E] leading-snug">
                   {item.summary}
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function TimelineScrubber() {
               <button
                 type="button"
                 onClick={() => jumpToChapter(item.chapterRef)}
-                className="font-archival-mono text-[11px] uppercase tracking-wider text-stone-600 dark:text-stone-400 hover:text-stone-950 dark:hover:text-stone-50 underline underline-offset-2 cursor-pointer shrink-0"
+                className="text-[11px] uppercase tracking-wider text-[#8B252D] hover:underline cursor-pointer shrink-0 font-semibold"
               >
                 Read in Chapter &rarr;
               </button>

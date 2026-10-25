@@ -53,9 +53,9 @@ export default function ChapterNavigation() {
   return (
     <>
       {/* Slender Reading Progress Line at Very Top */}
-      <div className="fixed top-0 left-0 right-0 h-[2px] bg-stone-200 dark:bg-stone-800 z-50">
+      <div className="fixed top-0 left-0 right-0 h-[3px] bg-[#E8DDC8] z-50">
         <div
-          className="h-full bg-stone-900 dark:bg-stone-100 transition-all duration-100 ease-out"
+          className="h-full bg-[#8B252D] transition-all duration-100 ease-out"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
@@ -63,15 +63,15 @@ export default function ChapterNavigation() {
       {/* Understated Sticky Reading Bar */}
       <nav
         aria-label="Chapter Reading Progress"
-        className="sticky top-0 z-30 bg-[#fbf9f5] dark:bg-[#121110] border-b border-stone-200 dark:border-stone-800 px-4 sm:px-8 py-2.5"
+        className="sticky top-0 z-30 bg-[#FFFEFA]/95 backdrop-blur-md border-b border-[#E8DDC8] px-4 sm:px-8 py-2.5 text-[#2C2523]"
       >
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
           {/* Active Chapter Label */}
           <div className="flex items-baseline gap-2.5 overflow-hidden">
-            <span className="font-archival-mono text-xs uppercase tracking-widest text-stone-500 whitespace-nowrap">
+            <span className="text-xs uppercase tracking-widest text-[#8B252D] font-bold whitespace-nowrap">
               Part {activeChapter.number.toString().padStart(2, '0')} &bull; {activeChapter.timeframe}
             </span>
-            <span className="hidden sm:inline font-editorial-serif text-sm font-bold text-stone-900 dark:text-stone-100 truncate">
+            <span className="hidden sm:inline font-editorial-serif text-sm font-bold text-[#2C2523] truncate">
               {activeChapter.title}
             </span>
           </div>
@@ -80,7 +80,7 @@ export default function ChapterNavigation() {
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="font-archival-mono text-xs uppercase tracking-wider text-stone-700 dark:text-stone-300 hover:text-stone-950 dark:hover:text-stone-50 cursor-pointer flex items-center gap-1.5"
+            className="text-xs uppercase tracking-wider text-[#5C524E] hover:text-[#8B252D] cursor-pointer flex items-center gap-1.5 font-semibold transition-colors"
           >
             <span>Table of Contents ({activeChapter.number}/12)</span>
             <span className="text-[10px]">{isMenuOpen ? '▲' : '▼'}</span>
@@ -89,7 +89,7 @@ export default function ChapterNavigation() {
 
         {/* Dropdown Drawer of Chapters */}
         {isMenuOpen && (
-          <div className="max-w-5xl mx-auto mt-2 p-4 bg-white dark:bg-[#1a1816] border border-stone-300 dark:border-stone-700 shadow-md grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-h-[70vh] overflow-y-auto">
+          <div className="max-w-5xl mx-auto mt-2 p-4 bg-[#FFFEFA] border border-[#E8DDC8] shadow-lg rounded-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 max-h-[70vh] overflow-y-auto">
             {VIETNAM_CHAPTERS.map((ch) => {
               const isCurrent = ch.id === activeChapterId;
               return (
@@ -97,17 +97,17 @@ export default function ChapterNavigation() {
                   key={ch.id}
                   type="button"
                   onClick={() => scrollToChapter(ch.id)}
-                  className={`text-left p-3 border transition-colors cursor-pointer flex flex-col justify-between ${
+                  className={`text-left p-3 border rounded-xs transition-colors cursor-pointer flex flex-col justify-between ${
                     isCurrent
-                      ? 'border-stone-900 dark:border-stone-100 bg-[#f9f7f2] dark:bg-[#161514]'
-                      : 'border-stone-200 dark:border-stone-800 hover:border-stone-400'
+                      ? 'border-[#8B252D] bg-[#FDF3F3] text-[#8B252D] font-bold shadow-2xs'
+                      : 'border-[#E8DDC8] bg-[#FAF7F2] text-[#2C2523] hover:border-[#8B252D]'
                   }`}
                 >
-                  <div className="flex items-center justify-between font-archival-mono text-[11px] text-stone-500 mb-1">
+                  <div className="flex items-center justify-between text-[11px] text-[#6B5E59] mb-1">
                     <span>Chapter {ch.number.toString().padStart(2, '0')}</span>
                     <span>{ch.timeframe}</span>
                   </div>
-                  <div className="font-editorial-serif text-sm font-bold text-stone-900 dark:text-stone-100 leading-snug">
+                  <div className="font-editorial-serif text-sm font-bold leading-snug">
                     {ch.title}
                   </div>
                 </button>

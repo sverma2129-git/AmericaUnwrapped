@@ -2,31 +2,29 @@
 
 @layer base {
   :root {
-    --background: #fbf9f5;
-    --foreground: #1c1917;
-    --card-bg: #f5f2eb;
-    --border-color: #e5e0d8;
-    --ink-muted: #57534e;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #121110;
-      --foreground: #ece8e1;
-      --card-bg: #1a1816;
-      --border-color: #2c2825;
-      --ink-muted: #a39e97;
-    }
+    --background: #FFFEFA;
+    --foreground: #2C2523;
+    --card-bg: #FAF7F2;
+    --beige: #E8DDC8;
+    --beige-light: #F7F3EB;
+    --border-color: #E8DDC8;
+    --brand-red: #8B252D;
+    --brand-red-hover: #731E25;
+    --brand-red-light: #FDF3F3;
+    --brand-red-border: #F0C4C7;
+    --ink-muted: #5C524E;
   }
 
   html {
     scroll-behavior: smooth;
     font-feature-settings: "liga" 1, "kern" 1, "onum" 1;
+    background-color: #FFFEFA;
+    color: #2C2523;
   }
 
   body {
-    background-color: var(--background);
-    color: var(--foreground);
+    background-color: #FFFEFA;
+    color: #2C2523;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -49,18 +47,73 @@
 .editorial-dropcap::first-letter {
   float: left;
   font-family: "Charter", Georgia, serif;
-  font-size: 3.75rem;
-  line-height: 0.8;
+  font-size: 3.5rem;
+  line-height: 0.85;
   padding-top: 4px;
   padding-right: 12px;
   padding-bottom: 2px;
   font-weight: 700;
-  color: var(--foreground);
+  color: #8B252D;
 }
 
 /* Focus states for accessibility */
 *:focus-visible {
-  outline: 2px solid #78716c;
+  outline: 2px solid #8B252D;
   outline-offset: 3px;
 }
 
+/* Museum Editorial Reading & Layout Utilities */
+.prose-reading {
+  max-width: 68ch;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.card-parchment {
+  background-color: #FAF7F2;
+  border: 1px solid #E8DDC8;
+}
+
+/* Red accent styling */
+.btn-primary {
+  background-color: #8B252D;
+  color: #FFFFFF;
+  transition: background-color 0.15s ease-in-out;
+}
+.btn-primary:hover {
+  background-color: #731E25;
+}
+
+.btn-secondary {
+  background-color: #FAF7F2;
+  color: #2C2523;
+  border: 1px solid #E8DDC8;
+  transition: all 0.15s ease-in-out;
+}
+.btn-secondary:hover {
+  background-color: #E8DDC8;
+  border-color: #DFD3BC;
+}
+
+/* Strategic Actor Accent Colors (Subtle & Scholarly) */
+.actor-us {
+  color: #1e3a8a;
+  border-color: #bfdbfe;
+  background-color: #f0f7ff;
+}
+.actor-hanoi {
+  color: #8B252D;
+  border-color: #fca5a5;
+  background-color: #fff5f5;
+}
+.actor-saigon {
+  color: #78350f;
+  border-color: #fde68a;
+  background-color: #fffbeb;
+}
+.actor-diplomacy {
+  color: #334155;
+  border-color: #cbd5e1;
+  background-color: #f8fafc;
+}

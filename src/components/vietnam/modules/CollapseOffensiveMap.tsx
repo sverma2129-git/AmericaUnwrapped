@@ -231,7 +231,7 @@ export default function CollapseOffensiveMap() {
             <h4 className="font-editorial-serif text-xl font-bold text-stone-900 dark:text-stone-100">
               {current.title}
             </h4>
-            <div className="font-archival-mono text-xs text-amber-800 dark:text-amber-400 mt-0.5">
+            <div className="text-xs text-[#8B252D] font-medium mt-0.5">
               Sector: {current.location}
             </div>
 

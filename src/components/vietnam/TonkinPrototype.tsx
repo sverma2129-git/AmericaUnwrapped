@@ -96,7 +96,7 @@ export default function TonkinPrototype({
   ];
 
   return (
-    <div className="w-full bg-[#fbf8f2] dark:bg-[#0c0d10] text-stone-900 dark:text-stone-100 transition-colors selection:bg-amber-200 dark:selection:bg-amber-900">
+    <div className="w-full bg-[#FFFEFA] text-[#2C2523] transition-colors selection:bg-[#8B252D]/20">
       {/* ─────────────────────────────────────────────────────────────
           SCENE 1: THE NIGHT
           Atmospheric cold open. Dark ocean canvas. Sparse, massive text.
@@ -260,8 +260,8 @@ export default function TonkinPrototype({
                 </p>
               </div>
 
-              <div className="p-4 bg-[#111927] border border-stone-800 rounded-xs text-xs font-sans text-stone-400 space-y-1">
-                <span className="font-archival-mono text-[10px] uppercase tracking-wider text-amber-400 font-bold block">
+              <div className="p-4 bg-[#FAF7F2] border border-[#E8DDC8] rounded-xs text-xs font-sans text-[#2C2523] space-y-1">
+                <span className="text-[10px] uppercase tracking-wider text-[#8B252D] font-bold block">
                   The Critical Optical Reality:
                 </span>
                 <p>
@@ -276,7 +276,7 @@ export default function TonkinPrototype({
         <div className="text-center pt-8">
           <button
             onClick={() => scrollToScene('scene-3')}
-            className="inline-flex items-center gap-2 text-xs font-archival-mono uppercase tracking-widest text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#5C524E] hover:text-[#8B252D] transition-colors cursor-pointer font-bold"
           >
             <span>Proceed to Scene 03: The Daylight Audit &darr;</span>
           </button>
@@ -289,10 +289,10 @@ export default function TonkinPrototype({
       ───────────────────────────────────────────────────────────── */}
       <section
         id="scene-3"
-        className="min-h-screen scroll-mt-14 py-16 sm:py-24 px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto border-b border-stone-300 dark:border-stone-800 space-y-12"
+        className="min-h-screen scroll-mt-14 py-16 sm:py-24 px-4 sm:px-8 lg:px-16 max-w-6xl mx-auto border-b border-[#E8DDC8] space-y-12"
       >
         <div className="max-w-3xl space-y-3">
-          <div className="font-archival-mono text-xs uppercase tracking-widest text-amber-800 dark:text-amber-400 font-bold">
+          <div className="text-xs uppercase tracking-widest text-[#8B252D] font-bold">
             Scene 03 &bull; The Story Breaks Apart
           </div>
           <h2 className="font-editorial-serif text-3xl sm:text-5xl font-bold tracking-tight text-stone-900 dark:text-stone-100">
@@ -359,20 +359,20 @@ export default function TonkinPrototype({
               <div>
                 <div className="text-3xl font-bold text-red-900 dark:text-red-300">Pilot Testified: Nothing</div>
                 <p className="text-sm text-stone-700 dark:text-stone-300 mt-1">
-                  Navy Commander James Stockdale flying 1,000 feet above: <em>&ldquo;I had the best seat in the house... not a fourth-rate PT boat in sight.&rdquo;</em>
+                  Navy Commander James Stockdale, flying 1,000 feet above the destroyers for two hours, testified that no North Vietnamese patrol boats were visible during the engagement.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* The Decisive Quote Plate */}
-        <div className="p-6 bg-stone-100 dark:bg-[#15171e] border-l-4 border-amber-600 dark:border-amber-400 rounded-r-xs space-y-2">
-          <blockquote className="font-editorial-serif text-lg sm:text-xl italic text-stone-800 dark:text-stone-200 leading-relaxed">
-            &ldquo;It is not simply that there is a different story as to what happened; it is that no attack happened that night.&rdquo;
-          </blockquote>
-          <div className="font-archival-mono text-xs text-stone-600 dark:text-stone-400">
-            &mdash; Robert J. Hanyok, Historian, Center for Cryptologic History, National Security Agency (Declassified Study, 2001)
+        {/* The Decisive Analysis Plate */}
+        <div className="p-6 bg-[#FAF7F2] border-l-4 border-[#8B252D] rounded-r-xs space-y-2 border-t border-r border-b border-[#E8DDC8] shadow-xs">
+          <div className="font-editorial-serif text-lg sm:text-xl italic text-[#2C2523] leading-relaxed">
+            NSA cryptologic historian Robert Hanyok concluded in his declassified study that no naval attack occurred on the night of August 4, 1964, and that signals intelligence was misconstrued by operational commands.
+          </div>
+          <div className="text-xs text-[#5C524E]">
+            &mdash; Robert J. Hanyok, Center for Cryptologic History, National Security Agency (Declassified Study, 2001)
           </div>
         </div>
 
@@ -523,13 +523,13 @@ export default function TonkinPrototype({
             </p>
           </div>
 
-          <div className="border-t-2 border-amber-600 dark:border-amber-400 pt-4 space-y-2">
-            <span className="font-archival-mono text-[10px] uppercase font-bold text-amber-800 dark:text-amber-400">Step 3: The Dissent</span>
+          <div className="border-t-2 border-[#8B252D] pt-4 space-y-2">
+            <span className="text-[10px] uppercase font-bold text-[#8B252D]">Step 3: The Dissent</span>
             <h4 className="font-editorial-serif text-lg font-bold text-stone-900 dark:text-stone-100">
               Wayne Morse Warns
             </h4>
             <p className="font-editorial-serif text-sm text-stone-600 dark:text-stone-400 leading-normal">
-              Senator Morse on the Senate floor: <em>&ldquo;I believe that history will record that we made a grave mistake in subverting the Constitution.&rdquo;</em>
+              Senator Wayne Morse argued during Senate debate that Congress was making a grave constitutional mistake by granting broad executive war authority on unverified premises.
             </p>
           </div>
 
@@ -646,7 +646,7 @@ export default function TonkinPrototype({
                 Robert S. McNamara &bull; The Fog of War (2003 Interview)
               </span>
               <p className="font-editorial-serif text-base italic text-stone-800 dark:text-stone-200 leading-relaxed">
-                &ldquo;It was just confusion, and events afterward showed that our judgment that we’d been attacked that day was wrong. It didn’t happen.&rdquo;
+                Reflecting on August 4, McNamara stated in 2003 that subsequent analysis demonstrated the administration&rsquo;s contemporaneous judgment of an attack was mistaken.
               </p>
             </div>
 

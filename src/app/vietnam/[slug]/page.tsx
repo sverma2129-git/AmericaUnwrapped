@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import { VIETNAM_CHAPTERS } from '@/data/vietnam/chapters';
 import ChapterNavBar from '@/components/vietnam/ChapterNavBar';
 import ChapterContent from '@/components/vietnam/ChapterContent';
-import TonkinPrototype from '@/components/vietnam/TonkinPrototype';
+import TonkinPilotView from '@/components/vietnam/TonkinPilotView';
 
 interface ChapterPageProps {
   params: Promise<{ slug: string }>;
@@ -46,11 +46,11 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
       : null;
 
   return (
-    <div className="min-h-screen bg-[#fbf8f2] dark:bg-[#141311] text-stone-900 dark:text-stone-100 transition-colors">
+    <div className="min-h-screen bg-[#FFFEFA] text-[#2C2523]">
       <ChapterNavBar currentChapter={chapter} />
       <div className="w-full">
         {slug === 'gulf-of-tonkin' ? (
-          <TonkinPrototype
+          <TonkinPilotView
             chapter={chapter}
             nextChapterId={nextChapter?.id}
             nextChapterTitle={nextChapter?.title}

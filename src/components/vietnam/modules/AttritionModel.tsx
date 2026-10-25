@@ -134,18 +134,18 @@ export default function AttritionModel() {
             </div>
 
             {/* Resulting Balance Card */}
-            <div className={`p-4 border rounded-xs transition-colors ${
+            <div className={`p-4 border rounded-xs transition-colors shadow-xs ${
               netMonthlyChange > 0
-                ? 'bg-amber-50 dark:bg-amber-950/30 border-amber-300 dark:border-amber-800'
-                : 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-800'
+                ? 'bg-[#FAF7F2] border-[#E8DDC8]'
+                : 'bg-emerald-50 border-emerald-300'
             }`}>
-              <div className="font-archival-mono text-[10px] uppercase font-bold tracking-wider text-stone-500">
+              <div className="text-[10px] uppercase font-bold tracking-wider text-[#6B5E59]">
                 Net Monthly Manpower Trajectory:
               </div>
-              <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900 dark:text-stone-100">
+              <div className="font-editorial-serif text-2xl font-bold mt-1 text-[#2C2523]">
                 {netMonthlyChange > 0 ? `+${netMonthlyChange.toLocaleString()} cadres / mo` : `${netMonthlyChange.toLocaleString()} cadres / mo`}
               </div>
-              <p className="font-editorial-serif text-xs text-stone-700 dark:text-stone-300 mt-1">
+              <p className="font-editorial-serif text-xs text-[#5C524E] mt-1">
                 {netMonthlyChange > 0
                   ? 'At these parameters, draft replenishment exceeds effective combat attrition. Communist force strength continues to expand or stabilize.'
                   : 'At these parameters, attrition exceeds the annual biological replenishment rate, creating a net deficit in regular cadre formations.'}
