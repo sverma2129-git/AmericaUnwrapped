@@ -16,11 +16,11 @@ export default function Footer() {
               </span>
             </Link>
             <p className="font-sans text-sm text-ink-muted max-w-sm leading-relaxed">
-              A history-learning platform designed for students, combining museum-quality visual storytelling, authentic primary sources, and practical exam study tools.
+              American history for students who want the real story: what happened, why, and how we know. Built with the documents in plain sight.
             </p>
             <div className="pt-2 text-xs text-ink-soft space-y-1">
               <div>Primary Archives: U.S. National Archives (NARA) &bull; FRUS &bull; Wilson Center</div>
-              <div>Editorial Rigor: Symmetrical scrutiny &bull; Evidence before conclusions</div>
+              <div>Same standard for every side &bull; Evidence first, conclusions second</div>
             </div>
           </div>
 
@@ -52,7 +52,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="hover:text-brand transition-colors">
-                  Editorial Charter
+                  How We Work
                 </Link>
               </li>
             </ul>
@@ -96,10 +96,16 @@ export default function Footer() {
         {/* Bottom Colophon */}
         <div className="mt-12 pt-6 border-t border-rule flex flex-col sm:flex-row justify-between items-center text-xs text-ink-soft gap-3">
           <p>
-            &copy; {new Date().getFullYear()} America Unwrapped. Built for high-school students, educators, and curious minds.
+            &copy; {new Date().getFullYear()} America Unwrapped. Made for high-school students, teachers, and anyone curious.
           </p>
-          <p className="italic">
-            Evidence-First Digital History &bull; Static Archival Edition
+          <p>
+            No ads. No tracking.{' '}
+            <a
+              href="https://github.com/sverma2129-git/AmericaUnwrapped/issues"
+              className="underline hover:text-brand transition-colors"
+            >
+              Found a mistake? Tell us.
+            </a>
           </p>
         </div>
       </div>

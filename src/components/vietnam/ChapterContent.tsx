@@ -14,21 +14,8 @@ import DualPerspectiveViewer from './DualPerspectiveViewer';
 import DocumentInspector from './DocumentInspector';
 import { useCitation } from '@/components/common/CitationContext';
 import CitationMarker from '@/components/common/CitationMarker';
-
-function FormattedParagraph({ text }: { text: string }) {
-  const parts = text.split(/(\[\^[a-zA-Z0-9_-]+\])/g);
-  return (
-    <p>
-      {parts.map((part, idx) => {
-        const match = part.match(/^\[\^([a-zA-Z0-9_-]+)\]$/);
-        if (match) {
-          return <CitationMarker key={idx} id={match[1]} />;
-        }
-        return part;
-      })}
-    </p>
-  );
-}
+import CitedParagraph from '@/components/common/CitedParagraph';
+import PersonalStoryCard from './PersonalStoryCard';
 
 interface ChapterContentProps {
   chapter: ChapterData;
@@ -173,7 +160,7 @@ export default function ChapterContent({
         <div className="max-w-3xl mx-auto space-y-6 font-sans text-base sm:text-lg text-ink leading-[1.8]">
           {chapter.whatHappened.narrative.map((paragraph, idx) => (
             <div key={idx} className={idx === 0 ? 'editorial-dropcap' : ''}>
-              <FormattedParagraph text={paragraph} />
+              <CitedParagraph text={paragraph} />
             </div>
           ))}
         </div>
@@ -222,6 +209,8 @@ export default function ChapterContent({
       </section>
 
       {/* 4. Interactive Tactical / Visual Evidence Core */}
+      {chapter.personalStory && <PersonalStoryCard story={chapter.personalStory} />}
+
       <section id="evidence" aria-label="Interactive Visual Evidence" className="scroll-mt-24">
         <div className="border border-rule bg-parchment p-5 sm:p-8 rounded-xs shadow-2xs">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 mb-6 border-b border-rule gap-2">

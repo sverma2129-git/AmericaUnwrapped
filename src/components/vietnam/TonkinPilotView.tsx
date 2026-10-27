@@ -13,6 +13,7 @@ import CausalFlowViewer from '@/components/vietnam/CausalFlowViewer';
 import DualPerspectiveViewer from '@/components/vietnam/DualPerspectiveViewer';
 import DocumentInspector from '@/components/vietnam/DocumentInspector';
 import CitationMarker from '@/components/common/CitationMarker';
+import PersonalStoryCard from '@/components/vietnam/PersonalStoryCard';
 import { useCitation } from '@/components/common/CitationContext';
 
 function FormattedParagraph({ text, className = '' }: { text: string; className?: string }) {
@@ -262,6 +263,12 @@ export default function TonkinPilotView({
           </div>
         ))}
       </section>
+
+      {chapter.personalStory && (
+        <div className="my-12">
+          <PersonalStoryCard story={chapter.personalStory} />
+        </div>
+      )}
 
       {/* ─────────────────────────────────────────────────────────────
           4. INTERACTIVE EVIDENCE: THE DUAL-CLOCK RADAR INVESTIGATION

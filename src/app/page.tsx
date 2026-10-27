@@ -8,7 +8,7 @@ import { buildGlossary, collectQuizQuestions } from '@/lib/study';
 export const metadata = {
   title: { absolute: 'America Unwrapped · Visual History & High-School Study Platform' },
   description:
-    'History made genuinely understandable through museum-grade visual storytelling, authentic primary sources, interactive tactical maps, and test-ready study tools.',
+    'The Vietnam War told through the real documents and the real arguments, with interactive maps and everything you need for the unit test.',
 };
 
 const tileBase = 'rounded-xl border border-rule p-6 shadow-2xs';
@@ -45,7 +45,7 @@ export default function HomePage() {
               Why did the world’s most powerful military spend 20 years fighting a war it couldn’t win?
             </h1>
             <p className="text-base text-paper/75 leading-relaxed max-w-md">
-              Museum-quality storytelling, declassified evidence, and study tools built for students.
+              Read the actual cables, hear from the people who were there, and decide for yourself. Then get ready for the test.
             </p>
           </div>
           <div className="flex flex-wrap gap-3 text-sm">
@@ -150,12 +150,12 @@ export default function HomePage() {
 
         {/* Principles (2×1) */}
         <Link href="/about" className={`${tileLink} col-span-2 bg-parchment space-y-3`}>
-          <Eyebrow>Our Standard</Eyebrow>
+          <Eyebrow>How We Work</Eyebrow>
           <h2 className="font-editorial-serif text-xl font-bold text-ink group-hover:text-brand transition-colors">
-            Evidence before conclusions
+            Check our work
           </h2>
           <p className="text-sm text-ink-muted leading-relaxed">
-            Major claims link to declassified cables and archival records, and Washington, Hanoi, and Saigon get equal scrutiny. Paraphrases are never dressed up as quotations.
+            Every big claim links to the document behind it, so you can read it yourself. We hold Washington, Hanoi, and Saigon to the same standard, and we never put quotation marks around words nobody actually said.
           </p>
         </Link>
 

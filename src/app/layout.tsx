@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'America Unwrapped · A Digital History Publication',
   },
   description:
-    'A digital history publication designed to make American history understandable, engaging, and intellectually serious.',
+    'American history explained clearly and honestly, with the real documents behind every big claim.',
 };
 
 export default function RootLayout({

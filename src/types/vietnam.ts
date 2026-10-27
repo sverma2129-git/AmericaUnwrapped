@@ -121,6 +121,19 @@ export interface SidePerspective {
   primaryDocumentRef?: string;
 }
 
+/** One individual's experience of the chapter's events, shown as a sidebar beside the main narrative. */
+export interface PersonalStory {
+  name: string;
+  /** Who they were at the time, e.g. "Navy pilot, USS Ticonderoga". */
+  role: string;
+  /** Narrative paragraphs; may contain inline citation markers. */
+  paragraphs: string[];
+  /** Must reference a VERIFIED_QUOTATION with exactQuotation; otherwise no quote is rendered. */
+  quoteCitationId?: string;
+  /** One line on what happened to them later. */
+  afterward?: string;
+}
+
 export interface LandmarkMoment {
   bannerTitle: string;
   dateline: string;
@@ -166,6 +179,7 @@ export interface ChapterData {
   layout?: 'standard' | 'investigation';
   isLandmark?: boolean;
   landmarkMoment?: LandmarkMoment;
+  personalStory?: PersonalStory;
   hookLead?: string;
   hookParadox?: string;
   strategicEcosystem?: StrategicActorEcosystem;

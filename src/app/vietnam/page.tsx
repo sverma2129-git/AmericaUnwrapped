@@ -117,7 +117,7 @@ export default function VietnamHubPage() {
           PRIMARY ARCHIVES: U.S. National Archives (NARA) &bull; National Archives of Vietnam &bull; Wilson Center CWIHP &bull; Foreign Relations of the United States (FRUS)
         </div>
         <div>
-          SCHOLARLY RIGOR: Evidence before verdict. Symmetrical scrutiny across Washington, Hanoi, and Saigon.
+          Evidence first, conclusions second. Washington, Hanoi, and Saigon held to the same standard.
         </div>
       </footer>
     </div>
