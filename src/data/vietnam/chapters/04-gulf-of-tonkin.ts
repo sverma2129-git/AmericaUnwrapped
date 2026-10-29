@@ -21,6 +21,18 @@ const chapter: ChapterData = {
     quoteSpeaker: 'Captain John J. Herrick, CTG 72.1',
     quoteContext: 'Operational Flash Cable DTG 041727Z AUG 64 (FRUS 1964–1968, Vol. I, Doc 117)',
   },
+  personalStory: {
+    name: 'James Stockdale',
+    role: 'Navy commander and fighter pilot, USS Ticonderoga, 1964',
+    paragraphs: [
+      'On the night of August 4, 1964, Commander James Stockdale was flying an F-8 Crusader low over the Gulf of Tonkin, looking for the enemy torpedo boats the destroyers below were reporting. He circled above them for well over an hour. He saw the destroyers’ wakes and their gunfire, and nothing else.',
+      'The next morning he was ordered to lead an airstrike against North Vietnam in retaliation for the attack he had just watched not happen. He flew the mission.',
+      'Thirteen months later, in September 1965, Stockdale was shot down over North Vietnam and taken prisoner. Through years of interrogation in Hoa Lo prison, he carried a private fear: that his captors would learn he was the pilot who knew the truth about August 4.',
+    ],
+    quoteCitationId: 'Q021',
+    afterward:
+      'Released in February 1973 after seven and a half years as a prisoner of war, Stockdale received the Medal of Honor in 1976. He told the Tonkin story with his wife, Sybil, in their 1984 memoir. She had spent his captivity organizing the families of missing and imprisoned servicemen.',
+  },
   whatHappened: {
     narrative: [
       'Throughout 1964, South Vietnam’s military situation worsened rapidly following Diem’s death. The Johnson administration initiated OPLAN 34A—covert South Vietnamese commando raids against North Vietnamese coastal radar installations and islands, coordinated alongside U.S. Navy DeSoto intelligence patrols collecting electronic signals in the Gulf of Tonkin.',

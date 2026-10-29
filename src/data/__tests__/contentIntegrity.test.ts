@@ -3,6 +3,7 @@ import { CHAPTER_COUNT, VIETNAM_CHAPTERS, getAdjacentChapters } from '@/data/vie
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { TURNING_POINTS } from '@/data/vietnam/studyGuide';
+import { isVerbatimQuotation } from '@/lib/citations';
 
 describe('chapters', () => {
   it('have unique ids and contiguous numbers starting at 1', () => {
@@ -17,6 +18,16 @@ describe('chapters', () => {
     expect(getAdjacentChapters(VIETNAM_CHAPTERS[0]).prev).toBeUndefined();
     expect(getAdjacentChapters(VIETNAM_CHAPTERS[CHAPTER_COUNT - 1]).next).toBeUndefined();
     expect(getAdjacentChapters(VIETNAM_CHAPTERS[0]).next).toBe(VIETNAM_CHAPTERS[1]);
+  });
+
+  it('quote personal stories only from verified verbatim quotations', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const id = chapter.personalStory?.quoteCitationId;
+      if (!id) continue;
+      const citation = CITATION_REGISTRY[id];
+      expect(citation, `${chapter.id}: ${id}`).toBeDefined();
+      expect(isVerbatimQuotation(citation), `${chapter.id}: ${id}`).toBe(true);
+    }
   });
 
   it('each have study data', () => {
