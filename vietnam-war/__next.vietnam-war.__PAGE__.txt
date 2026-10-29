@@ -1,6 +1,6 @@
 2:"$Sreact.fragment"
-3:"/AmericaUnwrapped/_next/static/chunks/2nmbamshgvb7r.js"
-4:"/AmericaUnwrapped/_next/static/chunks/3bsjaqf2dpyec.js"
+3:"/AmericaUnwrapped/_next/static/chunks/317j3mv2h0nth.js"
+4:"/AmericaUnwrapped/_next/static/chunks/0vq2a1nqxic6i.js"
 5:"/AmericaUnwrapped/_next/static/chunks/3qeyqdccbdph3.js"
 6:I[39756,["$3","$4","$5"],"default"]
 7:I[37457,["$3","$4","$5"],"default"]
@@ -17,7 +17,7 @@ e:"$Sreact.suspense"
 a:X
 b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"max-w-xl mx-auto px-6 py-24 text-center space-y-4","children":[["$","meta",null,{"httpEquiv":"refresh","content":"0; url=/AmericaUnwrapped/vietnam"}],["$","h1",null,{"className":"font-editorial-serif text-2xl font-bold text-ink","children":"This page has moved"}],["$","p",null,{"className":"text-sm text-ink-muted","children":["The Vietnam War experience now lives at"," ",["$","$Lc",null,{"href":"/vietnam","className":"text-brand underline","children":"Explore History"}],"."]}]]}],null,["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]]}],"p":"$@10","v":null,"s":"$a"}}]]
 1:[["children",{"s":"vietnam-war","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
-0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L14",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Moved to Explore History | America Unwrapped"}],["$","meta","1",{"name":"description","content":"A digital history publication designed to make American history understandable, engaging, and intellectually serious."}],["$","meta","2",{"name":"robots","content":"noindex"}],["$","link","3",{"rel":"icon","href":"/AmericaUnwrapped/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L15","4",{}]]}]}],null]}],null]}],"p":"$@16","v":null,"s":"$a"}},"a":"$@17","u":"$@18","b":"IKl0cU0Nl9FrnFuN7VBSE"}
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L14",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Moved to Explore History | America Unwrapped"}],["$","meta","1",{"name":"description","content":"American history explained clearly and honestly, with the real documents behind every big claim."}],["$","meta","2",{"name":"robots","content":"noindex"}],["$","link","3",{"rel":"icon","href":"/AmericaUnwrapped/favicon.ico?favicon.2vob68tjqpejf.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L15","4",{}]]}]}],null]}],null]}],"p":"$@16","v":null,"s":"$a"}},"a":"$@17","u":"$@18","b":"l5A3gqCzSLGNt8ogUArRX"}
 f:null
 18:true
 a:300
