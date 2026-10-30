@@ -67,7 +67,7 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
               )}
               {item.examTip && (
                 <div className="pt-1 text-xs text-brand">
-                  💡 <strong>Exam Tip:</strong> {item.examTip}
+                  <strong>Exam Tip:</strong> {item.examTip}
                 </div>
               )}
             </div>

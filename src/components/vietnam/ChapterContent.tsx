@@ -16,6 +16,7 @@ import { useCitation } from '@/components/common/CitationContext';
 import CitationMarker from '@/components/common/CitationMarker';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import PersonalStoryCard from './PersonalStoryCard';
+import Icon from '@/components/common/Icon';
 
 interface ChapterContentProps {
   chapter: ChapterData;
@@ -82,49 +83,56 @@ export default function ChapterContent({
         <nav aria-label="Chapter sections" className="mt-6 flex flex-wrap gap-2 text-xs">
           <a
             href="#briefing"
-            className="px-3 py-1.5 bg-parchment hover:bg-rule text-ink rounded-xs transition-colors border border-rule font-medium"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            ⚡ 60-Sec Briefing
+            <Icon name="zap" />
+            60-Sec Briefing
           </a>
           <a
             href="#story"
-            className="px-3 py-1.5 bg-parchment hover:bg-rule text-ink rounded-xs transition-colors border border-rule font-medium"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            📖 The Story
+            <Icon name="book" />
+            The Story
           </a>
           <a
             href="#evidence"
-            className="px-3 py-1.5 bg-parchment hover:bg-rule text-ink rounded-xs transition-colors border border-rule font-medium"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            🗺️ Tactical Evidence
+            <Icon name="map" />
+            Tactical Evidence
           </a>
           <a
             href="#causal"
-            className="px-3 py-1.5 bg-parchment hover:bg-rule text-ink rounded-xs transition-colors border border-rule font-medium"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            🔗 Cause &amp; Effect
+            <Icon name="link" />
+            Cause &amp; Effect
           </a>
           {studyData?.quiz && studyData.quiz.length > 0 && (
             <a
               href="#quiz"
-              className="px-3 py-1.5 bg-brand-tint text-brand hover:bg-[#FBE8EA] rounded-xs transition-colors border border-brand-rule font-semibold"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-brand-tint text-brand border-brand-rule hover:border-brand font-semibold"
             >
-              ✍️ Practice Quiz
+              <Icon name="pen" />
+            Practice Quiz
             </a>
           )}
           {studyData?.flashcards && studyData.flashcards.length > 0 && (
             <a
               href="#flashcards"
-              className="px-3 py-1.5 bg-parchment hover:bg-rule text-ink rounded-xs transition-colors border border-rule font-medium"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
             >
-              🃏 Flashcards
+              <Icon name="layers" />
+            Flashcards
             </a>
           )}
           <a
             href="#dossier"
-            className="px-3 py-1.5 bg-parchment hover:bg-rule text-ink rounded-xs transition-colors border border-rule font-medium"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            📂 Sources ({chapter.primaryDocuments?.length || 0})
+            <Icon name="folder" />
+            Sources ({chapter.primaryDocuments?.length || 0})
           </a>
         </nav>
       </header>

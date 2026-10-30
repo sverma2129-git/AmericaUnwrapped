@@ -197,7 +197,7 @@ export default function QuickBriefing({
 
               {activeTermModal.examTip && (
                 <div className="p-3 bg-brand-tint border border-brand-rule rounded-xs text-xs text-brand">
-                  <strong className="block uppercase tracking-wider mb-0.5">💡 Exam Strategy Tip</strong>
+                  <strong className="block uppercase tracking-wider mb-0.5">Exam Strategy Tip</strong>
                   <p>{activeTermModal.examTip}</p>
                 </div>
               )}

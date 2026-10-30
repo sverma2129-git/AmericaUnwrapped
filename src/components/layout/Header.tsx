@@ -67,22 +67,22 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-rule bg-paper/95 backdrop-blur-md transition-colors">
+    <header className="sticky top-0 z-40 border-b border-rule bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between gap-6">
           {/* Masthead Brand */}
           <Link
             href="/"
-            className="flex items-baseline gap-1 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs"
+            className="flex items-baseline gap-0.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs"
           >
-            <span className="font-editorial-serif text-2xl font-bold tracking-tight text-ink group-hover:text-brand transition-colors">
+            <span className="font-editorial-serif text-[1.375rem] font-semibold tracking-tight text-ink group-hover:text-brand transition-colors">
               America Unwrapped
             </span>
             <span className="text-brand font-bold text-xl leading-none">.</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav aria-label="Main Navigation" className="hidden md:flex items-center gap-8 text-sm">
+          <nav aria-label="Main Navigation" className="hidden md:flex self-stretch items-stretch gap-7 text-xs font-semibold uppercase tracking-wider">
             {NAVIGATION_LINKS.map((item) => {
               const isExplore = item.href === '/vietnam';
               const isActive =
@@ -95,18 +95,18 @@ export default function Header() {
                   <div
                     key={item.href}
                     ref={dropdownRef}
-                    className="relative"
+                    className="relative flex"
                     onMouseEnter={() => setExploreDropdownOpen(true)}
                     onMouseLeave={() => setExploreDropdownOpen(false)}
                   >
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-stretch gap-1">
                       <Link
                         href={item.href}
                         aria-current={isActive ? 'page' : undefined}
-                        className={`transition-colors py-1 relative font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${
+                        className={`transition-colors inline-flex items-center relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${
                           isActive
-                            ? 'text-brand font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand'
-                            : 'text-ink-muted hover:text-brand'
+                            ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand'
+                            : 'text-ink-muted hover:text-ink'
                         }`}
                       >
                         {item.label}
@@ -117,10 +117,10 @@ export default function Header() {
                         aria-expanded={exploreDropdownOpen}
                         aria-haspopup="true"
                         aria-label="Toggle chapters menu"
-                        className="text-ink-muted hover:text-brand p-1 cursor-pointer transition-colors"
+                        className="self-center text-ink-muted hover:text-ink p-1 cursor-pointer transition-colors"
                       >
                         <svg
-                          className={`w-3.5 h-3.5 transition-transform duration-150 ${exploreDropdownOpen ? 'rotate-180 text-brand' : ''}`}
+                          className={`w-3.5 h-3.5 transition-transform duration-150 ${exploreDropdownOpen ? 'rotate-180 text-ink' : ''}`}
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -135,11 +135,11 @@ export default function Header() {
                       <div
                         role="menu"
                         aria-label="Explore History Chapters"
-                        className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[720px] bg-paper border border-rule rounded-xs shadow-xl p-6 z-50 text-ink animate-in fade-in duration-150"
+                        className="absolute left-1/2 -translate-x-1/2 top-full w-[720px] bg-surface border border-rule rounded-xl shadow-lg p-6 z-50 text-ink normal-case tracking-normal font-normal"
                       >
                         {/* Top Bar inside Dropdown */}
                         <div className="flex items-center justify-between pb-3 mb-4 border-b border-rule text-xs">
-                          <span className="font-editorial-serif text-sm font-bold text-ink">
+                          <span className="font-editorial-serif text-base font-semibold text-ink">
                             The Vietnam War: 12 Historical Inquiries (1945–1975)
                           </span>
                           <Link
@@ -156,7 +156,7 @@ export default function Header() {
                           {chapterEras.map((era, eIdx) => (
                             <div key={eIdx} className="space-y-2.5">
                               <div>
-                                <h4 className="font-semibold text-brand text-[11px] uppercase tracking-wider">
+                                <h4 className="eyebrow text-brand">
                                   {era.title}
                                 </h4>
                                 <span className="text-[10px] text-ink-soft block">
@@ -170,7 +170,7 @@ export default function Header() {
                                     <Link
                                       href={`/vietnam/${ch.id}`}
                                       onClick={() => setExploreDropdownOpen(false)}
-                                      className="block p-1.5 -mx-1.5 rounded-xs hover:bg-parchment transition-colors group/item"
+                                      className="block p-2 -mx-2 rounded-md hover:bg-parchment transition-colors group/item"
                                     >
                                       <div className="flex items-center justify-between gap-1 text-[10px] text-ink-soft mb-0.5">
                                         <span>Ch {ch.number.toString().padStart(2, '0')}</span>
@@ -214,10 +214,10 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`transition-colors py-1 relative font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${
+                  className={`transition-colors inline-flex items-center relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${
                     isActive
-                      ? 'text-brand font-bold after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand'
-                      : 'text-ink-muted hover:text-brand'
+                      ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand'
+                      : 'text-ink-muted hover:text-ink'
                   }`}
                 >
                   {item.label}
@@ -248,7 +248,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <nav
             aria-label="Mobile Navigation"
-            className="md:hidden border-t border-rule py-4 space-y-1 text-base bg-paper max-h-[80vh] overflow-y-auto"
+            className="md:hidden border-t border-rule py-4 space-y-1 text-sm font-medium max-h-[80vh] overflow-y-auto"
           >
             {NAVIGATION_LINKS.map((item) => {
               const isExplore = item.href === '/vietnam';
@@ -264,7 +264,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`flex-1 py-2.5 px-3 rounded-xs transition-colors ${
+                        className={`flex-1 py-2.5 px-3 rounded-md transition-colors ${
                           isActive
                             ? 'bg-parchment-light text-brand font-bold'
                             : 'text-ink hover:bg-parchment hover:text-brand'
@@ -316,7 +316,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2.5 px-3 rounded-xs transition-colors ${
+                  className={`block py-2.5 px-3 rounded-md transition-colors ${
                     isActive
                       ? 'bg-parchment-light text-brand font-bold'
                       : 'text-ink hover:bg-parchment hover:text-brand'

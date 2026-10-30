@@ -27,7 +27,7 @@ export default function StudyGuideTabs({ tabs }: { tabs: StudyGuideTab[] }) {
 
   return (
     <>
-      <div role="tablist" aria-label="Study guide sections" className="flex flex-wrap gap-2 text-xs border-b border-rule pb-2">
+      <div role="tablist" aria-label="Study guide sections" className="flex flex-wrap gap-2 text-sm border-b border-rule pb-3">
         {tabs.map((tab, index) => {
           const selected = tab.id === activeId;
           return (
@@ -44,10 +44,10 @@ export default function StudyGuideTabs({ tabs }: { tabs: StudyGuideTab[] }) {
               tabIndex={selected ? 0 : -1}
               onClick={() => setActiveId(tab.id)}
               onKeyDown={(e) => handleKeyDown(e, index)}
-              className={`px-4 py-2.5 rounded-xs border transition-colors cursor-pointer font-semibold ${
+              className={`px-4 py-2 rounded-full border transition-colors cursor-pointer font-medium ${
                 selected
-                  ? 'bg-brand text-white border-brand'
-                  : 'bg-white text-ink-muted border-rule hover:border-brand'
+                  ? 'bg-ink text-paper border-ink'
+                  : 'bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong'
               }`}
             >
               {tab.label}

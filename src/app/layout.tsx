@@ -1,9 +1,18 @@
 import type { Metadata } from 'next';
+import { Inter, Newsreader } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
 import CitationModal from '@/components/common/CitationModal';
 import './globals.css';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  variable: '--font-newsreader',
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className={`h-full ${inter.variable} ${newsreader.variable}`}>
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased selection:bg-rule selection:text-ink">
         <CitationProvider>
           {/* Accessible Skip Link */}

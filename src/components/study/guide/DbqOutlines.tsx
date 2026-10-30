@@ -58,7 +58,7 @@ export default function DbqOutlines() {
               </div>
               <div className="p-4 bg-brand-tint border border-brand-rule rounded-xs space-y-2">
                 <strong className="text-xs font-bold uppercase tracking-wider text-brand block">
-                  ⚠️ Common Student Errors:
+                  Common Student Errors:
                 </strong>
                 <ul className="list-disc list-inside space-y-1.5 text-ink-muted">
                   {dbq.commonErrors.map((item) => (

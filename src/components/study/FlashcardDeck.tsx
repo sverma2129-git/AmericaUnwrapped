@@ -167,7 +167,7 @@ export default function FlashcardDeck({
 
                   {currentCard.examTip && (
                     <div className="p-2.5 rounded-xs bg-brand-tint border border-brand-rule text-xs text-brand">
-                      <strong>💡 Exam Tip:</strong> {currentCard.examTip}
+                      <strong>Exam Tip:</strong> {currentCard.examTip}
                     </div>
                   )}
                 </div>
