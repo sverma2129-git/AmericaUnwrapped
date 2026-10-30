@@ -11,6 +11,126 @@ const chapter: ChapterData = {
   summary:
     'Following World War II, Ho Chi Minh declared Vietnamese independence, but France sought to restore its colonial empire. As the Cold War intensified in Asia, Washington transformed from an ambivalent spectator into France’s primary financier, culminating in the catastrophic French defeat at Dien Bien Phu and the temporary partition of Vietnam at Geneva.',
   isLandmark: true,
+  layout: 'layered',
+  story: {
+    beats: [
+      {
+        id: 'independence',
+        kicker: '1945–1946',
+        headline: 'Ho Chi Minh declares independence, and asks America for help',
+        body: [
+          'On September 2, 1945, Ho Chi Minh proclaimed an independent Vietnam in Hanoi, quoting the American Declaration of Independence. France wanted its colony back, and by late 1946 the two were at war.',
+          'Ho wrote to President Truman more than once asking for support. Truman, focused on rebuilding France as a European ally, never answered.',
+        ],
+        visual: { kind: 'quote', citationId: 'Q001' },
+      },
+      {
+        id: 'cold-war',
+        kicker: '1949–1954',
+        headline: 'China and Korea turn a colonial war into a Cold War front',
+        body: [
+          'The communist victory in China in 1949 and the Korean War in 1950 changed how Washington saw Vietnam. Ho was no longer a nationalist fighting a colonial power; he was the leading edge of Soviet and Chinese expansion.',
+          'So the United States started paying for France’s war, without getting any say in how France fought it.[^c1-1]',
+        ],
+        visual: {
+          kind: 'share',
+          title: 'By 1954, Americans were paying for most of France’s war',
+          label: 'United States',
+          remainderLabel: 'France',
+          low: 78,
+          high: 80,
+          note: 'Share of French war costs in 1954. U.S. aid totaled nearly $2 billion.',
+          citationId: 'c1-1',
+        },
+        checkId: 'c1-q1',
+      },
+      {
+        id: 'siege',
+        kicker: 'November 1953 – May 1954',
+        headline: 'Navarre’s bet: a fortress in a valley',
+        body: [
+          'French commander Henri Navarre wanted a decisive battle. He picked a remote valley near the Laos border, Dien Bien Phu, and dared the Viet Minh to attack it.',
+        ],
+        visual: {
+          kind: 'siege',
+          question: 'Why did a fortress built to win a battle become a trap?',
+          instruction: 'Scroll to follow the 55-day siege.',
+          takeaway:
+            'The French held the valley, but Giap held the hills around it. Once the guns closed the airstrip, the garrison could not be resupplied or rescued.',
+          caption: 'Schematic map. Positions are approximate and not to scale.',
+          citationId: 'c1-2',
+          steps: [
+            {
+              date: 'November 1953',
+              headline: 'A base with no road in',
+              state: 'valley',
+              body: 'About 10,800 French troops dug into a ring of strongpoints around an airstrip. There were no roads to French territory, so every bullet, meal and replacement had to come in by air.',
+            },
+            {
+              date: 'Winter 1953–54',
+              headline: 'The hills nobody thought could hold guns',
+              state: 'guns',
+              body: 'French planners assumed heavy artillery could never be hauled through the jungle mountains. Giap mobilized over 250,000 civilian porters who took howitzers apart, carried them up the far side of the hills, and hid them in dug-in positions looking down on the valley.[^c1-2]',
+            },
+            {
+              date: 'March 13, 1954',
+              headline: 'The first strongpoints fall',
+              state: 'outposts',
+              body: 'Giap opened with a massed bombardment the French had said was impossible. The northern outposts, Beatrice and then Gabrielle, fell within days. The French artillery commander, unable to silence the guns, took his own life.[^c1-2]',
+            },
+            {
+              date: 'Late March – April 1954',
+              headline: 'Trenches close in and the airstrip dies',
+              state: 'ring',
+              body: 'Viet Minh soldiers dug trenches that crept closer to the French lines every night. Shelling closed the airstrip, so supplies could only be dropped by parachute, and many landed on the wrong side of the lines.[^c1-2]',
+            },
+            {
+              date: 'May 7, 1954',
+              headline: 'Fifty-five days',
+              state: 'fall',
+              body: 'With bunkers flooding in the monsoon rains, the central position was overrun on May 7, just as diplomats at Geneva turned to Indochina. The isolated southern outpost, Isabelle, fell the next day.[^c1-3]',
+            },
+          ],
+        },
+        checkId: 'c1-q2',
+      },
+      {
+        id: 'vulture',
+        kicker: 'April 1954',
+        headline: 'Washington’s choice: bomb, or stay out?',
+        body: [
+          'As the siege tightened, France asked for American air strikes. Inside the Eisenhower administration, the request split the people around the president.[^c1-1]',
+        ],
+        visual: {
+          kind: 'debate',
+          question: 'Should the U.S. bomb the hills around Dien Bien Phu?',
+          sides: [
+            {
+              stance: 'Strike',
+              who: 'Secretary of State John Foster Dulles, Admiral Arthur Radford',
+              argument: 'Carrier air strikes (Operation Vulture) could break the siege and keep Indochina from falling to communism.',
+            },
+            {
+              stance: 'Not alone',
+              who: 'President Eisenhower, Army Chief of Staff Matthew Ridgway',
+              argument: 'Fresh from Korea, they would not act without British allies and approval from Congress.',
+            },
+          ],
+          outcome: 'Britain said no, congressional leaders said no, and the U.S. stayed out.',
+        },
+        checkId: 'c1-q3',
+      },
+      {
+        id: 'aftermath',
+        kicker: 'Summer 1954',
+        headline: 'What France lost, America inherited',
+        body: [
+          'At Geneva, Vietnam was split at the 17th parallel, supposedly until nationwide elections in 1956. Washington decided not to rescue France, but to replace it.',
+        ],
+        visual: { kind: 'consequence' },
+      },
+    ],
+  },
   landmarkMoment: {
     bannerTitle: 'The Cataclysmic Siege at Dien Bien Phu',
     dateline: 'March 13 – May 7, 1954',

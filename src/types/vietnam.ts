@@ -168,6 +168,65 @@ export interface StrategicActorEcosystem {
   };
 }
 
+// ─── LAYERED CHAPTER STORY ──────────────────────────────────────────────────
+// Short beats a student can read in a few minutes. Body text may carry inline
+// citation markers (same syntax as narrative); quotes render only via isVerbatimQuotation().
+
+/** Map state for one step of the Dien Bien Phu siege scrollytelling map. */
+export type SiegeMapState = 'valley' | 'guns' | 'outposts' | 'ring' | 'fall';
+
+export interface SiegeStep {
+  date: string;
+  headline: string;
+  body: string;
+  state: SiegeMapState;
+}
+
+export type StoryVisual =
+  | { kind: 'quote'; citationId: string }
+  | {
+      kind: 'share';
+      /** The chart title states the finding. */
+      title: string;
+      label: string;
+      remainderLabel: string;
+      /** Percent range; low === high for a single value. */
+      low: number;
+      high: number;
+      note: string;
+      citationId: string;
+    }
+  | {
+      kind: 'siege';
+      question: string;
+      instruction: string;
+      takeaway: string;
+      caption: string;
+      citationId: string;
+      steps: SiegeStep[];
+    }
+  | {
+      kind: 'debate';
+      question: string;
+      sides: { stance: string; who: string; argument: string }[];
+      outcome: string;
+    }
+  | { kind: 'consequence' };
+
+export interface StoryBeat {
+  id: string;
+  kicker: string;
+  headline: string;
+  body: string[];
+  visual?: StoryVisual;
+  /** Id of a quiz question in this chapter's study data, asked inline after the beat. */
+  checkId?: string;
+}
+
+export interface ChapterStory {
+  beats: StoryBeat[];
+}
+
 export interface ChapterData {
   id: string;
   number: number;
@@ -175,8 +234,12 @@ export interface ChapterData {
   title: string;
   subtitle: string;
   summary: string;
-  /** 'investigation' renders the evidence-led TonkinPilotView instead of the standard chapter layout. */
-  layout?: 'standard' | 'investigation';
+  /**
+   * 'investigation' renders the evidence-led TonkinPilotView; 'layered' renders
+   * LayeredChapter from `story` (gist → story beats → evidence → review).
+   */
+  layout?: 'standard' | 'investigation' | 'layered';
+  story?: ChapterStory;
   isLandmark?: boolean;
   landmarkMoment?: LandmarkMoment;
   personalStory?: PersonalStory;

@@ -17,6 +17,13 @@
   --color-brand-hover: #7F1D1D;
   --color-brand-tint: #FEF2F2;
   --color-brand-rule: #FECACA;
+  --color-success: #166534;         /* green-800, 7.1:1 on paper */
+  --color-success-tint: #F0FDF4;
+  --color-success-rule: #BBF7D0;
+  /* Map palette */
+  --color-terrain: #EFEADF;
+  --color-terrain-line: #D8CDBA;
+  --color-water: #7FA6C4;
 }
 
 /* Fonts are loaded via next/font in layout.tsx and exposed as CSS variables. */
