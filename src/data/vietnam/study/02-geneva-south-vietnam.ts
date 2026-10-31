@@ -59,10 +59,10 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       question:
         'Why did South Vietnamese President Ngo Dinh Diem refuse to conduct the nationwide reunification elections scheduled for July 1956 by the Geneva Accords?',
       options: [
-        'The Soviet Union vetoed the elections in the United Nations Security Council.',
-        'Diem and his American advisers knew that Ho Chi Minh’s national prestige would lead to an overwhelming communist victory.',
-        'North Vietnam had disbanded its government and refused to participate.',
-        'The United States had already signed a formal mutual defense treaty barring elections.',
+        'The Soviet Union blocked the vote in the United Nations Security Council',
+        'He and his U.S. backers expected Ho Chi Minh to win a nationwide vote',
+        'North Vietnam announced it would boycott any election held in the South',
+        'The Geneva Accords had been cancelled when France left the conference',
       ],
       correctIndex: 1,
       rationale:
@@ -74,12 +74,12 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       question:
         'Which of Diem’s internal domestic policies generated the most intense resentment among rural South Vietnamese peasants?',
       options: [
-        'Mandatory conversion to Buddhism for all government employees.',
-        'Confiscating land distributed by the Viet Minh and restoring absentee landlords to collect rent.',
-        'Abolishing the military draft in favor of private foreign mercenaries.',
-        'Encouraging direct diplomatic alliances with the People’s Republic of China.',
+        'Forcing rural families to hand over most of their rice harvest to the national army',
+        'Opening South Vietnam’s villages to Chinese merchants and military advisers',
+        'Banning traditional village festivals and ancestor worship in the countryside',
+        'Taking back land the Viet Minh had given peasants and restoring landlords’ rents',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'During the anti-colonial war, the Viet Minh had distributed French-held farmland to poor peasants. Diem’s land counter-reforms forced peasants to return land to wealthy absentee landlords and pay back-rent, driving thousands into the arms of the southern insurgency.',
       citationRef: 'c2-2',
@@ -90,9 +90,9 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
         'What was the official name of the southern insurgent coalition established in December 1960, commonly referred to by American troops as the "Viet Cong"?',
       options: [
         'The National Liberation Front (NLF)',
-        'The Provisional Revolutionary Alliance',
-        'The Khmer Rouge People’s League',
-        'The Southeast Asia Defense Pact',
+        'The Provisional Revolutionary Government',
+        'The Vietnam Workers’ Party (Lao Dong)',
+        'The Viet Minh League for Independence',
       ],
       correctIndex: 0,
       rationale:

@@ -4,7 +4,7 @@ import { PRIMARY_DOCUMENTS } from '../sources';
 const chapter: ChapterData = {
   id: 'aftermath-1975',
   number: 11,
-  timeframe: '1975–1990',
+  timeframe: '1975–1995',
   title: 'Aftermath: Vietnam After 1975',
   subtitle: 'Re-education camps, the boat people exodus, the Third Indochina War, and Doi Moi',
   summary:

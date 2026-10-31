@@ -102,3 +102,42 @@ describe('layered chapter stories', () => {
     }
   });
 });
+
+describe('landmark quotes', () => {
+  it('cite a verified verbatim quotation whose text matches exactly', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const moment = chapter.landmarkMoment;
+      if (!moment?.quoteCitationId) continue;
+      const citation = CITATION_REGISTRY[moment.quoteCitationId];
+      expect(citation && isVerbatimQuotation(citation), `${chapter.id}: ${moment.quoteCitationId}`).toBe(true);
+      expect(moment.quote, chapter.id).toBe(citation.exactQuotation);
+    }
+  });
+});
+
+describe('quiz answer patterns', () => {
+  const questions = VIETNAM_CHAPTERS.flatMap((c) => ALL_CHAPTERS_STUDY_DATA[c.id].quiz);
+
+  it('have four distinct options and a valid answer', () => {
+    for (const q of questions) {
+      expect(q.options.length, q.id).toBe(4);
+      expect(new Set(q.options).size, q.id).toBe(4);
+      expect(q.correctIndex, q.id).toBeGreaterThanOrEqual(0);
+      expect(q.correctIndex, q.id).toBeLessThan(q.options.length);
+    }
+  });
+
+  it('do not favor one answer position', () => {
+    const counts = [0, 0, 0, 0];
+    for (const q of questions) counts[q.correctIndex]++;
+    for (const n of counts) expect(n / questions.length).toBeLessThanOrEqual(0.35);
+  });
+
+  it('rarely make the correct answer the longest option', () => {
+    const longest = questions.filter((q) => {
+      const others = q.options.filter((_, i) => i !== q.correctIndex).map((o) => o.length);
+      return q.options[q.correctIndex].length > Math.max(...others);
+    });
+    expect(longest.length / questions.length).toBeLessThanOrEqual(0.25);
+  });
+});

@@ -59,12 +59,12 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary operational objective of General William Westmoreland’s "strategy of attrition"?',
       options: [
-        'To conquer and permanently annex North Vietnamese territory up to the Chinese border.',
-        'To reach the "crossover point" where allied firepower would kill or capture enemy soldiers faster than North Vietnam could replace them.',
-        'To construct an impenetrable physical concrete wall along the 17th parallel.',
-        'To train the South Vietnamese military to take over 100% of combat operations by 1966.',
+        'To capture and hold North Vietnamese territory up to the Chinese border',
+        'To seal the 17th parallel and the Laos border with a fortified barrier',
+        'To hand all ground fighting to South Vietnamese troops within one year',
+        'To kill enemy soldiers faster than North Vietnam could replace them',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'Westmoreland defined victory not by territory taken, but by reaching the "crossover point"—inflicting casualties at a rate exceeding North Vietnam’s demographic ability to recruit and infiltrate replacements, forcing Hanoi to abandon the insurgency.',
       citationRef: 'c5-1',
@@ -74,12 +74,12 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       question:
         'What tactical lesson did North Vietnamese Army commanders learn from the bloody fighting at LZ X-Ray in the Ia Drang Valley in November 1965?',
       options: [
-        'That they should engage American forces only in open daylight tank battles.',
-        'To "grab them by the belt buckle"—fighting in extreme close-quarters so American artillery and close air support could not fire without hitting friendly troops.',
-        'To immediately surrender all heavy weapons and convert to pure guerrilla tactics.',
-        'That American soldiers would refuse to fight if confronted with massed armor.',
+        'To fight at very close range so U.S. artillery and air strikes could not be used',
+        'To avoid U.S. troops entirely and attack only South Vietnamese army units',
+        'To mass tanks in open terrain, where U.S. helicopters could not safely land troops',
+        'To attack only at night, when U.S. helicopters could not fly at all',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'General Vo Nguyen Giap and battlefield commander Chu Huy Man realized that American artillery and airpower were devastating at long range. By engaging American troops at point-blank range ("grabbing the belt buckle"), communist units neutralized U.S. fire superiority.',
       citationRef: 'c5-2',
@@ -89,12 +89,12 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       question:
         'What critical flaw in the attrition strategy was discovered by the Department of Defense Systems Analysis division under Alain Enthoven?',
       options: [
-        'American ammunition factories could not manufacture enough artillery shells.',
-        'Communist forces initiated over 75% of firefights, allowing them to disengage and regulate their casualty rates whenever losses mounted.',
-        'North Vietnam had run out of food and was relying entirely on food imports from Cuba.',
-        'South Vietnamese soldiers were secretly fighting on the side of North Vietnam in every province.',
+        'U.S. factories could not produce enough artillery shells to sustain the effort',
+        'Body counts were too low to justify sending any more American troops',
+        'Communist forces started most firefights, so they controlled their own losses',
+        'North Vietnam’s population was too small to replace its battlefield losses',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'Pentagon systems analysis proved that communist forces decided when, where, and for how long over 75% of combat engagements occurred. Because the enemy held the tactical initiative, they could simply break contact and avoid combat when losses became excessive.',
       citationRef: 'c5-3',

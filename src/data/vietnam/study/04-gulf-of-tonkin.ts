@@ -72,12 +72,12 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the critical difference between the naval incidents in the Gulf of Tonkin on August 2 and August 4, 1964?',
       options: [
-        'August 2 was a phantom radar echo, while August 4 was a confirmed daytime torpedo attack.',
-        'August 2 was a confirmed daytime torpedo boat attack; August 4 was a nighttime false alarm caused by freak weather and anxious sonar operators.',
-        'Both incidents were confirmed attacks involving Soviet-manned submarines.',
-        'Neither incident occurred; both were entirely fabricated by the CIA in Washington.',
+        'August 2 was a confirmed attack; August 4 was most likely a false alarm',
+        'August 2 was a radar error; August 4 was a confirmed torpedo attack',
+        'Both were confirmed attacks by North Vietnamese torpedo boats at night',
+        'August 2 involved Chinese ships; August 4 involved North Vietnamese ships',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'On August 2, North Vietnamese P-4 torpedo boats engaged the USS Maddox in broad daylight. On August 4, in pitch-black squall conditions, radar ghosts and acoustic echoes led sonarmen to report incoming torpedoes that post-war NSA investigations confirmed never existed.',
       citationRef: 'Q024',
@@ -87,12 +87,12 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       question:
         'What did Task Group Commander Captain John Herrick report to Washington hours after the August 4 incident?',
       options: [
-        'He confirmed sinking five enemy torpedo boats and requested immediate nuclear strikes.',
-        'He reported that many contacts appeared doubtful due to freak weather and overeager sonarmen, urging complete evaluation before striking.',
-        'He stated that North Vietnamese shore batteries had sunk the USS Turner Joy.',
-        'He claimed Chinese MiG fighter jets were strafing American destroyers.',
+        'That he had sunk several torpedo boats and needed carrier air support at once',
+        'That shore batteries had damaged the USS Turner Joy during the night',
+        'That Chinese aircraft had joined the attack on the two U.S. destroyers',
+        'That many contacts looked doubtful and the action should be fully evaluated',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'At 1:27 PM Washington time, Herrick cabled: "Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports... Suggest complete evaluation before any further action taken."',
       citationRef: 'Q013',
@@ -102,12 +102,12 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       question:
         'How did Congress respond to President Johnson’s presentation of the Tonkin incident?',
       options: [
-        'Congress refused to authorize military action until an independent investigation was held.',
-        'Congress narrowly passed a declaration of war with a 51-49 Senate vote.',
-        'Congress passed the Gulf of Tonkin Resolution almost unanimously (416-0 in the House, 88-2 in the Senate), granting broad military authority.',
-        'The House passed the resolution, but the Senate filibustered and killed it.',
+        'It delayed any vote until an independent investigation was completed',
+        'It passed the Tonkin Resolution almost unanimously, 416–0 and 88–2',
+        'It passed a formal declaration of war by a narrow margin in the Senate',
+        'The House approved the resolution, but a Senate filibuster blocked it',
       ],
-      correctIndex: 2,
+      correctIndex: 1,
       rationale:
         'The resolution passed 416-0 in the House and 88-2 in the Senate (with only Senators Wayne Morse and Ernest Gruening voting against it), handing LBJ a congressional "blank check."',
       citationRef: 'c4-3',
@@ -117,12 +117,12 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       question:
         'Which 1973 law was enacted by Congress specifically to prevent future undeclared military interventions like the one authorized by the Tonkin Resolution?',
       options: [
-        'The Gulf of Tonkin Repeal and Indemnity Act',
-        'The War Powers Act (War Powers Resolution of 1973)',
-        'The National Security Act of 1973',
-        'The Defense Production Act',
+        'The National Security Act amendments of 1973',
+        'The Case-Church Amendment on Indochina',
+        'The War Powers Resolution (War Powers Act)',
+        'The Cooper-Church Amendment on Cambodia',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'The War Powers Act of 1973 was passed over President Nixon’s veto to curtail executive warmaking by mandating a 48-hour notification and a 60-day limit on unapproved foreign troop deployments.',
       citationRef: 'c4-3',

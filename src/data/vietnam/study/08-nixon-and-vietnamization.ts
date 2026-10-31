@@ -59,12 +59,12 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary constitutional significance of the Cooper-Church Amendment passed by the Senate in 1970 following the Cambodian Incursion?',
       options: [
-        'It marked the first time Congress legally barred the President from using funds to deploy ground combat troops and advisers to a foreign theater (Cambodia) during an active war.',
-        'It granted the President permanent lifetime emergency powers to bomb any nation bordering Vietnam.',
-        'It officially declared war on Cambodia and Laos.',
-        'It mandated that all future presidential treaties be approved by popular referendum.',
+        'It gave the president open-ended authority to bomb both Cambodia and Laos',
+        'It used Congress’s power of the purse to bar U.S. ground troops from Cambodia',
+        'It formally declared war on North Vietnam for the first time since 1964',
+        'It required a public referendum before any new troops could be sent abroad',
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       rationale:
         'The Cooper-Church Amendment was a landmark resurgence of congressional constitutional authority, legally prohibiting the use of congressional funds for American ground troops, advisers, and air combat support in Cambodia after June 30, 1970.',
       citationRef: 'c8-1',
@@ -74,12 +74,12 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       question:
         'What major vulnerability of "Vietnamization" was exposed during Operation Lam Son 719 in February 1971?',
       options: [
-        'The South Vietnamese air force ran out of jet fuel on the first day of fighting.',
-        'When ARVN divisions crossed into Laos without American ground advisers or tactical commanders, they suffered disastrous casualties and fled in panic, clinging to helicopter skids.',
-        'The North Vietnamese army surrendered all heavy artillery without firing a shot.',
-        'The Chinese military sent three armies across the border to defend the Plain of Jars.',
+        'South Vietnam’s air force ran out of jet fuel before the operation could even start',
+        'North Vietnamese units pulled out of Laos without fighting the ARVN invasion',
+        'Chinese army units crossed into Laos and forced the ARVN invasion force to turn back',
+        'Without U.S. ground advisers, ARVN units in Laos suffered heavy losses and retreated',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'Lam Son 719 was designed to test whether ARVN could fight independently. Without American infantry advisers on the ground, three South Vietnamese divisions were badly mauled by North Vietnamese armor and heavy artillery, turning their withdrawal down Route 9 into a chaotic rout broadcast on television.',
       citationRef: 'c8-3',
@@ -89,10 +89,10 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the historiographical concept of the "Decent Interval" associated with Nixon and Kissinger’s exit strategy?',
       options: [
-        'A plan to pause bombing every Christmas for ten days to conduct gift exchanges.',
-        'The strategy of delaying South Vietnam’s eventual collapse until enough time had passed following American withdrawal so Washington would not be blamed for the defeat.',
-        'A proposed 50-year joint economic agreement between Hanoi and Saigon.',
-        'A diplomatic treaty signed between the U.S. and the Soviet Union in 1969.',
+        'A planned pause in bombing to let Hanoi and Saigon hold national elections',
+        'Delaying South Vietnam’s fall long enough after U.S. withdrawal to avoid blame',
+        'A promise that U.S. troops would stay in South Vietnam for a decade after the war',
+        'A Soviet-American agreement to stop shipping weapons to either side in Vietnam',
       ],
       correctIndex: 1,
       rationale:

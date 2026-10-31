@@ -59,12 +59,12 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       question:
         'What major international development between 1949 and 1950 fundamentally changed Washington’s perspective on the French war in Indochina?',
       options: [
-        'The communist victory in China and the outbreak of the Korean War.',
-        'The signing of the Warsaw Pact in Eastern Europe.',
-        'The discovery of major offshore oil reserves in the Gulf of Tonkin.',
-        'The total withdrawal of British colonial forces from Malaya.',
+        'The signing of the Warsaw Pact and the Soviet invasion of Hungary',
+        'France’s decision to grant Vietnam full independence in the French Union',
+        'The communist victory in China and the outbreak of the Korean War',
+        'Britain’s withdrawal from India and the partition of the subcontinent',
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       rationale:
         'The 1949 Chinese Communist victory under Mao Zedong and the June 1950 North Korean invasion of South Korea transformed Washington’s view of Indochina from a European colonial conflict into a vital Cold War containment frontier.',
       citationRef: 'c1-1',
@@ -74,12 +74,12 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       question:
         'What fatal tactical assumption did French Commander Henri Navarre make when fortifying Dien Bien Phu?',
       options: [
-        'He assumed the Viet Minh possessed advanced jet bombers that would bomb Hanoi.',
-        'He calculated that heavy enemy artillery could never be hauled up the roadless jungle mountain ridges surrounding the valley.',
-        'He believed the British Royal Navy would sail into Haiphong to relieve his troops.',
-        'He assumed Ho Chi Minh would agree to a negotiated ceasefire before combat began.',
+        'That heavy artillery could not be hauled over the mountains around the valley',
+        'That the Viet Minh would refuse battle and retreat across the border into China',
+        'That Chinese troops would join the Viet Minh in a direct assault on the base',
+        'That the garrison could be resupplied overland along the road from Hanoi',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'Navarre and artillery chief Colonel Piroth believed the surrounding mountain ridges were impassable to heavy artillery. General Giap mobilized 250,000 civilian porters to hand-haul 105mm howitzers up the mountain slopes, digging them into camouflaged caves overlooking the valley airstrip.',
       citationRef: 'c1-2',
@@ -89,12 +89,12 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       question:
         'How did President Eisenhower respond to proposals for direct American military intervention (Operation Vulture) to relieve the French at Dien Bien Phu?',
       options: [
-        'He deployed two divisions of U.S. Marines to seize the valley ridges.',
-        'He launched tactical nuclear strikes against Viet Minh mountain caves.',
-        'He declined direct intervention, insisting on British allied participation and congressional approval, which were both denied.',
-        'He ordered the French to surrender immediately to avoid casualties.',
+        'He approved carrier air strikes, but they failed to break the siege in time',
+        'He sent U.S. Marines to hold the ridges until French reinforcements arrived',
+        'He asked the United Nations to arrange a cease-fire around the fortress',
+        'He declined to intervene without British support and approval from Congress',
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       rationale:
         'Mindful of the grueling Korean War, Eisenhower refused to intervene unilaterally without congressional sanction and British participation. British Prime Minister Churchill flatly declined, and congressional leaders like Lyndon B. Johnson rejected another Asian land commitment.',
       citationRef: 'c1-1',

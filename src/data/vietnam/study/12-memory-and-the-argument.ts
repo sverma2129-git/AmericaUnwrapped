@@ -59,12 +59,12 @@ export const MEMORY_ARGUMENT_STUDY_DATA: ChapterStudyData = {
       question:
         'What is the central historical argument of the "Orthodox School" of Vietnam War historiography?',
       options: [
-        'The war was completely winnable if nuclear weapons had been used against Hanoi in 1965.',
-        'American intervention was fundamentally doomed from the beginning because Washington misconstrued a nationalist anti-colonial revolution as a Cold War proxy war and backed an illegitimate regime in Saigon.',
-        'The Soviet Union secretly supplied over 500,000 Russian combat troops who fought in southern jungles.',
-        'The United States never sent any ground combat troops to Southeast Asia.',
+        'The war was unwinnable: Washington mistook nationalism for Soviet expansion',
+        'The war was winnable if civilian leaders had let the military fight freely',
+        'The war was lost mainly because U.S. television turned the public against it',
+        'The war was a success because it delayed communist gains elsewhere in Asia',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'Orthodox historians argue that the primary engine of the conflict was Vietnamese nationalism and anti-colonialism. Because the Saigon regime was perceived by many Vietnamese as a foreign puppet created by Western aid, American military firepower could never manufacture political legitimacy.',
       citationRef: 'c12-1',
@@ -74,12 +74,12 @@ export const MEMORY_ARGUMENT_STUDY_DATA: ChapterStudyData = {
       question:
         'What core thesis was advanced by Colonel Harry Summers in his influential 1982 revisionist monograph "On Strategy"?',
       options: [
-        'The United States should have immediately surrendered all bases to France in 1954.',
-        'The U.S. military won virtually every tactical battlefield engagement, but failed strategically because civilian leadership prevented the military from taking decisive offensive action against North Vietnam’s center of gravity.',
-        'The Viet Cong were completely peaceful farmers who never used weapons.',
-        'The war was decided entirely by submarine warfare in the Indian Ocean.',
+        'Television coverage, not battlefield events, cost the United States the war',
+        'The war was a nationalist revolution that no outside military power could have defeated',
+        'South Vietnam’s corrupt government made any U.S. strategy impossible to win',
+        'U.S. forces won in battle but lost because policy kept them from attacking the North',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'Summers famously recounted telling a North Vietnamese colonel in 1975: "You know, you never defeated us on the battlefield." The colonel replied: "That may be so, but it is also irrelevant." Summers argued that civilian micromanagement diverted the military into counterinsurgency rather than cutting the enemy’s main conventional lifeline in the North.',
       citationRef: 'c12-2',
@@ -89,10 +89,10 @@ export const MEMORY_ARGUMENT_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary foreign policy impact of the so-called "Vietnam Syndrome" on American grand strategy during the late 1970s and 1980s?',
       options: [
-        'An aggressive desire to launch military invasions of multiple European countries.',
-        'A profound reluctance by the American public, Congress, and military leaders to commit U.S. combat forces to prolonged, ambiguous overseas interventions.',
-        'The permanent elimination of the United States Army and Navy.',
-        'A constitutional requirement that all future military generals be elected by popular vote.',
+        'A push to expand U.S. bases across Southeast Asia to prevent new dominoes',
+        'Reluctance to commit U.S. troops to long, uncertain wars overseas',
+        'Renewed support for a peacetime draft to rebuild American combat power',
+        'A belief that air power alone could win any future war without ground troops',
       ],
       correctIndex: 1,
       rationale:

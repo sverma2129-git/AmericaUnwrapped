@@ -75,7 +75,7 @@ const INVESTIGATION_STEPS: InvestigationStep[] = [
   },
   {
     step: 4,
-    timeICT: 'Aug 5 · 01:27 (Local Midnight)',
+    timeICT: 'Aug 5 · 00:27 (Local Midnight)',
     timeEDT: 'Aug 4 · 01:27 PM (Pentagon Afternoon)',
     title: 'Captain Herrick\'s Warning Cable: "Contacts Doubtful"',
     location: 'Flagship Message Center · Transmitted to Washington',
@@ -93,7 +93,7 @@ const INVESTIGATION_STEPS: InvestigationStep[] = [
   },
   {
     step: 5,
-    timeICT: 'Aug 5 · 11:34 AM (Morning After)',
+    timeICT: 'Aug 5 · 10:34 AM (Morning After)',
     timeEDT: 'Aug 4 · 11:34 PM (Live National TV)',
     title: 'LBJ Orders Strikes & Announces "Unprovoked Aggression"',
     location: 'The Oval Office & National Television Broadcast',

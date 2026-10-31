@@ -18,6 +18,7 @@ const chapter: ChapterData = {
     location: 'Gulf of Tonkin, South China Sea',
     quote:
       'Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports. No actual visual sightings by Maddox. Suggest complete evaluation before any further action taken.',
+    quoteCitationId: 'Q013',
     quoteSpeaker: 'Captain John J. Herrick, CTG 72.1',
     quoteContext: 'Operational Flash Cable DTG 041727Z AUG 64 (FRUS 1964–1968, Vol. I, Doc 117)',
   },

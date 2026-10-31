@@ -59,12 +59,12 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       question:
         'What major strategic decision made by President Nguyen Van Thieu on March 14, 1975 transformed a localized setback into a catastrophic military collapse?',
       options: [
-        'He surrendered the capital city of Saigon to the United Nations.',
-        'He ordered the immediate, uncoordinated abandonment of the entire Central Highlands (Pleiku and Kontum) to consolidate a defensible enclave around Saigon.',
-        'He ordered the execution of all American diplomatic personnel in Da Nang.',
-        'He invaded Cambodia with all remaining infantry divisions.',
+        'He ordered every ARVN division north to retake Ban Me Thuot at any cost',
+        'He resigned and handed command of the army to U.S. officers in Saigon',
+        'He ordered a hasty withdrawal from the Central Highlands to defend the south',
+        'He sent his best divisions into Cambodia to cut the Ho Chi Minh Trail for good',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'Following the loss of Ban Me Thuot, Thieu held a secret meeting at Cam Ranh and abruptly ordered the entire II Corps to evacuate the Central Highlands down unpaved Route 7B. The retreat degenerated into the "Column of Tears," costing South Vietnam 75% of its armor and artillery without a fight.',
       citationRef: 'c10-1',
@@ -74,12 +74,12 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       question:
         'How did U.S. congressional actions between 1973 and 1974 directly impact the combat readiness of the South Vietnamese military (ARVN)?',
       options: [
-        'Congress voted to replace all M16 rifles with Soviet-made Kalashnikovs.',
-        'Congress slashed military aid from $2.3 billion to under $700 million, forcing ARVN troops to ration artillery shells, ground helicopters for lack of parts, and fight with scarce ammunition.',
-        'Congress passed a resolution ordering all ARVN soldiers to attend university in the United States.',
-        'Congress increased aid tenfold to ensure South Vietnam’s survival.',
+        'Congress cut military aid sharply, leaving ARVN short of ammunition and parts',
+        'Congress raised aid but required ARVN to buy only American-made weapons',
+        'Congress sent U.S. advisers back to retrain ARVN units in new defensive tactics',
+        'Congress shifted all aid from the army to South Vietnam’s navy and air force',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'Facing double-digit inflation, the 1973 oil crisis, and disillusionment with Saigon corruption, Congress slashed military assistance. By 1975, ARVN artillery batteries were restricted to firing only three shells per day, and more than half of South Vietnam’s transport helicopters were grounded for lack of spare parts.',
       citationRef: 'c10-1',
@@ -89,10 +89,10 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       question:
         'At 11:30 AM on April 30, 1975, what historic symbolic action marked the official end of the Republic of Vietnam?',
       options: [
-        'President Gerald Ford signed a treaty of surrender at the United Nations in New York.',
-        'North Vietnamese Army Tank 843 crashed through the cast-iron gates of Saigon’s Presidential Palace, and communist soldiers raised the NLF flag over the building.',
-        'The South Vietnamese Navy sank the remaining American aircraft carriers in the South China Sea.',
-        'The city of Saigon was destroyed by an offshore naval barrage.',
+        'President Ford signed a surrender agreement at the United Nations in New York',
+        'A North Vietnamese tank broke through the gates of the Presidential Palace',
+        'The last U.S. helicopter lifted off from the roof of the American embassy',
+        'South Vietnam’s navy shelled the city to stop communist forces from entering it',
       ],
       correctIndex: 1,
       rationale:

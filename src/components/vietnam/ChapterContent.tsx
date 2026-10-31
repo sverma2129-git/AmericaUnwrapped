@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { CHAPTER_COUNT } from '@/data/vietnam/chapters';
+import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
+import { isVerbatimQuotation } from '@/lib/citations';
 import QuickBriefing from '@/components/study/QuickBriefing';
 import ChapterQuiz from '@/components/study/ChapterQuiz';
 import FlashcardDeck from '@/components/study/FlashcardDeck';
@@ -34,6 +36,12 @@ export default function ChapterContent({
 
   // Study data for this chapter
   const studyData = ALL_CHAPTERS_STUDY_DATA[chapter.id];
+
+  // Quotation marks only for a registered verbatim quotation; anything else is shown as a paraphrase.
+  const landmarkCitation = chapter.landmarkMoment?.quoteCitationId
+    ? CITATION_REGISTRY[chapter.landmarkMoment.quoteCitationId]
+    : undefined;
+  const landmarkQuote = landmarkCitation && isVerbatimQuotation(landmarkCitation) ? landmarkCitation : undefined;
 
   return (
     <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-16">
@@ -176,9 +184,19 @@ export default function ChapterContent({
         {/* Landmark Quote Callout (if present) */}
         {chapter.isLandmark && chapter.landmarkMoment && (
           <aside className="my-8 max-w-3xl mx-auto border-l-4 border-brand bg-parchment p-5 sm:p-6 rounded-r-xs border-t border-r border-b border-rule">
-            <div className="font-editorial-serif text-lg sm:text-xl italic text-ink leading-relaxed">
-              &ldquo;{chapter.landmarkMoment.quote}&rdquo;
-            </div>
+            {landmarkQuote ? (
+              <blockquote className="font-editorial-serif text-lg sm:text-xl italic text-ink leading-relaxed">
+                &ldquo;{landmarkQuote.exactQuotation}&rdquo;
+                <CitationMarker id={landmarkQuote.id} />
+              </blockquote>
+            ) : (
+              <>
+                <span className="eyebrow text-ink-soft block mb-2">Historian&rsquo;s account (paraphrased)</span>
+                <p className="font-editorial-serif text-lg sm:text-xl text-ink leading-relaxed">
+                  {chapter.landmarkMoment.quote}
+                </p>
+              </>
+            )}
             <div className="mt-3 font-sans text-xs text-ink-muted">
               &mdash; <strong className="text-ink">{chapter.landmarkMoment.quoteSpeaker}</strong>,{' '}
               <span className="italic">{chapter.landmarkMoment.quoteContext}</span> ({chapter.landmarkMoment.dateline})

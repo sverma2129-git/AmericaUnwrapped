@@ -138,7 +138,13 @@ export interface LandmarkMoment {
   bannerTitle: string;
   dateline: string;
   location: string;
+  /**
+   * Shown in quotation marks only when `quoteCitationId` points at a verified
+   * verbatim quotation whose exactQuotation equals this text; otherwise it is
+   * rendered as an attributed paraphrase.
+   */
   quote: string;
+  quoteCitationId?: string;
   quoteSpeaker: string;
   quoteContext: string;
 }

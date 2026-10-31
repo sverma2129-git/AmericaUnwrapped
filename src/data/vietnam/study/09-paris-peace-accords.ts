@@ -59,12 +59,12 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       question:
         'What major concession did the United States make in the 1973 Paris Peace Accords that South Vietnamese President Thieu viewed as a "death sentence" for his country?',
       options: [
-        'The United States agreed to pay $5 billion in war reparations directly to the Viet Cong.',
-        'The treaty permitted approximately 150,000 to 200,000 North Vietnamese Army (PAVN) troops to remain stationed inside South Vietnam while all American combat forces withdrew.',
-        'South Vietnam was forced to surrender all naval ships to the Chinese navy.',
-        'President Thieu was required to step down and go into exile in Moscow.',
+        'North Vietnamese troops could stay in the South while U.S. forces withdrew',
+        'The U.S. would pay billions of dollars in war reparations to the Viet Cong',
+        'Thieu had to resign and hand power to a neutral caretaker government',
+        'South Vietnam had to give up its air force to an international commission',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'The treaty established a "ceasefire-in-place," permitting North Vietnamese regular troops to remain in occupation of southern territory they held. Thieu recognized that once American combat airpower left, an isolated ARVN could never hold off a fortified northern army already inside its borders.',
       citationRef: 'c9-1',
@@ -74,12 +74,12 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       question:
         'How did President Nixon convince South Vietnamese President Nguyen Van Thieu to sign the Paris Peace Accords in January 1973 despite Thieu’s fierce objections?',
       options: [
-        'By promising to make South Vietnam the 51st state of the United States.',
-        'By threatening to sign a separate peace treaty and cut off all aid, while secretly promising in personal letters that the U.S. would "respond with full force" if Hanoi violated the agreement.',
-        'By arranging the assassination of North Vietnamese leader Le Duan.',
-        'By sending 100,000 fresh Marine divisions to garrison Saigon.',
+        'He promised to keep 50,000 U.S. troops in South Vietnam as a permanent guarantee',
+        'He agreed to keep bombing Hanoi until North Vietnam’s top leaders resigned from power',
+        'He threatened to cut aid but secretly promised a forceful U.S. response to violations',
+        'He arranged for China to sign a separate treaty guaranteeing South Vietnam’s borders',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'In declassified letters published in The Palace File, Nixon warned Thieu that Congress would terminate all economic and military aid if he refused to sign, but promised: "You have my absolute assurance that if Hanoi fails to abide by the terms of this agreement, it is my intention to take swift and severe retaliatory action."',
       citationRef: 'c9-2',
@@ -89,12 +89,12 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       question:
         'What event in Washington during 1973–1974 permanently destroyed the executive branch’s ability to intervene militarily to defend South Vietnam as Nixon had promised?',
       options: [
-        'The passage of the Case-Church Amendment and the Watergate scandal leading to Nixon’s resignation.',
-        'The total destruction of the U.S. Pacific Fleet in a typhoon.',
-        'A formal treaty of alliance signed between the United States and North Vietnam.',
-        'The abolition of the United States Department of Defense.',
+        'A Senate vote recognizing North Vietnam as the only Vietnamese government',
+        'A Supreme Court ruling that the Vietnam War was unconstitutional',
+        'The Senate’s refusal to confirm Henry Kissinger as secretary of state',
+        'Congress’s Case-Church Amendment and the Watergate scandal',
       ],
-      correctIndex: 0,
+      correctIndex: 3,
       rationale:
         'In June 1973, Congress passed the Case-Church Amendment barring all military actions in Indochina. Simultaneously, the Watergate scandal eroded Nixon’s political authority until his resignation in August 1974, leaving President Gerald Ford with zero legal power to send air support.',
       citationRef: 'c9-3',

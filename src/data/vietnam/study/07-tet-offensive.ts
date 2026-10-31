@@ -59,12 +59,12 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary military assumption made by Hanoi’s leadership (Le Duan faction) in planning the 1968 Tet Offensive that failed to materialize?',
       options: [
-        'They assumed the Soviet Union would deploy 500,000 combat troops to Da Nang.',
-        'They assumed the urban civilian population of South Vietnam would stage a spontaneous general uprising (Tong Khoi Nghia) against the Saigon regime.',
-        'They calculated that the U.S. Navy would immediately evacuate all aircraft carriers.',
-        'They believed President Johnson would launch nuclear weapons at Beijing.',
+        'That the Soviet Union would send combat troops to defend North Vietnam',
+        'That China would open a second front by sending troops into Laos and Thailand',
+        'That U.S. forces at Khe Sanh would surrender within the first week',
+        'That South Vietnam’s city dwellers would rise up against the Saigon government',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'Hanoi’s Politburo Resolution 14 predicted that assaults on urban centers would trigger a nationwide "General Uprising" (*Tong Khoi Nghia*) where South Vietnamese citizens and soldiers would rise up in revolution. The population remained largely passive or fled, leaving exposed Viet Cong units to be annihilated by allied firepower.',
       citationRef: 'c7-1',
@@ -74,12 +74,12 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       question:
         'How did the Battle of Hue during the Tet Offensive illustrate the dual tragedy of urban combat in the Vietnam War?',
       options: [
-        'The city surrendered peacefully without firing a single weapon.',
-        'Communist forces executed an estimated 2,800 to 3,000 civilians during their 26-day occupation, while American and ARVN counter-bombardment left 80% of the ancient city in ruins.',
-        'British diplomats brokered an immediate ceasefire that spared all historic architecture.',
-        'The battle was fought entirely in deep underground tunnel networks outside city limits.',
+        'The city surrendered without a fight and was later rebuilt with American aid money',
+        'Foreign diplomats arranged a cease-fire that spared the old imperial citadel',
+        'Communist forces executed civilians, and the counterattack wrecked much of Hue',
+        'The fighting stayed in tunnels outside the city, so its civilians were evacuated',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'During their month-long occupation of Hue, communist cadres conducted systematic purges, executing civil servants, teachers, and Catholics. Retaking the city required 26 days of brutal house-to-house fighting by U.S. Marines and ARVN troops that destroyed over 80 percent of the historic imperial capital.',
       citationRef: 'c7-3',
@@ -89,12 +89,12 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       question:
         'What dramatic announcement did President Lyndon B. Johnson make to the nation in his televised address on March 31, 1968?',
       options: [
-        'He declared a total invasion of North Vietnam and requested 500,000 additional troops.',
-        'He announced a partial halt to the bombing of North Vietnam, proposed peace talks, and withdrew from the 1968 presidential election.',
-        'He announced the immediate unconditional surrender of all South Vietnamese forces.',
-        'He revealed that the Gulf of Tonkin incident had been fabricated.',
+        'A partial bombing halt, a call for peace talks, and his exit from the 1968 race',
+        'A full invasion of North Vietnam, backed by 200,000 additional U.S. troops',
+        'That the draft would end and all U.S. combat troops would be home by Christmas',
+        'That he would ask Congress to repeal the Gulf of Tonkin Resolution that spring',
       ],
-      correctIndex: 1,
+      correctIndex: 0,
       rationale:
         'Shattered by the political fallout of Tet and a poor showing in the New Hampshire primary against anti-war candidate Eugene McCarthy, LBJ announced a unilateral bombing restriction north of the 20th parallel and declared: "I shall not seek, and I will not accept, the nomination of my party for another term as your President."',
       citationRef: 'c7-2',
