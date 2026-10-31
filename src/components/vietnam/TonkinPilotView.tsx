@@ -15,6 +15,7 @@ import DocumentInspector from '@/components/vietnam/DocumentInspector';
 import CitationMarker from '@/components/common/CitationMarker';
 import PersonalStoryCard from '@/components/vietnam/PersonalStoryCard';
 import { useCitation } from '@/components/common/CitationContext';
+import Icon from '@/components/common/Icon';
 
 function FormattedParagraph({ text, className = '' }: { text: string; className?: string }) {
   const parts = text.split(/(\[\^[a-zA-Z0-9_-]+\])/g);
@@ -176,27 +177,31 @@ export default function TonkinPilotView({
         <div className="mt-6 flex flex-wrap items-center gap-2 text-xs">
           <a
             href="#quick-briefing"
-            className="px-3 py-1.5 rounded-xs bg-brand-tint text-brand border border-brand-rule font-semibold hover:bg-[#FBE8EA] transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-brand-tint text-brand border-brand-rule hover:border-brand font-semibold"
           >
-            ⚡ 60-Second Briefing
+            <Icon name="zap" />
+            60-Second Briefing
           </a>
           <a
             href="#interactive-evidence"
-            className="px-3 py-1.5 rounded-xs bg-parchment text-ink border border-rule font-medium hover:border-brand transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            🗺️ Radar Investigation
+            <Icon name="map" />
+            Radar Investigation
           </a>
           <a
             href="#the-story"
-            className="px-3 py-1.5 rounded-xs bg-parchment text-ink border border-rule font-medium hover:border-brand transition-colors"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
-            📖 The Core Story
+            <Icon name="book" />
+            The Core Story
           </a>
           <a
             href="#chapter-quiz"
-            className="px-3 py-1.5 rounded-xs bg-brand text-white font-semibold hover:bg-brand-hover transition-colors shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-brand text-white border-brand hover:bg-brand-hover font-semibold"
           >
-            ✍️ Practice Quiz (4 Qs)
+            <Icon name="pen" />
+            Practice Quiz (4 Qs)
           </a>
         </div>
       </header>

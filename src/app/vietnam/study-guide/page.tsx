@@ -51,7 +51,7 @@ export default function StudyGuidePage() {
         </nav>
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="px-2.5 py-0.5 bg-brand-tint text-brand border border-brand-rule text-xs font-bold uppercase rounded-xs">
+          <span className="eyebrow px-2.5 py-1 bg-brand-tint text-brand border border-brand-rule rounded-full">
             AP &bull; Honors &bull; Regular U.S. History Curriculum
           </span>
           <span className="text-xs text-ink-muted">AP Period 8 (1945–1980)</span>
@@ -70,18 +70,18 @@ export default function StudyGuidePage() {
       <div className="space-y-12">
         <StudyGuideTabs
           tabs={[
-            { id: 'cheatsheet', label: '📋 1-Page Unit Cheat Sheet', content: <CheatSheet /> },
+            { id: 'cheatsheet', label: '1-Page Unit Cheat Sheet', content: <CheatSheet /> },
             {
               id: 'quiz',
-              label: `✍️ Master Practice Quiz (${allQuestions.length} Questions)`,
+              label: `Master Practice Quiz (${allQuestions.length} Questions)`,
               content: <MasterQuiz allQuestions={allQuestions} groups={quizGroups} />,
             },
             {
               id: 'flashcards',
-              label: `🃏 Flashcards & Glossary (${glossary.length} Terms)`,
+              label: `Flashcards & Glossary (${glossary.length} Terms)`,
               content: <GlossaryPanel terms={glossary} />,
             },
-            { id: 'dbq', label: '📝 DBQ & Long Essay Outlines', content: <DbqOutlines /> },
+            { id: 'dbq', label: 'DBQ & Long Essay Outlines', content: <DbqOutlines /> },
           ]}
         />
       </div>

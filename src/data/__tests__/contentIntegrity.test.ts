@@ -60,3 +60,45 @@ describe('study guide turning points', () => {
     for (const tp of TURNING_POINTS) expect(ids, tp.event).toContain(tp.chapterId);
   });
 });
+
+describe('layered chapter stories', () => {
+  const layered = VIETNAM_CHAPTERS.filter((c) => c.layout === 'layered');
+  const markers = (text: string) => [...text.matchAll(/\[\^([a-zA-Z0-9_-]+)\]/g)].map((m) => m[1]);
+
+  it('exist for every chapter set to the layered layout', () => {
+    for (const chapter of layered) {
+      expect(chapter.story?.beats.length, chapter.id).toBeGreaterThan(0);
+    }
+  });
+
+  it('cite only registered sources', () => {
+    for (const chapter of layered) {
+      for (const beat of chapter.story!.beats) {
+        const texts = [...beat.body, ...(beat.visual?.kind === 'siege' ? beat.visual.steps.map((s) => s.body) : [])];
+        const ids = texts.flatMap(markers);
+        const v = beat.visual;
+        if (v && 'citationId' in v) ids.push(v.citationId);
+        for (const id of ids) expect(CITATION_REGISTRY[id], `${chapter.id}/${beat.id}: ${id}`).toBeDefined();
+      }
+    }
+  });
+
+  it('quote only verified verbatim quotations', () => {
+    for (const chapter of layered) {
+      for (const beat of chapter.story!.beats) {
+        if (beat.visual?.kind !== 'quote') continue;
+        const citation = CITATION_REGISTRY[beat.visual.citationId];
+        expect(citation && isVerbatimQuotation(citation), `${chapter.id}/${beat.id}`).toBe(true);
+      }
+    }
+  });
+
+  it('check students with questions from the chapter quiz', () => {
+    for (const chapter of layered) {
+      const quizIds = new Set(ALL_CHAPTERS_STUDY_DATA[chapter.id].quiz.map((q) => q.id));
+      for (const beat of chapter.story!.beats) {
+        if (beat.checkId) expect(quizIds.has(beat.checkId), `${chapter.id}/${beat.id}: ${beat.checkId}`).toBe(true);
+      }
+    }
+  });
+});

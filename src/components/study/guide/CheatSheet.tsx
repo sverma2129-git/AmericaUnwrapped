@@ -56,7 +56,7 @@ export default function CheatSheet() {
                   <p className="text-ink-muted leading-relaxed">{p.turningPoint}</p>
                 </div>
                 <div className="p-3 bg-brand-tint border border-brand-rule rounded-xs">
-                  <strong className="font-semibold text-brand block mb-1">⚠️ Exam Pitfall:</strong>
+                  <strong className="font-semibold text-brand block mb-1">Exam Pitfall:</strong>
                   <p className="text-ink-muted leading-relaxed">{p.examPitfall}</p>
                 </div>
               </div>
