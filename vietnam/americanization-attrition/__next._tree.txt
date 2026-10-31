@@ -1,5 +1,8 @@
-:HL["/AmericaUnwrapped/_next/static/chunks/2xddzai5k5jf7.css","style"]
+:HL["/AmericaUnwrapped/_next/static/chunks/2obiet881i7zb.css","style"]
+:HL["/AmericaUnwrapped/_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/75cb990346c55dc4-s.p.40bho2kviej2o.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/a6fd56cd89ea0e72-s.p.1hij5ex6k3v9q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"americanization-attrition","s":["study-guide"]},"h":96,"c":"$Q3"}]]
 1:[["children",{"s":"vietnam","h":64,"c":"$Q2"}]]
-0:{"b":"l5A3gqCzSLGNt8ogUArRX","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"4kkTf8CxggHM3h7JO7P6b","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
