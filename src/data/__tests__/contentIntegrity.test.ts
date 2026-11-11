@@ -4,6 +4,7 @@ import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { TURNING_POINTS } from '@/data/vietnam/studyGuide';
 import { isVerbatimQuotation } from '@/lib/citations';
+import { fleschKincaidGrade } from '@/lib/readability';
 
 describe('chapters', () => {
   it('have unique ids and contiguous numbers starting at 1', () => {
@@ -73,22 +74,44 @@ describe('layered chapter stories', () => {
 
   it('cite only registered sources', () => {
     for (const chapter of layered) {
-      for (const beat of chapter.story!.beats) {
-        const texts = [...beat.body, ...(beat.visual?.kind === 'siege' ? beat.visual.steps.map((s) => s.body) : [])];
-        const ids = texts.flatMap(markers);
+      const story = chapter.story!;
+      // Every inline marker anywhere in the story (beats, steps, tables, debate, tasks).
+      const ids = markers(JSON.stringify(story));
+      for (const beat of story.beats) {
         const v = beat.visual;
         if (v && 'citationId' in v) ids.push(v.citationId);
-        for (const id of ids) expect(CITATION_REGISTRY[id], `${chapter.id}/${beat.id}: ${id}`).toBeDefined();
       }
+      for (const id of ids) expect(CITATION_REGISTRY[id], `${chapter.id}: ${id}`).toBeDefined();
     }
   });
 
   it('quote only verified verbatim quotations', () => {
     for (const chapter of layered) {
-      for (const beat of chapter.story!.beats) {
-        if (beat.visual?.kind !== 'quote') continue;
-        const citation = CITATION_REGISTRY[beat.visual.citationId];
-        expect(citation && isVerbatimQuotation(citation), `${chapter.id}/${beat.id}`).toBe(true);
+      const story = chapter.story!;
+      const quoted: string[] = [...(story.evidence ?? [])];
+      for (const beat of story.beats) {
+        if (beat.visual?.kind === 'quote') quoted.push(beat.visual.citationId);
+        if (beat.visual?.kind === 'night') {
+          for (const step of beat.visual.steps) if (step.quoteCitationId) quoted.push(step.quoteCitationId);
+        }
+      }
+      for (const task of [...(story.tasks?.ah1 ?? []), ...(story.tasks?.apush ?? [])]) {
+        if (task.kind === 'stimulus' || task.kind === 'saq') quoted.push(task.citationId);
+      }
+      for (const id of quoted) {
+        const citation = CITATION_REGISTRY[id];
+        expect(citation && isVerbatimQuotation(citation), `${chapter.id}: ${id}`).toBe(true);
+      }
+    }
+  });
+
+  it('give every course the same kinds of support', () => {
+    for (const chapter of layered) {
+      const { tasks, objectives } = chapter.story!;
+      if (!tasks && !objectives) continue;
+      for (const course of ['ah1', 'apush'] as const) {
+        expect(tasks?.[course].length, `${chapter.id} ${course} tasks`).toBeGreaterThan(0);
+        expect(objectives?.[course].length, `${chapter.id} ${course} objectives`).toBeGreaterThan(0);
       }
     }
   });
@@ -139,5 +162,23 @@ describe('quiz answer patterns', () => {
       return q.options[q.correctIndex].length > Math.max(...others);
     });
     expect(longest.length / questions.length).toBeLessThanOrEqual(0.25);
+  });
+});
+
+describe('layered story reading level', () => {
+  // Core text targets grades 9-10 (Flesch-Kincaid is approximate, so the limits leave a margin).
+  const storyText = (beat: { body: string[]; visual?: unknown }) => {
+    const steps = (beat.visual as { steps?: { body: string }[] } | undefined)?.steps ?? [];
+    return [...beat.body, ...steps.map((s) => s.body)];
+  };
+
+  it('stays at a high-school reading level', () => {
+    for (const chapter of VIETNAM_CHAPTERS.filter((c) => c.layout === 'layered')) {
+      const beats = chapter.story!.beats;
+      expect(fleschKincaidGrade(beats.flatMap(storyText).join(' ')), chapter.id).toBeLessThanOrEqual(10.5);
+      for (const beat of beats) {
+        expect(fleschKincaidGrade(storyText(beat).join(' ')), `${chapter.id}/${beat.id}`).toBeLessThanOrEqual(12);
+      }
+    }
   });
 });

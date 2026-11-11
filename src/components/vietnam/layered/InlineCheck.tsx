@@ -3,6 +3,7 @@
 import React, { useId, useState } from 'react';
 import type { QuizQuestion } from '@/types/study';
 import CitationMarker from '@/components/common/CitationMarker';
+import Icon from '@/components/common/Icon';
 
 /** One quick retrieval question placed right after the beat it checks. */
 export default function InlineCheck({ question }: { question: QuizQuestion }) {
@@ -12,12 +13,9 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
   const labelId = useId();
 
   return (
-    <section
-      aria-labelledby={labelId}
-      className="rounded-xl border border-rule bg-parchment-light p-5 sm:p-6"
-    >
-      <span className="eyebrow text-ink-soft block mb-2">Quick check</span>
-      <p id={labelId} className="font-editorial-serif text-lg font-medium text-ink leading-snug">
+    <section aria-labelledby={labelId} className="bg-parchment border border-rule rounded-md p-5 sm:p-6">
+      <p id={labelId} className="font-editorial-serif text-lg font-semibold text-ink leading-snug">
+        <span className="font-sans text-[0.9375rem] font-semibold text-brand">Quick check. </span>
         {question.question}
       </p>
 
@@ -25,9 +23,9 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
         {question.options.map((option, idx) => {
           const isAnswer = idx === question.correctIndex;
           const isPicked = idx === picked;
-          let tone = 'bg-surface border-rule hover:border-rule-strong text-ink';
-          if (answered && isAnswer) tone = 'bg-success-tint border-success-rule text-ink';
-          else if (answered && isPicked) tone = 'bg-brand-tint border-brand-rule text-ink';
+          let tone = 'bg-surface border-rule hover:border-ink text-ink';
+          if (answered && isAnswer) tone = 'bg-success-tint border-success text-ink';
+          else if (answered && isPicked) tone = 'bg-brand-tint border-brand text-ink';
           else if (answered) tone = 'bg-surface border-rule text-ink-soft';
           return (
             <button
@@ -36,21 +34,23 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
               disabled={answered}
               aria-pressed={isPicked}
               onClick={() => setPicked(idx)}
-              className={`flex items-start gap-3 text-left text-sm leading-snug px-4 py-3 rounded-lg border transition-colors ${tone} ${
+              className={`flex items-start gap-3 text-left text-[0.9375rem] leading-snug px-4 py-3 rounded-md border transition-colors ${tone} ${
                 answered ? 'cursor-default' : 'cursor-pointer'
               }`}
             >
               <span
                 aria-hidden="true"
-                className={`mt-0.5 w-5 h-5 shrink-0 rounded-full border flex items-center justify-center text-[11px] font-semibold ${
-                  answered && isAnswer
-                    ? 'bg-success border-success text-white'
-                    : answered && isPicked
-                      ? 'bg-brand border-brand text-white'
-                      : 'border-rule-strong text-ink-soft'
+                className={`mt-0.5 w-5 shrink-0 text-center text-sm font-semibold ${
+                  answered && isAnswer ? 'text-success' : answered && isPicked ? 'text-brand' : 'text-ink-soft'
                 }`}
               >
-                {answered && isAnswer ? '✓' : answered && isPicked ? '✕' : String.fromCharCode(65 + idx)}
+                {answered && isAnswer ? (
+                  <Icon name="check" className="w-4 h-4 inline" strokeWidth={2.5} />
+                ) : answered && isPicked ? (
+                  <Icon name="x" className="w-4 h-4 inline" strokeWidth={2.5} />
+                ) : (
+                  String.fromCharCode(65 + idx)
+                )}
               </span>
               <span>{option}</span>
             </button>
@@ -60,7 +60,7 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
 
       <div aria-live="polite">
         {answered && (
-          <p className="mt-4 text-sm text-ink-muted leading-relaxed">
+          <p className="mt-4 text-[0.9375rem] text-ink-muted leading-relaxed">
             <strong className={correct ? 'text-success' : 'text-brand'}>{correct ? 'Right.' : 'Not quite.'}</strong>{' '}
             {question.rationale}
             {question.citationRef && <CitationMarker id={question.citationRef} />}

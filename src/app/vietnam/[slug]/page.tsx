@@ -4,7 +4,6 @@ import { Metadata } from 'next';
 import { VIETNAM_CHAPTERS, getAdjacentChapters, getChapter } from '@/data/vietnam/chapters';
 import ChapterNavBar from '@/components/vietnam/ChapterNavBar';
 import ChapterContent from '@/components/vietnam/ChapterContent';
-import TonkinPilotView from '@/components/vietnam/TonkinPilotView';
 import LayeredChapter from '@/components/vietnam/layered/LayeredChapter';
 
 interface ChapterPageProps {
@@ -47,13 +46,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
     <div className="min-h-screen bg-paper text-ink">
       <ChapterNavBar currentChapter={chapter} />
       <div className="w-full">
-        {chapter.layout === 'investigation' ? (
-          <TonkinPilotView
-            chapter={chapter}
-            nextChapterId={nextChapter?.id}
-            nextChapterTitle={nextChapter?.title}
-          />
-        ) : chapter.layout === 'layered' && chapter.story ? (
+        {chapter.layout === 'layered' && chapter.story ? (
           <LayeredChapter
             chapter={chapter}
             nextChapterId={nextChapter?.id}

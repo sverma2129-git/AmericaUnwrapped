@@ -3,7 +3,7 @@ import { ChapterStudyData } from '@/types/study';
 export const TONKIN_STUDY_DATA: ChapterStudyData = {
   chapterId: 'gulf-of-tonkin',
   bigQuestion:
-    'What really happened in the Gulf of Tonkin on August 4, 1964—and how did a phantom battle lead to full-scale American war?',
+    'What really happened in the Gulf of Tonkin in August 1964, and how did it lead to a much larger American war?',
   whyItMatters:
     'The Gulf of Tonkin Resolution passed almost unanimously based on misleading evidence, serving as the functional equivalent of a declaration of war for nine years and fundamentally shifting congressional war powers.',
   whatYouWillLearn: [
