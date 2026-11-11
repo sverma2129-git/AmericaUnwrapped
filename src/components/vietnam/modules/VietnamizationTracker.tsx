@@ -94,37 +94,37 @@ export default function VietnamizationTracker() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800 gap-2 text-xs font-archival-mono">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-2 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          <span className="font-bold text-stone-900">
             Quantitative Trajectory &bull; 1968–1972
           </span>
           <span className="text-stone-500 ml-2">&bull; The Substitution Dynamic</span>
         </div>
-        <span className="text-stone-500 uppercase tracking-widest text-[11px]">
+        <span className="text-stone-500 text-[11px]">
           Click points on graph to select year
         </span>
       </div>
 
       <div>
-        <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 dark:text-stone-100">
+        <h4 className="font-editorial-serif text-2xl font-bold text-stone-900">
           The &ldquo;Scissors Curve&rdquo; of Vietnamization
         </h4>
-        <p className="mt-2 font-editorial-serif text-base text-stone-700 dark:text-stone-300 leading-relaxed">
+        <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
           Between 1968 and 1972, the United States withdrew over 500,000 ground troops to de-escalate domestic political opposition. However, combat intensity did not decline proportionally: ground combat was transferred to the South Vietnamese army, subsidized by massive air bombardment.
         </p>
       </div>
 
       {/* Interactive Multi-Line SVG Trend Chart */}
-      <div className="bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 p-4 rounded-xs shadow-inner">
-        <div className="flex flex-wrap items-center justify-end gap-4 text-xs font-archival-mono mb-2">
+      <div className="bg-white border border-stone-200 p-4 rounded-xs">
+        <div className="flex flex-wrap items-center justify-end gap-4 text-xs mb-2">
           <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-stone-900 dark:bg-stone-100 rounded-full inline-block" />
-            <span className="text-stone-700 dark:text-stone-300">U.S. Troop Strength (536k &rarr; 24k)</span>
+            <span className="w-3 h-3 bg-stone-900 rounded-full inline-block" />
+            <span className="text-stone-700">U.S. Troop Strength (536k 24k)</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-red-700 dark:bg-red-500 rounded-full inline-block" />
-            <span className="text-red-800 dark:text-red-400 font-semibold">ARVN Combat KIA (20k &rarr; 39k)</span>
+            <span className="w-3 h-3 bg-red-700 rounded-full inline-block" />
+            <span className="text-red-800 font-semibold">ARVN Combat KIA (20k 39k)</span>
           </div>
         </div>
 
@@ -142,7 +142,7 @@ export default function VietnamizationTracker() {
                   y2={y}
                   stroke="#e7dfd1"
                   strokeWidth="1"
-                  className="dark:stroke-stone-800"
+                  className=""
                 />
               );
             })}
@@ -176,11 +176,7 @@ export default function VietnamizationTracker() {
                     x={x}
                     y={height - padding.bottom + 20}
                     textAnchor="middle"
-                    className={`font-archival-mono text-xs ${
-                      isSelected
-                        ? 'fill-stone-950 dark:fill-stone-100 font-bold underline'
-                        : 'fill-stone-500 hover:fill-stone-900 dark:hover:fill-stone-100'
-                    }`}
+                    className={`text-xs ${ isSelected ? 'fill-stone-950 font-bold underline' : 'fill-stone-500 hover:fill-stone-900' }`}
                   >
                     {year}
                   </text>
@@ -189,7 +185,7 @@ export default function VietnamizationTracker() {
             })}
 
             {/* Line 1: U.S. Troop Curve (Steep decline) */}
-            <path d={usTroopsPath} fill="none" stroke="#44403c" strokeWidth="3" className="dark:stroke-stone-300" />
+            <path d={usTroopsPath} fill="none" stroke="#44403c" strokeWidth="3" className="" />
 
             {/* Line 2: ARVN Combat Deaths (Plateau / Surge) */}
             <path d={arvnKiaPath} fill="none" stroke="#dc2626" strokeWidth="3" />
@@ -211,7 +207,7 @@ export default function VietnamizationTracker() {
                     fill="#44403c"
                     stroke="#ffffff"
                     strokeWidth="1.5"
-                    className="dark:fill-stone-200"
+                    className=""
                   />
 
                   {/* ARVN KIA Marker */}
@@ -231,7 +227,7 @@ export default function VietnamizationTracker() {
                         x={x}
                         y={yUs - 10}
                         textAnchor="middle"
-                        className="font-archival-mono text-[9px] font-bold fill-stone-900 dark:fill-stone-100"
+                        className="text-[9px] font-bold fill-stone-900"
                       >
                         {TRACKER_DATA[year].usTroops.toLocaleString()} troops
                       </text>
@@ -239,7 +235,7 @@ export default function VietnamizationTracker() {
                         x={x}
                         y={yArvn + 16}
                         textAnchor="middle"
-                        className="font-archival-mono text-[9px] font-bold fill-red-800 dark:fill-red-400"
+                        className="text-[9px] font-bold fill-red-800"
                       >
                         {TRACKER_DATA[year].arvnDeaths.toLocaleString()} ARVN KIA
                       </text>
@@ -254,59 +250,59 @@ export default function VietnamizationTracker() {
 
       {/* Selected Year Data Ledger */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-4 bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 rounded-xs">
-          <div className="font-archival-mono text-[10px] text-stone-500 uppercase tracking-widest">
+        <div className="p-4 bg-white border border-stone-200 rounded-xs">
+          <div className="text-[10px] text-stone-500">
             U.S. Troop Level ({selectedYear})
           </div>
-          <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900 dark:text-stone-100">
+          <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900">
             {current.usTroops.toLocaleString()}
           </div>
-          <div className="font-archival-mono text-xs text-stone-500 mt-1">
+          <div className="text-xs text-stone-500 mt-1">
             U.S. Deaths in {selectedYear}: {current.usDeaths.toLocaleString()}
           </div>
         </div>
 
-        <div className="p-4 bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 rounded-xs">
-          <div className="font-archival-mono text-[10px] text-red-700 dark:text-red-400 uppercase tracking-widest font-bold">
+        <div className="p-4 bg-white border border-stone-200 rounded-xs">
+          <div className="text-[10px] text-red-700 font-bold">
             ARVN Combat KIA ({selectedYear})
           </div>
-          <div className="font-editorial-serif text-2xl font-bold mt-1 text-red-900 dark:text-red-300">
+          <div className="font-editorial-serif text-2xl font-bold mt-1 text-red-900">
             {current.arvnDeaths.toLocaleString()}
           </div>
-          <div className="font-archival-mono text-xs text-stone-500 mt-1">
+          <div className="text-xs text-stone-500 mt-1">
             Ground casualties transferred to South Vietnam
           </div>
         </div>
 
-        <div className="p-4 bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 rounded-xs">
-          <div className="font-archival-mono text-[10px] text-stone-500 uppercase tracking-widest">
+        <div className="p-4 bg-white border border-stone-200 rounded-xs">
+          <div className="text-[10px] text-stone-500">
             U.S. Aerial Bomb Tonnage
           </div>
-          <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900 dark:text-stone-100">
+          <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900">
             {current.bombTonnage}
           </div>
-          <div className="font-archival-mono text-xs text-stone-500 mt-1">
+          <div className="text-xs text-stone-500 mt-1">
             Airpower substituted for ground troops
           </div>
         </div>
       </div>
 
       {/* Selected Year Milestone & Historiographical Debate */}
-      <div className="p-5 bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 rounded-xs space-y-4">
+      <div className="p-5 bg-white border border-stone-200 rounded-xs space-y-4">
         <div>
-          <span className="font-archival-mono text-[10px] uppercase tracking-widest text-stone-500 font-bold block mb-1">
+          <span className="text-[10px] text-stone-500 font-bold block mb-1">
             Operational Milestone · {selectedYear}
           </span>
-          <p className="font-editorial-serif text-base text-stone-800 dark:text-stone-200 leading-relaxed">
+          <p className="font-editorial-serif text-base text-stone-800 leading-relaxed">
             {current.milestone}
           </p>
         </div>
 
-        <div className="pt-3 border-t border-stone-100 dark:border-stone-800">
-          <span className="text-[10px] uppercase tracking-widest text-brand font-bold block mb-1">
+        <div className="pt-3 border-t border-stone-100">
+          <span className="text-[10px] text-brand font-bold block mb-1">
             Historiographical Controversy:
           </span>
-          <p className="font-editorial-serif text-sm text-stone-700 dark:text-stone-300 leading-relaxed italic">
+          <p className="font-editorial-serif text-sm text-stone-700 leading-relaxed">
             {current.contestedDebate}
           </p>
         </div>

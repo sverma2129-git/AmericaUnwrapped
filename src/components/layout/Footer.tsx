@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-2 space-y-3">
             <Link href="/" className="inline-block">
               <span className="font-editorial-serif text-2xl font-bold tracking-tight text-ink block">
-                America Unwrapped<span className="text-brand">.</span>
+                America Unwrapped
               </span>
             </Link>
             <p className="font-sans text-sm text-ink-muted max-w-sm leading-relaxed">
@@ -26,7 +26,7 @@ export default function Footer() {
 
           {/* Explore History */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-brand mb-3">
+            <h3 className="text-xs font-bold text-brand mb-3">
               Explore History
             </h3>
             <ul className="space-y-2 text-sm text-ink-muted">
@@ -60,13 +60,13 @@ export default function Footer() {
 
           {/* Student Study Tools */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-brand mb-3">
+            <h3 className="text-xs font-bold text-brand mb-3">
               Study Tools
             </h3>
             <ul className="space-y-2 text-sm text-ink-muted">
               <li>
                 <Link href="/vietnam/study-guide" className="font-semibold text-brand hover:underline transition-colors">
-                  Master Unit Study Guide &rarr;
+                  Master Unit Study Guide
                 </Link>
               </li>
               <li>

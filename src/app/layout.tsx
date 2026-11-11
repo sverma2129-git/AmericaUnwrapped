@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, Newsreader } from 'next/font/google';
+import { Libre_Franklin, Newsreader } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
 import CitationModal from '@/components/common/CitationModal';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const franklin = Libre_Franklin({ subsets: ['latin'], variable: '--font-franklin', display: 'swap' });
 const newsreader = Newsreader({
   subsets: ['latin'],
   variable: '--font-newsreader',
@@ -29,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full ${inter.variable} ${newsreader.variable}`}>
-      <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased selection:bg-rule selection:text-ink">
+    <html lang="en" className={`h-full ${franklin.variable} ${newsreader.variable}`}>
+      <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased">
         <CitationProvider>
           {/* Accessible Skip Link */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-xs focus:shadow-md focus:outline-none focus:ring-2 focus:ring-brand"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand focus:text-white focus:rounded-xs focus: focus:outline-none focus:ring-2 focus:ring-brand"
           >
             Skip to main content
           </a>

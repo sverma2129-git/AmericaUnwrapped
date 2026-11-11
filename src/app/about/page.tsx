@@ -74,7 +74,7 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-12">
       {/* Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="text-xs uppercase tracking-wider text-ink-soft">
+      <nav aria-label="Breadcrumb" className="text-xs text-ink-soft">
         <ol className="flex items-center space-x-2">
           <li>
             <Link
@@ -93,13 +93,10 @@ export default function AboutPage() {
 
       {/* Header */}
       <header className="border-b border-rule pb-10">
-        <span className="text-xs uppercase tracking-widest text-brand font-bold">
-          About America Unwrapped
-        </span>
         <h1 className="mt-3 font-editorial-serif text-3xl sm:text-5xl font-bold tracking-tight text-ink leading-tight">
           How we decide what&rsquo;s true
         </h1>
-        <p className="mt-4 font-editorial-serif italic text-lg sm:text-2xl text-ink-muted leading-relaxed">
+        <p className="mt-4 font-editorial-serif text-lg sm:text-2xl text-ink-muted leading-relaxed">
           History is more interesting when you can see the evidence and make up your own mind.
         </p>
       </header>
@@ -113,16 +110,13 @@ export default function AboutPage() {
           Most history online is one of two things: dense academic material that buries students, or opinion pieces that use the past to win today&rsquo;s arguments. Neither helps you understand what actually happened.
         </p>
         <p className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed">
-          We try to do something simpler: tell the story clearly, show you the documents, and keep asking one question about every turning point. Who decided what, what were they assuming, and what happened next? <strong>Decision &rarr; Assumption &rarr; Result &rarr; Consequence</strong>.
+          We try to do something simpler: tell the story clearly, show you the documents, and keep asking one question about every turning point. Who decided what, what were they assuming, and what happened next? <strong>Decision Assumption Result Consequence</strong>.
         </p>
       </section>
 
       {/* The 10 Editorial Rules */}
       <section className="py-6 border-b border-rule">
         <div className="mb-8">
-          <span className="text-xs uppercase tracking-widest text-ink-soft block mb-1">
-            Our Rules
-          </span>
           <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
             Ten rules we hold ourselves to
           </h2>
@@ -132,7 +126,7 @@ export default function AboutPage() {
           {editorialRules.map((rule) => (
             <div
               key={rule.number}
-              className="p-5 border border-rule rounded-xs bg-parchment space-y-2 shadow-xs"
+              className="p-5 border border-rule rounded-xs bg-parchment space-y-2"
             >
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold text-brand">
@@ -174,15 +168,15 @@ export default function AboutPage() {
       <div className="pt-8 border-t border-rule flex flex-wrap gap-4 items-center justify-between text-xs">
         <Link
           href="/"
-          className="text-ink-muted hover:text-brand uppercase tracking-wider font-bold transition-colors"
+          className="text-ink-muted hover:text-brand font-bold transition-colors"
         >
-          &larr; Back to Home
+          Back to Home
         </Link>
         <Link
           href="/vietnam"
-          className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white uppercase tracking-wider font-bold rounded-xs shadow-xs transition-colors"
+          className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white font-bold rounded-xs transition-colors"
         >
-          Start Reading &rarr;
+          Start Reading
         </Link>
       </div>
     </div>

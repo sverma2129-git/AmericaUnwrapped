@@ -9,10 +9,7 @@ export default function CheatSheet() {
   return (
     <section aria-label="1-Page Cheat Sheet" className="space-y-12">
       {/* Quick Exam Overview Banner */}
-      <div className="bg-parchment border-l-4 border-brand border-t border-r border-b border-rule p-6 rounded-r-xs shadow-2xs">
-        <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-          Unit At A Glance &bull; AP U.S. History Period 8 Focus
-        </span>
+      <div className="bg-parchment border-l border-brand border-t border-r border-b border-rule p-6 rounded-r-xs">
         <h2 className="font-editorial-serif text-2xl font-bold text-ink">
           The Essential Core: 30 Years Across 5 Presidencies
         </h2>
@@ -71,7 +68,7 @@ export default function CheatSheet() {
 
         <div className="overflow-x-auto border border-rule rounded-xs">
           <table className="w-full text-left font-sans text-xs sm:text-sm">
-            <thead className="bg-parchment-light border-b border-rule text-xs font-bold uppercase tracking-wider text-ink">
+            <thead className="bg-parchment-light border-b border-rule text-xs font-bold text-ink">
               <tr>
                 <th className="p-3 sm:p-4">Date</th>
                 <th className="p-3 sm:p-4">Event</th>
@@ -84,7 +81,7 @@ export default function CheatSheet() {
                 const chapter = getChapter(tp.chapterId);
                 return (
                   <tr key={tp.event} className={`hover:bg-parchment ${tp.highlight ? 'bg-brand-tint' : ''}`}>
-                    <td className="p-3 sm:p-4 font-mono text-xs font-bold text-brand whitespace-nowrap">{tp.date}</td>
+                    <td className="p-3 sm:p-4 text-xs font-bold text-brand whitespace-nowrap">{tp.date}</td>
                     <td className="p-3 sm:p-4 font-semibold text-ink">{tp.event}</td>
                     <td className="p-3 sm:p-4 text-ink-muted">{tp.significance}</td>
                     <td className="p-3 sm:p-4 font-semibold text-xs">

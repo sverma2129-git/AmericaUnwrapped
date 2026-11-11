@@ -1,44 +1,66 @@
 @import "tailwindcss";
 
-/* Design tokens: exposed as Tailwind utilities (bg-brand, text-ink, border-rule, ...)
+/* The site is light-only. Dark-mode variants apply only under an explicit
+   .dark class (none is set), never from the device's color scheme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Design world: the printed record. Newspaper and government-document
+   conventions: a serif reading face, a gothic for labels, hairline and double
+   rules instead of boxes and shadows, one red used only for meaning.
+
+   Tokens are exposed as Tailwind utilities (bg-brand, text-ink, border-rule, ...).
    Contrast against paper (WCAG AA needs 4.5:1): ink 16.5, ink-muted 7.2,
    ink-soft 5.2, brand 7.8. ink-soft stays >= 4.9 on parchment too. */
 @theme {
-  --color-paper: #FAF8F5;           /* page background: warm cream */
-  --color-surface: #FFFFFF;         /* cards */
-  --color-parchment: #F5F2ED;       /* inset panels inside cards */
+  --color-paper: #FAF8F5;           /* page ground: warm white (pinned brand palette) */
+  --color-surface: #FFFFFF;         /* raised sheets: answer boxes, menus */
+  --color-parchment: #F5F2ED;       /* beige panels */
   --color-parchment-light: #F8F6F2;
-  --color-rule: #E7E5E4;            /* stone-200 */
-  --color-rule-strong: #D6D3D1;     /* stone-300 */
-  --color-ink: #1C1917;             /* stone-900 */
-  --color-ink-muted: #57534E;       /* stone-600 */
-  --color-ink-soft: #6F6863;        /* between stone-500 and 600; AA on paper */
-  --color-brand: #991B1B;           /* archival crimson */
+  --color-rule: #DEDAD4;            /* hairlines */
+  --color-rule-strong: #C9C4BC;
+  --color-ink: #1C1917;
+  --color-ink-muted: #57534E;
+  --color-ink-soft: #6F6863;
+  --color-brand: #991B1B;           /* deep red: links, the answer, turning points */
   --color-brand-hover: #7F1D1D;
   --color-brand-tint: #FEF2F2;
   --color-brand-rule: #FECACA;
-  --color-success: #166534;         /* green-800, 7.1:1 on paper */
+  --color-success: #166534;         /* 7.1:1 on paper */
   --color-success-tint: #F0FDF4;
   --color-success-rule: #BBF7D0;
   /* Map palette */
   --color-terrain: #EFEADF;
   --color-terrain-line: #D8CDBA;
   --color-water: #7FA6C4;
+
+  /* Print has corners, not pills: every "large" radius resolves to a small one. */
+  --radius-md: 0.1875rem;
+  --radius-lg: 0.1875rem;
+  --radius-xl: 0.25rem;
+  --radius-2xl: 0.25rem;
 }
 
-/* Fonts are loaded via next/font in layout.tsx and exposed as CSS variables. */
+/* Fonts are loaded via next/font in layout.tsx and exposed as CSS variables.
+   Libre Franklin descends from Franklin Gothic, the American newspaper gothic. */
 @theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--font-franklin), "Franklin Gothic Medium", ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-newsreader), "Charter", Georgia, serif;
-  --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, Monaco, monospace;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-    font-feature-settings: "liga" 1, "kern" 1, "onum" 1;
+    font-feature-settings: "liga" 1, "kern" 1;
     background-color: var(--color-paper);
     color: var(--color-ink);
+    /* Browser-drawn surfaces take the palette too. */
+    accent-color: var(--color-brand);
+    caret-color: var(--color-brand);
+    scrollbar-color: var(--color-rule-strong) var(--color-paper);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
   }
 
   body {
@@ -51,39 +73,48 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p, li, figcaption { text-wrap: pretty; }
+
+  a {
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: from-font;
+  }
+
+  summary { cursor: pointer; }
 }
 
-/* Custom Editorial Typography Classes */
+/* Headline and reading face. */
 .font-editorial-serif {
   font-family: var(--font-serif);
   font-optical-sizing: auto;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.012em;
 }
 
-.font-archival-mono {
-  font-family: var(--font-mono);
-}
-
-/* Drop-cap for chapter openings */
+/* Drop cap for chapter openings (a print convention, set in ink). */
 .editorial-dropcap::first-letter {
   float: left;
   font-family: var(--font-serif);
   font-size: 3.5rem;
   line-height: 0.85;
   padding-top: 4px;
-  padding-right: 12px;
+  padding-right: 10px;
   padding-bottom: 2px;
-  font-weight: 700;
-  color: var(--color-brand);
+  font-weight: 600;
+  color: var(--color-ink);
 }
 
-/* Focus states for accessibility */
 *:focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 3px;
 }
 
-/* Museum Editorial Reading & Layout Utilities */
 .prose-reading {
   max-width: 68ch;
   margin-left: auto;
@@ -96,43 +127,47 @@
   border: 1px solid var(--color-rule);
 }
 
-/* Surface cards: white on cream, hairline border, soft shadow. */
+/* Running text: serif, comfortable size, a real measure (about 66 characters). */
+@utility reading {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.6;
+  max-width: 66ch;
+}
+
+/* A flat sheet: white on the paper ground with a hairline. No shadow. */
 @utility card-surface {
   background-color: var(--color-surface);
-  border: 1px solid color-mix(in srgb, var(--color-rule) 85%, transparent);
-  box-shadow: 0 1px 2px 0 rgb(28 25 23 / 0.05);
+  border: 1px solid var(--color-rule);
 }
 
-/* Linked cards lift slightly and darken their border on hover. */
+/* Linked sheets: the hairline turns to ink on hover. Nothing moves. */
 @utility card-interactive {
-  transition-property: transform, box-shadow, border-color, background-color;
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms cubic-bezier(0.16, 1, 0.3, 1);
   &:hover {
-    transform: translateY(-2px);
-    border-color: var(--color-rule-strong);
-    box-shadow: 0 4px 6px -1px rgb(28 25 23 / 0.07), 0 2px 4px -2px rgb(28 25 23 / 0.05);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    &:hover { transform: none; }
+    border-color: var(--color-ink);
   }
 }
 
-/* Small uppercase UI label (badges, eyebrows, section kickers). */
-@utility eyebrow {
+/* Small sans label for datelines, captions and table headers. Plain case. */
+@utility meta {
   font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  line-height: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
 }
 
-/* Red accent styling */
+/* The signature rule: a newspaper double rule that opens the masthead and
+   each major section. Used only there. */
+@utility rule-double {
+  border-top: 3px double var(--color-ink);
+}
+
+/* Buttons */
 .btn-primary {
   background-color: var(--color-brand);
   color: #FFFFFF;
-  transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-out;
 }
 .btn-primary:hover {
   background-color: var(--color-brand-hover);
@@ -142,14 +177,14 @@
   background-color: var(--color-parchment);
   color: var(--color-ink);
   border: 1px solid var(--color-rule);
-  transition: all 0.15s ease-in-out;
+  transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
 }
 .btn-secondary:hover {
   background-color: var(--color-rule);
   border-color: var(--color-rule-strong);
 }
 
-/* Strategic Actor Accent Colors (Subtle & Scholarly) */
+/* Actor colors used consistently on maps and comparisons. */
 .actor-us {
   color: #1e3a8a;
   border-color: #bfdbfe;

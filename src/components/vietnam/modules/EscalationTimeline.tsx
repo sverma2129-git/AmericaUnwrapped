@@ -53,25 +53,22 @@ export default function EscalationTimeline() {
   const current = escalationData[selectedYear];
 
   return (
-    <figure className="my-10 border border-rule bg-parchment rounded-xs shadow-xs text-ink">
+    <figure className="my-10 border border-rule bg-parchment rounded-xs text-ink">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-ink">
+          <span className="font-bold text-ink">
             Escalation Ledger
           </span>
           <span className="text-ink-soft ml-2">&bull; The Advisory Commitment (1960–1963)</span>
         </div>
-        <span className="text-ink-soft uppercase tracking-widest text-[11px] font-semibold">
+        <span className="text-ink-soft text-[11px] font-semibold">
           Select Year
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <span className="text-xs uppercase tracking-wider text-brand font-bold block">
-            Incremental Expansion
-          </span>
           <h4 className="font-editorial-serif text-2xl font-bold text-ink mt-1">
             How 875 Military Advisers Became 16,300 Combatants
           </h4>
@@ -87,13 +84,9 @@ export default function EscalationTimeline() {
               key={yr}
               type="button"
               onClick={() => setSelectedYear(yr)}
-              className={`p-3 text-left transition-colors cursor-pointer border rounded-xs ${
-                selectedYear === yr
-                  ? 'bg-brand text-white border-brand font-bold shadow-xs'
-                  : 'bg-paper text-ink-muted border-rule hover:border-brand'
-              }`}
+              className={`p-3 text-left transition-colors cursor-pointer border rounded-xs ${ selectedYear === yr ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
             >
-              <div className="font-mono text-xs font-bold">{yr}</div>
+              <div className="text-xs font-bold">{yr}</div>
               <div className="font-editorial-serif text-xs opacity-85 mt-0.5">
                 {escalationData[yr].advisors.toLocaleString()} Personnel
               </div>
@@ -102,19 +95,19 @@ export default function EscalationTimeline() {
         </div>
 
         {/* Selected Year Data Ledger */}
-        <div className="p-6 bg-paper border border-rule rounded-xs space-y-5 shadow-xs">
+        <div className="p-6 bg-paper border border-rule rounded-xs space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
             <h5 className="font-editorial-serif text-xl font-bold text-ink">
               {current.label}
             </h5>
-            <span className="font-mono text-xs text-brand font-bold">
+            <span className="text-xs text-brand font-bold">
               U.S. Casualties in {selectedYear}: {current.casualties} KIA
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
             <div>
-              <span className="uppercase font-bold text-ink-soft block mb-1 text-[11px]">
+              <span className="font-bold text-ink-soft block mb-1 text-[11px]">
                 Rules of Engagement:
               </span>
               <p className="font-editorial-serif text-ink leading-relaxed">
@@ -122,7 +115,7 @@ export default function EscalationTimeline() {
               </p>
             </div>
             <div>
-              <span className="uppercase font-bold text-ink-soft block mb-1 text-[11px]">
+              <span className="font-bold text-ink-soft block mb-1 text-[11px]">
                 Strategic Milestone:
               </span>
               <p className="font-editorial-serif text-ink leading-relaxed">
@@ -132,11 +125,11 @@ export default function EscalationTimeline() {
           </div>
 
           {/* Kennedy Documented Position */}
-          <div className="p-4 bg-parchment border border-rule border-l-4 border-l-brand rounded-r-xs shadow-2xs">
-            <span className="text-[11px] uppercase tracking-wider text-brand font-bold block mb-1">
+          <div className="p-4 bg-parchment border border-rule border-l border-l-brand rounded-r-xs">
+            <span className="text-[11px] text-brand font-bold block mb-1">
               Documented Administration Position (Paraphrase):
             </span>
-            <p className="font-editorial-serif italic text-ink leading-relaxed">
+            <p className="font-editorial-serif text-ink leading-relaxed">
               {current.kennedyQuote}
             </p>
           </div>

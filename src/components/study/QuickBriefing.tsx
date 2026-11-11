@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { KeyTerm } from '@/types/study';
+import Icon from '@/components/common/Icon';
 
 interface QuickBriefingProps {
   bigQuestion: string;
@@ -34,12 +35,12 @@ export default function QuickBriefing({
   return (
     <section
       aria-label="Quick Exam Briefing"
-      className="my-8 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink shadow-2xs transition-colors"
+      className="my-8 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink transition-colors"
     >
       {/* Header kicker */}
       <div className={`flex flex-wrap items-center justify-between gap-2 ${isExpanded ? 'border-b border-rule pb-3 mb-5' : ''}`}>
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-xs text-xs font-bold uppercase tracking-wider bg-brand-tint text-brand border border-brand-rule">
+          <span className="inline-flex items-center px-2.5 py-0.5 rounded-xs text-xs font-bold bg-brand-tint text-brand border border-brand-rule">
             60-Second Briefing
           </span>
           <span className="text-xs text-ink-muted">
@@ -53,13 +54,13 @@ export default function QuickBriefing({
           aria-expanded={isExpanded}
         >
           <span>{isExpanded ? 'Collapse Briefing' : 'Expand Briefing'}</span>
-          <span className="text-[10px]">{isExpanded ? '▲' : '▼'}</span>
+          <Icon name={isExpanded ? 'chevronUp' : 'chevronDown'} className="w-3.5 h-3.5" />
         </button>
       </div>
 
       {!isExpanded && (
         <div className="pt-2 flex items-baseline justify-between gap-4">
-          <p className="font-editorial-serif text-base text-ink italic">
+          <p className="font-editorial-serif text-base text-ink">
             &ldquo;{bigQuestion}&rdquo;
           </p>
           <span className="text-xs text-brand font-medium shrink-0">
@@ -69,12 +70,9 @@ export default function QuickBriefing({
       )}
 
       {isExpanded && (
-        <div className="animate-in fade-in duration-150">
+        <div className="">
           {/* The Big Question */}
           <div className="mb-6">
-            <span className="block text-xs font-bold uppercase tracking-wider text-brand mb-1">
-              The Central Inquiry
-            </span>
             <h2 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug">
               {bigQuestion}
             </h2>
@@ -85,7 +83,7 @@ export default function QuickBriefing({
 
           {/* The 60-Second Summary */}
           <div className="p-4 sm:p-5 rounded-xs bg-paper border border-rule mb-6 space-y-1.5">
-            <span className="block text-xs font-bold uppercase tracking-wider text-brand">
+            <span className="block text-xs font-bold text-brand">
               What Happened in Brief
             </span>
             <p className="font-sans text-sm sm:text-base text-ink leading-relaxed">
@@ -97,7 +95,7 @@ export default function QuickBriefing({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2">
             {/* Left: 3 Essential Exam Takeaways */}
             <div className="md:col-span-7 space-y-3">
-              <span className="flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-brand">
+              <span className="flex items-center gap-1.5 text-xs font-bold text-brand">
                 Key Exam Takeaways (AP &bull; State Standards)
               </span>
               <ul className="space-y-2.5 text-sm font-sans text-ink-muted leading-relaxed">
@@ -114,7 +112,7 @@ export default function QuickBriefing({
 
             {/* Right: Key Terms Cards */}
             <div className="md:col-span-5 space-y-3 border-t md:border-t-0 md:border-l border-rule pt-4 md:pt-0 md:pl-6">
-              <span className="block text-xs uppercase tracking-wider font-bold text-brand">
+              <span className="block text-xs font-bold text-brand">
                 Essential Vocabulary ({keyTerms.length} Terms)
               </span>
               <div className="space-y-2">
@@ -130,7 +128,7 @@ export default function QuickBriefing({
                         {term.term}
                       </span>
                       {term.phonetic && (
-                        <span className="font-mono text-[10px] text-brand italic">
+                        <span className="text-[10px] text-brand italic">
                           [{term.phonetic}]
                         </span>
                       )}
@@ -160,14 +158,11 @@ export default function QuickBriefing({
           >
             <div className="flex items-start justify-between gap-4 border-b border-rule pb-3">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-brand block">
-                  Vocabulary Dossier
-                </span>
                 <h3 className="font-editorial-serif text-2xl font-bold text-ink">
                   {activeTermModal.term}
                 </h3>
                 {activeTermModal.phonetic && (
-                  <span className="font-mono text-xs text-brand italic">
+                  <span className="text-xs text-brand italic">
                     Pronunciation: [{activeTermModal.phonetic}]
                   </span>
                 )}
@@ -186,18 +181,18 @@ export default function QuickBriefing({
 
             <div className="space-y-3 font-sans text-sm text-ink">
               <div>
-                <strong className="block text-xs uppercase text-ink-muted mb-0.5">Definition</strong>
+                <strong className="block text-xs text-ink-muted mb-0.5">Definition</strong>
                 <p className="leading-relaxed">{activeTermModal.definition}</p>
               </div>
 
               <div>
-                <strong className="block text-xs uppercase text-ink-muted mb-0.5">Historical Significance</strong>
+                <strong className="block text-xs text-ink-muted mb-0.5">Historical Significance</strong>
                 <p className="leading-relaxed text-ink-muted">{activeTermModal.significance}</p>
               </div>
 
               {activeTermModal.examTip && (
                 <div className="p-3 bg-brand-tint border border-brand-rule rounded-xs text-xs text-brand">
-                  <strong className="block uppercase tracking-wider mb-0.5">Exam Strategy Tip</strong>
+                  <strong className="block mb-0.5">Exam Strategy Tip</strong>
                   <p>{activeTermModal.examTip}</p>
                 </div>
               )}
@@ -207,7 +202,7 @@ export default function QuickBriefing({
               <button
                 type="button"
                 onClick={() => setActiveTermModal(null)}
-                className="px-4 py-2 bg-brand hover:bg-brand-hover text-white text-xs font-semibold uppercase tracking-wider rounded-xs cursor-pointer transition-colors"
+                className="px-4 py-2 bg-brand hover:bg-brand-hover text-white text-xs font-semibold rounded-xs cursor-pointer transition-colors"
               >
                 Close
               </button>

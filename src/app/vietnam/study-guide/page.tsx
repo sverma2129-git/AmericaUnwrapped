@@ -51,17 +51,17 @@ export default function StudyGuidePage() {
         </nav>
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
-          <span className="eyebrow px-2.5 py-1 bg-brand-tint text-brand border border-brand-rule rounded-full">
+          <span className="meta px-2.5 py-1 bg-brand-tint text-brand border border-brand-rule rounded-sm">
             AP &bull; Honors &bull; Regular U.S. History Curriculum
           </span>
           <span className="text-xs text-ink-muted">AP Period 8 (1945–1980)</span>
         </div>
 
-        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink leading-[1.12]">
+        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
           Vietnam War Master Study Guide &amp; Exam Review
         </h1>
 
-        <p className="mt-4 font-editorial-serif italic text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
+        <p className="mt-4 font-editorial-serif text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
           The definitive 1-page unit cheat sheet, interactive practice quizzes with historical rationales, master vocabulary flashcards, and high-yield DBQ essay outlines.
         </p>
       </header>
@@ -88,14 +88,14 @@ export default function StudyGuidePage() {
 
       {/* 3. Bottom Navigation Footer */}
       <footer className="border-t border-rule pt-8 flex flex-wrap items-center justify-between gap-4 text-xs">
-        <Link href="/vietnam" className="text-ink-muted hover:text-brand uppercase tracking-wider font-semibold">
-          &larr; Back to Explore History
+        <Link href="/vietnam" className="text-ink-muted hover:text-brand font-semibold">
+          Back to Explore History
         </Link>
         <Link
           href={`/vietnam/${firstChapter.id}`}
-          className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white uppercase tracking-wider font-semibold rounded-xs shadow-xs transition-colors"
+          className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white font-semibold rounded-xs transition-colors"
         >
-          Begin Chapter 01: Dien Bien Phu &rarr;
+          Begin Chapter 01: Dien Bien Phu
         </Link>
       </footer>
     </div>

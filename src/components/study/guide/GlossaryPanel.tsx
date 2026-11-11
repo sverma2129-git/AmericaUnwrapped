@@ -14,9 +14,6 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
       {/* Interactive Card Deck */}
       <div>
         <div className="mb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            Interactive Vocabulary Deck
-          </span>
           <h2 className="font-editorial-serif text-2xl font-bold text-ink">
             Flip Cards: High-Yield Terms ({terms.length} Total)
           </h2>
@@ -54,7 +51,7 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
               <div className="flex items-baseline justify-between gap-2 border-b border-rule pb-1.5">
                 <span className="font-editorial-serif font-bold text-base text-ink">{item.term}</span>
                 {item.phonetic && (
-                  <span className="font-mono text-xs text-brand italic">[{item.phonetic}]</span>
+                  <span className="text-xs text-brand italic">[{item.phonetic}]</span>
                 )}
               </div>
               <p className="font-sans text-xs text-ink leading-relaxed">

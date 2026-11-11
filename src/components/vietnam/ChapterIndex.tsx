@@ -17,11 +17,11 @@ export default function ChapterIndex() {
             <div>
               {/* Header / Meta */}
               <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="eyebrow text-ink-soft">
+                <span className="meta text-ink-soft">
                   Chapter {ch.number.toString().padStart(2, '0')} &bull; {ch.timeframe}
                 </span>
                 {ch.isLandmark && (
-                  <span className="eyebrow shrink-0 whitespace-nowrap px-2 py-0.5 bg-brand-tint text-brand border border-brand-rule rounded-full">
+                  <span className="meta shrink-0 whitespace-nowrap px-2 py-0.5 bg-brand-tint text-brand border border-brand-rule rounded-sm">
                     Turning Point
                   </span>
                 )}
@@ -35,11 +35,11 @@ export default function ChapterIndex() {
               </h3>
 
               {/* Central Inquiry Question */}
-              <div className="my-4 p-3 bg-parchment-light border-l-2 border-brand rounded-r-md">
-                <span className="eyebrow text-brand block mb-1">
+              <div className="my-4 p-3 bg-parchment-light border-l border-brand rounded-r-md">
+                <span className="meta text-brand block mb-1">
                   The Inquiry
                 </span>
-                <p className="font-editorial-serif text-sm text-ink italic leading-snug">
+                <p className="font-editorial-serif text-sm text-ink leading-snug">
                   &ldquo;{study?.bigQuestion || ch.subtitle}&rdquo;
                 </p>
               </div>
@@ -53,13 +53,13 @@ export default function ChapterIndex() {
             <div className="pt-4 border-t border-rule space-y-3">
               {/* Feature badges */}
               <div className="flex flex-wrap gap-1.5 text-[11px] text-ink-muted">
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-full">
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-sm">
                   <Icon name="zap" className="w-3 h-3" />60s Briefing
                 </span>
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-full">
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-sm">
                   <Icon name="pen" className="w-3 h-3" />{study?.quiz?.length || 3} Quizzes
                 </span>
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-full">
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-sm">
                   <Icon name="layers" className="w-3 h-3" />{study?.flashcards?.length || 3} Cards
                 </span>
               </div>
@@ -76,7 +76,7 @@ export default function ChapterIndex() {
                   href={`/vietnam/${ch.id}`}
                   className="font-semibold text-brand hover:underline"
                 >
-                  Study Chapter &rarr;
+                  Study Chapter
                 </Link>
               </div>
             </div>
