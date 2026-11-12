@@ -8,12 +8,12 @@ export default function DbqOutlines() {
     <section aria-label="DBQ and Essay Outlines" className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rule pb-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            Writing &amp; Free-Response Prep
-          </span>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             High-Yield DBQ &amp; Long Essay Prompts
           </h2>
+          <span className="text-xs font-bold text-brand block mb-1">
+            Writing &amp; Free-Response Prep
+          </span>
           <p className="font-sans text-sm text-ink-muted mt-1">
             Click any prompt to reveal recommended thesis formulas, primary source evidence, and common student errors.
           </p>
@@ -29,17 +29,17 @@ export default function DbqOutlines() {
             size="lg"
             summary={
               <>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand block">
-                  Prompt No. {dbq.number.toString().padStart(2, '0')} &bull; {dbq.theme}
-                </span>
-                <h3 className="font-editorial-serif text-lg sm:text-xl font-bold text-ink leading-snug">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-ink leading-snug">
                   &ldquo;{dbq.prompt}&rdquo;
                 </h3>
+                <span className="text-xs font-bold text-brand block">
+                  Prompt {dbq.number} &middot; {dbq.theme}
+                </span>
               </>
             }
           >
-            <div className="p-4 bg-white border-l-4 border-brand border-t border-r border-b border-rule rounded-r-xs mt-4">
-              <strong className="font-semibold text-brand block mb-1 uppercase text-xs">
+            <div className="p-4 bg-white border-l border-brand border-t border-r border-b border-rule rounded-r-xs mt-4">
+              <strong className="font-semibold text-brand block mb-1 text-xs">
                 Recommended Thesis Formula:
               </strong>
               <p className="text-ink leading-relaxed italic text-xs sm:text-sm">&ldquo;{dbq.thesis}&rdquo;</p>
@@ -47,7 +47,7 @@ export default function DbqOutlines() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 font-sans text-xs">
               <div className="p-4 bg-white border border-rule rounded-xs space-y-2">
-                <strong className="text-xs font-bold uppercase tracking-wider text-ink block">
+                <strong className="text-xs font-bold text-ink block">
                   Key Evidence to Cite:
                 </strong>
                 <ul className="list-disc list-inside space-y-1.5 text-ink-muted">
@@ -57,7 +57,7 @@ export default function DbqOutlines() {
                 </ul>
               </div>
               <div className="p-4 bg-brand-tint border border-brand-rule rounded-xs space-y-2">
-                <strong className="text-xs font-bold uppercase tracking-wider text-brand block">
+                <strong className="text-xs font-bold text-brand block">
                   Common Student Errors:
                 </strong>
                 <ul className="list-disc list-inside space-y-1.5 text-ink-muted">

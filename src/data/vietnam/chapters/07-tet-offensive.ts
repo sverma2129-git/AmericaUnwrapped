@@ -17,6 +17,7 @@ const chapter: ChapterData = {
     location: 'Saigon, Hue, Khe Sanh, and 100+ Urban Centers',
     quote:
       'To say that we are closer to victory today is to believe, in the face of the evidence, the optimists who have been wrong in the past. To suggest we are on the edge of defeat is to yield to unreasonable pessimism. To say that we are mired in stalemate seems the only realistic, yet unsatisfactory, conclusion.',
+    quoteCitationId: 'Q014',
     quoteSpeaker: 'Walter Cronkite',
     quoteContext: 'CBS News Special Report: Who, What, When, Where, Why? (February 27, 1968)',
   },

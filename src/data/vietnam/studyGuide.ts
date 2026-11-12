@@ -146,7 +146,7 @@ export const TURNING_POINTS: TurningPoint[] = [
     date: 'Nov 1973',
     event: 'War Powers Act of 1973',
     significance: 'Enacted over Nixon’s veto to curtail undeclared presidential wars; mandates 48-hr reporting and 60-day troop deployment limit.',
-    chapterId: 'aftermath-1975',
+    chapterId: 'the-collapse',
     highlight: true,
   },
   {

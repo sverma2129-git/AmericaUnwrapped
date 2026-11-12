@@ -59,12 +59,12 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary military significance of the January 1963 Battle of Ap Bac?',
       options: [
-        'It marked the first direct combat clash between American and North Vietnamese regular infantry.',
-        'A small force of 350 Viet Cong guerrillas successfully defeated 1,500 heavily armed ARVN troops equipped with American helicopters and armored vehicles.',
-        'It resulted in the destruction of the Ho Chi Minh Trail in Laos.',
-        'It was a decisive tactical victory that convinced President Kennedy to withdraw all advisers.',
+        'It was the first battle between U.S. ground troops and North Vietnamese regulars',
+        'Viet Cong forces overran Saigon’s outer defenses and ended the hamlet program',
+        'Outnumbered Viet Cong troops defeated a larger, U.S.-equipped ARVN force',
+        'An ARVN victory there convinced Kennedy that advisers were no longer needed',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'At Ap Bac, 350 dug-in Viet Cong guerrillas held off 1,500 ARVN troops backed by artillery, M113 armored personnel carriers, and U.S. helicopters, shooting down five helicopters and killing three American advisers. It shattered MACV claims that ARVN was winning the ground war.',
       citationRef: 'c3-1',
@@ -74,10 +74,10 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       question:
         'What event in June 1963 crystallized global opposition to the Diem regime and prompted President Kennedy to state that "no news picture in history has generated so much emotion around the world"?',
       options: [
-        'The communist takeover of the central highlands.',
-        'The self-immolation of Buddhist monk Thich Quang Duc in an intersection in downtown Saigon.',
-        'The bombing of the American embassy by Viet Cong sappers.',
-        'The execution of American prisoners of war on national television.',
+        'The Battle of Ap Bac, filmed by American reporters in the Mekong Delta',
+        'Buddhist monk Thich Quang Duc’s self-immolation on a Saigon street',
+        'Police raids on Buddhist pagodas ordered by Ngo Dinh Nhu’s special forces',
+        'The shooting of Buddhist protesters outside the Hue radio station',
       ],
       correctIndex: 1,
       rationale:
@@ -89,12 +89,12 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       question:
         'What immediate political consequence followed the November 1–2, 1963 coup and execution of President Ngo Dinh Diem?',
       options: [
-        'South Vietnam established a stable democratic parliament that held nationwide elections.',
-        'The Viet Cong dissolved their army and negotiated an immediate peace agreement.',
-        'A chaotic series of twelve revolving-door military coups and counter-coups severely destabilized the Saigon government.',
-        'The United States immediately evacuated all military personnel and ended aid.',
+        'A civilian government held nationwide elections within six months',
+        'The Viet Cong agreed to a cease-fire and joined a coalition government',
+        'The United States cut off aid until a new constitution was ratified',
+        'A rapid series of coups and short-lived governments left Saigon unstable',
       ],
-      correctIndex: 2,
+      correctIndex: 3,
       rationale:
         'Rather than stabilizing South Vietnam, Diem’s death created a political vacuum. Over the next eighteen months, rival ARVN generals staged twelve successive coups and cabinet reshuffles, leaving the rural countryside almost completely open to Viet Cong expansion.',
       citationRef: 'c3-3',

@@ -67,7 +67,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-rule bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/70 transition-colors">
+    <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur-md border-b border-rule">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between gap-6">
           {/* Masthead Brand */}
@@ -75,14 +75,13 @@ export default function Header() {
             href="/"
             className="flex items-baseline gap-0.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs"
           >
-            <span className="font-editorial-serif text-[1.375rem] font-semibold tracking-tight text-ink group-hover:text-brand transition-colors">
+            <span className="font-display text-[1.375rem] font-semibold tracking-tight text-ink group-hover:text-brand transition-colors">
               America Unwrapped
             </span>
-            <span className="text-brand font-bold text-xl leading-none">.</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav aria-label="Main Navigation" className="hidden md:flex self-stretch items-stretch gap-7 text-xs font-semibold uppercase tracking-wider">
+          <nav aria-label="Main Navigation" className="hidden md:flex self-stretch items-stretch gap-7 text-sm font-medium">
             {NAVIGATION_LINKS.map((item) => {
               const isExplore = item.href === '/vietnam';
               const isActive =
@@ -103,11 +102,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         aria-current={isActive ? 'page' : undefined}
-                        className={`transition-colors inline-flex items-center relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${
-                          isActive
-                            ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand'
-                            : 'text-ink-muted hover:text-ink'
-                        }`}
+                        className={`transition-colors inline-flex items-center relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${ isActive ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand' : 'text-ink-muted hover:text-ink' }`}
                       >
                         {item.label}
                       </Link>
@@ -139,7 +134,7 @@ export default function Header() {
                       >
                         {/* Top Bar inside Dropdown */}
                         <div className="flex items-center justify-between pb-3 mb-4 border-b border-rule text-xs">
-                          <span className="font-editorial-serif text-base font-semibold text-ink">
+                          <span className="font-display text-base font-semibold text-ink">
                             The Vietnam War: 12 Historical Inquiries (1945–1975)
                           </span>
                           <Link
@@ -147,7 +142,7 @@ export default function Header() {
                             onClick={() => setExploreDropdownOpen(false)}
                             className="text-brand hover:underline font-semibold"
                           >
-                            Explore Overview &rarr;
+                            Explore Overview
                           </Link>
                         </div>
 
@@ -156,7 +151,7 @@ export default function Header() {
                           {chapterEras.map((era, eIdx) => (
                             <div key={eIdx} className="space-y-2.5">
                               <div>
-                                <h4 className="eyebrow text-brand">
+                                <h4 className="meta text-brand">
                                   {era.title}
                                 </h4>
                                 <span className="text-[10px] text-ink-soft block">
@@ -200,7 +195,7 @@ export default function Header() {
                             onClick={() => setExploreDropdownOpen(false)}
                             className="text-brand hover:underline font-semibold"
                           >
-                            Unit Cheat Sheet &amp; Quizzes &rarr;
+                            Unit Cheat Sheet &amp; Quizzes
                           </Link>
                         </div>
                       </div>
@@ -214,11 +209,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`transition-colors inline-flex items-center relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${
-                    isActive
-                      ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand'
-                      : 'text-ink-muted hover:text-ink'
-                  }`}
+                  className={`transition-colors inline-flex items-center relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs ${ isActive ? 'text-ink after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-brand' : 'text-ink-muted hover:text-ink' }`}
                 >
                   {item.label}
                 </Link>
@@ -264,11 +255,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className={`flex-1 py-2.5 px-3 rounded-md transition-colors ${
-                          isActive
-                            ? 'bg-parchment-light text-brand font-bold'
-                            : 'text-ink hover:bg-parchment hover:text-brand'
-                        }`}
+                        className={`flex-1 py-2.5 px-3 rounded-md transition-colors ${ isActive ? 'bg-parchment-light text-brand font-bold' : 'text-ink hover:bg-parchment hover:text-brand' }`}
                       >
                         {item.label}
                       </Link>
@@ -291,7 +278,7 @@ export default function Header() {
 
                     {/* Mobile Chapters Accordion */}
                     {mobileExploreOpen && (
-                      <div className="pl-4 pr-2 py-2 space-y-1.5 bg-parchment border-l-2 border-brand ml-3 rounded-r-xs text-xs">
+                      <div className="pl-4 pr-2 py-2 space-y-1.5 bg-parchment border-l border-brand ml-3 rounded-r-xs text-xs">
                         {VIETNAM_CHAPTERS.map((ch) => (
                           <Link
                             key={ch.id}
@@ -316,11 +303,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block py-2.5 px-3 rounded-md transition-colors ${
-                    isActive
-                      ? 'bg-parchment-light text-brand font-bold'
-                      : 'text-ink hover:bg-parchment hover:text-brand'
-                  }`}
+                  className={`block py-2.5 px-3 rounded-md transition-colors ${ isActive ? 'bg-parchment-light text-brand font-bold' : 'text-ink hover:bg-parchment hover:text-brand' }`}
                 >
                   {item.label}
                 </Link>

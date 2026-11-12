@@ -13,9 +13,9 @@ interface ModuleFrameProps {
 }
 
 /**
- * Shared shell for every interactive or visual module: question, one-line
- * instruction, the figure, a takeaway, and a source line. Keeps modules
- * looking like one product instead of twelve.
+ * Shared frame for every interactive or visual module: question, one-line
+ * instruction, the figure, a takeaway, and a source line. Set like a newspaper
+ * infographic: title above, caption below, and no box or rules around it.
  */
 export default function ModuleFrame({
   question,
@@ -27,23 +27,19 @@ export default function ModuleFrame({
   className = '',
 }: ModuleFrameProps) {
   return (
-    // overflow-clip (not hidden) so position: sticky children still pin to the viewport
-    <figure className={`card-surface rounded-xl overflow-clip ${className}`}>
-      <div className="px-5 sm:px-8 pt-5 sm:pt-7 pb-4 border-b border-rule">
-        <h3 className="font-editorial-serif text-xl sm:text-2xl font-medium tracking-tight text-ink">{question}</h3>
-        {instruction && <p className="mt-1 text-sm text-ink-muted">{instruction}</p>}
-      </div>
-      {children}
+    <figure className={className}>
+      <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink">{question}</h3>
+      {instruction && <p className="mt-1 text-[0.9375rem] text-ink-muted">{instruction}</p>}
+      <div className="mt-5">{children}</div>
       {(takeaway || caption) && (
-        <figcaption className="px-5 sm:px-8 py-4 sm:py-5 border-t border-rule bg-parchment-light space-y-2">
+        <figcaption className="mt-6 space-y-2 max-w-3xl">
           {takeaway && (
-            <p className="text-sm sm:text-base text-ink leading-relaxed">
-              <span className="eyebrow text-brand mr-2">Takeaway</span>
-              {takeaway}
+            <p className="text-base text-ink leading-relaxed">
+              <strong className="font-semibold">Takeaway:</strong> {takeaway}
             </p>
           )}
           {caption && (
-            <p className="text-xs text-ink-soft">
+            <p className="text-[0.8125rem] text-ink-soft">
               {caption}
               {citationId && (
                 <>

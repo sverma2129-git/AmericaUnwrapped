@@ -85,9 +85,9 @@ export default function CollapseOffensiveMap() {
   return (
     <div className="space-y-6">
       {/* Editorial Phase Scrubber */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800 gap-3 text-xs font-archival-mono">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-3 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          <span className="font-bold text-stone-900">
             Campaign Cartography
           </span>
           <span className="text-stone-500 ml-2">&bull; The 55-Day Spring 1975 Collapse</span>
@@ -99,11 +99,7 @@ export default function CollapseOffensiveMap() {
             <button
               key={idx}
               onClick={() => setActivePhase(idx as PhaseIndex)}
-              className={`px-2.5 py-1 rounded-xs border transition-colors cursor-pointer whitespace-nowrap ${
-                activePhase === idx
-                  ? 'bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900 border-stone-900 dark:border-stone-100 font-bold'
-                  : 'bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 border-stone-300 dark:border-stone-700 hover:border-stone-500'
-              }`}
+              className={`px-2.5 py-1 rounded-xs border transition-colors cursor-pointer whitespace-nowrap ${ activePhase === idx ? 'bg-stone-900 text-stone-100 border-stone-900 font-bold' : 'bg-white text-stone-700 border-stone-300 hover:border-stone-500' }`}
             >
               Phase {idx + 1}
             </button>
@@ -114,7 +110,7 @@ export default function CollapseOffensiveMap() {
       {/* Map & Operational Ledger Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Geographic Map of South Vietnam with Highways and Advances */}
-        <div className="lg:col-span-6 bg-[#eee8db] dark:bg-[#1a1815] border border-stone-300 dark:border-stone-700 rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden shadow-inner">
+        <div className="lg:col-span-6 bg-[#eee8db] border border-stone-300 rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
           <svg viewBox="180 50 250 460" className="w-full h-full select-none" role="img" aria-label="1975 Spring Offensive operational map">
             {/* South Vietnam Coastline Silhouette */}
             <path
@@ -122,7 +118,7 @@ export default function CollapseOffensiveMap() {
               fill="#e7dfd1"
               stroke="#78716c"
               strokeWidth="1.5"
-              className="dark:fill-[#24211d] dark:stroke-stone-600"
+              className=""
             />
 
             {/* Strategic Highways */}
@@ -134,7 +130,7 @@ export default function CollapseOffensiveMap() {
               strokeWidth="2"
               strokeDasharray="3,3"
             />
-            <text x="365" y="240" className="fill-stone-500 font-archival-mono text-[7px] rotate-75">
+            <text x="365" y="240" className="fill-stone-500 text-[7px] rotate-75">
               ROUTE 1
             </text>
 
@@ -146,7 +142,7 @@ export default function CollapseOffensiveMap() {
               strokeWidth="1.5"
               strokeDasharray="2,2"
             />
-            <text x="275" y="210" className="fill-stone-500 font-archival-mono text-[7px] rotate-70">
+            <text x="275" y="210" className="fill-stone-500 text-[7px] rotate-70">
               ROUTE 14
             </text>
 
@@ -158,7 +154,7 @@ export default function CollapseOffensiveMap() {
               strokeWidth="2"
               strokeDasharray="2,2"
             />
-            <text x="325" y="275" className="fill-red-800 dark:fill-red-400 font-archival-mono text-[7px] font-bold">
+            <text x="325" y="275" className="fill-red-800 text-[7px] font-bold">
               ROUTE 7B
             </text>
 
@@ -209,9 +205,7 @@ export default function CollapseOffensiveMap() {
                   <text
                     x={city.x + 8}
                     y={city.y + 3}
-                    className={`font-archival-mono text-[8px] font-bold ${
-                      isCurrent ? 'fill-red-950 dark:fill-red-300 font-extrabold underline' : 'fill-stone-800 dark:fill-stone-300'
-                    }`}
+                    className={`text-[8px] font-bold ${ isCurrent ? 'fill-red-950 font-extrabold underline' : 'fill-stone-800' }`}
                   >
                     {city.name}
                   </text>
@@ -223,44 +217,44 @@ export default function CollapseOffensiveMap() {
 
         {/* Phase Narrative & Logistic Analysis */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="p-4 bg-white dark:bg-[#121110] border border-stone-200 dark:border-stone-800 rounded-xs">
-            <div className="flex items-center justify-between text-[10px] font-archival-mono text-stone-500 mb-1">
+          <div className="p-4 bg-white border border-stone-200 rounded-xs">
+            <div className="flex items-center justify-between text-[10px] text-stone-500 mb-1">
               <span>PHASE {activePhase + 1} OF 5</span>
               <span>{current.date}</span>
             </div>
-            <h4 className="font-editorial-serif text-xl font-bold text-stone-900 dark:text-stone-100">
+            <h4 className="font-display text-xl font-bold text-stone-900">
               {current.title}
             </h4>
             <div className="text-xs text-brand font-medium mt-0.5">
               Sector: {current.location}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-stone-100 dark:border-stone-800">
-              <span className="font-archival-mono text-[10px] uppercase tracking-wider text-stone-500 font-bold block mb-1">
+            <div className="mt-4 pt-3 border-t border-stone-100">
+              <span className="text-[10px] text-stone-500 font-bold block mb-1">
                 Operational Realities:
               </span>
-              <p className="font-editorial-serif text-sm text-stone-800 dark:text-stone-200 leading-relaxed">
+              <p className="font-display text-sm text-stone-800 leading-relaxed">
                 {current.narrative}
               </p>
             </div>
           </div>
 
           {/* Aid Cuts & Logistics Factor */}
-          <div className="p-4 bg-stone-50 dark:bg-[#181614] border border-stone-200 dark:border-stone-800 rounded-xs text-xs">
-            <span className="font-archival-mono font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400 block mb-1">
+          <div className="p-4 bg-stone-50 border border-stone-200 rounded-xs text-xs">
+            <span className="font-bold text-stone-600 block mb-1">
               Logistical &amp; Aid Factors:
             </span>
-            <p className="font-editorial-serif text-stone-700 dark:text-stone-300 leading-relaxed text-sm">
+            <p className="font-display text-stone-700 leading-relaxed text-sm">
               {current.logisticsAndAid}
             </p>
           </div>
 
           {/* Historical Consequence */}
-          <div className="p-4 bg-stone-100/80 dark:bg-stone-900/60 border-l-2 border-stone-800 dark:border-stone-200 rounded-r-xs text-xs">
-            <span className="font-archival-mono font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300 block mb-1">
+          <div className="p-4 bg-stone-100/80 border-l border-stone-800 rounded-r-xs text-xs">
+            <span className="font-bold text-stone-700 block mb-1">
               Significance in the 55-Day Arc:
             </span>
-            <p className="font-editorial-serif text-stone-800 dark:text-stone-200 leading-relaxed">
+            <p className="font-display text-stone-800 leading-relaxed">
               {current.significance}
             </p>
           </div>

@@ -27,10 +27,7 @@ export default function MasterQuiz({ allQuestions, groups }: MasterQuizProps) {
     <section aria-label="Master Practice Quiz" className="space-y-8">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-rule pb-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            Self-Grading Assessment Mode
-          </span>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             Multi-Chapter Master Practice Quiz
           </h2>
         </div>
@@ -42,11 +39,7 @@ export default function MasterQuiz({ allQuestions, groups }: MasterQuizProps) {
               type="button"
               aria-pressed={filter === f.id}
               onClick={() => setFilter(f.id)}
-              className={`px-3 py-1.5 rounded-xs border cursor-pointer font-medium ${
-                filter === f.id
-                  ? 'bg-brand text-white border-brand font-bold'
-                  : 'bg-white text-ink-muted border-rule hover:border-brand'
-              }`}
+              className={`px-3 py-1.5 rounded-xs border cursor-pointer font-medium ${ filter === f.id ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
             >
               {f.label}
             </button>

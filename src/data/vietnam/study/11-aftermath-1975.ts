@@ -59,12 +59,12 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the official casualty figure disclosed by the Vietnamese government in 1995 regarding the total number of North Vietnamese and Viet Cong combatants killed during the war against the United States?',
       options: [
-        '58,220 combatants',
-        'Approximately 1.1 million soldiers killed',
-        'Fewer than 10,000 soldiers',
-        'Over 15 million soldiers',
+        'About 58,000 soldiers killed',
+        'About 250,000 soldiers killed',
+        'About 3 million soldiers killed',
+        'About 1.1 million soldiers killed',
       ],
-      correctIndex: 1,
+      correctIndex: 3,
       rationale:
         'Breaking twenty years of official silence on the 20th anniversary of Saigon’s fall, Hanoi officially announced in April 1995 that 1.1 million North Vietnamese and Viet Cong combatants died fighting American and South Vietnamese forces, alongside an estimated 2 million civilian deaths.',
       citationRef: 'c11-1',
@@ -74,10 +74,10 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary human rights crisis that prompted hundreds of thousands of South Vietnamese families to flee into the South China Sea as "Boat People" after 1975?',
       options: [
-        'Mandatory relocation to nuclear power facilities.',
-        'Widespread political persecution, confinement of 1 million citizens in harsh re-education camps, and forced relocation to undeveloped rural New Economic Zones.',
-        'A formal invitation by the French government to claim ancestral land in Europe.',
-        'A military invasion of South Vietnam by the United States Navy.',
+        'A nationwide famine after drought destroyed the Mekong Delta’s rice harvest',
+        'Political persecution, re-education camps, and forced moves to rural zones',
+        'A Chinese invasion of southern Vietnam soon after the fall of Saigon in 1975',
+        'A U.N. program that offered free passage to France for former officials',
       ],
       correctIndex: 1,
       rationale:
@@ -89,12 +89,12 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       question:
         'Which two prominent American political leaders—both decorated Vietnam War veterans—played the decisive bipartisan role in persuading Congress and President Clinton to normalize diplomatic relations with Vietnam in 1995?',
       options: [
-        'Senators John McCain (R-AZ) and John Kerry (D-MA)',
-        'General William Westmoreland and Robert McNamara',
-        'President Richard Nixon and Henry Kissinger',
-        'Barry Goldwater and George McGovern',
+        'Senators Bob Dole and Strom Thurmond',
+        'James Baker and Senator Sam Nunn',
+        'Senators John McCain and John Kerry',
+        'Senators Daniel Inouye and Ted Stevens',
       ],
-      correctIndex: 0,
+      correctIndex: 2,
       rationale:
         'Republican Senator John McCain (who spent five and a half years as a tortured POW in the "Hanoi Hilton") and Democratic Senator John Kerry (decorated Navy swift boat commander and anti-war veteran) formed a historic partnership to resolve the fate of MIAs, giving President Clinton the political cover to restore relations.',
       citationRef: 'c11-3',

@@ -4,17 +4,16 @@ import React, { useState } from 'react';
 import { QuizQuestion } from '@/types/study';
 import { useCitation } from '@/components/common/CitationContext';
 import { QuizAnswer, scoreQuiz } from '@/lib/study';
+import Icon from '@/components/common/Icon';
 
 interface ChapterQuizProps {
   title?: string;
   questions: QuizQuestion[];
-  chapterNumber?: number;
 }
 
 export default function ChapterQuiz({
   title = 'Test Your Understanding',
   questions,
-  chapterNumber,
 }: ChapterQuizProps) {
   const { openCitation } = useCitation();
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -79,15 +78,12 @@ export default function ChapterQuiz({
   return (
     <section
       aria-label="Chapter Self-Quiz"
-      className="my-10 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink shadow-2xs transition-colors"
+      className="my-10 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink transition-colors"
     >
       {/* Quiz Header */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-rule gap-2 mb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            Exam Prep &bull; Concept Check {chapterNumber ? `Ch. ${chapterNumber}` : ''}
-          </span>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold">
             {title}
           </h2>
         </div>
@@ -114,7 +110,7 @@ export default function ChapterQuiz({
 
           {/* Question Text */}
           <div className="py-2">
-            <h3 className="font-editorial-serif text-lg sm:text-xl font-bold text-ink leading-snug">
+            <h3 className="font-display text-lg sm:text-xl font-bold text-ink leading-snug">
               {currentQ.question}
             </h3>
           </div>
@@ -156,17 +152,9 @@ export default function ChapterQuiz({
                   className={`w-full text-left p-4 rounded-xs border transition-all flex items-start gap-3.5 cursor-pointer focus-visible:ring-2 focus-visible:ring-brand ${optionStyle}`}
                 >
                   <span
-                    className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-mono font-bold shrink-0 transition-colors ${
-                      isSubmitted && isCorrectOption
-                        ? 'bg-emerald-600 text-white'
-                        : isSubmitted && isSelected && !isCorrectOption
-                        ? 'bg-brand text-white'
-                        : isSelected
-                        ? 'bg-brand text-white'
-                        : 'bg-rule text-ink'
-                    }`}
+                    className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold shrink-0 transition-colors ${ isSubmitted && isCorrectOption ? 'bg-emerald-600 text-white' : isSubmitted && isSelected && !isCorrectOption ? 'bg-brand text-white' : isSelected ? 'bg-brand text-white' : 'bg-rule text-ink' }`}
                   >
-                    {isSubmitted && isCorrectOption ? '✓' : isSubmitted && isSelected && !isCorrectOption ? '✕' : letters[idx]}
+                    {isSubmitted && isCorrectOption ? <Icon name="check" className="w-3.5 h-3.5" strokeWidth={3} /> : isSubmitted && isSelected && !isCorrectOption ? <Icon name="x" className="w-3.5 h-3.5" strokeWidth={3} /> : letters[idx]}
                   </span>
                   <span className="font-sans text-sm sm:text-base leading-relaxed pt-0.5">
                     {option}
@@ -179,19 +167,11 @@ export default function ChapterQuiz({
           {/* Rationale & Source Evidence (Shown immediately after submission) */}
           {isSubmitted && (
             <div
-              className={`p-5 rounded-xs border animate-in fade-in duration-200 space-y-3 ${
-                selectedOption === currentQ.correctIndex
-                  ? 'bg-emerald-50/70 border-emerald-300'
-                  : 'bg-brand-tint border-brand-rule'
-              }`}
+              className={`p-5 rounded-xs border animate-in fade-in duration-200 space-y-3 ${ selectedOption === currentQ.correctIndex ? 'bg-emerald-50/70 border-emerald-300' : 'bg-brand-tint border-brand-rule' }`}
             >
               <div className="flex items-center gap-2">
                 <span
-                  className={`text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-xs text-white ${
-                    selectedOption === currentQ.correctIndex
-                      ? 'bg-emerald-600'
-                      : 'bg-brand'
-                  }`}
+                  className={`text-xs font-bold px-2 py-0.5 rounded-xs text-white ${ selectedOption === currentQ.correctIndex ? 'bg-emerald-600' : 'bg-brand' }`}
                 >
                   {selectedOption === currentQ.correctIndex ? 'Correct Analysis' : 'Explanation & Context'}
                 </span>
@@ -214,7 +194,7 @@ export default function ChapterQuiz({
                     onClick={() => openCitation(currentQ.citationRef!)}
                     className="font-bold text-brand hover:underline cursor-pointer"
                   >
-                    Inspect Source Dossier &rarr;
+                    Inspect Source Dossier
                   </button>
                 </div>
               )}
@@ -227,13 +207,9 @@ export default function ChapterQuiz({
               type="button"
               onClick={handlePreviousQuestion}
               disabled={currentIndex === 0}
-              className={`text-xs uppercase tracking-wider px-3 py-2 rounded-xs transition-colors cursor-pointer ${
-                currentIndex === 0
-                  ? 'opacity-30 cursor-not-allowed text-ink-soft'
-                  : 'text-ink-muted hover:text-ink'
-              }`}
+              className={`text-xs px-3 py-2 rounded-xs transition-colors cursor-pointer ${ currentIndex === 0 ? 'opacity-30 cursor-not-allowed text-ink-soft' : 'text-ink-muted hover:text-ink' }`}
             >
-              &larr; Previous Question
+              Previous Question
             </button>
 
             {!isSubmitted ? (
@@ -241,11 +217,7 @@ export default function ChapterQuiz({
                 type="button"
                 onClick={handleCheckAnswer}
                 disabled={selectedOption === null}
-                className={`px-6 py-2.5 text-xs font-bold uppercase tracking-wider rounded-xs transition-colors ${
-                  selectedOption === null
-                    ? 'bg-rule text-ink-soft cursor-not-allowed'
-                    : 'bg-brand hover:bg-brand-hover text-white cursor-pointer shadow-xs'
-                }`}
+                className={`px-6 py-2.5 text-xs font-bold rounded-xs transition-colors ${ selectedOption === null ? 'bg-rule text-ink-soft cursor-not-allowed' : 'bg-brand hover:bg-brand-hover text-white cursor-pointer' }`}
               >
                 Check Answer
               </button>
@@ -253,9 +225,9 @@ export default function ChapterQuiz({
               <button
                 type="button"
                 onClick={handleNextQuestion}
-                className="px-6 py-2.5 text-xs font-bold uppercase tracking-wider bg-brand hover:bg-brand-hover text-white rounded-xs transition-colors cursor-pointer shadow-xs"
+                className="px-6 py-2.5 text-xs font-bold bg-brand hover:bg-brand-hover text-white rounded-xs transition-colors cursor-pointer"
               >
-                {currentIndex < totalQuestions - 1 ? 'Next Question →' : 'View Final Results →'}
+                {currentIndex < totalQuestions - 1 ? 'Next question' : 'View Final Results →'}
               </button>
             )}
           </div>
@@ -264,13 +236,13 @@ export default function ChapterQuiz({
         /* Quiz Completed Summary Screen */
         <div className="py-6 text-center space-y-6 animate-in fade-in zoom-in-95 duration-200">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-parchment border-2 border-brand mb-2">
-            <span className="font-editorial-serif text-3xl font-bold text-brand">
+            <span className="font-display text-3xl font-bold text-brand">
               {scorePercent}%
             </span>
           </div>
 
           <div className="space-y-2">
-            <h3 className="font-editorial-serif text-2xl font-bold text-ink">
+            <h3 className="font-display text-2xl font-bold text-ink">
               {scorePercent >= 80 ? 'Mastery Demonstrated' : scorePercent >= 60 ? 'Solid Foundation' : 'Review Recommended'}
             </h3>
             <p className="font-sans text-sm text-ink-muted max-w-md mx-auto">
@@ -280,7 +252,7 @@ export default function ChapterQuiz({
 
           {/* Detailed Question Review Breakdown */}
           <div className="text-left max-w-xl mx-auto space-y-3 pt-4 border-t border-rule">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand block">
+            <span className="text-xs font-bold text-brand block">
               Question-by-Question Review:
             </span>
             {questions.map((q, idx) => {
@@ -289,17 +261,13 @@ export default function ChapterQuiz({
               return (
                 <div
                   key={q.id}
-                  className={`p-3 rounded-xs border text-xs flex items-center justify-between ${
-                    isCorrect
-                      ? 'bg-emerald-50/60 border-emerald-300 text-emerald-950'
-                      : 'bg-brand-tint border-brand-rule text-brand'
-                  }`}
+                  className={`p-3 rounded-xs border text-xs flex items-center justify-between ${ isCorrect ? 'bg-emerald-50/60 border-emerald-300 text-emerald-950' : 'bg-brand-tint border-brand-rule text-brand' }`}
                 >
                   <span className="font-sans truncate max-w-[420px]">
-                    <strong className="font-mono mr-2">Q{idx + 1}:</strong> {q.question}
+                    <strong className="mr-2">Q{idx + 1}:</strong> {q.question}
                   </span>
                   <span className="font-bold shrink-0 ml-2">
-                    {isCorrect ? '✓ Correct' : '✕ Missed'}
+                    {isCorrect ? 'Correct' : 'Missed'}
                   </span>
                 </div>
               );
@@ -310,9 +278,9 @@ export default function ChapterQuiz({
             <button
               type="button"
               onClick={handleRestart}
-              className="px-6 py-2.5 text-xs font-bold uppercase tracking-wider bg-brand hover:bg-brand-hover text-white rounded-xs transition-colors cursor-pointer shadow-xs"
+              className="px-6 py-2.5 text-xs font-bold bg-brand hover:bg-brand-hover text-white rounded-xs transition-colors cursor-pointer"
             >
-              Retake Quiz &rarr;
+              Retake Quiz
             </button>
           </div>
         </div>

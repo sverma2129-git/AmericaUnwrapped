@@ -60,15 +60,12 @@ export default function FlashcardDeck({
   return (
     <section
       aria-label="Key Terms Flashcard Deck"
-      className="my-10 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink shadow-2xs transition-colors"
+      className="my-10 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink transition-colors"
     >
       {/* Header & Mode Switcher */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-rule gap-2 mb-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            Study Tool &bull; Exam Vocabulary
-          </span>
-          <h2 className="font-editorial-serif text-2xl font-bold">
+          <h2 className="font-display text-2xl font-bold">
             {title}
           </h2>
         </div>
@@ -77,22 +74,14 @@ export default function FlashcardDeck({
           <button
             type="button"
             onClick={() => setViewMode('card')}
-            className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${
-              viewMode === 'card'
-                ? 'bg-brand text-white border-brand font-bold'
-                : 'bg-white text-ink-muted border-rule hover:border-brand'
-            }`}
+            className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ viewMode === 'card' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
           >
             Flip Cards
           </button>
           <button
             type="button"
             onClick={() => setViewMode('list')}
-            className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${
-              viewMode === 'list'
-                ? 'bg-brand text-white border-brand font-bold'
-                : 'bg-white text-ink-muted border-rule hover:border-brand'
-            }`}
+            className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ viewMode === 'list' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
           >
             View All ({total})
           </button>
@@ -107,7 +96,7 @@ export default function FlashcardDeck({
               Card {currentIndex + 1} of {total}
             </span>
             <span className="hidden sm:inline text-ink-soft">
-              [Space to flip &bull; &larr; &rarr; to navigate]
+              [Space to flip &bull; to navigate]
             </span>
           </div>
 
@@ -117,11 +106,11 @@ export default function FlashcardDeck({
             role="button"
             aria-label={`${currentCard.term}. ${isFlipped ? 'Showing definition' : 'Press to show definition'}`}
             onClick={handleFlip}
-            className="w-full min-h-[260px] sm:min-h-[280px] p-6 sm:p-8 rounded-xs bg-paper border-2 border-rule hover:border-brand transition-all cursor-pointer shadow-xs flex flex-col justify-between select-none focus-visible:ring-2 focus-visible:ring-brand"
+            className="w-full min-h-[260px] sm:min-h-[280px] p-6 sm:p-8 rounded-xs bg-paper border-2 border-rule hover:border-brand transition-all cursor-pointer flex flex-col justify-between select-none focus-visible:ring-2 focus-visible:ring-brand"
           >
             {/* Top Indicator */}
             <div className="flex items-center justify-between text-xs text-ink-muted">
-              <span className="uppercase tracking-wider font-bold text-brand">
+              <span className="font-bold text-brand">
                 {isFlipped ? 'Definition & Significance' : 'Historical Term'}
               </span>
               <span className="text-ink-soft">
@@ -133,11 +122,11 @@ export default function FlashcardDeck({
             <div className="my-auto py-4">
               {!isFlipped ? (
                 <div className="text-center space-y-2">
-                  <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink">
                     {currentCard.term}
                   </h3>
                   {currentCard.phonetic && (
-                    <span className="font-mono text-xs text-brand italic block">
+                    <span className="text-xs text-brand italic block">
                       /{currentCard.phonetic}/
                     </span>
                   )}
@@ -146,9 +135,9 @@ export default function FlashcardDeck({
                   </p>
                 </div>
               ) : (
-                <div className="space-y-3 text-left font-sans animate-in fade-in duration-150">
+                <div className="space-y-3 text-left font-sans">
                   <div>
-                    <strong className="text-[10px] uppercase tracking-wider text-ink-muted block mb-0.5">
+                    <strong className="text-[10px] text-ink-muted block mb-0.5">
                       Definition:
                     </strong>
                     <p className="text-sm sm:text-base text-ink leading-relaxed">
@@ -157,7 +146,7 @@ export default function FlashcardDeck({
                   </div>
 
                   <div>
-                    <strong className="text-[10px] uppercase tracking-wider text-ink-muted block mb-0.5">
+                    <strong className="text-[10px] text-ink-muted block mb-0.5">
                       Why It Matters for the Exam:
                     </strong>
                     <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -187,15 +176,15 @@ export default function FlashcardDeck({
             <button
               type="button"
               onClick={handlePrev}
-              className="px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xs border border-rule bg-parchment hover:bg-rule text-ink transition-colors cursor-pointer"
+              className="px-4 py-2 text-xs font-semibold rounded-xs border border-rule bg-parchment hover:bg-rule text-ink transition-colors cursor-pointer"
             >
-              &larr; Previous
+              Previous
             </button>
 
             <button
               type="button"
               onClick={handleFlip}
-              className="px-5 py-2 text-xs font-semibold uppercase tracking-wider rounded-xs bg-brand hover:bg-brand-hover text-white transition-colors cursor-pointer shadow-xs"
+              className="px-5 py-2 text-xs font-semibold rounded-xs bg-brand hover:bg-brand-hover text-white transition-colors cursor-pointer"
             >
               {isFlipped ? 'Show Term' : 'Flip Card'}
             </button>
@@ -203,9 +192,9 @@ export default function FlashcardDeck({
             <button
               type="button"
               onClick={handleNext}
-              className="px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-xs border border-rule bg-parchment hover:bg-rule text-ink transition-colors cursor-pointer"
+              className="px-4 py-2 text-xs font-semibold rounded-xs border border-rule bg-parchment hover:bg-rule text-ink transition-colors cursor-pointer"
             >
-              Next &rarr;
+              Next
             </button>
           </div>
         </div>
@@ -222,11 +211,11 @@ export default function FlashcardDeck({
                   <span className="text-xs font-bold text-brand">
                     {idx + 1}.
                   </span>
-                  <h4 className="font-editorial-serif font-bold text-base sm:text-lg text-ink">
+                  <h4 className="font-display font-bold text-base sm:text-lg text-ink">
                     {card.term}
                   </h4>
                   {card.phonetic && (
-                    <span className="font-mono text-xs text-brand italic">
+                    <span className="text-xs text-brand italic">
                       /{card.phonetic}/
                     </span>
                   )}
@@ -243,7 +232,7 @@ export default function FlashcardDeck({
               </p>
 
               <div className="text-xs font-sans text-ink-muted">
-                <strong className="text-[10px] uppercase tracking-wider text-ink-muted">
+                <strong className="text-[10px] text-ink-muted">
                   Historical Significance:{' '}
                 </strong>
                 {card.significance}

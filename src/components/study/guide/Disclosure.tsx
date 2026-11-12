@@ -25,9 +25,7 @@ export default function Disclosure({
     <Wrapper className="bg-parchment border border-rule rounded-xs overflow-hidden">
       <details open={defaultOpen} className="group">
         <summary
-          className={`list-none [&::-webkit-details-marker]:hidden w-full text-left flex justify-between gap-4 hover:bg-parchment-light cursor-pointer transition-colors ${
-            large ? 'p-5 sm:p-6 items-start' : 'p-4 sm:p-5 items-center'
-          }`}
+          className={`list-none [&::-webkit-details-marker]:hidden w-full text-left flex justify-between gap-4 hover:bg-parchment-light cursor-pointer transition-colors ${ large ? 'p-5 sm:p-6 items-start' : 'p-4 sm:p-5 items-center' }`}
         >
           <div className={large ? 'space-y-2' : 'space-y-1'}>{summary}</div>
           <div className={`flex items-center gap-2 shrink-0 ${large ? 'mt-1' : ''}`} aria-hidden="true">

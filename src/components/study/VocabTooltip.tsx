@@ -39,7 +39,7 @@ export default function VocabTooltip({
           role="tooltip"
           className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 sm:w-72 p-3.5 bg-paper border border-rule text-ink rounded-xs shadow-xl text-xs z-50 pointer-events-none animate-in fade-in zoom-in-95 duration-100 block"
         >
-          <strong className="font-editorial-serif text-sm block mb-1 text-brand">
+          <strong className="font-display text-sm block mb-1 text-brand">
             {term}
           </strong>
           <span className="font-sans block leading-relaxed text-ink-muted">

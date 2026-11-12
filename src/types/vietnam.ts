@@ -138,7 +138,13 @@ export interface LandmarkMoment {
   bannerTitle: string;
   dateline: string;
   location: string;
+  /**
+   * Shown in quotation marks only when `quoteCitationId` points at a verified
+   * verbatim quotation whose exactQuotation equals this text; otherwise it is
+   * rendered as an attributed paraphrase.
+   */
   quote: string;
+  quoteCitationId?: string;
   quoteSpeaker: string;
   quoteContext: string;
 }
@@ -211,7 +217,57 @@ export type StoryVisual =
       sides: { stance: string; who: string; argument: string }[];
       outcome: string;
     }
-  | { kind: 'consequence' };
+  | { kind: 'consequence' }
+  | {
+      kind: 'night';
+      question: string;
+      instruction: string;
+      takeaway: string;
+      caption: string;
+      citationId: string;
+      steps: NightStep[];
+    }
+  | {
+      kind: 'compare';
+      question: string;
+      /** Exactly two columns, each with one cell per row label. */
+      columns: { label: string; verdict: string; cells: string[] }[];
+      rowLabels: string[];
+      takeaway: string;
+      citationId: string;
+    };
+
+/** One moment of a night told in two time zones (the Gulf of Tonkin reconstruction). */
+export interface NightStep {
+  localTime: string;
+  washingtonTime: string;
+  headline: string;
+  body: string;
+  scene: 'contacts' | 'firing' | 'overhead' | 'cable' | 'broadcast';
+  /** A verified verbatim quotation shown with the figure at this step. */
+  quoteCitationId?: string;
+}
+
+export type CourseId = 'ah1' | 'apush';
+
+/** A "historians disagree" box: positions with the evidence each side relies on. */
+export interface HistoriansDebate {
+  question: string;
+  agreed: string;
+  positions: { label: string; claim: string; evidence: string[] }[];
+}
+
+export type CourseTask =
+  | { kind: 'order'; prompt: string; items: { label: string; date: string }[] }
+  | { kind: 'explain'; prompt: string; starters: string[]; checklist: string[]; model: string }
+  | {
+      kind: 'stimulus';
+      citationId: string;
+      intro: string;
+      questions: { id: string; question: string; options: string[]; correctIndex: number; rationale: string }[];
+    }
+  | { kind: 'saq'; citationId: string; intro: string; parts: { label: string; prompt: string; model: string }[] }
+  | { kind: 'leq'; prompt: string; reasoning: string; scaffold: { label: string; hint: string }[] };
 
 export interface StoryBeat {
   id: string;
@@ -225,6 +281,11 @@ export interface StoryBeat {
 
 export interface ChapterStory {
   beats: StoryBeat[];
+  objectives?: Record<CourseId, string[]>;
+  debate?: HistoriansDebate;
+  /** Citation ids of verified quotations shown in the evidence locker, in reading order. */
+  evidence?: string[];
+  tasks?: Record<CourseId, CourseTask[]>;
 }
 
 export interface ChapterData {
@@ -235,10 +296,10 @@ export interface ChapterData {
   subtitle: string;
   summary: string;
   /**
-   * 'investigation' renders the evidence-led TonkinPilotView; 'layered' renders
-   * LayeredChapter from `story` (gist → story beats → evidence → review).
+   * 'layered' renders LayeredChapter from `story` (gist → story beats →
+   * evidence → practice); 'standard' renders ChapterContent.
    */
-  layout?: 'standard' | 'investigation' | 'layered';
+  layout?: 'standard' | 'layered';
   story?: ChapterStory;
   isLandmark?: boolean;
   landmarkMoment?: LandmarkMoment;

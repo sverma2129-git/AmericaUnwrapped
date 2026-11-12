@@ -122,9 +122,9 @@ export default function TetOffensiveMap() {
   return (
     <div className="space-y-6">
       {/* Editorial Header Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800 gap-3 text-xs font-archival-mono">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-3 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          <span className="font-bold text-stone-900">
             Operational Cartography
           </span>
           <span className="text-stone-500 ml-2">&bull; South Vietnam · Tet 1968 Strike Coordinates</span>
@@ -132,20 +132,16 @@ export default function TetOffensiveMap() {
 
         <button
           onClick={() => setShowSimultaneity(!showSimultaneity)}
-          className={`px-3 py-1 rounded-xs border transition-colors cursor-pointer text-xs ${
-            showSimultaneity
-              ? 'bg-brand text-white border-brand font-bold shadow-xs'
-              : 'bg-paper text-ink-muted border-rule hover:border-brand'
-          }`}
+          className={`px-3 py-1 rounded-xs border transition-colors cursor-pointer text-xs ${ showSimultaneity ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
         >
-          {showSimultaneity ? '● 36 Provincial Strikes: Visible' : '○ 36 Provincial Strikes: Filtered'}
+          {showSimultaneity ? '36 provincial strikes: shown' : '36 provincial strikes: hidden'}
         </button>
       </div>
 
       {/* Cartographic Grid: Map on Left / Theater Audit on Right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Geographic Map of South Vietnam */}
-        <div className="lg:col-span-6 bg-parchment border border-rule rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden shadow-xs">
+        <div className="lg:col-span-6 bg-parchment border border-rule rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
           <svg viewBox="180 50 250 460" className="w-full h-full select-none" role="img" aria-label="Geographic map of South Vietnam during the Tet Offensive">
             {/* South Vietnam Coastline Silhouette */}
             <path
@@ -157,18 +153,18 @@ export default function TetOffensiveMap() {
 
             {/* 17th Parallel DMZ Marker */}
             <line x1="180" y1="70" x2="260" y2="70" stroke="#8B252D" strokeWidth="2" strokeDasharray="4,2" />
-            <text x="185" y="65" className="fill-brand font-mono text-[8px] font-bold">
+            <text x="185" y="65" className="fill-brand text-[8px] font-bold">
               17th PARALLEL (DMZ)
             </text>
 
             {/* Region / Neighbor Labels */}
-            <text x="195" y="140" className="fill-ink-soft font-mono text-[9px] -rotate-45">
+            <text x="195" y="140" className="fill-ink-soft text-[9px] -rotate-45">
               LAOS
             </text>
-            <text x="210" y="320" className="fill-ink-soft font-mono text-[9px]">
+            <text x="210" y="320" className="fill-ink-soft text-[9px]">
               CAMBODIA
             </text>
-            <text x="350" y="110" className="fill-ink-muted font-mono text-[9px]">
+            <text x="350" y="110" className="fill-ink-muted text-[9px]">
               SOUTH CHINA SEA
             </text>
 
@@ -185,7 +181,6 @@ export default function TetOffensiveMap() {
                     fillOpacity="0.8"
                     stroke="#991b1b"
                     strokeWidth="1"
-                    className="animate-pulse"
                   />
                 ))}
               </g>
@@ -225,11 +220,7 @@ export default function TetOffensiveMap() {
                   <text
                     x={loc.coords.x + 8}
                     y={loc.coords.y + 3}
-                    className={`font-archival-mono text-[8px] font-bold ${
-                      isSelected
-                        ? 'fill-red-950 dark:fill-red-300 font-extrabold underline'
-                        : 'fill-stone-800 dark:fill-stone-200'
-                    }`}
+                    className={`text-[8px] font-bold ${ isSelected ? 'fill-red-950 font-extrabold underline' : 'fill-stone-800' }`}
                   >
                     {loc.name.split('(')[0].trim()}
                   </text>
@@ -241,22 +232,19 @@ export default function TetOffensiveMap() {
 
         {/* Selected Sector Historical Investigation */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="p-4 bg-paper border border-rule rounded-xs shadow-xs text-ink">
-            <span className="text-[10px] uppercase tracking-widest text-ink-soft block mb-1">
-              {current.corps}
-            </span>
-            <h4 className="font-editorial-serif text-xl font-bold text-ink">
+          <div className="p-4 bg-paper border border-rule rounded-xs text-ink">
+            <h4 className="font-display text-xl font-bold text-ink">
               {current.name}
             </h4>
-            <p className="font-editorial-serif italic text-xs text-ink-muted mt-1">
+            <p className="font-display text-xs text-ink-muted mt-1">
               {current.significance}
             </p>
 
             <div className="mt-4 pt-3 border-t border-rule">
-              <span className="text-[10px] uppercase tracking-wider text-brand font-bold block mb-1">
+              <span className="text-[10px] text-brand font-bold block mb-1">
                 Tactical Engagement:
               </span>
-              <p className="font-editorial-serif text-sm text-ink leading-relaxed">
+              <p className="font-display text-sm text-ink leading-relaxed">
                 {current.tacticalAction}
               </p>
             </div>
@@ -264,20 +252,20 @@ export default function TetOffensiveMap() {
 
           {/* Symmetrical Dual Repercussions */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans">
-            <div className="p-3 bg-parchment border border-rule rounded-xs shadow-xs">
-              <span className="text-[10px] uppercase font-bold text-brand block mb-1">
+            <div className="p-3 bg-parchment border border-rule rounded-xs">
+              <span className="text-[10px] font-bold text-brand block mb-1">
                 Hanoi’s Result (Battlefield):
               </span>
-              <p className="font-editorial-serif text-ink-muted leading-normal text-xs">
+              <p className="font-display text-ink-muted leading-normal text-xs">
                 {current.hanoiOutcome}
               </p>
             </div>
 
-            <div className="p-3 bg-parchment border border-rule rounded-xs shadow-xs">
-              <span className="text-[10px] uppercase font-bold text-ink block mb-1">
+            <div className="p-3 bg-parchment border border-rule rounded-xs">
+              <span className="text-[10px] font-bold text-ink block mb-1">
                 Washington’s Result (Politics):
               </span>
-              <p className="font-editorial-serif text-ink-muted leading-normal text-xs">
+              <p className="font-display text-ink-muted leading-normal text-xs">
                 {current.washingtonShock}
               </p>
             </div>
@@ -286,11 +274,11 @@ export default function TetOffensiveMap() {
       </div>
 
       {/* The Central Historiographical Paradox */}
-      <div className="p-4 bg-parchment border-l-4 border-brand border-t border-r border-b border-rule rounded-r-xs text-xs shadow-xs">
-        <span className="font-bold uppercase tracking-wider text-brand block mb-1">
+      <div className="p-4 bg-parchment border-l border-brand border-t border-r border-b border-rule rounded-r-xs text-xs">
+        <span className="font-bold text-brand block mb-1">
           The 1968 Strategic Paradox:
         </span>
-        <p className="font-editorial-serif text-ink leading-relaxed text-sm">
+        <p className="font-display text-ink leading-relaxed text-sm">
           Militarily, the Tet Offensive was an overwhelming defeat for communist forces: an estimated 40,000 Viet Cong fighters were killed, and no spontaneous southern revolution occurred. Politically and psychologically, however, the simultaneous assaults across 36 provincial capitals destroyed the Johnson administration’s narrative of progress, precipitating Walter Cronkite’s declaration of stalemate, General Westmoreland’s replacement, and President Johnson’s decision not to seek re-election.
         </p>
       </div>

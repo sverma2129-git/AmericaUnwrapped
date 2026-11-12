@@ -6,11 +6,11 @@ export default function GenevaDivisionMap() {
   const [activeLayer, setActiveLayer] = useState<'boundary' | 'refugees' | 'elections'>('boundary');
 
   return (
-    <figure className="my-10 border border-rule bg-parchment rounded-xs shadow-xs text-ink">
+    <figure className="my-10 border border-rule bg-parchment rounded-xs text-ink">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-ink">
+          <span className="font-bold text-ink">
             Geopolitical Cartography
           </span>
           <span className="text-ink-soft ml-2">&bull; The 17th Parallel &amp; Geneva Partition (1954–1956)</span>
@@ -19,33 +19,21 @@ export default function GenevaDivisionMap() {
           <button
             type="button"
             onClick={() => setActiveLayer('boundary')}
-            className={`px-2.5 py-1 text-xs uppercase tracking-wider transition-colors cursor-pointer border rounded-xs ${
-              activeLayer === 'boundary'
-                ? 'bg-brand text-white border-brand font-bold shadow-xs'
-                : 'bg-paper text-ink-muted border-rule hover:border-brand'
-            }`}
+            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'boundary' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
             The 17th Parallel
           </button>
           <button
             type="button"
             onClick={() => setActiveLayer('refugees')}
-            className={`px-2.5 py-1 text-xs uppercase tracking-wider transition-colors cursor-pointer border rounded-xs ${
-              activeLayer === 'refugees'
-                ? 'bg-brand text-white border-brand font-bold shadow-xs'
-                : 'bg-paper text-ink-muted border-rule hover:border-brand'
-            }`}
+            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'refugees' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
             Operation Passage to Freedom
           </button>
           <button
             type="button"
             onClick={() => setActiveLayer('elections')}
-            className={`px-2.5 py-1 text-xs uppercase tracking-wider transition-colors cursor-pointer border rounded-xs ${
-              activeLayer === 'elections'
-                ? 'bg-brand text-white border-brand font-bold shadow-xs'
-                : 'bg-paper text-ink-muted border-rule hover:border-brand'
-            }`}
+            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'elections' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
             The 1956 Election Veto
           </button>
@@ -54,14 +42,14 @@ export default function GenevaDivisionMap() {
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <span className="text-xs uppercase tracking-wider text-brand font-bold block">
+          <span className="text-xs text-brand font-bold block">
             {activeLayer === 'boundary'
               ? 'Provisional Military Demarcation Line (Ben Hai River)'
               : activeLayer === 'refugees'
               ? 'Operation Passage to Freedom (1954–1955)'
               : 'The Multi-Causal Partition Failure (1956)'}
           </span>
-          <h4 className="font-editorial-serif text-2xl font-bold text-ink mt-1">
+          <h4 className="font-display text-2xl font-bold text-ink mt-1">
             {activeLayer === 'boundary'
               ? 'A Temporary Truce Line That Hardened Into Cold War Partition'
               : activeLayer === 'refugees'
@@ -71,7 +59,7 @@ export default function GenevaDivisionMap() {
         </div>
 
         {/* Print-Cartography SVG Map */}
-        <div className="relative bg-paper border border-rule rounded-xs p-4 aspect-16/9 flex items-center justify-center overflow-hidden shadow-2xs">
+        <div className="relative bg-paper border border-rule rounded-xs p-4 aspect-16/9 flex items-center justify-center overflow-hidden">
           <svg viewBox="0 0 800 450" className="w-full h-full select-none" role="img" aria-label="Cartographic map of partitioned Vietnam">
             {/* North Vietnam Outline */}
             <path
@@ -80,10 +68,10 @@ export default function GenevaDivisionMap() {
               stroke="#A89F91"
               strokeWidth="2"
             />
-            <text x="360" y="110" className="fill-ink font-editorial-serif text-sm font-bold">
+            <text x="360" y="110" className="fill-ink font-display text-sm font-bold">
               Democratic Republic of Vietnam (North)
             </text>
-            <text x="360" y="130" className="fill-ink-soft font-mono text-xs">
+            <text x="360" y="130" className="fill-ink-soft text-xs">
               Hanoi &bull; Ho Chi Minh &bull; Land Reform Era
             </text>
 
@@ -94,10 +82,10 @@ export default function GenevaDivisionMap() {
               stroke="#A89F91"
               strokeWidth="2"
             />
-            <text x="370" y="330" className="fill-ink font-editorial-serif text-sm font-bold">
+            <text x="370" y="330" className="fill-ink font-display text-sm font-bold">
               State / Republic of Vietnam (South)
             </text>
-            <text x="370" y="350" className="fill-ink-soft font-mono text-xs">
+            <text x="370" y="350" className="fill-ink-soft text-xs">
               Saigon &bull; Ngo Dinh Diem
             </text>
 
@@ -111,7 +99,7 @@ export default function GenevaDivisionMap() {
               strokeWidth="2.5"
               strokeDasharray="6,4"
             />
-            <text x="400" y="215" textAnchor="middle" className="fill-brand font-mono text-xs uppercase font-bold">
+            <text x="400" y="215" textAnchor="middle" className="fill-brand text-xs font-bold">
               17th Parallel &bull; Ben Hai River DMZ
             </text>
 
@@ -125,10 +113,10 @@ export default function GenevaDivisionMap() {
                   strokeWidth="3"
                   markerEnd="url(#arrow)"
                 />
-                <text x="490" y="240" className="fill-ink font-mono text-xs font-bold">
+                <text x="490" y="240" className="fill-ink text-xs font-bold">
                   850,000–1,000,000 Refugees South
                 </text>
-                <text x="490" y="258" className="fill-ink-muted font-mono text-[10px]">
+                <text x="490" y="258" className="fill-ink-muted text-[10px]">
                   Assisted by U.S. Navy Task Force 90
                 </text>
               </g>
@@ -136,8 +124,8 @@ export default function GenevaDivisionMap() {
 
             {activeLayer === 'elections' && (
               <g>
-                <rect x="230" y="195" width="340" height="60" fill="#8B252D" rx="4" className="shadow-md" />
-                <text x="400" y="230" textAnchor="middle" fill="#ffffff" className="font-mono text-xs uppercase tracking-wider font-bold">
+                <rect x="230" y="195" width="340" height="60" fill="#8B252D" rx="4" className="" />
+                <text x="400" y="230" textAnchor="middle" fill="#ffffff" className="text-xs font-bold">
                   1956 Elections Cancelled &bull; Division Permanent
                 </text>
               </g>
@@ -146,9 +134,9 @@ export default function GenevaDivisionMap() {
         </div>
 
         {/* Narrative Analysis Ledger */}
-        <div className="p-6 bg-paper border border-rule rounded-xs space-y-3 font-sans text-xs sm:text-sm text-ink shadow-xs">
+        <div className="p-6 bg-paper border border-rule rounded-xs space-y-3 font-sans text-xs sm:text-sm text-ink">
           {activeLayer === 'boundary' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-editorial-serif text-sm sm:text-base">
+            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p>
                 The 1954 Geneva Declaration stipulated that the military demarcation line at the 17th parallel was strictly provisional and was not to be interpreted as constituting a political or territorial boundary.
               </p>
@@ -159,7 +147,7 @@ export default function GenevaDivisionMap() {
           )}
 
           {activeLayer === 'refugees' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-editorial-serif text-sm sm:text-base">
+            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p>
                 Under the Geneva agreement, a 300-day window allowed free movement between zones. Between 850,000 and 1,000,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist landowners—fled south, heavily transported by U.S. Navy ships in <strong>Operation Passage to Freedom</strong>.
               </p>
@@ -170,7 +158,7 @@ export default function GenevaDivisionMap() {
           )}
 
           {activeLayer === 'elections' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-editorial-serif text-sm sm:text-base">
+            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p className="font-bold text-ink">
                 The permanent partition was not caused by a single decision. It was a structural international failure:
               </p>

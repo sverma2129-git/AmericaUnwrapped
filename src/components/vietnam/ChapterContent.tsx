@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { CHAPTER_COUNT } from '@/data/vietnam/chapters';
+import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
+import { isVerbatimQuotation } from '@/lib/citations';
 import QuickBriefing from '@/components/study/QuickBriefing';
 import ChapterQuiz from '@/components/study/ChapterQuiz';
 import FlashcardDeck from '@/components/study/FlashcardDeck';
@@ -35,40 +37,32 @@ export default function ChapterContent({
   // Study data for this chapter
   const studyData = ALL_CHAPTERS_STUDY_DATA[chapter.id];
 
+  // Quotation marks only for a registered verbatim quotation; anything else is shown as a paraphrase.
+  const landmarkCitation = chapter.landmarkMoment?.quoteCitationId
+    ? CITATION_REGISTRY[chapter.landmarkMoment.quoteCitationId]
+    : undefined;
+  const landmarkQuote = landmarkCitation && isVerbatimQuotation(landmarkCitation) ? landmarkCitation : undefined;
+
   return (
     <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-16">
       {/* 1. Masthead & Inquiry Framing */}
       <header className="border-b border-rule pb-8 sm:pb-12 space-y-4">
-        <div className="flex flex-wrap items-center gap-2 text-xs text-ink-muted">
-          <span className="font-semibold text-brand">
-            Inquiry {chapter.number.toString().padStart(2, '0')}
-          </span>
-          <span>&bull;</span>
-          <span>{chapter.timeframe}</span>
-          {chapter.isLandmark && (
-            <>
-              <span>&bull;</span>
-              <span className="text-brand font-bold bg-brand-tint border border-brand-rule px-2 py-0.5 rounded-xs">
-                Turning Point
-              </span>
-            </>
-          )}
-        </div>
-
-        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-ink leading-[1.12]">
+        <h1 className="font-display text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
           {chapter.title}
         </h1>
 
-        <p className="font-editorial-serif italic text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
+        <p className="font-display text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
           {chapter.subtitle}
         </p>
 
+        <p className="meta text-ink-soft">
+          Chapter {chapter.number} &middot; {chapter.timeframe}
+          {chapter.isLandmark && <span className="text-brand"> &middot; Turning point</span>}
+        </p>
+
         {/* Central Historical Inquiry Banner */}
-        <div className="mt-8 bg-parchment border-l-4 border-brand border-t border-r border-b border-rule p-5 sm:p-6 rounded-r-xs shadow-2xs">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            The Central Historical Question
-          </span>
-          <h2 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug">
+        <div className="mt-8 bg-parchment border border-rule p-5 sm:p-6 rounded-md">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug">
             {studyData?.bigQuestion || chapter.subtitle}
           </h2>
           {studyData?.whyItMatters && (
@@ -83,28 +77,28 @@ export default function ChapterContent({
         <nav aria-label="Chapter sections" className="mt-6 flex flex-wrap gap-2 text-xs">
           <a
             href="#briefing"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="zap" />
             60-Sec Briefing
           </a>
           <a
             href="#story"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="book" />
             The Story
           </a>
           <a
             href="#evidence"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="map" />
             Tactical Evidence
           </a>
           <a
             href="#causal"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="link" />
             Cause &amp; Effect
@@ -112,7 +106,7 @@ export default function ChapterContent({
           {studyData?.quiz && studyData.quiz.length > 0 && (
             <a
               href="#quiz"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-brand-tint text-brand border-brand-rule hover:border-brand font-semibold"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-brand-tint text-brand border-brand-rule hover:border-brand font-semibold"
             >
               <Icon name="pen" />
             Practice Quiz
@@ -121,7 +115,7 @@ export default function ChapterContent({
           {studyData?.flashcards && studyData.flashcards.length > 0 && (
             <a
               href="#flashcards"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
             >
               <Icon name="layers" />
             Flashcards
@@ -129,7 +123,7 @@ export default function ChapterContent({
           )}
           <a
             href="#dossier"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="folder" />
             Sources ({chapter.primaryDocuments?.length || 0})
@@ -153,10 +147,7 @@ export default function ChapterContent({
       {/* 3. The Core Story: Unburied, Readable, Beautiful Narrative */}
       <section id="story" aria-label="The Historical Story" className="scroll-mt-24 space-y-8">
         <div className="border-b border-rule pb-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-            Section 02 &bull; The Historical Narrative
-          </span>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             How Events Unfolded
           </h2>
           <p className="font-sans text-sm text-ink-muted mt-1">
@@ -175,10 +166,20 @@ export default function ChapterContent({
 
         {/* Landmark Quote Callout (if present) */}
         {chapter.isLandmark && chapter.landmarkMoment && (
-          <aside className="my-8 max-w-3xl mx-auto border-l-4 border-brand bg-parchment p-5 sm:p-6 rounded-r-xs border-t border-r border-b border-rule">
-            <div className="font-editorial-serif text-lg sm:text-xl italic text-ink leading-relaxed">
-              &ldquo;{chapter.landmarkMoment.quote}&rdquo;
-            </div>
+          <aside className="my-8 max-w-3xl mx-auto border-l border-brand bg-parchment p-5 sm:p-6 rounded-r-xs border-t border-r border-b border-rule">
+            {landmarkQuote ? (
+              <blockquote className="font-display text-lg sm:text-xl text-ink leading-relaxed">
+                &ldquo;{landmarkQuote.exactQuotation}&rdquo;
+                <CitationMarker id={landmarkQuote.id} />
+              </blockquote>
+            ) : (
+              <>
+                <span className="meta text-ink-soft block mb-2">Historian&rsquo;s account (paraphrased)</span>
+                <p className="font-display text-lg sm:text-xl text-ink leading-relaxed">
+                  {chapter.landmarkMoment.quote}
+                </p>
+              </>
+            )}
             <div className="mt-3 font-sans text-xs text-ink-muted">
               &mdash; <strong className="text-ink">{chapter.landmarkMoment.quoteSpeaker}</strong>,{' '}
               <span className="italic">{chapter.landmarkMoment.quoteContext}</span> ({chapter.landmarkMoment.dateline})
@@ -189,7 +190,7 @@ export default function ChapterContent({
         {/* Key Chronological Milestones */}
         {chapter.whatHappened.keyEvents && chapter.whatHappened.keyEvents.length > 0 && (
           <div className="max-w-3xl mx-auto pt-6 border-t border-rule">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-4">
+            <span className="text-xs font-bold text-brand block mb-4">
               Chronological Timeline &bull; Key Milestones
             </span>
             <div className="space-y-3">
@@ -202,7 +203,7 @@ export default function ChapterContent({
                     {evt.date}
                   </span>
                   <div>
-                    <div className="font-editorial-serif font-bold text-base text-ink">
+                    <div className="font-display font-bold text-base text-ink">
                       {evt.title}
                     </div>
                     <div className="font-sans text-sm text-ink-muted mt-1 leading-relaxed">
@@ -220,13 +221,10 @@ export default function ChapterContent({
       {chapter.personalStory && <PersonalStoryCard story={chapter.personalStory} />}
 
       <section id="evidence" aria-label="Interactive Visual Evidence" className="scroll-mt-24">
-        <div className="border border-rule bg-parchment p-5 sm:p-8 rounded-xs shadow-2xs">
+        <div className="border border-rule bg-parchment p-5 sm:p-8 rounded-xs">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 mb-6 border-b border-rule gap-2">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-                Visual &bull; Tactical &bull; Spatial Investigation
-              </span>
-              <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
                 {chapter.interactiveModule.title}
               </h2>
             </div>
@@ -268,10 +266,7 @@ export default function ChapterContent({
       <section id="dossier" aria-label="Archival Records and Sources" className="pt-8 border-t border-rule scroll-mt-24">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-rule gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-brand block">
-              Historical Verification &bull; Archival Records
-            </span>
-            <h3 className="font-editorial-serif text-2xl font-bold text-ink">
+            <h3 className="font-display text-2xl font-bold text-ink">
               The Documentary Evidence Dossier
             </h3>
           </div>
@@ -280,11 +275,7 @@ export default function ChapterContent({
           <div className="flex items-center gap-1.5 overflow-x-auto text-xs">
             <button
               onClick={() => setActiveDossierTab('perspectives')}
-              className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${
-                activeDossierTab === 'perspectives'
-                  ? 'bg-brand text-white border-brand font-bold'
-                  : 'bg-white text-ink-muted border-rule hover:border-brand'
-              }`}
+              className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'perspectives' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
             >
               Bilateral Strategy
             </button>
@@ -292,11 +283,7 @@ export default function ChapterContent({
             {chapter.primaryDocuments && chapter.primaryDocuments.length > 0 && (
               <button
                 onClick={() => setActiveDossierTab('documents')}
-                className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${
-                  activeDossierTab === 'documents'
-                    ? 'bg-brand text-white border-brand font-bold'
-                    : 'bg-white text-ink-muted border-rule hover:border-brand'
-                }`}
+                className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'documents' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
               >
                 Primary Sources ({chapter.primaryDocuments.length})
               </button>
@@ -305,11 +292,7 @@ export default function ChapterContent({
             {chapter.citations && chapter.citations.length > 0 && (
               <button
                 onClick={() => setActiveDossierTab('citations')}
-                className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${
-                  activeDossierTab === 'citations'
-                    ? 'bg-brand text-white border-brand font-bold'
-                    : 'bg-white text-ink-muted border-rule hover:border-brand'
-                }`}
+                className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'citations' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
               >
                 Citations ({chapter.citations.length})
               </button>
@@ -363,9 +346,9 @@ export default function ChapterContent({
                   <button
                     type="button"
                     onClick={() => openCitation(c)}
-                    className="text-xs font-semibold text-brand hover:underline uppercase whitespace-nowrap cursor-pointer px-2.5 py-1 bg-white border border-rule rounded-xs"
+                    className="text-xs font-semibold text-brand hover:underline whitespace-nowrap cursor-pointer px-2.5 py-1 bg-white border border-rule rounded-xs"
                   >
-                    Dossier &rarr;
+                    Dossier
                   </button>
                 </li>
               ))}
@@ -376,10 +359,7 @@ export default function ChapterContent({
 
       {/* 9. Forward Causal Bridge (Next Inquiry) */}
       <footer className="border-t border-rule pt-8 pb-12">
-        <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-2">
-          The Resulting Dilemma &rarr;
-        </span>
-        <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink mb-3">
+        <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-3">
           {chapter.nextQuestion.question}
         </h3>
         <p className="font-sans text-base text-ink-muted leading-relaxed mb-6 max-w-2xl">
@@ -390,22 +370,22 @@ export default function ChapterContent({
           {nextChapterId ? (
             <Link
               href={`/vietnam/${nextChapterId}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold transition-colors rounded-xs"
             >
-              <span>Proceed to Chapter {(chapter.number + 1).toString().padStart(2, '0')}: {nextChapterTitle} &rarr;</span>
+              <span>Proceed to Chapter {(chapter.number + 1).toString().padStart(2, '0')}: {nextChapterTitle}</span>
             </Link>
           ) : (
             <Link
               href="/vietnam/study-guide"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold transition-colors rounded-xs"
             >
-              <span>Master Unit Study Guide &amp; Exam Review &rarr;</span>
+              <span>Master Unit Study Guide &amp; Exam Review</span>
             </Link>
           )}
 
           <Link
             href="/vietnam"
-            className="inline-flex items-center gap-2 px-5 py-3.5 border border-rule bg-parchment hover:bg-rule text-ink text-xs font-medium uppercase tracking-wider transition-colors rounded-xs"
+            className="inline-flex items-center gap-2 px-5 py-3.5 border border-rule bg-parchment hover:bg-rule text-ink text-xs font-medium transition-colors rounded-xs"
           >
             <span>All {CHAPTER_COUNT} Chapters Overview</span>
           </Link>

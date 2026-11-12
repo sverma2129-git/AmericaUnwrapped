@@ -9,11 +9,8 @@ export default function CheatSheet() {
   return (
     <section aria-label="1-Page Cheat Sheet" className="space-y-12">
       {/* Quick Exam Overview Banner */}
-      <div className="bg-parchment border-l-4 border-brand border-t border-r border-b border-rule p-6 rounded-r-xs shadow-2xs">
-        <span className="text-xs font-bold uppercase tracking-wider text-brand block mb-1">
-          Unit At A Glance &bull; AP U.S. History Period 8 Focus
-        </span>
-        <h2 className="font-editorial-serif text-2xl font-bold text-ink">
+      <div className="bg-parchment border-l border-brand border-t border-r border-b border-rule p-6 rounded-r-xs">
+        <h2 className="font-display text-2xl font-bold text-ink">
           The Essential Core: 30 Years Across 5 Presidencies
         </h2>
         <p className="mt-2 font-sans text-sm sm:text-base text-ink-muted leading-relaxed">
@@ -25,7 +22,7 @@ export default function CheatSheet() {
       <div className="space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rule pb-3">
           <div>
-            <h3 className="font-editorial-serif text-2xl font-bold text-ink">
+            <h3 className="font-display text-2xl font-bold text-ink">
               1. The Five Presidencies Decision Matrix
             </h3>
             <p className="text-xs text-ink-muted mt-0.5">
@@ -41,7 +38,7 @@ export default function CheatSheet() {
               key={p.id}
               summary={
                 <>
-                  <div className="font-editorial-serif font-bold text-lg sm:text-xl text-ink">{p.name}</div>
+                  <div className="font-display font-bold text-lg sm:text-xl text-ink">{p.name}</div>
                   <span className="text-xs text-brand font-bold block">Doctrine: {p.doctrine}</span>
                 </>
               }
@@ -67,11 +64,11 @@ export default function CheatSheet() {
 
       {/* Master Chronology & Landmark Turning Points Table */}
       <div className="space-y-4 pt-6">
-        <h3 className="font-editorial-serif text-2xl font-bold text-ink">2. Landmark Turning Points Timeline</h3>
+        <h3 className="font-display text-2xl font-bold text-ink">2. Landmark Turning Points Timeline</h3>
 
         <div className="overflow-x-auto border border-rule rounded-xs">
           <table className="w-full text-left font-sans text-xs sm:text-sm">
-            <thead className="bg-parchment-light border-b border-rule text-xs font-bold uppercase tracking-wider text-ink">
+            <thead className="bg-parchment-light border-b border-rule text-xs font-bold text-ink">
               <tr>
                 <th className="p-3 sm:p-4">Date</th>
                 <th className="p-3 sm:p-4">Event</th>
@@ -84,7 +81,7 @@ export default function CheatSheet() {
                 const chapter = getChapter(tp.chapterId);
                 return (
                   <tr key={tp.event} className={`hover:bg-parchment ${tp.highlight ? 'bg-brand-tint' : ''}`}>
-                    <td className="p-3 sm:p-4 font-mono text-xs font-bold text-brand whitespace-nowrap">{tp.date}</td>
+                    <td className="p-3 sm:p-4 text-xs font-bold text-brand whitespace-nowrap">{tp.date}</td>
                     <td className="p-3 sm:p-4 font-semibold text-ink">{tp.event}</td>
                     <td className="p-3 sm:p-4 text-ink-muted">{tp.significance}</td>
                     <td className="p-3 sm:p-4 font-semibold text-xs">

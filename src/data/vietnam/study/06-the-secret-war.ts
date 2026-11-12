@@ -4,7 +4,7 @@ import { ChapterStudyData } from '@/types/study';
 export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
   chapterId: 'the-secret-war',
   bigQuestion:
-    'Why did the United States drop more bombs on neutral Laos than on Germany and Japan combined—and how did the Ho Chi Minh Trail survive?',
+    'What did America’s hidden war—secret bombing in Laos, the Phoenix Program, and herbicide spraying—achieve, and what did it cost?',
   whyItMatters:
     'Reveals the secret regional expansion of the war into neutral neighboring countries, the CIA’s covert warfare in Laos, and the controversial Phoenix Program.',
   whatYouWillLearn: [
@@ -17,7 +17,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       'To sustain the insurgency in the South, Hanoi built the Truong Son Strategic Logistics Network—known as the Ho Chi Minh Trail—running through the jungle mountains of sovereign, neutral Laos and Cambodia. Over 16 years, the trail expanded from a foot trail into a 12,000-mile network of paved roads, truck parks, underground fuel pipelines, and repair depots. To sever this logistical lifeline without openly violating the 1962 Geneva Accords guaranteeing Laotian neutrality, the U.S. launched the "Secret War": flying over 580,000 bombing missions and dropping over 2 million tons of ordnance on Laos—equivalent to a planeload of bombs every eight minutes for nine years. Concurrently, the CIA mobilized a 30,000-man guerrilla army of indigenous Hmong tribesmen under General Vang Pao. In South Vietnam, the CIA initiated the Phoenix Program, neutralizing over 81,000 suspected Viet Cong civilian infrastructure cadres through intelligence identification, interrogation, and assassination.',
     examTakeaways: [
       'The Ho Chi Minh Trail: The indispensable logistical artery that kept the southern communist insurgency armed and replenished despite massive American bombing.',
-      'Laos as Most Bombed Nation: The U.S. dropped more ordnance on neutral Laos than on all belligerents in World War II, leaving tens of millions of unexploded cluster bomblets.',
+      'Laos as Most Bombed Nation: To cut the Ho Chi Minh Trail, the U.S. bombed neutral Laos on a massive scale without publicly acknowledging it, leaving tens of millions of unexploded cluster bomblets.',
       'The Phoenix Program (Phung Hoang): Targeted the Viet Cong civilian political shadow government; highly controversial due to widespread corruption, arbitrary arrests, and targeted assassinations.',
     ],
     keyTerms: [
@@ -59,12 +59,12 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       question:
         'Why did the United States keep its extensive military air campaigns in Laos (Operation Barrel Roll and Operation Steel Tiger) secret from the American public and Congress?',
       options: [
-        'The United States had signed the 1962 Geneva Accords officially recognizing and guaranteeing the neutrality and sovereignty of Laos.',
-        'Laos was an official member of the NATO military alliance.',
-        'The Soviet Union had installed nuclear missile silos in the Plain of Jars.',
-        'American planes were dropping psychological leaflets rather than real explosives.',
+        'Congress had passed a law banning all U.S. military action inside Laos',
+        'The U.S. had signed the 1962 Geneva agreement guaranteeing Laos’s neutrality',
+        'The missions dropped only leaflets and supplies, not explosives',
+        'The Soviet Union had warned it would treat any strike on Laos as an act of war',
       ],
-      correctIndex: 0,
+      correctIndex: 1,
       rationale:
         'In 1962, the U.S. signed the Declaration on the Neutrality of Laos in Geneva. Because North Vietnam violated the treaty by running the Ho Chi Minh Trail through Laos, the U.S. responded with massive covert air strikes concealed from the public through dual bookkeeping and CIA cover.',
       citationRef: 'c6-1',
@@ -74,12 +74,12 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       question:
         'What was the primary target of the CIA-directed Phoenix Program (Phung Hoang) in South Vietnam?',
       options: [
-        'North Vietnamese conventional armored tank divisions invading across the DMZ.',
-        'The Viet Cong Infrastructure (VCI)—the civilian shadow government of tax collectors, political cadres, village chiefs, and organizers.',
-        'Soviet merchant cargo vessels docking in Haiphong harbor.',
-        'South Vietnamese college students protesting against government corruption.',
+        'North Vietnamese army divisions crossing the DMZ into South Vietnam',
+        'Soviet supply ships unloading weapons in North Vietnam’s harbors',
+        'The Viet Cong’s civilian political network of cadres and organizers',
+        'South Vietnamese student protesters opposing the Saigon government',
       ],
-      correctIndex: 1,
+      correctIndex: 2,
       rationale:
         'The Phoenix Program was not aimed at enemy military soldiers in the jungle, but at the civilian administrative apparatus (the Viet Cong Infrastructure) that collected taxes, recruited youth, distributed propaganda, and governed villages at night.',
       citationRef: 'c6-2',
@@ -89,10 +89,10 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       question:
         'Which indigenous ethnic minority in the mountains of Laos was recruited, trained, and financed by the CIA to fight North Vietnamese regulars along the Plain of Jars?',
       options: [
-        'The Hmong people (under General Vang Pao)',
-        'The Khmer Krom',
-        'The Karen rebels',
-        'The Montagnard Degar',
+        'The Hmong, led by General Vang Pao',
+        'The Montagnards of the Central Highlands',
+        'The Khmer Krom of the Mekong Delta',
+        'The Karen people of eastern Burma',
       ],
       correctIndex: 0,
       rationale:

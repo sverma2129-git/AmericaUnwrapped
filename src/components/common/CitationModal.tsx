@@ -52,16 +52,16 @@ export default function CitationModal() {
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-center gap-2">
               <span
-                className={`font-mono text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-xs border ${BADGE_TONE_CLASSES[badge.tone]}`}
+                className={`text-xs font-bold px-2 py-0.5 rounded-xs border ${BADGE_TONE_CLASSES[badge.tone]}`}
               >
                 {badge.label}
               </span>
               {isVerbatim ? (
-                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
                   Verified Verbatim Source
                 </span>
               ) : (
-                <span className="font-mono text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
+                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
                   Documented Source Paraphrase
                 </span>
               )}
@@ -93,7 +93,7 @@ export default function CitationModal() {
         <section aria-labelledby="section-source" className="space-y-2">
           <span
             id="section-source"
-            className="font-mono text-[10px] uppercase tracking-widest text-brand font-bold block"
+            className="text-[10px] text-brand font-bold block"
           >
             Source Provenance
           </span>
@@ -101,7 +101,7 @@ export default function CitationModal() {
           <div className="space-y-1">
             <h3
               id="citation-modal-title"
-              className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug"
+              className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug"
             >
               {activeCitation.title || activeCitation.citation}
             </h3>
@@ -126,8 +126,8 @@ export default function CitationModal() {
             </div>
 
             {activeCitation.locator && (
-              <div className="pt-1 font-mono text-xs text-ink">
-                <strong className="text-ink-muted uppercase tracking-wider text-[10px] block">
+              <div className="pt-1 text-xs text-ink">
+                <strong className="text-ink-muted text-[10px] block">
                   Precise Locator:
                 </strong>
                 <span className="bg-parchment px-2 py-0.5 rounded-xs border border-rule inline-block mt-0.5 font-medium">
@@ -140,14 +140,14 @@ export default function CitationModal() {
 
         {/* 2. VERBATIM EXCERPT (verified quotations with exact text only) */}
         {isVerbatim && (
-          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-xs space-y-1.5 border-l-4 border-l-brand">
+          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-xs space-y-1.5 border-l border-l-brand">
             <span
               id="section-exact-quote"
-              className="font-mono text-[10px] uppercase tracking-widest text-brand font-bold block"
+              className="text-[10px] text-brand font-bold block"
             >
               Verified Exact Verbatim Excerpt
             </span>
-            <blockquote className="font-editorial-serif italic text-base sm:text-lg text-ink leading-relaxed pl-1 py-0.5">
+            <blockquote className="font-display text-base sm:text-lg text-ink leading-relaxed pl-1 py-0.5">
               &ldquo;{activeCitation.exactQuotation}&rdquo;
             </blockquote>
           </section>
@@ -158,7 +158,7 @@ export default function CitationModal() {
           <section aria-labelledby="section-supports" className="space-y-1.5 border-t border-rule pt-4">
             <span
               id="section-supports"
-              className="font-mono text-[10px] uppercase tracking-widest text-ink-muted font-bold block"
+              className="text-[10px] text-ink-muted font-bold block"
             >
               What This Source Supports
             </span>
@@ -173,7 +173,7 @@ export default function CitationModal() {
           <section aria-labelledby="section-limitations" className="space-y-1.5 border-t border-rule pt-4">
             <span
               id="section-limitations"
-              className="font-mono text-[10px] uppercase tracking-widest text-brand font-bold block"
+              className="text-[10px] text-brand font-bold block"
             >
               Documentary Limitations &amp; Context
             </span>
@@ -185,7 +185,7 @@ export default function CitationModal() {
 
         {/* 5. VIEW ORIGINAL LINK / ARCHIVE ACCESS */}
         <footer className="border-t border-rule pt-5 flex flex-wrap items-center justify-between gap-3">
-          <div className="font-mono text-xs text-ink-muted">
+          <div className="text-xs text-ink-muted">
             America Unwrapped Citation Archive &bull; Ref [{activeCitation.marker || activeCitation.id}]
           </div>
 
@@ -194,7 +194,7 @@ export default function CitationModal() {
               href={activeCitation.originalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white font-sans text-xs font-semibold uppercase tracking-wider transition-colors rounded-xs shadow-xs"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white font-sans text-xs font-semibold transition-colors rounded-xs"
             >
               <span>View Original Archive</span>
               <svg

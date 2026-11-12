@@ -44,11 +44,7 @@ export default function StudyGuideTabs({ tabs }: { tabs: StudyGuideTab[] }) {
               tabIndex={selected ? 0 : -1}
               onClick={() => setActiveId(tab.id)}
               onKeyDown={(e) => handleKeyDown(e, index)}
-              className={`px-4 py-2 rounded-full border transition-colors cursor-pointer font-medium ${
-                selected
-                  ? 'bg-ink text-paper border-ink'
-                  : 'bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong'
-              }`}
+              className={`px-4 py-2 rounded-sm border transition-colors cursor-pointer font-medium ${ selected ? 'bg-ink text-paper border-ink' : 'bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong' }`}
             >
               {tab.label}
             </button>

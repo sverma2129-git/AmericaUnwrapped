@@ -39,45 +39,38 @@ export default function ParisAccordsTimeline() {
   const current = phases[selectedPhase];
 
   return (
-    <figure className="my-10 border border-stone-300 dark:border-stone-800 bg-[#f9f7f2] dark:bg-[#161514]">
+    <figure className="my-10 border border-stone-300 bg-[#f9f7f2]">
       {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-stone-200 dark:border-stone-800 bg-stone-100/90 dark:bg-stone-900/60 flex flex-wrap items-center justify-between gap-2 text-xs font-archival-mono">
+      <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
-          <span className="font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">
+          <span className="font-bold text-stone-900">
             Diplomatic Anatomy
           </span>
           <span className="text-stone-500 ml-2">&bull; The Paris Negotiations (1969–1973)</span>
         </div>
-        <span className="text-stone-500 uppercase tracking-widest text-[11px]">
+        <span className="text-stone-500 text-[11px]">
           Four Phases of Compromise &amp; Exit
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <span className="font-archival-mono text-xs uppercase tracking-wider text-stone-500 block">
-            The Fatal Concession
-          </span>
-          <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
             Leaving 150,000 PAVN Troops in South Vietnam
           </h4>
-          <p className="mt-2 font-editorial-serif text-base text-stone-700 dark:text-stone-300 leading-relaxed">
+          <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
             The fundamental compromise that unlocked the Paris Peace Accords was asymmetric: the United States agreed to withdraw all American forces in exchange for American POWs, while allowing North Vietnamese combat divisions to remain stationed inside South Vietnamese territory.
           </p>
         </div>
 
         {/* Phase Buttons */}
-        <div className="flex flex-wrap gap-2 pt-2 border-t border-stone-200 dark:border-stone-800">
+        <div className="flex flex-wrap gap-2 pt-2 border-t border-stone-200">
           {(['deadlock', 'breakthrough', 'christmas', 'signing'] as const).map((key) => (
             <button
               key={key}
               type="button"
               onClick={() => setSelectedPhase(key)}
-              className={`px-3 py-1.5 text-xs font-archival-mono uppercase tracking-wider transition-colors cursor-pointer border ${
-                selectedPhase === key
-                  ? 'border-stone-900 dark:border-stone-100 bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900 font-bold'
-                  : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-700 dark:text-stone-300 hover:border-stone-500'
-              }`}
+              className={`px-3 py-1.5 text-xs transition-colors cursor-pointer border ${ selectedPhase === key ? 'border-stone-900 bg-stone-900 text-stone-100 font-bold' : 'border-stone-300 bg-white text-stone-700 hover:border-stone-500' }`}
             >
               {phases[key].title.split('(')[0]}
             </button>
@@ -85,25 +78,25 @@ export default function ParisAccordsTimeline() {
         </div>
 
         {/* Active Phase Ledger */}
-        <div className="p-6 bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 space-y-4">
-          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-stone-100 dark:border-stone-800 pb-2">
-            <h5 className="font-editorial-serif text-xl font-bold text-stone-900 dark:text-stone-100">
+        <div className="p-6 bg-white border border-stone-200 space-y-4">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-stone-100 pb-2">
+            <h5 className="font-display text-xl font-bold text-stone-900">
               {current.title}
             </h5>
-            <span className="font-archival-mono text-xs text-stone-500">
+            <span className="text-xs text-stone-500">
               {current.timeframe}
             </span>
           </div>
 
-          <p className="font-editorial-serif text-base text-stone-800 dark:text-stone-200 leading-relaxed">
+          <p className="font-display text-base text-stone-800 leading-relaxed">
             {current.summary}
           </p>
 
-          <div className="p-4 bg-[#f2ede4] dark:bg-[#1a1816] border border-stone-300 dark:border-stone-800 text-xs font-sans">
-            <span className="font-archival-mono uppercase font-bold text-stone-700 dark:text-stone-300 block mb-1">
+          <div className="p-4 bg-[#f2ede4] border border-stone-300 text-xs font-sans">
+            <span className="font-bold text-stone-700 block mb-1">
               The Real-World Consequence:
             </span>
-            <p className="font-editorial-serif text-stone-800 dark:text-stone-200 leading-relaxed text-sm">
+            <p className="font-display text-stone-800 leading-relaxed text-sm">
               {current.keyConcession}
             </p>
           </div>

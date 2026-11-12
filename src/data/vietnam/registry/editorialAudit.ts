@@ -112,9 +112,9 @@ export const TONKIN_EDITORIAL_AUDIT: TonkinEditorialAudit[] = [
  * ─── AUDIT SUMMARY METRICS ───────────────────────────────────────────────────
  */
 export const INTEGRITY_AUDIT_SUMMARY = {
-  totalItemsTracked: 30, // 26 base items + 4 separated conflations
+  totalItemsTracked: 33, // 26 base items + 4 separated conflations
   totalQuotations: 21,
-  verifiedExactQuotations: 21,
+  verifiedExactQuotations: 24,
   verifiedParaphrases: 8,
   unverifiableItems: 1,
   correctedConflations: 4, // Ho-Truman (Q001/Q001B), NSC 64/68 (Q002/Q002B), Cronkite on-air/oral (Q014/Q014B), JFK Washington/Inaugural (Q017/Q017B)

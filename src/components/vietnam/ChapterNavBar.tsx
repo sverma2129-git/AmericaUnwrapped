@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { VIETNAM_CHAPTERS, getAdjacentChapters } from '@/data/vietnam/chapters';
 import { ChapterData } from '@/types/vietnam';
+import Icon from '@/components/common/Icon';
 
 interface ChapterNavBarProps {
   currentChapter: ChapterData;
@@ -36,7 +37,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
               href="/vietnam"
               className="text-ink-muted hover:text-brand transition-colors hidden sm:inline-block font-medium"
             >
-              &larr; Explore History
+              Explore History
             </Link>
             {prevChapter && (
               <Link
@@ -44,7 +45,8 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
                 className="flex items-center gap-1 font-semibold text-ink hover:text-brand transition-colors"
                 title={`Previous: Chapter ${prevChapter.number} - ${prevChapter.title}`}
               >
-                <span>&larr; Ch. {prevChapter.number.toString().padStart(2, '0')}</span>
+                <Icon name="chevronLeft" className="w-3.5 h-3.5" />
+                <span>Ch. {prevChapter.number}</span>
               </Link>
             )}
           </div>
@@ -59,7 +61,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
             <span className="truncate max-w-[200px] sm:max-w-md">
               Ch. {currentChapter.number.toString().padStart(2, '0')}: {currentChapter.title}
             </span>
-            <span className="text-[10px] text-brand">{drawerOpen ? '▲' : '▼'}</span>
+            <Icon name={drawerOpen ? 'chevronUp' : 'chevronDown'} className="w-3.5 h-3.5 text-ink-muted" />
           </button>
 
           {/* Right: Next chapter */}
@@ -70,14 +72,15 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
                 className="flex items-center gap-1 font-semibold text-ink hover:text-brand transition-colors"
                 title={`Next: Chapter ${nextChapter.number} - ${nextChapter.title}`}
               >
-                <span>Ch. {nextChapter.number.toString().padStart(2, '0')} &rarr;</span>
+                <span>Ch. {nextChapter.number}</span>
+                <Icon name="chevronRight" className="w-3.5 h-3.5" />
               </Link>
             ) : (
               <Link
                 href="/vietnam/study-guide"
                 className="text-brand font-semibold hover:underline"
               >
-                Study Guide &rarr;
+                Study Guide
               </Link>
             )}
           </div>
@@ -97,10 +100,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
           >
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-rule">
               <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-brand block">
-                  The Vietnam War
-                </span>
-                <h3 className="font-editorial-serif text-xl font-bold text-ink">
+                <h3 className="font-display text-xl font-bold text-ink">
                   Select a Chapter
                 </h3>
               </div>
@@ -120,20 +120,16 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
                     key={ch.id}
                     href={`/vietnam/${ch.id}`}
                     onClick={() => setDrawerOpen(false)}
-                    className={`p-3.5 border transition-all rounded-xs flex flex-col justify-between ${
-                      isCurrent
-                        ? 'border-brand bg-brand-tint text-brand font-semibold'
-                        : 'border-rule bg-parchment hover:border-brand text-ink'
-                    }`}
+                    className={`p-3.5 border transition-all rounded-xs flex flex-col justify-between ${ isCurrent ? 'border-brand bg-brand-tint text-brand font-semibold' : 'border-rule bg-parchment hover:border-brand text-ink' }`}
                   >
                     <div>
                       <div className="flex items-center justify-between text-[11px] text-ink-muted mb-1">
                         <span>Ch. {ch.number.toString().padStart(2, '0')} &bull; {ch.timeframe}</span>
                         {ch.isLandmark && (
-                          <span className="text-brand font-bold text-[10px]">★ Turning Point</span>
+                          <span className="text-brand font-bold text-[10px]">Turning Point</span>
                         )}
                       </div>
-                      <div className="font-editorial-serif text-sm leading-snug line-clamp-2">
+                      <div className="font-display text-sm leading-snug line-clamp-2">
                         {ch.title}
                       </div>
                     </div>
