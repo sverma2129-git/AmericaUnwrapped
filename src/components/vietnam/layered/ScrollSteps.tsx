@@ -42,11 +42,11 @@ export default function ScrollSteps({
             className="min-h-[60vh] lg:min-h-[75vh] flex items-center first:pt-6 last:min-h-[45vh] lg:last:min-h-[60vh]"
           >
             <div
-              className={`w-full card-surface rounded-md p-5 sm:p-6 transition-[border-color,opacity] duration-300 ${
+              className={`w-full card-surface rounded-xl p-5 sm:p-6 transition-[border-color,opacity] duration-300 ${
                 i === active ? 'border-ink opacity-100' : 'opacity-55'
               }`}
             >
-              <h4 className="font-editorial-serif text-xl font-semibold text-ink">{s.headline}</h4>
+              <h4 className="font-display text-xl font-semibold text-ink">{s.headline}</h4>
               <p className="meta mt-1 text-ink-soft tabular-nums">
                 {s.label} &middot; step {i + 1} of {steps.length}
               </p>

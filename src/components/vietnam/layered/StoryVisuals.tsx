@@ -9,15 +9,15 @@ import SiegeScrolly from './SiegeScrolly';
 import NightScrolly from './NightScrolly';
 
 /**
- * A primary-source quotation set as a pull quote between two rules. Renders
+ * A primary-source quotation set as a pull quote on a beige panel. Renders
  * nothing unless the citation is a verified verbatim quote.
  */
 function VerbatimQuote({ citationId }: { citationId: string }) {
   const citation = CITATION_REGISTRY[citationId];
   if (!citation || !isVerbatimQuotation(citation)) return null;
   return (
-    <figure className="border-y border-ink py-6">
-      <blockquote className="font-editorial-serif text-2xl sm:text-[1.75rem] font-medium text-ink leading-snug">
+    <figure className="bg-parchment rounded-xl p-6 sm:p-8">
+      <blockquote className="font-display text-2xl sm:text-[1.75rem] font-medium text-ink leading-snug">
         &ldquo;{citation.exactQuotation}&rdquo;
       </blockquote>
       <figcaption className="mt-4 text-[0.9375rem] text-ink-muted">
@@ -39,7 +39,7 @@ function ShareBar({ visual }: { visual: Extract<StoryVisual, { kind: 'share' }> 
         <span className="text-ink-muted">{visual.remainderLabel}</span>
       </div>
       <div
-        className="relative h-9 bg-parchment border border-rule"
+        className="relative h-9 bg-parchment rounded-md overflow-hidden"
         role="img"
         aria-label={`${visual.label}: about ${range}. ${visual.remainderLabel}: the rest.`}
       >
@@ -66,8 +66,8 @@ function Debate({ visual }: { visual: Extract<StoryVisual, { kind: 'debate' }> }
     <ModuleFrame question={visual.question} takeaway={visual.outcome}>
       <div className="grid sm:grid-cols-2 gap-y-6 sm:gap-x-10">
         {visual.sides.map((side, i) => (
-          <div key={side.stance} className={i > 0 ? 'sm:border-l sm:border-rule sm:pl-10' : ''}>
-            <p className="font-editorial-serif text-lg font-semibold text-ink leading-snug">
+          <div key={side.stance} className="">
+            <p className="font-display text-lg font-semibold text-ink leading-snug">
               <span className={i === 0 ? 'text-brand' : ''}>{side.stance}:</span> {side.who}
             </p>
             <p className="mt-2 text-[0.9375rem] text-ink-muted leading-relaxed">{side.argument}</p>
@@ -85,9 +85,9 @@ function Consequence({ chain }: { chain: CausalStep }) {
     { label: 'The catch', text: chain.unintendedConsequence },
   ];
   return (
-    <ol className="grid md:grid-cols-3 gap-y-6 md:gap-x-10 border-t-2 border-ink pt-4">
+    <ol className="grid md:grid-cols-3 gap-y-6 md:gap-x-10">
       {steps.map((s, i) => (
-        <li key={s.label} className={i > 0 ? 'md:border-l md:border-rule md:pl-10' : ''}>
+        <li key={s.label} className="">
           <p className="font-semibold text-ink">
             {i + 1}. {s.label}
           </p>
@@ -110,10 +110,10 @@ function Compare({ visual }: { visual: Extract<StoryVisual, { kind: 'compare' }>
       <div className="overflow-x-auto">
         <table className="w-full text-[0.9375rem]">
           <thead>
-            <tr className="border-b border-ink">
+            <tr className="border-b border-rule-strong">
               <th className="w-[24%] py-2" />
               {[a, b].map((c) => (
-                <th key={c.label} scope="col" className="px-3 sm:px-4 py-2 text-left font-editorial-serif text-lg font-semibold text-ink">
+                <th key={c.label} scope="col" className="px-3 sm:px-4 py-2 text-left font-display text-lg font-semibold text-ink">
                   {c.label}
                 </th>
               ))}

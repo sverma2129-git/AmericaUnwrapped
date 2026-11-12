@@ -93,23 +93,23 @@ export default function AboutPage() {
 
       {/* Header */}
       <header className="border-b border-rule pb-10">
-        <h1 className="mt-3 font-editorial-serif text-3xl sm:text-5xl font-bold tracking-tight text-ink leading-tight">
+        <h1 className="mt-3 font-display text-3xl sm:text-5xl font-bold tracking-tight text-ink leading-tight">
           How we decide what&rsquo;s true
         </h1>
-        <p className="mt-4 font-editorial-serif text-lg sm:text-2xl text-ink-muted leading-relaxed">
+        <p className="mt-4 font-display text-lg sm:text-2xl text-ink-muted leading-relaxed">
           History is more interesting when you can see the evidence and make up your own mind.
         </p>
       </header>
 
       {/* Core Philosophy */}
       <section className="py-6 border-b border-rule space-y-4">
-        <h2 className="font-editorial-serif text-2xl font-bold text-ink">
+        <h2 className="font-display text-2xl font-bold text-ink">
           Why this site exists
         </h2>
-        <p className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed">
+        <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
           Most history online is one of two things: dense academic material that buries students, or opinion pieces that use the past to win today&rsquo;s arguments. Neither helps you understand what actually happened.
         </p>
-        <p className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed">
+        <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
           We try to do something simpler: tell the story clearly, show you the documents, and keep asking one question about every turning point. Who decided what, what were they assuming, and what happened next? <strong>Decision Assumption Result Consequence</strong>.
         </p>
       </section>
@@ -117,7 +117,7 @@ export default function AboutPage() {
       {/* The 10 Editorial Rules */}
       <section className="py-6 border-b border-rule">
         <div className="mb-8">
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             Ten rules we hold ourselves to
           </h2>
         </div>
@@ -133,7 +133,7 @@ export default function AboutPage() {
                   RULE {rule.number}
                 </span>
               </div>
-              <h3 className="font-editorial-serif text-lg font-bold text-ink">
+              <h3 className="font-display text-lg font-bold text-ink">
                 {rule.title}
               </h3>
               <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
@@ -146,7 +146,7 @@ export default function AboutPage() {
 
       {/* Privacy & Corrections */}
       <section className="py-6 space-y-4">
-        <h2 className="font-editorial-serif text-2xl font-bold text-ink">
+        <h2 className="font-display text-2xl font-bold text-ink">
           No ads, no tracking
         </h2>
         <p className="text-base text-ink leading-relaxed">

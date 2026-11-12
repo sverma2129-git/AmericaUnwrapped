@@ -57,11 +57,11 @@ export default function StudyGuidePage() {
           <span className="text-xs text-ink-muted">AP Period 8 (1945–1980)</span>
         </div>
 
-        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
+        <h1 className="font-display text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
           Vietnam War Master Study Guide &amp; Exam Review
         </h1>
 
-        <p className="mt-4 font-editorial-serif text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
+        <p className="mt-4 font-display text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
           The definitive 1-page unit cheat sheet, interactive practice quizzes with historical rationales, master vocabulary flashcards, and high-yield DBQ essay outlines.
         </p>
       </header>

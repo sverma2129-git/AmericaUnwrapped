@@ -13,7 +13,7 @@ export default function CausalFlowViewer({ causalChain }: CausalFlowViewerProps)
       {/* Kicker & Title */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-8 gap-2">
         <div>
-          <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             The Chain of Consequence
           </h3>
         </div>
@@ -33,7 +33,7 @@ export default function CausalFlowViewer({ causalChain }: CausalFlowViewerProps)
           <div className="text-xs font-semibold text-ink-muted">
             Actor: {causalChain.decision.actor}
           </div>
-          <p className="font-editorial-serif text-sm text-ink leading-relaxed">
+          <p className="font-display text-sm text-ink leading-relaxed">
             {causalChain.decision.action}
           </p>
         </div>
@@ -45,13 +45,13 @@ export default function CausalFlowViewer({ causalChain }: CausalFlowViewerProps)
           </div>
           <div>
             <div className="text-[10px] text-ink-soft">Premise:</div>
-            <p className="font-editorial-serif text-xs text-ink-muted leading-normal">
+            <p className="font-display text-xs text-ink-muted leading-normal">
               {causalChain.assumption.premise}
             </p>
           </div>
           <div className="pt-1">
             <div className="text-[10px] text-brand font-semibold">Unexamined Risk:</div>
-            <p className="font-editorial-serif text-xs text-ink leading-normal">
+            <p className="font-display text-xs text-ink leading-normal">
               {causalChain.assumption.blindSpot}
             </p>
           </div>
@@ -64,13 +64,13 @@ export default function CausalFlowViewer({ causalChain }: CausalFlowViewerProps)
           </div>
           <div>
             <div className="text-[10px] text-ink-soft">Immediate Tactical Event:</div>
-            <p className="font-editorial-serif text-xs text-ink-muted leading-normal">
+            <p className="font-display text-xs text-ink-muted leading-normal">
               {causalChain.result.immediate}
             </p>
           </div>
           <div className="pt-1">
             <div className="text-[10px] text-ink-soft">Adversary Counter:</div>
-            <p className="font-editorial-serif text-xs text-ink-muted leading-normal">
+            <p className="font-display text-xs text-ink-muted leading-normal">
               {causalChain.result.counterAction}
             </p>
           </div>
@@ -81,14 +81,14 @@ export default function CausalFlowViewer({ causalChain }: CausalFlowViewerProps)
           <div className="text-[11px] text-brand font-bold">
             IV. Strategic Consequence
           </div>
-          <p className="font-editorial-serif text-sm text-ink leading-relaxed">
+          <p className="font-display text-sm text-ink leading-relaxed">
             {causalChain.unintendedConsequence}
           </p>
         </div>
       </div>
 
       {/* Bridging Dilemma Footnote */}
-      <div className="mt-6 pt-4 border-t border-rule text-xs font-editorial-serif text-ink-muted flex items-baseline gap-2">
+      <div className="mt-6 pt-4 border-t border-rule text-xs font-display text-ink-muted flex items-baseline gap-2">
         <span className="font-bold text-brand text-[10px] whitespace-nowrap">
           Next Dilemma:
         </span>

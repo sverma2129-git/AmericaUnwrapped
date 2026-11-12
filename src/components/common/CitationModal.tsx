@@ -101,7 +101,7 @@ export default function CitationModal() {
           <div className="space-y-1">
             <h3
               id="citation-modal-title"
-              className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug"
+              className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug"
             >
               {activeCitation.title || activeCitation.citation}
             </h3>
@@ -147,7 +147,7 @@ export default function CitationModal() {
             >
               Verified Exact Verbatim Excerpt
             </span>
-            <blockquote className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed pl-1 py-0.5">
+            <blockquote className="font-display text-base sm:text-lg text-ink leading-relaxed pl-1 py-0.5">
               &ldquo;{activeCitation.exactQuotation}&rdquo;
             </blockquote>
           </section>

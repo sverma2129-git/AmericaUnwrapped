@@ -37,10 +37,10 @@ export default function PhoenixAnalysis() {
         {activeTab === 'phoenix' ? (
           <div className="space-y-6">
             <div>
-              <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
                 Deconstructing the &ldquo;Neutralization&rdquo; Statistics
               </h4>
-              <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+              <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 The Phoenix Program (<em>Phung Hoang</em>) was designed by the CIA and CORDS to dismantle the Viet Cong Infrastructure (VCI)—the shadow civil government that taxed villages, drafted youths, and executed Saigon officials.
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-[10px] text-stone-500 block">
                   Total Neutralized
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   81,740
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -63,7 +63,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-[10px] text-stone-500 block">
                   Captured / Interrogated
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   33,358
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -75,7 +75,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-[10px] text-stone-500 block">
                   Rallied / Defected
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   22,013
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -87,7 +87,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-[10px] text-stone-500 block">
                   Documented Killed
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   26,369
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -104,19 +104,19 @@ export default function PhoenixAnalysis() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
                 <div className="space-y-1">
-                  <div className="font-editorial-serif font-bold text-stone-900 text-base">
+                  <div className="font-display font-bold text-stone-900 text-base">
                     87% &bull; Conventional Military Clashes
                   </div>
-                  <p className="text-stone-700 leading-relaxed font-editorial-serif">
+                  <p className="text-stone-700 leading-relaxed font-display">
                     The vast majority of deaths were ordinary infantrymen or villagers killed in regular military sweeps, artillery strikes, or ambushes. Because province chiefs faced monthly neutralization quotas from Saigon, dead bodies were routinely classified ex-post-facto as &ldquo;VCI cadres&rdquo; to fulfill bureaucratic quotas.
                   </p>
                 </div>
 
                 <div className="space-y-1">
-                  <div className="font-editorial-serif font-bold text-stone-900 text-base">
+                  <div className="font-display font-bold text-stone-900 text-base">
                     13% &bull; Targeted Police / PRU Raids
                   </div>
-                  <p className="text-stone-700 leading-relaxed font-editorial-serif">
+                  <p className="text-stone-700 leading-relaxed font-display">
                     Only approximately 13% of deaths occurred during targeted raids by CIA-advised Provincial Reconnaissance Units (PRUs) or National Police. CIA director William Colby testified before Congress in 1971 that Phoenix was not an assassination program, but acknowledged widespread abuses, torture, and wrongful arrests by local South Vietnamese police.
                   </p>
                 </div>
@@ -126,10 +126,10 @@ export default function PhoenixAnalysis() {
         ) : (
           <div className="space-y-6">
             <div>
-              <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
                 Operation Ranch Hand: Herbicidal Warfare &amp; The Dioxin Toll
               </h4>
-              <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+              <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 Between 1961 and 1971, the U.S. Air Force sprayed nearly 20 million gallons of chemical herbicides over 4.5 million acres of South Vietnam and the Ho Chi Minh Trail, attempting to strip forest canopies and destroy insurgent food crops.
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function PhoenixAnalysis() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">Total Volume Sprayed</span>
-                <div className="font-editorial-serif text-xl font-bold text-stone-900">
+                <div className="font-display text-xl font-bold text-stone-900">
                   19.5 Million Gallons
                 </div>
                 <p className="text-stone-600">
@@ -147,7 +147,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">Forests &amp; Mangroves Stripped</span>
-                <div className="font-editorial-serif text-xl font-bold text-stone-900">
+                <div className="font-display text-xl font-bold text-stone-900">
                   4.5 Million Acres
                 </div>
                 <p className="text-stone-600">
@@ -157,7 +157,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">Crop Destruction Program</span>
-                <div className="font-editorial-serif text-xl font-bold text-stone-900">
+                <div className="font-display text-xl font-bold text-stone-900">
                   Agent Blue Spraying
                 </div>
                 <p className="text-stone-600">

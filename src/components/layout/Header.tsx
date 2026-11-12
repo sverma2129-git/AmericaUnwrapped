@@ -67,7 +67,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur-md [border-bottom:3px_double_var(--color-ink)]">
+    <header className="sticky top-0 z-40 bg-paper/90 backdrop-blur-md border-b border-rule">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="h-16 flex items-center justify-between gap-6">
           {/* Masthead Brand */}
@@ -75,7 +75,7 @@ export default function Header() {
             href="/"
             className="flex items-baseline gap-0.5 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-xs"
           >
-            <span className="font-editorial-serif text-[1.375rem] font-semibold tracking-tight text-ink group-hover:text-brand transition-colors">
+            <span className="font-display text-[1.375rem] font-semibold tracking-tight text-ink group-hover:text-brand transition-colors">
               America Unwrapped
             </span>
           </Link>
@@ -134,7 +134,7 @@ export default function Header() {
                       >
                         {/* Top Bar inside Dropdown */}
                         <div className="flex items-center justify-between pb-3 mb-4 border-b border-rule text-xs">
-                          <span className="font-editorial-serif text-base font-semibold text-ink">
+                          <span className="font-display text-base font-semibold text-ink">
                             The Vietnam War: 12 Historical Inquiries (1945–1975)
                           </span>
                           <Link

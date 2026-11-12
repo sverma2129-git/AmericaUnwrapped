@@ -15,7 +15,7 @@ interface ModuleFrameProps {
 /**
  * Shared frame for every interactive or visual module: question, one-line
  * instruction, the figure, a takeaway, and a source line. Set like a newspaper
- * infographic: opened by a heavy rule and closed by a hairline, with no box.
+ * infographic: title above, caption below, and no box or rules around it.
  */
 export default function ModuleFrame({
   question,
@@ -27,12 +27,12 @@ export default function ModuleFrame({
   className = '',
 }: ModuleFrameProps) {
   return (
-    <figure className={`border-t-2 border-ink pt-4 ${className}`}>
-      <h3 className="font-editorial-serif text-xl sm:text-2xl font-semibold text-ink">{question}</h3>
+    <figure className={className}>
+      <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink">{question}</h3>
       {instruction && <p className="mt-1 text-[0.9375rem] text-ink-muted">{instruction}</p>}
       <div className="mt-5">{children}</div>
       {(takeaway || caption) && (
-        <figcaption className="mt-5 border-t border-rule pt-4 space-y-2 max-w-3xl">
+        <figcaption className="mt-6 space-y-2 max-w-3xl">
           {takeaway && (
             <p className="text-base text-ink leading-relaxed">
               <strong className="font-semibold">Takeaway:</strong> {takeaway}

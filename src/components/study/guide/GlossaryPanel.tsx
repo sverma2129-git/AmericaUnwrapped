@@ -14,7 +14,7 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
       {/* Interactive Card Deck */}
       <div>
         <div className="mb-4">
-          <h2 className="font-editorial-serif text-2xl font-bold text-ink">
+          <h2 className="font-display text-2xl font-bold text-ink">
             Flip Cards: High-Yield Terms ({terms.length} Total)
           </h2>
         </div>
@@ -25,7 +25,7 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
       <div className="space-y-4 pt-8 border-t border-rule">
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
           <div>
-            <h3 className="font-editorial-serif text-2xl font-bold text-ink">Searchable Unit Glossary</h3>
+            <h3 className="font-display text-2xl font-bold text-ink">Searchable Unit Glossary</h3>
             <p className="font-sans text-xs text-ink-muted mt-0.5">
               Complete alphabetical index with definitions, historical significance, and exam tips.
             </p>
@@ -49,7 +49,7 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
           {filtered.map((item, idx) => (
             <div key={`${item.id}-${idx}`} className="p-4 bg-parchment border border-rule rounded-xs space-y-2">
               <div className="flex items-baseline justify-between gap-2 border-b border-rule pb-1.5">
-                <span className="font-editorial-serif font-bold text-base text-ink">{item.term}</span>
+                <span className="font-display font-bold text-base text-ink">{item.term}</span>
                 {item.phonetic && (
                   <span className="text-xs text-brand italic">[{item.phonetic}]</span>
                 )}

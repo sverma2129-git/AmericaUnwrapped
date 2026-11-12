@@ -27,10 +27,10 @@ export default function AttritionModel() {
       </div>
 
       <div>
-        <h4 className="font-editorial-serif text-2xl font-bold text-stone-900">
+        <h4 className="font-display text-2xl font-bold text-stone-900">
           The Strategy of Attrition &amp; The Crossover Point Model
         </h4>
-        <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+        <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
           General William Westmoreland defined American military victory through reaching the &ldquo;crossover point&rdquo;: the threshold at which allied firepower would kill or incapacitate enemy soldiers faster than North Vietnam and the Viet Cong could replenish them. Adjust the operational parameters below to examine the demographic and tactical assumptions that governed the debate.
         </p>
       </div>
@@ -89,7 +89,7 @@ export default function AttritionModel() {
               <span>78% (Pentagon Systems Study)</span>
               <span>90% (Strict guerrilla avoidance)</span>
             </div>
-            <p className="mt-2 font-editorial-serif text-xs text-stone-500">
+            <p className="mt-2 font-display text-xs text-stone-500">
               Department of Defense Systems Analysis under Alain Enthoven found that communist forces initiated over 75% of firefights, allowing them to disengage and regulate casualty rates when losses mounted.
             </p>
           </div>
@@ -138,10 +138,10 @@ export default function AttritionModel() {
               <div className="text-[10px] font-bold text-ink-soft">
                 Net Monthly Manpower Trajectory:
               </div>
-              <div className="font-editorial-serif text-2xl font-bold mt-1 text-ink">
+              <div className="font-display text-2xl font-bold mt-1 text-ink">
                 {netMonthlyChange > 0 ? `+${netMonthlyChange.toLocaleString()} cadres / mo` : `${netMonthlyChange.toLocaleString()} cadres / mo`}
               </div>
-              <p className="font-editorial-serif text-xs text-ink-muted mt-1">
+              <p className="font-display text-xs text-ink-muted mt-1">
                 {netMonthlyChange > 0
                   ? 'At these parameters, draft replenishment exceeds effective combat attrition. Communist force strength continues to expand or stabilize.'
                   : 'At these parameters, attrition exceeds the annual biological replenishment rate, creating a net deficit in regular cadre formations.'}
@@ -157,7 +157,7 @@ export default function AttritionModel() {
           <span className="font-bold text-stone-700 block mb-1">
             1. MACV Attrition Logic (Westmoreland)
           </span>
-          <p className="font-editorial-serif text-stone-700 leading-relaxed text-sm">
+          <p className="font-display text-stone-700 leading-relaxed text-sm">
             Commanders argued that massive firepower (artillery, B-52 Arc Light strikes, helicopter gunships) would inflict unendurable human costs, eventually forcing Hanoi to calculate that continued military struggle was futile.
           </p>
         </div>
@@ -166,7 +166,7 @@ export default function AttritionModel() {
           <span className="font-bold text-stone-700 block mb-1">
             2. Pentagon Systems Analysis (Enthoven)
           </span>
-          <p className="font-editorial-serif text-stone-700 leading-relaxed text-sm">
+          <p className="font-display text-stone-700 leading-relaxed text-sm">
             Civilian analysts in the Defense Department calculated that because the enemy chose when and where to fight in ~78% of contacts, communist commanders could simply throttle back operations to maintain their forces indefinitely.
           </p>
         </div>
@@ -175,7 +175,7 @@ export default function AttritionModel() {
           <span className="font-bold text-stone-700 block mb-1">
             3. Hanoi’s Strategic Calculation (Le Duan)
           </span>
-          <p className="font-editorial-serif text-stone-700 leading-relaxed text-sm">
+          <p className="font-display text-stone-700 leading-relaxed text-sm">
             Operating under revolutionary war doctrine (*Chien tranh nhan dan*), Hanoi accepted casualty ratios exceeding 10-to-1, calculating that American democratic public opinion would exhaust its willingness to sustain casualties long before North Vietnam ran out of soldiers.
           </p>
         </div>

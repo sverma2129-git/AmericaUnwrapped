@@ -100,7 +100,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
           >
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-rule">
               <div>
-                <h3 className="font-editorial-serif text-xl font-bold text-ink">
+                <h3 className="font-display text-xl font-bold text-ink">
                   Select a Chapter
                 </h3>
               </div>
@@ -129,7 +129,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
                           <span className="text-brand font-bold text-[10px]">Turning Point</span>
                         )}
                       </div>
-                      <div className="font-editorial-serif text-sm leading-snug line-clamp-2">
+                      <div className="font-display text-sm leading-snug line-clamp-2">
                         {ch.title}
                       </div>
                     </div>

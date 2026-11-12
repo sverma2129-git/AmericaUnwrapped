@@ -60,7 +60,7 @@ export default function QuickBriefing({
 
       {!isExpanded && (
         <div className="pt-2 flex items-baseline justify-between gap-4">
-          <p className="font-editorial-serif text-base text-ink">
+          <p className="font-display text-base text-ink">
             &ldquo;{bigQuestion}&rdquo;
           </p>
           <span className="text-xs text-brand font-medium shrink-0">
@@ -73,7 +73,7 @@ export default function QuickBriefing({
         <div className="">
           {/* The Big Question */}
           <div className="mb-6">
-            <h2 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug">
+            <h2 className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug">
               {bigQuestion}
             </h2>
             <p className="mt-2.5 font-sans text-sm sm:text-base text-ink-muted leading-relaxed">
@@ -124,7 +124,7 @@ export default function QuickBriefing({
                     className="w-full text-left p-2.5 rounded-xs bg-paper hover:bg-parchment-light border border-rule hover:border-brand transition-all group cursor-pointer"
                   >
                     <div className="flex items-baseline justify-between gap-1">
-                      <span className="font-editorial-serif font-bold text-sm text-ink group-hover:text-brand transition-colors">
+                      <span className="font-display font-bold text-sm text-ink group-hover:text-brand transition-colors">
                         {term.term}
                       </span>
                       {term.phonetic && (
@@ -158,7 +158,7 @@ export default function QuickBriefing({
           >
             <div className="flex items-start justify-between gap-4 border-b border-rule pb-3">
               <div>
-                <h3 className="font-editorial-serif text-2xl font-bold text-ink">
+                <h3 className="font-display text-2xl font-bold text-ink">
                   {activeTermModal.term}
                 </h3>
                 {activeTermModal.phonetic && (

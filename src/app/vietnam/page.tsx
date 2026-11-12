@@ -14,11 +14,11 @@ export default function VietnamHubPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-16">
       {/* 1. Header & Central Inquiry */}
       <header className="border-b border-rule pb-12 max-w-3xl space-y-5">
-        <h1 className="font-editorial-serif text-4xl lg:text-5xl font-bold tracking-tight text-ink leading-tight">
+        <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-ink leading-tight">
           The Vietnam War
         </h1>
 
-        <p className="font-editorial-serif text-xl sm:text-2xl text-ink-muted leading-relaxed">
+        <p className="font-display text-xl sm:text-2xl text-ink-muted leading-relaxed">
           How did thirty years of strategic decisions produce an unresolvable war?
         </p>
 
@@ -54,7 +54,7 @@ export default function VietnamHubPage() {
       {/* 2. Fast-Track Exam Preparation Banner */}
       <section className="bg-parchment border border-rule p-6 sm:p-8 rounded-xs flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="space-y-2 max-w-2xl">
-          <h2 className="font-editorial-serif text-2xl font-bold text-ink">
+          <h2 className="font-display text-2xl font-bold text-ink">
             Have a test tomorrow? Open the Master Study Guide.
           </h2>
           <p className="font-sans text-sm text-ink-muted leading-relaxed">
@@ -72,7 +72,7 @@ export default function VietnamHubPage() {
       {/* 3. Thirty-Year Chronological Arc */}
       <section id="timeline" aria-label="Chronological Timeline" className="space-y-4">
         <div>
-          <h2 className="font-editorial-serif text-3xl font-bold text-ink">
+          <h2 className="font-display text-3xl font-bold text-ink">
             Thirty Years of Escalation, Stalemate, and Collapse
           </h2>
         </div>
@@ -85,7 +85,7 @@ export default function VietnamHubPage() {
       <section id="chapters" aria-label="Chapter Dossiers" className="space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-4 border-b border-rule">
           <div>
-            <h2 className="font-editorial-serif text-3xl font-bold text-ink">
+            <h2 className="font-display text-3xl font-bold text-ink">
               The Twelve Inquiries
             </h2>
           </div>

@@ -27,10 +27,10 @@ export default function CompetingArguments() {
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 mt-1">
+          <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
             Why Historians Still Disagree About the War’s Fundamental Meaning
           </h4>
-          <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+          <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
             The Vietnam War is not an inert chapter of the past. It remains an active ideological battleground. Each generation of scholars brings different archival evidence, questions, and political contexts to explain why the tragedy occurred.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function CompetingArguments() {
               <div className="text-[10px] opacity-70">
                 {school.era.split(' ')[0]}
               </div>
-              <div className="font-editorial-serif text-sm font-bold mt-0.5">
+              <div className="font-display text-sm font-bold mt-0.5">
                 {school.name.split('/')[0]}
               </div>
             </button>
@@ -58,7 +58,7 @@ export default function CompetingArguments() {
         <div className="p-6 bg-white border border-stone-200 space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-stone-100 pb-3">
             <div>
-              <h5 className="font-editorial-serif text-2xl font-bold text-stone-900">
+              <h5 className="font-display text-2xl font-bold text-stone-900">
                 {activeSchool.name}
               </h5>
               <span className="text-xs text-stone-500">
@@ -75,7 +75,7 @@ export default function CompetingArguments() {
             <span className="text-xs font-bold text-stone-500 block mb-1">
               Core Historical Argument
             </span>
-            <p className="font-editorial-serif text-base sm:text-lg text-stone-800 leading-relaxed">
+            <p className="font-display text-base sm:text-lg text-stone-800 leading-relaxed">
               &ldquo;{activeSchool.coreThesis}&rdquo;
             </p>
           </div>
@@ -86,7 +86,7 @@ export default function CompetingArguments() {
               <span className="font-bold text-stone-700 block">
                 Evidence Emphasized &bull; Explanatory Power:
               </span>
-              <ul className="space-y-1.5 text-stone-700 font-editorial-serif text-sm">
+              <ul className="space-y-1.5 text-stone-700 font-display text-sm">
                 {activeSchool.strengths.map((str, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="font-bold text-stone-900">&bull;</span>
@@ -100,7 +100,7 @@ export default function CompetingArguments() {
               <span className="font-bold text-stone-700 block">
                 Historiographical Critiques &bull; Blind Spots:
               </span>
-              <ul className="space-y-1.5 text-stone-700 font-editorial-serif text-sm">
+              <ul className="space-y-1.5 text-stone-700 font-display text-sm">
                 {activeSchool.blindSpotsOrCritiques.map((blind, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="font-bold text-stone-900">&bull;</span>

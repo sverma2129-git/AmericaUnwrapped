@@ -14,8 +14,8 @@ const wordCount = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
 
 function TaskCard({ kicker, title, children }: { kicker: string; title: string; children: React.ReactNode }) {
   return (
-    <section className="border-t border-rule pt-6 max-w-3xl">
-      <h4 className="font-editorial-serif text-xl font-semibold text-ink leading-snug">{title}</h4>
+    <section className="max-w-3xl">
+      <h4 className="font-display text-xl font-semibold text-ink leading-snug">{title}</h4>
       <p className="meta mt-1 text-ink-soft">{kicker}</p>
       <div className="mt-4">{children}</div>
     </section>
@@ -26,8 +26,8 @@ function SourceCard({ citationId }: { citationId: string }) {
   const c = CITATION_REGISTRY[citationId];
   if (!c || !isVerbatimQuotation(c)) return null;
   return (
-    <figure className="border-y border-ink py-4">
-      <blockquote className="font-editorial-serif text-base sm:text-lg text-ink leading-snug">&ldquo;{c.exactQuotation}&rdquo;</blockquote>
+    <figure className="bg-parchment rounded-xl p-5">
+      <blockquote className="font-display text-base sm:text-lg text-ink leading-snug">&ldquo;{c.exactQuotation}&rdquo;</blockquote>
       <figcaption className="mt-2 text-xs text-ink-muted">
         {c.authorOrInstitution}, {c.title}, {c.date}
         <CitationMarker id={c.id} />
@@ -241,14 +241,14 @@ export default function CourseTasks({ tasks }: { tasks: Record<CourseId, CourseT
   const { course } = useCourse();
   if (!course) {
     return (
-      <div className="bg-parchment border border-rule rounded-md p-6 max-w-3xl">
+      <div className="bg-parchment rounded-xl p-6 max-w-3xl">
         <p className="text-sm text-ink mb-3">Which course are you studying for? The activities are different for each.</p>
         <CourseToggle />
       </div>
     );
   }
   return (
-    <div className="space-y-6">
+    <div className="space-y-12">
       <p className="text-sm text-ink-muted">
         Showing activities for <strong className="text-ink">{COURSE_LABEL[course]}</strong>. Switch at the top of the page.
       </p>

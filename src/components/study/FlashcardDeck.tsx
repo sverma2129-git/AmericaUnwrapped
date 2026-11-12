@@ -65,7 +65,7 @@ export default function FlashcardDeck({
       {/* Header & Mode Switcher */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-rule gap-2 mb-6">
         <div>
-          <h2 className="font-editorial-serif text-2xl font-bold">
+          <h2 className="font-display text-2xl font-bold">
             {title}
           </h2>
         </div>
@@ -122,7 +122,7 @@ export default function FlashcardDeck({
             <div className="my-auto py-4">
               {!isFlipped ? (
                 <div className="text-center space-y-2">
-                  <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink">
                     {currentCard.term}
                   </h3>
                   {currentCard.phonetic && (
@@ -211,7 +211,7 @@ export default function FlashcardDeck({
                   <span className="text-xs font-bold text-brand">
                     {idx + 1}.
                   </span>
-                  <h4 className="font-editorial-serif font-bold text-base sm:text-lg text-ink">
+                  <h4 className="font-display font-bold text-base sm:text-lg text-ink">
                     {card.term}
                   </h4>
                   {card.phonetic && (

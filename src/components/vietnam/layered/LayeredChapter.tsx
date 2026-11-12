@@ -43,8 +43,8 @@ function splitTakeaway(text: string): [string | null, string] {
 /** A major section opens with the double rule and its heading; details go below the heading. */
 function SectionOpener({ id, title, children }: { id: string; title: string; children?: React.ReactNode }) {
   return (
-    <div className="rule-double pt-5 mb-10">
-      <h2 id={id} className="font-editorial-serif text-3xl sm:text-4xl font-semibold text-ink">
+    <div className="mb-10">
+      <h2 id={id} className="font-display text-3xl sm:text-[2.5rem] font-bold text-ink">
         {title}
       </h2>
       {children && <p className="mt-2 text-base text-ink-muted leading-relaxed max-w-2xl">{children}</p>}
@@ -58,7 +58,7 @@ function DeeperPanel({ title, detail, children }: { title: string; detail: strin
     <details className="group border-b border-rule">
       <summary className="list-none [&::-webkit-details-marker]:hidden flex items-baseline gap-4 py-4 hover:text-brand transition-colors">
         <span className="flex-1 min-w-0">
-          <span className="block font-editorial-serif text-xl font-semibold text-ink group-hover:text-brand transition-colors">{title}</span>
+          <span className="block font-display text-xl font-semibold text-ink group-hover:text-brand transition-colors">{title}</span>
           <span className="block mt-0.5 text-[0.9375rem] text-ink-muted">{detail}</span>
         </span>
         <Icon name="plus" className="w-5 h-5 self-center text-ink-muted transition-transform duration-200 group-open:rotate-45" />
@@ -87,8 +87,8 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
       <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-16 sm:pb-24">
         {/* Title block: headline, deck, then the dateline */}
         <header className="max-w-3xl">
-          <h1 className="font-editorial-serif text-4xl sm:text-5xl font-semibold text-ink leading-[1.08]">{chapter.title}</h1>
-          <p className="mt-4 font-editorial-serif text-xl sm:text-2xl text-ink-muted leading-snug">{chapter.subtitle}</p>
+          <h1 className="font-display text-4xl sm:text-[3.25rem] font-bold text-ink leading-[1.05]">{chapter.title}</h1>
+          <p className="mt-4 text-xl sm:text-2xl text-ink-muted leading-snug">{chapter.subtitle}</p>
           <p className="meta mt-4 text-ink-soft">
             Chapter {chapter.number} &middot; {chapter.timeframe}
             {chapter.isLandmark && <span className="text-brand"> &middot; Turning point</span>}
@@ -102,7 +102,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
         </header>
 
         {/* On this page */}
-        <nav aria-label="On this page" className="mt-8 border-y border-rule py-3">
+        <nav aria-label="On this page" className="mt-8">
           <ol className="flex flex-wrap gap-x-8 gap-y-2 text-[0.9375rem]">
             {contents.map((c, i) => (
               <li key={c.href}>
@@ -120,14 +120,14 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
 
         {/* ── Layer 1: the gist ───────────────────────────────────────────── */}
         <section id="gist" aria-labelledby="gist-heading" className="scroll-mt-32 mt-12 sm:mt-16">
-          <h2 id="gist-heading" className="font-editorial-serif text-[1.75rem] sm:text-4xl font-semibold leading-tight text-ink max-w-4xl">
+          <h2 id="gist-heading" className="font-display text-[1.75rem] sm:text-4xl font-semibold leading-tight text-ink max-w-4xl">
             {study?.bigQuestion}
           </h2>
           <ol className="mt-8 grid md:grid-cols-3 gap-y-6 md:gap-x-10">
             {study?.briefing.examTakeaways.map((t, i) => {
               const [label, text] = splitTakeaway(t);
               return (
-                <li key={i} className="border-t border-ink pt-3">
+                <li key={i}>
                   <p className="font-semibold text-ink">
                     {i + 1}. {label}
                   </p>
@@ -138,7 +138,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
           </ol>
 
           {story?.objectives && (
-            <div className="mt-8 bg-parchment border border-rule rounded-md p-5 sm:p-6">
+            <div className="mt-10 bg-parchment rounded-xl p-5 sm:p-7">
               <CourseObjectives objectives={story.objectives} />
             </div>
           )}
@@ -146,7 +146,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
           {/* Key dates at a glance */}
           <ol aria-label="Key dates" className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-4">
             {chapter.whatHappened.keyEvents.map((e) => (
-              <li key={e.title} className="border-t border-rule pt-2.5">
+              <li key={e.title}>
                 <span className="meta block text-brand tabular-nums">{e.date}</span>
                 <span className="block mt-1 text-[0.9375rem] text-ink leading-snug">{e.title}</span>
               </li>
@@ -166,7 +166,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
               const wide = ['siege', 'night', 'consequence', 'compare'].includes(beat.visual?.kind ?? '');
               return (
                 <section key={beat.id} id={`beat-${beat.id}`} aria-labelledby={`beat-${beat.id}-h`} className="scroll-mt-32">
-                  <h3 id={`beat-${beat.id}-h`} className="font-editorial-serif text-2xl sm:text-3xl font-semibold text-ink leading-tight max-w-2xl">
+                  <h3 id={`beat-${beat.id}-h`} className="font-display text-2xl sm:text-3xl font-semibold text-ink leading-tight max-w-2xl">
                     {beat.headline}
                   </h3>
                   <p className="meta mt-1.5 text-ink-soft">{beat.kicker}</p>
@@ -284,8 +284,8 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
         </section>
 
         {/* Bridge to the next chapter */}
-        <footer className="mt-24 sm:mt-32 rule-double pt-5">
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-semibold text-ink max-w-3xl">
+        <footer className="mt-24 sm:mt-32 bg-parchment rounded-xl p-6 sm:p-10">
+          <h2 className="font-display text-2xl sm:text-3xl font-semibold text-ink max-w-3xl">
             {chapter.nextQuestion.question}
           </h2>
           <p className="reading mt-3 text-ink-muted">{chapter.nextQuestion.framing}</p>

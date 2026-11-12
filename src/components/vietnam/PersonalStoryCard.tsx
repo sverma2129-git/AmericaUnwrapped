@@ -13,7 +13,7 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
       className="max-w-3xl mx-auto rounded-xl border border-brand-rule bg-brand-tint p-6 sm:p-8 space-y-5"
     >
       <div className="space-y-1">
-        <h3 className="font-editorial-serif text-2xl font-bold text-ink">{story.name}</h3>
+        <h3 className="font-display text-2xl font-bold text-ink">{story.name}</h3>
         <p className="text-sm text-ink-muted">One person&rsquo;s war &middot; {story.role}</p>
       </div>
 
@@ -24,7 +24,7 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
       </div>
 
       {showQuote && (
-        <blockquote className="border-l border-brand pl-4 font-editorial-serif text-lg text-ink leading-relaxed">
+        <blockquote className="border-l border-brand pl-4 font-display text-lg text-ink leading-relaxed">
           &ldquo;{quote.exactQuotation}&rdquo;
           <footer className="mt-2 not-italic text-xs text-ink-muted">
             &mdash; {story.name} <CitationMarker id={quote.id} />

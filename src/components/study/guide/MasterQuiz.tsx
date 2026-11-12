@@ -27,7 +27,7 @@ export default function MasterQuiz({ allQuestions, groups }: MasterQuizProps) {
     <section aria-label="Master Practice Quiz" className="space-y-8">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-rule pb-4">
         <div>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             Multi-Chapter Master Practice Quiz
           </h2>
         </div>

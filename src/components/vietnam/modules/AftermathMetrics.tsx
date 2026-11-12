@@ -44,10 +44,10 @@ export default function AftermathMetrics() {
         {activeTab === 'casualties' && (
           <div className="space-y-6">
             <div>
-              <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
                 An Estimated 3.1 to 3.8 Million Lives Lost
               </h4>
-              <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+              <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 The human cost of thirty years of armed conflict devastated Vietnamese society across all regions and political lines, while claiming over 58,000 American military lives.
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function AftermathMetrics() {
                 <span className="text-[10px] text-stone-500 block">
                   U.S. Military Dead
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   58,220
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -69,7 +69,7 @@ export default function AftermathMetrics() {
                 <span className="text-[10px] text-stone-500 block">
                   ARVN (South) Dead
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   ~254,000
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -81,7 +81,7 @@ export default function AftermathMetrics() {
                 <span className="text-[10px] text-stone-500 block">
                   PAVN / VC Dead
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   ~1,100,000
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -93,7 +93,7 @@ export default function AftermathMetrics() {
                 <span className="text-[10px] text-stone-500 block">
                   Vietnamese Civilians Dead
                 </span>
-                <div className="mt-1 font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   2M – 4M
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
@@ -106,7 +106,7 @@ export default function AftermathMetrics() {
               <span className="font-bold text-stone-700 block">
                 Methodological Documentation &bull; The 1995 Hanoi Disclosure:
               </span>
-              <p className="font-editorial-serif text-stone-800 leading-relaxed">
+              <p className="font-display text-stone-800 leading-relaxed">
                 On April 4, 1995, preceding the formal diplomatic normalization with Washington, Hanoi officially published casualty figures for the first time: 1.1 million North Vietnamese and Viet Cong combatants killed, 600,000 wounded, and approximately 2 million civilian deaths. Independent demographic evaluations (Hirschman, Preston, and Vu, 1995) estimated total Vietnamese deaths at 3.1 million.
               </p>
             </div>
@@ -116,10 +116,10 @@ export default function AftermathMetrics() {
         {activeTab === 'refugees' && (
           <div className="space-y-6">
             <div>
-              <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
                 Re-education Camps &amp; The Boat People Diaspora
               </h4>
-              <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+              <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 Following the collapse of the southern regime, the unified communist government subjected roughly 1 million former South Vietnamese military officers, civil servants, and intellectuals to compulsory &ldquo;re-education.&rdquo;
               </p>
             </div>
@@ -127,30 +127,30 @@ export default function AftermathMetrics() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">Re-education Camps</span>
-                <div className="font-editorial-serif text-xl font-bold text-stone-900">
+                <div className="font-display text-xl font-bold text-stone-900">
                   1 Million Detained
                 </div>
-                <p className="text-stone-600 font-editorial-serif">
+                <p className="text-stone-600 font-display">
                   Between 100,000 and 300,000 were imprisoned for up to 5 to 17 years in harsh forced-labor redoubts; an estimated 10,000 to 20,000 died of malnutrition and disease.
                 </p>
               </div>
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">The Boat People Exodus</span>
-                <div className="font-editorial-serif text-xl font-bold text-stone-900">
+                <div className="font-display text-xl font-bold text-stone-900">
                   1.5 – 2.0 Million Fled
                 </div>
-                <p className="text-stone-600 font-editorial-serif">
+                <p className="text-stone-600 font-display">
                   Between 1975 and 1995, over 1.5 million people fled Vietnam on overcrowded wooden vessels; the UN High Commissioner for Refugees estimated 200,000 to 400,000 drowned at sea.
                 </p>
               </div>
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">Doi Moi (1986)</span>
-                <div className="font-editorial-serif text-xl font-bold text-stone-900">
+                <div className="font-display text-xl font-bold text-stone-900">
                   Economic Realpolitik
                 </div>
-                <p className="text-stone-600 font-editorial-serif">
+                <p className="text-stone-600 font-display">
                   Economic collapse from collectivization and Soviet aid loss forced the Communist Party in 1986 to abandon orthodox socialism in favor of market-oriented economic reforms (<em>Doi Moi</em>).
                 </p>
               </div>
@@ -161,10 +161,10 @@ export default function AftermathMetrics() {
         {activeTab === 'environmental' && (
           <div className="space-y-6">
             <div>
-              <h4 className="font-editorial-serif text-2xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
                 800,000 Tons of Unexploded Ordnance Remaining in the Soil
               </h4>
-              <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+              <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 The physical battlefield outlived the war. Roughly 10% to 30% of the 7.5 million tons of American bombs dropped failed to detonate upon impact, contaminating 20% of Vietnam’s arable land.
               </p>
             </div>
@@ -173,7 +173,7 @@ export default function AftermathMetrics() {
               <span className="font-bold text-stone-700 block">
                 Post-War Casualties (1975–Present):
               </span>
-              <p className="font-editorial-serif text-stone-800 leading-relaxed">
+              <p className="font-display text-stone-800 leading-relaxed">
                 Since 1975, over <strong>40,000 Vietnamese have been killed</strong> and more than <strong>60,000 injured</strong> by unexploded cluster bomblets, landmines, and artillery shells while farming or scavenging for scrap metal.
               </p>
             </div>

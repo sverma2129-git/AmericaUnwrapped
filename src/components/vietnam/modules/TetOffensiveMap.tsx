@@ -233,10 +233,10 @@ export default function TetOffensiveMap() {
         {/* Selected Sector Historical Investigation */}
         <div className="lg:col-span-6 space-y-4">
           <div className="p-4 bg-paper border border-rule rounded-xs text-ink">
-            <h4 className="font-editorial-serif text-xl font-bold text-ink">
+            <h4 className="font-display text-xl font-bold text-ink">
               {current.name}
             </h4>
-            <p className="font-editorial-serif text-xs text-ink-muted mt-1">
+            <p className="font-display text-xs text-ink-muted mt-1">
               {current.significance}
             </p>
 
@@ -244,7 +244,7 @@ export default function TetOffensiveMap() {
               <span className="text-[10px] text-brand font-bold block mb-1">
                 Tactical Engagement:
               </span>
-              <p className="font-editorial-serif text-sm text-ink leading-relaxed">
+              <p className="font-display text-sm text-ink leading-relaxed">
                 {current.tacticalAction}
               </p>
             </div>
@@ -256,7 +256,7 @@ export default function TetOffensiveMap() {
               <span className="text-[10px] font-bold text-brand block mb-1">
                 Hanoi’s Result (Battlefield):
               </span>
-              <p className="font-editorial-serif text-ink-muted leading-normal text-xs">
+              <p className="font-display text-ink-muted leading-normal text-xs">
                 {current.hanoiOutcome}
               </p>
             </div>
@@ -265,7 +265,7 @@ export default function TetOffensiveMap() {
               <span className="text-[10px] font-bold text-ink block mb-1">
                 Washington’s Result (Politics):
               </span>
-              <p className="font-editorial-serif text-ink-muted leading-normal text-xs">
+              <p className="font-display text-ink-muted leading-normal text-xs">
                 {current.washingtonShock}
               </p>
             </div>
@@ -278,7 +278,7 @@ export default function TetOffensiveMap() {
         <span className="font-bold text-brand block mb-1">
           The 1968 Strategic Paradox:
         </span>
-        <p className="font-editorial-serif text-ink leading-relaxed text-sm">
+        <p className="font-display text-ink leading-relaxed text-sm">
           Militarily, the Tet Offensive was an overwhelming defeat for communist forces: an estimated 40,000 Viet Cong fighters were killed, and no spontaneous southern revolution occurred. Politically and psychologically, however, the simultaneous assaults across 36 provincial capitals destroyed the Johnson administration’s narrative of progress, precipitating Walter Cronkite’s declaration of stalemate, General Westmoreland’s replacement, and President Johnson’s decision not to seek re-election.
         </p>
       </div>

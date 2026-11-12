@@ -11,15 +11,15 @@ import { useCourse } from './CourseContext';
 /** Two positions historians take, with the evidence each relies on, and what both agree on. */
 export function HistoriansDisagree({ debate }: { debate: HistoriansDebate }) {
   return (
-    <section aria-labelledby="debate-heading" className="border-t-2 border-ink pt-4">
-      <h3 id="debate-heading" className="font-editorial-serif text-xl sm:text-2xl font-semibold text-ink">
+    <section aria-labelledby="debate-heading">
+      <h3 id="debate-heading" className="font-display text-xl sm:text-2xl font-semibold text-ink">
         Historians disagree: {debate.question}
       </h3>
       <CitedParagraph text={debate.agreed} className="mt-2 text-base text-ink-muted leading-relaxed max-w-3xl" />
       <div className="mt-6 grid md:grid-cols-2 gap-y-8 md:gap-x-12">
         {debate.positions.map((p, i) => (
-          <div key={p.label} className={i > 0 ? 'md:border-l md:border-rule md:pl-12' : ''}>
-            <h4 className="font-editorial-serif text-lg font-semibold text-ink leading-snug">
+          <div key={p.label} className="">
+            <h4 className="font-display text-lg font-semibold text-ink leading-snug">
               {String.fromCharCode(65 + i)}. {p.label}
             </h4>
             <CitedParagraph text={p.claim} className="mt-2 text-[0.9375rem] text-ink leading-relaxed" />
@@ -60,7 +60,7 @@ export function EvidenceLocker({ citationIds }: { citationIds: string[] }) {
     <ol className="divide-y divide-rule">
       {quotes.map((c) => (
         <li key={c.id} className="py-6 first:pt-0 last:pb-0 max-w-3xl">
-          <blockquote className="font-editorial-serif text-lg text-ink leading-snug">&ldquo;{c.exactQuotation}&rdquo;</blockquote>
+          <blockquote className="font-display text-lg text-ink leading-snug">&ldquo;{c.exactQuotation}&rdquo;</blockquote>
           <p className="mt-2 text-[0.9375rem] text-ink-muted">
             <strong className="text-ink font-semibold">{c.authorOrInstitution}</strong>, {c.title}
             <CitationMarker id={c.id} />

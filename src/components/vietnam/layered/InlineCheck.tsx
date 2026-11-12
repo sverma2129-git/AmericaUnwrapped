@@ -13,8 +13,8 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
   const labelId = useId();
 
   return (
-    <section aria-labelledby={labelId} className="bg-parchment border border-rule rounded-md p-5 sm:p-6">
-      <p id={labelId} className="font-editorial-serif text-lg font-semibold text-ink leading-snug">
+    <section aria-labelledby={labelId} className="bg-parchment rounded-xl p-5 sm:p-6">
+      <p id={labelId} className="font-display text-lg font-semibold text-ink leading-snug">
         <span className="font-sans text-[0.9375rem] font-semibold text-brand">Quick check. </span>
         {question.question}
       </p>
@@ -34,7 +34,7 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
               disabled={answered}
               aria-pressed={isPicked}
               onClick={() => setPicked(idx)}
-              className={`flex items-start gap-3 text-left text-[0.9375rem] leading-snug px-4 py-3 rounded-md border transition-colors ${tone} ${
+              className={`flex items-start gap-3 text-left text-[0.9375rem] leading-snug px-4 py-3.5 rounded-lg border transition-colors ${tone} ${
                 answered ? 'cursor-default' : 'cursor-pointer'
               }`}
             >

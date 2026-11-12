@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { Libre_Franklin, Newsreader } from 'next/font/google';
+import { Bricolage_Grotesque, Source_Serif_4 } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
 import CitationModal from '@/components/common/CitationModal';
 import './globals.css';
 
-const franklin = Libre_Franklin({ subsets: ['latin'], variable: '--font-franklin', display: 'swap' });
-const newsreader = Newsreader({
+const bricolage = Bricolage_Grotesque({ subsets: ['latin'], variable: '--font-bricolage', axes: ['opsz'], display: 'swap' });
+const sourceSerif = Source_Serif_4({
   subsets: ['latin'],
-  variable: '--font-newsreader',
+  variable: '--font-source-serif',
   style: ['normal', 'italic'],
   display: 'swap',
 });
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full ${franklin.variable} ${newsreader.variable}`}>
+    <html lang="en" className={`h-full ${bricolage.variable} ${sourceSerif.variable}`}>
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased">
         <CitationProvider>
           {/* Accessible Skip Link */}

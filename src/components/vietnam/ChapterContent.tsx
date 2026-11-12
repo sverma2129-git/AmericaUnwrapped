@@ -47,11 +47,11 @@ export default function ChapterContent({
     <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-16">
       {/* 1. Masthead & Inquiry Framing */}
       <header className="border-b border-rule pb-8 sm:pb-12 space-y-4">
-        <h1 className="font-editorial-serif text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
+        <h1 className="font-display text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
           {chapter.title}
         </h1>
 
-        <p className="font-editorial-serif text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
+        <p className="font-display text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
           {chapter.subtitle}
         </p>
 
@@ -62,7 +62,7 @@ export default function ChapterContent({
 
         {/* Central Historical Inquiry Banner */}
         <div className="mt-8 bg-parchment border border-rule p-5 sm:p-6 rounded-md">
-          <h2 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink leading-snug">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug">
             {studyData?.bigQuestion || chapter.subtitle}
           </h2>
           {studyData?.whyItMatters && (
@@ -147,7 +147,7 @@ export default function ChapterContent({
       {/* 3. The Core Story: Unburied, Readable, Beautiful Narrative */}
       <section id="story" aria-label="The Historical Story" className="scroll-mt-24 space-y-8">
         <div className="border-b border-rule pb-4">
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             How Events Unfolded
           </h2>
           <p className="font-sans text-sm text-ink-muted mt-1">
@@ -168,14 +168,14 @@ export default function ChapterContent({
         {chapter.isLandmark && chapter.landmarkMoment && (
           <aside className="my-8 max-w-3xl mx-auto border-l border-brand bg-parchment p-5 sm:p-6 rounded-r-xs border-t border-r border-b border-rule">
             {landmarkQuote ? (
-              <blockquote className="font-editorial-serif text-lg sm:text-xl text-ink leading-relaxed">
+              <blockquote className="font-display text-lg sm:text-xl text-ink leading-relaxed">
                 &ldquo;{landmarkQuote.exactQuotation}&rdquo;
                 <CitationMarker id={landmarkQuote.id} />
               </blockquote>
             ) : (
               <>
                 <span className="meta text-ink-soft block mb-2">Historian&rsquo;s account (paraphrased)</span>
-                <p className="font-editorial-serif text-lg sm:text-xl text-ink leading-relaxed">
+                <p className="font-display text-lg sm:text-xl text-ink leading-relaxed">
                   {chapter.landmarkMoment.quote}
                 </p>
               </>
@@ -203,7 +203,7 @@ export default function ChapterContent({
                     {evt.date}
                   </span>
                   <div>
-                    <div className="font-editorial-serif font-bold text-base text-ink">
+                    <div className="font-display font-bold text-base text-ink">
                       {evt.title}
                     </div>
                     <div className="font-sans text-sm text-ink-muted mt-1 leading-relaxed">
@@ -224,7 +224,7 @@ export default function ChapterContent({
         <div className="border border-rule bg-parchment p-5 sm:p-8 rounded-xs">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 mb-6 border-b border-rule gap-2">
             <div>
-              <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+              <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
                 {chapter.interactiveModule.title}
               </h2>
             </div>
@@ -266,7 +266,7 @@ export default function ChapterContent({
       <section id="dossier" aria-label="Archival Records and Sources" className="pt-8 border-t border-rule scroll-mt-24">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-rule gap-4">
           <div>
-            <h3 className="font-editorial-serif text-2xl font-bold text-ink">
+            <h3 className="font-display text-2xl font-bold text-ink">
               The Documentary Evidence Dossier
             </h3>
           </div>
@@ -359,7 +359,7 @@ export default function ChapterContent({
 
       {/* 9. Forward Causal Bridge (Next Inquiry) */}
       <footer className="border-t border-rule pt-8 pb-12">
-        <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink mb-3">
+        <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-3">
           {chapter.nextQuestion.question}
         </h3>
         <p className="font-sans text-base text-ink-muted leading-relaxed mb-6 max-w-2xl">

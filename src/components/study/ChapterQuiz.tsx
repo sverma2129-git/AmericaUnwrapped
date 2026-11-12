@@ -83,7 +83,7 @@ export default function ChapterQuiz({
       {/* Quiz Header */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-4 border-b border-rule gap-2 mb-6">
         <div>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold">
             {title}
           </h2>
         </div>
@@ -110,7 +110,7 @@ export default function ChapterQuiz({
 
           {/* Question Text */}
           <div className="py-2">
-            <h3 className="font-editorial-serif text-lg sm:text-xl font-bold text-ink leading-snug">
+            <h3 className="font-display text-lg sm:text-xl font-bold text-ink leading-snug">
               {currentQ.question}
             </h3>
           </div>
@@ -236,13 +236,13 @@ export default function ChapterQuiz({
         /* Quiz Completed Summary Screen */
         <div className="py-6 text-center space-y-6 animate-in fade-in zoom-in-95 duration-200">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-parchment border-2 border-brand mb-2">
-            <span className="font-editorial-serif text-3xl font-bold text-brand">
+            <span className="font-display text-3xl font-bold text-brand">
               {scorePercent}%
             </span>
           </div>
 
           <div className="space-y-2">
-            <h3 className="font-editorial-serif text-2xl font-bold text-ink">
+            <h3 className="font-display text-2xl font-bold text-ink">
               {scorePercent >= 80 ? 'Mastery Demonstrated' : scorePercent >= 60 ? 'Solid Foundation' : 'Review Recommended'}
             </h3>
             <p className="font-sans text-sm text-ink-muted max-w-md mx-auto">

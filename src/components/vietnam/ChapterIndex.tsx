@@ -28,7 +28,7 @@ export default function ChapterIndex() {
               </div>
 
               {/* Title */}
-              <h3 className="font-editorial-serif text-xl sm:text-2xl font-medium tracking-tight text-ink leading-snug group-hover:text-brand transition-colors">
+              <h3 className="font-display text-xl sm:text-2xl font-medium tracking-tight text-ink leading-snug group-hover:text-brand transition-colors">
                 <Link href={`/vietnam/${ch.id}`}>
                   {ch.title}
                 </Link>
@@ -39,7 +39,7 @@ export default function ChapterIndex() {
                 <span className="meta text-brand block mb-1">
                   The Inquiry
                 </span>
-                <p className="font-editorial-serif text-sm text-ink leading-snug">
+                <p className="font-display text-sm text-ink leading-snug">
                   &ldquo;{study?.bigQuestion || ch.subtitle}&rdquo;
                 </p>
               </div>

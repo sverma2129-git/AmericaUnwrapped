@@ -107,10 +107,10 @@ export default function VietnamizationTracker() {
       </div>
 
       <div>
-        <h4 className="font-editorial-serif text-2xl font-bold text-stone-900">
+        <h4 className="font-display text-2xl font-bold text-stone-900">
           The &ldquo;Scissors Curve&rdquo; of Vietnamization
         </h4>
-        <p className="mt-2 font-editorial-serif text-base text-stone-700 leading-relaxed">
+        <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
           Between 1968 and 1972, the United States withdrew over 500,000 ground troops to de-escalate domestic political opposition. However, combat intensity did not decline proportionally: ground combat was transferred to the South Vietnamese army, subsidized by massive air bombardment.
         </p>
       </div>
@@ -254,7 +254,7 @@ export default function VietnamizationTracker() {
           <div className="text-[10px] text-stone-500">
             U.S. Troop Level ({selectedYear})
           </div>
-          <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900">
+          <div className="font-display text-2xl font-bold mt-1 text-stone-900">
             {current.usTroops.toLocaleString()}
           </div>
           <div className="text-xs text-stone-500 mt-1">
@@ -266,7 +266,7 @@ export default function VietnamizationTracker() {
           <div className="text-[10px] text-red-700 font-bold">
             ARVN Combat KIA ({selectedYear})
           </div>
-          <div className="font-editorial-serif text-2xl font-bold mt-1 text-red-900">
+          <div className="font-display text-2xl font-bold mt-1 text-red-900">
             {current.arvnDeaths.toLocaleString()}
           </div>
           <div className="text-xs text-stone-500 mt-1">
@@ -278,7 +278,7 @@ export default function VietnamizationTracker() {
           <div className="text-[10px] text-stone-500">
             U.S. Aerial Bomb Tonnage
           </div>
-          <div className="font-editorial-serif text-2xl font-bold mt-1 text-stone-900">
+          <div className="font-display text-2xl font-bold mt-1 text-stone-900">
             {current.bombTonnage}
           </div>
           <div className="text-xs text-stone-500 mt-1">
@@ -293,7 +293,7 @@ export default function VietnamizationTracker() {
           <span className="text-[10px] text-stone-500 font-bold block mb-1">
             Operational Milestone · {selectedYear}
           </span>
-          <p className="font-editorial-serif text-base text-stone-800 leading-relaxed">
+          <p className="font-display text-base text-stone-800 leading-relaxed">
             {current.milestone}
           </p>
         </div>
@@ -302,7 +302,7 @@ export default function VietnamizationTracker() {
           <span className="text-[10px] text-brand font-bold block mb-1">
             Historiographical Controversy:
           </span>
-          <p className="font-editorial-serif text-sm text-stone-700 leading-relaxed">
+          <p className="font-display text-sm text-stone-700 leading-relaxed">
             {current.contestedDebate}
           </p>
         </div>

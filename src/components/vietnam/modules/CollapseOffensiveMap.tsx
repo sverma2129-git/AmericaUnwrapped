@@ -222,7 +222,7 @@ export default function CollapseOffensiveMap() {
               <span>PHASE {activePhase + 1} OF 5</span>
               <span>{current.date}</span>
             </div>
-            <h4 className="font-editorial-serif text-xl font-bold text-stone-900">
+            <h4 className="font-display text-xl font-bold text-stone-900">
               {current.title}
             </h4>
             <div className="text-xs text-brand font-medium mt-0.5">
@@ -233,7 +233,7 @@ export default function CollapseOffensiveMap() {
               <span className="text-[10px] text-stone-500 font-bold block mb-1">
                 Operational Realities:
               </span>
-              <p className="font-editorial-serif text-sm text-stone-800 leading-relaxed">
+              <p className="font-display text-sm text-stone-800 leading-relaxed">
                 {current.narrative}
               </p>
             </div>
@@ -244,7 +244,7 @@ export default function CollapseOffensiveMap() {
             <span className="font-bold text-stone-600 block mb-1">
               Logistical &amp; Aid Factors:
             </span>
-            <p className="font-editorial-serif text-stone-700 leading-relaxed text-sm">
+            <p className="font-display text-stone-700 leading-relaxed text-sm">
               {current.logisticsAndAid}
             </p>
           </div>
@@ -254,7 +254,7 @@ export default function CollapseOffensiveMap() {
             <span className="font-bold text-stone-700 block mb-1">
               Significance in the 55-Day Arc:
             </span>
-            <p className="font-editorial-serif text-stone-800 leading-relaxed">
+            <p className="font-display text-stone-800 leading-relaxed">
               {current.significance}
             </p>
           </div>

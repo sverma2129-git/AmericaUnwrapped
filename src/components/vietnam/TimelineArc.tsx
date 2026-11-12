@@ -122,7 +122,7 @@ export default function TimelineArc() {
     <div className="border border-rule bg-parchment text-ink p-6 sm:p-8 rounded-xs">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-rule gap-2">
         <div>
-          <h3 className="font-editorial-serif text-xl sm:text-2xl font-bold text-ink">
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-ink">
             Thirty-Year Arc of Decision &amp; Escalation
           </h3>
         </div>
@@ -178,10 +178,10 @@ export default function TimelineArc() {
               </span>
             )}
           </div>
-          <h4 className="font-editorial-serif text-lg font-bold text-ink">
+          <h4 className="font-display text-lg font-bold text-ink">
             {selectedNode.label}: {selectedNode.chapterTitle}
           </h4>
-          <p className="font-editorial-serif text-sm text-ink-muted max-w-2xl leading-relaxed">
+          <p className="font-display text-sm text-ink-muted max-w-2xl leading-relaxed">
             {selectedNode.summary}
           </p>
         </div>

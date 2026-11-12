@@ -23,7 +23,7 @@ export default function DualPerspectiveViewer({
       {/* Editorial Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-8">
         <div>
-          <h3 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-stone-900">
+          <h3 className="font-display text-2xl sm:text-3xl font-bold text-stone-900">
             What Washington Believed vs. What Hanoi Believed
           </h3>
           <span className="text-xs text-stone-500 block mb-1">
@@ -63,7 +63,7 @@ export default function DualPerspectiveViewer({
                   White House &bull; Pentagon &bull; CIA
                 </span>
               </div>
-              <h4 className="font-editorial-serif text-xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-xl font-bold text-stone-900 mt-1">
                 The American Imperative
               </h4>
               <p className="font-sans text-xs text-stone-500 mt-1">
@@ -76,7 +76,7 @@ export default function DualPerspectiveViewer({
               <h5 className="text-[11px] font-bold text-stone-700 mb-1">
                 Strategic Objective
               </h5>
-              <p className="font-editorial-serif text-base sm:text-lg text-stone-800 leading-relaxed">
+              <p className="font-display text-base sm:text-lg text-stone-800 leading-relaxed">
                 {washington.strategicObjective}
               </p>
             </div>
@@ -117,7 +117,7 @@ export default function DualPerspectiveViewer({
                   Politburo &bull; VWP Central Committee
                 </span>
               </div>
-              <h4 className="font-editorial-serif text-xl font-bold text-stone-900 mt-1">
+              <h4 className="font-display text-xl font-bold text-stone-900 mt-1">
                 The Revolutionary Imperative
               </h4>
               <p className="font-sans text-xs text-stone-500 mt-1">
@@ -130,7 +130,7 @@ export default function DualPerspectiveViewer({
               <h5 className="text-[11px] font-bold text-stone-700 mb-1">
                 Strategic Objective
               </h5>
-              <p className="font-editorial-serif text-base sm:text-lg text-stone-800 leading-relaxed">
+              <p className="font-display text-base sm:text-lg text-stone-800 leading-relaxed">
                 {hanoi.strategicObjective}
               </p>
             </div>
@@ -163,14 +163,14 @@ export default function DualPerspectiveViewer({
       ) : (
         /* The Full Five-Actor Strategic Ecosystem */
         <div className="space-y-6">
-          <p className="font-editorial-serif text-base sm:text-lg text-stone-700 leading-relaxed">
+          <p className="font-display text-base sm:text-lg text-stone-700 leading-relaxed">
             The Vietnam War cannot be reduced to Washington vs. Hanoi alone. To understand how decisions unfolded, we must track the full chain of actors: <strong>Washington Hanoi South Vietnam The Battlefield The American Public Strategic Consequence.</strong>
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
             {/* 1. Washington */}
             <div className="p-5 border border-stone-300 bg-[#fbf9f5] space-y-2">
-              <h5 className="font-editorial-serif font-bold text-base text-stone-900">
+              <h5 className="font-display font-bold text-base text-stone-900">
                 Preserving Global Credibility
               </h5>
               <span className="text-[11px] font-bold text-stone-500 block">
@@ -186,7 +186,7 @@ export default function DualPerspectiveViewer({
 
             {/* 2. Hanoi */}
             <div className="p-5 border border-stone-300 bg-[#fbf9f5] space-y-2">
-              <h5 className="font-editorial-serif font-bold text-base text-stone-900">
+              <h5 className="font-display font-bold text-base text-stone-900">
                 Protracted National Reunification
               </h5>
               <span className="text-[11px] font-bold text-stone-500 block">
@@ -202,7 +202,7 @@ export default function DualPerspectiveViewer({
 
             {/* 3. South Vietnam */}
             <div className="p-5 border border-stone-300 bg-[#fbf9f5] space-y-2">
-              <h5 className="font-editorial-serif font-bold text-base text-stone-900">
+              <h5 className="font-display font-bold text-base text-stone-900">
                 Sovereignty &amp; Internal Legitimacy
               </h5>
               <span className="text-[11px] font-bold text-stone-500 block">
@@ -220,7 +220,7 @@ export default function DualPerspectiveViewer({
 
             {/* 4. The Battlefield */}
             <div className="p-5 border border-stone-300 bg-[#fbf9f5] space-y-2">
-              <h5 className="font-editorial-serif font-bold text-base text-stone-900">
+              <h5 className="font-display font-bold text-base text-stone-900">
                 Asymmetric Friction
               </h5>
               <span className="text-[11px] font-bold text-stone-500 block">
@@ -238,7 +238,7 @@ export default function DualPerspectiveViewer({
 
             {/* 5. The Public & Diplomacy */}
             <div className="p-5 border border-stone-300 bg-[#fbf9f5] space-y-2 sm:col-span-2 lg:col-span-2">
-              <h5 className="font-editorial-serif font-bold text-base text-stone-900">
+              <h5 className="font-display font-bold text-base text-stone-900">
                 The Domestic Horizon of Endurance
               </h5>
               <span className="text-[11px] font-bold text-stone-500 block">

@@ -53,7 +53,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
       {/* Artifact Identification & Editorial Significance */}
       <div className="p-6 sm:p-8 space-y-6">
         <div>
-          <h4 className="font-editorial-serif text-2xl sm:text-3xl font-bold tracking-tight text-ink leading-tight">
+          <h4 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-ink leading-tight">
             {document.title}
           </h4>
           <p className="mt-2 text-xs sm:text-sm text-ink-muted">
@@ -66,7 +66,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
           <span className="text-[11px] font-bold text-brand block mb-1">
             Why This Artifact Matters
           </span>
-          <p className="font-editorial-serif text-base sm:text-lg text-ink leading-relaxed">
+          <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
             {document.whyItMatters}
           </p>
         </div>

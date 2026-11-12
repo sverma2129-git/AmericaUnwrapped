@@ -8,7 +8,7 @@ export default function DbqOutlines() {
     <section aria-label="DBQ and Essay Outlines" className="space-y-8">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rule pb-4">
         <div>
-          <h2 className="font-editorial-serif text-2xl sm:text-3xl font-bold text-ink">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
             High-Yield DBQ &amp; Long Essay Prompts
           </h2>
           <span className="text-xs font-bold text-brand block mb-1">
@@ -29,7 +29,7 @@ export default function DbqOutlines() {
             size="lg"
             summary={
               <>
-                <h3 className="font-editorial-serif text-lg sm:text-xl font-bold text-ink leading-snug">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-ink leading-snug">
                   &ldquo;{dbq.prompt}&rdquo;
                 </h3>
                 <span className="text-xs font-bold text-brand block">

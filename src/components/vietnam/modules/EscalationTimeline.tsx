@@ -69,10 +69,10 @@ export default function EscalationTimeline() {
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h4 className="font-editorial-serif text-2xl font-bold text-ink mt-1">
+          <h4 className="font-display text-2xl font-bold text-ink mt-1">
             How 875 Military Advisers Became 16,300 Combatants
           </h4>
-          <p className="mt-2 font-editorial-serif text-base text-ink-muted leading-relaxed">
+          <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
             President Kennedy consistently refused to commit conventional American ground combat divisions, yet sought to prevent communist victory through incremental increases in military advisers, helicopters, and covert special operations.
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function EscalationTimeline() {
               className={`p-3 text-left transition-colors cursor-pointer border rounded-xs ${ selectedYear === yr ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
             >
               <div className="text-xs font-bold">{yr}</div>
-              <div className="font-editorial-serif text-xs opacity-85 mt-0.5">
+              <div className="font-display text-xs opacity-85 mt-0.5">
                 {escalationData[yr].advisors.toLocaleString()} Personnel
               </div>
             </button>
@@ -97,7 +97,7 @@ export default function EscalationTimeline() {
         {/* Selected Year Data Ledger */}
         <div className="p-6 bg-paper border border-rule rounded-xs space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
-            <h5 className="font-editorial-serif text-xl font-bold text-ink">
+            <h5 className="font-display text-xl font-bold text-ink">
               {current.label}
             </h5>
             <span className="text-xs text-brand font-bold">
@@ -110,7 +110,7 @@ export default function EscalationTimeline() {
               <span className="font-bold text-ink-soft block mb-1 text-[11px]">
                 Rules of Engagement:
               </span>
-              <p className="font-editorial-serif text-ink leading-relaxed">
+              <p className="font-display text-ink leading-relaxed">
                 {current.operationalRule}
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function EscalationTimeline() {
               <span className="font-bold text-ink-soft block mb-1 text-[11px]">
                 Strategic Milestone:
               </span>
-              <p className="font-editorial-serif text-ink leading-relaxed">
+              <p className="font-display text-ink leading-relaxed">
                 {current.milestone}
               </p>
             </div>
@@ -129,7 +129,7 @@ export default function EscalationTimeline() {
             <span className="text-[11px] text-brand font-bold block mb-1">
               Documented Administration Position (Paraphrase):
             </span>
-            <p className="font-editorial-serif text-ink leading-relaxed">
+            <p className="font-display text-ink leading-relaxed">
               {current.kennedyQuote}
             </p>
           </div>

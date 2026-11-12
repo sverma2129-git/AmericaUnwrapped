@@ -32,7 +32,7 @@ export default function HomePage() {
       {/* Lead story and side story */}
       <div className="grid lg:grid-cols-12 gap-y-12 lg:gap-x-12">
         <section className="lg:col-span-8">
-          <h1 className="font-editorial-serif text-[2.125rem] sm:text-5xl font-semibold leading-[1.08] text-ink">
+          <h1 className="font-display text-[2.25rem] sm:text-[3.25rem] font-bold leading-[1.05] text-ink">
             Why did the world’s most powerful military spend 20 years fighting a war it couldn’t win?
           </h1>
           <p className="reading mt-6 text-ink-muted">
@@ -52,8 +52,8 @@ export default function HomePage() {
         </section>
 
         {featured && (
-          <aside className="lg:col-span-4 lg:border-l lg:border-rule lg:pl-12">
-            <h2 className="font-editorial-serif text-2xl font-semibold leading-snug text-ink">
+          <aside className="lg:col-span-4 self-start bg-parchment rounded-xl p-6 sm:p-7">
+            <h2 className="font-display text-2xl font-semibold leading-snug text-ink">
               <Link href={`/vietnam/${featured.id}`} className="hover:text-brand transition-colors">
                 How phantom radar contacts started an undeclared war
               </Link>
@@ -72,7 +72,7 @@ export default function HomePage() {
       </div>
 
       {/* What is inside, in one line */}
-      <p className="mt-14 border-y border-rule py-3.5 text-[0.9375rem] text-ink-muted">
+      <p className="mt-12 text-[0.9375rem] text-ink-muted">
         <span className="font-semibold text-ink">Inside:</span>{' '}
         <Link href="/vietnam" className="hover:text-brand">{CHAPTER_COUNT} chapters</Link>,{' '}
         <Link href="/vietnam/study-guide" className="hover:text-brand">{quizCount} practice questions</Link>,{' '}
@@ -81,9 +81,9 @@ export default function HomePage() {
       </p>
 
       {/* Contents */}
-      <section aria-labelledby="contents-heading" className="mt-16 sm:mt-20 rule-double pt-5">
+      <section aria-labelledby="contents-heading" className="mt-16 sm:mt-20">
         <div className="flex items-baseline justify-between gap-4">
-          <h2 id="contents-heading" className="font-editorial-serif text-3xl font-semibold text-ink">
+          <h2 id="contents-heading" className="font-display text-3xl font-semibold text-ink">
             The Vietnam War
           </h2>
           <Link href="/vietnam" className={`${textLink} text-[0.9375rem]`}>
@@ -95,11 +95,11 @@ export default function HomePage() {
             <li key={ch.id} className="border-b border-rule break-inside-avoid">
               <Link href={`/vietnam/${ch.id}`} className="group flex items-baseline gap-3 py-3">
                 <span className="w-6 shrink-0 text-sm text-ink-soft tabular-nums">{ch.number}</span>
-                <span className="font-editorial-serif text-lg leading-snug text-ink group-hover:text-brand transition-colors">
+                <span className="font-display text-lg leading-snug text-ink group-hover:text-brand transition-colors">
                   {ch.title.split(':')[0]}
                   {ch.isLandmark && <span className="meta ml-2 text-brand">Turning point</span>}
                 </span>
-                <span aria-hidden="true" className="flex-1 min-w-4 border-b border-dotted border-rule-strong translate-y-[-0.3em]" />
+                <span aria-hidden="true" className="flex-1" />
                 <span className="shrink-0 text-sm text-ink-soft tabular-nums">{ch.timeframe}</span>
               </Link>
             </li>
@@ -108,8 +108,8 @@ export default function HomePage() {
       </section>
 
       {/* Study tools */}
-      <section aria-labelledby="study-heading" className="mt-16 sm:mt-20 rule-double pt-5">
-        <h2 id="study-heading" className="font-editorial-serif text-3xl font-semibold text-ink">
+      <section aria-labelledby="study-heading" className="mt-16 sm:mt-20">
+        <h2 id="study-heading" className="font-display text-3xl font-semibold text-ink">
           Study for the test
         </h2>
         <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-6">
@@ -125,8 +125,8 @@ export default function HomePage() {
       </section>
 
       {/* How we work */}
-      <section aria-labelledby="method-heading" className="mt-16 sm:mt-20 rule-double pt-5">
-        <h2 id="method-heading" className="font-editorial-serif text-3xl font-semibold text-ink">
+      <section aria-labelledby="method-heading" className="mt-16 sm:mt-20">
+        <h2 id="method-heading" className="font-display text-3xl font-semibold text-ink">
           Check our work
         </h2>
         <p className="reading mt-4 text-ink-muted">

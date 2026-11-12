@@ -35,7 +35,7 @@ function RadarScope({ firing }: { firing: boolean }) {
         ))}
       </g>
       {BLIPS.map(([x, y]) => (
-        <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="var(--color-paper)" stroke="var(--color-brand)" strokeWidth="1.75" strokeDasharray="3 3" />
+        <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="var(--color-parchment)" stroke="var(--color-brand)" strokeWidth="1.75" strokeDasharray="3 3" />
       ))}
       <text x="140" y="118" textAnchor="middle" fontSize="10" className="fill-ink-muted">Maddox and Turner Joy</text>
       <text x={BLIPS[1][0] + 10} y={BLIPS[1][1] + 4} fontSize="10" fill="var(--color-brand)">radar contact</text>
@@ -45,9 +45,9 @@ function RadarScope({ firing }: { firing: boolean }) {
 
 function Clock({ place, time }: { place: string; time: string }) {
   return (
-    <div className="border-t border-ink pt-1.5">
+    <div>
       <span className="meta text-ink-soft block">{place}</span>
-      <span className="block font-editorial-serif text-lg sm:text-xl font-semibold text-ink tabular-nums leading-tight">{time}</span>
+      <span className="block font-display text-lg sm:text-xl font-semibold text-ink tabular-nums leading-tight">{time}</span>
     </div>
   );
 }
@@ -71,10 +71,10 @@ export default function NightScrolly({ steps }: { steps: NightStep[] }) {
               <Clock place="Gulf of Tonkin" time={step.localTime} />
               <Clock place="Washington" time={step.washingtonTime} />
             </div>
-            <div className="mt-3 border border-rule bg-surface rounded-md min-h-[24vh] lg:min-h-[32vh] flex items-center">
+            <div className="mt-3 bg-parchment rounded-xl min-h-[24vh] lg:min-h-[32vh] flex items-center">
               {quote ? (
                 <figure className="p-4 sm:p-6">
-                  <blockquote className="font-editorial-serif text-[0.9375rem] sm:text-lg text-ink leading-snug">
+                  <blockquote className="font-display text-[0.9375rem] sm:text-lg text-ink leading-snug">
                     &ldquo;{quote.exactQuotation}&rdquo;
                   </blockquote>
                   <figcaption className="mt-2 text-[0.8125rem] text-ink-soft">

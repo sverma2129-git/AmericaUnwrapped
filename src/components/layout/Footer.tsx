@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Publication Identity */}
           <div className="md:col-span-2 space-y-3">
             <Link href="/" className="inline-block">
-              <span className="font-editorial-serif text-2xl font-bold tracking-tight text-ink block">
+              <span className="font-display text-2xl font-bold tracking-tight text-ink block">
                 America Unwrapped
               </span>
             </Link>

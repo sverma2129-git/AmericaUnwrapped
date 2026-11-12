@@ -49,7 +49,7 @@ export default function GenevaDivisionMap() {
               ? 'Operation Passage to Freedom (1954–1955)'
               : 'The Multi-Causal Partition Failure (1956)'}
           </span>
-          <h4 className="font-editorial-serif text-2xl font-bold text-ink mt-1">
+          <h4 className="font-display text-2xl font-bold text-ink mt-1">
             {activeLayer === 'boundary'
               ? 'A Temporary Truce Line That Hardened Into Cold War Partition'
               : activeLayer === 'refugees'
@@ -68,7 +68,7 @@ export default function GenevaDivisionMap() {
               stroke="#A89F91"
               strokeWidth="2"
             />
-            <text x="360" y="110" className="fill-ink font-editorial-serif text-sm font-bold">
+            <text x="360" y="110" className="fill-ink font-display text-sm font-bold">
               Democratic Republic of Vietnam (North)
             </text>
             <text x="360" y="130" className="fill-ink-soft text-xs">
@@ -82,7 +82,7 @@ export default function GenevaDivisionMap() {
               stroke="#A89F91"
               strokeWidth="2"
             />
-            <text x="370" y="330" className="fill-ink font-editorial-serif text-sm font-bold">
+            <text x="370" y="330" className="fill-ink font-display text-sm font-bold">
               State / Republic of Vietnam (South)
             </text>
             <text x="370" y="350" className="fill-ink-soft text-xs">
@@ -136,7 +136,7 @@ export default function GenevaDivisionMap() {
         {/* Narrative Analysis Ledger */}
         <div className="p-6 bg-paper border border-rule rounded-xs space-y-3 font-sans text-xs sm:text-sm text-ink">
           {activeLayer === 'boundary' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-editorial-serif text-sm sm:text-base">
+            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p>
                 The 1954 Geneva Declaration stipulated that the military demarcation line at the 17th parallel was strictly provisional and was not to be interpreted as constituting a political or territorial boundary.
               </p>
@@ -147,7 +147,7 @@ export default function GenevaDivisionMap() {
           )}
 
           {activeLayer === 'refugees' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-editorial-serif text-sm sm:text-base">
+            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p>
                 Under the Geneva agreement, a 300-day window allowed free movement between zones. Between 850,000 and 1,000,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist landowners—fled south, heavily transported by U.S. Navy ships in <strong>Operation Passage to Freedom</strong>.
               </p>
@@ -158,7 +158,7 @@ export default function GenevaDivisionMap() {
           )}
 
           {activeLayer === 'elections' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-editorial-serif text-sm sm:text-base">
+            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p className="font-bold text-ink">
                 The permanent partition was not caused by a single decision. It was a structural international failure:
               </p>
