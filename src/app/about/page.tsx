@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Thumb } from '@/components/common/Figure';
+import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
 
 export const metadata: Metadata = {
   title: 'How We Work',
@@ -162,6 +164,37 @@ export default function AboutPage() {
           </a>
           . We. We fix errors and note what changed.rsquo;ll check it against the sources and fix it.
         </p>
+      </section>
+
+      {/* Image credits */}
+      <section id="image-credits" aria-labelledby="image-credits-heading" className="scroll-mt-28 space-y-6">
+        <div>
+          <h2 id="image-credits-heading" className="font-display text-2xl font-bold text-ink">
+            Where every image comes from
+          </h2>
+          <p className="mt-2 text-[0.9375rem] text-ink-muted leading-relaxed max-w-2xl">
+            Every photograph and document on this site is listed here with who made it, who holds the original, and why
+            we are allowed to show it. Most are works of the U.S. government, which are in the public domain. We do not
+            use the famous news-agency photographs of the war, because those are still under copyright.
+          </p>
+        </div>
+        <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+          {Object.values(IMAGE_REGISTRY).map((image) => (
+            <li key={image.id} className="flex gap-4">
+              <Thumb imageId={image.id} className="w-24 h-24 shrink-0 rounded-md" />
+              <div className="text-[0.8125rem] leading-relaxed text-ink-soft">
+                <p className="text-[0.9375rem] text-ink leading-snug">{image.caption}</p>
+                <p className="mt-1">
+                  {image.creator}, {image.date}. {image.source}
+                  {image.archiveId ? ` (${image.archiveId})` : ''}. {RIGHTS_LABEL[image.rights]}.{' '}
+                  <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">
+                    Source record
+                  </a>
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* Return Links */}

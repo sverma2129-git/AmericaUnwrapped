@@ -19,6 +19,7 @@ import CitationMarker from '@/components/common/CitationMarker';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import PersonalStoryCard from './PersonalStoryCard';
 import Icon from '@/components/common/Icon';
+import Figure from '@/components/common/Figure';
 
 interface ChapterContentProps {
   chapter: ChapterData;
@@ -131,6 +132,8 @@ export default function ChapterContent({
         </nav>
       </header>
 
+      {chapter.leadImageId && <Figure imageId={chapter.leadImageId} priority />}
+
       {/* 2. Quick Briefing (Summary + Exam Takeaways + Key Terms) */}
       {studyData?.briefing && (
         <section id="briefing" aria-label="Student Briefing" className="scroll-mt-24">
@@ -163,6 +166,14 @@ export default function ChapterContent({
             </div>
           ))}
         </div>
+
+        {chapter.galleryImageIds && chapter.galleryImageIds.length > 0 && (
+          <div className="max-w-3xl mx-auto space-y-8">
+            {chapter.galleryImageIds.map((id) => (
+              <Figure key={id} imageId={id} />
+            ))}
+          </div>
+        )}
 
         {/* Landmark Quote Callout (if present) */}
         {chapter.isLandmark && chapter.landmarkMoment && (

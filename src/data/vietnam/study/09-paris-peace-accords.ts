@@ -24,6 +24,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       {
         id: 'paris-peace-accords-term',
         term: 'Paris Peace Accords (January 27, 1973)',
+        imageId: 'paris-signing-1973',
         phonetic: 'PAIR-is PEES uh-KORDZ',
         definition:
           'Agreement on Ending the War and Restoring Peace in Viet-Nam, signed by the United States, North Vietnam, South Vietnam, and the Viet Cong.',
@@ -34,6 +35,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       {
         id: 'operation-linebacker-ii',
         term: 'Operation Linebacker II ("Christmas Bombing")',
+        imageId: 'b52-linebacker-1972',
         phonetic: 'LINE-bak-er TWO',
         definition:
           'Intense 11-day aerial bombardment campaign conducted by U.S. B-52s and fighter-bombers against Hanoi and Haiphong from December 18 to 29, 1972.',
@@ -114,6 +116,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c9-fc2',
       term: 'Operation Homecoming (1973)',
+      imageId: 'homecoming-1973',
       phonetic: 'OHM-kuh-ming',
       definition:
         'The repatriation of 591 American prisoners of war (POWs) held by North Vietnam and the Viet Cong, conducted between February and April 1973.',

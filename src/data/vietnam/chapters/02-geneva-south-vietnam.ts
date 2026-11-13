@@ -6,6 +6,8 @@ const chapter: ChapterData = {
   id: 'geneva-south-vietnam',
   number: 2,
   timeframe: '1954–1960',
+  leadImageId: 'diem-eisenhower-1957',
+  galleryImageIds: ['passage-to-freedom-1954'],
   title: 'Geneva & The Creation of South Vietnam',
   subtitle: 'Partition, the Diem experiment, and the origins of the southern insurgency',
   summary:

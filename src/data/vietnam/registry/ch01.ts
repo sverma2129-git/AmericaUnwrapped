@@ -15,7 +15,7 @@ export const sources: SourceRegistryEntry[] = [
     authorOrCreator: 'Ho Chi Minh',
     institution: 'Provisional Government of the Democratic Republic of Vietnam',
     date: 'February 28, 1946',
-    sourceUrl: 'https://www.docsteach.org/documents/document/ho-chi-minh-truman',
+    sourceUrl: 'https://docsteach.org/document/ho-chi-minh-to-truman/',
     locator: 'NARA RG 226, Entry 140, Box 39 / DocsTeach Document ID 595462',
     locatorStatus: 'supported',
     verified: true,

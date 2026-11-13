@@ -5,6 +5,8 @@ const chapter: ChapterData = {
   id: 'memory-and-the-argument',
   number: 12,
   timeframe: 'The Argument',
+  leadImageId: 'mcnamara-map-1965',
+  galleryImageIds: ['memorial-dedication-1982'],
   title: 'Memory & The Argument: Competing Interpretations',
   subtitle: 'Orthodox, Revisionist, Post-Revisionist, and Vietnamese Historiography',
   summary:

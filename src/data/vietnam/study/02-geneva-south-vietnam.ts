@@ -24,6 +24,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       {
         id: 'ngo-dinh-diem',
         term: 'Ngo Dinh Diem',
+        imageId: 'diem-eisenhower-1957',
         phonetic: 'NOH DIN ZEE-em',
         definition:
           'Staunchly anti-communist Catholic politician who served as President of the Republic of Vietnam (South Vietnam) from 1955 until his assassination in a military coup in 1963.',
@@ -44,6 +45,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       {
         id: 'passage-to-freedom',
         term: 'Operation Passage to Freedom (1954–1955)',
+        imageId: 'passage-to-freedom-1954',
         phonetic: 'PAS-ij too FREE-dum',
         definition:
           'The U.S. Navy-assisted migration of approximately 900,000 northern Vietnamese refugees—primarily Catholics—from North Vietnam to the South following the Geneva partition.',
@@ -98,6 +100,21 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       rationale:
         'Formed on December 20, 1960, the National Liberation Front (NLF) brought together southern nationalists, communists, and peasant leagues under northern guidance to wage guerrilla warfare against the Saigon regime.',
       citationRef: 'c2-3',
+    },
+    {
+      id: 'c2-q4',
+      imageId: 'diem-eisenhower-1957',
+      question:
+        'The 1957 welcome shown in the photograph best illustrates which U.S. policy?',
+      options: [
+        'Backing an anticommunist government in South Vietnam',
+        'Supporting the nationwide elections promised at Geneva',
+        'Withdrawing American aid and advisers from Southeast Asia',
+        'Recognizing Ho Chi Minh’s government as Vietnam’s only one',
+      ],
+      correctIndex: 0,
+      rationale:
+        'President Eisenhower personally welcomed Ngo Dinh Diem to Washington in May 1957. The United States had backed Diem’s government in South Vietnam since 1954 as a barrier to communism.',
     },
   ],
   flashcards: [

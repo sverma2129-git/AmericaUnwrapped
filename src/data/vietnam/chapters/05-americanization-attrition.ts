@@ -6,6 +6,8 @@ const chapter: ChapterData = {
   id: 'americanization-attrition',
   number: 5,
   timeframe: '1965–1967',
+  leadImageId: 'da-nang-1965',
+  galleryImageIds: ['rolling-thunder-1966', 'lbj-cam-ranh-1966', 'ia-drang-1965', 'pentagon-flower-1967'],
   title: 'Americanization, Attrition, & Hanoi’s Inner War',
   subtitle: 'Rolling Thunder, the crossover point fallacy, and the leadership struggle in Hanoi',
   summary:

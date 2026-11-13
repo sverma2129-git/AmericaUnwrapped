@@ -6,6 +6,7 @@ const chapter: ChapterData = {
   id: 'gulf-of-tonkin',
   number: 4,
   timeframe: '1964',
+  leadImageId: 'tonkin-p4-1964',
   title: 'The Gulf of Tonkin: Two Nights and a Resolution',
   subtitle: 'Two sea incidents, selective intelligence, and the congressional resolution for war',
   summary:
@@ -37,6 +38,7 @@ const chapter: ChapterData = {
       },
       {
         id: 'august-2',
+        imageId: 'tonkin-track-chart-1964',
         kicker: 'August 2, 1964',
         headline: 'A real fight in daylight',
         body: [
@@ -142,6 +144,7 @@ const chapter: ChapterData = {
       },
       {
         id: 'resolution',
+        imageId: 'lbj-tonkin-signing-1964',
         kicker: 'August 4–7, 1964',
         headline: 'Washington acts fast',
         body: [

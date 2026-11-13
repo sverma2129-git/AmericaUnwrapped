@@ -14,7 +14,7 @@ export const quoteAliases: Record<string, ChapterCitation> = {
     locator: 'NARA RG 226, Entry 140, Box 39 / DocsTeach ID 595462',
     supportsClaim: 'Demonstrates Ho Chi Minh’s early diplomatic appeals to President Truman to support Vietnamese independence under the Atlantic and San Francisco Charters.',
     limitations: 'Left unanswered by the Truman administration, which prioritized rebuilding relations with France in post-war Europe.',
-    originalUrl: 'https://www.docsteach.org/documents/document/ho-chi-minh-truman',
+    originalUrl: 'https://docsteach.org/document/ho-chi-minh-to-truman/',
     verificationCategory: 'VERIFIED_QUOTATION',
     exactQuotation: 'I therefore earnestly appeal to you personally and to the American people to interfere urgently in support of our independence and help making the negotiations more in keeping with the principles of the Atlantic and San Francisco charters.',
   },

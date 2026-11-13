@@ -5,6 +5,9 @@ import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { TURNING_POINTS } from '@/data/vietnam/studyGuide';
 import { isVerbatimQuotation } from '@/lib/citations';
 import { fleschKincaidGrade } from '@/lib/readability';
+import fs from 'fs';
+import path from 'path';
+import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
 
 describe('chapters', () => {
   it('have unique ids and contiguous numbers starting at 1', () => {
@@ -180,5 +183,52 @@ describe('layered story reading level', () => {
         expect(fleschKincaidGrade(storyText(beat).join(' ')), `${chapter.id}/${beat.id}`).toBeLessThanOrEqual(12);
       }
     }
+  });
+});
+
+describe('image registry', () => {
+  const dir = path.resolve(__dirname, '../../../public/images/vietnam');
+  const records = Object.entries(IMAGE_REGISTRY);
+
+  it.each(records)('%s has a file, a description and a traceable source', (key, image) => {
+    expect(image.id).toBe(key);
+    expect(fs.existsSync(path.join(dir, image.file)), image.file).toBe(true);
+    expect(image.width).toBeGreaterThan(0);
+    expect(image.height).toBeGreaterThan(0);
+    expect(image.alt.length).toBeGreaterThanOrEqual(20);
+    expect(image.caption.length).toBeGreaterThanOrEqual(20);
+    expect(image.creator.trim()).toBeTruthy();
+    expect(image.date.trim()).toBeTruthy();
+    expect(image.source.trim()).toBeTruthy();
+    expect(image.sourceUrl).toMatch(/^https:\/\//);
+    expect(RIGHTS_LABEL[image.rights]).toBeTruthy();
+  });
+
+  it('has no image file without a registry entry', () => {
+    const registered = new Set(records.map(([, image]) => image.file));
+    const orphans = fs.readdirSync(dir).filter((file) => !registered.has(file));
+    expect(orphans).toEqual([]);
+  });
+
+  it('is the only source of images used by chapters, flashcards and quizzes', () => {
+    const used: string[] = [];
+    for (const chapter of VIETNAM_CHAPTERS) {
+      if (chapter.leadImageId) used.push(chapter.leadImageId);
+      used.push(...(chapter.galleryImageIds ?? []));
+      for (const beat of chapter.story?.beats ?? []) {
+        if (beat.imageId) used.push(beat.imageId);
+        if (beat.visual?.kind === 'image') used.push(beat.visual.imageId);
+      }
+      const study = ALL_CHAPTERS_STUDY_DATA[chapter.id];
+      for (const item of [...study.quiz, ...study.flashcards, ...study.briefing.keyTerms]) {
+        if (item.imageId) used.push(item.imageId);
+      }
+    }
+    expect(used.length).toBeGreaterThan(0);
+    for (const id of used) expect(IMAGE_REGISTRY[id], id).toBeDefined();
+  });
+
+  it('gives every chapter a lead image', () => {
+    for (const chapter of VIETNAM_CHAPTERS) expect(chapter.leadImageId, chapter.id).toBeTruthy();
   });
 });

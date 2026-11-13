@@ -34,6 +34,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       {
         id: 'operation-rolling-thunder',
         term: 'Operation Rolling Thunder (1965–1968)',
+        imageId: 'rolling-thunder-1966',
         phonetic: 'ROH-ling THUN-der',
         definition:
           'The sustained, gradual aerial bombardment campaign conducted by the U.S. Air Force and Navy against North Vietnam, dropping over 864,000 tons of bombs.',
@@ -44,6 +45,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       {
         id: 'ia-drang-valley',
         term: 'Battle of the Ia Drang Valley (Nov 1965)',
+        imageId: 'ia-drang-1965',
         phonetic: 'EE-uh DRAHNG',
         definition:
           'The first major conventional battle between American soldiers (1st Cavalry Division Airmobile) and North Vietnamese Army regulars in the Central Highlands.',
@@ -99,11 +101,27 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
         'Pentagon systems analysis proved that communist forces decided when, where, and for how long over 75% of combat engagements occurred. Because the enemy held the tactical initiative, they could simply break contact and avoid combat when losses became excessive.',
       citationRef: 'c5-3',
     },
+    {
+      id: 'c5-q4',
+      imageId: 'pentagon-flower-1967',
+      question:
+        'The 1967 scene in the photograph best reflects which development?',
+      options: [
+        'Public support for the war rose as more troops were sent',
+        'Congress cut off all funding for the war in South Vietnam',
+        'Antiwar protest grew as the United States escalated the war',
+        'Military police were sent to guard Saigon’s American embassy',
+      ],
+      correctIndex: 2,
+      rationale:
+        'By October 1967, with nearly half a million U.S. troops in Vietnam, tens of thousands of demonstrators marched on the Pentagon. Protest grew as the war escalated.',
+    },
   ],
   flashcards: [
     {
       id: 'c5-fc1',
       term: 'General William Westmoreland',
+      imageId: 'lbj-cam-ranh-1966',
       phonetic: 'WEST-mor-lund',
       definition:
         'Four-star U.S. Army general who commanded MACV from 1964 to 1968, championing search-and-destroy tactics, body counts, and attrition warfare.',

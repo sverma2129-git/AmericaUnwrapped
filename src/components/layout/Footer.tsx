@@ -55,6 +55,11 @@ export default function Footer() {
                   How We Work
                 </Link>
               </li>
+              <li>
+                <Link href="/about#image-credits" className="hover:text-brand transition-colors">
+                  Image Credits
+                </Link>
+              </li>
             </ul>
           </div>
 

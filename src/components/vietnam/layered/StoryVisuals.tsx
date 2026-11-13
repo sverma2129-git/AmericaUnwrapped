@@ -7,6 +7,7 @@ import CitedParagraph from '@/components/common/CitedParagraph';
 import ModuleFrame from './ModuleFrame';
 import SiegeScrolly from './SiegeScrolly';
 import NightScrolly from './NightScrolly';
+import Figure from '@/components/common/Figure';
 
 /**
  * A primary-source quotation set as a pull quote on a beige panel. Renders
@@ -159,6 +160,8 @@ export default function StoryVisualView({ visual, causalChain }: { visual: Story
       return <Debate visual={visual} />;
     case 'consequence':
       return <Consequence chain={causalChain} />;
+    case 'image':
+      return <Figure imageId={visual.imageId} />;
     case 'compare':
       return <Compare visual={visual} />;
     case 'night':

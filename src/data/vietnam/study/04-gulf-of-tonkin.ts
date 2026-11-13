@@ -23,6 +23,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       {
         id: 'gulf-of-tonkin-resolution',
         term: 'Gulf of Tonkin Resolution (1964)',
+        imageId: 'lbj-tonkin-signing-1964',
         phonetic: 'GULF uv TAHN-kin rez-uh-LOO-shun',
         definition:
           'Joint resolution passed by Congress authorizing President Johnson to take all necessary measures to repel armed attack against U.S. forces and prevent further aggression.',
@@ -127,11 +128,27 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
         'The War Powers Act of 1973 was passed over President Nixon’s veto to curtail executive warmaking by mandating a 48-hour notification and a 60-day limit on unapproved foreign troop deployments.',
       citationRef: 'c4-3',
     },
+    {
+      id: 'c4-q5',
+      imageId: 'lbj-tonkin-signing-1964',
+      question:
+        'The signing shown in the photograph most directly made possible which development?',
+      options: [
+        'A formal declaration of war on North Vietnam by Congress',
+        'Sustained bombing and U.S. combat troops in Vietnam in 1965',
+        'The withdrawal of U.S. military advisers from South Vietnam',
+        'A peace conference between Washington and Hanoi in Geneva',
+      ],
+      correctIndex: 1,
+      rationale:
+        'Johnson signed the Gulf of Tonkin Resolution on August 10, 1964. He used it as legal authority to begin sustained bombing and send combat troops in 1965, without a declaration of war.',
+    },
   ],
   flashcards: [
     {
       id: 'c4-fc1',
       term: 'Gulf of Tonkin Resolution (1964)',
+      imageId: 'lbj-tonkin-signing-1964',
       phonetic: 'GULF uv TAHN-kin rez-uh-LOO-shun',
       definition:
         'Joint congressional resolution authorizing LBJ to take all necessary measures to repel armed attacks against U.S. forces.',

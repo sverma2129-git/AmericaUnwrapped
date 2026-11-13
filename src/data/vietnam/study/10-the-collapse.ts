@@ -34,6 +34,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       {
         id: 'operation-frequent-wind',
         term: 'Operation Frequent Wind (April 29–30, 1975)',
+        imageId: 'frequent-wind-1975',
         phonetic: 'FREE-kwent WIND',
         definition:
           'The emergency tactical helicopter evacuation of over 1,300 American personnel and 5,500 at-risk South Vietnamese citizens from the U.S. Embassy and Tan Son Nhut Air Base to aircraft carriers offshore.',
@@ -98,6 +99,21 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       rationale:
         'North Vietnamese Army Tank 843 rammed through the perimeter gates of the Independence Palace in Saigon. Minutes later, soldiers entered the cabinet room where South Vietnam’s last president, Duong Van Minh, surrendered unconditionally, concluding thirty years of war.',
       citationRef: 'c10-2',
+    },
+    {
+      id: 'c10-q4',
+      imageId: 'frequent-wind-1975',
+      question:
+        'The scene in the photograph took place during which event?',
+      options: [
+        'The landing of U.S. Marines at Da Nang in 1965',
+        'The return of American prisoners of war in 1973',
+        'The Tet Offensive attack on Saigon in 1968',
+        'The evacuation of Saigon in April 1975',
+      ],
+      correctIndex: 3,
+      rationale:
+        'In Operation Frequent Wind, April 29–30, 1975, helicopters carried Americans and South Vietnamese to Navy ships as Saigon fell. Crews pushed helicopters overboard to clear the decks.',
     },
   ],
   flashcards: [

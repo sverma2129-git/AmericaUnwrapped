@@ -5,6 +5,7 @@ import { QuizQuestion } from '@/types/study';
 import { useCitation } from '@/components/common/CitationContext';
 import { QuizAnswer, scoreQuiz } from '@/lib/study';
 import Icon from '@/components/common/Icon';
+import Figure from '@/components/common/Figure';
 
 interface ChapterQuizProps {
   title?: string;
@@ -110,6 +111,7 @@ export default function ChapterQuiz({
 
           {/* Question Text */}
           <div className="py-2">
+            {currentQ.imageId && <Figure key={currentQ.imageId} imageId={currentQ.imageId} variant="compact" className="mb-4" />}
             <h3 className="font-display text-lg sm:text-xl font-bold text-ink leading-snug">
               {currentQ.question}
             </h3>

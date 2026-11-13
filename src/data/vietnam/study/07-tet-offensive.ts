@@ -24,6 +24,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       {
         id: 'tet-offensive-term',
         term: 'Tet Offensive (January–February 1968)',
+        imageId: 'hue-1968',
         phonetic: 'TET uh-FEN-siv',
         definition:
           'Massive, synchronized surprise offensive launched by PAVN and Viet Cong forces against over 100 cities, towns, and military bases throughout South Vietnam during the lunar new year.',
@@ -44,6 +45,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       {
         id: 'walter-cronkite-broadcast',
         term: 'Walter Cronkite’s Stalemate Broadcast (Feb 27, 1968)',
+        imageId: 'cronkite-hue-1968',
         phonetic: 'WAWL-ter KRON-kyte',
         definition:
           'Special CBS News editorial broadcast in which America’s most trusted news anchor delivered his personal assessment from Vietnam that the war was "mired in stalemate."',
@@ -98,6 +100,21 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       rationale:
         'Shattered by the political fallout of Tet and a poor showing in the New Hampshire primary against anti-war candidate Eugene McCarthy, LBJ announced a unilateral bombing restriction north of the 20th parallel and declared: "I shall not seek, and I will not accept, the nomination of my party for another term as your President."',
       citationRef: 'c7-2',
+    },
+    {
+      id: 'c7-q4',
+      imageId: 'lbj-march-31-1968',
+      question:
+        'The address shown in the photograph came two months after which event?',
+      options: [
+        'The Gulf of Tonkin incident off North Vietnam’s coast',
+        'The Tet Offensive across South Vietnam’s cities',
+        'The signing of the Paris Peace Accords in France',
+        'The fall of Saigon to North Vietnamese forces',
+      ],
+      correctIndex: 1,
+      rationale:
+        'The Tet Offensive began at the end of January 1968. On March 31, Johnson announced a partial bombing halt and said he would not seek reelection.',
     },
   ],
   flashcards: [

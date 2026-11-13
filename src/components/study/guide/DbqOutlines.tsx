@@ -1,7 +1,7 @@
 import React from 'react';
 import Disclosure from './Disclosure';
 import ExpandAllControls from './ExpandAllControls';
-import { DBQ_PROMPTS } from '@/data/vietnam/studyGuide';
+import { DBQ_PROMPTS, PAST_AP_QUESTIONS, PAST_AP_QUESTIONS_URL } from '@/data/vietnam/studyGuide';
 
 export default function DbqOutlines() {
   return (
@@ -21,6 +21,33 @@ export default function DbqOutlines() {
         <ExpandAllControls targetId="dbq-prompts" />
       </div>
 
+      <div className="bg-parchment rounded-xl p-5 sm:p-7">
+        <h3 className="font-display text-xl font-semibold text-ink">Vietnam on past AP exams</h3>
+        <p className="mt-1 text-[0.9375rem] text-ink-muted leading-relaxed max-w-3xl">
+          These are real exam questions, described in our own words. College Board owns the exact wording and keeps older
+          exams in AP Classroom, so ask your teacher for the originals and their scoring guidelines.
+        </p>
+        <ul className="mt-4 space-y-4 max-w-3xl">
+          {PAST_AP_QUESTIONS.map((q) => (
+            <li key={q.exam}>
+              <p className="font-semibold text-ink">
+                {q.exam}: {q.question}
+              </p>
+              <p className="mt-1 text-[0.9375rem] text-ink-muted leading-relaxed">{q.summary}</p>
+            </li>
+          ))}
+        </ul>
+        <a
+          href={PAST_AP_QUESTIONS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block text-[0.9375rem] font-semibold text-brand underline decoration-brand-rule hover:decoration-brand"
+        >
+          College Board: past exam questions (recent years)
+        </a>
+      </div>
+
+      <h3 className="font-display text-xl font-semibold text-ink">Practice prompts written for this unit</h3>
       <div id="dbq-prompts" className="space-y-6">
         {DBQ_PROMPTS.map((dbq) => (
           <Disclosure

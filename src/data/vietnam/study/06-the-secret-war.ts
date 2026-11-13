@@ -99,6 +99,21 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
         'The CIA recruited over 30,000 Hmong hill tribesmen led by General Vang Pao. Known as the "Secret Army," Hmong guerrillas fought pitched battles against North Vietnamese regular divisions, rescued downed American pilots, and suffered staggering casualty rates.',
       citationRef: 'c6-3',
     },
+    {
+      id: 'c6-q4',
+      imageId: 'ranch-hand',
+      question:
+        'The operation shown in the photograph was mainly intended to do which of the following?',
+      options: [
+        'Strip away forest cover and crops used by enemy forces',
+        'Drop leaflets urging North Vietnamese soldiers to surrender',
+        'Deliver food and medicine to isolated South Vietnamese villages',
+        'Mark bombing targets along the border with North Vietnam',
+      ],
+      correctIndex: 0,
+      rationale:
+        'Operation Ranch Hand sprayed herbicides over South Vietnam from 1962 to 1971 to remove the forest cover that hid enemy forces and to destroy crops that fed them.',
+    },
   ],
   flashcards: [
     {

@@ -9,6 +9,7 @@ import CheatSheet from '@/components/study/guide/CheatSheet';
 import MasterQuiz from '@/components/study/guide/MasterQuiz';
 import GlossaryPanel from '@/components/study/guide/GlossaryPanel';
 import DbqOutlines from '@/components/study/guide/DbqOutlines';
+import { Thumb } from '@/components/common/Figure';
 
 export const metadata: Metadata = {
   title: 'Vietnam War Study Guide & Exam Review',
@@ -65,6 +66,12 @@ export default function StudyGuidePage() {
           The definitive 1-page unit cheat sheet, interactive practice quizzes with historical rationales, master vocabulary flashcards, and high-yield DBQ essay outlines.
         </p>
       </header>
+
+      <div className="grid grid-cols-3 gap-3 sm:gap-4">
+        {['lbj-tonkin-signing-1964', 'hue-1968', 'paris-signing-1973'].map((id, i) => (
+          <Thumb key={id} imageId={id} priority={i === 0} className="w-full aspect-[4/3] rounded-lg" />
+        ))}
+      </div>
 
       {/* 2. Interactive Modes */}
       <div className="space-y-12">

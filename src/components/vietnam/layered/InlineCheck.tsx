@@ -4,6 +4,7 @@ import React, { useId, useState } from 'react';
 import type { QuizQuestion } from '@/types/study';
 import CitationMarker from '@/components/common/CitationMarker';
 import Icon from '@/components/common/Icon';
+import Figure from '@/components/common/Figure';
 
 /** One quick retrieval question placed right after the beat it checks. */
 export default function InlineCheck({ question }: { question: QuizQuestion }) {
@@ -14,6 +15,7 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
 
   return (
     <section aria-labelledby={labelId} className="bg-parchment rounded-xl p-5 sm:p-6">
+      {question.imageId && <Figure imageId={question.imageId} variant="compact" className="mb-4" />}
       <p id={labelId} className="font-display text-lg font-semibold text-ink leading-snug">
         <span className="font-sans text-[0.9375rem] font-semibold text-brand">Quick check. </span>
         {question.question}

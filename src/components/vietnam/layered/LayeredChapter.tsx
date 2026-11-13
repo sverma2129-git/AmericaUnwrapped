@@ -14,6 +14,7 @@ import StoryVisualView from './StoryVisuals';
 import { CourseProvider, CourseToggle } from './CourseContext';
 import CourseTasks, { CourseObjectives } from './CourseTasks';
 import { EvidenceLocker, HistoriansDisagree } from './EvidenceParts';
+import Figure from '@/components/common/Figure';
 
 interface LayeredChapterProps {
   chapter: ChapterData;
@@ -118,6 +119,8 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
           </ol>
         </nav>
 
+        {chapter.leadImageId && <Figure imageId={chapter.leadImageId} priority className="mt-10" />}
+
         {/* ── Layer 1: the gist ───────────────────────────────────────────── */}
         <section id="gist" aria-labelledby="gist-heading" className="scroll-mt-32 mt-12 sm:mt-16">
           <h2 id="gist-heading" className="font-display text-[1.75rem] sm:text-4xl font-semibold leading-tight text-ink max-w-4xl">
@@ -175,6 +178,8 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
                       <CitedParagraph key={j} text={p} />
                     ))}
                   </div>
+
+                  {beat.imageId && <Figure imageId={beat.imageId} className="mt-8" />}
 
                   {beat.visual && (
                     <div className={`mt-8 ${wide ? '' : 'max-w-3xl'}`}>
