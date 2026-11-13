@@ -5,6 +5,8 @@ const chapter: ChapterData = {
   id: 'aftermath-1975',
   number: 11,
   timeframe: '1975–1995',
+  leadImageId: 'vietnam-memorial-wall',
+  galleryImageIds: ['boat-people-1984', 'camp-pendleton-1975'],
   title: 'Aftermath: Vietnam After 1975',
   subtitle: 'Re-education camps, the boat people exodus, the Third Indochina War, and Doi Moi',
   summary:

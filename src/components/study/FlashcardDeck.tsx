@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { KeyTerm } from '@/types/study';
+import Figure from '@/components/common/Figure';
 
 interface FlashcardDeckProps {
   cards: KeyTerm[];
@@ -122,6 +123,9 @@ export default function FlashcardDeck({
             <div className="my-auto py-4">
               {!isFlipped ? (
                 <div className="text-center space-y-2">
+                  {currentCard.imageId && (
+                    <Figure key={currentCard.imageId} imageId={currentCard.imageId} variant="compact" className="mx-auto mb-3 text-left" />
+                  )}
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink">
                     {currentCard.term}
                   </h3>

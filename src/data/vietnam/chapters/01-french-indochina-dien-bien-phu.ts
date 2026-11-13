@@ -6,6 +6,7 @@ const chapter: ChapterData = {
   id: 'french-indochina-dien-bien-phu',
   number: 1,
   timeframe: '1945–1954',
+  leadImageId: 'ho-telegram-1946',
   title: 'French Indochina & Dien Bien Phu',
   subtitle: 'From anti-colonial revolution to Cold War battleground',
   summary:
@@ -122,6 +123,7 @@ const chapter: ChapterData = {
       },
       {
         id: 'aftermath',
+        imageId: 'geneva-conference-1954',
         kicker: 'Summer 1954',
         headline: 'What France lost, America inherited',
         body: [

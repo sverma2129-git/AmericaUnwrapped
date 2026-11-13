@@ -215,3 +215,32 @@ export const DBQ_PROMPTS: DbqPrompt[] = [
     ],
   },
 ];
+
+/**
+ * Real AP U.S. History exam questions about the Vietnam War. Each is described
+ * in our own words, never quoted: College Board holds the copyright, and it
+ * keeps exams older than three years in AP Classroom for teachers, so the
+ * original wording could not be checked against a public official file.
+ */
+export interface PastExamQuestion {
+  exam: string;
+  question: string;
+  summary: string;
+}
+
+export const PAST_AP_QUESTIONS: PastExamQuestion[] = [
+  {
+    exam: '2008 AP U.S. History Exam',
+    question: 'Question 1, the document-based question',
+    summary:
+      'Asked students to analyze how the Vietnam War heightened social, political, and economic tensions in the United States, focusing on 1964 to 1975.',
+  },
+  {
+    exam: '2010 AP U.S. History Exam (Form B)',
+    question: 'Question 5, a long essay',
+    summary:
+      'Asked students to analyze the impact of the Vietnam War on areas including the presidency, Americans aged 18 to 35, and Cold War diplomacy.',
+  },
+];
+
+export const PAST_AP_QUESTIONS_URL = 'https://apcentral.collegeboard.org/courses/ap-united-states-history/exam/past-exam-questions';

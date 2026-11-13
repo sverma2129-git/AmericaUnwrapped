@@ -4,6 +4,7 @@ import { CHAPTER_COUNT, VIETNAM_CHAPTERS, getChapter } from '@/data/vietnam/chap
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { SOURCE_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { buildGlossary, collectQuizQuestions } from '@/lib/study';
+import { Thumb } from '@/components/common/Figure';
 
 export const metadata = {
   title: { absolute: 'America Unwrapped · Visual History & High-School Study Platform' },
@@ -53,6 +54,9 @@ export default function HomePage() {
 
         {featured && (
           <aside className="lg:col-span-4 self-start bg-parchment rounded-xl p-6 sm:p-7">
+            {featured.leadImageId && (
+              <Thumb imageId={featured.leadImageId} priority className="w-full aspect-[3/2] rounded-lg mb-5" />
+            )}
             <h2 className="font-display text-2xl font-semibold leading-snug text-ink">
               <Link href={`/vietnam/${featured.id}`} className="hover:text-brand transition-colors">
                 How phantom radar contacts started an undeclared war
@@ -95,6 +99,7 @@ export default function HomePage() {
             <li key={ch.id} className="border-b border-rule break-inside-avoid">
               <Link href={`/vietnam/${ch.id}`} className="group flex items-baseline gap-3 py-3">
                 <span className="w-6 shrink-0 text-sm text-ink-soft tabular-nums">{ch.number}</span>
+                {ch.leadImageId && <Thumb imageId={ch.leadImageId} className="w-14 h-14 shrink-0 rounded-md self-center" />}
                 <span className="font-display text-lg leading-snug text-ink group-hover:text-brand transition-colors">
                   {ch.title.split(':')[0]}
                   {ch.isLandmark && <span className="meta ml-2 text-brand">Turning point</span>}
@@ -130,7 +135,7 @@ export default function HomePage() {
           Check our work
         </h2>
         <p className="reading mt-4 text-ink-muted">
-          Every big claim links to the document behind it, so you can read it yourself. We hold Washington, Hanoi, and Saigon to the same standard, and we never put quotation marks around words nobody actually said.{' '}
+          Every big claim links to the document behind it, so you can read it yourself. We hold Washington, Hanoi, and Saigon to the same standard, and we never put quotation marks around words nobody actually said. Every photograph is credited to the archive it came from.{' '}
           <Link href="/about" className={textLink}>
             How we decide what’s true
           </Link>

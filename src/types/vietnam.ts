@@ -218,6 +218,7 @@ export type StoryVisual =
       outcome: string;
     }
   | { kind: 'consequence' }
+  | { kind: 'image'; imageId: string }
   | {
       kind: 'night';
       question: string;
@@ -274,6 +275,8 @@ export interface StoryBeat {
   kicker: string;
   headline: string;
   body: string[];
+  /** Id of a registered image shown with this beat. */
+  imageId?: string;
   visual?: StoryVisual;
   /** Id of a quiz question in this chapter's study data, asked inline after the beat. */
   checkId?: string;
@@ -301,6 +304,10 @@ export interface ChapterData {
    */
   layout?: 'standard' | 'layered';
   story?: ChapterStory;
+  /** Id of a registered image shown at the top of the chapter. */
+  leadImageId?: string;
+  /** More registered images shown within the chapter. */
+  galleryImageIds?: string[];
   isLandmark?: boolean;
   landmarkMoment?: LandmarkMoment;
   personalStory?: PersonalStory;

@@ -44,6 +44,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       {
         id: 'geneva-accords-1954',
         term: 'Geneva Accords of 1954',
+        imageId: 'geneva-conference-1954',
         phonetic: 'juh-NEE-vuh uh-KORDZ',
         definition:
           'International diplomatic agreement ending the First Indochina War, temporarily dividing Vietnam at the 17th parallel pending nationwide elections scheduled for 1956.',
@@ -104,6 +105,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c1-fc1',
       term: 'Ho Chi Minh',
+      imageId: 'ho-telegram-1946',
       phonetic: 'HOH CHEE MIN',
       definition:
         'Vietnamese nationalist and communist revolutionary leader who founded the Viet Minh in 1941 and declared the Democratic Republic of Vietnam in 1945.',

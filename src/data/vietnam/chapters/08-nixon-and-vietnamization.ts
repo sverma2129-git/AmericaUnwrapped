@@ -6,6 +6,8 @@ const chapter: ChapterData = {
   id: 'nixon-and-vietnamization',
   number: 8,
   timeframe: '1969–1972',
+  leadImageId: 'nixon-cambodia-1970',
+  galleryImageIds: ['moratorium-vigil-1969'],
   title: 'Nixon, Vietnamization, & The Widening War',
   subtitle: 'Troop drawdowns, Cambodia, Lam Son 719, and the 1972 Easter Offensive',
   summary:

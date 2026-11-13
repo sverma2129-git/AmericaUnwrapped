@@ -6,6 +6,7 @@ const chapter: ChapterData = {
   id: 'the-secret-war',
   number: 6,
   timeframe: '1961–1972',
+  leadImageId: 'ranch-hand',
   title: 'The Shadow War: Phoenix, Ranch Hand, & Pacification',
   subtitle: 'Targeting civilian networks, herbicide defoliation, and the covert war in Laos',
   summary:

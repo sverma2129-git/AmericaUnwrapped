@@ -19,7 +19,7 @@ export const PRIMARY_DOCUMENTS: Record<string, PrimarySourceExcerpt> = {
       'In the months immediately following World War II, Ho Chi Minh wrote multiple letters to President Truman appealing to the Atlantic Charter and American principles of national self-determination. Washington, prioritizing French cooperation in post-war European reconstruction and the emergent containment of the Soviet Union, never formally replied.',
     whyItMatters:
       'Demonstrates Hanoi’s early effort to cultivate American diplomatic recognition before the Cold War solidified into rigid ideological blocs in East Asia.',
-    originalDocumentUrl: 'https://www.docsteach.org/documents/document/ho-chi-minh-truman',
+    originalDocumentUrl: 'https://docsteach.org/document/ho-chi-minh-to-truman/',
   },
   'nsc-68-indochina': {
     id: 'nsc-68-indochina',

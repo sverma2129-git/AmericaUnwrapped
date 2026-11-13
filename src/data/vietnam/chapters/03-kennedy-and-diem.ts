@@ -6,6 +6,7 @@ const chapter: ChapterData = {
   id: 'kennedy-and-diem',
   number: 3,
   timeframe: '1961–1963',
+  leadImageId: 'jfk-laos-1961',
   title: 'Kennedy, Counterinsurgency, & Diem',
   subtitle: 'Advisory expansion, the Strategic Hamlet Program, and the November 1963 coup',
   summary:

@@ -24,6 +24,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       {
         id: 'boat-people',
         term: 'The Vietnamese "Boat People"',
+        imageId: 'boat-people-1984',
         phonetic: 'BOHT PEE-pul',
         definition:
           'Over 1.5 million Vietnamese refugees who fled post-war communist repression, re-education camps, and poverty in overcrowded, unseaworthy boats between 1975 and the 1990s.',
@@ -104,6 +105,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c11-fc1',
       term: 'Vietnam Veterans Memorial',
+      imageId: 'vietnam-memorial-wall',
       phonetic: 'VET-er-unz muh-MOR-ee-ul',
       definition:
         'National memorial in Washington, D.C. designed by 21-year-old Yale architecture student Maya Lin, dedicated in November 1982.',

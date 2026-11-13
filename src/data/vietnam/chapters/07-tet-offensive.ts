@@ -6,6 +6,8 @@ const chapter: ChapterData = {
   id: 'tet-offensive',
   number: 7,
   timeframe: '1968',
+  leadImageId: 'hue-1968',
+  galleryImageIds: ['embassy-saigon-1968', 'cronkite-hue-1968', 'lbj-march-31-1968'],
   title: 'The Tet Offensive & The Crisis of Credibility',
   subtitle: 'Synchronized urban assaults, the battle for Hue, and the domestic rupture',
   summary:

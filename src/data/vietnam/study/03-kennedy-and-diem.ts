@@ -124,6 +124,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c3-fc3',
       term: 'Agent Orange',
+      imageId: 'ranch-hand',
       phonetic: 'AY-junt OR-inj',
       definition:
         'A powerful chemical defoliant containing toxic dioxin sprayed by U.S. Air Force planes under Operation Ranch Hand to strip jungle canopy and destroy enemy food crops.',

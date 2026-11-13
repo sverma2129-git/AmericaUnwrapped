@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { VIETNAM_CHAPTERS } from '@/data/vietnam/chapters';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import Icon from '@/components/common/Icon';
+import { Thumb } from '@/components/common/Figure';
 
 export default function ChapterIndex() {
   return (
@@ -15,6 +16,11 @@ export default function ChapterIndex() {
             className="card-surface card-interactive rounded-xl p-6 flex flex-col justify-between group"
           >
             <div>
+              {ch.leadImageId && (
+                <Link href={`/vietnam/${ch.id}`} tabIndex={-1} aria-hidden="true">
+                  <Thumb imageId={ch.leadImageId} className="w-full aspect-[3/2] rounded-lg mb-4" />
+                </Link>
+              )}
               {/* Header / Meta */}
               <div className="flex items-center justify-between gap-2 mb-3">
                 <span className="meta text-ink-soft">

@@ -99,6 +99,21 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
         'Scholars (such as Jeffrey Kimball and Frank Snepp) argue that declassified tapes show Nixon and Kissinger privately recognized South Vietnam could not survive indefinitely. They sought a "decent interval"—a year or two between U.S. troop withdrawal and Saigon’s collapse—so the defeat would appear to be South Vietnam’s fault rather than America’s.',
       citationRef: 'c8-1',
     },
+    {
+      id: 'c8-q4',
+      imageId: 'nixon-cambodia-1970',
+      question:
+        'The announcement shown in the photograph most directly led to which of the following?',
+      options: [
+        'The first U.S. combat troops landing at Da Nang',
+        'Congress passing the Gulf of Tonkin Resolution',
+        'A new wave of campus protests, including Kent State',
+        'North Vietnam’s withdrawal from the Paris peace talks',
+      ],
+      correctIndex: 2,
+      rationale:
+        'Nixon announced the move into Cambodia on April 30, 1970. Protests spread across college campuses within days, and on May 4 National Guard troops shot and killed four students at Kent State.',
+    },
   ],
   flashcards: [
     {

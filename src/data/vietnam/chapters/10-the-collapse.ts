@@ -6,6 +6,8 @@ const chapter: ChapterData = {
   id: 'the-collapse',
   number: 10,
   timeframe: '1973–1975',
+  leadImageId: 'frequent-wind-1975',
+  galleryImageIds: ['ford-nsc-1975'],
   title: 'The Final Offensive & The Collapse',
   subtitle: 'Watergate, aid cutoffs, the Central Highlands rout, and the fall of Saigon',
   summary:
