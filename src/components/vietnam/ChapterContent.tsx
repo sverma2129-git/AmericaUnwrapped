@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
-import { CHAPTER_COUNT } from '@/data/vietnam/chapters';
 import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { isVerbatimQuotation } from '@/lib/citations';
 import QuickBriefing from '@/components/study/QuickBriefing';
@@ -68,7 +67,7 @@ export default function ChapterContent({
           </h2>
           {studyData?.whyItMatters && (
             <p className="mt-2.5 font-sans text-sm sm:text-base text-ink-muted leading-relaxed">
-              <strong className="text-ink font-semibold">Why It Matters for Exams &amp; History:</strong>{' '}
+              <strong className="text-ink font-semibold">Why it matters:</strong>{' '}
               {studyData.whyItMatters}
             </p>
           )}
@@ -81,28 +80,28 @@ export default function ChapterContent({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="zap" />
-            60-Sec Briefing
+            Quick summary
           </a>
           <a
             href="#story"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="book" />
-            The Story
+            The story
           </a>
           <a
             href="#evidence"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="map" />
-            Tactical Evidence
+            Explore
           </a>
           <a
             href="#causal"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
           >
             <Icon name="link" />
-            Cause &amp; Effect
+            Cause and effect
           </a>
           {studyData?.quiz && studyData.quiz.length > 0 && (
             <a
@@ -110,7 +109,7 @@ export default function ChapterContent({
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-brand-tint text-brand border-brand-rule hover:border-brand font-semibold"
             >
               <Icon name="pen" />
-            Practice Quiz
+            Practice quiz
             </a>
           )}
           {studyData?.flashcards && studyData.flashcards.length > 0 && (
@@ -151,10 +150,10 @@ export default function ChapterContent({
       <section id="story" aria-label="The Historical Story" className="scroll-mt-24 space-y-8">
         <div className="border-b border-rule pb-4">
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-            How Events Unfolded
+            What happened
           </h2>
           <p className="font-sans text-sm text-ink-muted mt-1">
-            Carefully researched narrative grounded in primary sources and declassified records.
+            The full story, with a source for every big claim.
           </p>
         </div>
 
@@ -202,7 +201,7 @@ export default function ChapterContent({
         {chapter.whatHappened.keyEvents && chapter.whatHappened.keyEvents.length > 0 && (
           <div className="max-w-3xl mx-auto pt-6 border-t border-rule">
             <span className="text-xs font-bold text-brand block mb-4">
-              Chronological Timeline &bull; Key Milestones
+              Key dates
             </span>
             <div className="space-y-3">
               {chapter.whatHappened.keyEvents.map((evt, idx) => (
@@ -253,12 +252,12 @@ export default function ChapterContent({
         <CausalFlowViewer causalChain={chapter.causalChain} />
       </section>
 
-      {/* 6. Test Your Understanding: Interactive Quiz */}
+      {/* 6. Practice quiz: Interactive Quiz */}
       {studyData?.quiz && studyData.quiz.length > 0 && (
         <section id="quiz" aria-label="Chapter Quiz" className="scroll-mt-24">
           <ChapterQuiz
             questions={studyData.quiz}
-            title={`Check Your Knowledge: Inquiry ${chapter.number.toString().padStart(2, '0')}`}
+            title={`Practice quiz: Chapter ${chapter.number.toString().padStart(2, '0')}`}
           />
         </section>
       )}
@@ -268,7 +267,7 @@ export default function ChapterContent({
         <section id="flashcards" aria-label="Flashcards" className="scroll-mt-24">
           <FlashcardDeck
             cards={studyData.flashcards}
-            title={`Vocabulary Flashcards: Inquiry ${chapter.number.toString().padStart(2, '0')}`}
+            title={`Key terms: Chapter ${chapter.number.toString().padStart(2, '0')}`}
           />
         </section>
       )}
@@ -278,7 +277,7 @@ export default function ChapterContent({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-rule gap-4">
           <div>
             <h3 className="font-display text-2xl font-bold text-ink">
-              The Documentary Evidence Dossier
+              Sources
             </h3>
           </div>
 
@@ -288,7 +287,7 @@ export default function ChapterContent({
               onClick={() => setActiveDossierTab('perspectives')}
               className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'perspectives' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
             >
-              Bilateral Strategy
+              What each side wanted
             </button>
 
             {chapter.primaryDocuments && chapter.primaryDocuments.length > 0 && (
@@ -296,7 +295,7 @@ export default function ChapterContent({
                 onClick={() => setActiveDossierTab('documents')}
                 className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'documents' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
               >
-                Primary Sources ({chapter.primaryDocuments.length})
+                Documents ({chapter.primaryDocuments.length})
               </button>
             )}
 
@@ -305,13 +304,13 @@ export default function ChapterContent({
                 onClick={() => setActiveDossierTab('citations')}
                 className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'citations' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
               >
-                Citations ({chapter.citations.length})
+                Works cited ({chapter.citations.length})
               </button>
             )}
           </div>
         </div>
 
-        {/* Tab 1: Bilateral Strategy Viewer */}
+        {/* Tab 1: What each side wanted Viewer */}
         {activeDossierTab === 'perspectives' && (
           <div className="space-y-6">
             <DualPerspectiveViewer
@@ -359,7 +358,7 @@ export default function ChapterContent({
                     onClick={() => openCitation(c)}
                     className="text-xs font-semibold text-brand hover:underline whitespace-nowrap cursor-pointer px-2.5 py-1 bg-white border border-rule rounded-xs"
                   >
-                    Dossier
+                    Details
                   </button>
                 </li>
               ))}
@@ -383,14 +382,14 @@ export default function ChapterContent({
               href={`/vietnam/${nextChapterId}`}
               className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold transition-colors rounded-xs"
             >
-              <span>Proceed to Chapter {(chapter.number + 1).toString().padStart(2, '0')}: {nextChapterTitle}</span>
+              <span>Next: Chapter {chapter.number + 1}, {nextChapterTitle}</span>
             </Link>
           ) : (
             <Link
               href="/vietnam/study-guide"
               className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold transition-colors rounded-xs"
             >
-              <span>Master Unit Study Guide &amp; Exam Review</span>
+              <span>Open the study guide</span>
             </Link>
           )}
 
@@ -398,7 +397,7 @@ export default function ChapterContent({
             href="/vietnam"
             className="inline-flex items-center gap-2 px-5 py-3.5 border border-rule bg-parchment hover:bg-rule text-ink text-xs font-medium transition-colors rounded-xs"
           >
-            <span>All {CHAPTER_COUNT} Chapters Overview</span>
+            <span>All chapters</span>
           </Link>
         </div>
       </footer>

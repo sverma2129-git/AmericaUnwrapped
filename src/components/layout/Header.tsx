@@ -45,22 +45,22 @@ export default function Header() {
   // Group chapters into 4 chronological eras
   const chapterEras = [
     {
-      title: 'I. Origins & Division',
+      title: 'Origins',
       dates: '1945–1963',
       chapters: VIETNAM_CHAPTERS.slice(0, 3),
     },
     {
-      title: 'II. Escalation & Air War',
+      title: 'Escalation',
       dates: '1964–1967',
       chapters: VIETNAM_CHAPTERS.slice(3, 6),
     },
     {
-      title: 'III. The Crisis of 1968',
+      title: '1968 and after',
       dates: '1968–1971',
       chapters: VIETNAM_CHAPTERS.slice(6, 9),
     },
     {
-      title: 'IV. Withdrawal & Fall',
+      title: 'Withdrawal and fall',
       dates: '1972–1975',
       chapters: VIETNAM_CHAPTERS.slice(9, 12),
     },
@@ -129,20 +129,20 @@ export default function Header() {
                     {exploreDropdownOpen && (
                       <div
                         role="menu"
-                        aria-label="Explore History Chapters"
+                        aria-label="Vietnam War chapters"
                         className="absolute left-1/2 -translate-x-1/2 top-full w-[720px] bg-surface border border-rule rounded-xl shadow-lg p-6 z-50 text-ink normal-case tracking-normal font-normal"
                       >
                         {/* Top Bar inside Dropdown */}
                         <div className="flex items-center justify-between pb-3 mb-4 border-b border-rule text-xs">
                           <span className="font-display text-base font-semibold text-ink">
-                            The Vietnam War: 12 Historical Inquiries (1945–1975)
+                            The Vietnam War in 12 chapters, 1945–1975
                           </span>
                           <Link
                             href="/vietnam"
                             onClick={() => setExploreDropdownOpen(false)}
                             className="text-brand hover:underline font-semibold"
                           >
-                            Explore Overview
+                            Unit overview
                           </Link>
                         </div>
 
@@ -188,14 +188,14 @@ export default function Header() {
                         <div className="mt-5 pt-3 border-t border-rule flex items-center justify-between text-xs text-ink-muted">
                           <span className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-brand inline-block" />
-                            <span>Indicates pivotal turning point chapters</span>
+                            <span>Turning point</span>
                           </span>
                           <Link
                             href="/vietnam/study-guide"
                             onClick={() => setExploreDropdownOpen(false)}
                             className="text-brand hover:underline font-semibold"
                           >
-                            Unit Cheat Sheet &amp; Quizzes
+                            Study guide
                           </Link>
                         </div>
                       </div>

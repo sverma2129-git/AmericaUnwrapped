@@ -18,7 +18,7 @@ interface StrikeLocation {
 const STRIKE_LOCATIONS: Record<TheaterId, StrikeLocation> = {
   saigon: {
     id: 'saigon',
-    name: 'Saigon (Capital & U.S. Embassy)',
+    name: 'Saigon (capital and U.S. Embassy)',
     coords: { x: 310, y: 390 },
     corps: 'III Corps · Capital Military District',
     significance: 'Breached the psychological heart of American command on live television.',
@@ -31,7 +31,7 @@ const STRIKE_LOCATIONS: Record<TheaterId, StrikeLocation> = {
   },
   hue: {
     id: 'hue',
-    name: 'Hue Citadel & Ancient Capital',
+    name: 'Hue, the old imperial capital',
     coords: { x: 260, y: 110 },
     corps: 'I Corps · Northern Front',
     significance: 'The bloodiest single battle of Tet: 26 days of brutal house-to-house combat.',
@@ -125,7 +125,7 @@ export default function TetOffensiveMap() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-3 text-xs">
         <div>
           <span className="font-bold text-stone-900">
-            Operational Cartography
+            Map of the attacks
           </span>
           <span className="text-stone-500 ml-2">&bull; South Vietnam · Tet 1968 Strike Coordinates</span>
         </div>
@@ -242,7 +242,7 @@ export default function TetOffensiveMap() {
 
             <div className="mt-4 pt-3 border-t border-rule">
               <span className="text-[10px] text-brand font-bold block mb-1">
-                Tactical Engagement:
+                The fighting:
               </span>
               <p className="font-display text-sm text-ink leading-relaxed">
                 {current.tacticalAction}
@@ -276,7 +276,7 @@ export default function TetOffensiveMap() {
       {/* The Central Historiographical Paradox */}
       <div className="p-4 bg-parchment border-l border-brand border-t border-r border-b border-rule rounded-r-xs text-xs">
         <span className="font-bold text-brand block mb-1">
-          The 1968 Strategic Paradox:
+          Why Tet is a puzzle:
         </span>
         <p className="font-display text-ink leading-relaxed text-sm">
           Militarily, the Tet Offensive was an overwhelming defeat for communist forces: an estimated 40,000 Viet Cong fighters were killed, and no spontaneous southern revolution occurred. Politically and psychologically, however, the simultaneous assaults across 36 provincial capitals destroyed the Johnson administration’s narrative of progress, precipitating Walter Cronkite’s declaration of stalemate, General Westmoreland’s replacement, and President Johnson’s decision not to seek re-election.

@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
   chapterId: 'kennedy-and-diem',
   bigQuestion:
-    'How did Kennedy’s counterinsurgency experiment fail at Ap Bac—and why did Washington back the coup that killed Ngo Dinh Diem?',
+    'How did Kennedy’s plan to fight guerrillas fail at Ap Bac, and why did Washington back the coup that killed Ngo Dinh Diem?',
   whyItMatters:
-    'The 1963 Diem coup shattered the South Vietnamese political structure and locked Washington into direct moral and operational responsibility for the Saigon government.',
+    'The 1963 coup broke South Vietnam’s government. After it, the United States was far more responsible for keeping Saigon standing.',
   whatYouWillLearn: [
-    'How JFK expanded military advisers from 900 to over 16,000 under "Flexible Response".',
-    'Why the Strategic Hamlet Program and the 1963 Battle of Ap Bac exposed southern military dysfunction.',
-    'How the Buddhist Crisis and Cable 243 led to the violent overthrow of Ngo Dinh Diem weeks before Kennedy’s assassination.',
+    'How Kennedy raised the number of military advisers from 900 to more than 16,000 under "Flexible Response."',
+    'What the Strategic Hamlet Program and the 1963 Battle of Ap Bac showed about South Vietnam’s army.',
+    'How the Buddhist Crisis and Cable 243 led to Diem’s overthrow, weeks before Kennedy himself was killed.',
   ],
   briefing: {
     summary:
-      'President John F. Kennedy rejected massive conventional troop commitments, attempting to defeat the Viet Cong through "Flexible Response": Green Berets, helicopter air-mobility, chemical defoliation (Agent Orange), and the Strategic Hamlet Program (fortified peasant hamlets). In January 1963, the Battle of Ap Bac proved disastrous when 350 Viet Cong guerrillas routed 1,500 ARVN troops equipped with American armored personnel carriers and helicopters. In spring 1963, Diem’s government banned Buddhist flags and crushed protests, culminating in monk Thich Quang Duc’s self-immolation in Saigon. Concluding Diem was an unviable leader, the Kennedy administration sent Cable 243 signaling support for a military coup. On November 1–2, 1963, ARVN generals overthrew and executed Diem and Nhu—leaving South Vietnam trapped in chaotic revolving-door military juntas.',
+      'President John F. Kennedy did not want to send large numbers of regular troops. He tried to beat the Viet Cong with "Flexible Response": Green Berets, helicopters, chemical defoliants such as Agent Orange, and the Strategic Hamlet Program, which moved farmers into fortified villages. In January 1963, at the Battle of Ap Bac, 350 Viet Cong guerrillas beat 1,500 South Vietnamese (ARVN) troops who had American armored vehicles and helicopters. That spring, Diem’s government banned Buddhist flags and crushed protests. The monk Thich Quang Duc burned himself to death in Saigon in protest. The Kennedy administration decided Diem could not lead and sent Cable 243, which signaled support for a coup. On November 1–2, 1963, ARVN generals overthrew and killed Diem and his brother Nhu. A series of unstable military governments followed.',
     examTakeaways: [
-      'Flexible Response & Expansion: Under JFK, American military "advisers" surged from ~900 to over 16,300, routinely engaging in active combat operations.',
-      'The Buddhist Crisis: Sparked global moral outrage when monk Thich Quang Duc publicly burned himself alive, destroying the Diem regime’s international legitimacy.',
-      'The Coup Trap: Diem’s assassination on November 2, 1963—three weeks before JFK’s own assassination—deposed the only stable central leader and deepened U.S. obligation to defend South Vietnam.',
+      'More advisers: Under Kennedy, American military "advisers" grew from about 900 to more than 16,000, and many took part in combat.',
+      'The Buddhist Crisis: The monk Thich Quang Duc burned himself to death in public. The outrage around the world cost Diem’s government its standing abroad.',
+      'After the coup: Diem was killed on November 2, 1963, three weeks before Kennedy. South Vietnam lost its one steady leader, and the U.S. was tied more closely to its defense.',
     ],
     keyTerms: [
       {
@@ -26,30 +26,30 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
         term: 'Flexible Response',
         phonetic: 'FLEK-suh-bul rih-SPONS',
         definition:
-          'Kennedy’s defense doctrine replacing Eisenhower’s "Massive Retaliation" nuclear strategy with specialized counterinsurgency, Special Forces (Green Berets), and proportional conventional responses.',
+          'Kennedy’s defense policy. It replaced Eisenhower’s nuclear "Massive Retaliation" with more options: counterinsurgency, Special Forces (Green Berets), and regular forces matched to the size of the threat.',
         significance:
-          'Created the institutional framework for incremental military escalation in Third World insurgencies like Vietnam.',
-        examTip: 'Contrasted on exams with Eisenhower’s nuclear brinkmanship.',
+          'It set the United States up to step into guerrilla wars like Vietnam a little at a time.',
+        examTip: 'Exams often contrast it with Eisenhower’s nuclear brinkmanship.',
       },
       {
         id: 'strategic-hamlets',
         term: 'Strategic Hamlet Program',
         phonetic: 'struh-TEE-jik HAM-let',
         definition:
-          'Joint U.S.-South Vietnamese pacification strategy that forcibly relocated rural peasants into fortified villages ringed with barbed wire and bamboo punji stakes to isolate them from Viet Cong influence.',
+          'A joint U.S. and South Vietnamese program that forced farmers to move into fortified villages. Barbed wire and sharpened bamboo stakes were meant to cut them off from the Viet Cong.',
         significance:
-          'Deeply alienated peasants who resented being torn from ancestral lands and graves, allowing the Viet Cong to infiltrate the camps from within.',
-        examTip: 'Classic example of an operational pacification program that produced the opposite of its intended effect.',
+          'Farmers resented being taken from their family land and graves. The Viet Cong got inside the hamlets anyway.',
+        examTip: 'A classic case of a program that produced the opposite of what it was meant to do.',
       },
       {
         id: 'cable-243',
         term: 'State Department Cable 243 (August 24, 1963)',
         phonetic: 'KAY-bul TOO FOR-TEE THREE',
         definition:
-          'Top-secret diplomatic telegram drafted by Roger Hilsman and approved by JFK informing Ambassador Henry Cabot Lodge Jr. that the U.S. would no longer tolerate Diem’s brother Nhu and would support a military coup if Diem refused to remove him.',
+          'A top-secret telegram drafted by Roger Hilsman and approved by Kennedy. It told Ambassador Henry Cabot Lodge Jr. that the U.S. would no longer accept Diem’s brother Nhu in power, and would support a coup if Diem refused to remove him.',
         significance:
-          'The green light from Washington to dissident ARVN generals that precipitated the November 1963 coup against Diem.',
-        examTip: 'Demonstrates direct American complicity in the overthrow of South Vietnam’s head of state.',
+          'South Vietnamese generals who opposed Diem took it as a green light from Washington. The coup followed in November 1963.',
+        examTip: 'It shows that the United States had a direct part in the overthrow of South Vietnam’s leader.',
       },
     ],
   },
@@ -66,7 +66,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'At Ap Bac, 350 dug-in Viet Cong guerrillas held off 1,500 ARVN troops backed by artillery, M113 armored personnel carriers, and U.S. helicopters, shooting down five helicopters and killing three American advisers. It shattered MACV claims that ARVN was winning the ground war.',
+        'At Ap Bac, 350 dug-in Viet Cong guerrillas held off 1,500 ARVN troops who had artillery, M113 armored vehicles and U.S. helicopters. The guerrillas shot down five helicopters and killed three American advisers. The battle undercut the U.S. command’s claim that the ARVN was winning.',
       citationRef: 'c3-1',
     },
     {
@@ -81,7 +81,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'On June 11, 1963, 66-year-old Buddhist monk Thich Quang Duc set himself on fire in protest of Diem’s religious discrimination. Malcolm Browne’s Pulitzer Prize-winning photograph shocked the global public and convinced the White House that Diem had lost all moral legitimacy.',
+        'On June 11, 1963, the 66-year-old Buddhist monk Thich Quang Duc set himself on fire to protest Diem’s treatment of Buddhists. Malcolm Browne’s photograph, which won a Pulitzer Prize, shocked people around the world. It helped convince the White House that Diem could no longer lead.',
       citationRef: 'c3-2',
     },
     {
@@ -96,7 +96,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Rather than stabilizing South Vietnam, Diem’s death created a political vacuum. Over the next eighteen months, rival ARVN generals staged twelve successive coups and cabinet reshuffles, leaving the rural countryside almost completely open to Viet Cong expansion.',
+        'Diem’s death did not steady South Vietnam. It left no one clearly in charge. Over the next eighteen months, rival generals overthrew one another again and again, and the Viet Cong spread through the countryside.',
       citationRef: 'c3-3',
     },
   ],
@@ -106,20 +106,20 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       term: 'Thich Quang Duc',
       phonetic: 'TIK KWAHNG DUK',
       definition:
-        'Mahayana Buddhist monk who burned himself to death in Saigon on June 11, 1963, protesting the Diem regime’s persecution of Buddhists.',
+        'A Buddhist monk who burned himself to death in Saigon on June 11, 1963. He was protesting the Diem government’s treatment of Buddhists.',
       significance:
-        'Ignited the Buddhist Crisis that shattered American public support for Ngo Dinh Diem and led directly to the November 1963 coup.',
-      examTip: 'His heart remained intact through cremation and became a sacred relic of religious resistance.',
+        'His death set off the Buddhist Crisis. It ended American public support for Ngo Dinh Diem and led to the coup of November 1963.',
+      examTip: 'Buddhists preserved his heart, which survived the cremation, as a relic.',
     },
     {
       id: 'c3-fc2',
       term: 'MACV',
       phonetic: 'MAK-vee',
       definition:
-        'Military Assistance Command, Vietnam; the unified U.S. joint-service command established in Saigon in February 1962 to oversee all American military advisory and combat efforts.',
+        'Military Assistance Command, Vietnam. It was the U.S. headquarters set up in Saigon in February 1962 to run all American military advising and fighting in the country.',
       significance:
-        'Commanded by General Paul Harkins, and later General William Westmoreland and Creighton Abrams, MACV directed all U.S. military strategy in the war.',
-      examTip: 'Created by Kennedy in 1962 as American advisory commitment expanded beyond the original MAAG mandate.',
+        'Its commanders were General Paul Harkins, then General William Westmoreland, then General Creighton Abrams. MACV ran U.S. military strategy in the war.',
+      examTip: 'Kennedy created it in 1962 as the advisory effort outgrew the older command, called MAAG.',
     },
     {
       id: 'c3-fc3',
@@ -127,10 +127,10 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
       imageId: 'ranch-hand',
       phonetic: 'AY-junt OR-inj',
       definition:
-        'A powerful chemical defoliant containing toxic dioxin sprayed by U.S. Air Force planes under Operation Ranch Hand to strip jungle canopy and destroy enemy food crops.',
+        'A chemical that kills plants. It contained toxic dioxin. U.S. Air Force planes sprayed it in Operation Ranch Hand to strip away jungle cover and destroy enemy food crops.',
       significance:
-        'Caused devastating long-term health crises, birth defects, and cancer among Vietnamese civilians and American veterans for decades following the war.',
-      examTip: 'First authorized by JFK in late 1961 as part of counterinsurgency chemical warfare operations.',
+        'It caused serious health problems for decades, including birth defects and cancer, among Vietnamese civilians and American veterans.',
+      examTip: 'Kennedy first approved spraying in late 1961.',
     },
   ],
 };

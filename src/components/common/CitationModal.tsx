@@ -58,11 +58,11 @@ export default function CitationModal() {
               </span>
               {isVerbatim ? (
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
-                  Verified Verbatim Source
+                  Exact quotation
                 </span>
               ) : (
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
-                  Documented Source Paraphrase
+                  In our words
                 </span>
               )}
             </div>
@@ -95,7 +95,7 @@ export default function CitationModal() {
             id="section-source"
             className="text-[10px] text-brand font-bold block"
           >
-            Source Provenance
+            Where it comes from
           </span>
 
           <div className="space-y-1">
@@ -128,7 +128,7 @@ export default function CitationModal() {
             {activeCitation.locator && (
               <div className="pt-1 text-xs text-ink">
                 <strong className="text-ink-muted text-[10px] block">
-                  Precise Locator:
+                  Where to find it:
                 </strong>
                 <span className="bg-parchment px-2 py-0.5 rounded-xs border border-rule inline-block mt-0.5 font-medium">
                   {activeCitation.locator}
@@ -160,7 +160,7 @@ export default function CitationModal() {
               id="section-supports"
               className="text-[10px] text-ink-muted font-bold block"
             >
-              What This Source Supports
+              What this source shows
             </span>
             <p className="font-sans text-sm sm:text-base text-ink leading-relaxed">
               {activeCitation.supportsClaim}
@@ -175,7 +175,7 @@ export default function CitationModal() {
               id="section-limitations"
               className="text-[10px] text-brand font-bold block"
             >
-              Documentary Limitations &amp; Context
+              What it can’t tell you
             </span>
             <p className="font-sans italic text-sm text-ink-muted leading-relaxed bg-brand-tint p-3 rounded-xs border border-brand-rule">
               {activeCitation.limitations}
@@ -209,7 +209,7 @@ export default function CitationModal() {
             </a>
           ) : (
             <span className="font-sans text-xs text-ink-muted italic">
-              Original document in physical repository
+              The original is held in an archive
             </span>
           )}
         </footer>

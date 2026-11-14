@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
   chapterId: 'paris-peace-accords',
   bigQuestion:
-    'Why did President Nixon order the brutal "Christmas Bombing" of 1972—and why did the 1973 Paris Peace Accords fail to end the war?',
+    'Why did Nixon order the Christmas Bombing of 1972, and why did the 1973 Paris Peace Accords fail to end the war?',
   whyItMatters:
-    'Reveals how the United States secured an exit for its troops and POWs while leaving 150,000 North Vietnamese troops inside South Vietnam, sealing Saigon’s eventual fate.',
+    'The U.S. got its troops and prisoners of war out. But the deal left 150,000 North Vietnamese troops inside South Vietnam, and that decided how the war would end.',
   whatYouWillLearn: [
-    'How secret negotiations between Henry Kissinger and Le Duc Tho produced the October 1972 breakthrough.',
-    'Why South Vietnamese President Nguyen Van Thieu vehemently rejected the draft treaty as a death sentence.',
-    'Why Nixon unleashed Operation Linebacker II (the Christmas Bombing) to coerce both Hanoi and Saigon.',
+    'How secret talks between Henry Kissinger and Le Duc Tho produced a draft deal in October 1972.',
+    'Why South Vietnam’s president, Nguyen Van Thieu, refused the draft and saw it as a death sentence.',
+    'Why Nixon ordered Operation Linebacker II, the Christmas Bombing, to pressure both Hanoi and Saigon.',
   ],
   briefing: {
     summary:
-      'In October 1972, secret negotiations in Paris between Henry Kissinger and North Vietnamese diplomat Le Duc Tho produced a breakthrough: Hanoi dropped its demand that South Vietnamese President Nguyen Van Thieu be removed from power, while the U.S. conceded that approximately 150,000 to 200,000 North Vietnamese regular troops (PAVN) could remain in place inside South Vietnam. Weeks before the 1972 U.S. presidential election, Kissinger announced "peace is at hand." However, when presented with the draft, President Thieu furiously rejected it, calling foreign troops on southern soil a fatal capitulation. Talks broke down, and from December 18 to 29, 1972, Nixon unleashed Operation Linebacker II—the "Christmas Bombing"—dropping over 20,000 tons of explosives on Hanoi and Haiphong in the heaviest B-52 strikes of the war. When negotiations resumed, the final Paris Peace Accords signed on January 27, 1973 were essentially identical to the October draft. Nixon coerced Thieu into signing by secretly threatening to cut off all aid and privately promising in personal letters that the U.S. would "respond with full force" if Hanoi violated the ceasefire. All remaining American combat troops departed by March 29, 1973, and 591 American POWs returned home.',
+      'In October 1972, secret talks in Paris between Henry Kissinger and the North Vietnamese diplomat Le Duc Tho produced a breakthrough. Hanoi dropped its demand that South Vietnam’s president, Nguyen Van Thieu, be removed. In return, the U.S. agreed that 150,000 to 200,000 North Vietnamese troops could stay where they were inside South Vietnam. Weeks before the 1972 presidential election, Kissinger announced that peace was close. When Thieu saw the draft, he rejected it in anger. He said that leaving northern troops on southern soil meant surrender. Talks broke down. From December 18 to 29, 1972, Nixon ordered Operation Linebacker II, the Christmas Bombing. B-52s dropped more than 20,000 tons of bombs on Hanoi and Haiphong, the heaviest strikes of the war. When talks resumed, the final Paris Peace Accords, signed on January 27, 1973, were almost the same as the October draft. Nixon got Thieu to sign by secretly threatening to cut off all aid. In private letters, he also promised that the U.S. would hit back hard if Hanoi broke the ceasefire. The last American combat troops left by March 29, 1973, and 591 American POWs came home.',
     examTakeaways: [
-      'The Fatal Concession: The 1973 Accords permitted North Vietnamese Army (PAVN) regular troops to remain permanently stationed inside South Vietnam while requiring all American combat forces to leave.',
-      'The Christmas Bombing Purpose: Operation Linebacker II was aimed not at winning major new concessions from Hanoi, but at reassuring Thieu and demonstrating violent American resolve before departing.',
-      'Nixon’s Empty Secret Commitments: Nixon secretly promised Thieu that the U.S. would retaliate if Hanoi attacked, but Congress legally voided this promise through the Case-Church Amendment and the War Powers Act.',
+      'The big concession: The 1973 Accords let North Vietnamese troops stay inside South Vietnam, while every American combat soldier had to leave.',
+      'Why the Christmas Bombing: Linebacker II won few new terms from Hanoi. Its main purpose was to reassure Thieu and show American force before the U.S. left.',
+      'Promises Congress cancelled: Nixon secretly promised Thieu the U.S. would strike back if Hanoi attacked. The Case-Church Amendment and the War Powers Act made that promise impossible to keep.',
     ],
     keyTerms: [
       {
@@ -27,10 +27,10 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
         imageId: 'paris-signing-1973',
         phonetic: 'PAIR-is PEES uh-KORDZ',
         definition:
-          'Agreement on Ending the War and Restoring Peace in Viet-Nam, signed by the United States, North Vietnam, South Vietnam, and the Viet Cong.',
+          'The Agreement on Ending the War and Restoring Peace in Viet-Nam. The United States, North Vietnam, South Vietnam and the Viet Cong all signed it.',
         significance:
-          'Ended direct U.S. military participation in the war, secured the release of 591 American prisoners of war (Operation Homecoming), and permitted communist forces to remain in the South.',
-        examTip: 'High frequency. Note that it ended American participation, NOT the Vietnamese civil war.',
+          'It ended direct U.S. military involvement and freed 591 American prisoners of war (Operation Homecoming). It also let communist forces stay in the South.',
+        examTip: 'Shows up often. It ended America’s part in the war, not the war between Vietnamese.',
       },
       {
         id: 'operation-linebacker-ii',
@@ -38,20 +38,20 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
         imageId: 'b52-linebacker-1972',
         phonetic: 'LINE-bak-er TWO',
         definition:
-          'Intense 11-day aerial bombardment campaign conducted by U.S. B-52s and fighter-bombers against Hanoi and Haiphong from December 18 to 29, 1972.',
+          'An 11-day bombing campaign by U.S. B-52s and fighter-bombers against Hanoi and Haiphong, from December 18 to 29, 1972.',
         significance:
-          'The heaviest aerial bombardment of the war; resulted in the loss of 15 B-52 bombers and widespread international condemnation before peace talks resumed.',
-        examTip: 'Did not alter the core terms of the draft treaty already negotiated in October 1972.',
+          'It was the heaviest bombing of the war. The U.S. lost 15 B-52s, and countries around the world condemned the raids before peace talks started again.',
+        examTip: 'It did not change the main terms already agreed in October 1972.',
       },
       {
         id: 'case-church-amendment',
         term: 'Case-Church Amendment (June 1973)',
         phonetic: 'KAYS CHERCH',
         definition:
-          'Congressional legislation prohibiting all U.S. military activity (including aerial bombing) in Vietnam, Laos, and Cambodia past August 15, 1973.',
+          'A law passed by Congress that banned all U.S. military action, including bombing, in Vietnam, Laos and Cambodia after August 15, 1973.',
         significance:
-          'Passed by veto-proof majorities, it legally stripped the President of the authority to fulfill Nixon’s secret pledges of air support to South Vietnam.',
-        examTip: 'The definitive legislative end to American military intervention in Indochina.',
+          'It passed by margins large enough to beat a veto. It took away the president’s power to keep Nixon’s secret promises of air support to South Vietnam.',
+        examTip: 'It ended American military action in Indochina by law.',
       },
     ],
   },
@@ -68,7 +68,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'The treaty established a "ceasefire-in-place," permitting North Vietnamese regular troops to remain in occupation of southern territory they held. Thieu recognized that once American combat airpower left, an isolated ARVN could never hold off a fortified northern army already inside its borders.',
+        'The treaty set a "ceasefire in place." North Vietnamese troops could stay on the southern land they held. Thieu knew that once American air power left, the ARVN could not hold off a northern army already inside the country.',
       citationRef: 'c9-1',
     },
     {
@@ -83,7 +83,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'In declassified letters published in The Palace File, Nixon warned Thieu that Congress would terminate all economic and military aid if he refused to sign, but promised: "You have my absolute assurance that if Hanoi fails to abide by the terms of this agreement, it is my intention to take swift and severe retaliatory action."',
+        'In letters later published in The Palace File, Nixon warned Thieu that Congress would cut off all economic and military aid if he refused to sign. He also promised in writing to strike back quickly and hard if Hanoi broke the agreement.',
       citationRef: 'c9-2',
     },
     {
@@ -98,7 +98,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'In June 1973, Congress passed the Case-Church Amendment barring all military actions in Indochina. Simultaneously, the Watergate scandal eroded Nixon’s political authority until his resignation in August 1974, leaving President Gerald Ford with zero legal power to send air support.',
+        'In June 1973, Congress passed the Case-Church Amendment, which barred all military action in Indochina. At the same time, the Watergate scandal weakened Nixon until he resigned in August 1974. President Gerald Ford had no legal power to send air support.',
       citationRef: 'c9-3',
     },
   ],
@@ -108,10 +108,10 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       term: 'Le Duc Tho',
       phonetic: 'LAY DOOK TOH',
       definition:
-        'Senior North Vietnamese Politburo diplomat who conducted secret negotiations in Paris with Henry Kissinger from 1969 to 1973.',
+        'A senior member of North Vietnam’s Politburo. He led the secret talks with Henry Kissinger in Paris from 1969 to 1973.',
       significance:
-        'Jointly awarded the 1973 Nobel Peace Prize with Kissinger; famously declined the award, stating that true peace had not been established in Vietnam.',
-      examTip: 'The primary architect of North Vietnam’s diplomatic negotiating strategy.',
+        'He and Kissinger were awarded the 1973 Nobel Peace Prize. He turned it down, saying there was still no real peace in Vietnam.',
+      examTip: 'He shaped North Vietnam’s plan for the negotiations.',
     },
     {
       id: 'c9-fc2',
@@ -119,20 +119,20 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       imageId: 'homecoming-1973',
       phonetic: 'OHM-kuh-ming',
       definition:
-        'The repatriation of 591 American prisoners of war (POWs) held by North Vietnam and the Viet Cong, conducted between February and April 1973.',
+        'The return of 591 American prisoners of war held by North Vietnam and the Viet Cong, between February and April 1973.',
       significance:
-        'The most emotional public milestone of the American withdrawal, bringing home pilots like John McCain and James Stockdale.',
-      examTip: 'Covered live on national television; marked the public end of active U.S. troop deployment.',
+        'It was the most emotional moment of the withdrawal for Americans. Pilots such as John McCain and James Stockdale came home.',
+      examTip: 'It was shown live on national television and marked the public end of America’s fighting role.',
     },
     {
       id: 'c9-fc3',
       term: 'The "Palace File"',
       phonetic: 'PAL-us FYLE',
       definition:
-        'The secret archive of 27 personal letters written by Presidents Nixon and Ford to President Thieu pledging American military retaliation if North Vietnam broke the 1973 Accords.',
+        'A collection of 27 private letters from Presidents Nixon and Ford to President Thieu. They promised American military action if North Vietnam broke the 1973 Accords.',
       significance:
-        'Revealed in 1986 by Nguyen Tien Hung; proved that Thieu only signed the treaty because of executive promises that Congress subsequently rendered legally void.',
-      examTip: 'Demonstrates the sharp disconnect between presidential executive promises and constitutional congressional reality.',
+        'Nguyen Tien Hung made them public in 1986. They showed that Thieu signed only because of promises that Congress later made impossible to keep.',
+      examTip: 'It shows the gap between what a president can promise and what Congress will allow.',
     },
   ],
 };

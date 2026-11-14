@@ -37,7 +37,7 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
               href="/vietnam"
               className="text-ink-muted hover:text-brand transition-colors hidden sm:inline-block font-medium"
             >
-              Explore History
+              Explore history
             </Link>
             {prevChapter && (
               <Link
@@ -101,14 +101,14 @@ export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
             <div className="flex items-center justify-between pb-4 mb-4 border-b border-rule">
               <div>
                 <h3 className="font-display text-xl font-bold text-ink">
-                  Select a Chapter
+                  Choose a chapter
                 </h3>
               </div>
               <button
                 onClick={() => setDrawerOpen(false)}
                 className="text-xs px-3 py-1 border border-rule bg-parchment hover:bg-rule rounded-xs text-ink cursor-pointer"
               >
-                Close (ESC)
+                Close
               </button>
             </div>
 

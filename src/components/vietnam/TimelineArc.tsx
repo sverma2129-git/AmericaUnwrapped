@@ -19,7 +19,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'DRV Proclamation',
     slug: 'french-indochina-dien-bien-phu',
     chapterNumber: 1,
-    chapterTitle: 'French Indochina & Dien Bien Phu',
+    chapterTitle: 'Dien Bien Phu and the end of French rule',
     summary: 'Ho Chi Minh proclaims independence; France moves to restore colonial sovereignty.',
     isLandmark: false,
   },
@@ -28,8 +28,8 @@ const ARC_NODES: ArcNode[] = [
     label: 'Dien Bien Phu',
     slug: 'french-indochina-dien-bien-phu',
     chapterNumber: 1,
-    chapterTitle: 'French Indochina & Dien Bien Phu',
-    summary: 'Cataclysmic 55-day siege shatters French colonial rule on the eve of Geneva.',
+    chapterTitle: 'Dien Bien Phu and the end of French rule',
+    summary: 'A 55-day siege ends French colonial rule, just as the Geneva talks turn to Indochina.',
     isLandmark: true,
   },
   {
@@ -37,7 +37,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Partition Hardens',
     slug: 'geneva-south-vietnam',
     chapterNumber: 2,
-    chapterTitle: 'Geneva & The Creation of South Vietnam',
+    chapterTitle: 'Geneva splits Vietnam in two',
     summary: 'Nationwide reunification elections are aborted; North and South harden into separate Cold War states.',
     isLandmark: false,
   },
@@ -46,7 +46,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Ap Bac & Diem Coup',
     slug: 'kennedy-and-diem',
     chapterNumber: 3,
-    chapterTitle: 'Kennedy, Counterinsurgency, & Diem',
+    chapterTitle: 'Kennedy, Diem and the coup',
     summary: 'U.S. advisory commitment expands to 16,300; Diem is overthrown and assassinated.',
     isLandmark: false,
   },
@@ -55,7 +55,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Gulf of Tonkin',
     slug: 'gulf-of-tonkin',
     chapterNumber: 4,
-    chapterTitle: 'The Gulf of Tonkin: Two Nights and a Resolution',
+    chapterTitle: 'The Gulf of Tonkin',
     summary: 'Contested naval incidents lead Congress to grant LBJ broad war-making authorization.',
     isLandmark: true,
   },
@@ -64,7 +64,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Rolling Thunder',
     slug: 'americanization-attrition',
     chapterNumber: 5,
-    chapterTitle: 'Americanization, Attrition, & Hanoi’s Inner War',
+    chapterTitle: 'America takes over the war',
     summary: 'U.S. combat troops deploy; Westmoreland initiates search-and-destroy attrition warfare.',
     isLandmark: false,
   },
@@ -73,7 +73,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'The Tet Offensive',
     slug: 'tet-offensive',
     chapterNumber: 7,
-    chapterTitle: 'The Tet Offensive & The Crisis of Credibility',
+    chapterTitle: 'The Tet Offensive',
     summary: 'Synchronized assaults across 36 provincial capitals shatter Washington’s official optimism.',
     isLandmark: true,
   },
@@ -82,7 +82,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Vietnamization & Cambodia',
     slug: 'nixon-and-vietnamization',
     chapterNumber: 8,
-    chapterTitle: 'Nixon, Vietnamization, & The Widening War',
+    chapterTitle: 'Nixon and Vietnamization',
     summary: 'Ground troop withdrawals paired with expanded air war and Cambodian incursion.',
     isLandmark: false,
   },
@@ -91,7 +91,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Paris Peace Accords',
     slug: 'paris-peace-accords',
     chapterNumber: 9,
-    chapterTitle: 'The Paris Peace Accords: Peace at Hand?',
+    chapterTitle: 'The Paris Peace Accords',
     summary: 'U.S. combat forces withdraw while 150,000+ North Vietnamese troops remain in the South.',
     isLandmark: true,
   },
@@ -100,7 +100,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Fall of Saigon',
     slug: 'the-collapse',
     chapterNumber: 10,
-    chapterTitle: 'The Final Offensive & The Collapse',
+    chapterTitle: 'The fall of Saigon',
     summary: 'A 55-day conventional campaign leads to the unconditional surrender of the South Vietnamese government.',
     isLandmark: true,
   },
@@ -109,7 +109,7 @@ const ARC_NODES: ArcNode[] = [
     label: 'Doi Moi Reforms',
     slug: 'aftermath-1975',
     chapterNumber: 11,
-    chapterTitle: 'Aftermath: Vietnam After 1975',
+    chapterTitle: 'After the war',
     summary: 'Following post-war hardship, re-education, and refugee flight, Vietnam adopts market economic reforms.',
     isLandmark: false,
   },
@@ -123,11 +123,11 @@ export default function TimelineArc() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-rule gap-2">
         <div>
           <h3 className="font-display text-xl sm:text-2xl font-bold text-ink">
-            Thirty-Year Arc of Decision &amp; Escalation
+            Thirty years, start to finish
           </h3>
         </div>
         <div className="text-xs text-ink-muted">
-          Click any milestone to inspect historical context
+          Tap a date to see what happened
         </div>
       </div>
 
@@ -174,7 +174,7 @@ export default function TimelineArc() {
             </span>
             {selectedNode.isLandmark && (
               <span className="px-1.5 py-0.5 bg-brand/10 text-brand text-[10px] rounded-xs border border-brand/30 font-bold">
-                Landmark Turning Point
+                Turning point
               </span>
             )}
           </div>

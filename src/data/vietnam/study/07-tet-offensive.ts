@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
   chapterId: 'tet-offensive',
   bigQuestion:
-    'How could a military disaster for the Viet Cong become the decisive psychological turning point of the war against the United States?',
+    'How did a military defeat for the Viet Cong become the turning point of the war for the United States?',
   whyItMatters:
-    'The 1968 Tet Offensive shattered the Johnson administration’s claims of imminent victory, fractured the American home front, and forced Washington to reverse course toward de-escalation.',
+    'The 1968 Tet Offensive ended the Johnson administration’s claim that victory was close. It split Americans at home and pushed Washington to start winding the war down.',
   whatYouWillLearn: [
-    'How communist forces coordinated surprise attacks on 36 of 44 provincial capitals during a sacred holiday truce.',
-    'Why Tet was a catastrophic battlefield defeat for the Viet Cong, but an overwhelming political victory in Washington.',
-    'How Walter Cronkite’s broadcast and the rebellion of the "Wise Men" compelled LBJ to withdraw from the 1968 presidential race.',
+    'How communist forces launched surprise attacks on 36 of 44 provincial capitals during a holiday truce.',
+    'Why Tet was a heavy battlefield defeat for the Viet Cong and a political victory in Washington.',
+    'How Walter Cronkite’s broadcast and the advice of the "Wise Men" led Johnson to drop out of the 1968 presidential race.',
   ],
   briefing: {
     summary:
-      'In late 1967, General Westmoreland assured the American public that the war was being won and there was "light at the end of the tunnel." In the early morning hours of January 30–31, 1968, during the sacred Tet lunar new year truce, over 84,000 North Vietnamese and Viet Cong troops launched synchronized surprise assaults on 36 of 44 provincial capitals, five autonomous cities, and dozens of military installations across South Vietnam. In Saigon, a 19-man sapper squad blew a hole in the U.S. Embassy wall, with morning television broadcasting dead Americans on embassy grounds. In Hue, communist forces seized the ancient Citadel and held it for 26 days of brutal urban warfare, executing nearly 3,000 civilians before U.S. Marines retook the city. Militarily, Tet was an asymmetric defeat for Hanoi: the anticipated civilian uprising never occurred, and the Viet Cong lost over 40,000 veteran fighters. However, psychologically, it demolished the administration’s credibility. When CBS anchor Walter Cronkite concluded the war was "mired in stalemate," Johnson famously remarked, "If I’ve lost Cronkite, I’ve lost Middle America." On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the 1968 presidential election.',
+      'In late 1967, General Westmoreland told Americans the war was being won and that there was "light at the end of the tunnel." Early on January 30–31, 1968, during the truce for Tet, the lunar new year, more than 84,000 North Vietnamese and Viet Cong troops attacked at the same time. They hit 36 of 44 provincial capitals, five major cities and dozens of bases across South Vietnam. In Saigon, a 19-man squad blew a hole in the wall of the U.S. Embassy, and morning television showed dead Americans on the grounds. In Hue, communist forces took the old Citadel and held it for 26 days. They executed nearly 3,000 civilians before U.S. Marines retook the city. As a battle, Tet was a defeat for Hanoi. The uprising it expected never came, and the Viet Cong lost more than 40,000 experienced fighters. As politics, it destroyed the administration’s credibility. CBS anchor Walter Cronkite told viewers the war was "mired in stalemate," and Johnson is reported to have said that losing Cronkite meant losing Middle America. On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.',
     examTakeaways: [
-      'The Credibility Gap: The stark contradiction between administration promises of imminent victory and the reality of combat in Saigon created an unbridgeable trust deficit with the public.',
-      'Military vs. Political Asymmetry: The Viet Cong suffered fatal tactical casualties, shifting the fighting burden to regular North Vietnamese conscripts, yet achieved a decisive strategic victory by breaking American political will.',
-      'The Turning Point of American Policy: Forced LBJ’s senior civilian advisers (the "Wise Men") to recommend de-escalation, leading to the initiation of peace talks in Paris and the eventual policy of Vietnamization.',
+      'The credibility gap: The government kept promising that victory was near. Then Americans watched fighting in Saigon on television. Many stopped believing what officials said.',
+      'Lost the battle, won the argument: The Viet Cong took losses it never recovered from, and North Vietnamese draftees took over more of the fighting. But Tet broke American political will.',
+      'A turn in U.S. policy: Johnson’s senior advisers, the "Wise Men," told him to scale back. Peace talks opened in Paris, and Vietnamization came later.',
     ],
     keyTerms: [
       {
@@ -27,20 +27,20 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
         imageId: 'hue-1968',
         phonetic: 'TET uh-FEN-siv',
         definition:
-          'Massive, synchronized surprise offensive launched by PAVN and Viet Cong forces against over 100 cities, towns, and military bases throughout South Vietnam during the lunar new year.',
+          'A huge surprise offensive by North Vietnamese and Viet Cong forces during the lunar new year. They attacked more than 100 cities, towns and bases across South Vietnam at once.',
         significance:
-          'The psychological turning point of the Vietnam War; convinced American leaders and the public that the war was unwinnable at acceptable cost.',
-        examTip: 'High frequency. Essential turning point for APUSH Unit 8 (Cold War).',
+          'It was the war’s turning point in American opinion. It convinced many leaders and much of the public that the war could not be won at a cost they would accept.',
+        examTip: 'Shows up often. A key turning point in AP U.S. History Period 8.',
       },
       {
         id: 'credibility-gap',
         term: 'The Credibility Gap',
         phonetic: 'KRED-ih-BIL-ih-tee GAP',
         definition:
-          'The widespread public skepticism regarding the accuracy of official statements made by President Johnson and the military regarding progress in the Vietnam War.',
+          'The public’s growing doubt that President Johnson and the military were telling the truth about progress in Vietnam.',
         significance:
-          'Eroded national trust in the federal government, fueling nationwide anti-war protests and investigative journalism.',
-        examTip: 'Directly accelerated by live television coverage of the Tet Offensive and later the Pentagon Papers.',
+          'It wore down trust in the federal government and fed both antiwar protest and investigative reporting.',
+        examTip: 'Television coverage of the Tet Offensive widened it, and the Pentagon Papers widened it again.',
       },
       {
         id: 'walter-cronkite-broadcast',
@@ -48,10 +48,10 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
         imageId: 'cronkite-hue-1968',
         phonetic: 'WAWL-ter KRON-kyte',
         definition:
-          'Special CBS News editorial broadcast in which America’s most trusted news anchor delivered his personal assessment from Vietnam that the war was "mired in stalemate."',
+          'A special CBS News report. After a trip to Vietnam, the country’s most trusted news anchor gave his own view that the war was "mired in stalemate."',
         significance:
-          'Crystallized mainstream middle-class disillusionment with the war and convinced President Johnson that his domestic political support had collapsed.',
-        examTip: 'Frequently quoted on DBQs as evidence of the shift in mainstream media coverage.',
+          'It put into words what many middle-class Americans had come to feel. It also helped convince President Johnson that he had lost support at home.',
+        examTip: 'DBQs often use it as evidence that mainstream news coverage had shifted.',
       },
     ],
   },
@@ -68,7 +68,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Hanoi’s Politburo Resolution 14 predicted that assaults on urban centers would trigger a nationwide "General Uprising" (*Tong Khoi Nghia*) where South Vietnamese citizens and soldiers would rise up in revolution. The population remained largely passive or fled, leaving exposed Viet Cong units to be annihilated by allied firepower.',
+        'Hanoi’s plan, Politburo Resolution 14, predicted that attacks on the cities would set off a nationwide "General Uprising" (Tong Khoi Nghia), with South Vietnamese civilians and soldiers joining the revolution. Most people stayed out of it or fled. That left Viet Cong units exposed, and U.S. and South Vietnamese firepower destroyed many of them.',
       citationRef: 'c7-1',
     },
     {
@@ -83,7 +83,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'During their month-long occupation of Hue, communist cadres conducted systematic purges, executing civil servants, teachers, and Catholics. Retaking the city required 26 days of brutal house-to-house fighting by U.S. Marines and ARVN troops that destroyed over 80 percent of the historic imperial capital.',
+        'While they held Hue for a month, communist forces carried out organized killings of civil servants, teachers and Catholics. Retaking the city took 26 days of house-to-house fighting by U.S. Marines and ARVN troops. More than 80 percent of the old imperial capital was destroyed.',
       citationRef: 'c7-3',
     },
     {
@@ -98,7 +98,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'Shattered by the political fallout of Tet and a poor showing in the New Hampshire primary against anti-war candidate Eugene McCarthy, LBJ announced a unilateral bombing restriction north of the 20th parallel and declared: "I shall not seek, and I will not accept, the nomination of my party for another term as your President."',
+        'Tet had damaged Johnson politically, and he had done poorly in the New Hampshire primary against the antiwar candidate Eugene McCarthy. He announced that bombing would stop north of the 20th parallel, and said he would neither seek nor accept his party’s nomination for another term.',
       citationRef: 'c7-2',
     },
     {
@@ -123,30 +123,30 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       term: 'The "Wise Men"',
       phonetic: 'WYZE MEN',
       definition:
-        'Informal group of senior elder statesmen (including Dean Acheson, McGeorge Bundy, and Omar Bradley) summoned by LBJ in March 1968 to review war policy.',
+        'An informal group of senior former officials, including Dean Acheson, McGeorge Bundy and Omar Bradley. Johnson called them together in March 1968 to review the war.',
       significance:
-        'Shocked Johnson by unanimously advising him that the war could not be won militarily and that the U.S. must begin disengagement and de-escalation.',
-      examTip: 'Demonstrates the loss of elite establishment consensus behind the Cold War intervention.',
+        'They shocked Johnson. Most of them told him the war could not be won by force and that the U.S. should begin to pull back.',
+      examTip: 'It shows that the foreign-policy establishment no longer agreed on the war.',
     },
     {
       id: 'c7-fc2',
       term: 'Battle of Khe Sanh',
       phonetic: 'KAY SAHN',
       definition:
-        'A 77-day siege of 6,000 U.S. Marines at an isolated mountain outpost near the DMZ and Laotian border by two North Vietnamese divisions (Jan–April 1968).',
+        'A 77-day siege from January to April 1968. Two North Vietnamese divisions surrounded 6,000 U.S. Marines at an isolated base near the DMZ and the border with Laos.',
       significance:
-        'Fixated President Johnson’s attention (who feared an "American Dien Bien Phu"), drawing American airpower away from the coastal cities on the eve of the Tet Offensive.',
-      examTip: 'Though held successfully through Operation Niagara bombing, the U.S. quietly abandoned the base months later.',
+        'President Johnson feared an "American Dien Bien Phu" and watched it closely. The siege pulled American air power away from the coastal cities just before Tet.',
+      examTip: 'Heavy bombing, called Operation Niagara, held the base. The U.S. quietly abandoned it months later.',
     },
     {
       id: 'c7-fc3',
       term: 'Eddie Adams Photograph',
       phonetic: 'ED-ee AD-umz',
       definition:
-        'Iconic Associated Press photograph showing South Vietnamese National Police Chief Nguyen Ngoc Loan executing a captured Viet Cong officer (Nguyen Van Lem) on a Saigon street on Feb 1, 1968.',
+        'An Associated Press photograph taken on a Saigon street on February 1, 1968. It shows South Vietnam’s national police chief, Nguyen Ngoc Loan, shooting a captured Viet Cong officer, Nguyen Van Lem.',
       significance:
-        'Won the Pulitzer Prize and became one of the most famous anti-war images in world history, symbolizing the brutality and moral ambiguity of the conflict.',
-      examTip: 'Frequently analyzed on historical document exams alongside Nick Ut’s "Napalm Girl" photo.',
+        'It won the Pulitzer Prize and became one of the best-known antiwar images in the world. For many people it stood for the war’s brutality.',
+      examTip: 'Exams often pair it with Nick Ut’s "Napalm Girl" photograph.',
     },
   ],
 };

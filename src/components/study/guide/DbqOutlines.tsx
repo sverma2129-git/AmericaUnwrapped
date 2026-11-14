@@ -9,13 +9,13 @@ export default function DbqOutlines() {
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rule pb-4">
         <div>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-            High-Yield DBQ &amp; Long Essay Prompts
+            Essay practice
           </h2>
           <span className="text-xs font-bold text-brand block mb-1">
             Writing &amp; Free-Response Prep
           </span>
           <p className="font-sans text-sm text-ink-muted mt-1">
-            Click any prompt to reveal recommended thesis formulas, primary source evidence, and common student errors.
+            Tap a prompt to see a sample thesis, the evidence to use, and mistakes to avoid.
           </p>
         </div>
         <ExpandAllControls targetId="dbq-prompts" />
@@ -67,7 +67,7 @@ export default function DbqOutlines() {
           >
             <div className="p-4 bg-white border-l border-brand border-t border-r border-b border-rule rounded-r-xs mt-4">
               <strong className="font-semibold text-brand block mb-1 text-xs">
-                Recommended Thesis Formula:
+                A sample thesis:
               </strong>
               <p className="text-ink leading-relaxed italic text-xs sm:text-sm">&ldquo;{dbq.thesis}&rdquo;</p>
             </div>
@@ -75,7 +75,7 @@ export default function DbqOutlines() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 font-sans text-xs">
               <div className="p-4 bg-white border border-rule rounded-xs space-y-2">
                 <strong className="text-xs font-bold text-ink block">
-                  Key Evidence to Cite:
+                  Evidence to use:
                 </strong>
                 <ul className="list-disc list-inside space-y-1.5 text-ink-muted">
                   {dbq.evidence.map((item) => (
@@ -85,7 +85,7 @@ export default function DbqOutlines() {
               </div>
               <div className="p-4 bg-brand-tint border border-brand-rule rounded-xs space-y-2">
                 <strong className="text-xs font-bold text-brand block">
-                  Common Student Errors:
+                  Mistakes to avoid:
                 </strong>
                 <ul className="list-disc list-inside space-y-1.5 text-ink-muted">
                   {dbq.commonErrors.map((item) => (

@@ -11,7 +11,7 @@ export default function PhoenixAnalysis() {
       <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
           <span className="font-bold text-stone-900">
-            Documented Intelligence Audit
+            What the records show
           </span>
           <span className="text-stone-500 ml-2">&bull; Phoenix Metrics &amp; Defoliation (1967–1972)</span>
         </div>
@@ -38,7 +38,7 @@ export default function PhoenixAnalysis() {
           <div className="space-y-6">
             <div>
               <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-                Deconstructing the &ldquo;Neutralization&rdquo; Statistics
+                What the Phoenix numbers really count
               </h4>
               <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 The Phoenix Program (<em>Phung Hoang</em>) was designed by the CIA and CORDS to dismantle the Viet Cong Infrastructure (VCI)—the shadow civil government that taxed villages, drafted youths, and executed Saigon officials.
@@ -49,7 +49,7 @@ export default function PhoenixAnalysis() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  Total Neutralized
+                  Total captured, turned or killed
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   81,740
@@ -61,7 +61,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  Captured / Interrogated
+                  Captured and questioned
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   33,358
@@ -73,7 +73,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  Rallied / Defected
+                  Switched sides
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   22,013
@@ -85,7 +85,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  Documented Killed
+                  Killed
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   26,369
@@ -99,7 +99,7 @@ export default function PhoenixAnalysis() {
             {/* The 87% vs 13% Reality Ledger */}
             <div className="p-5 bg-[#f2ede4] border border-stone-300 space-y-4">
               <span className="text-xs font-bold text-stone-700 block">
-                The Methodological Distortion: Who Actually Did the Killing?
+                Who actually did the killing?
               </span>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
@@ -127,7 +127,7 @@ export default function PhoenixAnalysis() {
           <div className="space-y-6">
             <div>
               <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-                Operation Ranch Hand: Herbicidal Warfare &amp; The Dioxin Toll
+                Operation Ranch Hand and the cost of dioxin
               </h4>
               <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 Between 1961 and 1971, the U.S. Air Force sprayed nearly 20 million gallons of chemical herbicides over 4.5 million acres of South Vietnam and the Ho Chi Minh Trail, attempting to strip forest canopies and destroy insurgent food crops.
@@ -136,7 +136,7 @@ export default function PhoenixAnalysis() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
               <div className="p-4 bg-white border border-stone-200 space-y-1">
-                <span className="font-bold text-stone-500 block">Total Volume Sprayed</span>
+                <span className="font-bold text-stone-500 block">Total sprayed</span>
                 <div className="font-display text-xl font-bold text-stone-900">
                   19.5 Million Gallons
                 </div>
@@ -146,7 +146,7 @@ export default function PhoenixAnalysis() {
               </div>
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
-                <span className="font-bold text-stone-500 block">Forests &amp; Mangroves Stripped</span>
+                <span className="font-bold text-stone-500 block">Forests and mangroves stripped</span>
                 <div className="font-display text-xl font-bold text-stone-900">
                   4.5 Million Acres
                 </div>
@@ -156,9 +156,9 @@ export default function PhoenixAnalysis() {
               </div>
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
-                <span className="font-bold text-stone-500 block">Crop Destruction Program</span>
+                <span className="font-bold text-stone-500 block">Crops destroyed</span>
                 <div className="font-display text-xl font-bold text-stone-900">
-                  Agent Blue Spraying
+                  Agent Blue spraying
                 </div>
                 <p className="text-stone-600">
                   Arsenic-based defoliant targeted rice paddies in Viet Cong areas, producing severe civilian malnutrition while guerrilla fighters confiscated the remaining grain.

@@ -16,19 +16,19 @@ export default function CompetingArguments() {
       <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
           <span className="font-bold text-stone-900">
-            Historiographical Matrix
+            Two schools of thought
           </span>
           <span className="text-stone-500 ml-2">&bull; Four Traditions of Historical Interpretation</span>
         </div>
         <span className="text-stone-500 text-[11px]">
-          Comparative Historiography
+          How historians disagree
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
           <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-            Why Historians Still Disagree About the War’s Fundamental Meaning
+            Why historians still argue about what the war meant
           </h4>
           <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
             The Vietnam War is not an inert chapter of the past. It remains an active ideological battleground. Each generation of scholars brings different archival evidence, questions, and political contexts to explain why the tragedy occurred.
@@ -73,7 +73,7 @@ export default function CompetingArguments() {
           {/* Core Thesis */}
           <div className="border-l border-stone-900 pl-4 py-1">
             <span className="text-xs font-bold text-stone-500 block mb-1">
-              Core Historical Argument
+              Main argument
             </span>
             <p className="font-display text-base sm:text-lg text-stone-800 leading-relaxed">
               &ldquo;{activeSchool.coreThesis}&rdquo;

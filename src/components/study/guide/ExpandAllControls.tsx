@@ -23,10 +23,10 @@ export default function ExpandAllControls({ targetId }: ExpandAllControlsProps) 
   return (
     <div className="flex items-center gap-2 text-xs">
       <button type="button" onClick={() => setAll(true)} aria-controls={targetId} className={buttonClass}>
-        Expand All
+        Open all
       </button>
       <button type="button" onClick={() => setAll(false)} aria-controls={targetId} className={buttonClass}>
-        Collapse All
+        Close all
       </button>
     </div>
   );

@@ -11,7 +11,7 @@ export default function AftermathMetrics() {
       <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
           <span className="font-bold text-stone-900">
-            Documented Human Ledger
+            What the war cost
           </span>
           <span className="text-stone-500 ml-2">&bull; The Cost of 30 Years of War (1945–1975 &amp; Beyond)</span>
         </div>
@@ -21,7 +21,7 @@ export default function AftermathMetrics() {
             onClick={() => setActiveTab('casualties')}
             className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border ${ activeTab === 'casualties' ? 'border-stone-900 bg-stone-900 text-stone-100 font-bold' : 'border-stone-300 bg-white text-stone-700 hover:border-stone-500' }`}
           >
-            Human Casualties
+            Deaths
           </button>
           <button
             type="button"
@@ -35,7 +35,7 @@ export default function AftermathMetrics() {
             onClick={() => setActiveTab('environmental')}
             className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border ${ activeTab === 'environmental' ? 'border-stone-900 bg-stone-900 text-stone-100 font-bold' : 'border-stone-300 bg-white text-stone-700 hover:border-stone-500' }`}
           >
-            Unexploded Ordnance
+            Unexploded bombs
           </button>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function AftermathMetrics() {
           <div className="space-y-6">
             <div>
               <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-                An Estimated 3.1 to 3.8 Million Lives Lost
+                An estimated 3.1 to 3.8 million people died
               </h4>
               <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 The human cost of thirty years of armed conflict devastated Vietnamese society across all regions and political lines, while claiming over 58,000 American military lives.
@@ -55,7 +55,7 @@ export default function AftermathMetrics() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  U.S. Military Dead
+                  U.S. military dead
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   58,220
@@ -79,19 +79,19 @@ export default function AftermathMetrics() {
 
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  PAVN / VC Dead
+                  North Vietnamese and Viet Cong dead
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   ~1,100,000
                 </div>
                 <span className="text-[10px] text-stone-400 block mt-1">
-                  Official 1995 disclosure
+                  Hanoi’s 1995 figure
                 </span>
               </div>
 
               <div className="p-4 bg-white border border-stone-300">
                 <span className="text-[10px] text-stone-500 block">
-                  Vietnamese Civilians Dead
+                  Vietnamese civilians dead
                 </span>
                 <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-stone-900">
                   2M – 4M
@@ -117,7 +117,7 @@ export default function AftermathMetrics() {
           <div className="space-y-6">
             <div>
               <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-                Re-education Camps &amp; The Boat People Diaspora
+                Re-education camps and the boat people
               </h4>
               <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 Following the collapse of the southern regime, the unified communist government subjected roughly 1 million former South Vietnamese military officers, civil servants, and intellectuals to compulsory &ldquo;re-education.&rdquo;
@@ -126,7 +126,7 @@ export default function AftermathMetrics() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
               <div className="p-4 bg-white border border-stone-200 space-y-1">
-                <span className="font-bold text-stone-500 block">Re-education Camps</span>
+                <span className="font-bold text-stone-500 block">Re-education camps</span>
                 <div className="font-display text-xl font-bold text-stone-900">
                   1 Million Detained
                 </div>
@@ -136,7 +136,7 @@ export default function AftermathMetrics() {
               </div>
 
               <div className="p-4 bg-white border border-stone-200 space-y-1">
-                <span className="font-bold text-stone-500 block">The Boat People Exodus</span>
+                <span className="font-bold text-stone-500 block">The boat people</span>
                 <div className="font-display text-xl font-bold text-stone-900">
                   1.5 – 2.0 Million Fled
                 </div>
@@ -148,7 +148,7 @@ export default function AftermathMetrics() {
               <div className="p-4 bg-white border border-stone-200 space-y-1">
                 <span className="font-bold text-stone-500 block">Doi Moi (1986)</span>
                 <div className="font-display text-xl font-bold text-stone-900">
-                  Economic Realpolitik
+                  Why Hanoi changed course
                 </div>
                 <p className="text-stone-600 font-display">
                   Economic collapse from collectivization and Soviet aid loss forced the Communist Party in 1986 to abandon orthodox socialism in favor of market-oriented economic reforms (<em>Doi Moi</em>).
@@ -162,7 +162,7 @@ export default function AftermathMetrics() {
           <div className="space-y-6">
             <div>
               <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-                800,000 Tons of Unexploded Ordnance Remaining in the Soil
+                800,000 tons of unexploded bombs still in the ground
               </h4>
               <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
                 The physical battlefield outlived the war. Roughly 10% to 30% of the 7.5 million tons of American bombs dropped failed to detonate upon impact, contaminating 20% of Vietnam’s arable land.

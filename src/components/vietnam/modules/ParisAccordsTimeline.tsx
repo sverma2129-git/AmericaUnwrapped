@@ -7,28 +7,28 @@ export default function ParisAccordsTimeline() {
 
   const phases = {
     deadlock: {
-      title: 'The Four-Year Deadlock (1969–1972)',
+      title: 'Four years of stalled talks (1969–1972)',
       timeframe: 'August 1969 – September 1972',
       summary:
         'Kissinger and Le Duc Tho met secretly in a villa in Sainte-Gemme outside Paris. Talks were paralyzed by two irreconcilable demands: Washington insisted that all North Vietnamese Army (PAVN) troops withdraw completely from the South. Hanoi insisted that South Vietnamese President Nguyen Van Thieu be removed and replaced by a coalition government before any ceasefire.',
       keyConcession: 'Neither side would budge; the war continued for three more years with over 20,000 additional American and hundreds of thousands of Vietnamese casualties.',
     },
     breakthrough: {
-      title: 'The October 1972 Secret Compromise',
+      title: 'The secret deal of October 1972',
       timeframe: 'October 8, 1972',
       summary:
         'With the U.S. presidential election weeks away, Le Duc Tho made a dramatic concession: Hanoi dropped its demand that Thieu be removed from power. In return, Kissinger conceded the core American demand: roughly 150,000–200,000 North Vietnamese combat troops were permitted to remain in place inside South Vietnam.',
       keyConcession: 'Kissinger publicly announced "Peace is at hand" on October 26, ensuring Nixon’s reelection landslide while secretly sealing South Vietnam’s long-term military vulnerability.',
     },
     christmas: {
-      title: 'Thieu’s Rejection & The Christmas Bombing',
+      title: 'Thieu says no, and the Christmas Bombing',
       timeframe: 'December 18–29, 1972',
       summary:
         'President Thieu furiously rejected the draft treaty, stating that allowing 150,000 enemy troops on his sovereign soil was a death warrant. When Hanoi refused to renegotiate 69 amendments demanded by Thieu, Nixon ordered Operation Linebacker II: 11 days of around-the-clock B-52 strikes against Hanoi and Haiphong, dropping over 20,000 tons of explosives.',
       keyConcession: 'The bombing did not alter the text of the treaty; its primary purpose was to coerce Thieu by demonstrating American ruthlessness and to convince Hanoi that Washington would strike if provoked.',
     },
     signing: {
-      title: 'The Signing of the Accords',
+      title: 'The Accords are signed',
       timeframe: 'January 27, 1973',
       summary:
         'The final Paris Peace Accords signed in January was virtually identical to the draft agreed in October. Nixon coerced Thieu into signing by secretly threatening to cut off all aid if he balked, while writing personal letters guaranteeing that the U.S. would "respond with full force" if Hanoi violated the ceasefire—guarantees made null and void by Watergate and the War Powers Act.',
@@ -44,7 +44,7 @@ export default function ParisAccordsTimeline() {
       <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
           <span className="font-bold text-stone-900">
-            Diplomatic Anatomy
+            How the deal was made
           </span>
           <span className="text-stone-500 ml-2">&bull; The Paris Negotiations (1969–1973)</span>
         </div>
@@ -56,7 +56,7 @@ export default function ParisAccordsTimeline() {
       <div className="p-5 sm:p-7 space-y-6">
         <div>
           <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
-            Leaving 150,000 PAVN Troops in South Vietnam
+            A deal that left 150,000 North Vietnamese troops in the South
           </h4>
           <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
             The fundamental compromise that unlocked the Paris Peace Accords was asymmetric: the United States agreed to withdraw all American forces in exchange for American POWs, while allowing North Vietnamese combat divisions to remain stationed inside South Vietnamese territory.
@@ -94,7 +94,7 @@ export default function ParisAccordsTimeline() {
 
           <div className="p-4 bg-[#f2ede4] border border-stone-300 text-xs font-sans">
             <span className="font-bold text-stone-700 block mb-1">
-              The Real-World Consequence:
+              What it meant:
             </span>
             <p className="font-display text-stone-800 leading-relaxed text-sm">
               {current.keyConcession}

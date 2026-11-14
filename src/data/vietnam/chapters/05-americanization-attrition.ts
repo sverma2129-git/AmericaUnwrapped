@@ -8,10 +8,10 @@ const chapter: ChapterData = {
   timeframe: '1965–1967',
   leadImageId: 'da-nang-1965',
   galleryImageIds: ['rolling-thunder-1966', 'lbj-cam-ranh-1966', 'ia-drang-1965', 'pentagon-flower-1967'],
-  title: 'Americanization, Attrition, & Hanoi’s Inner War',
-  subtitle: 'Rolling Thunder, the crossover point fallacy, and the leadership struggle in Hanoi',
+  title: 'America takes over the war',
+  subtitle: 'Rolling Thunder, the search for a "crossover point," and the power struggle in Hanoi',
   summary:
-    'In early 1965, Lyndon Johnson transformed Vietnam into an American war, launching Operation Rolling Thunder and deploying over 485,000 U.S. combat troops by late 1967. General William Westmoreland pursued an attrition strategy seeking a "crossover point," while in Hanoi, First Secretary Le Duan consolidated control over more cautious party leaders, pursuing large-unit offensive warfare and mobilizing the northern home front to absorb unprecedented aerial firepower.',
+    'In early 1965, Lyndon Johnson made Vietnam an American war. He launched the bombing campaign Operation Rolling Thunder, and by late 1967 more than 485,000 U.S. troops were in Vietnam. General William Westmoreland fought a war of attrition, trying to reach a "crossover point." In Hanoi, First Secretary Le Duan took control from more cautious leaders. He pushed for big offensives and prepared the North to live through heavy bombing.',
   whatHappened: {
     narrative: [
       'Following a Viet Cong attack on the U.S. base at Pleiku in February 1965, President Johnson ordered sustained aerial bombardment of North Vietnam under Operation Rolling Thunder. Built on a doctrine of "graduated pressure," the campaign incrementally escalated bombing to convince Hanoi to negotiate while carefully avoiding Chinese or Soviet intervention. On March 8, 1965, the first U.S. ground combat troops—two Marine battalions—landed at Da Nang, shifting the American presence from an advisory mission to direct combat.[^c5-3]',
@@ -19,12 +19,12 @@ const chapter: ChapterData = {
       'In Hanoi, a parallel power struggle unfolded that remained largely opaque to Washington. By the mid-1960s, Ho Chi Minh had assumed an increasingly ceremonial role, while First Secretary Le Duan directed strategy.[^c5-1] When General Vo Nguyen Giap and other "North-firsters" advocated for cautious, protracted guerrilla warfare, Le Duan consolidated his aggressive large-unit offensive doctrine by arresting hundreds of moderates in the "Anti-Party Affair." On the northern home front, society mobilized completely: thousands of individual concrete cylinder shelters lined Hanoi sidewalks, urban populations were evacuated to rural areas, and over 230,000 Youth Volunteers (more than half women) kept the Ho Chi Minh Trail open under relentless bombing.[^c5-1]',
     ],
     keyEvents: [
-      { date: 'March 2, 1965', title: 'Operation Rolling Thunder Begins', detail: 'Three-year aerial bombardment of North Vietnam commences.' },
-      { date: 'March 8, 1965', title: 'U.S. Marines Land at Da Nang', detail: '3,500 Marines arrive; marks the arrival of direct American ground combat forces.' },
-      { date: 'July 28, 1965', title: 'Troop Increases Announced', detail: 'LBJ commits 125,000 troops and doubles monthly draft calls without declaring a national emergency.' },
-      { date: 'Nov 14–18, 1965', title: 'Battle of the Ia Drang Valley', detail: 'First major clash between U.S. airmobile forces and PAVN regulars at LZ X-Ray and Albany.' },
-      { date: '1967', title: 'The Anti-Party Affair in Hanoi', detail: 'Le Duan consolidates power, arresting hundreds of party moderates who questioned rapid escalation.' },
-      { date: 'Nov 21, 1967', title: 'Westmoreland "Light at the End of the Tunnel"', detail: 'MACV commander assures the American public that the enemy is running out of men.' },
+      { date: 'March 2, 1965', title: 'Rolling Thunder begins', detail: 'A three-year bombing campaign against North Vietnam starts.' },
+      { date: 'March 8, 1965', title: 'Marines land at Da Nang', detail: '3,500 Marines arrive, the first American ground combat troops.' },
+      { date: 'July 28, 1965', title: 'Johnson sends 125,000 troops', detail: 'Johnson commits 125,000 troops and doubles the monthly draft, without declaring a national emergency.' },
+      { date: 'Nov 14–18, 1965', title: 'The Battle of the Ia Drang Valley', detail: 'The first big clash between U.S. helicopter troops and North Vietnamese regulars, at landing zones X-Ray and Albany.' },
+      { date: '1967', title: 'The purge in Hanoi', detail: 'Le Duan tightens his grip on power and arrests hundreds of party moderates who doubted a fast escalation.' },
+      { date: 'Nov 21, 1967', title: 'Westmoreland says the end is in sight', detail: 'The U.S. commander tells Americans the enemy is running out of men.' },
     ],
   },
   washington: {
@@ -84,15 +84,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'attrition-model',
     type: 'attrition-model',
-    title: 'The Crossover Point: The Arithmetic of a Fallacy',
+    title: 'The crossover point',
     prompt:
-      'Compare MACV’s reported enemy body count against North Vietnam’s actual birth cohorts, recruitment rates, and battlefield tactical initiation ratios.',
+      'Compare the enemy deaths the U.S. command reported with how many soldiers North Vietnam could add each year, and with who started most firefights.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['cia-memo-giap-thanh-1966'], PRIMARY_DOCUMENTS['mccarthy-hanoi-1968']],
   nextQuestion: {
-    question: 'How did unconventional and secret programs operate behind the conventional frontlines?',
+    question: 'What was the secret war behind the front lines?',
     framing:
-      'While conventional divisions clashed in the highlands, how did the Phoenix Program and Operation Ranch Hand target the civilian organizing infrastructure and rural ecosystem of South Vietnam?',
+      'While big units fought in the highlands, the Phoenix Program and Operation Ranch Hand went after the people and the land that supported the Viet Cong. How did they work?',
   },
   citations: [
     CITATION_REGISTRY['c5-1'],

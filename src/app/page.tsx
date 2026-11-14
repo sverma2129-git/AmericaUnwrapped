@@ -7,7 +7,7 @@ import { buildGlossary, collectQuizQuestions } from '@/lib/study';
 import { Thumb } from '@/components/common/Figure';
 
 export const metadata = {
-  title: { absolute: 'America Unwrapped · Visual History & High-School Study Platform' },
+  title: { absolute: 'America Unwrapped · American history for high school students' },
   description:
     'The Vietnam War told through the real documents and the real arguments, with interactive maps and everything you need for the unit test.',
 };

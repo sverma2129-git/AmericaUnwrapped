@@ -13,7 +13,7 @@ interface ChapterQuizProps {
 }
 
 export default function ChapterQuiz({
-  title = 'Test Your Understanding',
+  title = 'Practice quiz',
   questions,
 }: ChapterQuizProps) {
   const { openCitation } = useCitation();
@@ -175,10 +175,10 @@ export default function ChapterQuiz({
                 <span
                   className={`text-xs font-bold px-2 py-0.5 rounded-xs text-white ${ selectedOption === currentQ.correctIndex ? 'bg-emerald-600' : 'bg-brand' }`}
                 >
-                  {selectedOption === currentQ.correctIndex ? 'Correct Analysis' : 'Explanation & Context'}
+                  {selectedOption === currentQ.correctIndex ? 'Right' : 'Not quite'}
                 </span>
                 <span className="text-xs text-ink-muted">
-                  Historical Rationale
+                  Why
                 </span>
               </div>
 
@@ -196,7 +196,7 @@ export default function ChapterQuiz({
                     onClick={() => openCitation(currentQ.citationRef!)}
                     className="font-bold text-brand hover:underline cursor-pointer"
                   >
-                    Inspect Source Dossier
+                    See the source
                   </button>
                 </div>
               )}
@@ -211,7 +211,7 @@ export default function ChapterQuiz({
               disabled={currentIndex === 0}
               className={`text-xs px-3 py-2 rounded-xs transition-colors cursor-pointer ${ currentIndex === 0 ? 'opacity-30 cursor-not-allowed text-ink-soft' : 'text-ink-muted hover:text-ink' }`}
             >
-              Previous Question
+              Back
             </button>
 
             {!isSubmitted ? (
@@ -221,7 +221,7 @@ export default function ChapterQuiz({
                 disabled={selectedOption === null}
                 className={`px-6 py-2.5 text-xs font-bold rounded-xs transition-colors ${ selectedOption === null ? 'bg-rule text-ink-soft cursor-not-allowed' : 'bg-brand hover:bg-brand-hover text-white cursor-pointer' }`}
               >
-                Check Answer
+                Check answer
               </button>
             ) : (
               <button
@@ -229,7 +229,7 @@ export default function ChapterQuiz({
                 onClick={handleNextQuestion}
                 className="px-6 py-2.5 text-xs font-bold bg-brand hover:bg-brand-hover text-white rounded-xs transition-colors cursor-pointer"
               >
-                {currentIndex < totalQuestions - 1 ? 'Next question' : 'View Final Results →'}
+                {currentIndex < totalQuestions - 1 ? 'Next question' : 'See your score →'}
               </button>
             )}
           </div>
@@ -245,7 +245,7 @@ export default function ChapterQuiz({
 
           <div className="space-y-2">
             <h3 className="font-display text-2xl font-bold text-ink">
-              {scorePercent >= 80 ? 'Mastery Demonstrated' : scorePercent >= 60 ? 'Solid Foundation' : 'Review Recommended'}
+              {scorePercent >= 80 ? 'Nice work' : scorePercent >= 60 ? 'Good start' : 'Worth another look'}
             </h3>
             <p className="font-sans text-sm text-ink-muted max-w-md mx-auto">
               You answered <strong className="text-ink">{correctCount} of {totalQuestions}</strong> questions correctly.
@@ -255,7 +255,7 @@ export default function ChapterQuiz({
           {/* Detailed Question Review Breakdown */}
           <div className="text-left max-w-xl mx-auto space-y-3 pt-4 border-t border-rule">
             <span className="text-xs font-bold text-brand block">
-              Question-by-Question Review:
+              Your answers
             </span>
             {questions.map((q, idx) => {
               const res = answers[idx];
@@ -282,7 +282,7 @@ export default function ChapterQuiz({
               onClick={handleRestart}
               className="px-6 py-2.5 text-xs font-bold bg-brand hover:bg-brand-hover text-white rounded-xs transition-colors cursor-pointer"
             >
-              Retake Quiz
+              Try again
             </button>
           </div>
         </div>

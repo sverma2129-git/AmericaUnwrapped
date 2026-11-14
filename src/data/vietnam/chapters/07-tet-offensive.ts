@@ -8,13 +8,13 @@ const chapter: ChapterData = {
   timeframe: '1968',
   leadImageId: 'hue-1968',
   galleryImageIds: ['embassy-saigon-1968', 'cronkite-hue-1968', 'lbj-march-31-1968'],
-  title: 'The Tet Offensive & The Crisis of Credibility',
-  subtitle: 'Synchronized urban assaults, the battle for Hue, and the domestic rupture',
+  title: 'The Tet Offensive',
+  subtitle: 'Attacks on 100 cities, the battle for Hue, and the loss of trust at home',
   summary:
-    'During the Lunar New Year of 1968, over 84,000 communist troops launched synchronized attacks against more than 100 cities and bases across South Vietnam. While allied forces repelled the assaults tactically and decimated southern Viet Cong cadres, the offensive shattered the Johnson administration’s narrative of steady progress, permanently shifting the domestic political debate from how to achieve victory to how to manage withdrawal.',
+    'During the Lunar New Year of 1968, more than 84,000 communist troops attacked over 100 cities and bases across South Vietnam at once. U.S. and South Vietnamese forces beat back the attacks and badly weakened the Viet Cong in the South. But the offensive wrecked the Johnson administration’s claim that the war was going well. After Tet, Americans stopped arguing about how to win and started arguing about how to leave.',
   isLandmark: true,
   landmarkMoment: {
-    bannerTitle: 'The Tet Offensive & The Credibility Chasm',
+    bannerTitle: 'The Tet Offensive and the credibility gap',
     dateline: 'January 31, 1968',
     location: 'Saigon, Hue, Khe Sanh, and 100+ Urban Centers',
     quote:
@@ -30,12 +30,12 @@ const chapter: ChapterData = {
       'Militarily, Tet was an asymmetric failure: Hanoi’s anticipated mass civilian uprising (*Tong Khoi Nghia*) failed to occur, and the southern Viet Cong lost upwards of 40,000 veteran fighters, shifting the burden of the war almost entirely to northern regular conscripts.[^c7-1] Yet in the United States, the psychological impact was fatal. On February 27, 1968, CBS anchor Walter Cronkite concluded that the war was "mired in stalemate."[^Q014] When the military requested 206,000 additional troops, Johnson’s senior civilian advisers—the "Wise Men"—counseled de-escalation.[^c7-2] On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.[^c7-2]',
     ],
     keyEvents: [
-      { date: 'Jan 21, 1968', title: 'Siege of Khe Sanh Begins', detail: 'Two NVA divisions encircle 6,000 Marines in a 77-day artillery duel.' },
-      { date: 'Jan 30–31, 1968', title: 'Tet Offensive Erupts', detail: 'Nationwide coordinated strikes; sappers breach Saigon U.S. Embassy perimeter.' },
-      { date: 'Jan 31 – March 2', title: 'Battle of Hue', detail: '26 days of intense urban warfare recaptures Hue; mass civilian execution graves discovered.' },
-      { date: 'Feb 27, 1968', title: 'Walter Cronkite Broadcast', detail: 'Cronkite editorializes that the war is mired in stalemate, swaying mainstream public opinion.' },
-      { date: 'March 16, 1968', title: 'My Lai Massacre', detail: 'U.S. soldiers murder over 500 unarmed civilians in Son My village (kept secret until late 1969).' },
-      { date: 'March 31, 1968', title: 'LBJ Declines Reelection', detail: 'Johnson halts bombing north of the 20th parallel and withdraws from the presidential race.' },
+      { date: 'Jan 21, 1968', title: 'The siege of Khe Sanh begins', detail: 'Two North Vietnamese divisions surround 6,000 Marines for a 77-day artillery battle.' },
+      { date: 'Jan 30–31, 1968', title: 'The Tet Offensive begins', detail: 'Attacks hit cities across the country at once. Commandos break into the U.S. Embassy grounds in Saigon.' },
+      { date: 'Jan 31 – March 2', title: 'The Battle of Hue', detail: '26 days of street fighting retake Hue. Mass graves of executed civilians are found.' },
+      { date: 'Feb 27, 1968', title: 'Walter Cronkite’s broadcast', detail: 'Cronkite gives his own view that the war is stuck in a stalemate, and many Americans agree.' },
+      { date: 'March 16, 1968', title: 'The My Lai massacre', detail: 'U.S. soldiers murder more than 500 unarmed civilians in Son My village. It stays secret until late 1969.' },
+      { date: 'March 31, 1968', title: 'Johnson drops out', detail: 'Johnson stops bombing north of the 20th parallel and quits the presidential race.' },
     ],
   },
   washington: {
@@ -95,15 +95,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'tet-offensive-map',
     type: 'tet-offensive-map',
-    title: 'Tet 1968: Synchronized Assaults & Divergent Expectations',
+    title: 'Tet 1968 on the map',
     prompt:
-      'Explore the nationwide map of strikes: Saigon, Hue, Da Nang, Khe Sanh, and contrast what Hanoi planned (the Uprising) vs what occurred vs the political fallout in Washington.',
+      'See where the attacks hit: Saigon, Hue, Da Nang and Khe Sanh. Then compare what Hanoi planned, what happened, and how Washington reacted.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['tet-politburo-directive']],
   nextQuestion: {
-    question: 'What did "Vietnamization" actually mean in practice?',
+    question: 'What did "Vietnamization" mean in practice?',
     framing:
-      'Richard Nixon promised to withdraw American ground troops while training the South Vietnamese military to defend itself. Was Vietnamization a genuine strategy for self-sufficiency, or a political device to buy time for an American exit?',
+      'Richard Nixon promised to bring American troops home while training South Vietnam’s army to defend itself. Was that a real plan for South Vietnam to stand alone, or a way to buy time for an American exit?',
   },
   citations: [
     CITATION_REGISTRY['c7-1'],

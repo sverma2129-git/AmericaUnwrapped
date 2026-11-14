@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
   chapterId: 'french-indochina-dien-bien-phu',
   bigQuestion:
-    'Why did the United States fund 80% of France’s colonial war in Indochina—and why did the French fortress at Dien Bien Phu collapse?',
+    'Why did the United States pay for 80% of France’s war in Indochina, and why did the French fortress at Dien Bien Phu fall?',
   whyItMatters:
-    'Marks the critical transition where the U.S. shifted from seeing Vietnam as a European colonial issue to an existential Cold War containment front, laying the direct foundation for American military entanglement.',
+    'This is when the U.S. stopped seeing Vietnam as France’s colonial problem and started seeing it as a front in the Cold War. American involvement grew from there.',
   whatYouWillLearn: [
-    'How Ho Chi Minh used the American Declaration of Independence to claim sovereignty in 1945.',
-    'How the Korean War and the "Domino Theory" persuaded Eisenhower and Truman to underwrite French forces.',
-    'Why General Navarre’s entrenched valley trap at Dien Bien Phu was dismantled by Vo Nguyen Giap’s mountain artillery.',
+    'How Ho Chi Minh used the American Declaration of Independence to claim independence in 1945.',
+    'How the Korean War and the "Domino Theory" led Truman and Eisenhower to pay for France’s war.',
+    'Why General Navarre’s fortress in the valley at Dien Bien Phu was beaten by Vo Nguyen Giap’s guns in the hills.',
   ],
   briefing: {
     summary:
-      'Following WWII, Ho Chi Minh declared Vietnamese independence, but France launched a military campaign to reclaim its colony. With the 1949 communist victory in China and the Korean War, Washington reframed Ho as a Sino-Soviet proxy, eventually paying 80% of French military costs ($2 billion). In 1954, French General Navarre built a fortified base in the remote Dien Bien Phu valley, assuming surrounding mountains were impassable. Instead, General Giap mobilized 250,000 porters to haul heavy artillery up the mountain ridges, bombarding French airstrips and forcing the garrison’s surrender on May 7, 1954.',
+      'After World War II, Ho Chi Minh declared Vietnam independent, but France went to war to take its colony back. After the communist victory in China in 1949 and the start of the Korean War, Washington came to see Ho as an agent of China and the Soviet Union. The U.S. ended up paying 80% of France’s military costs, about $2 billion. In 1954, the French general Navarre built a fortified base in the remote valley of Dien Bien Phu. He assumed heavy guns could not cross the mountains around it. General Giap used 250,000 porters to haul artillery up the ridges. The guns shelled the French airstrips, and the garrison surrendered on May 7, 1954.',
     examTakeaways: [
-      'The Domino Theory: Eisenhower warned that if Indochina fell to communism, neighboring Southeast Asian nations would topple like dominoes.',
-      'Financial Underwriting: By 1954, the U.S. was paying roughly 80% of France’s war costs, yet held no command control over French operations.',
-      'Tactical Turning Point: Dien Bien Phu ended French colonial rule in Indochina and forced the 1954 Geneva Conference that partitioned Vietnam at the 17th parallel.',
+      'The Domino Theory: Eisenhower warned that if Indochina fell to communism, its neighbors in Southeast Asia would fall next, like dominoes.',
+      'Who paid: By 1954, the U.S. was paying roughly 80% of France’s war costs but had no say in how France fought.',
+      'The turning point: Dien Bien Phu ended French colonial rule in Indochina. It led to the 1954 Geneva Conference, which divided Vietnam at the 17th parallel.',
     ],
     keyTerms: [
       {
@@ -26,20 +26,20 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
         term: 'Domino Theory',
         phonetic: 'DAH-mih-noh THEE-uh-ree',
         definition:
-          'Cold War foreign policy theory popularized by President Eisenhower in 1954 positing that the fall of one nation to communism would trigger the fall of neighboring states.',
+          'A Cold War idea made popular by President Eisenhower in 1954. It held that if one country fell to communism, its neighbors would fall too.',
         significance:
-          'Provided the foundational strategic rationale for American intervention in Vietnam across five successive presidencies.',
-        examTip: 'High frequency. Frequently paired on DBQs with Eisenhower’s April 1954 press conference.',
+          'Five presidents in a row used it to justify American involvement in Vietnam.',
+        examTip: 'Shows up often. DBQs pair it with Eisenhower’s April 1954 press conference.',
       },
       {
         id: 'dien-bien-phu',
         term: 'Battle of Dien Bien Phu (1954)',
         phonetic: 'DYEN BYEN FOO',
         definition:
-          'A decisive 55-day siege in northwestern Vietnam where Viet Minh forces surrounded and overwhelmed an entrenched French fortress in a valley basin.',
+          'A 55-day siege in northwestern Vietnam. Viet Minh forces surrounded a French fortress in a valley and overran it.',
         significance:
-          'Destroyed French political resolve to continue the First Indochina War, directly producing the Geneva Accords.',
-        examTip: 'Remember the geographic trap: French commanders in the valley were encircled by Giap’s concealed mountain artillery.',
+          'It ended France’s will to keep fighting the First Indochina War and led straight to the Geneva Accords.',
+        examTip: 'Remember the trap: the French were in the valley, and Giap’s hidden guns were in the hills around them.',
       },
       {
         id: 'geneva-accords-1954',
@@ -47,10 +47,10 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
         imageId: 'geneva-conference-1954',
         phonetic: 'juh-NEE-vuh uh-KORDZ',
         definition:
-          'International diplomatic agreement ending the First Indochina War, temporarily dividing Vietnam at the 17th parallel pending nationwide elections scheduled for 1956.',
+          'The international agreement that ended the First Indochina War. It divided Vietnam at the 17th parallel for the time being, with nationwide elections set for 1956.',
         significance:
-          'The partition created North and South Vietnam. When elections were cancelled, the provisional line hardened into a Cold War border.',
-        examTip: 'Article 6 explicitly stated the 17th parallel was provisional and NOT a permanent territorial border.',
+          'The division created North and South Vietnam. When the elections were called off, the temporary line became a Cold War border.',
+        examTip: 'Article 6 said the 17th parallel was temporary and was not a permanent border.',
       },
     ],
   },
@@ -67,7 +67,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'The 1949 Chinese Communist victory under Mao Zedong and the June 1950 North Korean invasion of South Korea transformed Washington’s view of Indochina from a European colonial conflict into a vital Cold War containment frontier.',
+        'Mao Zedong’s communists won in China in 1949, and North Korea invaded South Korea in June 1950. After that, Washington stopped seeing Indochina as a European colonial war and saw it as a front line in the Cold War.',
       citationRef: 'c1-1',
     },
     {
@@ -82,7 +82,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'Navarre and artillery chief Colonel Piroth believed the surrounding mountain ridges were impassable to heavy artillery. General Giap mobilized 250,000 civilian porters to hand-haul 105mm howitzers up the mountain slopes, digging them into camouflaged caves overlooking the valley airstrip.',
+        'Navarre and his artillery chief, Colonel Piroth, believed heavy guns could not cross the mountain ridges. General Giap used 250,000 civilian porters to drag 105mm howitzers up the slopes by hand. They dug the guns into hidden positions that looked down on the airstrip.',
       citationRef: 'c1-2',
     },
     {
@@ -97,7 +97,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Mindful of the grueling Korean War, Eisenhower refused to intervene unilaterally without congressional sanction and British participation. British Prime Minister Churchill flatly declined, and congressional leaders like Lyndon B. Johnson rejected another Asian land commitment.',
+        'With the Korean War fresh in mind, Eisenhower refused to act alone. He wanted approval from Congress and British troops alongside. British Prime Minister Churchill said no, and congressional leaders such as Lyndon B. Johnson rejected another land war in Asia.',
       citationRef: 'c1-1',
     },
   ],
@@ -108,30 +108,30 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
       imageId: 'ho-telegram-1946',
       phonetic: 'HOH CHEE MIN',
       definition:
-        'Vietnamese nationalist and communist revolutionary leader who founded the Viet Minh in 1941 and declared the Democratic Republic of Vietnam in 1945.',
+        'A Vietnamese nationalist and communist leader. He founded the Viet Minh in 1941 and declared the Democratic Republic of Vietnam in 1945.',
       significance:
-        'The central revolutionary figure who combined anti-colonial nationalism with Marxist-Leninist organization to defeat both France and the United States.',
-      examTip: 'Quoted the American Declaration of Independence in his 1945 independence speech.',
+        'He joined the fight against colonial rule to communist organization, and led the movement that defeated France and then outlasted the United States.',
+      examTip: 'He quoted the American Declaration of Independence in his 1945 independence speech.',
     },
     {
       id: 'c1-fc2',
       term: 'Vo Nguyen Giap',
       phonetic: 'VOH NWYEN ZHAHP',
       definition:
-        'Brilliant self-taught North Vietnamese general who commanded Viet Minh and PAVN forces from 1946 through the 1970s.',
+        'A self-taught North Vietnamese general. He commanded Viet Minh forces, and later North Vietnam’s army, from 1946 into the 1970s.',
       significance:
-        'Masterminded the siege of Dien Bien Phu (1954) and orchestrated the multi-theater Tet Offensive (1968).',
-      examTip: 'Pioneered protracted "people’s war" strategy designed to exhaust Western political will.',
+        'He planned the siege of Dien Bien Phu (1954) and helped direct the Tet Offensive (1968).',
+      examTip: 'He was a leading voice for a long "people’s war" meant to wear down an enemy’s will to keep fighting.',
     },
     {
       id: 'c1-fc3',
       term: '17th Parallel',
       phonetic: 'SEV-en-TEENTH PAIR-uh-lel',
       definition:
-        'The temporary military demarcation line established by the 1954 Geneva Accords dividing North and South Vietnam.',
+        'The temporary military line set by the 1954 Geneva Accords. It divided North and South Vietnam.',
       significance:
-        'Intended as a provisional ceasefire boundary for two years, it hardened into a fortified Cold War border when 1956 reunification elections were cancelled.',
-      examTip: 'Associated with the Demilitarized Zone (DMZ) along the Ben Hai River.',
+        'It was meant to last two years as a ceasefire line. It became a fortified Cold War border when the 1956 elections were called off.',
+      examTip: 'Linked to the Demilitarized Zone (DMZ) along the Ben Hai River.',
     },
   ],
 };

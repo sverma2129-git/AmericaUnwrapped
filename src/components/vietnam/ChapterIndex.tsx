@@ -28,7 +28,7 @@ export default function ChapterIndex() {
                 </span>
                 {ch.isLandmark && (
                   <span className="meta shrink-0 whitespace-nowrap px-2 py-0.5 bg-brand-tint text-brand border border-brand-rule rounded-sm">
-                    Turning Point
+                    Turning point
                   </span>
                 )}
               </div>
@@ -43,7 +43,7 @@ export default function ChapterIndex() {
               {/* Central Inquiry Question */}
               <div className="my-4 p-3 bg-parchment-light border-l border-brand rounded-r-md">
                 <span className="meta text-brand block mb-1">
-                  The Inquiry
+                  The question
                 </span>
                 <p className="font-display text-sm text-ink leading-snug">
                   &ldquo;{study?.bigQuestion || ch.subtitle}&rdquo;
@@ -60,7 +60,7 @@ export default function ChapterIndex() {
               {/* Feature badges */}
               <div className="flex flex-wrap gap-1.5 text-[11px] text-ink-muted">
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-sm">
-                  <Icon name="zap" className="w-3 h-3" />60s Briefing
+                  <Icon name="zap" className="w-3 h-3" />Quick summary
                 </span>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-parchment-light border border-rule rounded-sm">
                   <Icon name="pen" className="w-3 h-3" />{study?.quiz?.length || 3} Quizzes
@@ -82,7 +82,7 @@ export default function ChapterIndex() {
                   href={`/vietnam/${ch.id}`}
                   className="font-semibold text-brand hover:underline"
                 >
-                  Study Chapter
+                  Read the chapter
                 </Link>
               </div>
             </div>

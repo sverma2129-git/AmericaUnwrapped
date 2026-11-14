@@ -232,3 +232,69 @@ describe('image registry', () => {
     for (const chapter of VIETNAM_CHAPTERS) expect(chapter.leadImageId, chapter.id).toBeTruthy();
   });
 });
+
+/** Plain-wording rules from VOICE.md, checked on the short text students see first. */
+const BANNED_WORDS = [
+  'forensic', 'dossier', 'archival', 'ecosystem', 'imperative', 'matrix', 'anatomy',
+  'calculus', 'paradigm', 'historiographical', 'high-yield', 'definitive',
+  'cataclysmic', 'pivotal',
+];
+
+function shortStudyText(chapterId: string): string[] {
+  const s = ALL_CHAPTERS_STUDY_DATA[chapterId];
+  return [
+    s.bigQuestion,
+    s.whyItMatters,
+    ...s.whatYouWillLearn,
+    s.briefing.summary,
+    ...s.briefing.examTakeaways,
+    ...[...s.briefing.keyTerms, ...s.flashcards].flatMap((t) => [t.definition, t.significance, t.examTip ?? '']),
+    ...s.quiz.map((q) => q.rationale),
+  ];
+}
+
+describe('plain wording', () => {
+  it('keeps jargon out of chapter titles, summaries and study text', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const texts = [
+        chapter.title,
+        chapter.subtitle,
+        chapter.summary,
+        chapter.interactiveModule?.title ?? '',
+        ...shortStudyText(chapter.id),
+      ];
+      for (const text of texts) {
+        for (const word of BANNED_WORDS) {
+          expect(text.toLowerCase().includes(word), `${chapter.id}: "${word}" in "${text.slice(0, 80)}"`).toBe(false);
+        }
+      }
+    }
+  });
+
+  it('keeps the first things a student reads at grade 11 or below', () => {
+    const tooHard: string[] = [];
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const s = ALL_CHAPTERS_STUDY_DATA[chapter.id];
+      const parts = {
+        summary: chapter.summary,
+        bigQuestion: s.bigQuestion,
+        takeaways: s.briefing.examTakeaways.join(' '),
+        quickSummary: s.briefing.summary,
+      };
+      for (const [name, text] of Object.entries(parts)) {
+        const grade = fleschKincaidGrade(text);
+        if (grade > 11) tooHard.push(`${chapter.id}/${name}: grade ${grade.toFixed(1)}`);
+      }
+    }
+    expect(tooHard).toEqual([]);
+  });
+
+  it('writes chapter and module titles without ampersands or colon subtitles', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      for (const title of [chapter.title, chapter.interactiveModule?.title ?? '']) {
+        expect(title.includes('&'), `${chapter.id}: ${title}`).toBe(false);
+        expect(title.includes(':'), `${chapter.id}: ${title}`).toBe(false);
+      }
+    }
+  });
+});
