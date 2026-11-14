@@ -11,7 +11,7 @@ interface FlashcardDeckProps {
 
 export default function FlashcardDeck({
   cards,
-  title = 'Key Terms & Flashcards',
+  title = 'Key terms',
 }: FlashcardDeckProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -77,14 +77,14 @@ export default function FlashcardDeck({
             onClick={() => setViewMode('card')}
             className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ viewMode === 'card' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
           >
-            Flip Cards
+            Cards
           </button>
           <button
             type="button"
             onClick={() => setViewMode('list')}
             className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ viewMode === 'list' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
           >
-            View All ({total})
+            List ({total})
           </button>
         </div>
       </div>
@@ -112,10 +112,10 @@ export default function FlashcardDeck({
             {/* Top Indicator */}
             <div className="flex items-center justify-between text-xs text-ink-muted">
               <span className="font-bold text-brand">
-                {isFlipped ? 'Definition & Significance' : 'Historical Term'}
+                {isFlipped ? 'Meaning' : 'Term'}
               </span>
               <span className="text-ink-soft">
-                {isFlipped ? 'Tap to view term' : 'Tap to reveal definition'} &orarr;
+                {isFlipped ? 'Tap to flip back' : 'Tap to see what it means'} &orarr;
               </span>
             </div>
 
@@ -151,7 +151,7 @@ export default function FlashcardDeck({
 
                   <div>
                     <strong className="text-[10px] text-ink-muted block mb-0.5">
-                      Why It Matters for the Exam:
+                      Why it matters:
                     </strong>
                     <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
                       {currentCard.significance}
@@ -170,7 +170,7 @@ export default function FlashcardDeck({
             {/* Bottom Footer */}
             <div className="text-center pt-2 border-t border-rule/60">
               <span className="text-xs text-ink-soft">
-                {isFlipped ? 'Click card to flip back' : 'Click to flip for definition & test tip'}
+                {isFlipped ? 'Tap to flip back' : 'Tap the card to flip it'}
               </span>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function FlashcardDeck({
               onClick={handleFlip}
               className="px-5 py-2 text-xs font-semibold rounded-xs bg-brand hover:bg-brand-hover text-white transition-colors cursor-pointer"
             >
-              {isFlipped ? 'Show Term' : 'Flip Card'}
+              {isFlipped ? 'Show term' : 'Flip'}
             </button>
 
             <button
@@ -226,7 +226,7 @@ export default function FlashcardDeck({
                 </div>
                 {card.examTip && (
                   <span className="text-[11px] font-bold text-brand bg-brand-tint px-2 py-0.5 rounded-xs border border-brand-rule">
-                    Exam Highlight
+                    Test tip
                   </span>
                 )}
               </div>
@@ -237,7 +237,7 @@ export default function FlashcardDeck({
 
               <div className="text-xs font-sans text-ink-muted">
                 <strong className="text-[10px] text-ink-muted">
-                  Historical Significance:{' '}
+                  Why it matters:{' '}
                 </strong>
                 {card.significance}
               </div>

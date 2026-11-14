@@ -7,10 +7,10 @@ const chapter: ChapterData = {
   number: 1,
   timeframe: '1945–1954',
   leadImageId: 'ho-telegram-1946',
-  title: 'French Indochina & Dien Bien Phu',
-  subtitle: 'From anti-colonial revolution to Cold War battleground',
+  title: 'Dien Bien Phu and the end of French rule',
+  subtitle: 'How a fight against a colony became part of the Cold War',
   summary:
-    'Following World War II, Ho Chi Minh declared Vietnamese independence, but France sought to restore its colonial empire. As the Cold War intensified in Asia, Washington transformed from an ambivalent spectator into France’s primary financier, culminating in the catastrophic French defeat at Dien Bien Phu and the temporary partition of Vietnam at Geneva.',
+    'After World War II, Ho Chi Minh declared Vietnam independent, but France wanted its colony back. As the Cold War spread to Asia, the United States went from watching to paying for most of France’s war. France lost at Dien Bien Phu in 1954, and the Geneva talks split Vietnam in two for what was meant to be a short time.',
   isLandmark: true,
   layout: 'layered',
   story: {
@@ -134,7 +134,7 @@ const chapter: ChapterData = {
     ],
   },
   landmarkMoment: {
-    bannerTitle: 'The Cataclysmic Siege at Dien Bien Phu',
+    bannerTitle: 'The siege of Dien Bien Phu',
     dateline: 'March 13 – May 7, 1954',
     location: 'Muong Thanh Valley Basin, Northwestern Vietnam',
     quote: 'Navarre’s entrenched valley bastion was systematically overwhelmed by artillery assembled on surrounding heights, turning the French stronghold into an untenable siege position.',
@@ -148,11 +148,11 @@ const chapter: ChapterData = {
       'In late 1953, French Commander Henri Navarre established a fortified base in the remote valley basin of Dien Bien Phu. Navarre’s operational premise was that superior French airpower, armor, and artillery in the valley would lure the Viet Minh into open ground and destroy them. French planners assumed the surrounding ring of jungle-covered mountains was impassable to heavy enemy artillery. Instead, General Vo Nguyen Giap mobilized over 250,000 civilian porters to dismantle heavy howitzers and haul them up the reverse slopes of the mountains, concealing them in dug-in caves overlooking the French garrison.[^c1-2] After a 55-day siege in which French airstrips were severed, the fortress fell on May 7, 1954, on the eve of the Geneva Conference.[^c1-3]',
     ],
     keyEvents: [
-      { date: 'Sept 2, 1945', title: 'DRV Declaration of Independence', detail: 'Ho Chi Minh proclaims Vietnamese independence in Hanoi, appealing to the Atlantic Charter.' },
-      { date: 'Dec 19, 1946', title: 'Outbreak of First Indochina War', detail: 'Clashes in Haiphong and Hanoi force the Viet Minh into northern mountain redoubts.' },
-      { date: 'Jan–Feb 1950', title: 'Sino-Soviet Recognition & U.S. Aid', detail: 'Moscow and Beijing recognize the DRV; Truman approves initial direct military financing for France.' },
-      { date: 'Nov 1953', title: 'Navarre Fortifies Dien Bien Phu', detail: 'French paratroopers occupy the remote valley basin to establish a fortified operational base.' },
-      { date: 'March 13 – May 7, 1954', title: 'Siege & Fall of Dien Bien Phu', detail: 'Giap’s mountain artillery destroys French airfields and strongpoints, forcing garrison surrender.' },
+      { date: 'Sept 2, 1945', title: 'Ho Chi Minh declares independence', detail: 'In Hanoi, Ho Chi Minh declares Vietnam independent and appeals to the Atlantic Charter.' },
+      { date: 'Dec 19, 1946', title: 'The First Indochina War begins', detail: 'Fighting in Haiphong and Hanoi drives the Viet Minh back to bases in the northern mountains.' },
+      { date: 'Jan–Feb 1950', title: 'China and the Soviets back Hanoi', detail: 'Moscow and Beijing recognize Ho’s government. Truman approves the first direct military aid for France.' },
+      { date: 'Nov 1953', title: 'Navarre builds a base at Dien Bien Phu', detail: 'French paratroopers take the remote valley and start building a fortified base.' },
+      { date: 'March 13 – May 7, 1954', title: 'The siege and fall of Dien Bien Phu', detail: 'Giap’s guns in the hills wreck the French airstrips and strongpoints, and the garrison surrenders.' },
     ],
   },
   washington: {
@@ -215,15 +215,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'dien-bien-phu-map',
     type: 'dien-bien-phu-map',
-    title: 'Battlefield Geometry: The Trap at Dien Bien Phu',
+    title: 'The trap at Dien Bien Phu',
     prompt:
-      'Explore the topographic terrain: inspect why French commanders believed the valley basin was defensible, and how Giap’s reverse-slope mountain artillery severed the airstrip.',
+      'See why French commanders thought the valley was safe, and how Giap’s guns in the hills cut off the airstrip.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['ho-truman-1946'], PRIMARY_DOCUMENTS['nsc-68-indochina']],
   nextQuestion: {
-    question: 'Why did the temporary partition at the 17th parallel become permanent?',
+    question: 'Why did a temporary line at the 17th parallel become a border?',
     framing:
-      'The 1954 Geneva declaration explicitly noted that the 17th parallel was provisional and not a territorial boundary. What combination of Cold War pressures, domestic politics, and regional decisions prevented reunification elections in 1956?',
+      'The 1954 Geneva agreement said the line was temporary and was not a border. So what stopped the elections that were supposed to reunite Vietnam in 1956?',
   },
   citations: [
     CITATION_REGISTRY['c1-1'],

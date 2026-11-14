@@ -15,19 +15,19 @@ export default function GlossaryPanel({ terms }: { terms: KeyTerm[] }) {
       <div>
         <div className="mb-4">
           <h2 className="font-display text-2xl font-bold text-ink">
-            Flip Cards: High-Yield Terms ({terms.length} Total)
+            Flashcards ({terms.length})
           </h2>
         </div>
-        <FlashcardDeck cards={terms} title="Unit Key Terms & Concepts" />
+        <FlashcardDeck cards={terms} title="Key terms" />
       </div>
 
       {/* Master Searchable Glossary */}
       <div className="space-y-4 pt-8 border-t border-rule">
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4">
           <div>
-            <h3 className="font-display text-2xl font-bold text-ink">Searchable Unit Glossary</h3>
+            <h3 className="font-display text-2xl font-bold text-ink">Search the glossary</h3>
             <p className="font-sans text-xs text-ink-muted mt-0.5">
-              Complete alphabetical index with definitions, historical significance, and exam tips.
+              Every key term, with what it means and why it matters.
             </p>
           </div>
 

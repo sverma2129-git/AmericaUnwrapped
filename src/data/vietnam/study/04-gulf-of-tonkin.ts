@@ -5,19 +5,19 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
   bigQuestion:
     'What really happened in the Gulf of Tonkin in August 1964, and how did it lead to a much larger American war?',
   whyItMatters:
-    'The Gulf of Tonkin Resolution passed almost unanimously based on misleading evidence, serving as the functional equivalent of a declaration of war for nine years and fundamentally shifting congressional war powers.',
+    'Congress passed the Gulf of Tonkin Resolution almost unanimously, on evidence that was misleading. For nine years it worked like a declaration of war, and it changed the argument over who decides when America fights.',
   whatYouWillLearn: [
-    'Why the August 2 battle was a real daylight exchange, while August 4 was a phantom radar echo.',
-    'How covert OPLAN 34A commando raids and DeSoto patrols placed American destroyers in active combat zones.',
-    'How the resulting Tonkin Gulf Resolution handed President Johnson a "blank check" that ultimately produced the War Powers Act of 1973.',
+    'Why the August 2 battle was a real fight in daylight, while the August 4 "attack" came from false radar and sonar readings.',
+    'How secret OPLAN 34A raids and DeSoto patrols put American destroyers in the middle of the fighting.',
+    'How the resolution gave President Johnson a "blank check," and how that led to the War Powers Act of 1973.',
   ],
   briefing: {
     summary:
-      'On August 2, 1964, North Vietnamese torpedo boats attacked the USS Maddox in broad daylight following covert South Vietnamese commando raids (OPLAN 34A). Two nights later, on August 4, during a violent thunderstorm, sonar operators and radar scopes reported dozens of incoming torpedoes. Destroyers fired over 650 shells into the night. Within hours, Task Group Commander Captain John Herrick warned that radar ghosts and freak weather accounted for the blips, urging caution. Nevertheless, President Johnson ordered 64 retaliatory air strikes and secured the Gulf of Tonkin Resolution from Congress (416-0 in House, 88-2 in Senate), granting broad authority to use military force without an official declaration of war.',
+      'On August 2, 1964, North Vietnamese torpedo boats attacked the USS Maddox in daylight. Secret South Vietnamese commando raids (OPLAN 34A) had hit the coast just before. Two nights later, on August 4, during a thunderstorm, sonar and radar operators reported dozens of torpedoes. The destroyers fired more than 650 shells into the night. Within hours, the commander at sea, Captain John Herrick, warned that freak weather and false radar readings explained the reports, and urged caution. President Johnson ordered 64 air strikes in response anyway. Congress then passed the Gulf of Tonkin Resolution, 416–0 in the House and 88–2 in the Senate. It gave the president broad power to use military force without a declaration of war.',
     examTakeaways: [
-      'Dual Incidents: August 2 was a confirmed daylight firefight; August 4 was a phantom radar battle that never occurred.',
-      'Blank Check Resolution: The Tonkin Gulf Resolution granted LBJ all necessary measures to repel armed attack, bypassing the constitutional requirement for Congress to declare war.',
-      'War Powers Act of 1973: Passed over Nixon’s veto in direct legislative reaction to Tonkin, requiring presidents to report troop deployments within 48 hours and obtain approval within 60 days.',
+      'Two incidents: August 2 was a confirmed fight in daylight. The August 4 attack was reported from radar and sonar, and it did not happen.',
+      'The blank check: The resolution let Johnson take all necessary measures to repel armed attack. Congress never declared war.',
+      'War Powers Act of 1973: Congress passed it over Nixon’s veto in response to Tonkin. Presidents must report troop deployments within 48 hours and get approval within 60 days.',
     ],
     keyTerms: [
       {
@@ -26,44 +26,44 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
         imageId: 'lbj-tonkin-signing-1964',
         phonetic: 'GULF uv TAHN-kin rez-uh-LOO-shun',
         definition:
-          'Joint resolution passed by Congress authorizing President Johnson to take all necessary measures to repel armed attack against U.S. forces and prevent further aggression.',
+          'A joint resolution of Congress. It authorized President Johnson to take all necessary measures to repel armed attack on U.S. forces and to prevent further aggression.',
         significance:
-          'Served as the legal justification for escalating U.S. involvement from 23,000 advisors to over 540,000 combat troops without an official declaration of war.',
+          'It was the legal basis for raising U.S. involvement from 23,000 advisers to more than 540,000 combat troops, with no declaration of war.',
         examTip:
-          'Essential AP U.S. History concept. Frequently tested alongside the War Powers Act of 1973 as the catalyst for limiting executive war powers.',
+          'A core AP U.S. History topic. It is often tested with the War Powers Act of 1973, which Congress passed to limit presidential war powers.',
       },
       {
         id: 'oplan-34a',
         term: 'OPLAN 34A',
         phonetic: 'OH-plan THUR-tee-for-AY',
         definition:
-          'A covert CIA/MACV operation conducting maritime sabotage raids against North Vietnamese coastal facilities using South Vietnamese commandos and unmarked patrol boats.',
+          'A secret operation run by the CIA and the U.S. military command. South Vietnamese commandos in unmarked boats raided North Vietnam’s coast.',
         significance:
-          'Raids on Hon Me and Hon Ngu islands directly preceded North Vietnam’s decision to attack the nearby USS Maddox on August 2.',
+          'Raids on the islands of Hon Me and Hon Ngu came just before North Vietnam attacked the nearby USS Maddox on August 2.',
         examTip:
-          'Key evidence that U.S. patrols were not innocent observers in international waters.',
+          'Key evidence that U.S. ships were not simply bystanders in international waters.',
       },
       {
         id: 'desoto-patrol',
         term: 'DeSoto Patrols',
         phonetic: 'duh-SOH-toh puh-TROHLZ',
         definition:
-          'Electronic intelligence collection missions by U.S. Navy destroyers off communist coastlines designed to map radar installations and signal frequencies.',
+          'Spy missions by U.S. Navy destroyers off communist coasts. The ships recorded radar sites and radio signals.',
         significance:
-          'Brought American warships into close proximity with North Vietnamese territorial waters amid covert commando strikes.',
+          'They put American warships close to North Vietnam’s waters while commando raids were under way.',
         examTip:
-          'Often compared to Cold War reconnaissance flights near Soviet borders.',
+          'Often compared to Cold War spy flights near Soviet borders.',
       },
       {
         id: 'war-powers-act',
         term: 'War Powers Act of 1973',
         phonetic: 'WOR POW-erz AKT',
         definition:
-          'Federal law enacted over President Nixon’s veto requiring the President to notify Congress within 48 hours of deploying military forces and limiting deployment to 60 days unless Congress approves.',
+          'A federal law passed over President Nixon’s veto. The president must tell Congress within 48 hours of sending troops into action, and must withdraw them after 60 days unless Congress approves.',
         significance:
-          'Direct legislative response to the Tonkin Resolution and the Pentagon Papers, aiming to restore constitutional checks and balances over warmaking.',
+          'It was Congress’s answer to the Tonkin Resolution and the Pentagon Papers. The goal was to restore its check on the president’s power to make war.',
         examTip:
-          'High yield DBQ/FRQ topic on executive power versus congressional oversight.',
+          'A frequent DBQ and essay topic on presidential power and congressional oversight.',
       },
     ],
   },
@@ -80,7 +80,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'On August 2, North Vietnamese P-4 torpedo boats engaged the USS Maddox in broad daylight. On August 4, in pitch-black squall conditions, radar ghosts and acoustic echoes led sonarmen to report incoming torpedoes that post-war NSA investigations confirmed never existed.',
+        'On August 2, North Vietnamese P-4 torpedo boats fought the USS Maddox in daylight. On August 4, in a dark squall, false radar and sonar readings led crews to report torpedoes. Later NSA investigations confirmed there were none.',
       citationRef: 'Q024',
     },
     {
@@ -110,7 +110,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'The resolution passed 416-0 in the House and 88-2 in the Senate (with only Senators Wayne Morse and Ernest Gruening voting against it), handing LBJ a congressional "blank check."',
+        'The resolution passed 416–0 in the House and 88–2 in the Senate. Only Senators Wayne Morse and Ernest Gruening voted against it. Critics later called it a congressional "blank check."',
       citationRef: 'c4-3',
     },
     {
@@ -125,7 +125,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'The War Powers Act of 1973 was passed over President Nixon’s veto to curtail executive warmaking by mandating a 48-hour notification and a 60-day limit on unapproved foreign troop deployments.',
+        'Congress passed the War Powers Act of 1973 over President Nixon’s veto to limit a president’s power to make war. It requires notice within 48 hours and sets a 60-day limit on deployments Congress has not approved.',
       citationRef: 'c4-3',
     },
     {
@@ -151,30 +151,30 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       imageId: 'lbj-tonkin-signing-1964',
       phonetic: 'GULF uv TAHN-kin rez-uh-LOO-shun',
       definition:
-        'Joint congressional resolution authorizing LBJ to take all necessary measures to repel armed attacks against U.S. forces.',
+        'A joint resolution of Congress. It authorized President Johnson to take all necessary measures to repel armed attack on U.S. forces and to prevent further aggression.',
       significance:
-        'Allowed 9 years of undeclared presidential war in Southeast Asia.',
-      examTip: 'Catalyst for the 1973 War Powers Act.',
+        'It was the legal basis for raising U.S. involvement from 23,000 advisers to more than 540,000 combat troops, with no declaration of war.',
+      examTip: 'A core AP U.S. History topic. It is often tested with the War Powers Act of 1973, which Congress passed to limit presidential war powers.',
     },
     {
       id: 'c4-fc2',
       term: 'OPLAN 34A',
       phonetic: 'OH-plan THUR-tee-for-AY',
       definition:
-        'Covert maritime sabotage raids by South Vietnamese commandos along North Vietnam’s coast.',
+        'A secret operation run by the CIA and the U.S. military command. South Vietnamese commandos in unmarked boats raided North Vietnam’s coast.',
       significance:
-        'Provoked North Vietnam to engage the nearby USS Maddox.',
-      examTip: 'Disproved the narrative of an unprovoked attack in open waters.',
+        'Raids on the islands of Hon Me and Hon Ngu came just before North Vietnam attacked the nearby USS Maddox on August 2.',
+      examTip: 'Key evidence that U.S. ships were not simply bystanders in international waters.',
     },
     {
       id: 'c4-fc3',
       term: 'War Powers Act of 1973',
       phonetic: 'WOR POW-erz AKT',
       definition:
-        'Federal law requiring 48-hour presidential reporting and a 60-day limit on unauthorized foreign combat deployments.',
+        'A federal law passed over President Nixon’s veto. The president must tell Congress within 48 hours of sending troops into action, and must withdraw them after 60 days unless Congress approves.',
       significance:
-        'Historic reassertion of congressional constitutional authority over military conflicts.',
-      examTip: 'Passed over President Nixon’s veto; core DBQ concept.',
+        'It was Congress’s answer to the Tonkin Resolution and the Pentagon Papers. The goal was to restore its check on the president’s power to make war.',
+      examTip: 'A frequent DBQ and essay topic on presidential power and congressional oversight.',
     },
   ],
 };

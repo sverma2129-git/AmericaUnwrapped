@@ -8,13 +8,13 @@ const chapter: ChapterData = {
   timeframe: '1973–1975',
   leadImageId: 'frequent-wind-1975',
   galleryImageIds: ['ford-nsc-1975'],
-  title: 'The Final Offensive & The Collapse',
-  subtitle: 'Watergate, aid cutoffs, the Central Highlands rout, and the fall of Saigon',
+  title: 'The fall of Saigon',
+  subtitle: 'Watergate, aid cuts, the retreat from the Central Highlands, and the end of South Vietnam',
   summary:
-    'Following the U.S. withdrawal, South Vietnam faced severe economic contraction, inflation, and sharp congressional aid cuts that forced ammunition and fuel rationing. In June 1973, Congress passed the Case-Church Amendment, legally prohibiting U.S. military re-intervention. When Hanoi probed U.S. resolve at Phuoc Long in late 1974 without response, it accelerated its campaign. President Thieu’s sudden retreat order in the Central Highlands dissolved into an uncoordinated rout, leading to the collapse of South Vietnam in 55 days, culminating in the fall of Saigon on April 30, 1975.',
+    'After the U.S. left, South Vietnam’s economy shrank, prices soared, and Congress cut aid so sharply that the army had to ration ammunition and fuel. In June 1973, Congress passed the Case-Church Amendment, which made it illegal for U.S. forces to go back in. In late 1974, Hanoi tested America’s will at Phuoc Long. No response came, so it sped up its campaign. President Thieu’s sudden order to retreat from the Central Highlands turned into a rout. South Vietnam fell in 55 days, and Saigon was captured on April 30, 1975.',
   isLandmark: true,
   landmarkMoment: {
-    bannerTitle: 'The 55-Day Collapse & The Fall of Saigon',
+    bannerTitle: 'The 55 days that ended South Vietnam',
     dateline: 'April 30, 1975 &bull; 11:30 AM',
     location: 'The Independence Palace, Saigon',
     quote: 'On the morning of April 30, 1975, North Vietnamese armored units breached the perimeter gates of Saigon’s Presidential Palace, concluding the military collapse of the Republic of Vietnam.',
@@ -28,13 +28,13 @@ const chapter: ChapterData = {
       'The uncoordinated retreat down unpaved Route 7B degenerated into the "Column of Tears": over 200,000 soldiers and 400,000 civilian refugees were shelled along the roads, and soldiers abandoned positions to save their fleeing families.[^c10-3] Hue fell on March 25; Da Nang collapsed into pandemonium on March 30 amid 300,000 refugees. Contrary to the post-war stereotype that South Vietnamese troops universally refused to fight, the ARVN 18th Division under Brigadier General Le Minh Dao mounted a fierce two-week stand at Xuan Loc (April 9–21), inflicting heavy casualties on three PAVN divisions before being outflanked.[^c10-1] Accelerating the timetable into the "Ho Chi Minh Campaign," North Vietnamese armor crashed through the gates of Saigon’s Presidential Palace at 11:30 AM on April 30, 1975.[^c10-2]',
     ],
     keyEvents: [
-      { date: 'June 1973', title: 'Case-Church Amendment Passed', detail: 'Congress legally prohibits U.S. military activity in Indochina past August 15, 1973.' },
-      { date: 'Nov 7, 1973', title: 'War Powers Resolution Passed', detail: 'Congress overrides Nixon’s veto, restricting presidential authority to commit armed forces abroad.' },
-      { date: 'Aug 9, 1974', title: 'Nixon Resigns Over Watergate', detail: 'Gerald Ford assumes presidency; external guarantor of South Vietnam loses political authority.' },
-      { date: 'Dec 1974 – Jan 1975', title: 'Battle of Phuoc Long (The Probe)', detail: 'Communist capture of province tests U.S. response; confirms absence of American air intervention.' },
-      { date: 'March 10–12, 1975', title: 'Fall of Ban Me Thuot', detail: 'PAVN tanks seize Central Highlands hub; Thieu orders fatal uncoordinated retreat.' },
-      { date: 'April 9–21, 1975', title: 'Battle of Xuan Loc', detail: '18th ARVN Division mounts tenacious two-week defense 40 miles north of Saigon before withdrawing.' },
-      { date: 'April 30, 1975', title: 'Fall of Saigon', detail: 'Operation Frequent Wind evacuates remaining personnel; North Vietnamese tanks enter Presidential Palace.' },
+      { date: 'June 1973', title: 'Congress bans further fighting', detail: 'The Case-Church Amendment bans U.S. military action in Indochina after August 15, 1973.' },
+      { date: 'Nov 7, 1973', title: 'The War Powers Act passes', detail: 'Congress overrides Nixon’s veto and limits the president’s power to send troops abroad.' },
+      { date: 'Aug 9, 1974', title: 'Nixon resigns', detail: 'Gerald Ford becomes president. South Vietnam loses the man who made it promises.' },
+      { date: 'Dec 1974 – Jan 1975', title: 'Phuoc Long: Hanoi tests the U.S.', detail: 'Communist forces take a province to test the U.S. No American planes come.' },
+      { date: 'March 10–12, 1975', title: 'Ban Me Thuot falls', detail: 'North Vietnamese tanks take this key town in the Central Highlands. Thieu orders a badly planned retreat.' },
+      { date: 'April 9–21, 1975', title: 'The Battle of Xuan Loc', detail: 'The ARVN 18th Division holds for two weeks, 40 miles from Saigon, before pulling back.' },
+      { date: 'April 30, 1975', title: 'Saigon falls', detail: 'Operation Frequent Wind flies out the last Americans. North Vietnamese tanks enter the Presidential Palace.' },
     ],
   },
   washington: {
@@ -91,15 +91,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'collapse-1975-map',
     type: 'collapse-1975-map',
-    title: 'The 55-Day Collapse: The 1975 Spring Offensive',
+    title: 'The 55-day collapse',
     prompt:
-      'Track the rapid collapse of South Vietnam: inspect the breach at Ban Me Thuot, Thieu’s retreat order, the panic at Da Nang, and the determined stand at Xuan Loc.',
+      'Follow the collapse step by step: the break at Ban Me Thuot, Thieu’s order to retreat, the panic at Da Nang, and the last stand at Xuan Loc.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['paris-accords-treaty-1973']],
   nextQuestion: {
-    question: 'What did peace look like inside unified Vietnam after 1975?',
+    question: 'What did peace look like in Vietnam after 1975?',
     framing:
-      'The end of the war did not bring immediate stability. How did re-education camps, New Economic Zones, border wars with Cambodia and China, and the "boat people" exodus reshape post-war Vietnam?',
+      'The end of the war did not bring calm. Re-education camps, New Economic Zones, border wars with Cambodia and China, and the flight of the "boat people" all followed. How did they change Vietnam?',
   },
   citations: [
     CITATION_REGISTRY['c10-1'],

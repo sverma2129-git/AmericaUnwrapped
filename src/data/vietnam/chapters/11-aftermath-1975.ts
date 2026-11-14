@@ -7,10 +7,10 @@ const chapter: ChapterData = {
   timeframe: '1975–1995',
   leadImageId: 'vietnam-memorial-wall',
   galleryImageIds: ['boat-people-1984', 'camp-pendleton-1975'],
-  title: 'Aftermath: Vietnam After 1975',
-  subtitle: 'Re-education camps, the boat people exodus, the Third Indochina War, and Doi Moi',
+  title: 'After the war',
+  subtitle: 'Re-education camps, the boat people, new border wars, and the reforms of 1986',
   summary:
-    'The fall of Saigon brought national reunification but not immediate peace. The post-war era was characterized by severe economic stagnation, forced agricultural collectivization, re-education camps, and the Third Indochina War against Cambodia and China. The humanitarian crisis of over one million "boat people"—heavily driven by the targeting of ethnic Chinese—strained the region, until near-famine and hyperinflation forced the Communist Party to adopt market-oriented reforms under Doi Moi in 1986.',
+    'The fall of Saigon reunited Vietnam but did not bring peace right away. The years after the war brought a stalled economy, forced collective farming, re-education camps, and new wars with Cambodia and China. More than one million "boat people" fled, many of them ethnic Chinese who were being targeted. Near-famine and runaway inflation finally pushed the Communist Party to open up the economy with the Doi Moi reforms of 1986.',
   whatHappened: {
     narrative: [
       'Following victory, Hanoi formally reunified the country in July 1976 as the Socialist Republic of Vietnam. The new government imposed orthodox socialist central planning, nationalizing southern private businesses and forcing agricultural collectivization in the Mekong Delta. Compounded by a U.S. trade embargo, Western aid cutoffs, and administrative mismanagement, agricultural output plummeted, resulting in widespread rationing and near-famine conditions by the late 1970s, with inflation peaking at over 700 percent in 1986.',
@@ -18,12 +18,12 @@ const chapter: ChapterData = {
       'Between 1975 and 1995, an estimated 800,000 to nearly 2 million refugees fled Indochina by sea. The crisis peaked in 1978–1979, driven heavily by deteriorating relations with China: Vietnam’s government targeted ethnic Chinese (Hoa), expropriating property and driving hundreds of thousands into boats across the South China Sea, where ethnic Hoa comprised 50 to 80 percent of monthly refugee camp arrivals. International agencies estimate between 200,000 and 500,000 died at sea from drowning, exposure, and piracy. Regionally, peace proved elusive: in December 1978, Vietnam invaded Cambodia to topple the genocidal Khmer Rouge, triggering a punitive Chinese invasion of northern Vietnam in February 1979. Facing economic collapse, the 6th Party Congress in December 1986 enacted *Doi Moi* (Renovation), dismantling collectivization and transitioning to a market economy.',
     ],
     keyEvents: [
-      { date: '1975–1985', title: 'Re-education Camps & Collectivization', detail: 'Over 1 million processed through camps; southern agriculture collectivized amid severe shortages.' },
-      { date: 'July 2, 1976', title: 'Socialist Republic of Vietnam Proclaimed', detail: 'Formal reunification of North and South; Saigon officially renamed Ho Chi Minh City.' },
-      { date: 'Nov 1978', title: 'The Hai Hong Incident', detail: 'Freighter with 2,500 refugees denied docking in Malaysia; UNHCR establishes prima facie refugee status.' },
-      { date: 'Dec 1978 – Jan 1979', title: 'Invasion of Cambodia', detail: 'Vietnamese forces overthrow Pol Pot’s Khmer Rouge, entering a decade-long counterinsurgency.' },
-      { date: 'Feb–March 1979', title: 'Sino-Vietnamese Border War', detail: 'China launches a punitive military incursion into northern Vietnam with heavy casualties.' },
-      { date: 'Dec 1986', title: 'Doi Moi (Renovation) Enacted', detail: '6th Party Congress abandons central planning and collectivization, adopting market reforms.' },
+      { date: '1975–1985', title: 'Re-education camps and collective farms', detail: 'More than 1 million people go through the camps. Southern farms are forced into collectives, and food runs short.' },
+      { date: 'July 2, 1976', title: 'Vietnam is officially reunited', detail: 'North and South become one country. Saigon is renamed Ho Chi Minh City.' },
+      { date: 'Nov 1978', title: 'The Hai Hong', detail: 'Malaysia turns away a ship carrying 2,500 refugees. The UN refugee agency starts treating boat people as refugees as a group.' },
+      { date: 'Dec 1978 – Jan 1979', title: 'Vietnam invades Cambodia', detail: 'Vietnamese forces overthrow Pol Pot’s Khmer Rouge and then fight guerrillas there for ten years.' },
+      { date: 'Feb–March 1979', title: 'China and Vietnam go to war', detail: 'China invades northern Vietnam to punish it. Both sides lose many soldiers.' },
+      { date: 'Dec 1986', title: 'Doi Moi reforms begin', detail: 'The 6th Party Congress drops central planning and collective farms and adopts market reforms.' },
     ],
   },
   washington: {
@@ -80,15 +80,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'aftermath-metrics',
     type: 'aftermath-metrics',
-    title: 'The Human, Political, & Demographic Consequences',
+    title: 'What the war cost',
     prompt:
-      'Inspect the statistical ledger: compare casualty ranges from the 1995 disclosure, examine the two distinct refugee waves and the ethnic Chinese (Hoa) dimension, and review re-education camp data.',
+      'Look at the numbers: the casualty ranges from Vietnam’s 1995 disclosure, the two waves of refugees and the role of ethnic Chinese (Hoa), and the data on re-education camps.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['ap-casualty-disclosure-1995']],
   nextQuestion: {
-    question: 'Why do historians and societies still fiercely debate the Vietnam War?',
+    question: 'Why do people still argue about the Vietnam War?',
     framing:
-      'Was Vietnam an unwinnable quagmire, a noble cause sabotaged by domestic politics, or an international tragedy shaped by multi-sided agency? Examine the competing historiographical schools and cultural memory.',
+      'Was Vietnam a war that could never be won, a good cause ruined by politics at home, or a tragedy shaped by choices on every side? Look at how historians disagree and how the war is remembered.',
   },
   citations: [
     { id: 'c11-1', marker: 1, citation: 'Robinson, W. Courtland. Terms of Refuge: The Indochinese Exodus and the International Response. Zed Books, 1998.', sourceType: 'academic-monograph' },

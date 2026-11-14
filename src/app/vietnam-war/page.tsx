@@ -6,7 +6,7 @@ import Link from 'next/link';
 const target = '/vietnam';
 
 export const metadata: Metadata = {
-  title: 'Moved to Explore History',
+  title: 'Moved to Explore history',
   robots: { index: false },
 };
 
@@ -18,7 +18,7 @@ export default function VietnamWarRedirect() {
       <p className="text-sm text-ink-muted">
         The Vietnam War experience now lives at{' '}
         <Link href={target} className="text-brand underline">
-          Explore History
+          Explore history
         </Link>
         .
       </p>

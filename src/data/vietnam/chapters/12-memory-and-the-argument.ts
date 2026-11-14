@@ -7,10 +7,10 @@ const chapter: ChapterData = {
   timeframe: 'The Argument',
   leadImageId: 'mcnamara-map-1965',
   galleryImageIds: ['memorial-dedication-1982'],
-  title: 'Memory & The Argument: Competing Interpretations',
-  subtitle: 'Orthodox, Revisionist, Post-Revisionist, and Vietnamese Historiography',
+  title: 'How historians argue about the war',
+  subtitle: 'Four ways of explaining Vietnam, and the evidence behind each',
   summary:
-    'Fifty years after the war’s end, historians and citizens continue to debate its fundamental causes, conduct, and meaning. Understanding the major historiographical schools—Orthodox, Revisionist, Post-Revisionist, and Vietnamese Archival perspectives—reveals how historical evidence is interpreted and why no single, uncontested narrative exists.',
+    'Fifty years after the war ended, historians and citizens still argue about why it happened, how it was fought, and what it means. There are four main schools of thought: Orthodox, Revisionist, Post-Revisionist, and one built on Vietnamese archives. Learning them shows how the same evidence can be read in different ways, and why no single account of the war is accepted by everyone.',
   whatHappened: {
     narrative: [
       'Unlike World War II, which established a broad consensus regarding moral clarity and strategic necessity, the Vietnam War produced deep intellectual and political fractures. These historiographical divisions do not represent simple political talking points; they reflect fundamentally different interpretations of primary documents, military capabilities, and political legitimacy.',
@@ -19,11 +19,11 @@ const chapter: ChapterData = {
       'Over the past two decades, the opening of Vietnamese, Soviet, and Chinese archives has fueled a **Post-Revisionist and Internationalist school** (Fredrik Logevall, Lien-Hang Nguyen, Pierre Asselin). This scholarship moves beyond the winnable/unwinnable dichotomy by treating Vietnamese actors not as passive pawns, but as autonomous agents who manipulated their superpower sponsors. It reveals Hanoi as an ideologically militant regime led by Le Duan that suppressed domestic moderates, while restoring agency to South Vietnamese civil society. Concurrently, literary voices such as North Vietnamese veterans **Bao Ninh** (*The Sorrow of War*) and **Duong Thu Huong** challenged official heroic state memory, while the museum in Ho Chi Minh City evolved through three distinct name changes (*Exhibition House for US and Puppet Crimes* to *War Crimes Museum* to *War Remnants Museum*) reflecting diplomatic normalization in 1995.',
     ],
     keyEvents: [
-      { date: '1972', title: 'Halberstam Publishes "The Best and the Brightest"', detail: 'Foundational Orthodox text exploring intellectual hubris and bureaucratic momentum.' },
-      { date: '1981', title: 'Summers Publishes "On Strategy"', detail: 'Revisionist critique arguing the U.S. military failed to focus on conventional invasion routes.' },
-      { date: '1990', title: 'Bao Ninh Publishes "The Sorrow of War"', detail: 'North Vietnamese veteran’s novel depicts the war as grief and trauma, challenging state orthodoxy.' },
-      { date: '1995', title: 'Diplomatic Normalization', detail: 'Presidents Bill Clinton and Prime Minister Vo Van Kiet formally normalize U.S.-Vietnam relations.' },
-      { date: '2012', title: 'Lien-Hang Nguyen Publishes "Hanoi’s War"', detail: 'Groundbreaking archival study of Le Duan’s police state, internal purges, and wartime diplomacy.' },
+      { date: '1972', title: 'Halberstam publishes The Best and the Brightest', detail: 'A founding orthodox book about how smart, confident officials led the country into war.' },
+      { date: '1981', title: 'Summers publishes On Strategy', detail: 'A revisionist book arguing the military should have focused on blocking invasion routes from the North.' },
+      { date: '1990', title: 'Bao Ninh publishes The Sorrow of War', detail: 'A North Vietnamese veteran’s novel shows the war as grief and trauma, not the heroic story the state told.' },
+      { date: '1995', title: 'The U.S. and Vietnam restore relations', detail: 'President Bill Clinton and Prime Minister Vo Van Kiet restore full relations between the two countries.' },
+      { date: '2012', title: 'Lien-Hang Nguyen publishes Hanoi’s War', detail: 'A study based on Vietnamese records of Le Duan’s police state, his purges and his wartime diplomacy.' },
     ],
   },
   washington: {
@@ -81,15 +81,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'competing-arguments',
     type: 'competing-arguments',
-    title: 'Historiographical Debate Matrix: Four Schools of Thought',
+    title: 'Four schools of thought',
     prompt:
-      'Compare the core claims, evidentiary foundations, and scholarly critiques of the Orthodox, Revisionist, Post-Revisionist, and Vietnamese archival traditions.',
+      'Compare what each of the four schools claims, what evidence it relies on, and how other historians have criticized it.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['ap-casualty-disclosure-1995']],
   nextQuestion: {
-    question: 'How does historical understanding change when both sides receive equal scrutiny?',
+    question: 'How does the story change when both sides get the same scrutiny?',
     framing:
-      'You have traversed the thirty-year causal chain from 1945 to 1975 and its aftermath. Revisit any turning point in the interactive timeline or inspect the declassified primary sources.',
+      'You have followed thirty years of decisions from 1945 to 1975, and what came after. Go back to any turning point on the timeline, or read the original documents again.',
   },
   citations: [
     { id: 'c12-1', marker: 1, citation: 'Halberstam, David. The Best and the Brightest. Random House, 1972.', sourceType: 'academic-monograph' },

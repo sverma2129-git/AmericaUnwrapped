@@ -2,8 +2,8 @@ import { NavItem, ProjectMeta } from '@/types';
 
 export const NAVIGATION_LINKS: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'Explore History', href: '/vietnam' },
-  { label: 'Study Guide', href: '/vietnam/study-guide' },
+  { label: 'Vietnam War', href: '/vietnam' },
+  { label: 'Study guide', href: '/vietnam/study-guide' },
   { label: 'About', href: '/about' },
 ];
 

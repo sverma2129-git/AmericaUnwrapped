@@ -18,7 +18,7 @@ const CAMPAIGN_PHASES: CampaignPhase[] = [
   {
     date: 'March 10–12, 1975',
     location: 'Ban Me Thuot (Central Highlands)',
-    title: 'The Breakthrough at Ban Me Thuot',
+    title: 'North Vietnam breaks through at Ban Me Thuot',
     coords: { x: 310, y: 260 },
     narrative:
       'General Van Tien Dung feigned a strike toward Pleiku and Kontum, but secretly concentrated three PAVN divisions against Ban Me Thuot. Soviet-supplied T-54 tanks and heavy artillery breached the defenses in 36 hours, bisecting South Vietnam.',
@@ -30,7 +30,7 @@ const CAMPAIGN_PHASES: CampaignPhase[] = [
   {
     date: 'March 14–24, 1975',
     location: 'Route 7B & Central Highlands',
-    title: 'Thieu’s Evacuation & The "Column of Tears"',
+    title: 'Thieu’s retreat and the "Column of Tears"',
     coords: { x: 340, y: 280 },
     narrative:
       'In a secret meeting at Cam Ranh, President Thieu ordered General Pham Van Phu to evacuate all of II Corps to coastal enclaves without notifying civilian officials. The withdrawal down unpaved, bridge-broken Route 7B disintegrated into chaos: 200,000 soldiers and 400,000 civilian refugees were shelled by PAVN artillery along the choked roadway.',
@@ -42,7 +42,7 @@ const CAMPAIGN_PHASES: CampaignPhase[] = [
   {
     date: 'March 25–30, 1975',
     location: 'Hue & Da Nang (Northern Front)',
-    title: 'The Northern Front Dissolves',
+    title: 'The northern front falls apart',
     coords: { x: 260, y: 120 },
     narrative:
       'With their southern flank exposed, ARVN forces in northern I Corps were ordered to hold Hue, then abruptly counter-ordered to retreat to Da Nang. In Da Nang, South Vietnam’s second-largest city, 100,000 demoralized troops dissolved into panic amid 300,000 fleeing refugees. The city fell on March 30 without a major battle.',
@@ -54,7 +54,7 @@ const CAMPAIGN_PHASES: CampaignPhase[] = [
   {
     date: 'April 9–21, 1975',
     location: 'Xuan Loc (Saigon Perimeter)',
-    title: 'The ARVN 18th Division Stand at Xuan Loc',
+    title: 'The ARVN 18th Division’s stand at Xuan Loc',
     coords: { x: 320, y: 375 },
     narrative:
       'Just 40 miles northeast of Saigon, the ARVN 18th Division under Brigadier General Le Minh Dao mounted a tenacious, two-week defense against the PAVN 4th Army Corps. The 18th repelled repeated human wave assaults and survived heavy artillery bombardment, inflicting an estimated 2,000 to 3,000 casualties before withdrawing in good order when outflanked.',
@@ -66,7 +66,7 @@ const CAMPAIGN_PHASES: CampaignPhase[] = [
   {
     date: 'April 26–30, 1975',
     location: 'Saigon (Ho Chi Minh Campaign)',
-    title: 'The Fall of Saigon & Unconditional Surrender',
+    title: 'Saigon falls and surrenders',
     coords: { x: 300, y: 395 },
     narrative:
       'Sixteen North Vietnamese divisions converged on Saigon in the final "Ho Chi Minh Campaign." Operation Frequent Wind evacuated roughly 1,000 Americans and 7,000 vulnerable South Vietnamese by helicopter to 7th Fleet carriers. At 11:30 AM on April 30, PAVN Tank 843 crashed through the gates of the Presidential Palace, where General Duong Van Minh announced unconditional surrender.',
@@ -88,7 +88,7 @@ export default function CollapseOffensiveMap() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-3 text-xs">
         <div>
           <span className="font-bold text-stone-900">
-            Campaign Cartography
+            Map of the final offensive
           </span>
           <span className="text-stone-500 ml-2">&bull; The 55-Day Spring 1975 Collapse</span>
         </div>
@@ -231,7 +231,7 @@ export default function CollapseOffensiveMap() {
 
             <div className="mt-4 pt-3 border-t border-stone-100">
               <span className="text-[10px] text-stone-500 font-bold block mb-1">
-                Operational Realities:
+                What happened on the ground:
               </span>
               <p className="font-display text-sm text-stone-800 leading-relaxed">
                 {current.narrative}
@@ -252,7 +252,7 @@ export default function CollapseOffensiveMap() {
           {/* Historical Consequence */}
           <div className="p-4 bg-stone-100/80 border-l border-stone-800 rounded-r-xs text-xs">
             <span className="font-bold text-stone-700 block mb-1">
-              Significance in the 55-Day Arc:
+              Why it mattered in the 55 days:
             </span>
             <p className="font-display text-stone-800 leading-relaxed">
               {current.significance}

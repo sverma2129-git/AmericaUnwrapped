@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
   chapterId: 'aftermath-1975',
   bigQuestion:
-    'What was the human and environmental toll of thirty years of war—and how did former enemies achieve diplomatic reconciliation?',
+    'What did thirty years of war cost Vietnam’s people and land, and how did two former enemies make peace?',
   whyItMatters:
-    'Examines the profound human consequences of the war: 3 million dead, the mass exodus of 1.5 million "boat people", re-education camps, Agent Orange contamination, and the 1995 normalization of diplomatic ties.',
+    'About 3 million people died. Afterward came 1.5 million "boat people," re-education camps, Agent Orange damage, and finally, in 1995, normal relations between the U.S. and Vietnam.',
   whatYouWillLearn: [
-    'The complete casualty breakdown across American, North Vietnamese, South Vietnamese, and civilian populations.',
-    'Why over one million South Vietnamese were sent to re-education camps and hundreds of thousands fled by sea.',
-    'How veterans like John McCain and John Kerry led the diplomatic effort to normalize U.S.-Vietnamese relations in 1995.',
+    'How many Americans, North Vietnamese, South Vietnamese and civilians died.',
+    'Why more than one million South Vietnamese were sent to re-education camps, and why hundreds of thousands fled by sea.',
+    'How veterans such as John McCain and John Kerry helped restore relations between the U.S. and Vietnam in 1995.',
   ],
   briefing: {
     summary:
-      'The human toll of the 1954–1975 Vietnam War was catastrophic: 58,220 American military personnel were killed; between 200,000 and 250,000 South Vietnamese (ARVN) soldiers died; official Vietnamese figures estimate 1.1 million North Vietnamese Army (PAVN) and Viet Cong combatants were killed; and approximately 2 million civilians died on both sides. Following the fall of Saigon, Hanoi imposed strict socialist collectivism: an estimated one million former southern military officers, officials, and intellectuals were detained in harsh "re-education camps," with up to 165,000 dying from starvation, disease, and forced labor. Between 1975 and the early 1990s, over 1.5 million Vietnamese fled the country in rickety wooden vessels—the "Boat People"—with an estimated 200,000 to 400,000 perishing at sea from drownings and pirate attacks. In the 1990s, Vietnam’s market reforms (Doi Moi), combined with bipartisan leadership from American veteran-senators John McCain and John Kerry resolving the fate of soldiers Missing in Action (MIA), culminated in President Bill Clinton normalizing diplomatic relations in July 1995.',
+      'The 1954–1975 war cost a huge number of lives. 58,220 American service members were killed. Between 200,000 and 250,000 South Vietnamese (ARVN) soldiers died. Official Vietnamese figures put North Vietnamese and Viet Cong deaths at 1.1 million, and about 2 million civilians died on both sides. After the fall of Saigon, Hanoi forced a strict socialist system on the South. About one million former southern officers, officials and intellectuals were held in harsh "re-education camps." Up to 165,000 died from hunger, disease and forced labor. From 1975 to the early 1990s, more than 1.5 million Vietnamese escaped in small wooden boats. These were the "boat people," and an estimated 200,000 to 400,000 died at sea from drowning and pirate attacks. In the 1990s, Vietnam opened its economy with market reforms called Doi Moi. Two veteran senators, John McCain and John Kerry, worked across party lines to find out what happened to soldiers missing in action (MIA). In July 1995, President Bill Clinton restored normal diplomatic relations with Vietnam.',
     examTakeaways: [
-      'Asymmetric Demographic Loss: Vietnamese military and civilian deaths (totaling over 3 million) represented nearly 8–10% of Vietnam’s entire population, compared to 58,220 American deaths.',
-      'The "Boat People" Refugee Crisis: Triggered the largest maritime refugee exodus in modern history, resulting in the resettlement of hundreds of thousands of Vietnamese refugees across the United States, France, Canada, and Australia.',
-      'Reconciliation through Veteran Diplomacy: Diplomatic normalization in 1995 was driven by joint military accounting for MIAs and POWs, transforming former mortal adversaries into comprehensive strategic partners.',
+      'Unequal losses: More than 3 million Vietnamese soldiers and civilians died, about 8–10% of the population. 58,220 Americans died.',
+      'The boat people: It was the largest refugee flight by sea in modern history. Hundreds of thousands of Vietnamese resettled in the U.S., France, Canada and Australia.',
+      'Veterans lead the way to peace: Relations returned to normal in 1995 after both sides worked together to account for missing soldiers and POWs. Former enemies became partners.',
     ],
     keyTerms: [
       {
@@ -27,30 +27,30 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
         imageId: 'boat-people-1984',
         phonetic: 'BOHT PEE-pul',
         definition:
-          'Over 1.5 million Vietnamese refugees who fled post-war communist repression, re-education camps, and poverty in overcrowded, unseaworthy boats between 1975 and the 1990s.',
+          'More than 1.5 million Vietnamese refugees who fled communist rule, re-education camps and poverty after the war. They crossed the sea in crowded, unsafe boats between 1975 and the 1990s.',
         significance:
-          'Hundreds of thousands perished at sea, while survivors established vibrant overseas Vietnamese diaspora communities (such as Little Saigon in California).',
-        examTip: 'High frequency on modern immigration and human rights history topics.',
+          'Hundreds of thousands died at sea. Survivors built Vietnamese communities around the world, such as Little Saigon in California.',
+        examTip: 'Shows up often in questions about modern immigration and human rights.',
       },
       {
         id: 're-education-camps',
         term: 'Re-Education Camps (Hoc Tap Cai Tao)',
         phonetic: 'REE-ed-yoo-KAY-shun KAMPS',
         definition:
-          'Network of rural forced-labor prison camps established by the communist government after 1975 where an estimated 1 million South Vietnamese military officers, civil servants, and intellectuals were detained.',
+          'Forced-labor prison camps in the countryside, set up by the communist government after 1975. About 1 million South Vietnamese officers, government workers and intellectuals were held there.',
         significance:
-          'Intended to eliminate political dissent and enforce ideological indoctrination; resulted in tens of thousands of deaths from malnutrition, untreated disease, and hard labor.',
-        examTip: 'Primary domestic catalyst for the mass refugee flight from Vietnam.',
+          'Their purpose was to crush political opposition and teach communist ideas. Tens of thousands died from hunger, untreated disease and hard labor.',
+        examTip: 'They were a main reason so many people fled Vietnam.',
       },
       {
         id: 'diplomatic-normalization-1995',
         term: 'U.S.–Vietnam Normalization (July 1995)',
         phonetic: 'NOR-muh-luh-ZAY-shun',
         definition:
-          'The formal re-establishment of diplomatic and economic relations between the United States and the Socialist Republic of Vietnam announced by President Bill Clinton.',
+          'President Bill Clinton’s announcement that the United States and the Socialist Republic of Vietnam would restore full diplomatic and economic relations.',
         significance:
-          'Ended two decades of trade embargoes and hostility, leading to comprehensive bilateral trade and growing security cooperation.',
-        examTip: 'Pioneered by Vietnam veteran senators John McCain (former POW) and John Kerry.',
+          'It ended twenty years of trade bans and hostility. Trade between the two countries grew, and so did cooperation on security.',
+        examTip: 'Two Vietnam veterans in the Senate led the way: John McCain, a former POW, and John Kerry.',
       },
     ],
   },
@@ -67,7 +67,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Breaking twenty years of official silence on the 20th anniversary of Saigon’s fall, Hanoi officially announced in April 1995 that 1.1 million North Vietnamese and Viet Cong combatants died fighting American and South Vietnamese forces, alongside an estimated 2 million civilian deaths.',
+        'In April 1995, on the 20th anniversary of Saigon’s fall, Hanoi broke twenty years of silence. It announced that 1.1 million North Vietnamese and Viet Cong fighters had died fighting American and South Vietnamese forces, along with about 2 million civilians.',
       citationRef: 'c11-1',
     },
     {
@@ -82,7 +82,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'After 1975, the victorious communist regime confiscated private property, imprisoned over a million former South Vietnamese personnel in re-education camps, and forcibly relocated urban residents to barren "New Economic Zones," prompting families to risk dangerous sea voyages to escape.',
+        'After 1975, the communist government took private property, imprisoned more than a million former South Vietnamese soldiers and officials in re-education camps, and forced city families onto barren land called "New Economic Zones." Many families risked dangerous sea voyages to escape.',
       citationRef: 'c11-2',
     },
     {
@@ -97,7 +97,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'Republican Senator John McCain (who spent five and a half years as a tortured POW in the "Hanoi Hilton") and Democratic Senator John Kerry (decorated Navy swift boat commander and anti-war veteran) formed a historic partnership to resolve the fate of MIAs, giving President Clinton the political cover to restore relations.',
+        'Republican Senator John McCain spent five and a half years as a POW in the "Hanoi Hilton," where he was tortured. Democratic Senator John Kerry was a decorated Navy swift boat commander who later opposed the war. Together they worked to find out what happened to missing soldiers. That gave President Clinton the political support to restore relations.',
       citationRef: 'c11-3',
     },
   ],
@@ -108,30 +108,30 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       imageId: 'vietnam-memorial-wall',
       phonetic: 'VET-er-unz muh-MOR-ee-ul',
       definition:
-        'National memorial in Washington, D.C. designed by 21-year-old Yale architecture student Maya Lin, dedicated in November 1982.',
+        'A national memorial in Washington, D.C., dedicated in November 1982. Maya Lin, a 21-year-old architecture student at Yale, designed it.',
       significance:
-        'Its black granite V-shaped wall inscribed chronologically with the names of over 58,000 fallen service members transformed national mourning and helped heal domestic war trauma.',
-      examTip: 'The most visited memorial on the National Mall; rejected heroic martial statuary in favor of personal reflection.',
+        'Its black granite wall, shaped like a V, lists more than 58,000 dead service members in the order they died. It changed how the country mourned and helped veterans and families heal.',
+      examTip: 'It is the most visited memorial on the National Mall. It uses names for quiet reflection instead of heroic statues.',
     },
     {
       id: 'c11-fc2',
       term: 'Maya Lin',
       phonetic: 'MY-uh LIN',
       definition:
-        'American architect and artist who won the blind national public design competition for the Vietnam Veterans Memorial in 1981 while an undergraduate.',
+        'An American architect and artist. As a college student, she won the 1981 national contest to design the Vietnam Veterans Memorial, which was judged without names.',
       significance:
-        'Faced fierce initial conservative opposition to her abstract, non-political design, which subsequently became universally recognized as a masterpiece of commemorative art.',
-      examTip: 'Awarded the Presidential Medal of Freedom in 2016 for her architectural vision.',
+        'Many conservatives attacked her plain, nonpolitical design at first. It is now widely seen as one of the great American memorials.',
+      examTip: 'She received the Presidential Medal of Freedom in 2016.',
     },
     {
       id: 'c11-fc3',
       term: 'Doi Moi ("Renovation")',
       phonetic: 'DOY MOY',
       definition:
-        'Economic reform program initiated by the Communist Party of Vietnam in 1986 shifting the country from a Soviet-style centrally planned economy to a "socialist-oriented market economy."',
+        'Economic reforms that Vietnam’s Communist Party began in 1986. They moved the country from a Soviet-style planned economy to what it called a "socialist-oriented market economy."',
       significance:
-        'Allowed private enterprise, encouraged foreign investment, and propelled Vietnam to become one of the fastest-growing economies in Southeast Asia.',
-      examTip: 'Analogous to China’s economic reforms under Deng Xiaoping.',
+        'Private businesses were allowed and foreign investment was welcomed. Vietnam became one of the fastest-growing economies in Southeast Asia.',
+      examTip: 'Similar to China’s economic reforms under Deng Xiaoping.',
     },
   ],
 };

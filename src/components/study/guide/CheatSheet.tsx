@@ -11,10 +11,10 @@ export default function CheatSheet() {
       {/* Quick Exam Overview Banner */}
       <div className="bg-parchment border-l border-brand border-t border-r border-b border-rule p-6 rounded-r-xs">
         <h2 className="font-display text-2xl font-bold text-ink">
-          The Essential Core: 30 Years Across 5 Presidencies
+          Thirty years, five presidents
         </h2>
         <p className="mt-2 font-sans text-sm sm:text-base text-ink-muted leading-relaxed">
-          Vietnam is the primary Cold War conflict testing American containment doctrine, executive war powers, and public trust in government. On exams, questions consistently center on <strong>the causes of escalation</strong> (Domino Theory, Tonkin), <strong>the reasons for stalemate</strong> (guerilla warfare, flawed body counts), <strong>the erosion of the home front</strong> (Tet, Credibility Gap), and <strong>the constitutional aftermath</strong> (Pentagon Papers, War Powers Act).
+          Vietnam tested containment, the president’s power to make war, and how far Americans trusted their government. Exam questions keep coming back to four things: <strong>why the U.S. escalated</strong> (Domino Theory, Tonkin), <strong>why it stalled</strong> (guerrilla war, unreliable body counts), <strong>how support at home fell apart</strong> (Tet, the credibility gap), and <strong>what changed afterward</strong> (Pentagon Papers, War Powers Act).
         </p>
       </div>
 
@@ -23,10 +23,10 @@ export default function CheatSheet() {
         <div className="flex flex-wrap items-center justify-between gap-2 border-b border-rule pb-3">
           <div>
             <h3 className="font-display text-2xl font-bold text-ink">
-              1. The Five Presidencies Decision Matrix
+              What each president did
             </h3>
             <p className="text-xs text-ink-muted mt-0.5">
-              Click any presidency to toggle strategic actions, turning points, and high-yield exam pitfalls.
+              Tap a president to see what he did, the turning point, and a mistake to avoid on the test.
             </p>
           </div>
           <ExpandAllControls targetId="presidency-matrix" />
@@ -39,7 +39,7 @@ export default function CheatSheet() {
               summary={
                 <>
                   <div className="font-display font-bold text-lg sm:text-xl text-ink">{p.name}</div>
-                  <span className="text-xs text-brand font-bold block">Doctrine: {p.doctrine}</span>
+                  <span className="text-xs text-brand font-bold block">Policy: {p.doctrine}</span>
                 </>
               }
             >
@@ -53,7 +53,7 @@ export default function CheatSheet() {
                   <p className="text-ink-muted leading-relaxed">{p.turningPoint}</p>
                 </div>
                 <div className="p-3 bg-brand-tint border border-brand-rule rounded-xs">
-                  <strong className="font-semibold text-brand block mb-1">Exam Pitfall:</strong>
+                  <strong className="font-semibold text-brand block mb-1">Mistake to avoid:</strong>
                   <p className="text-ink-muted leading-relaxed">{p.examPitfall}</p>
                 </div>
               </div>
@@ -62,9 +62,9 @@ export default function CheatSheet() {
         </div>
       </div>
 
-      {/* Master Chronology & Landmark Turning Points Table */}
+      {/* Master Chronology & Turning points Table */}
       <div className="space-y-4 pt-6">
-        <h3 className="font-display text-2xl font-bold text-ink">2. Landmark Turning Points Timeline</h3>
+        <h3 className="font-display text-2xl font-bold text-ink">Turning points</h3>
 
         <div className="overflow-x-auto border border-rule rounded-xs">
           <table className="w-full text-left font-sans text-xs sm:text-sm">

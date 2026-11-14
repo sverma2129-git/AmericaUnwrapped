@@ -8,10 +8,10 @@ const chapter: ChapterData = {
   timeframe: '1969–1972',
   leadImageId: 'nixon-cambodia-1970',
   galleryImageIds: ['moratorium-vigil-1969'],
-  title: 'Nixon, Vietnamization, & The Widening War',
-  subtitle: 'Troop drawdowns, Cambodia, Lam Son 719, and the 1972 Easter Offensive',
+  title: 'Nixon and Vietnamization',
+  subtitle: 'Troops come home while the war spreads to Cambodia and Laos',
   summary:
-    'Elected on a pledge to achieve "peace with honor," Richard Nixon instituted "Vietnamization"—gradually withdrawing American ground troops from 543,000 to under 25,000 while shifting combat burdens to the ARVN. To shield the withdrawal, Nixon widened the conflict by secretly bombing Cambodia, invading cross-border sanctuaries, and opening triangular diplomacy with Moscow and Beijing. Operation Lam Son 719 in Laos and the 1972 Easter Offensive exposed the limits of South Vietnamese ground self-sufficiency without U.S. air support.',
+    'Richard Nixon won the presidency promising "peace with honor." His plan, called Vietnamization, cut U.S. ground troops from 543,000 to under 25,000. South Vietnam’s army, the ARVN, took over the fighting. To cover the pullout, Nixon widened the war. He secretly bombed Cambodia, sent troops across the border, and opened talks with Moscow and Beijing. Two big battles, Lam Son 719 in Laos and the 1972 Easter Offensive, showed the same thing. The ARVN could not hold on the ground without U.S. air power.',
   whatHappened: {
     narrative: [
       'Upon taking office in 1969, Richard Nixon faced intense domestic pressure to end American casualties. Under the Nixon Doctrine and "Vietnamization," the administration began withdrawing American ground forces, drawing numbers down from their 1969 peak of 543,000 to 24,000 by late 1972.[^c8-1] Historians continue to debate Nixon’s intent: revisionist scholars argue General Creighton Abrams’ "One War" pacification strategy was genuinely succeeding,[^c8-2] while critics argue Nixon and Kissinger sought primarily a "decent interval"—buying enough time so South Vietnam’s eventual collapse would not be perceived as an American defeat.[^c8-1]',
@@ -19,12 +19,12 @@ const chapter: ChapterData = {
       'In February 1971, Operation Lam Son 719 tested Vietnamization: three ARVN divisions crossed into Laos along Route 9 to sever the Ho Chi Minh Trail without American ground troops or forward advisors. When the NVA counterattacked with massed conventional armor and heavy artillery, the ARVN withdrawal turned into a chaotic retreat, with soldiers clinging to helicopter skids.[^c8-3] While Washington claimed the raid disrupted northern logistics for a year, it demonstrated South Vietnam’s severe operational vulnerability without direct American ground support. In March 1972, Hanoi launched the conventional Easter Offensive with hundreds of Soviet-supplied tanks; South Vietnamese forces held key cities like An Loc and Quang Tri only through massive U.S. aerial bombardment under Operation Linebacker I and the mining of Haiphong harbor, confirming that the ARVN could hold with American airpower, but could not hold without it.',
     ],
     keyEvents: [
-      { date: 'March 1969', title: 'Operation Menu Begins', detail: 'Secret B-52 bombing inside Cambodia concealed through falsified mission logs.' },
-      { date: 'June 1969', title: 'Troop Withdrawals Announced', detail: 'Nixon announces initial withdrawal of 25,000 U.S. troops at Midway Island meeting with Thieu.' },
-      { date: 'April 30, 1970', title: 'Cambodian Incursion', detail: 'U.S. and ARVN ground forces cross into Cambodia to destroy communist base areas.' },
-      { date: 'May 4, 1970', title: 'Kent State Shootings', detail: 'Ohio National Guard kills four student demonstrators, closing hundreds of colleges nationwide.' },
-      { date: 'Feb–March 1971', title: 'Operation Lam Son 719 (Laos)', detail: 'ARVN ground incursion into Laos routed by NVA armor, exposing Vietnamization’s conventional limits.' },
-      { date: 'March–Oct 1972', title: 'Easter Offensive & Linebacker I', detail: 'Massive NVA conventional invasion repulsed by intense ARVN resistance backed by U.S. air strikes.' },
+      { date: 'March 1969', title: 'Operation Menu begins', detail: 'Secret B-52 bombing in Cambodia, hidden with false flight records.' },
+      { date: 'June 1969', title: 'The first troops come home', detail: 'Meeting Thieu on Midway Island, Nixon announces the withdrawal of 25,000 U.S. troops.' },
+      { date: 'April 30, 1970', title: 'Troops enter Cambodia', detail: 'U.S. and ARVN ground forces cross into Cambodia to destroy communist bases.' },
+      { date: 'May 4, 1970', title: 'The Kent State shootings', detail: 'Ohio National Guardsmen kill four student protesters. Hundreds of colleges close.' },
+      { date: 'Feb–March 1971', title: 'Lam Son 719 in Laos', detail: 'North Vietnamese tanks rout the ARVN’s push into Laos, showing the limits of Vietnamization.' },
+      { date: 'March–Oct 1972', title: 'The Easter Offensive and Linebacker I', detail: 'A huge North Vietnamese invasion is beaten back by the ARVN with heavy U.S. air support.' },
     ],
   },
   washington: {
@@ -84,15 +84,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'vietnamization-tracker',
     type: 'vietnamization-tracker',
-    title: 'Vietnamization: The Substitution Dynamic & Strategic Limits',
+    title: 'Could South Vietnam fight alone?',
     prompt:
-      'Track the inverse trajectories from 1968 to 1972: inspect how falling U.S. troop levels correlated with rising ARVN combat deaths and surging aerial bombing tonnages, and examine the contested "decent interval" debate.',
+      'Follow three lines from 1968 to 1972: U.S. troop numbers falling, South Vietnamese combat deaths rising, and bombing increasing. Then look at the argument over the "decent interval."',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['mccarthy-hanoi-1968']],
   nextQuestion: {
-    question: 'Did the 1973 Paris Peace Accords end the war, or end American participation?',
+    question: 'Did the 1973 Paris Peace Accords end the war, or only America’s part in it?',
     framing:
-      'In late 1972, Henry Kissinger announced "peace is at hand." What did the secret treaty say about North Vietnamese troops inside South Vietnam, and why did President Thieu call it a death sentence?',
+      'In late 1972, Henry Kissinger announced that "peace is at hand." What did the agreement say about North Vietnamese troops inside South Vietnam, and why did President Thieu call it a death sentence?',
   },
   citations: [
     CITATION_REGISTRY['c8-1'],

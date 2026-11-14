@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
   chapterId: 'nixon-and-vietnamization',
   bigQuestion:
-    'Did Nixon’s policy of "Vietnamization" represent a genuine path to South Vietnamese independence or merely an attempt to secure a "decent interval"?',
+    'Was Nixon’s "Vietnamization" a real plan for South Vietnam to stand alone, or a way to buy a "decent interval" before it fell?',
   whyItMatters:
-    'Examines the agonizing four-year withdrawal that expanded the war into Cambodia, triggered historic campus protests like Kent State, and resulted in unprecedented congressional limits on executive power.',
+    'The withdrawal took four years. Along the way the war spread into Cambodia, campus protests such as Kent State shook the country, and Congress put new limits on the president’s power.',
   whatYouWillLearn: [
-    'How the Nixon Doctrine and "Vietnamization" withdrew 500,000 U.S. troops while expanding the air war.',
-    'How the secret bombing of Cambodia (Operation Menu) and the 1970 incursion ignited nationwide campus uprisings.',
-    'How Operation Lam Son 719 and the 1972 Easter Offensive proved ARVN’s total dependence on American airpower.',
+    'How the Nixon Doctrine and "Vietnamization" brought home 500,000 U.S. troops while the air war grew.',
+    'How the secret bombing of Cambodia (Operation Menu) and the 1970 ground attack there set off protests on campuses across the country.',
+    'How Operation Lam Son 719 and the 1972 Easter Offensive showed that South Vietnam’s army depended on American air power.',
   ],
   briefing: {
     summary:
-      'Taking office in 1969, President Richard Nixon and National Security Advisor Henry Kissinger faced intense domestic pressure to end American casualties. Under "Vietnamization" and the Nixon Doctrine, the U.S. began withdrawing American ground troops (reducing numbers from 543,000 to 24,000 by late 1972) while transferring combat responsibilities and modern weaponry to the South Vietnamese army (ARVN). To destroy communist sanctuaries along the border, Nixon secretly ordered B-52 carpet bombing of neutral Cambodia (Operation Menu), concealed from Congress via dual record-keeping. In April 1970, Nixon announced an open ground incursion into Cambodia, triggering nationwide campus strikes; on May 4, Ohio National Guardsmen shot and killed four students at Kent State University. In response, Congress passed the Cooper-Church Amendment, legally prohibiting U.S. troops from operating in Cambodia or Laos—the first congressional restriction on troop deployments during an ongoing war. In 1971, the disastrous ARVN retreat during Operation Lam Son 719 in Laos, followed by Hanoi’s massive conventional 1972 Easter Offensive, demonstrated that South Vietnam could hold with massive U.S. air support (Operation Linebacker I), but could not survive on its own.',
+      'When Richard Nixon took office in 1969, he and National Security Adviser Henry Kissinger were under heavy pressure to stop American casualties. Under "Vietnamization" and the Nixon Doctrine, the U.S. began pulling out ground troops. Their number fell from 543,000 to 24,000 by late 1972. The fighting, and modern weapons, were handed to South Vietnam’s army, the ARVN. To destroy communist bases along the border, Nixon secretly ordered B-52s to bomb neutral Cambodia in Operation Menu. False records hid it from Congress. In April 1970, Nixon announced that ground troops were entering Cambodia, and campuses across the country went on strike. On May 4, Ohio National Guardsmen shot and killed four students at Kent State University. Congress answered with the Cooper-Church Amendment, which barred U.S. troops from Cambodia and Laos. It was the first time Congress had restricted troop deployments during a war. In 1971, the ARVN’s retreat in Operation Lam Son 719 in Laos went badly. In 1972, Hanoi launched its Easter Offensive with tanks and regular divisions. South Vietnam held with massive U.S. air support, called Operation Linebacker I. It could not have held alone.',
     examTakeaways: [
-      'Vietnamization Doctrine: Designed to reduce American casualties and quiet domestic protests by substituting South Vietnamese infantry for American soldiers while keeping U.S. air and logistical power in place.',
-      'Expansion into Cambodia & Kent State: Expanding the war into Cambodia ignited unprecedented domestic unrest, leading to the Kent State shootings and nationwide university closures.',
-      'Congressional War Powers Resurgence: Congress took historic steps to curtail executive war authority, passing the Cooper-Church Amendment and repealing the Gulf of Tonkin Resolution.',
+      'Vietnamization: The plan was to cut American casualties and calm protests at home. South Vietnamese infantry replaced American soldiers, while U.S. air power and supplies stayed.',
+      'Cambodia and Kent State: Taking the war into Cambodia set off huge protests at home. They led to the Kent State shootings and closed universities across the country.',
+      'Congress pushes back: Congress moved to limit the president’s war powers. It passed the Cooper-Church Amendment and repealed the Gulf of Tonkin Resolution.',
     ],
     keyTerms: [
       {
@@ -26,30 +26,30 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
         term: 'Vietnamization',
         phonetic: 'vyet-NAM-ih-ZAY-shun',
         definition:
-          'President Nixon’s policy of equipping and training South Vietnamese armed forces to take over combat operations while systematically withdrawing American ground combat divisions.',
+          'President Nixon’s policy of training and equipping South Vietnam’s forces to take over the fighting while American ground troops were withdrawn step by step.',
         significance:
-          'Reduced U.S. troop levels from 543,000 in 1969 to under 25,000 by 1972, lowering American draft calls and casualty lists while intensifying aerial bombing.',
-        examTip: 'High frequency. Paired with the Nixon Doctrine on AP exams.',
+          'It cut U.S. troop levels from 543,000 in 1969 to under 25,000 by 1972. Draft calls and American casualties fell, while bombing increased.',
+        examTip: 'Shows up often. AP exams pair it with the Nixon Doctrine.',
       },
       {
         id: 'kent-state-shootings',
         term: 'Kent State Shootings (May 4, 1970)',
         phonetic: 'KENT STAYT',
         definition:
-          'The shooting of unarmed student protesters by Ohio National Guardsmen at Kent State University during anti-war demonstrations against the Cambodian Incursion, killing four students and wounding nine.',
+          'Ohio National Guardsmen shot unarmed students at Kent State University during protests against the move into Cambodia. Four students were killed and nine were wounded.',
         significance:
-          'Triggered a nationwide student strike that shut down over 400 colleges and universities, polarizing American society and deepening anti-war sentiment.',
-        examTip: 'Symbol of domestic polarization; immortalized in the Crosby, Stills, Nash & Young song "Ohio".',
+          'It set off a nationwide student strike that closed more than 400 colleges and universities. It divided the country and deepened opposition to the war.',
+        examTip: 'A symbol of how divided the country was. Crosby, Stills, Nash & Young wrote the song "Ohio" about it.',
       },
       {
         id: 'operation-menu',
         term: 'Operation Menu (1969–1970)',
         phonetic: 'OP-uh-RAY-shun MEN-yoo',
         definition:
-          'The secret B-52 carpet-bombing campaign conducted against North Vietnamese base camps and sanctuaries inside neutral Cambodia, code-named Breakfast, Lunch, Snack, Dinner, and Dessert.',
+          'The secret B-52 bombing of North Vietnamese bases inside neutral Cambodia. Its phases were code-named Breakfast, Lunch, Snack, Dinner and Dessert.',
         significance:
-          'Concealed from Congress and the public through fraudulent military flight logs; destabilized rural Cambodia and contributed to the rise of the Khmer Rouge.',
-        examTip: 'Became a specific article in the draft articles of impeachment against Nixon in 1974.',
+          'Falsified flight records hid it from Congress and the public. It unsettled rural Cambodia and, some historians argue, helped the Khmer Rouge rise.',
+        examTip: 'A proposed article of impeachment against Nixon in 1974 was based on it.',
       },
     ],
   },
@@ -66,7 +66,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'The Cooper-Church Amendment was a landmark resurgence of congressional constitutional authority, legally prohibiting the use of congressional funds for American ground troops, advisers, and air combat support in Cambodia after June 30, 1970.',
+        'With the Cooper-Church Amendment, Congress used its control of spending to limit the president. It barred the use of funds for American ground troops, advisers and air combat support in Cambodia after June 30, 1970.',
       citationRef: 'c8-1',
     },
     {
@@ -81,7 +81,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Lam Son 719 was designed to test whether ARVN could fight independently. Without American infantry advisers on the ground, three South Vietnamese divisions were badly mauled by North Vietnamese armor and heavy artillery, turning their withdrawal down Route 9 into a chaotic rout broadcast on television.',
+        'Lam Son 719 was a test of whether the ARVN could fight on its own. With no American advisers on the ground, three South Vietnamese divisions were badly beaten by North Vietnamese tanks and heavy artillery. Their retreat down Route 9 turned into a rout that was shown on television.',
       citationRef: 'c8-3',
     },
     {
@@ -96,7 +96,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'Scholars (such as Jeffrey Kimball and Frank Snepp) argue that declassified tapes show Nixon and Kissinger privately recognized South Vietnam could not survive indefinitely. They sought a "decent interval"—a year or two between U.S. troop withdrawal and Saigon’s collapse—so the defeat would appear to be South Vietnam’s fault rather than America’s.',
+        'Scholars such as Jeffrey Kimball and Frank Snepp argue that the White House tapes show Nixon and Kissinger knew South Vietnam could not survive for long. In this view, they wanted a "decent interval" of a year or two between the U.S. withdrawal and Saigon’s fall, so that the defeat would look like South Vietnam’s and not America’s.',
       citationRef: 'c8-1',
     },
     {
@@ -121,30 +121,30 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       term: 'The Nixon Doctrine',
       phonetic: 'NIK-sun DOK-trin',
       definition:
-        'Foreign policy announcement by President Nixon in Guam (1969) stating that the U.S. would provide economic and military aid to Asian allies, but that allies must provide their own ground combat troops.',
+        'A policy President Nixon announced on Guam in 1969. The U.S. would give Asian allies money and military aid, but the allies would have to supply their own ground troops.',
       significance:
-        'Shifted American grand strategy away from direct land troop interventions in the Third World toward proxy warfare and airpower.',
-      examTip: 'The intellectual foundation for Vietnamization.',
+        'It moved American policy away from sending its own armies into wars in poorer countries, and toward backing allies and using air power.',
+      examTip: 'It is the idea behind Vietnamization.',
     },
     {
       id: 'c8-fc2',
       term: 'The "Madman Theory"',
       phonetic: 'MAD-man THEE-uh-ree',
       definition:
-        'Nixon’s calculated negotiating tactic of convincing communist leaders that he was volatile, unpredictable, and prepared to use nuclear weapons if the war continued.',
+        'Nixon’s negotiating tactic. He wanted communist leaders to believe he was unpredictable and might use nuclear weapons if the war went on.',
       significance:
-        'Used to pressure Hanoi, Moscow, and Beijing into making diplomatic concessions in Paris.',
-      examTip: 'Revealed in H.R. Haldeman’s White House diaries and memoirs.',
+        'He used it to press Hanoi, Moscow and Beijing to give ground in the Paris talks.',
+      examTip: 'It is described in the diaries and memoirs of his chief of staff, H.R. Haldeman.',
     },
     {
       id: 'c8-fc3',
       term: 'Operation Linebacker I (1972)',
       phonetic: 'LINE-bak-er ONE',
       definition:
-        'Massive U.S. aerial bombardment campaign and mining of Haiphong harbor launched by Nixon to halt North Vietnam’s conventional Easter Offensive.',
+        'A massive U.S. bombing campaign, along with the mining of Haiphong harbor. Nixon ordered it to stop North Vietnam’s Easter Offensive.',
       significance:
-        'Used laser-guided "smart bombs" for the first time on a large scale, destroying vital rail lines and bridges and stopping Hanoi’s armored advance in the South.',
-      examTip: 'Proved South Vietnam could survive conventional invasion only with overwhelming American airpower.',
+        'It was the first large-scale use of laser-guided "smart bombs." They destroyed key rail lines and bridges and stopped Hanoi’s tanks in the South.',
+      examTip: 'It showed that South Vietnam could survive an invasion only with overwhelming American air power.',
     },
   ],
 };

@@ -18,7 +18,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
     saigon: 'Republic of Vietnam Historical Archive',
     neutral: 'Eyewitness Journalistic Record',
     international: 'International Diplomatic Archive',
-  }[document.side] || 'Archival Document';
+  }[document.side] || 'Document';
 
   const lookupId = document.registryId || document.id;
 
@@ -45,7 +45,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
             onClick={() => openCitation(lookupId)}
             className="text-[11px] font-bold text-brand hover:underline px-2.5 py-0.5 border border-brand/30 bg-paper cursor-pointer rounded-xs"
           >
-            Citation Dossier
+            Source details
           </button>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
         {/* Why It Matters Callout — Front & Center */}
         <div className="border-l border-brand pl-4 py-1">
           <span className="text-[11px] font-bold text-brand block mb-1">
-            Why This Artifact Matters
+            Why this document matters
           </span>
           <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
             {document.whyItMatters}
@@ -75,7 +75,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
         <div className="relative p-5 sm:p-7 bg-paper border border-rule text-xs sm:text-sm text-ink leading-relaxed rounded-xs">
           <div className="text-[10px] text-ink-soft mb-3 border-b border-rule pb-1.5 flex items-center justify-between">
             <span>
-              {document.isVerified ? 'Source Transcription' : 'Archival Summary & Record (Unverified)'}
+              {document.isVerified ? 'The exact words' : 'A summary in our words'}
             </span>
             <span>Ref: {document.registryId || document.id}</span>
           </div>
@@ -94,8 +94,8 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
             <span>Repository: {document.archiveSource}</span>
             <span className="italic">
               {document.isVerified
-                ? 'Source transcription'
-                : 'Pending Archival Verification (Paraphrased Summary)'}
+                ? 'The exact words'
+                : 'A summary, not a quotation'}
             </span>
           </div>
         </div>
@@ -107,13 +107,13 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
             onClick={() => setShowFullContext(!showFullContext)}
             className="text-xs font-semibold text-brand underline underline-offset-4 hover:text-brand-hover cursor-pointer"
           >
-            {showFullContext ? 'Collapse Archival Note ↑' : 'Inspect Archival Provenance & Historical Context ↓'}
+            {showFullContext ? 'Hide background' : 'Show background'}
           </button>
 
           {showFullContext && (
             <div className="mt-4 p-5 bg-paper border border-rule text-xs sm:text-sm leading-relaxed space-y-3 rounded-xs">
               <span className="text-xs font-bold text-brand block">
-                Historical Context &amp; Declassification Record
+                Background
               </span>
               <p className="text-ink-muted">{document.historicalContext}</p>
             </div>

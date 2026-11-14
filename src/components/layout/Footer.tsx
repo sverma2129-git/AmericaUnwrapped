@@ -27,12 +27,12 @@ export default function Footer() {
           {/* Explore History */}
           <div>
             <h3 className="text-xs font-bold text-brand mb-3">
-              Explore History
+              Explore history
             </h3>
             <ul className="space-y-2 text-sm text-ink-muted">
               <li>
                 <Link href="/vietnam" className="hover:text-brand transition-colors">
-                  The Vietnam War Hub
+                  Unit overview
                 </Link>
               </li>
               <li>
@@ -52,12 +52,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="hover:text-brand transition-colors">
-                  How We Work
+                  How we work
                 </Link>
               </li>
               <li>
                 <Link href="/about#image-credits" className="hover:text-brand transition-colors">
-                  Image Credits
+                  Image credits
                 </Link>
               </li>
             </ul>
@@ -66,32 +66,32 @@ export default function Footer() {
           {/* Student Study Tools */}
           <div>
             <h3 className="text-xs font-bold text-brand mb-3">
-              Study Tools
+              Study tools
             </h3>
             <ul className="space-y-2 text-sm text-ink-muted">
               <li>
                 <Link href="/vietnam/study-guide" className="font-semibold text-brand hover:underline transition-colors">
-                  Master Unit Study Guide
+                  Study guide
                 </Link>
               </li>
               <li>
                 <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  1-Page Unit Cheat Sheet
+                  Cheat sheet
                 </Link>
               </li>
               <li>
                 <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  Multi-Chapter Self-Quiz
+                  Practice quiz
                 </Link>
               </li>
               <li>
                 <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  Key Terms &amp; Flashcards
+                  Key terms
                 </Link>
               </li>
               <li>
                 <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  DBQ &amp; Essay Outlines
+                  Essay outlines
                 </Link>
               </li>
             </ul>

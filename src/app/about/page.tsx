@@ -4,7 +4,7 @@ import { Thumb } from '@/components/common/Figure';
 import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
 
 export const metadata: Metadata = {
-  title: 'How We Work',
+  title: 'How we work',
   description:
     'How America Unwrapped decides what is true: evidence first, the same standard for every side, and the original documents one click away.',
 };
@@ -13,61 +13,61 @@ export default function AboutPage() {
   const editorialRules = [
     {
       number: '01',
-      title: 'Evidence Before Conclusion',
+      title: 'Evidence before conclusions',
       description:
         "We don't start with the answer and go looking for proof. We start with what the records from the time actually say, and let that lead.",
     },
     {
       number: '02',
-      title: 'The Same Standard for Every Side',
+      title: 'The same standard for every side',
       description:
         "Washington, Hanoi, and Saigon get the same hard look. American overconfidence and North Vietnam's purges and brutality are both examined with the same care.",
     },
     {
       number: '03',
-      title: 'Facts Are Not Opinions',
+      title: 'Facts are not opinions',
       description:
         'Some things are settled, like the date and ship movements in the Gulf of Tonkin. Why they happened is often argued about. We tell you which is which.',
     },
     {
       number: '04',
-      title: 'No Fake Balance',
+      title: 'No fake balance',
       description:
         'When the evidence is overwhelming, like the fact that no North Vietnamese boats attacked on the night of August 4, 1964, we say so plainly. We don\'t invent a "debate" to look even-handed.',
     },
     {
       number: '05',
-      title: 'Real Disagreements, Explained',
+      title: 'Real disagreements, explained',
       description:
         'When serious historians disagree, like over whether the war was winnable or whether Kennedy planned to pull out, we show you the evidence each side uses and let you weigh it.',
     },
     {
       number: '06',
-      title: 'Nobody Could See the Future',
+      title: 'Nobody could see the future',
       description:
         'People made decisions in confusion, with incomplete information. We judge them by what they knew at the time, not by what we know now.',
     },
     {
       number: '07',
-      title: 'People, Not Cartoons',
+      title: 'People, not cartoons',
       description:
         "Presidents, soldiers, and diplomats were real people under real pressure. We don't sort them into heroes and villains.",
     },
     {
       number: '08',
-      title: 'Plain Words',
+      title: 'Plain words',
       description:
         'We avoid loaded language. Clear writing explains why things happened better than outrage does.',
     },
     {
       number: '09',
-      title: 'Read It Yourself',
+      title: 'Read it yourself',
       description:
         "Big claims link to the original document: the cable, the treaty, the intelligence report, the Politburo resolution. You don't have to take our word for it.",
     },
     {
       number: '10',
-      title: 'Historians, Not Algorithms',
+      title: 'Historians, not algorithms',
       description:
         'We use AI to help build the site, never as a source of history. The history comes from published scholarship and archival records, and every quotation is checked against the original.',
     },
@@ -88,7 +88,7 @@ export default function AboutPage() {
           </li>
           <li aria-hidden="true">&bull;</li>
           <li className="text-brand font-bold" aria-current="page">
-            How We Work
+            How we work
           </li>
         </ol>
       </nav>

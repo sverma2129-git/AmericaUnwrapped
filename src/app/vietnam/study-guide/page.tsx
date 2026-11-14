@@ -12,7 +12,7 @@ import DbqOutlines from '@/components/study/guide/DbqOutlines';
 import { Thumb } from '@/components/common/Figure';
 
 export const metadata: Metadata = {
-  title: 'Vietnam War Study Guide & Exam Review',
+  title: 'Vietnam War study guide',
   description:
     'A 1-page unit cheat sheet, self-grading practice quizzes with historical rationales, vocabulary flashcards, and DBQ essay outlines for AP, Honors, and Regular U.S. History.',
 };
@@ -41,7 +41,7 @@ export default function StudyGuidePage() {
             <li aria-hidden="true">&bull;</li>
             <li>
               <Link href="/vietnam" className="hover:text-brand transition-colors">
-                Explore History
+                Explore history
               </Link>
             </li>
             <li aria-hidden="true">&bull;</li>
@@ -53,17 +53,17 @@ export default function StudyGuidePage() {
 
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <span className="meta px-2.5 py-1 bg-brand-tint text-brand border border-brand-rule rounded-sm">
-            AP &bull; Honors &bull; Regular U.S. History Curriculum
+            U.S. History and AP U.S. History
           </span>
           <span className="text-xs text-ink-muted">AP Period 8 (1945–1980)</span>
         </div>
 
         <h1 className="font-display text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
-          Vietnam War Master Study Guide &amp; Exam Review
+          Vietnam War study guide
         </h1>
 
         <p className="mt-4 font-display text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
-          The definitive 1-page unit cheat sheet, interactive practice quizzes with historical rationales, master vocabulary flashcards, and high-yield DBQ essay outlines.
+          The whole unit on one page, a practice quiz with explanations, flashcards and essay outlines.
         </p>
       </header>
 
@@ -77,18 +77,18 @@ export default function StudyGuidePage() {
       <div className="space-y-12">
         <StudyGuideTabs
           tabs={[
-            { id: 'cheatsheet', label: '1-Page Unit Cheat Sheet', content: <CheatSheet /> },
+            { id: 'cheatsheet', label: 'Cheat sheet', content: <CheatSheet /> },
             {
               id: 'quiz',
-              label: `Master Practice Quiz (${allQuestions.length} Questions)`,
+              label: `Practice quiz (${allQuestions.length})`,
               content: <MasterQuiz allQuestions={allQuestions} groups={quizGroups} />,
             },
             {
               id: 'flashcards',
-              label: `Flashcards & Glossary (${glossary.length} Terms)`,
+              label: `Flashcards (${glossary.length})`,
               content: <GlossaryPanel terms={glossary} />,
             },
-            { id: 'dbq', label: 'DBQ & Long Essay Outlines', content: <DbqOutlines /> },
+            { id: 'dbq', label: 'Essay outlines', content: <DbqOutlines /> },
           ]}
         />
       </div>
@@ -96,13 +96,13 @@ export default function StudyGuidePage() {
       {/* 3. Bottom Navigation Footer */}
       <footer className="border-t border-rule pt-8 flex flex-wrap items-center justify-between gap-4 text-xs">
         <Link href="/vietnam" className="text-ink-muted hover:text-brand font-semibold">
-          Back to Explore History
+          Back to the unit
         </Link>
         <Link
           href={`/vietnam/${firstChapter.id}`}
           className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white font-semibold rounded-xs transition-colors"
         >
-          Begin Chapter 01: Dien Bien Phu
+          Start Chapter 1
         </Link>
       </footer>
     </div>

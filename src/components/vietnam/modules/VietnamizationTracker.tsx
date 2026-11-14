@@ -102,13 +102,13 @@ export default function VietnamizationTracker() {
           <span className="text-stone-500 ml-2">&bull; The Substitution Dynamic</span>
         </div>
         <span className="text-stone-500 text-[11px]">
-          Click points on graph to select year
+          Tap a point to pick a year
         </span>
       </div>
 
       <div>
         <h4 className="font-display text-2xl font-bold text-stone-900">
-          The &ldquo;Scissors Curve&rdquo; of Vietnamization
+          As U.S. troops left, the bombing grew
         </h4>
         <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
           Between 1968 and 1972, the United States withdrew over 500,000 ground troops to de-escalate domestic political opposition. However, combat intensity did not decline proportionally: ground combat was transferred to the South Vietnamese army, subsidized by massive air bombardment.
@@ -270,19 +270,19 @@ export default function VietnamizationTracker() {
             {current.arvnDeaths.toLocaleString()}
           </div>
           <div className="text-xs text-stone-500 mt-1">
-            Ground casualties transferred to South Vietnam
+            South Vietnam took over the ground fighting
           </div>
         </div>
 
         <div className="p-4 bg-white border border-stone-200 rounded-xs">
           <div className="text-[10px] text-stone-500">
-            U.S. Aerial Bomb Tonnage
+            U.S. bomb tonnage
           </div>
           <div className="font-display text-2xl font-bold mt-1 text-stone-900">
             {current.bombTonnage}
           </div>
           <div className="text-xs text-stone-500 mt-1">
-            Airpower substituted for ground troops
+            Planes replaced ground troops
           </div>
         </div>
       </div>
@@ -300,7 +300,7 @@ export default function VietnamizationTracker() {
 
         <div className="pt-3 border-t border-stone-100">
           <span className="text-[10px] text-brand font-bold block mb-1">
-            Historiographical Controversy:
+            Historians disagree:
           </span>
           <p className="font-display text-sm text-stone-700 leading-relaxed">
             {current.contestedDebate}

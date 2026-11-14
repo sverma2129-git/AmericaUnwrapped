@@ -22,13 +22,13 @@ export default function AttritionModel() {
           <span className="text-stone-500 ml-2">&bull; MACV Attrition &amp; The Crossover Point (1965–1967)</span>
         </div>
         <span className="text-stone-500 text-[11px]">
-          Interactive Parameter Exploration
+          Try it yourself
         </span>
       </div>
 
       <div>
         <h4 className="font-display text-2xl font-bold text-stone-900">
-          The Strategy of Attrition &amp; The Crossover Point Model
+          Could the U.S. kill enemy soldiers faster than Hanoi replaced them?
         </h4>
         <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
           General William Westmoreland defined American military victory through reaching the &ldquo;crossover point&rdquo;: the threshold at which allied firepower would kill or incapacitate enemy soldiers faster than North Vietnam and the Viet Cong could replenish them. Adjust the operational parameters below to examine the demographic and tactical assumptions that governed the debate.
@@ -68,7 +68,7 @@ export default function AttritionModel() {
           <div>
             <div className="flex justify-between text-xs mb-2">
               <span className="text-stone-700 font-bold">
-                Enemy Firefight Initiation Rate:
+                Share of firefights the enemy started:
               </span>
               <span className="font-bold text-stone-900">
                 {combatInitiationRate}%
@@ -95,7 +95,7 @@ export default function AttritionModel() {
           </div>
 
           <div className="pt-4 border-t border-stone-100 text-xs text-stone-600">
-            <div>Baseline Northern Draft Cohort: <strong>~200,000/yr (16,500/mo)</strong></div>
+            <div>Young men reaching draft age in the North: <strong>~200,000/yr (16,500/mo)</strong></div>
             <div className="text-[11px] text-stone-500 mt-0.5">Demographic pool reaching age 18 annually in North Vietnam.</div>
           </div>
         </div>
@@ -104,14 +104,14 @@ export default function AttritionModel() {
         <div className="md:col-span-6 space-y-4">
           <div className="p-5 bg-white border border-stone-200 rounded-xs space-y-4">
             <span className="text-[10px] text-stone-500 block">
-              Manpower Replacement Ledger
+              Losses and replacements
             </span>
 
             {/* Visual Bar Comparison */}
             <div className="space-y-3 pt-2">
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-stone-600">Hanoi Monthly Inflow:</span>
+                  <span className="text-stone-600">New troops Hanoi sends each month:</span>
                   <span className="font-bold text-stone-900">16,500 cadres</span>
                 </div>
                 <div className="h-6 w-full bg-stone-200 rounded-xs overflow-hidden">
@@ -121,7 +121,7 @@ export default function AttritionModel() {
 
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-stone-600">Effective Combat Losses:</span>
+                  <span className="text-stone-600">Troops lost in combat:</span>
                   <span className="font-bold text-red-700">{effectiveLosses.toLocaleString()} / mo</span>
                 </div>
                 <div className="h-6 w-full bg-stone-200 rounded-xs overflow-hidden">
@@ -136,7 +136,7 @@ export default function AttritionModel() {
             {/* Resulting Balance Card */}
             <div className={`p-4 border rounded-xs transition-colors ${ netMonthlyChange > 0 ? 'bg-parchment border-rule' : 'bg-emerald-50 border-emerald-300' }`}>
               <div className="text-[10px] font-bold text-ink-soft">
-                Net Monthly Manpower Trajectory:
+                Change in enemy troops each month:
               </div>
               <div className="font-display text-2xl font-bold mt-1 text-ink">
                 {netMonthlyChange > 0 ? `+${netMonthlyChange.toLocaleString()} cadres / mo` : `${netMonthlyChange.toLocaleString()} cadres / mo`}

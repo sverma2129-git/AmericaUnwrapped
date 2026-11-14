@@ -15,9 +15,9 @@ export interface QuizRange {
 
 /** Thematic groupings used by the master practice quiz filter. */
 export const QUIZ_RANGES: QuizRange[] = [
-  { id: 'early', label: 'Ch. 1–4: Origins & Tonkin', firstChapter: 1, lastChapter: 4 },
-  { id: 'escalation', label: 'Ch. 5–8: Escalation & Tet', firstChapter: 5, lastChapter: 8 },
-  { id: 'collapse', label: 'Ch. 9–12: Withdrawal & Legacy', firstChapter: 9, lastChapter: 12 },
+  { id: 'early', label: 'Ch. 1–4: How it started', firstChapter: 1, lastChapter: 4 },
+  { id: 'escalation', label: 'Ch. 5–8: The American war', firstChapter: 5, lastChapter: 8 },
+  { id: 'collapse', label: 'Ch. 9–12: The way out', firstChapter: 9, lastChapter: 12 },
 ];
 
 export function scoreQuiz(answers: Record<number, QuizAnswer>, totalQuestions: number) {

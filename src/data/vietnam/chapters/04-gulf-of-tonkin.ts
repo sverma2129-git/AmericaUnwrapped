@@ -7,10 +7,10 @@ const chapter: ChapterData = {
   number: 4,
   timeframe: '1964',
   leadImageId: 'tonkin-p4-1964',
-  title: 'The Gulf of Tonkin: Two Nights and a Resolution',
-  subtitle: 'Two sea incidents, selective intelligence, and the congressional resolution for war',
+  title: 'The Gulf of Tonkin',
+  subtitle: 'Two nights at sea and the vote that followed',
   summary:
-    'In August 1964, a confirmed daylight clash between North Vietnamese torpedo boats and the destroyer USS Maddox on August 2 was followed on August 4 by reports of a second attack in stormy seas. While naval commanders and NSA analysts quickly raised doubts about the second engagement, the Johnson administration presented the reports as clear provocation, securing nearly unanimous congressional approval for the Gulf of Tonkin Resolution.',
+    'On August 2, 1964, North Vietnamese torpedo boats fought the destroyer USS Maddox in daylight. That clash was real. On August 4, in a storm, U.S. ships reported a second attack. Navy commanders and NSA analysts soon doubted it, but the Johnson administration presented it as a clear attack. Congress passed the Gulf of Tonkin Resolution almost unanimously.',
   isLandmark: true,
   layout: 'layered',
   story: {
@@ -336,7 +336,7 @@ const chapter: ChapterData = {
     },
   },
   landmarkMoment: {
-    bannerTitle: 'The Tonkin Incident & The Blank Check Resolution',
+    bannerTitle: 'Two nights in the Gulf of Tonkin',
     dateline: 'August 2 & 4, 1964',
     location: 'Gulf of Tonkin, South China Sea',
     quote:
@@ -364,12 +364,12 @@ const chapter: ChapterData = {
       'Two nights later, on August 4, in heavy rain and total darkness, the Maddox and the USS Turner Joy reported coming under continuous torpedo attack, firing over 600 rounds at radar contacts. Hours later, task group commander Captain John Herrick cabled Washington urging caution, reporting that many reported contacts and torpedo firings appeared doubtful:[^Q013] "Review of action makes many reported contacts and torpedoes fired appear doubtful..." Subsequent declassified naval track reconstructions by Edwin Moise[^c4-1] and official NSA historical analysis by Robert Hanyok[^c4-2] demonstrated conclusively that intercepted North Vietnamese communications cited as proof of an attack actually described the salvage operations of boats damaged on August 2. Facing an election campaign against conservative Barry Goldwater, President Johnson presented the incident as an unprovoked attack, ordered retaliatory airstrikes (Operation Pierce Arrow), and secured passage of the Gulf of Tonkin Resolution.[^c4-3]',
     ],
     keyEvents: [
-      { date: 'Jan 1964', title: 'OPLAN 34A Authorized', detail: 'Covert naval sabotage operations along the North Vietnamese coastline begin.' },
-      { date: 'July 31, 1964', title: 'Raid on Hon Me Island', detail: 'South Vietnamese patrol craft shell northern coastal radar sites while Maddox cruises offshore.' },
-      { date: 'Aug 2, 1964', title: 'First Tonkin Engagement', detail: 'Confirmed daylight clash between three North Vietnamese torpedo boats and USS Maddox.' },
-      { date: 'Aug 4, 1964', title: 'Reported Second Incident', detail: 'Destroyers fire into dark stormy waters on radar/sonar contacts; Captain Herrick cables doubts.' },
-      { date: 'Aug 4, 1964 (Night)', title: 'Operation Pierce Arrow', detail: 'LBJ announces retaliatory air strikes against North Vietnamese naval bases on national television.' },
-      { date: 'Aug 7, 1964', title: 'Gulf of Tonkin Resolution Passed', detail: 'Congress approves resolution 416–0 in House and 88–2 in Senate (Morse and Gruening dissenting).' },
+      { date: 'Jan 1964', title: 'OPLAN 34A is approved', detail: 'Secret raids by sea along North Vietnam’s coast begin.' },
+      { date: 'July 31, 1964', title: 'The raid on Hon Me Island', detail: 'South Vietnamese boats shell radar sites on the northern coast while the Maddox sails offshore.' },
+      { date: 'Aug 2, 1964', title: 'The first Tonkin clash', detail: 'Three North Vietnamese torpedo boats fight the USS Maddox in daylight. This one is confirmed.' },
+      { date: 'Aug 4, 1964', title: 'The second “attack”', detail: 'Destroyers fire into dark, stormy water at radar and sonar contacts. Captain Herrick sends a cable saying he has doubts.' },
+      { date: 'Aug 4, 1964 (Night)', title: 'Operation Pierce Arrow', detail: 'Johnson goes on national television to announce air strikes on North Vietnamese naval bases.' },
+      { date: 'Aug 7, 1964', title: 'Congress passes the Tonkin Resolution', detail: 'The vote is 416–0 in the House and 88–2 in the Senate. Morse and Gruening vote no.' },
     ],
   },
   washington: {
@@ -428,15 +428,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'tonkin-reconstruction',
     type: 'tonkin-reconstruction',
-    title: 'Reconstructing Tonkin: August 2 vs. August 4',
+    title: 'August 2 and August 4, side by side',
     prompt:
-      'Analyze the radar, sonar, and communications logs: inspect why August 2 was a confirmed daylight firefight and how weather, radar anomalies, and selective intelligence produced the August 4 reports.',
+      'Compare the two nights: why August 2 was a real fight, and how weather, radar errors and selective use of intelligence produced the August 4 reports.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['tonkin-resolution-1964'], PRIMARY_DOCUMENTS['hanyok-tonkin-nsa']],
   nextQuestion: {
-    question: 'Can an insurgency be defeated through the mathematics of attrition?',
+    question: 'Can you win a war by counting casualties?',
     framing:
-      'General William Westmoreland claimed the U.S. would reach a "crossover point"—killing enemy soldiers faster than North Vietnam could replace them. Why did that mathematical calculation break down?',
+      'General William Westmoreland said the United States would reach a "crossover point," killing enemy soldiers faster than North Vietnam could replace them. Why did the math not work?',
   },
   citations: [
     CITATION_REGISTRY['c4-1'],

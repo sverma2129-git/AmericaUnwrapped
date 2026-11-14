@@ -11,7 +11,7 @@ export default function GenevaDivisionMap() {
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
           <span className="font-bold text-ink">
-            Geopolitical Cartography
+            Map of the split
           </span>
           <span className="text-ink-soft ml-2">&bull; The 17th Parallel &amp; Geneva Partition (1954–1956)</span>
         </div>
@@ -35,7 +35,7 @@ export default function GenevaDivisionMap() {
             onClick={() => setActiveLayer('elections')}
             className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'elections' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
-            The 1956 Election Veto
+            The 1956 elections
           </button>
         </div>
       </div>
@@ -44,17 +44,17 @@ export default function GenevaDivisionMap() {
         <div>
           <span className="text-xs text-brand font-bold block">
             {activeLayer === 'boundary'
-              ? 'Provisional Military Demarcation Line (Ben Hai River)'
+              ? 'The temporary military line (Ben Hai River)'
               : activeLayer === 'refugees'
               ? 'Operation Passage to Freedom (1954–1955)'
-              : 'The Multi-Causal Partition Failure (1956)'}
+              : 'Why the split stuck (1956)'}
           </span>
           <h4 className="font-display text-2xl font-bold text-ink mt-1">
             {activeLayer === 'boundary'
-              ? 'A Temporary Truce Line That Hardened Into Cold War Partition'
+              ? 'A temporary truce line became a Cold War border'
               : activeLayer === 'refugees'
-              ? 'Nearly 1 Million Northern Catholics Flee South by U.S. Navy'
-              : 'Why Nationwide Elections Were Never Held'}
+              ? 'Nearly 1 million northerners, most of them Catholic, go south'
+              : 'Why the elections were never held'}
           </h4>
         </div>
 
@@ -163,10 +163,10 @@ export default function GenevaDivisionMap() {
                 The permanent partition was not caused by a single decision. It was a structural international failure:
               </p>
               <ul className="list-disc list-outside pl-4 space-y-1.5 font-sans text-xs text-ink-muted">
-                <li><strong className="text-ink">No Enforcement Mechanism:</strong> The International Control Commission (India, Canada, Poland) lacked legal authority or troops to supervise elections.</li>
+                <li><strong className="text-ink">No one to enforce it:</strong> The International Control Commission (India, Canada, Poland) lacked legal authority or troops to supervise elections.</li>
                 <li><strong className="text-ink">Diem’s Refusal:</strong> Diem argued South Vietnam had not signed the accords and that free elections were impossible in a communist totalitarian state.</li>
                 <li><strong className="text-ink">Eisenhower’s Assessment:</strong> Eisenhower famously acknowledged that had elections been held, Ho Chi Minh would have won roughly 80% of the nationwide vote due to his prestige as the victor over France.</li>
-                <li><strong className="text-ink">Northern Priorities:</strong> Hanoi was absorbed in a bloody and destabilizing internal land reform campaign, prioritizing northern consolidation over risking military conflict prematurely.</li>
+                <li><strong className="text-ink">Hanoi was busy at home:</strong> Hanoi was absorbed in a bloody and destabilizing internal land reform campaign, prioritizing northern consolidation over risking military conflict prematurely.</li>
               </ul>
             </div>
           )}

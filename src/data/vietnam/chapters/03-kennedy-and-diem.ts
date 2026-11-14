@@ -7,10 +7,10 @@ const chapter: ChapterData = {
   number: 3,
   timeframe: '1961–1963',
   leadImageId: 'jfk-laos-1961',
-  title: 'Kennedy, Counterinsurgency, & Diem',
-  subtitle: 'Advisory expansion, the Strategic Hamlet Program, and the November 1963 coup',
+  title: 'Kennedy, Diem and the coup',
+  subtitle: 'More advisers, the Strategic Hamlet Program, and the coup of November 1963',
   summary:
-    'Determined to avoid a conventional land war that might draw in China, President Kennedy embraced counterinsurgency, expanding the American advisory presence from roughly 900 to over 16,000 personnel. However, the Strategic Hamlet Program alienated rural peasants, the Battle of Ap Bac revealed structural weaknesses in the South Vietnamese military, and Diem’s repression of the Buddhist majority led Washington to signal tacit approval for the November 1963 coup that ended Diem’s regime.',
+    'President Kennedy wanted to avoid a big land war that might pull in China. He chose counterinsurgency instead and raised the number of American advisers from about 900 to more than 16,000. It went badly. The Strategic Hamlet Program turned farmers against the government, the Battle of Ap Bac showed how weak South Vietnam’s army was, and Diem cracked down on the Buddhist majority. In November 1963, Washington signaled that it would accept a coup, and Diem was overthrown.',
   whatHappened: {
     narrative: [
       'Taking office in 1961 amidst crises in Laos, Berlin, and the Bay of Pigs, President John F. Kennedy sought to counter Soviet-backed "wars of national liberation" without deploying conventional ground combat divisions, mindful of the Korean War precedent. Kennedy favored flexible response and counterinsurgency, dispatching Green Beret Special Forces, combat helicopter units, and authorizing defoliant testing. By late 1963, U.S. military personnel in South Vietnam expanded from approximately 900 to over 16,300—an escalation that took place well before Diem’s death.[^c3-2]',
@@ -18,13 +18,13 @@ const chapter: ChapterData = {
       'In May 1963, government troops opened fire on Buddhist demonstrators in Hue, sparking the Buddhist Crisis. On June 11, monk Thich Quang Duc publicly immolated himself in Saigon in protest; Malcolm Browne’s photograph galvanized world public opinion. When Diem’s brother and security chief, Ngo Dinh Nhu, raided sacred pagodas nationwide in August, Washington sent State Department Cable 243, drafted by Roger Hilsman, signaling to South Vietnamese generals that the U.S. would support a new government if Diem failed to remove Nhu.[^c3-3] On November 1–2, 1963, ARVN generals overthrew and executed Diem and Nhu with tacit U.S. knowledge; three weeks later, Kennedy himself was assassinated in Dallas.',
     ],
     keyEvents: [
-      { date: 'Nov 1961', title: 'NSAM 111 (Advisory Surge)', detail: 'Kennedy authorizes expansion of U.S. advisors, aviation units, and combat support.' },
-      { date: 'Feb 1962', title: 'MACV Established', detail: 'Military Assistance Command, Vietnam established under Gen. Paul Harkins.' },
-      { date: 'March 1962', title: 'Strategic Hamlet Program Launched', detail: 'Nationwide relocation of rural villagers into fortified compounds begins.' },
-      { date: 'Jan 2, 1963', title: 'Battle of Ap Bac', detail: 'Viet Cong battalion defeats superior ARVN force, exposing command dysfunction.' },
-      { date: 'June 11, 1963', title: 'Self-Immolation of Thich Quang Duc', detail: 'Buddhist monk’s sacrifice in Saigon sparks global outrage against Diem’s religious repression.' },
-      { date: 'Aug 24, 1963', title: 'State Department Cable 243', detail: 'Washington signals to South Vietnamese generals that it will not oppose Diem’s removal.' },
-      { date: 'Nov 1–2, 1963', title: 'Saigon Coup & Death of Diem', detail: 'ARVN military junta overthrows and executes Diem and Nhu; U.S. inherits ownership of the political vacuum.' },
+      { date: 'Nov 1961', title: 'Kennedy sends more advisers (NSAM 111)', detail: 'Kennedy approves more U.S. advisers, aircraft units and combat support.' },
+      { date: 'Feb 1962', title: 'MACV is set up', detail: 'The U.S. sets up Military Assistance Command, Vietnam, under General Paul Harkins.' },
+      { date: 'March 1962', title: 'The Strategic Hamlet Program starts', detail: 'Farmers across the country begin to be moved into fortified villages.' },
+      { date: 'Jan 2, 1963', title: 'The Battle of Ap Bac', detail: 'A Viet Cong battalion beats a much larger ARVN force and exposes weak leadership.' },
+      { date: 'June 11, 1963', title: 'A monk burns himself in protest', detail: 'Thich Quang Duc’s death in Saigon sets off outrage around the world at Diem’s treatment of Buddhists.' },
+      { date: 'Aug 24, 1963', title: 'Cable 243', detail: 'Washington signals to South Vietnamese generals that it will not stand in the way of removing Diem.' },
+      { date: 'Nov 1–2, 1963', title: 'The coup and Diem’s death', detail: 'ARVN generals overthrow and kill Diem and Nhu. The U.S. is left responsible for the chaos that follows.' },
     ],
   },
   washington: {
@@ -83,15 +83,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'escalation-timeline',
     type: 'escalation-timeline',
-    title: 'The Advisory Trap: Kennedy’s Escalation Curve',
+    title: 'From 900 advisers to 16,000',
     prompt:
-      'Trace the progression: from 900 military advisors in 1960 to over 16,000 in 1963, and explore how the definition of "advisory support" transformed into direct combat involvement.',
+      'Follow the numbers from 900 military advisers in 1960 to more than 16,000 in 1963, and see how "advising" turned into fighting.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['cable-243-diem']],
   nextQuestion: {
-    question: 'What actually occurred in the Gulf of Tonkin in August 1964?',
+    question: 'What really happened in the Gulf of Tonkin in August 1964?',
     framing:
-      'President Lyndon Johnson told the nation that American destroyers had been attacked without provocation in international waters. What do declassified naval logs and NSA intelligence records reveal about August 2 and August 4?',
+      'President Johnson told the country that American destroyers had been attacked for no reason in international waters. What do the Navy’s logs and the NSA’s records show about August 2 and August 4?',
   },
   citations: [
     CITATION_REGISTRY['c3-1'],

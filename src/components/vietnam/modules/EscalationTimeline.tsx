@@ -19,7 +19,7 @@ export default function EscalationTimeline() {
     1960: {
       advisors: 875,
       casualties: 9,
-      label: 'Eisenhower MAAG Baseline',
+      label: 'Where Eisenhower left it (MAAG)',
       operationalRule: 'Strictly defensive training; forbidden from accompanying ARVN units on combat missions.',
       milestone: 'Infiltration from North begins along early primitive tracks of the Truong Son mountains.',
       kennedyQuote: 'Publicly affirmed global commitments while privately recognizing the limits of American power to manage post-colonial regional upheavals.',
@@ -27,7 +27,7 @@ export default function EscalationTimeline() {
     1961: {
       advisors: 3205,
       casualties: 16,
-      label: 'The Flexible Response Shift (NSAM 111)',
+      label: 'Kennedy sends more (NSAM 111)',
       operationalRule: 'Advisors permitted to accompany battalion-level units; first U.S. Army helicopter companies deployed.',
       milestone: 'Kennedy rejects conventional ground combat divisions but authorizes Green Berets and Special Forces.',
       kennedyQuote: 'Expressed skepticism regarding combat troop deployments, warning that introduction of forces creates relentless bureaucratic pressure for further escalation.',
@@ -35,7 +35,7 @@ export default function EscalationTimeline() {
     1962: {
       advisors: 11325,
       casualties: 53,
-      label: 'Creation of MACV & Strategic Hamlets',
+      label: 'MACV and the strategic hamlets',
       operationalRule: 'U.S. helicopter pilots actively engage enemy targets; Operation Ranch Hand begins defoliation spraying.',
       milestone: 'Over 8,000 "Strategic Hamlets" constructed to sever peasants from Viet Cong guerrillas, stirring rural resentment.',
       kennedyQuote: 'Viewed Southeast Asia as a critical testing arena for American credibility following confrontations in Vienna and Berlin.',
@@ -43,7 +43,7 @@ export default function EscalationTimeline() {
     1963: {
       advisors: 16300,
       casualties: 122,
-      label: 'The Buddhist Crisis & The Coup',
+      label: 'The Buddhist Crisis and the coup',
       operationalRule: 'Advisors routinely involved in active combat firefights; rules of engagement loosen dramatically.',
       milestone: 'Battle of Ap Bac routs ARVN; Buddhist self-immolations; Cable 243 leads to the violent overthrow of Diem.',
       kennedyQuote: 'Emphasized in broadcast remarks that the war was ultimately the responsibility of the South Vietnamese people and government.',
@@ -58,19 +58,19 @@ export default function EscalationTimeline() {
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
           <span className="font-bold text-ink">
-            Escalation Ledger
+            How the U.S. role grew
           </span>
           <span className="text-ink-soft ml-2">&bull; The Advisory Commitment (1960–1963)</span>
         </div>
         <span className="text-ink-soft text-[11px] font-semibold">
-          Select Year
+          Pick a year
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
           <h4 className="font-display text-2xl font-bold text-ink mt-1">
-            How 875 Military Advisers Became 16,300 Combatants
+            How 875 advisers became 16,300 troops
           </h4>
           <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
             President Kennedy consistently refused to commit conventional American ground combat divisions, yet sought to prevent communist victory through incremental increases in military advisers, helicopters, and covert special operations.
@@ -108,7 +108,7 @@ export default function EscalationTimeline() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
             <div>
               <span className="font-bold text-ink-soft block mb-1 text-[11px]">
-                Rules of Engagement:
+                Rules for fighting:
               </span>
               <p className="font-display text-ink leading-relaxed">
                 {current.operationalRule}
@@ -116,7 +116,7 @@ export default function EscalationTimeline() {
             </div>
             <div>
               <span className="font-bold text-ink-soft block mb-1 text-[11px]">
-                Strategic Milestone:
+                Key moment:
               </span>
               <p className="font-display text-ink leading-relaxed">
                 {current.milestone}

@@ -7,10 +7,10 @@ const chapter: ChapterData = {
   number: 6,
   timeframe: '1961–1972',
   leadImageId: 'ranch-hand',
-  title: 'The Shadow War: Phoenix, Ranch Hand, & Pacification',
-  subtitle: 'Targeting civilian networks, herbicide defoliation, and the covert war in Laos',
+  title: 'The secret war',
+  subtitle: 'The Phoenix Program, herbicide spraying, and the hidden war in Laos',
   summary:
-    'Alongside conventional military battles, the United States and South Vietnam waged a shadow war to dismantle the insurgent political infrastructure and strip rural forest cover. The Phoenix Program targeted the Viet Cong Infrastructure through intelligence-driven detention and neutralization, while Operation Ranch Hand sprayed millions of gallons of herbicides, generating enduring human and environmental consequences.',
+    'Alongside the regular battles, the United States and South Vietnam fought a quieter war. The Phoenix Program went after the Viet Cong’s political network by identifying its members and capturing or killing them. Operation Ranch Hand sprayed millions of gallons of herbicide to strip away forest cover. The harm to people and to the land has lasted for decades.',
   whatHappened: {
     narrative: [
       'Recognizing that military sweeps failed to eliminate the Viet Cong’s civilian governance apparatus—which collected taxes, ran schools, and recruited fighters—the CIA and South Vietnamese security agencies developed the Phoenix Program (Phung Hoang) in 1967–1968. Directed under CORDS (Civil Operations and Revolutionary Development Support), Phoenix coordinated intelligence across military and police organs to identify and "neutralize" the Viet Cong Infrastructure (VCI). Official figures reported to Congress in 1971 indicated that 81,740 individuals were neutralized: 33,358 captured, 22,013 defected, and 26,369 killed.[^c6-3] However, testimony revealed that roughly 87 percent of those killed died during regular military operations and artillery strikes rather than targeted police actions, as monthly quotas led to widespread padding of reports with ordinary combat casualties.[^c6-3]',
@@ -18,12 +18,12 @@ const chapter: ChapterData = {
       'Concurrently, the CIA prosecuted a massive "Secret War" in neighboring Laos, organizing an army of roughly 30,000 ethnic Hmong under General Vang Pao to interdict the Ho Chi Minh Trail.[^c6-1] Supported by Air America transport planes and intense covert B-52 strikes, Laos became the most heavily bombed country per capita in human history.[^c6-2] While Phoenix and pacification efforts disrupted insurgent political networks, their heavy-handed implementation and civilian casualties alienated significant segments of the rural population.',
     ],
     keyEvents: [
-      { date: 'Nov 1961', title: 'Herbicide Spraying Authorized', detail: 'President Diem requests aerial defoliation; Kennedy approves mission-by-mission testing.' },
-      { date: 'Jan 1962', title: 'Operation Ranch Hand Begins', detail: 'Aerial spraying of tactical herbicides begins under the unit motto "Only you can prevent a forest."' },
-      { date: 'May 1967', title: 'CORDS Established', detail: 'Pacification and civilian development unified under Robert Komer and MACV.' },
-      { date: 'July 1968', title: 'Phoenix Program Formally Activated', detail: 'President Thieu decrees Phung Hoang to target and neutralize the Viet Cong civilian infrastructure.' },
-      { date: 'July 1971', title: 'Congressional Hearings on Phoenix', detail: 'William Colby and military intelligence veterans testify before the House on quotas and abuses.' },
-      { date: '1971–1972', title: 'Ranch Hand Terminated', detail: 'Herbicide spraying halted following scientific studies on dioxin toxicity and domestic protest.' },
+      { date: 'Nov 1961', title: 'Kennedy approves chemical spraying', detail: 'Diem asks for spraying from the air. Kennedy approves it one mission at a time as a test.' },
+      { date: 'Jan 1962', title: 'Operation Ranch Hand begins', detail: 'Planes start spraying plant-killing chemicals over South Vietnam.' },
+      { date: 'May 1967', title: 'CORDS is set up', detail: 'Robert Komer brings the civilian and military pacification efforts together under MACV.' },
+      { date: 'July 1968', title: 'The Phoenix Program starts', detail: 'President Thieu orders Phung Hoang to find and break up the Viet Cong’s civilian network.' },
+      { date: 'July 1971', title: 'Congress holds hearings on Phoenix', detail: 'William Colby and former intelligence soldiers tell the House about quotas and abuses.' },
+      { date: '1971–1972', title: 'Ranch Hand ends', detail: 'Spraying stops after scientific studies on dioxin poisoning and protests at home.' },
     ],
   },
   washington: {
@@ -81,15 +81,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'phoenix-analysis',
     type: 'phoenix-analysis',
-    title: 'The Shadow War: Phoenix Metrics & Defoliation Realities',
+    title: 'Phoenix and Ranch Hand in numbers',
     prompt:
-      'Examine the statistical breakdown of the Phoenix Program—the definitions of "neutralized" and the 87% conventional combat attribution—and explore the operational legacy of Operation Ranch Hand.',
+      'Look at the Phoenix Program’s numbers, including what "neutralized" meant and the 87% of cases that came from regular combat, then at what Operation Ranch Hand left behind.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['cia-memo-giap-thanh-1966']],
   nextQuestion: {
-    question: 'How did a military disaster for the Viet Cong destroy the American presidency?',
+    question: 'How did a military defeat for the Viet Cong end a presidency?',
     framing:
-      'In the 1968 Tet Offensive, communist forces were repelled from every major city and suffered devastating casualties. Why did Tet break the domestic consensus for the war and reverse American policy?',
+      'In the 1968 Tet Offensive, communist forces were pushed out of every major city and lost huge numbers of fighters. So why did Tet break American support for the war and change U.S. policy?',
   },
   citations: [
     CITATION_REGISTRY['c6-1'],

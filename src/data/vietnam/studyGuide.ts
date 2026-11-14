@@ -30,58 +30,58 @@ export interface DbqPrompt {
 export const PRESIDENCIES: PresidencySummary[] = [
   {
     id: 'truman-ike',
-    name: 'Harry Truman & Dwight Eisenhower (1945–1961)',
-    doctrine: 'Containment & Domino Theory',
+    name: 'Harry Truman and Dwight Eisenhower (1945–1961)',
+    doctrine: 'Containment and the Domino Theory',
     keyActions:
-      'Reclassified Ho Chi Minh from nationalist ally to Sino-Soviet proxy. Funded 80% of France’s military costs ($2B). Declined direct airstrikes at Dien Bien Phu (1954).',
+      'Stopped seeing Ho Chi Minh as a nationalist and started seeing him as a tool of China and the Soviet Union. Paid 80% of France’s military costs ($2 billion). Turned down air strikes to save Dien Bien Phu (1954).',
     turningPoint:
-      'Geneva Accords (1954) partitioned Vietnam at the 17th parallel. Eisenhower backed Ngo Dinh Diem in South Vietnam and cancelled the nationwide 1956 reunification elections.',
+      'The Geneva Accords (1954) split Vietnam at the 17th parallel. Eisenhower backed Ngo Dinh Diem in South Vietnam, and the 1956 elections to reunite the country were called off.',
     examPitfall:
-      'Do not confuse Geneva partition with permanent borders: Article 6 explicitly stated the 17th parallel was provisional pending elections.',
+      'The Geneva line was not meant to be a permanent border. Article 6 said the 17th parallel was temporary until elections were held.',
   },
   {
     id: 'kennedy',
     name: 'John F. Kennedy (1961–1963)',
-    doctrine: 'Flexible Response & Counterinsurgency',
+    doctrine: 'Flexible Response and fighting guerrillas',
     keyActions:
-      'Expanded military advisors from 900 to 16,000. Deployed Special Forces (Green Berets) and authorized chemical defoliation (Agent Orange / Operation Ranch Hand).',
+      'Raised the number of military advisers from 900 to 16,000. Sent Special Forces (Green Berets) and approved spraying chemicals to kill jungle cover (Agent Orange, Operation Ranch Hand).',
     turningPoint:
-      'Strategic Hamlet Program failed by alienating peasants. In November 1963, U.S. tacitly approved the military coup executing President Diem, creating perpetual Saigon political instability.',
+      'The Strategic Hamlet Program failed because farmers resented it. In November 1963, the U.S. quietly approved the military coup in which President Diem was killed. Saigon’s government stayed unstable for years.',
     examPitfall:
-      'JFK sent advisors and air support, but NO conventional ground combat divisions. Combat troops were committed by LBJ in 1965.',
+      'Kennedy sent advisers and air support, but no ground combat divisions. Johnson sent the first combat troops in 1965.',
   },
   {
     id: 'johnson',
     name: 'Lyndon B. Johnson (1963–1969)',
-    doctrine: 'Americanization & Attrition',
+    doctrine: 'Taking over the war and wearing down the enemy',
     keyActions:
-      'Gulf of Tonkin Resolution (1964) provided legislative blank check. Launched Operation Rolling Thunder and deployed 540,000 ground troops by 1968 using search-and-destroy tactics.',
+      'The Gulf of Tonkin Resolution (1964) gave him a blank check from Congress. He started Operation Rolling Thunder and sent 540,000 ground troops by 1968, who fought with search-and-destroy missions.',
     turningPoint:
-      'January 1968 Tet Offensive shattered claims of progress, created an irreversible “Credibility Gap,” and forced LBJ to withdraw from the 1968 presidential election.',
+      'The Tet Offensive in January 1968 destroyed his claims of progress and widened the credibility gap. He dropped out of the 1968 presidential race.',
     examPitfall:
-      'Tet was a U.S. military victory (Viet Cong suffered catastrophic casualties) but a decisive political and psychological defeat for Washington.',
+      'Tet was a military win for the U.S., and the Viet Cong lost huge numbers of fighters. But it was a political defeat for Washington.',
   },
   {
     id: 'nixon',
     name: 'Richard M. Nixon (1969–1974)',
-    doctrine: 'Vietnamization & “Peace with Honor”',
+    doctrine: 'Vietnamization and “Peace with Honor”',
     keyActions:
-      'Withdrew U.S. ground troops while expanding air campaigns. Secret bombing of Cambodia (Operation Menu) triggered Kent State shootings (1970). Pentagon Papers leak (1971).',
+      'Pulled out U.S. ground troops while increasing bombing. Secretly bombed Cambodia (Operation Menu), then sent troops in, which set off the protests that led to the Kent State shootings (1970). The Pentagon Papers leaked in 1971.',
     turningPoint:
-      'Paris Peace Accords (Jan 1973) withdrew all U.S. forces and returned POWs, but left 150,000 North Vietnamese troops inside South Vietnam. War Powers Act passed over Nixon’s veto.',
+      'The Paris Peace Accords (January 1973) brought home all U.S. forces and POWs, but left 150,000 North Vietnamese troops inside South Vietnam. Congress passed the War Powers Act over Nixon’s veto.',
     examPitfall:
-      'The Paris Peace Accords did NOT end the fighting between North and South Vietnam; it only ended direct American military involvement.',
+      'The Paris Peace Accords did not end the fighting between North and South Vietnam. They only ended America’s direct part in it.',
   },
   {
     id: 'ford',
     name: 'Gerald R. Ford (1974–1975)',
-    doctrine: 'Post-Watergate Aid Cuts & Collapse',
+    doctrine: 'Aid cuts after Watergate, and the collapse',
     keyActions:
-      'Congress drastically slashed financial and military ammunition subsidies to Saigon. In March 1975, North Vietnam launched the Spring Offensive; South Vietnamese defenses collapsed in 55 days.',
+      'Congress sharply cut money and ammunition for Saigon. In March 1975, North Vietnam launched its Spring Offensive, and South Vietnam’s defenses fell apart in 55 days.',
     turningPoint:
-      'April 30, 1975: Fall of Saigon. Operation Frequent Wind evacuated remaining Americans and at-risk South Vietnamese by helicopter from embassy rooftops.',
+      'Saigon fell on April 30, 1975. In Operation Frequent Wind, helicopters flew the last Americans and South Vietnamese at risk out of the city, some from the embassy roof.',
     examPitfall:
-      'Saigon fell under President Ford, not Nixon. Ford requested emergency military aid from Congress, which was overwhelmingly refused.',
+      'Saigon fell under President Ford, not Nixon. Ford asked Congress for emergency military aid, and Congress said no.',
   },
 ];
 
@@ -89,70 +89,70 @@ export const TURNING_POINTS: TurningPoint[] = [
   {
     date: 'May 1954',
     event: 'Fall of Dien Bien Phu',
-    significance: 'Ended French colonial rule; led directly to 1954 Geneva Accords partitioning Vietnam.',
+    significance: 'Ended French colonial rule and led straight to the 1954 Geneva Accords, which split Vietnam.',
     chapterId: 'french-indochina-dien-bien-phu',
   },
   {
     date: 'July 1954',
     event: 'Geneva Accords',
-    significance: 'Provisional partition at 17th parallel; 1956 nationwide elections cancelled by Diem with U.S. backing.',
+    significance: 'A temporary split at the 17th parallel. Diem called off the 1956 elections with U.S. backing.',
     chapterId: 'geneva-south-vietnam',
   },
   {
     date: 'Nov 1963',
     event: 'Overthrow of Diem',
-    significance: 'Assassination of Ngo Dinh Diem created political vacuum in Saigon, deepening U.S. responsibility.',
+    significance: 'Diem’s killing left no one firmly in charge in Saigon, and the U.S. took on more responsibility.',
     chapterId: 'kennedy-and-diem',
   },
   {
     date: 'Aug 1964',
     event: 'Gulf of Tonkin Resolution',
-    significance: 'Passed 504–2 after phantom radar battle; gave LBJ legal blank check to wage war without congressional declaration.',
+    significance: 'Passed 504–2 after a reported attack that never happened. It let Johnson wage war without a declaration from Congress.',
     chapterId: 'gulf-of-tonkin',
     highlight: true,
   },
   {
     date: 'Mar 1965',
-    event: 'Operation Rolling Thunder & Ground Troops',
-    significance: 'Americanized the war: 3,500 Marines landed at Da Nang; 3-year sustained bombing campaign began.',
+    event: 'Rolling Thunder and the first ground troops',
+    significance: 'The war became American. 3,500 Marines landed at Da Nang, and a three-year bombing campaign began.',
     chapterId: 'americanization-attrition',
   },
   {
     date: 'Jan 1968',
     event: 'The Tet Offensive',
-    significance: 'Coordinated surprise strikes on 100+ cities; destroyed U.S. public belief that victory was near; broke LBJ presidency.',
+    significance: 'Surprise attacks on more than 100 cities and towns. Americans stopped believing victory was near, and Johnson’s presidency never recovered.',
     chapterId: 'tet-offensive',
     highlight: true,
   },
   {
     date: 'Nov 1969',
-    event: 'Vietnamization & Silent Majority',
-    significance: 'Nixon shifted combat burden to ARVN while appealing to the conservative Silent Majority.',
+    event: 'Vietnamization and the Silent Majority',
+    significance: 'Nixon handed more of the fighting to the ARVN and asked the quiet, conservative majority of Americans to back him.',
     chapterId: 'nixon-and-vietnamization',
   },
   {
     date: 'June 1971',
     event: 'The Pentagon Papers',
-    significance: 'Leaked DoD study revealed systematic government deception across four administrations; affirmed press freedom in NYT v. US.',
+    significance: 'A leaked Defense Department study showed that four administrations had misled the public. The Supreme Court upheld press freedom in New York Times Co. v. United States.',
     chapterId: 'memory-and-the-argument',
   },
   {
     date: 'Jan 1973',
     event: 'Paris Peace Accords',
-    significance: 'All U.S. combat troops withdrew; Hanoi retained 150,000 troops in South Vietnam.',
+    significance: 'All U.S. combat troops left. Hanoi kept 150,000 troops in South Vietnam.',
     chapterId: 'paris-peace-accords',
   },
   {
     date: 'Nov 1973',
     event: 'War Powers Act of 1973',
-    significance: 'Enacted over Nixon’s veto to curtail undeclared presidential wars; mandates 48-hr reporting and 60-day troop deployment limit.',
+    significance: 'Passed over Nixon’s veto to limit undeclared wars. Presidents must report within 48 hours and bring troops home within 60 days without approval.',
     chapterId: 'the-collapse',
     highlight: true,
   },
   {
     date: 'Apr 1975',
     event: 'Fall of Saigon',
-    significance: 'NVA captured Saigon; Vietnam reunified under communist rule; U.S. completed Operation Frequent Wind evacuation.',
+    significance: 'North Vietnam’s army took Saigon and Vietnam was united under communist rule. The U.S. finished the Operation Frequent Wind evacuation.',
     chapterId: 'the-collapse',
   },
 ];
@@ -160,58 +160,58 @@ export const TURNING_POINTS: TurningPoint[] = [
 export const DBQ_PROMPTS: DbqPrompt[] = [
   {
     number: 1,
-    theme: 'Escalation & Foreign Policy',
+    theme: 'Why the U.S. escalated',
     prompt:
-      'Evaluate the relative importance of Cold War containment ideology versus domestic political calculations in driving U.S. escalation in Vietnam between 1950 and 1965.',
+      'Evaluate whether Cold War containment or politics at home did more to drive U.S. escalation in Vietnam between 1950 and 1965.',
     thesis:
-      'Although the ideological doctrine of Cold War containment (the Domino Theory) provided the public justification for intervention, domestic political imperatives—specifically presidential fear of being accused of ‘losing Vietnam’ following the fall of China—were the decisive factor driving escalation under Eisenhower, Kennedy, and Johnson.',
+      'Containment and the Domino Theory gave presidents their public reason to intervene. But politics at home mattered more. After the communist victory in China, Eisenhower, Kennedy and Johnson each feared being blamed for losing Vietnam, and that fear drove escalation.',
     evidence: [
       'Eisenhower’s April 1954 press conference (Domino Theory)',
-      'Funding 80% of French military costs post-Korean War',
-      'OPLAN 34A covert commando operations',
-      'Gulf of Tonkin Resolution passed right before 1964 election against Barry Goldwater',
+      'Paying 80% of France’s military costs after the Korean War began',
+      'OPLAN 34A secret commando raids',
+      'The Gulf of Tonkin Resolution, passed just before the 1964 election against Barry Goldwater',
     ],
     commonErrors: [
-      'Treating containment as the only motive without exploring domestic political pressures',
-      'Failing to mention the Korean War context and “loss of China” syndrome',
-      'Assuming the Gulf of Tonkin incident was an unprovoked surprise',
+      'Treating containment as the only motive and ignoring politics at home',
+      'Leaving out the Korean War and the fear of another “loss of China”',
+      'Assuming the Gulf of Tonkin incident came out of nowhere',
     ],
   },
   {
     number: 2,
-    theme: 'Media, Public Opinion & Credibility',
+    theme: 'The news, public opinion and trust',
     prompt:
-      'Analyze the extent to which media coverage and declassified revelations created the ‘Credibility Gap’ and transformed American public support for the war between 1965 and 1973.',
+      'Analyze how far news coverage and leaked government secrets created the credibility gap and changed American support for the war between 1965 and 1973.',
     thesis:
-      'Uncensored television broadcasting and investigative leaks fundamentally dismantled official government optimism, turning the 1968 Tet Offensive into a decisive psychological turning point and cementing a permanent crisis of public trust in federal institutions.',
+      'Uncensored television and leaked documents tore down the government’s upbeat claims. They made the 1968 Tet Offensive the turning point in public opinion and left a lasting loss of trust in the federal government.',
     evidence: [
-      'The living-room war: Morley Safer’s Cam Ne report (1965)',
+      'War on the living-room TV: Morley Safer’s Cam Ne report (1965)',
       'Walter Cronkite’s February 1968 CBS broadcast (“mired in stalemate”)',
       'Daniel Ellsberg’s leak of the Pentagon Papers (1971)',
-      'New York Times Co. v. United States affirming First Amendment prior restraint bans',
+      'New York Times Co. v. United States, which barred the government from blocking publication',
     ],
     commonErrors: [
-      'Failing to distinguish between military victory and psychological defeat during Tet',
-      'Calling television news biased rather than contrasting official casualty reports with televised combat',
-      'Omitting the Supreme Court precedent set by the Pentagon Papers',
+      'Mixing up Tet’s military result (a U.S. win) with its political result (a U.S. loss)',
+      'Calling TV news biased instead of comparing official reports with what viewers saw',
+      'Leaving out the Supreme Court’s Pentagon Papers ruling',
     ],
   },
   {
     number: 3,
-    theme: 'Constitutional War Powers',
+    theme: 'Who decides on war',
     prompt:
-      'Evaluate the extent to which the Vietnam War produced a lasting constitutional rebalancing between executive and legislative war powers.',
+      'Evaluate how far the Vietnam War shifted the power to make war between the president and Congress for the long term.',
     thesis:
-      'While the War Powers Act of 1973 formally asserted congressional authority over undeclared warfare in reaction to the Tonkin Resolution and Cambodia incursions, subsequent presidential practice has consistently questioned its constitutionality, resulting in only partial and contested executive restraint.',
+      'Congress passed the War Powers Act of 1973 to take back control of undeclared wars after the Tonkin Resolution and the move into Cambodia. But later presidents have questioned whether the law is constitutional, so it has limited them only partly.',
     evidence: [
       'Article I, Sec. 8 (Congress declares war) vs. Article II (President as Commander-in-Chief)',
-      'Gulf of Tonkin Resolution as functional declaration of war',
-      'Secret bombing of Cambodia conducted without congressional notification',
-      'Congressional veto override of Nixon’s War Powers Act veto in November 1973',
+      'The Gulf of Tonkin Resolution, used as a declaration of war in practice',
+      'The secret bombing of Cambodia, hidden from Congress',
+      'Congress overriding Nixon’s veto of the War Powers Act in November 1973',
     ],
     commonErrors: [
-      'Thinking the War Powers Act was signed into law willingly by the President (it was passed over veto)',
-      'Failing to mention the 48-hour notification and 60-day deadline specifics',
+      'Thinking the president signed the War Powers Act (Congress passed it over his veto)',
+      'Leaving out the 48-hour notice and the 60-day deadline',
     ],
   },
 ];

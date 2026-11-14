@@ -8,10 +8,10 @@ const chapter: ChapterData = {
   timeframe: '1954–1960',
   leadImageId: 'diem-eisenhower-1957',
   galleryImageIds: ['passage-to-freedom-1954'],
-  title: 'Geneva & The Creation of South Vietnam',
-  subtitle: 'Partition, the Diem experiment, and the origins of the southern insurgency',
+  title: 'Geneva splits Vietnam in two',
+  subtitle: 'The 17th parallel, Ngo Dinh Diem, and the start of the war in the South',
   summary:
-    'The 1954 Geneva Accords temporarily divided Vietnam at the 17th parallel pending nationwide elections in 1956. As Ngo Dinh Diem consolidated power in Saigon, the partition hardened into a permanent frontline through a confluence of Cold War calculations, Diem’s rejection of elections, northern reconstruction priorities, and the lack of international enforcement. Diem’s land policies and anti-communist campaigns catalyzed genuine local grievances, leading to the formation of the National Liberation Front (NLF) with Hanoi’s backing.',
+    'The 1954 Geneva Accords divided Vietnam at the 17th parallel until nationwide elections in 1956. Those elections never happened. Ngo Dinh Diem took power in Saigon and refused them, the Cold War powers did not push, the North was busy rebuilding, and nobody enforced the deal. Diem’s land policies and his campaigns against communists angered many people in the countryside. With Hanoi’s backing, his opponents formed the National Liberation Front (NLF).',
   whatHappened: {
     narrative: [
       'The Geneva Conference concluded in July 1954 with an armistice dividing Vietnam temporarily at the 17th parallel. A 300-day open-border period produced "Operation Passage to Freedom," during which roughly 890,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist families—migrated south with U.S. Navy transport, while approximately 100,000 southern Viet Minh fighters moved north for regroupment.[^c2-2]',
@@ -19,12 +19,12 @@ const chapter: ChapterData = {
       'Crucially, the permanent division was not caused by Diem’s refusal alone: Geneva was an international compromise where neither superpower was committed to enforcing unification; Hanoi was internally consumed by post-war economic restoration and the turbulent 1953–56 land reform campaign; and no neutral mechanism existed to oversee a nationwide vote. In the South, Diem’s regime reversed Viet Minh land reforms, returning land to traditional landlords and fueling intense rural anger, while his "Denounce the Communists" campaign decimated southern cadre networks. In January 1959, Hanoi passed Resolution 15, officially authorizing armed revolutionary struggle,[^c2-1] which culminated in the creation of the National Liberation Front (NLF / "Viet Cong") in December 1960.[^c2-3]',
     ],
     keyEvents: [
-      { date: 'July 21, 1954', title: 'Geneva Accords Concluded', detail: 'Ceasefire signed; Vietnam temporarily partitioned at 17th parallel pending 1956 elections.' },
-      { date: '1954–1955', title: 'Operation Passage to Freedom', detail: 'Nearly 900,000 northern refugees migrate south; ~100,000 southern fighters move north.' },
-      { date: 'Oct 26, 1955', title: 'Republic of Vietnam Proclaimed', detail: 'Ngo Dinh Diem assumes presidency after manipulated referendum ousting Bao Dai.' },
-      { date: 'July 1956', title: 'Reunification Elections Lapse', detail: 'Elections are not held; partition hardens into a permanent Cold War boundary.' },
-      { date: 'Jan 1959', title: 'Hanoi Central Committee Resolution 15', detail: 'Party authorizes armed revolutionary struggle in the South; Group 559 begins Ho Chi Minh Trail.' },
-      { date: 'Dec 20, 1960', title: 'National Liberation Front (NLF) Formed', detail: 'Southern insurgents unite under NLF umbrella in Tay Ninh province.' },
+      { date: 'July 21, 1954', title: 'The Geneva Accords', detail: 'A ceasefire is signed. Vietnam is split at the 17th parallel for now, with elections due in 1956.' },
+      { date: '1954–1955', title: 'Operation Passage to Freedom', detail: 'Nearly 900,000 refugees move from North to South. About 100,000 southern fighters move North.' },
+      { date: 'Oct 26, 1955', title: 'Diem declares the Republic of Vietnam', detail: 'Ngo Dinh Diem becomes president after a rigged vote removes Bao Dai.' },
+      { date: 'July 1956', title: 'The 1956 elections never happen', detail: 'The vote is never held. The temporary line hardens into a Cold War border.' },
+      { date: 'Jan 1959', title: 'Hanoi approves armed struggle', detail: 'The Party approves armed revolution in the South. Group 559 starts building the Ho Chi Minh Trail.' },
+      { date: 'Dec 20, 1960', title: 'The National Liberation Front forms', detail: 'Rebel groups in the South unite as the NLF in Tay Ninh province.' },
     ],
   },
   washington: {
@@ -84,15 +84,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'geneva-division-map',
     type: 'geneva-division-map',
-    title: 'The 17th Parallel: Division and Demographics',
+    title: 'The 17th parallel',
     prompt:
-      'Examine the provisional demarcation line: the DMZ, the Ben Hai River, the 300-day migration flows, and the multi-causal hardening of the partition.',
+      'Look at the line that divided Vietnam: the DMZ, the Ben Hai River, the 300 days when people could move north or south, and why the line stayed.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['resolution-15-1959']],
   nextQuestion: {
-    question: 'How did Kennedy’s advisory commitment lead to direct complicity in a coup?',
+    question: 'How did sending advisers lead to backing a coup?',
     framing:
-      'President Kennedy expanded the U.S. presence from 900 to over 16,000 advisors to bolster Diem. Why did Washington end up signaling tacit approval for Diem’s overthrow in November 1963?',
+      'President Kennedy raised the number of U.S. advisers from 900 to more than 16,000 to prop up Diem. So why did Washington signal that it would accept Diem’s overthrow in November 1963?',
   },
   citations: [
     CITATION_REGISTRY['c2-1'],

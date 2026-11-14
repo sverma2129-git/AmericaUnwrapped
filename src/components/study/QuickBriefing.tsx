@@ -34,17 +34,14 @@ export default function QuickBriefing({
 
   return (
     <section
-      aria-label="Quick Exam Briefing"
+      aria-label="Quick summary"
       className="my-8 rounded-xs border border-rule bg-parchment p-6 sm:p-8 text-ink transition-colors"
     >
       {/* Header kicker */}
       <div className={`flex flex-wrap items-center justify-between gap-2 ${isExpanded ? 'border-b border-rule pb-3 mb-5' : ''}`}>
         <div className="flex items-center gap-2">
           <span className="inline-flex items-center px-2.5 py-0.5 rounded-xs text-xs font-bold bg-brand-tint text-brand border border-brand-rule">
-            60-Second Briefing
-          </span>
-          <span className="text-xs text-ink-muted">
-            Exam Essentials &bull; Fast-Read Study Layer
+            Quick summary
           </span>
         </div>
         <button
@@ -53,7 +50,7 @@ export default function QuickBriefing({
           className="text-xs font-semibold text-brand hover:text-brand-hover flex items-center gap-1 cursor-pointer bg-white px-2.5 py-1 rounded-xs border border-rule hover:border-brand transition-colors"
           aria-expanded={isExpanded}
         >
-          <span>{isExpanded ? 'Collapse Briefing' : 'Expand Briefing'}</span>
+          <span>{isExpanded ? 'Hide' : 'Show'}</span>
           <Icon name={isExpanded ? 'chevronUp' : 'chevronDown'} className="w-3.5 h-3.5" />
         </button>
       </div>
@@ -84,7 +81,7 @@ export default function QuickBriefing({
           {/* The 60-Second Summary */}
           <div className="p-4 sm:p-5 rounded-xs bg-paper border border-rule mb-6 space-y-1.5">
             <span className="block text-xs font-bold text-brand">
-              What Happened in Brief
+              What happened
             </span>
             <p className="font-sans text-sm sm:text-base text-ink leading-relaxed">
               {summary}
@@ -96,7 +93,7 @@ export default function QuickBriefing({
             {/* Left: 3 Essential Exam Takeaways */}
             <div className="md:col-span-7 space-y-3">
               <span className="flex items-center gap-1.5 text-xs font-bold text-brand">
-                Key Exam Takeaways (AP &bull; State Standards)
+                What to know for the test
               </span>
               <ul className="space-y-2.5 text-sm font-sans text-ink-muted leading-relaxed">
                 {examTakeaways.map((takeaway, idx) => (

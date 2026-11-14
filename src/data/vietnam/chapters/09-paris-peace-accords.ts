@@ -8,13 +8,13 @@ const chapter: ChapterData = {
   timeframe: '1972–1973',
   leadImageId: 'paris-signing-1973',
   galleryImageIds: ['b52-linebacker-1972', 'homecoming-1973'],
-  title: 'The Paris Peace Accords: Peace at Hand?',
-  subtitle: 'Secret diplomacy, the Christmas Bombing, and the engineered exit',
+  title: 'The Paris Peace Accords',
+  subtitle: 'Secret talks, the Christmas Bombing, and America’s exit',
   summary:
-    'In October 1972, Henry Kissinger and Le Duc Tho negotiated a secret draft agreement allowing U.S. troops to withdraw while permitting North Vietnamese troops to remain in place in the South. When South Vietnamese President Thieu rejected the terms, Nixon ordered the 11-day "Christmas Bombing" (Linebacker II) of Hanoi. The final treaty signed in January 1973 was fundamentally identical to the October draft, ending direct American military involvement while leaving the underlying civil war unresolved.',
+    'In October 1972, Henry Kissinger and Le Duc Tho secretly agreed on a draft deal. U.S. troops would leave, and North Vietnamese troops could stay where they were in the South. South Vietnam’s President Thieu rejected it, and Nixon ordered the 11-day "Christmas Bombing" of Hanoi, called Linebacker II. The treaty signed in January 1973 was essentially the same as the October draft. It ended direct American involvement and left the civil war unsettled.',
   isLandmark: true,
   landmarkMoment: {
-    bannerTitle: 'The Paris Peace Accords & The Fatal Compromise',
+    bannerTitle: 'The Paris Peace Accords',
     dateline: 'January 27, 1973',
     location: 'International Conference Center, Avenue Kléber, Paris',
     quote: 'The diplomatic settlement permitted an estimated 150,000 to 200,000 North Vietnamese combat troops to remain in South Vietnam while concluding the total withdrawal of American combat forces.',
@@ -28,12 +28,12 @@ const chapter: ChapterData = {
       'When presented with the draft, President Thieu vehemently rejected it, arguing that permitting foreign troops on sovereign South Vietnamese soil was a death warrant. Kissinger returned to Paris with 69 amendments demanded by Thieu, causing talks to break down. From December 18 to 29, 1972, Nixon unleashed Operation Linebacker II—the "Christmas Bombing"—dropping over 20,000 tons of explosives on Hanoi and Haiphong.[^c9-1] Historians debate the bombing’s purpose: while administration officials claimed it forced Hanoi back to the table, the final Paris Peace Accords signed on January 27, 1973 were essentially identical to the October draft. The primary effect was demonstrating violent resolve to coerce Thieu into signing under the cover of Nixon’s secret written promises of air retaliation if Hanoi violated the ceasefire.[^c9-2] All remaining U.S. combat troops departed by March 29, 1973, and 591 American POWs returned home.[^c9-3]',
     ],
     keyEvents: [
-      { date: 'Oct 8, 1972', title: 'Breakthrough in Paris', detail: 'Hanoi drops demand for Thieu’s removal; U.S. permits PAVN troops to remain in South Vietnam.' },
-      { date: 'Oct 26, 1972', title: '"Peace is at Hand"', detail: 'Kissinger holds press conference declaring peace imminent days before the U.S. election.' },
-      { date: 'Dec 13, 1972', title: 'Talks Break Down', detail: 'Hanoi rejects 69 amendments demanded by Thieu and Washington; negotiations suspend.' },
-      { date: 'Dec 18–29, 1972', title: 'Operation Linebacker II (Christmas Bombing)', detail: '11 days of maximum-effort B-52 strikes on Hanoi and Haiphong; 16 B-52s lost to SAMs.' },
-      { date: 'Jan 5, 1973', title: 'Nixon’s Secret Letter to Thieu', detail: 'Nixon promises "swift and severe retaliatory action" if Hanoi violates the peace agreement.' },
-      { date: 'Jan 27, 1973', title: 'Paris Peace Accords Signed', detail: 'Four-party treaty signed; U.S. agrees to complete withdrawal within 60 days.' },
+      { date: 'Oct 8, 1972', title: 'A breakthrough in Paris', detail: 'Hanoi drops its demand that Thieu go. The U.S. lets North Vietnamese troops stay in the South.' },
+      { date: 'Oct 26, 1972', title: 'Kissinger says peace is near', detail: 'Days before the U.S. election, Kissinger tells reporters that peace is close.' },
+      { date: 'Dec 13, 1972', title: 'The talks break down', detail: 'Hanoi rejects 69 changes demanded by Thieu and Washington, and the talks stop.' },
+      { date: 'Dec 18–29, 1972', title: 'The Christmas Bombing', detail: 'Eleven days of all-out B-52 raids on Hanoi and Haiphong. Missiles shoot down 16 B-52s.' },
+      { date: 'Jan 5, 1973', title: 'Nixon’s secret letter to Thieu', detail: 'Nixon promises to strike back quickly and hard if Hanoi breaks the peace agreement.' },
+      { date: 'Jan 27, 1973', title: 'The Paris Peace Accords are signed', detail: 'All four sides sign. The U.S. agrees to pull out completely within 60 days.' },
     ],
   },
   washington: {
@@ -92,15 +92,15 @@ const chapter: ChapterData = {
   interactiveModule: {
     id: 'paris-timeline',
     type: 'paris-timeline',
-    title: 'The Paris Negotiations: Compromise, Coercion, & Exit',
+    title: 'How the Paris deal was made',
     prompt:
-      'Trace the secret diplomacy: inspect the mutual concessions of October 1972, Thieu’s objections, and the contested debate over the purpose of the Christmas Bombing.',
+      'Follow the secret talks: what each side gave up in October 1972, why Thieu objected, and the argument over what the Christmas Bombing was for.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['paris-accords-treaty-1973']],
   nextQuestion: {
-    question: 'Why did the South Vietnamese military collapse in just 55 days in 1975?',
+    question: 'Why did South Vietnam’s army collapse in just 55 days in 1975?',
     framing:
-      'In early 1975, the ARVN was on paper one of the best-equipped militaries in the world. What multi-causal factors—aid cuts, fuel shortages, strategic blunders, and soldier family ties—caused its rapid collapse?',
+      'In early 1975, South Vietnam’s army was on paper one of the best-equipped in the world. Aid cuts, fuel shortages, bad decisions and soldiers’ worries about their families all played a part. How did they add up to collapse?',
   },
   citations: [
     CITATION_REGISTRY['c9-1'],

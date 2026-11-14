@@ -18,7 +18,7 @@ interface MasterQuizProps {
 export default function MasterQuiz({ allQuestions, groups }: MasterQuizProps) {
   const [filter, setFilter] = useState('all');
   const filters: QuizGroup[] = [
-    { id: 'all', label: `All Chapters (${allQuestions.length})`, questions: allQuestions },
+    { id: 'all', label: `All chapters (${allQuestions.length})`, questions: allQuestions },
     ...groups,
   ];
   const questions = filters.find((f) => f.id === filter)?.questions ?? allQuestions;
@@ -28,7 +28,7 @@ export default function MasterQuiz({ allQuestions, groups }: MasterQuizProps) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-rule pb-4">
         <div>
           <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-            Multi-Chapter Master Practice Quiz
+            Practice quiz
           </h2>
         </div>
 
@@ -50,7 +50,7 @@ export default function MasterQuiz({ allQuestions, groups }: MasterQuizProps) {
       <ChapterQuiz
         key={filter}
         questions={questions}
-        title={`Vietnam War Practice Test (${questions.length} Questions)`}
+        title={`Practice test (${questions.length} questions)`}
       />
     </section>
   );
