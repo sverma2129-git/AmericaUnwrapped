@@ -6,9 +6,7 @@ import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { isVerbatimQuotation } from '@/lib/citations';
-import QuickBriefing from '@/components/study/QuickBriefing';
-import ChapterQuiz from '@/components/study/ChapterQuiz';
-import FlashcardDeck from '@/components/study/FlashcardDeck';
+import { splitTakeaway } from '@/lib/takeaways';
 import InteractiveModuleWrapper from './InteractiveModuleWrapper';
 import CausalFlowViewer from './CausalFlowViewer';
 import DualPerspectiveViewer from './DualPerspectiveViewer';
@@ -17,8 +15,8 @@ import { useCitation } from '@/components/common/CitationContext';
 import CitationMarker from '@/components/common/CitationMarker';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import PersonalStoryCard from './PersonalStoryCard';
-import Icon from '@/components/common/Icon';
 import Figure from '@/components/common/Figure';
+import { ChapterFlashcardsBlock, ChapterQuizBlock } from '@/components/study/ChapterPractice';
 
 interface ChapterContentProps {
   chapter: ChapterData;
@@ -26,16 +24,15 @@ interface ChapterContentProps {
   nextChapterTitle?: string;
 }
 
-export default function ChapterContent({
-  chapter,
-  nextChapterId,
-  nextChapterTitle,
-}: ChapterContentProps) {
-  const { openCitation } = useCitation();
-  const [activeDossierTab, setActiveDossierTab] = useState<'perspectives' | 'documents' | 'citations'>('perspectives');
+const sectionTitle = 'font-display text-[1.75rem] font-bold tracking-tight text-ink sm:text-[2.125rem]';
+const sectionLede = 'mt-2 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted';
 
-  // Study data for this chapter
-  const studyData = ALL_CHAPTERS_STUDY_DATA[chapter.id];
+/** The standard chapter: question, summary, story, evidence, cause and effect, practice, sources. */
+export default function ChapterContent({ chapter, nextChapterId, nextChapterTitle }: ChapterContentProps) {
+  const { openCitation } = useCitation();
+  const [sourcesTab, setSourcesTab] = useState<'perspectives' | 'documents' | 'citations'>('perspectives');
+  const study = ALL_CHAPTERS_STUDY_DATA[chapter.id];
+  const ref = { id: chapter.id, number: chapter.number, title: chapter.title };
 
   // Quotation marks only for a registered verbatim quotation; anything else is shown as a paraphrase.
   const landmarkCitation = chapter.landmarkMoment?.quoteCitationId
@@ -43,361 +40,295 @@ export default function ChapterContent({
     : undefined;
   const landmarkQuote = landmarkCitation && isVerbatimQuotation(landmarkCitation) ? landmarkCitation : undefined;
 
+  const sections = [
+    study?.briefing && { id: 'briefing', label: 'Summary' },
+    { id: 'story', label: 'The story' },
+    { id: 'evidence', label: 'Explore' },
+    { id: 'causal', label: 'Cause and effect' },
+    study?.quiz?.length && { id: 'quiz', label: 'Quiz' },
+    study?.flashcards?.length && { id: 'flashcards', label: 'Flashcards' },
+    { id: 'sources', label: 'Sources' },
+  ].filter(Boolean) as { id: string; label: string }[];
+
+  const tabs = [
+    { id: 'perspectives' as const, label: 'What each side wanted', show: true },
+    { id: 'documents' as const, label: `Documents (${chapter.primaryDocuments?.length ?? 0})`, show: (chapter.primaryDocuments?.length ?? 0) > 0 },
+    { id: 'citations' as const, label: `Works cited (${chapter.citations?.length ?? 0})`, show: (chapter.citations?.length ?? 0) > 0 },
+  ].filter((t) => t.show);
+
   return (
-    <article className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-14 space-y-16">
-      {/* 1. Masthead & Inquiry Framing */}
-      <header className="border-b border-rule pb-8 sm:pb-12 space-y-4">
-        <h1 className="font-display text-3xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-ink leading-[1.12]">
+    <article className="mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+      {/* The chapter and its question */}
+      <header className="max-w-3xl">
+        <p className="text-sm text-ink-muted">
+          Chapter {chapter.number}, {chapter.timeframe}
+          {chapter.isLandmark && <span className="text-brand">, a turning point</span>}
+        </p>
+        <h1 className="mt-2 font-display text-[2.375rem] font-bold leading-[1.06] tracking-tight text-ink sm:text-[3.25rem]">
           {chapter.title}
         </h1>
+        <p className="mt-3 text-lg leading-snug text-ink-muted sm:text-xl">{chapter.subtitle}</p>
 
-        <p className="font-display text-lg sm:text-2xl text-ink-muted max-w-3xl leading-relaxed">
-          {chapter.subtitle}
-        </p>
+        <h2 className="mt-8 font-serif text-xl leading-snug text-ink sm:text-[1.5rem]">{study?.bigQuestion ?? chapter.subtitle}</h2>
+        {study?.whyItMatters && <p className="mt-3 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">{study.whyItMatters}</p>}
 
-        <p className="meta text-ink-soft">
-          Chapter {chapter.number} &middot; {chapter.timeframe}
-          {chapter.isLandmark && <span className="text-brand"> &middot; Turning point</span>}
-        </p>
-
-        {/* Central Historical Inquiry Banner */}
-        <div className="mt-8 bg-parchment border border-rule p-5 sm:p-6 rounded-md">
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug">
-            {studyData?.bigQuestion || chapter.subtitle}
-          </h2>
-          {studyData?.whyItMatters && (
-            <p className="mt-2.5 font-sans text-sm sm:text-base text-ink-muted leading-relaxed">
-              <strong className="text-ink font-semibold">Why it matters:</strong>{' '}
-              {studyData.whyItMatters}
-            </p>
-          )}
-        </div>
-
-        {/* Quick-Jump Section Anchors for Students */}
-        <nav aria-label="Chapter sections" className="mt-6 flex flex-wrap gap-2 text-xs">
-          <a
-            href="#briefing"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
-          >
-            <Icon name="zap" />
-            Quick summary
-          </a>
-          <a
-            href="#story"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
-          >
-            <Icon name="book" />
-            The story
-          </a>
-          <a
-            href="#evidence"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
-          >
-            <Icon name="map" />
-            Explore
-          </a>
-          <a
-            href="#causal"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
-          >
-            <Icon name="link" />
-            Cause and effect
-          </a>
-          {studyData?.quiz && studyData.quiz.length > 0 && (
-            <a
-              href="#quiz"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-brand-tint text-brand border-brand-rule hover:border-brand font-semibold"
-            >
-              <Icon name="pen" />
-            Practice quiz
-            </a>
-          )}
-          {studyData?.flashcards && studyData.flashcards.length > 0 && (
-            <a
-              href="#flashcards"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
-            >
-              <Icon name="layers" />
-            Flashcards
-            </a>
-          )}
-          <a
-            href="#dossier"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm border font-medium transition-colors bg-surface text-ink-muted border-rule hover:text-ink hover:border-rule-strong"
-          >
-            <Icon name="folder" />
-            Sources ({chapter.primaryDocuments?.length || 0})
-          </a>
+        <nav aria-label="In this chapter" className="mt-8 border-y border-rule">
+          <ul className="flex flex-wrap gap-x-5 gap-y-1 py-3 text-[0.9375rem]">
+            {sections.map((s) => (
+              <li key={s.id}>
+                <a href={`#${s.id}`} className="font-medium text-ink-muted underline-offset-4 hover:text-brand hover:underline">
+                  {s.label}
+                </a>
+              </li>
+            ))}
+          </ul>
         </nav>
       </header>
 
-      {chapter.leadImageId && <Figure imageId={chapter.leadImageId} priority />}
+      {chapter.leadImageId && (
+        <div className="mt-10">
+          <Figure imageId={chapter.leadImageId} priority />
+        </div>
+      )}
 
-      {/* 2. Quick Briefing (Summary + Exam Takeaways + Key Terms) */}
-      {studyData?.briefing && (
-        <section id="briefing" aria-label="Student Briefing" className="scroll-mt-24">
-          <QuickBriefing
-            bigQuestion={studyData.bigQuestion}
-            whyItMatters={studyData.whyItMatters}
-            summary={studyData.briefing.summary}
-            examTakeaways={studyData.briefing.examTakeaways}
-            keyTerms={studyData.briefing.keyTerms}
-          />
+      {/* Summary: the short version first */}
+      {study?.briefing && (
+        <section id="briefing" aria-labelledby="briefing-title" className="mt-16 scroll-mt-32">
+          <h2 id="briefing-title" className={sectionTitle}>
+            The short version
+          </h2>
+          <p className="reading mt-4 text-ink">{study.briefing.summary}</p>
+
+          <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-14">
+            <div>
+              <h3 className="font-display text-lg font-bold text-ink">What to know for the test</h3>
+              <ol className="mt-3 divide-y divide-rule border-y border-rule">
+                {study.briefing.examTakeaways.map((t) => {
+                  const { label, text } = splitTakeaway(t);
+                  return (
+                    <li key={t} className="py-3.5 text-[1.0625rem] leading-relaxed text-ink-muted">
+                      {label && <span className="font-semibold text-ink">{label}. </span>}
+                      {text}
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
+            <div>
+              <h3 className="font-display text-lg font-bold text-ink">Key terms</h3>
+              <dl className="mt-3 divide-y divide-rule border-y border-rule">
+                {study.briefing.keyTerms.map((term) => (
+                  <div key={term.id} className="py-3.5">
+                    <dt className="font-display font-semibold text-ink">{term.term}</dt>
+                    <dd className="mt-0.5 text-[0.9375rem] leading-relaxed text-ink-muted">{term.definition}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
         </section>
       )}
 
-      {/* 3. The Core Story: Unburied, Readable, Beautiful Narrative */}
-      <section id="story" aria-label="The Historical Story" className="scroll-mt-24 space-y-8">
-        <div className="border-b border-rule pb-4">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-            What happened
-          </h2>
-          <p className="font-sans text-sm text-ink-muted mt-1">
-            The full story, with a source for every big claim.
-          </p>
-        </div>
+      {/* The story */}
+      <section id="story" aria-labelledby="story-title" className="mt-20 scroll-mt-32">
+        <h2 id="story-title" className={sectionTitle}>
+          What happened
+        </h2>
+        <p className={sectionLede}>The full story. The small numbers open the source behind each claim.</p>
 
-        {/* Narrative Prose */}
-        <div className="max-w-3xl mx-auto space-y-6 font-sans text-base sm:text-lg text-ink leading-[1.8]">
+        <div className="reading mt-8 space-y-6 text-ink">
           {chapter.whatHappened.narrative.map((paragraph, idx) => (
-            <div key={idx} className={idx === 0 ? 'editorial-dropcap' : ''}>
-              <CitedParagraph text={paragraph} />
-            </div>
+            <CitedParagraph key={idx} text={paragraph} />
           ))}
         </div>
 
         {chapter.galleryImageIds && chapter.galleryImageIds.length > 0 && (
-          <div className="max-w-3xl mx-auto space-y-8">
+          <div className="mt-12 space-y-10">
             {chapter.galleryImageIds.map((id) => (
               <Figure key={id} imageId={id} />
             ))}
           </div>
         )}
 
-        {/* Landmark Quote Callout (if present) */}
         {chapter.isLandmark && chapter.landmarkMoment && (
-          <aside className="my-8 max-w-3xl mx-auto border-l border-brand bg-parchment p-5 sm:p-6 rounded-r-xs border-t border-r border-b border-rule">
+          <figure className="mt-12 max-w-3xl border-l-[3px] border-brand pl-6">
             {landmarkQuote ? (
-              <blockquote className="font-display text-lg sm:text-xl text-ink leading-relaxed">
+              <blockquote className="font-serif text-xl leading-relaxed text-ink sm:text-[1.375rem]">
                 &ldquo;{landmarkQuote.exactQuotation}&rdquo;
                 <CitationMarker id={landmarkQuote.id} />
               </blockquote>
             ) : (
               <>
-                <span className="meta text-ink-soft block mb-2">Historian&rsquo;s account (paraphrased)</span>
-                <p className="font-display text-lg sm:text-xl text-ink leading-relaxed">
-                  {chapter.landmarkMoment.quote}
-                </p>
+                <p className="text-sm text-ink-muted">A historian’s account, in our words</p>
+                <p className="mt-1 font-serif text-xl leading-relaxed text-ink sm:text-[1.375rem]">{chapter.landmarkMoment.quote}</p>
               </>
             )}
-            <div className="mt-3 font-sans text-xs text-ink-muted">
-              &mdash; <strong className="text-ink">{chapter.landmarkMoment.quoteSpeaker}</strong>,{' '}
-              <span className="italic">{chapter.landmarkMoment.quoteContext}</span> ({chapter.landmarkMoment.dateline})
-            </div>
-          </aside>
+            <figcaption className="mt-3 text-sm text-ink-muted">
+              <span className="font-semibold text-ink">{chapter.landmarkMoment.quoteSpeaker}</span>, {chapter.landmarkMoment.quoteContext} (
+              {chapter.landmarkMoment.dateline})
+            </figcaption>
+          </figure>
         )}
 
-        {/* Key Chronological Milestones */}
         {chapter.whatHappened.keyEvents && chapter.whatHappened.keyEvents.length > 0 && (
-          <div className="max-w-3xl mx-auto pt-6 border-t border-rule">
-            <span className="text-xs font-bold text-brand block mb-4">
-              Key dates
-            </span>
-            <div className="space-y-3">
-              {chapter.whatHappened.keyEvents.map((evt, idx) => (
-                <div
-                  key={idx}
-                  className="p-3.5 bg-parchment border border-rule rounded-xs flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4"
-                >
-                  <span className="font-semibold text-xs text-brand whitespace-nowrap min-w-[130px]">
-                    {evt.date}
-                  </span>
-                  <div>
-                    <div className="font-display font-bold text-base text-ink">
-                      {evt.title}
-                    </div>
-                    <div className="font-sans text-sm text-ink-muted mt-1 leading-relaxed">
-                      {evt.detail}
-                    </div>
+          <div className="mt-14 max-w-3xl">
+            <h3 className="font-display text-lg font-bold text-ink">Key dates</h3>
+            <ol className="mt-4">
+              {chapter.whatHappened.keyEvents.map((evt) => (
+                <li key={`${evt.date}-${evt.title}`} className="grid gap-x-6 sm:grid-cols-[9rem_minmax(0,1fr)]">
+                  <span className="pt-0.5 text-sm font-semibold tabular-nums text-brand sm:text-right">{evt.date}</span>
+                  <div className="border-l-2 border-rule pb-6 pl-5">
+                    <p className="font-display font-semibold leading-snug text-ink">{evt.title}</p>
+                    <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-muted">{evt.detail}</p>
                   </div>
-                </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         )}
       </section>
 
-      {/* 4. Interactive Tactical / Visual Evidence Core */}
-      {chapter.personalStory && <PersonalStoryCard story={chapter.personalStory} />}
+      {chapter.personalStory && (
+        <div className="mt-16">
+          <PersonalStoryCard story={chapter.personalStory} />
+        </div>
+      )}
 
-      <section id="evidence" aria-label="Interactive Visual Evidence" className="scroll-mt-24">
-        <div className="border border-rule bg-parchment p-5 sm:p-8 rounded-xs">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 mb-6 border-b border-rule gap-2">
-            <div>
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-                {chapter.interactiveModule.title}
-              </h2>
-            </div>
-            <p className="font-sans text-xs text-ink-muted max-w-sm">
-              {chapter.interactiveModule.prompt}
-            </p>
+      {/* The one framed object on the page: the interactive */}
+      <section id="evidence" aria-labelledby="evidence-title" className="mt-20 scroll-mt-32">
+        <div className="-mx-4 bg-parchment px-4 py-10 sm:mx-0 sm:rounded-2xl sm:px-8 sm:py-12">
+          <h2 id="evidence-title" className={sectionTitle}>
+            {chapter.interactiveModule.title}
+          </h2>
+          <p className={sectionLede}>{chapter.interactiveModule.prompt}</p>
+          <div className="mt-8">
+            <InteractiveModuleWrapper type={chapter.interactiveModule.type} />
           </div>
-
-          <InteractiveModuleWrapper type={chapter.interactiveModule.type} />
         </div>
       </section>
 
-      {/* 5. Causal Flow Ledger: Chain of Decisions */}
-      <section id="causal" aria-label="Causal Structure of Decisions" className="scroll-mt-24">
+      <section id="causal" aria-label="Cause and effect" className="mt-20 scroll-mt-32">
         <CausalFlowViewer causalChain={chapter.causalChain} />
       </section>
 
-      {/* 6. Practice quiz: Interactive Quiz */}
-      {studyData?.quiz && studyData.quiz.length > 0 && (
-        <section id="quiz" aria-label="Chapter Quiz" className="scroll-mt-24">
-          <ChapterQuiz
-            questions={studyData.quiz}
-            title={`Practice quiz: Chapter ${chapter.number.toString().padStart(2, '0')}`}
-          />
+      {study?.quiz && study.quiz.length > 0 && (
+        <section id="quiz" aria-labelledby="quiz-title" className="mt-20 scroll-mt-32">
+          <h2 id="quiz-title" className={sectionTitle}>
+            Practice quiz
+          </h2>
+          <p className={sectionLede}>
+            {study.quiz.length} questions on this chapter. Each explanation appears after you check your answer.
+          </p>
+          <div className="mt-8">
+            <ChapterQuizBlock chapter={ref} questions={study.quiz} />
+          </div>
         </section>
       )}
 
-      {/* 7. Key Term Flashcards */}
-      {studyData?.flashcards && studyData.flashcards.length > 0 && (
-        <section id="flashcards" aria-label="Flashcards" className="scroll-mt-24">
-          <FlashcardDeck
-            cards={studyData.flashcards}
-            title={`Key terms: Chapter ${chapter.number.toString().padStart(2, '0')}`}
-          />
+      {study?.flashcards && study.flashcards.length > 0 && (
+        <section id="flashcards" aria-labelledby="flashcards-title" className="mt-20 scroll-mt-32">
+          <h2 id="flashcards-title" className={sectionTitle}>
+            Flashcards
+          </h2>
+          <p className={sectionLede}>Look at the term, say what it means, then flip the card to check.</p>
+          <div className="mt-6">
+            <ChapterFlashcardsBlock chapter={ref} terms={study.flashcards} />
+          </div>
         </section>
       )}
 
-      {/* 8. Archival Dossier: Bilateral Perspectives, Primary Sources, Scholarly References */}
-      <section id="dossier" aria-label="Archival Records and Sources" className="pt-8 border-t border-rule scroll-mt-24">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-6 mb-8 border-b border-rule gap-4">
-          <div>
-            <h3 className="font-display text-2xl font-bold text-ink">
-              Sources
-            </h3>
-          </div>
+      {/* Sources */}
+      <section id="sources" aria-labelledby="sources-title" className="mt-20 scroll-mt-32">
+        <h2 id="sources-title" className={sectionTitle}>
+          Sources
+        </h2>
+        <p className={sectionLede}>What each side wanted, the original documents, and every work this chapter cites.</p>
 
-          {/* Dossier Tabs */}
-          <div className="flex items-center gap-1.5 overflow-x-auto text-xs">
-            <button
-              onClick={() => setActiveDossierTab('perspectives')}
-              className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'perspectives' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
-            >
-              What each side wanted
-            </button>
-
-            {chapter.primaryDocuments && chapter.primaryDocuments.length > 0 && (
+        <div role="tablist" aria-label="Sources" className="mt-6 flex gap-6 overflow-x-auto border-b border-rule">
+          {tabs.map((t) => {
+            const selected = sourcesTab === t.id;
+            return (
               <button
-                onClick={() => setActiveDossierTab('documents')}
-                className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'documents' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
+                key={t.id}
+                type="button"
+                role="tab"
+                id={`sources-tab-${t.id}`}
+                aria-selected={selected}
+                aria-controls="sources-panel"
+                onClick={() => setSourcesTab(t.id)}
+                className={`-mb-px shrink-0 border-b-2 py-3 text-[0.9375rem] font-semibold cursor-pointer ${
+                  selected ? 'border-brand text-ink' : 'border-transparent text-ink-muted hover:text-ink'
+                }`}
               >
-                Documents ({chapter.primaryDocuments.length})
+                {t.label}
               </button>
-            )}
-
-            {chapter.citations && chapter.citations.length > 0 && (
-              <button
-                onClick={() => setActiveDossierTab('citations')}
-                className={`px-3 py-1.5 rounded-xs border transition-colors cursor-pointer font-medium ${ activeDossierTab === 'citations' ? 'bg-brand text-white border-brand font-bold' : 'bg-white text-ink-muted border-rule hover:border-brand' }`}
-              >
-                Works cited ({chapter.citations.length})
-              </button>
-            )}
-          </div>
+            );
+          })}
         </div>
 
-        {/* Tab 1: What each side wanted Viewer */}
-        {activeDossierTab === 'perspectives' && (
-          <div className="space-y-6">
+        <div role="tabpanel" id="sources-panel" aria-labelledby={`sources-tab-${sourcesTab}`} className="pt-2">
+          {sourcesTab === 'perspectives' && (
             <DualPerspectiveViewer
               timeframe={chapter.timeframe}
               washington={chapter.washington}
               hanoi={chapter.hanoi}
               ecosystem={chapter.strategicEcosystem}
             />
-          </div>
-        )}
+          )}
 
-        {/* Tab 2: Primary Source Documents */}
-        {activeDossierTab === 'documents' && (
-          <div className="space-y-8">
-            {chapter.primaryDocuments.map((doc) => (
-              <DocumentInspector key={doc.id} document={doc} />
-            ))}
-          </div>
-        )}
+          {sourcesTab === 'documents' && (
+            <div className="space-y-8 pt-8">
+              {chapter.primaryDocuments.map((doc) => (
+                <DocumentInspector key={doc.id} document={doc} />
+              ))}
+            </div>
+          )}
 
-        {/* Tab 3: Citations & Bibliography */}
-        {activeDossierTab === 'citations' && (
-          <div className="pt-2">
-            <ul className="space-y-3 text-xs text-ink-muted">
+          {sourcesTab === 'citations' && (
+            <ol className="mt-6 divide-y divide-rule border-y border-rule">
               {chapter.citations.map((c) => (
-                <li
-                  key={c.id}
-                  className="flex items-start justify-between gap-3 p-3.5 rounded-xs border border-rule bg-parchment hover:border-brand transition-colors"
-                >
-                  <div className="flex items-start gap-2.5">
+                <li key={c.id} className="flex items-start justify-between gap-4 py-4">
+                  <div className="flex items-start gap-3">
                     <CitationMarker id={c.id} label={c.marker} />
-                    <div>
-                      <span className="text-ink font-medium">
-                        {c.citation}
-                      </span>
-                      {c.supportsClaim && (
-                        <p className="font-sans text-xs text-ink-muted mt-1">
-                          Supports: {c.supportsClaim}
-                        </p>
-                      )}
+                    <div className="text-[0.9375rem] leading-relaxed">
+                      <p className="text-ink">{c.citation}</p>
+                      {c.supportsClaim && <p className="mt-1 text-ink-muted">Used for: {c.supportsClaim}</p>}
                     </div>
                   </div>
                   <button
                     type="button"
                     onClick={() => openCitation(c)}
-                    className="text-xs font-semibold text-brand hover:underline whitespace-nowrap cursor-pointer px-2.5 py-1 bg-white border border-rule rounded-xs"
+                    className="shrink-0 text-sm font-semibold text-brand underline decoration-brand-rule underline-offset-2 hover:decoration-brand cursor-pointer"
                   >
                     Details
                   </button>
                 </li>
               ))}
-            </ul>
-          </div>
-        )}
+            </ol>
+          )}
+        </div>
       </section>
 
-      {/* 9. Forward Causal Bridge (Next Inquiry) */}
-      <footer className="border-t border-rule pt-8 pb-12">
-        <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink mb-3">
-          {chapter.nextQuestion.question}
-        </h3>
-        <p className="font-sans text-base text-ink-muted leading-relaxed mb-6 max-w-2xl">
-          {chapter.nextQuestion.framing}
-        </p>
-
-        <div className="flex flex-wrap items-center gap-4">
+      {/* Bridge to the next chapter */}
+      <footer className="mt-20 border-t border-ink pt-10">
+        <p className="text-sm text-ink-muted">Up next</p>
+        <h2 className="mt-1 max-w-3xl font-display text-2xl font-bold leading-snug text-ink sm:text-3xl">{chapter.nextQuestion.question}</h2>
+        <p className="mt-3 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">{chapter.nextQuestion.framing}</p>
+        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
           {nextChapterId ? (
             <Link
               href={`/vietnam/${nextChapterId}`}
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold transition-colors rounded-xs"
+              className="rounded-md bg-brand px-5 py-3 text-[0.9375rem] font-semibold text-white hover:bg-brand-hover"
             >
-              <span>Next: Chapter {chapter.number + 1}, {nextChapterTitle}</span>
+              Chapter {chapter.number + 1}: {nextChapterTitle}
             </Link>
           ) : (
-            <Link
-              href="/vietnam/study-guide"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-brand hover:bg-brand-hover text-white text-xs font-semibold transition-colors rounded-xs"
-            >
-              <span>Open the study guide</span>
+            <Link href="/vietnam/study-guide" className="rounded-md bg-brand px-5 py-3 text-[0.9375rem] font-semibold text-white hover:bg-brand-hover">
+              Open the study guide
             </Link>
           )}
-
-          <Link
-            href="/vietnam"
-            className="inline-flex items-center gap-2 px-5 py-3.5 border border-rule bg-parchment hover:bg-rule text-ink text-xs font-medium transition-colors rounded-xs"
-          >
-            <span>All chapters</span>
+          <Link href="/vietnam" className="text-[0.9375rem] font-semibold text-ink-muted hover:text-brand">
+            All chapters
           </Link>
         </div>
       </footer>

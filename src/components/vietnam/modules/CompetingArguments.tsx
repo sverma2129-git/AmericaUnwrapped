@@ -11,40 +11,39 @@ export default function CompetingArguments() {
     HISTORIOGRAPHICAL_SCHOOLS[0];
 
   return (
-    <figure className="my-10 border border-stone-300 bg-[#f9f7f2]">
+    <figure className="my-10 border border-rule-strong bg-[#f9f7f2]">
       {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
-          <span className="font-bold text-stone-900">
+          <span className="font-bold text-ink">
             Two schools of thought
           </span>
-          <span className="text-stone-500 ml-2">&bull; Four Traditions of Historical Interpretation</span>
         </div>
-        <span className="text-stone-500 text-[11px]">
+        <span className="text-ink-soft text-xs">
           How historians disagree
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
+          <h3 className="font-display text-2xl font-bold text-ink mt-1">
             Why historians still argue about what the war meant
-          </h4>
-          <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
+          </h3>
+          <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
             The Vietnam War is not an inert chapter of the past. It remains an active ideological battleground. Each generation of scholars brings different archival evidence, questions, and political contexts to explain why the tragedy occurred.
           </p>
         </div>
 
         {/* School Buttons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2 border-t border-stone-200">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 pt-2 border-t border-rule">
           {HISTORIOGRAPHICAL_SCHOOLS.map((school) => (
             <button
               key={school.id}
               type="button"
               onClick={() => setSelectedSchoolId(school.id)}
-              className={`p-3 text-left transition-colors cursor-pointer border ${ selectedSchoolId === school.id ? 'border-stone-900 bg-stone-900 text-stone-100 font-bold' : 'border-stone-300 bg-white text-stone-700 hover:border-stone-500' }`}
+              className={`p-3 text-left transition-colors cursor-pointer border ${ selectedSchoolId === school.id ? 'border-ink bg-ink text-paper font-bold' : 'border-rule-strong bg-white text-ink-muted hover:border-rule-strong' }`}
             >
-              <div className="text-[10px] opacity-70">
+              <div className="text-xs opacity-70">
                 {school.era.split(' ')[0]}
               </div>
               <div className="font-display text-sm font-bold mt-0.5">
@@ -55,55 +54,55 @@ export default function CompetingArguments() {
         </div>
 
         {/* Selected School Detail Ledger */}
-        <div className="p-6 bg-white border border-stone-200 space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-stone-100 pb-3">
+        <div className="p-6 bg-white border border-rule space-y-5">
+          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
             <div>
-              <h5 className="font-display text-2xl font-bold text-stone-900">
+              <h4 className="font-display text-2xl font-bold text-ink">
                 {activeSchool.name}
-              </h5>
-              <span className="text-xs text-stone-500">
+              </h4>
+              <span className="text-xs text-ink-soft">
                 Era of Prominence: {activeSchool.era}
               </span>
             </div>
-            <div className="text-xs text-stone-600">
+            <div className="text-xs text-ink-muted">
               Key Scholars: {activeSchool.keyHistorians.slice(0, 3).join(', ')}
             </div>
           </div>
 
           {/* Core Thesis */}
-          <div className="border-l border-stone-900 pl-4 py-1">
-            <span className="text-xs font-bold text-stone-500 block mb-1">
+          <div className="border-l border-ink pl-4 py-1">
+            <span className="text-xs font-bold text-ink-soft block mb-1">
               Main argument
             </span>
-            <p className="font-display text-base sm:text-lg text-stone-800 leading-relaxed">
+            <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
               &ldquo;{activeSchool.coreThesis}&rdquo;
             </p>
           </div>
 
           {/* Strengths vs Blindspots */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-            <div className="p-4 bg-[#f2ede4] border border-stone-300 space-y-2 text-xs font-sans">
-              <span className="font-bold text-stone-700 block">
-                Evidence Emphasized &bull; Explanatory Power:
+            <div className="p-4 bg-[#f2ede4] border border-rule-strong space-y-2 text-xs font-sans">
+              <span className="font-bold text-ink-muted block">
+                The evidence they lean on
               </span>
-              <ul className="space-y-1.5 text-stone-700 font-display text-sm">
+              <ul className="space-y-1.5 text-ink-muted font-display text-sm">
                 {activeSchool.strengths.map((str, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="font-bold text-stone-900">&bull;</span>
+                    <span className="font-bold text-ink">&bull;</span>
                     <span>{str}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="p-4 bg-[#f2ede4] border border-stone-300 space-y-2 text-xs font-sans">
-              <span className="font-bold text-stone-700 block">
-                Historiographical Critiques &bull; Blind Spots:
+            <div className="p-4 bg-[#f2ede4] border border-rule-strong space-y-2 text-xs font-sans">
+              <span className="font-bold text-ink-muted block">
+                What critics say they miss
               </span>
-              <ul className="space-y-1.5 text-stone-700 font-display text-sm">
+              <ul className="space-y-1.5 text-ink-muted font-display text-sm">
                 {activeSchool.blindSpotsOrCritiques.map((blind, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="font-bold text-stone-900">&bull;</span>
+                    <span className="font-bold text-ink">&bull;</span>
                     <span>{blind}</span>
                   </li>
                 ))}

@@ -74,116 +74,87 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-12">
-      {/* Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="text-xs text-ink-soft">
-        <ol className="flex items-center space-x-2">
-          <li>
-            <Link
-              href="/"
-              className="hover:text-brand transition-colors"
-            >
-              Home
-            </Link>
-          </li>
-          <li aria-hidden="true">&bull;</li>
-          <li className="text-brand font-bold" aria-current="page">
-            How we work
-          </li>
-        </ol>
-      </nav>
-
-      {/* Header */}
-      <header className="border-b border-rule pb-10">
-        <h1 className="mt-3 font-display text-3xl sm:text-5xl font-bold tracking-tight text-ink leading-tight">
-          How we decide what&rsquo;s true
+    <div className="mx-auto max-w-4xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+      <header>
+        <h1 className="font-display text-[2.375rem] font-bold leading-[1.06] tracking-tight text-ink sm:text-[3.25rem]">
+          How we decide what’s true
         </h1>
-        <p className="mt-4 font-display text-lg sm:text-2xl text-ink-muted leading-relaxed">
+        <p className="mt-4 max-w-[40ch] font-serif text-xl leading-snug text-ink sm:text-[1.4375rem]">
           History is more interesting when you can see the evidence and make up your own mind.
         </p>
       </header>
 
-      {/* Core Philosophy */}
-      <section className="py-6 border-b border-rule space-y-4">
-        <h2 className="font-display text-2xl font-bold text-ink">
+      <section aria-labelledby="why-title" className="mt-14">
+        <h2 id="why-title" className="font-display text-[1.75rem] font-bold tracking-tight text-ink">
           Why this site exists
         </h2>
-        <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
-          Most history online is one of two things: dense academic material that buries students, or opinion pieces that use the past to win today&rsquo;s arguments. Neither helps you understand what actually happened.
-        </p>
-        <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
-          We try to do something simpler: tell the story clearly, show you the documents, and keep asking one question about every turning point. Who decided what, what were they assuming, and what happened next? <strong>Decision Assumption Result Consequence</strong>.
-        </p>
-      </section>
-
-      {/* The 10 Editorial Rules */}
-      <section className="py-6 border-b border-rule">
-        <div className="mb-8">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-            Ten rules we hold ourselves to
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {editorialRules.map((rule) => (
-            <div
-              key={rule.number}
-              className="p-5 border border-rule rounded-xs bg-parchment space-y-2"
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-brand">
-                  RULE {rule.number}
-                </span>
-              </div>
-              <h3 className="font-display text-lg font-bold text-ink">
-                {rule.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
-                {rule.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Privacy & Corrections */}
-      <section className="py-6 space-y-4">
-        <h2 className="font-display text-2xl font-bold text-ink">
-          No ads, no tracking
-        </h2>
-        <p className="text-base text-ink leading-relaxed">
-          There are no ads, trackers, or accounts here. Nothing about you is collected. The pages are plain files, so they load fast even on a school Chromebook.
-        </p>
-        <p className="text-base text-ink leading-relaxed">
-          If you spot a mistake, please{' '}
-          <a
-            href="https://github.com/sverma2129-git/AmericaUnwrapped/issues"
-            className="text-brand font-semibold hover:underline"
-          >
-            tell us
-          </a>
-          . We. We fix errors and note what changed.rsquo;ll check it against the sources and fix it.
-        </p>
-      </section>
-
-      {/* Image credits */}
-      <section id="image-credits" aria-labelledby="image-credits-heading" className="scroll-mt-28 space-y-6">
-        <div>
-          <h2 id="image-credits-heading" className="font-display text-2xl font-bold text-ink">
-            Where every image comes from
-          </h2>
-          <p className="mt-2 text-[0.9375rem] text-ink-muted leading-relaxed max-w-2xl">
-            Every photograph and document on this site is listed here with who made it, who holds the original, and why
-            we are allowed to show it. Most are works of the U.S. government, which are in the public domain. We do not
-            use the famous news-agency photographs of the war, because those are still under copyright.
+        <div className="reading mt-4 space-y-5 text-ink">
+          <p>
+            Most history online is one of two things: dense academic material that buries students, or opinion pieces
+            that use the past to win today’s arguments. Neither helps you understand what actually happened.
+          </p>
+          <p>
+            We try to do something simpler: tell the story clearly, show you the documents, and keep asking the same
+            questions about every turning point. Who decided what? What were they assuming? What happened next, and what
+            did it lead to?
           </p>
         </div>
-        <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
+      </section>
+
+      <section aria-labelledby="rules-title" className="mt-16">
+        <h2 id="rules-title" className="font-display text-[1.75rem] font-bold tracking-tight text-ink">
+          Ten rules we hold ourselves to
+        </h2>
+        <ol className="mt-6 divide-y divide-rule border-y border-rule">
+          {editorialRules.map((rule, i) => (
+            <li key={rule.number} className="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-4 py-5 sm:grid-cols-[3rem_minmax(0,1fr)]">
+              <span className="font-display text-xl font-bold tabular-nums text-brand">{i + 1}</span>
+              <div>
+                <h3 className="font-display text-lg font-bold text-ink">{rule.title}</h3>
+                <p className="mt-1 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">{rule.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section aria-labelledby="privacy-title" className="mt-16">
+        <h2 id="privacy-title" className="font-display text-[1.75rem] font-bold tracking-tight text-ink">
+          No ads, no tracking
+        </h2>
+        <div className="mt-4 max-w-[62ch] space-y-4 text-[1.0625rem] leading-relaxed text-ink">
+          <p>
+            There are no ads, trackers, or accounts here. Nothing about you is collected. The pages are plain files, so
+            they load fast even on a school Chromebook.
+          </p>
+          <p>
+            If you spot a mistake, please{' '}
+            <a
+              href="https://github.com/sverma2129-git/AmericaUnwrapped/issues"
+              className="font-semibold text-brand underline decoration-brand-rule underline-offset-2 hover:decoration-brand"
+            >
+              tell us
+            </a>
+            . We’ll check it against the sources, fix it, and note what changed.
+          </p>
+        </div>
+      </section>
+
+      <section id="image-credits" aria-labelledby="image-credits-heading" className="mt-16 scroll-mt-28">
+        <h2 id="image-credits-heading" className="font-display text-[1.75rem] font-bold tracking-tight text-ink">
+          Where every image comes from
+        </h2>
+        <p className="mt-3 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+          Every photograph and document on this site is listed here with who made it, who holds the original, and why we
+          are allowed to show it. Most are works of the U.S. government, which are in the public domain. We do not use the
+          famous news-agency photographs of the war, because those are still under copyright.
+        </p>
+        <ul className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2">
           {Object.values(IMAGE_REGISTRY).map((image) => (
             <li key={image.id} className="flex gap-4">
-              <Thumb imageId={image.id} className="w-24 h-24 shrink-0 rounded-md" />
-              <div className="text-[0.8125rem] leading-relaxed text-ink-soft">
-                <p className="text-[0.9375rem] text-ink leading-snug">{image.caption}</p>
+              <Thumb imageId={image.id} className="h-24 w-24 shrink-0 rounded-md" />
+              <div className="text-sm leading-relaxed text-ink-muted">
+                <p className="text-[0.9375rem] leading-snug text-ink">{image.caption}</p>
                 <p className="mt-1">
                   {image.creator}, {image.date}. {image.source}
                   {image.archiveId ? ` (${image.archiveId})` : ''}. {RIGHTS_LABEL[image.rights]}.{' '}
@@ -197,19 +168,12 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      {/* Return Links */}
-      <div className="pt-8 border-t border-rule flex flex-wrap gap-4 items-center justify-between text-xs">
-        <Link
-          href="/"
-          className="text-ink-muted hover:text-brand font-bold transition-colors"
-        >
-          Back to Home
+      <div className="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-rule pt-8">
+        <Link href="/vietnam" className="rounded-md bg-brand px-5 py-3 text-[0.9375rem] font-semibold text-white hover:bg-brand-hover">
+          Start reading
         </Link>
-        <Link
-          href="/vietnam"
-          className="px-5 py-2.5 bg-brand hover:bg-brand-hover text-white font-bold rounded-xs transition-colors"
-        >
-          Start Reading
+        <Link href="/" className="text-[0.9375rem] font-semibold text-ink-muted hover:text-brand">
+          Back to the home page
         </Link>
       </div>
     </div>

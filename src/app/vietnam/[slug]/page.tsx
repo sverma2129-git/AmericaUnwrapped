@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: ChapterPageProps): Promise<Me
   }
 
   return {
-    title: `Ch. ${chapter.number.toString().padStart(2, '0')}: ${chapter.title} (${chapter.timeframe})`,
+    title: `Chapter ${chapter.number}: ${chapter.title}`,
     description: chapter.summary,
   };
 }

@@ -4,7 +4,8 @@ import type { ChapterData, StoryBeat } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import CitationMarker from '@/components/common/CitationMarker';
-import FlashcardDeck from '@/components/study/FlashcardDeck';
+import { splitTakeaway } from '@/lib/takeaways';
+import { ChapterFlashcardsBlock } from '@/components/study/ChapterPractice';
 import Icon from '@/components/common/Icon';
 import DualPerspectiveViewer from '../DualPerspectiveViewer';
 import DocumentInspector from '../DocumentInspector';
@@ -33,12 +34,6 @@ function countWords(beats: StoryBeat[]): number {
     })
     .join(' ');
   return text.split(/\s+/).filter(Boolean).length;
-}
-
-/** "Label: explanation" takeaways render with the label emphasized. */
-function splitTakeaway(text: string): [string | null, string] {
-  const idx = text.indexOf(':');
-  return idx > 0 && idx < 40 ? [text.slice(0, idx), text.slice(idx + 1).trim()] : [null, text];
 }
 
 /** A major section opens with the double rule and its heading; details go below the heading. */
@@ -128,7 +123,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
           </h2>
           <ol className="mt-8 grid md:grid-cols-3 gap-y-6 md:gap-x-10">
             {study?.briefing.examTakeaways.map((t, i) => {
-              const [label, text] = splitTakeaway(t);
+              const { label, text } = splitTakeaway(t);
               return (
                 <li key={i}>
                   <p className="font-semibold text-ink">
@@ -243,7 +238,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
             )}
 
             <DeeperPanel title="The full chain of cause and effect" detail="The decision, the assumption behind it, and what it led to">
-              <CausalFlowViewer causalChain={chapter.causalChain} />
+              <CausalFlowViewer causalChain={chapter.causalChain} showHeading={false} />
             </DeeperPanel>
 
             {chapter.citations.length > 0 && (
@@ -278,7 +273,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
             </div>
           )}
           {study?.flashcards && study.flashcards.length > 0 && (
-            <FlashcardDeck cards={study.flashcards} title={`Key terms: Chapter ${chapter.number}`} />
+            <ChapterFlashcardsBlock chapter={{ id: chapter.id, number: chapter.number, title: chapter.title }} terms={study.flashcards} />
           )}
           <Link
             href="/vietnam/study-guide"

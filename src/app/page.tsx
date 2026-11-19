@@ -22,10 +22,10 @@ export default function HomePage() {
   const verifiedQuotes = SOURCE_REGISTRY.filter((e) => e.verificationCategory === 'VERIFIED_QUOTATION').length;
 
   const studyTools = [
-    { title: 'Cheat sheet', detail: 'Every presidency and turning point on one page.' },
-    { title: 'Practice quiz', detail: `${quizCount} questions, each with an explanation.` },
-    { title: 'Flashcards', detail: `${termCount} key terms with what to know for the exam.` },
-    { title: 'Essay outlines', detail: 'Model arguments for DBQ and long-essay prompts.' },
+    { title: 'The presidents and turning points', href: '/vietnam/study-guide#presidents', detail: 'Who did what, and the eleven events that changed the war.' },
+    { title: 'Practice quiz', href: '/vietnam/study-guide#quiz', detail: `${quizCount} questions, each with an explanation.` },
+    { title: 'Flashcards', href: '/vietnam/study-guide#flashcards', detail: `${termCount} key terms, with what to know for the test.` },
+    { title: 'Essay practice', href: '/vietnam/study-guide#essays', detail: 'AP-style prompts with sample outlines.' },
   ];
 
   return (
@@ -77,7 +77,7 @@ export default function HomePage() {
 
       {/* What is inside, in one line */}
       <p className="mt-12 text-[0.9375rem] text-ink-muted">
-        <span className="font-semibold text-ink">Inside:</span>{' '}
+        The unit has{' '}
         <Link href="/vietnam" className="hover:text-brand">{CHAPTER_COUNT} chapters</Link>,{' '}
         <Link href="/vietnam/study-guide" className="hover:text-brand">{quizCount} practice questions</Link>,{' '}
         <Link href="/vietnam/study-guide" className="hover:text-brand">{termCount} key terms</Link>, and{' '}
@@ -91,21 +91,16 @@ export default function HomePage() {
             The Vietnam War
           </h2>
           <Link href="/vietnam" className={`${textLink} text-[0.9375rem]`}>
-            Unit overview
+            All chapters, with photos
           </Link>
         </div>
-        <ol className="mt-6 md:columns-2 md:gap-x-12">
+        <ol className="mt-6 grid border-t border-rule md:grid-cols-2 md:gap-x-12">
           {VIETNAM_CHAPTERS.map((ch) => (
-            <li key={ch.id} className="border-b border-rule break-inside-avoid">
-              <Link href={`/vietnam/${ch.id}`} className="group flex items-baseline gap-3 py-3">
-                <span className="w-6 shrink-0 text-sm text-ink-soft tabular-nums">{ch.number}</span>
-                {ch.leadImageId && <Thumb imageId={ch.leadImageId} className="w-14 h-14 shrink-0 rounded-md self-center" />}
-                <span className="font-display text-lg leading-snug text-ink group-hover:text-brand transition-colors">
-                  {ch.title.split(':')[0]}
-                  {ch.isLandmark && <span className="meta ml-2 text-brand">Turning point</span>}
-                </span>
-                <span aria-hidden="true" className="flex-1" />
-                <span className="shrink-0 text-sm text-ink-soft tabular-nums">{ch.timeframe}</span>
+            <li key={ch.id} className="border-b border-rule">
+              <Link href={`/vietnam/${ch.id}`} className="group grid grid-cols-[1.75rem_minmax(0,1fr)_auto] items-baseline gap-x-3 py-3.5">
+                <span className="text-sm tabular-nums text-ink-soft">{ch.number}</span>
+                <span className="font-display text-lg font-semibold leading-snug text-ink group-hover:text-brand">{ch.title}</span>
+                <span className="text-sm tabular-nums text-ink-soft">{ch.timeframe}</span>
               </Link>
             </li>
           ))}
@@ -120,7 +115,7 @@ export default function HomePage() {
         <ul className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-6">
           {studyTools.map((tool) => (
             <li key={tool.title}>
-              <Link href="/vietnam/study-guide" className={textLink}>
+              <Link href={tool.href} className={textLink}>
                 {tool.title}
               </Link>
               <p className="mt-1.5 text-[0.9375rem] text-ink-muted leading-relaxed">{tool.detail}</p>

@@ -1,117 +1,51 @@
 import Link from 'next/link';
 
+const linkClass = 'text-ink-muted hover:text-brand';
+
 export default function Footer() {
   return (
-    <footer
-      role="contentinfo"
-      className="mt-auto border-t border-rule bg-parchment-light text-ink transition-colors"
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Publication Identity */}
-          <div className="md:col-span-2 space-y-3">
-            <Link href="/" className="inline-block">
-              <span className="font-display text-2xl font-bold tracking-tight text-ink block">
-                America Unwrapped
-              </span>
+    <footer role="contentinfo" className="mt-auto border-t border-rule bg-parchment-light text-ink">
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
+        <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)]">
+          <div>
+            <Link href="/" className="font-display text-xl font-bold tracking-tight text-ink">
+              America Unwrapped
             </Link>
-            <p className="font-sans text-sm text-ink-muted max-w-sm leading-relaxed">
-              American history for students who want the real story: what happened, why, and how we know. Built with the documents in plain sight.
+            <p className="mt-3 max-w-sm text-[0.9375rem] leading-relaxed text-ink-muted">
+              American history for high-school students: what happened, why, and how we know, with the documents in plain sight.
             </p>
-            <div className="pt-2 text-xs text-ink-soft space-y-1">
-              <div>Primary Archives: U.S. National Archives (NARA) &bull; FRUS &bull; Wilson Center</div>
-              <div>Same standard for every side &bull; Evidence first, conclusions second</div>
-            </div>
           </div>
 
-          {/* Explore History */}
-          <div>
-            <h3 className="text-xs font-bold text-brand mb-3">
-              Explore history
-            </h3>
-            <ul className="space-y-2 text-sm text-ink-muted">
-              <li>
-                <Link href="/vietnam" className="hover:text-brand transition-colors">
-                  Unit overview
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/french-indochina-dien-bien-phu" className="hover:text-brand transition-colors">
-                  Ch. 01: Dien Bien Phu
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/gulf-of-tonkin" className="hover:text-brand transition-colors">
-                  Ch. 04: Gulf of Tonkin
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/tet-offensive" className="hover:text-brand transition-colors">
-                  Ch. 07: Tet Offensive
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-brand transition-colors">
-                  How we work
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#image-credits" className="hover:text-brand transition-colors">
-                  Image credits
-                </Link>
-              </li>
+          <nav aria-labelledby="footer-read">
+            <h2 id="footer-read" className="font-display text-sm font-semibold text-ink">
+              Read
+            </h2>
+            <ul className="mt-3 space-y-2 text-[0.9375rem]">
+              <li><Link href="/vietnam" className={linkClass}>The Vietnam War, all 12 chapters</Link></li>
+              <li><Link href="/vietnam/french-indochina-dien-bien-phu" className={linkClass}>Start at Chapter 1</Link></li>
+              <li><Link href="/about" className={linkClass}>How we decide what’s true</Link></li>
+              <li><Link href="/about#image-credits" className={linkClass}>Image credits</Link></li>
             </ul>
-          </div>
+          </nav>
 
-          {/* Student Study Tools */}
-          <div>
-            <h3 className="text-xs font-bold text-brand mb-3">
-              Study tools
-            </h3>
-            <ul className="space-y-2 text-sm text-ink-muted">
-              <li>
-                <Link href="/vietnam/study-guide" className="font-semibold text-brand hover:underline transition-colors">
-                  Study guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  Cheat sheet
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  Practice quiz
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  Key terms
-                </Link>
-              </li>
-              <li>
-                <Link href="/vietnam/study-guide" className="hover:text-brand transition-colors">
-                  Essay outlines
-                </Link>
-              </li>
+          <nav aria-labelledby="footer-study">
+            <h2 id="footer-study" className="font-display text-sm font-semibold text-ink">
+              Study
+            </h2>
+            <ul className="mt-3 space-y-2 text-[0.9375rem]">
+              <li><Link href="/vietnam/study-guide" className={linkClass}>Study guide</Link></li>
+              <li><Link href="/vietnam/study-guide#quiz" className={linkClass}>Practice quiz</Link></li>
+              <li><Link href="/vietnam/study-guide#flashcards" className={linkClass}>Flashcards</Link></li>
+              <li><Link href="/vietnam/study-guide#essays" className={linkClass}>Essay practice</Link></li>
             </ul>
-          </div>
+          </nav>
         </div>
 
-        {/* Bottom Colophon */}
-        <div className="mt-12 pt-6 border-t border-rule flex flex-col sm:flex-row justify-between items-center text-xs text-ink-soft gap-3">
-          <p>
-            &copy; {new Date().getFullYear()} America Unwrapped. Made for high-school students, teachers, and anyone curious.
-          </p>
-          <p>
-            No ads. No tracking.{' '}
-            <a
-              href="https://github.com/sverma2129-git/AmericaUnwrapped/issues"
-              className="underline hover:text-brand transition-colors"
-            >
-              Found a mistake? Tell us.
-            </a>
-          </p>
+        <div className="mt-12 flex flex-col gap-2 border-t border-rule pt-6 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} America Unwrapped. No ads and no tracking.</p>
+          <a href="https://github.com/sverma2129-git/AmericaUnwrapped/issues" className="underline underline-offset-2 hover:text-brand">
+            Found a mistake? Tell us.
+          </a>
         </div>
       </div>
     </footer>

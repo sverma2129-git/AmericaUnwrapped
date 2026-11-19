@@ -154,7 +154,7 @@ export default function Header() {
                                 <h4 className="meta text-brand">
                                   {era.title}
                                 </h4>
-                                <span className="text-[10px] text-ink-soft block">
+                                <span className="text-xs text-ink-soft block">
                                   {era.dates}
                                 </span>
                               </div>
@@ -167,8 +167,8 @@ export default function Header() {
                                       onClick={() => setExploreDropdownOpen(false)}
                                       className="block p-2 -mx-2 rounded-md hover:bg-parchment transition-colors group/item"
                                     >
-                                      <div className="flex items-center justify-between gap-1 text-[10px] text-ink-soft mb-0.5">
-                                        <span>Ch {ch.number.toString().padStart(2, '0')}</span>
+                                      <div className="flex items-center justify-between gap-1 text-xs text-ink-soft mb-0.5">
+                                        <span>Chapter {ch.number}</span>
                                         {ch.isLandmark && (
                                           <span className="w-1.5 h-1.5 rounded-full bg-brand" title="Key Turning Point" />
                                         )}
@@ -287,7 +287,7 @@ export default function Header() {
                             className="block py-1.5 px-2 text-ink hover:text-brand transition-colors"
                           >
                             <span className="font-semibold text-brand mr-2">
-                              {ch.number.toString().padStart(2, '0')}.
+                              {ch.number}.
                             </span>
                             {ch.title.split(':')[0]}
                           </Link>

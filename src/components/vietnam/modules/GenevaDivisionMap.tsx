@@ -13,7 +13,6 @@ export default function GenevaDivisionMap() {
           <span className="font-bold text-ink">
             Map of the split
           </span>
-          <span className="text-ink-soft ml-2">&bull; The 17th Parallel &amp; Geneva Partition (1954–1956)</span>
         </div>
         <div className="flex items-center gap-1.5">
           <button
@@ -49,13 +48,13 @@ export default function GenevaDivisionMap() {
               ? 'Operation Passage to Freedom (1954–1955)'
               : 'Why the split stuck (1956)'}
           </span>
-          <h4 className="font-display text-2xl font-bold text-ink mt-1">
+          <h3 className="font-display text-2xl font-bold text-ink mt-1">
             {activeLayer === 'boundary'
               ? 'A temporary truce line became a Cold War border'
               : activeLayer === 'refugees'
               ? 'Nearly 1 million northerners, most of them Catholic, go south'
               : 'Why the elections were never held'}
-          </h4>
+          </h3>
         </div>
 
         {/* Print-Cartography SVG Map */}
@@ -116,7 +115,7 @@ export default function GenevaDivisionMap() {
                 <text x="490" y="240" className="fill-ink text-xs font-bold">
                   850,000–1,000,000 Refugees South
                 </text>
-                <text x="490" y="258" className="fill-ink-muted text-[10px]">
+                <text x="490" y="258" className="fill-ink-muted text-xs">
                   Assisted by U.S. Navy Task Force 90
                 </text>
               </g>

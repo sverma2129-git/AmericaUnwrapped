@@ -60,18 +60,17 @@ export default function EscalationTimeline() {
           <span className="font-bold text-ink">
             How the U.S. role grew
           </span>
-          <span className="text-ink-soft ml-2">&bull; The Advisory Commitment (1960–1963)</span>
         </div>
-        <span className="text-ink-soft text-[11px] font-semibold">
+        <span className="text-ink-soft text-xs font-semibold">
           Pick a year
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h4 className="font-display text-2xl font-bold text-ink mt-1">
+          <h3 className="font-display text-2xl font-bold text-ink mt-1">
             How 875 advisers became 16,300 troops
-          </h4>
+          </h3>
           <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
             President Kennedy consistently refused to commit conventional American ground combat divisions, yet sought to prevent communist victory through incremental increases in military advisers, helicopters, and covert special operations.
           </p>
@@ -97,9 +96,9 @@ export default function EscalationTimeline() {
         {/* Selected Year Data Ledger */}
         <div className="p-6 bg-paper border border-rule rounded-xs space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
-            <h5 className="font-display text-xl font-bold text-ink">
+            <h4 className="font-display text-xl font-bold text-ink">
               {current.label}
-            </h5>
+            </h4>
             <span className="text-xs text-brand font-bold">
               U.S. Casualties in {selectedYear}: {current.casualties} KIA
             </span>
@@ -107,7 +106,7 @@ export default function EscalationTimeline() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
             <div>
-              <span className="font-bold text-ink-soft block mb-1 text-[11px]">
+              <span className="font-bold text-ink-soft block mb-1 text-xs">
                 Rules for fighting:
               </span>
               <p className="font-display text-ink leading-relaxed">
@@ -115,7 +114,7 @@ export default function EscalationTimeline() {
               </p>
             </div>
             <div>
-              <span className="font-bold text-ink-soft block mb-1 text-[11px]">
+              <span className="font-bold text-ink-soft block mb-1 text-xs">
                 Key moment:
               </span>
               <p className="font-display text-ink leading-relaxed">
@@ -126,7 +125,7 @@ export default function EscalationTimeline() {
 
           {/* Kennedy Documented Position */}
           <div className="p-4 bg-parchment border border-rule border-l border-l-brand rounded-r-xs">
-            <span className="text-[11px] text-brand font-bold block mb-1">
+            <span className="text-xs text-brand font-bold block mb-1">
               Documented Administration Position (Paraphrase):
             </span>
             <p className="font-display text-ink leading-relaxed">
