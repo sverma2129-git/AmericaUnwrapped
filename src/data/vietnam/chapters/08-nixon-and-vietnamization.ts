@@ -11,12 +11,12 @@ const chapter: ChapterData = {
   title: 'Nixon and Vietnamization',
   subtitle: 'Troops come home while the war spreads to Cambodia and Laos',
   summary:
-    'Richard Nixon won the presidency promising "peace with honor." His plan, called Vietnamization, cut U.S. ground troops from 543,000 to under 25,000. South Vietnam’s army, the ARVN, took over the fighting. To cover the pullout, Nixon widened the war. He secretly bombed Cambodia, sent troops across the border, and opened talks with Moscow and Beijing. Two big battles, Lam Son 719 in Laos and the 1972 Easter Offensive, showed the same thing. The ARVN could not hold on the ground without U.S. air power.',
+    'Richard Nixon won the presidency promising “peace with honor.” His plan, called Vietnamization, cut U.S. ground troops from 543,000 to under 25,000. South Vietnam’s army, the ARVN, took over the fighting. To cover the pullout, Nixon widened the war. He secretly bombed Cambodia, sent troops across the border, and opened talks with Moscow and Beijing. Two big battles, Lam Son 719 in Laos and the 1972 Easter Offensive, showed the same thing. The ARVN could not hold on the ground without U.S. air power.',
   whatHappened: {
     narrative: [
-      'Upon taking office in 1969, Richard Nixon faced intense domestic pressure to end American casualties. Under the Nixon Doctrine and "Vietnamization," the administration began withdrawing American ground forces, drawing numbers down from their 1969 peak of 543,000 to 24,000 by late 1972.[^c8-1] Historians continue to debate Nixon’s intent: revisionist scholars argue General Creighton Abrams’ "One War" pacification strategy was genuinely succeeding,[^c8-2] while critics argue Nixon and Kissinger sought primarily a "decent interval"—buying enough time so South Vietnam’s eventual collapse would not be perceived as an American defeat.[^c8-1]',
-      'To disrupt communist supply sanctuaries, Nixon initiated Operation Menu in March 1969—secret B-52 carpet-bombing of neutral Cambodia, concealed from Congress via dual record-keeping. In April 1970, American and ARVN troops openly invaded Cambodia. The move ignited nationwide campus protests; on May 4, Ohio National Guardsmen shot and killed four students at Kent State University, followed ten days later by killings at Jackson State. In response, Congress passed the Cooper-Church Amendment, legally prohibiting U.S. ground troops and advisors from operating in Cambodia or Laos—the first time Congress restricted troop deployment during a war against presidential wishes.[^c8-1]',
-      'In February 1971, Operation Lam Son 719 tested Vietnamization: three ARVN divisions crossed into Laos along Route 9 to sever the Ho Chi Minh Trail without American ground troops or forward advisors. When the NVA counterattacked with massed conventional armor and heavy artillery, the ARVN withdrawal turned into a chaotic retreat, with soldiers clinging to helicopter skids.[^c8-3] While Washington claimed the raid disrupted northern logistics for a year, it demonstrated South Vietnam’s severe operational vulnerability without direct American ground support. In March 1972, Hanoi launched the conventional Easter Offensive with hundreds of Soviet-supplied tanks; South Vietnamese forces held key cities like An Loc and Quang Tri only through massive U.S. aerial bombardment under Operation Linebacker I and the mining of Haiphong harbor, confirming that the ARVN could hold with American airpower, but could not hold without it.',
+      'When Richard Nixon took office in 1969, Americans wanted the casualties to stop. Under the Nixon Doctrine and a policy called Vietnamization, he began bringing American ground troops home. Their number fell from a peak of 543,000 in 1969 to 24,000 by late 1972.[^c8-1] Historians still argue about what Nixon was really after. Revisionist scholars say General Creighton Abrams’ One War plan to secure the countryside was actually working.[^c8-2] Critics say Nixon and Henry Kissinger mainly wanted a decent interval: enough time between the American exit and South Vietnam’s fall that the fall would not look like an American defeat.[^c8-1]',
+      'To hit communist supply bases across the border, Nixon started Operation Menu in March 1969. B-52s secretly carpet-bombed neutral Cambodia, and the raids were hidden from Congress with a second set of records. In April 1970, American and South Vietnamese troops openly invaded Cambodia. Protests broke out on campuses across the country. On May 4, Ohio National Guardsmen shot and killed four students at Kent State University, and ten days later students were shot and killed at Jackson State. Congress answered with the Cooper-Church Amendment, which banned U.S. ground troops and advisers from Cambodia and Laos. It was the first time Congress had limited where troops could go during a war against a president’s wishes.[^c8-1]',
+      'In February 1971, Operation Lam Son 719 put Vietnamization to the test. Three South Vietnamese divisions crossed into Laos along Route 9 to cut the Ho Chi Minh Trail, with no American ground troops or advisers going along. North Vietnam struck back with masses of tanks and heavy artillery. The South Vietnamese pullback became a panicked retreat, with soldiers clinging to the skids of helicopters.[^c8-3] Washington said the raid slowed supplies from the North for a year. But it showed how exposed South Vietnam’s army was without American troops beside it. In March 1972, Hanoi launched the Easter Offensive, a full-scale invasion with hundreds of Soviet-supplied tanks. South Vietnamese forces held key cities like An Loc and Quang Tri only because of massive American bombing in Operation Linebacker I and the mining of Haiphong harbor. The South’s army could hold with American airpower. Without it, it could not.'
     ],
     keyEvents: [
       { date: 'March 1969', title: 'Operation Menu begins', detail: 'Secret B-52 bombing in Cambodia, hidden with false flight records.' },
@@ -30,9 +30,9 @@ const chapter: ChapterData = {
   washington: {
     keyActors: ['Richard M. Nixon', 'Henry Kissinger', 'Melvin Laird', 'Gen. Creighton Abrams', 'President Nguyen Van Thieu'],
     strategicObjective:
-      'Withdraw U.S. combat forces, achieve "peace with honor," and secure a sustainable position for South Vietnam through triangular diplomacy with China and the USSR.',
+      'Withdraw U.S. combat forces, achieve “peace with honor,” and secure a sustainable position for South Vietnam through triangular diplomacy with China and the USSR.',
     underlyingAssumptions: [
-      'Contested: Whether Nixon and Kissinger believed the ARVN could survive independently, or sought a "decent interval" to insulate American credibility from an eventual Saigon collapse.',
+      'Contested: Whether Nixon and Kissinger believed the ARVN could survive independently, or sought a “decent interval” to insulate American credibility from an eventual Saigon collapse.',
       'Triangular diplomacy (the 1972 opening to Beijing and détente with Moscow) would induce Hanoi’s superpower patrons to pressure North Vietnam toward compromise.',
     ],
     internalDebates: [
@@ -40,7 +40,7 @@ const chapter: ChapterData = {
       'Nixon and Kissinger favored aggressive bombing escalations to preserve diplomatic leverage at the secret Paris negotiating table.',
     ],
     homeFrontConstraints: [
-      'Epidemic disciplinary and morale issues among remaining U.S. troops: drug abuse, combat refusals, racial tensions, and "fragging."',
+      'Epidemic disciplinary and morale issues among remaining U.S. troops: drug abuse, combat refusals, racial tensions, and “fragging.”',
       'Publication of the Pentagon Papers by Daniel Ellsberg in June 1971, exposing decades of government deception regarding the war.',
     ],
     primaryDocumentRef: 'mccarthy-hanoi-1968',
@@ -86,13 +86,13 @@ const chapter: ChapterData = {
     type: 'vietnamization-tracker',
     title: 'Could South Vietnam fight alone?',
     prompt:
-      'Follow three lines from 1968 to 1972: U.S. troop numbers falling, South Vietnamese combat deaths rising, and bombing increasing. Then look at the argument over the "decent interval."',
+      'Follow three lines from 1968 to 1972: U.S. troop numbers falling, South Vietnamese combat deaths rising, and bombing increasing. Then look at the argument over the “decent interval.”',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['mccarthy-hanoi-1968']],
   nextQuestion: {
     question: 'Did the 1973 Paris Peace Accords end the war, or only America’s part in it?',
     framing:
-      'In late 1972, Henry Kissinger announced that "peace is at hand." What did the agreement say about North Vietnamese troops inside South Vietnam, and why did President Thieu call it a death sentence?',
+      'In late 1972, Henry Kissinger announced that “peace is at hand.” What did the agreement say about North Vietnamese troops inside South Vietnam, and why did President Thieu call it a death sentence?',
   },
   citations: [
     CITATION_REGISTRY['c8-1'],

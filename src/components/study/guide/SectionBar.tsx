@@ -45,7 +45,7 @@ export default function SectionBar({ sections }: { sections: SectionLink[] }) {
   }, [sections]);
 
   return (
-    <div className="sticky top-16 z-30 -mx-4 sm:-mx-6 lg:-mx-8 border-y border-rule bg-paper/95 backdrop-blur-md">
+    <div className="sticky top-14 z-30 -mx-4 sm:-mx-6 lg:-mx-8 border-b border-rule bg-paper">
       <div className="flex items-center gap-3 px-4 sm:px-6 lg:px-8">
         <nav ref={navRef} id="study-sections" aria-label="Study guide sections" className="min-w-0 flex-1 overflow-x-auto [scrollbar-width:none]">
           <ul className="flex gap-1 py-2">
@@ -56,7 +56,7 @@ export default function SectionBar({ sections }: { sections: SectionLink[] }) {
                   <a
                     href={`#${s.id}`}
                     aria-current={current ? 'location' : undefined}
-                    className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                    className={`block rounded-sm px-3 py-2 text-sm font-medium transition-colors ${
                       current ? 'bg-parchment text-ink' : 'text-ink-muted hover:text-ink'
                     }`}
                   >

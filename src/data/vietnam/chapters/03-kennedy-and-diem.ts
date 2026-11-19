@@ -11,11 +11,18 @@ const chapter: ChapterData = {
   subtitle: 'More advisers, the Strategic Hamlet Program, and the coup of November 1963',
   summary:
     'President Kennedy wanted to avoid a big land war that might pull in China. He chose counterinsurgency instead and raised the number of American advisers from about 900 to more than 16,000. It went badly. The Strategic Hamlet Program turned farmers against the government, the Battle of Ap Bac showed how weak South Vietnam’s army was, and Diem cracked down on the Buddhist majority. In November 1963, Washington signaled that it would accept a coup, and Diem was overthrown.',
+  featuredDocument: {
+    citationId: 'Q004',
+    kind: 'Telegram',
+    stamp: 'FRUS 1961–1963, Vol. IV, Doc. 268',
+    header: [['From', 'Department of State'], ['To', 'Embassy Saigon'], ['Number', '243'], ['Date', 'August 24, 1963']],
+    note: 'Written by Roger Hilsman, Averell Harriman and George Ball, this cable told the embassy that Washington could live without Diem. On November 1–2, South Vietnamese generals overthrew him and killed him.',
+  },
   whatHappened: {
     narrative: [
-      'Taking office in 1961 amidst crises in Laos, Berlin, and the Bay of Pigs, President John F. Kennedy sought to counter Soviet-backed "wars of national liberation" without deploying conventional ground combat divisions, mindful of the Korean War precedent. Kennedy favored flexible response and counterinsurgency, dispatching Green Beret Special Forces, combat helicopter units, and authorizing defoliant testing. By late 1963, U.S. military personnel in South Vietnam expanded from approximately 900 to over 16,300—an escalation that took place well before Diem’s death.[^c3-2]',
-      'In 1962, South Vietnam and U.S. advisors launched the Strategic Hamlet Program, constructing over 8,000 fortified villages designed to isolate rural peasants from Viet Cong influence.[^c3-1] In practice, the program bred intense resentment: peasants were forcibly relocated from ancestral farmlands and burial grounds, and corruption among local administrators undermined loyalty to Saigon. In January 1963, the Battle of Ap Bac shattered American illusions about ARVN operational readiness: despite an 8-to-1 numerical advantage, armored personnel carriers, and close air support, an ARVN force was defeated by a 350-man Viet Cong battalion.[^c3-2]',
-      'In May 1963, government troops opened fire on Buddhist demonstrators in Hue, sparking the Buddhist Crisis. On June 11, monk Thich Quang Duc publicly immolated himself in Saigon in protest; Malcolm Browne’s photograph galvanized world public opinion. When Diem’s brother and security chief, Ngo Dinh Nhu, raided sacred pagodas nationwide in August, Washington sent State Department Cable 243, drafted by Roger Hilsman, signaling to South Vietnamese generals that the U.S. would support a new government if Diem failed to remove Nhu.[^c3-3] On November 1–2, 1963, ARVN generals overthrew and executed Diem and Nhu with tacit U.S. knowledge; three weeks later, Kennedy himself was assassinated in Dallas.',
+      'John F. Kennedy took office in 1961 in the middle of crises in Laos, Berlin and Cuba’s Bay of Pigs. He wanted to fight what Soviet leaders called wars of national liberation without sending large army units into combat, as in Korea. His answer was flexible response, with a focus on fighting guerrillas. He sent Green Beret Special Forces and helicopter units, and he approved tests of chemicals that kill plants. By late 1963, the number of U.S. military personnel in South Vietnam had grown from about 900 to more than 16,300. That buildup happened well before Diem was killed.[^c3-2]',
+      'In 1962, South Vietnam and its American advisers started the Strategic Hamlet Program. They built more than 8,000 fortified villages to cut farmers off from the Viet Cong.[^c3-1] Many villagers hated it. They were forced off land where their families had farmed and were buried, and corrupt local officials made things worse. In January 1963, the Battle of Ap Bac showed how weak the South Vietnamese army still was. It outnumbered the enemy eight to one and had armored vehicles and air support. A Viet Cong battalion of 350 men beat it anyway.[^c3-2]',
+      'In May 1963, government troops fired on Buddhist protesters in Hue, and the Buddhist Crisis began. On June 11, the monk Thich Quang Duc burned himself to death on a Saigon street in protest. Malcolm Browne’s photograph of it shocked people around the world. In August, Diem’s brother Ngo Dinh Nhu, who ran the security forces, raided Buddhist pagodas across the country. Washington answered with State Department Cable 243, drafted by Roger Hilsman. It signaled to South Vietnamese generals that the United States would back a new government if Diem did not get rid of Nhu.[^c3-3] On November 1–2, 1963, the generals overthrew Diem and killed him and Nhu. The United States knew the coup was coming and did not stop it. Three weeks later, Kennedy was assassinated in Dallas.'
     ],
     keyEvents: [
       { date: 'Nov 1961', title: 'Kennedy sends more advisers (NSAM 111)', detail: 'Kennedy approves more U.S. advisers, aircraft units and combat support.' },
@@ -85,7 +92,7 @@ const chapter: ChapterData = {
     type: 'escalation-timeline',
     title: 'From 900 advisers to 16,000',
     prompt:
-      'Follow the numbers from 900 military advisers in 1960 to more than 16,000 in 1963, and see how "advising" turned into fighting.',
+      'Follow the numbers from 900 military advisers in 1960 to more than 16,000 in 1963, and see how “advising” turned into fighting.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['cable-243-diem']],
   nextQuestion: {

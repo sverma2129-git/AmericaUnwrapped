@@ -6,7 +6,7 @@ export default function PhoenixAnalysis() {
   const [activeTab, setActiveTab] = useState<'phoenix' | 'ranchhand'>('phoenix');
 
   return (
-    <figure className="my-10 border border-rule-strong bg-[#f9f7f2]">
+    <figure className="my-10 border border-rule-strong bg-paper">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
@@ -36,11 +36,11 @@ export default function PhoenixAnalysis() {
         {activeTab === 'phoenix' ? (
           <div className="space-y-6">
             <div>
-              <h3 className="font-display text-2xl font-bold text-ink mt-1">
+              <h3 className="font-display text-xl font-bold text-ink mt-1">
                 What the Phoenix numbers really count
               </h3>
               <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-                The Phoenix Program (<em>Phung Hoang</em>) was designed by the CIA and CORDS to dismantle the Viet Cong Infrastructure (VCI)—the shadow civil government that taxed villages, drafted youths, and executed Saigon officials.
+                The Phoenix Program (<em>Phung Hoang</em>) was designed by the CIA and CORDS to dismantle the Viet Cong Infrastructure (VCI), the hidden civil government that taxed villages, drafted youths, and executed Saigon officials.
               </p>
             </div>
 
@@ -50,7 +50,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-xs text-ink-soft block">
                   Total captured, turned or killed
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   81,740
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -62,7 +62,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-xs text-ink-soft block">
                   Captured and questioned
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   33,358
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -74,7 +74,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-xs text-ink-soft block">
                   Switched sides
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   22,013
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -86,7 +86,7 @@ export default function PhoenixAnalysis() {
                 <span className="text-xs text-ink-soft block">
                   Killed
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   26,369
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -96,7 +96,7 @@ export default function PhoenixAnalysis() {
             </div>
 
             {/* The 87% vs 13% Reality Ledger */}
-            <div className="p-5 bg-[#f2ede4] border border-rule-strong space-y-4">
+            <div className="p-5 bg-parchment border border-rule-strong space-y-4">
               <span className="text-xs font-bold text-ink-muted block">
                 Who actually did the killing?
               </span>
@@ -125,7 +125,7 @@ export default function PhoenixAnalysis() {
         ) : (
           <div className="space-y-6">
             <div>
-              <h3 className="font-display text-2xl font-bold text-ink mt-1">
+              <h3 className="font-display text-xl font-bold text-ink mt-1">
                 Operation Ranch Hand and the cost of dioxin
               </h3>
               <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -136,7 +136,7 @@ export default function PhoenixAnalysis() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
               <div className="p-4 bg-white border border-rule space-y-1">
                 <span className="font-bold text-ink-soft block">Total sprayed</span>
-                <div className="font-display text-xl font-bold text-ink">
+                <div className="font-display text-lg font-bold text-ink">
                   19.5 Million Gallons
                 </div>
                 <p className="text-ink-muted">
@@ -146,7 +146,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-rule space-y-1">
                 <span className="font-bold text-ink-soft block">Forests and mangroves stripped</span>
-                <div className="font-display text-xl font-bold text-ink">
+                <div className="font-display text-lg font-bold text-ink">
                   4.5 Million Acres
                 </div>
                 <p className="text-ink-muted">
@@ -156,7 +156,7 @@ export default function PhoenixAnalysis() {
 
               <div className="p-4 bg-white border border-rule space-y-1">
                 <span className="font-bold text-ink-soft block">Crops destroyed</span>
-                <div className="font-display text-xl font-bold text-ink">
+                <div className="font-display text-lg font-bold text-ink">
                   Agent Blue spraying
                 </div>
                 <p className="text-ink-muted">

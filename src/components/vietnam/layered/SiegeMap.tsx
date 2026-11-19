@@ -164,9 +164,9 @@ export function SiegeLegend() {
   const item = 'inline-flex items-center gap-1.5';
   return (
     <ul className="flex flex-wrap gap-x-4 gap-y-1.5 text-xs text-ink-muted">
-      <li className={item}><span className="w-2.5 h-2.5 rounded-[2px] bg-ink" aria-hidden="true" />French strongpoint</li>
+      <li className={item}><span className="w-2.5 h-2.5 rounded-sm bg-ink" aria-hidden="true" />French strongpoint</li>
       <li className={item}>
-        <span className="w-2.5 h-2.5 rounded-[2px] border-2 border-brand bg-paper" aria-hidden="true" />Fallen
+        <span className="w-2.5 h-2.5 rounded-sm border-2 border-brand bg-paper" aria-hidden="true" />Fallen
       </li>
       <li className={item}>
         <svg viewBox="0 0 10 10" className="w-2.5 h-2.5" aria-hidden="true"><path d="M5 0 L10 10 L0 10 Z" fill="var(--color-brand)" /></svg>

@@ -1,15 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import type { ChapterData, StoryBeat } from '@/types/vietnam';
+import type { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
+import { getChapterPart } from '@/data/vietnam/chapters';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import CitationMarker from '@/components/common/CitationMarker';
+import DocumentFacsimile from '@/components/common/DocumentFacsimile';
 import { splitTakeaway } from '@/lib/takeaways';
 import { ChapterFlashcardsBlock } from '@/components/study/ChapterPractice';
 import Icon from '@/components/common/Icon';
 import DualPerspectiveViewer from '../DualPerspectiveViewer';
 import DocumentInspector from '../DocumentInspector';
 import CausalFlowViewer from '../CausalFlowViewer';
+import SectionHead from '../SectionHead';
 import InlineCheck from './InlineCheck';
 import StoryVisualView from './StoryVisuals';
 import { CourseProvider, CourseToggle } from './CourseContext';
@@ -23,151 +26,112 @@ interface LayeredChapterProps {
   nextChapterTitle?: string;
 }
 
-const WORDS_PER_MINUTE = 200;
-
-function countWords(beats: StoryBeat[]): number {
-  const text = beats
-    .flatMap((b) => {
-      const v = b.visual;
-      const steps = v && (v.kind === 'siege' || v.kind === 'night') ? v.steps.map((s) => s.body) : [];
-      return [b.headline, ...b.body, ...steps];
-    })
-    .join(' ');
-  return text.split(/\s+/).filter(Boolean).length;
-}
-
-/** A major section opens with the double rule and its heading; details go below the heading. */
-function SectionOpener({ id, title, children }: { id: string; title: string; children?: React.ReactNode }) {
-  return (
-    <div className="mb-10">
-      <h2 id={id} className="font-display text-3xl sm:text-[2.5rem] font-bold text-ink">
-        {title}
-      </h2>
-      {children && <p className="mt-2 text-base text-ink-muted leading-relaxed max-w-2xl">{children}</p>}
-    </div>
-  );
-}
+const NUMBER_WORDS = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 
 /** A plain disclosure row: title and one-line description, opened on demand. */
 function DeeperPanel({ title, detail, children }: { title: string; detail: string; children: React.ReactNode }) {
   return (
     <details className="group border-b border-rule">
-      <summary className="list-none [&::-webkit-details-marker]:hidden flex items-baseline gap-4 py-4 hover:text-brand transition-colors">
-        <span className="flex-1 min-w-0">
-          <span className="block font-display text-xl font-semibold text-ink group-hover:text-brand transition-colors">{title}</span>
-          <span className="block mt-0.5 text-[0.9375rem] text-ink-muted">{detail}</span>
+      <summary className="flex list-none items-baseline gap-4 py-4 hover:text-brand [&::-webkit-details-marker]:hidden">
+        <span className="min-w-0 flex-1">
+          <span className="block font-display text-lg font-semibold text-ink group-hover:text-brand">{title}</span>
+          <span className="mt-0.5 block text-sm text-ink-muted">{detail}</span>
         </span>
-        <Icon name="plus" className="w-5 h-5 self-center text-ink-muted transition-transform duration-200 group-open:rotate-45" />
+        <Icon name="plus" className="h-5 w-5 self-center text-ink-muted transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none" />
       </summary>
-      <div className="pt-2 pb-8">{children}</div>
+      <div className="pb-8 pt-2">{children}</div>
     </details>
   );
 }
 
+/**
+ * The scrollytelling chapter. It shares its header, section names and ending
+ * with the standard chapter; the story itself is told in short parts with maps
+ * and timelines that change as you scroll.
+ */
 export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitle }: LayeredChapterProps) {
   const study = ALL_CHAPTERS_STUDY_DATA[chapter.id];
   const story = chapter.story;
   const beats = story?.beats ?? [];
-  const minutes = Math.max(1, Math.ceil(countWords(beats) / WORDS_PER_MINUTE));
+  const part = getChapterPart(chapter);
   const questions = new Map(study?.quiz.map((q) => [q.id, q]));
+  const doc = chapter.featuredDocument;
+  const docInStory = doc?.afterBeatId && beats.some((b) => b.id === doc.afterBeatId);
+  const partsWord = NUMBER_WORDS[beats.length] ?? String(beats.length);
 
-  const contents = [
-    { href: '#gist', label: 'The gist', time: '30 seconds' },
-    { href: '#story', label: 'The story', time: `${minutes} minutes` },
-    { href: '#evidence', label: 'The evidence', time: 'go deeper' },
-    { href: '#review', label: 'Practice', time: 'for the test' },
+  const sections = [
+    { id: 'story', label: 'The story' },
+    { id: 'sources', label: 'Sources' },
+    { id: 'test', label: 'For the test' },
   ];
 
   return (
     <CourseProvider>
-      <article className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-16 sm:pb-24">
-        {/* Title block: headline, deck, then the dateline */}
-        <header className="max-w-3xl">
-          <h1 className="font-display text-4xl sm:text-[3.25rem] font-bold text-ink leading-[1.05]">{chapter.title}</h1>
-          <p className="mt-4 text-xl sm:text-2xl text-ink-muted leading-snug">{chapter.subtitle}</p>
-          <p className="meta mt-4 text-ink-soft">
-            Chapter {chapter.number} &middot; {chapter.timeframe}
-            {chapter.isLandmark && <span className="text-brand"> &middot; Turning point</span>}
+      <article className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+        <header className="max-w-4xl">
+          <p className="text-sm text-ink-muted">
+            {part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}, {chapter.timeframe}
+            {chapter.isLandmark && <span className="text-brand">, a turning point</span>}
           </p>
-          {story?.tasks && (
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <span className="text-[0.9375rem] text-ink-muted">I&rsquo;m studying for</span>
-              <CourseToggle />
-            </div>
-          )}
+          <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">{chapter.title}</h1>
+          <p className="mt-4 max-w-[40ch] font-serif text-xl leading-snug text-ink">{study?.bigQuestion ?? chapter.subtitle}</p>
+          {study?.whyItMatters && <p className="mt-4 max-w-[62ch] text-base text-ink-muted">{study.whyItMatters}</p>}
+          <nav aria-label="In this chapter" className="mt-6">
+            <ul className="flex flex-wrap gap-x-5 gap-y-1 text-sm">
+              {sections.map((s) => (
+                <li key={s.id}>
+                  <a href={`#${s.id}`} className="font-medium text-ink-muted underline decoration-rule-strong underline-offset-4 hover:text-brand hover:decoration-brand">
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </header>
-
-        {/* On this page */}
-        <nav aria-label="On this page" className="mt-8">
-          <ol className="flex flex-wrap gap-x-8 gap-y-2 text-[0.9375rem]">
-            {contents.map((c, i) => (
-              <li key={c.href}>
-                <a href={c.href} className="group">
-                  <span className="text-ink-soft tabular-nums">{i + 1}. </span>
-                  <span className="font-semibold text-ink underline decoration-rule-strong group-hover:decoration-brand group-hover:text-brand transition-colors">
-                    {c.label}
-                  </span>
-                  <span className="text-ink-soft"> ({c.time})</span>
-                </a>
-              </li>
-            ))}
-          </ol>
-        </nav>
 
         {chapter.leadImageId && <Figure imageId={chapter.leadImageId} priority className="mt-10" />}
 
-        {/* ── Layer 1: the gist ───────────────────────────────────────────── */}
-        <section id="gist" aria-labelledby="gist-heading" className="scroll-mt-32 mt-12 sm:mt-16">
-          <h2 id="gist-heading" className="font-display text-[1.75rem] sm:text-4xl font-semibold leading-tight text-ink max-w-4xl">
-            {study?.bigQuestion}
+        {/* The short version: what to know, and the dates */}
+        <section aria-labelledby="brief-title" className="mt-16">
+          <h2 id="brief-title" className="border-t border-ink pt-3 text-sm font-bold text-ink">
+            The short version
           </h2>
-          <ol className="mt-8 grid md:grid-cols-3 gap-y-6 md:gap-x-10">
-            {study?.briefing.examTakeaways.map((t, i) => {
+          <ul className="mt-4 grid gap-x-10 gap-y-6 md:grid-cols-3">
+            {study?.briefing.examTakeaways.map((t) => {
               const { label, text } = splitTakeaway(t);
               return (
-                <li key={i}>
-                  <p className="font-semibold text-ink">
-                    {i + 1}. {label}
-                  </p>
-                  <p className="mt-1.5 text-[0.9375rem] text-ink-muted leading-relaxed">{text}</p>
+                <li key={t}>
+                  {label && <p className="font-semibold text-ink">{label}</p>}
+                  <p className="mt-1 text-sm leading-relaxed text-ink-muted">{text}</p>
                 </li>
               );
             })}
-          </ol>
-
-          {story?.objectives && (
-            <div className="mt-10 bg-parchment rounded-xl p-5 sm:p-7">
-              <CourseObjectives objectives={story.objectives} />
-            </div>
-          )}
-
-          {/* Key dates at a glance */}
-          <ol aria-label="Key dates" className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-4">
+          </ul>
+          <ol aria-label="Key dates" className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-rule pt-5 sm:grid-cols-3 lg:grid-cols-6">
             {chapter.whatHappened.keyEvents.map((e) => (
               <li key={e.title}>
-                <span className="meta block text-brand tabular-nums">{e.date}</span>
-                <span className="block mt-1 text-[0.9375rem] text-ink leading-snug">{e.title}</span>
+                <span className="block text-xs font-semibold tabular-nums text-brand">{e.date}</span>
+                <span className="mt-1 block text-sm leading-snug text-ink">{e.title}</span>
               </li>
             ))}
           </ol>
         </section>
 
-        {/* ── Layer 2: the story ──────────────────────────────────────────── */}
-        <section id="story" aria-labelledby="story-heading" className="scroll-mt-32 mt-20 sm:mt-28">
-          <SectionOpener id="story-heading" title="How it happened">
-            {beats.length} short parts, about {minutes} minutes. A few end with a quick check.
-          </SectionOpener>
+        <section id="story" aria-labelledby="story-title" className="mt-20">
+          <SectionHead id="story-title" title="What happened">
+            The story in {partsWord} short parts. A few end with a question to check yourself.
+          </SectionHead>
 
-          <div className="space-y-20 sm:space-y-24">
+          <div className="mt-10 space-y-20 sm:space-y-24">
             {beats.map((beat) => {
               const check = beat.checkId ? questions.get(beat.checkId) : undefined;
               const wide = ['siege', 'night', 'consequence', 'compare'].includes(beat.visual?.kind ?? '');
               return (
-                <section key={beat.id} id={`beat-${beat.id}`} aria-labelledby={`beat-${beat.id}-h`} className="scroll-mt-32">
-                  <h3 id={`beat-${beat.id}-h`} className="font-display text-2xl sm:text-3xl font-semibold text-ink leading-tight max-w-2xl">
+                <section key={beat.id} id={`beat-${beat.id}`} aria-labelledby={`beat-${beat.id}-h`}>
+                  <p className="text-sm text-ink-soft">{beat.kicker}</p>
+                  <h3 id={`beat-${beat.id}-h`} className="mt-1 max-w-2xl font-display text-xl font-bold leading-tight text-ink">
                     {beat.headline}
                   </h3>
-                  <p className="meta mt-1.5 text-ink-soft">{beat.kicker}</p>
                   <div className="reading mt-4 space-y-4 text-ink">
                     {beat.body.map((p, j) => (
                       <CitedParagraph key={j} text={p} />
@@ -187,30 +151,30 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
                       <InlineCheck question={check} />
                     </div>
                   )}
+
+                  {doc && docInStory && doc.afterBeatId === beat.id && <DocumentFacsimile doc={doc} className="mt-10" />}
                 </section>
               );
             })}
           </div>
         </section>
 
-        {/* ── Layer 3: the evidence ───────────────────────────────────────── */}
-        <section id="evidence" aria-labelledby="evidence-heading" className="scroll-mt-32 mt-24 sm:mt-32">
-          <SectionOpener id="evidence-heading" title="The evidence">
+        <section id="sources" aria-labelledby="sources-title" className="mt-24">
+          <SectionHead id="sources-title" title="Sources">
             Everything above is backed by what is in here. Open whatever you are curious about.
-          </SectionOpener>
+          </SectionHead>
+
+          {doc && !docInStory && <DocumentFacsimile doc={doc} className="mt-8" />}
 
           {story?.debate && (
-            <div className="mb-12">
+            <div className="mt-12">
               <HistoriansDisagree debate={story.debate} />
             </div>
           )}
 
-          <div className="border-t border-rule">
+          <div className="mt-10 border-t border-rule">
             {story?.evidence && story.evidence.length > 0 && (
-              <DeeperPanel
-                title="Read the sources yourself"
-                detail={`${story.evidence.length} verified quotations, each with a question to think about`}
-              >
+              <DeeperPanel title="Read the sources yourself" detail={`${story.evidence.length} verified quotations, each with a question to think about`}>
                 <EvidenceLocker citationIds={story.evidence} />
               </DeeperPanel>
             )}
@@ -225,27 +189,24 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
             </DeeperPanel>
 
             {chapter.primaryDocuments.length > 0 && (
-              <DeeperPanel
-                title="Read the documents"
-                detail={`${chapter.primaryDocuments.length} primary sources, with context and limitations`}
-              >
+              <DeeperPanel title="Read the documents" detail={`${chapter.primaryDocuments.length} primary sources, with context and limitations`}>
                 <div className="space-y-8">
-                  {chapter.primaryDocuments.map((doc) => (
-                    <DocumentInspector key={doc.id} document={doc} />
+                  {chapter.primaryDocuments.map((d) => (
+                    <DocumentInspector key={d.id} document={d} />
                   ))}
                 </div>
               </DeeperPanel>
             )}
 
-            <DeeperPanel title="The full chain of cause and effect" detail="The decision, the assumption behind it, and what it led to">
+            <DeeperPanel title="Cause and effect" detail="The decision, the assumption behind it, and what it led to">
               <CausalFlowViewer causalChain={chapter.causalChain} showHeading={false} />
             </DeeperPanel>
 
             {chapter.citations.length > 0 && (
-              <DeeperPanel title="Every source we used" detail={`${chapter.citations.length} works cited in this chapter`}>
-                <ol className="space-y-4 max-w-3xl">
+              <DeeperPanel title="Works cited" detail={`${chapter.citations.length} works cited in this chapter`}>
+                <ol className="max-w-3xl space-y-4">
                   {chapter.citations.map((c) => (
-                    <li key={c.id} className="flex gap-3 text-[0.9375rem]">
+                    <li key={c.id} className="flex gap-3 text-sm">
                       <CitationMarker id={c.id} label={c.marker} className="!align-baseline" />
                       <div>
                         <p className="text-ink">{c.citation}</p>
@@ -260,44 +221,64 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
           </div>
         </section>
 
-        {/* ── Layer 4: practice ───────────────────────────────────────────── */}
-        <section id="review" aria-labelledby="review-heading" className="scroll-mt-32 mt-24 sm:mt-32">
-          <SectionOpener id="review-heading" title="Practice">
+        <section id="test" aria-labelledby="test-title" className="mt-24">
+          <SectionHead id="test-title" title="For the test">
             {story?.tasks
-              ? 'Activities built for your course, then the key terms. Nothing you type leaves this page.'
-              : 'Flip through the key terms, then take the full practice quiz in the study guide.'}
-          </SectionOpener>
+              ? 'Pick your course for activities written for it, then learn the key terms. Nothing you type leaves this page.'
+              : 'Learn the key terms, then take the full practice quiz in the study guide.'}
+          </SectionHead>
+
           {story?.tasks && (
-            <div className="mb-12">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              <span className="text-sm text-ink-muted">I’m studying for</span>
+              <CourseToggle />
+            </div>
+          )}
+
+          {story?.objectives && (
+            <div className="mt-8 max-w-3xl">
+              <CourseObjectives objectives={story.objectives} />
+            </div>
+          )}
+
+          {story?.tasks && (
+            <div className="mt-12">
               <CourseTasks tasks={story.tasks} />
             </div>
           )}
+
           {study?.flashcards && study.flashcards.length > 0 && (
-            <ChapterFlashcardsBlock chapter={{ id: chapter.id, number: chapter.number, title: chapter.title }} terms={study.flashcards} />
+            <div className="mt-14">
+              <h3 id="flashcards" className="font-display text-xl font-bold text-ink">
+                Flashcards
+              </h3>
+              <p className="mt-1 max-w-[62ch] text-base text-ink-muted">Look at the term, say what it means, then flip the card to check.</p>
+              <div className="mt-6">
+                <ChapterFlashcardsBlock chapter={{ id: chapter.id, number: chapter.number, title: chapter.title }} terms={study.flashcards} />
+              </div>
+            </div>
           )}
-          <Link
-            href="/vietnam/study-guide"
-            className="mt-6 inline-block font-semibold text-brand underline decoration-brand-rule hover:decoration-brand transition-colors"
-          >
-            Open the unit study guide
-          </Link>
+          <p className="mt-8 text-base">
+            <Link href="/vietnam/study-guide#quiz" className="font-medium text-brand underline decoration-brand-rule underline-offset-4 hover:decoration-brand">
+              Take the practice quiz in the study guide
+            </Link>
+          </p>
         </section>
 
-        {/* Bridge to the next chapter */}
-        <footer className="mt-24 sm:mt-32 bg-parchment rounded-xl p-6 sm:p-10">
-          <h2 className="font-display text-2xl sm:text-3xl font-semibold text-ink max-w-3xl">
-            {chapter.nextQuestion.question}
-          </h2>
-          <p className="reading mt-3 text-ink-muted">{chapter.nextQuestion.framing}</p>
-          {nextChapterId && (
-            <Link
-              href={`/vietnam/${nextChapterId}`}
-              className="mt-6 inline-flex items-center gap-2 px-5 py-3 rounded-md bg-brand hover:bg-brand-hover text-white text-[0.9375rem] font-semibold transition-colors"
-            >
-              Next: Chapter {chapter.number + 1}, {nextChapterTitle}
-              <Icon name="arrowRight" className="w-4 h-4" />
+        <footer className="mt-20 border-t border-ink pt-10">
+          <p className="text-sm text-ink-muted">Up next</p>
+          <h2 className="mt-1 max-w-3xl font-serif text-xl leading-snug text-ink">{chapter.nextQuestion.question}</h2>
+          <p className="mt-3 max-w-[62ch] text-base text-ink-muted">{chapter.nextQuestion.framing}</p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+            {nextChapterId && (
+              <Link href={`/vietnam/${nextChapterId}`} className="rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-hover">
+                Chapter {chapter.number + 1}: {nextChapterTitle}
+              </Link>
+            )}
+            <Link href="/vietnam" className="text-sm font-medium text-ink-muted hover:text-brand">
+              All chapters
             </Link>
-          )}
+          </div>
         </footer>
       </article>
     </CourseProvider>

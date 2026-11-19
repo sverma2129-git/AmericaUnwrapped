@@ -10,15 +10,15 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
   whatYouWillLearn: [
     'How communist forces launched surprise attacks on 36 of 44 provincial capitals during a holiday truce.',
     'Why Tet was a heavy battlefield defeat for the Viet Cong and a political victory in Washington.',
-    'How Walter Cronkite’s broadcast and the advice of the "Wise Men" led Johnson to drop out of the 1968 presidential race.',
+    'How Walter Cronkite’s broadcast and the advice of the “Wise Men” led Johnson to drop out of the 1968 presidential race.',
   ],
   briefing: {
     summary:
-      'In late 1967, General Westmoreland told Americans the war was being won and that there was "light at the end of the tunnel." Early on January 30–31, 1968, during the truce for Tet, the lunar new year, more than 84,000 North Vietnamese and Viet Cong troops attacked at the same time. They hit 36 of 44 provincial capitals, five major cities and dozens of bases across South Vietnam. In Saigon, a 19-man squad blew a hole in the wall of the U.S. Embassy, and morning television showed dead Americans on the grounds. In Hue, communist forces took the old Citadel and held it for 26 days. They executed nearly 3,000 civilians before U.S. Marines retook the city. As a battle, Tet was a defeat for Hanoi. The uprising it expected never came, and the Viet Cong lost more than 40,000 experienced fighters. As politics, it destroyed the administration’s credibility. CBS anchor Walter Cronkite told viewers the war was "mired in stalemate," and Johnson is reported to have said that losing Cronkite meant losing Middle America. On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.',
+      'In late 1967, General Westmoreland told Americans the war was being won and that there was “light at the end of the tunnel.” Early on January 30–31, 1968, during the truce for Tet, the lunar new year, more than 84,000 North Vietnamese and Viet Cong troops attacked at the same time. They hit 36 of 44 provincial capitals, five major cities and dozens of bases across South Vietnam. In Saigon, a 19-man squad blew a hole in the wall of the U.S. Embassy, and morning television showed dead Americans on the grounds. In Hue, communist forces took the old Citadel and held it for 26 days. They executed nearly 3,000 civilians before U.S. Marines retook the city. As a battle, Tet was a defeat for Hanoi. The uprising it expected never came, and the Viet Cong lost more than 40,000 experienced fighters. As politics, it destroyed the administration’s credibility. CBS anchor Walter Cronkite told viewers the war was “mired in stalemate,” and Johnson is reported to have said that losing Cronkite meant losing Middle America. On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.',
     examTakeaways: [
       'The credibility gap: The government kept promising that victory was near. Then Americans watched fighting in Saigon on television. Many stopped believing what officials said.',
       'Lost the battle, won the argument: The Viet Cong took losses it never recovered from, and North Vietnamese draftees took over more of the fighting. But Tet broke American political will.',
-      'A turn in U.S. policy: Johnson’s senior advisers, the "Wise Men," told him to scale back. Peace talks opened in Paris, and Vietnamization came later.',
+      'A turn in U.S. policy: Johnson’s senior advisers, the “Wise Men,” told him to scale back. Peace talks opened in Paris, and Vietnamization came later.',
     ],
     keyTerms: [
       {
@@ -48,7 +48,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
         imageId: 'cronkite-hue-1968',
         phonetic: 'WAWL-ter KRON-kyte',
         definition:
-          'A special CBS News report. After a trip to Vietnam, the country’s most trusted news anchor gave his own view that the war was "mired in stalemate."',
+          'A special CBS News report. After a trip to Vietnam, the country’s most trusted news anchor gave his own view that the war was “mired in stalemate.”',
         significance:
           'It put into words what many middle-class Americans had come to feel. It also helped convince President Johnson that he had lost support at home.',
         examTip: 'DBQs often use it as evidence that mainstream news coverage had shifted.',
@@ -68,7 +68,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Hanoi’s plan, Politburo Resolution 14, predicted that attacks on the cities would set off a nationwide "General Uprising" (Tong Khoi Nghia), with South Vietnamese civilians and soldiers joining the revolution. Most people stayed out of it or fled. That left Viet Cong units exposed, and U.S. and South Vietnamese firepower destroyed many of them.',
+        'Hanoi’s plan, Politburo Resolution 14, predicted that attacks on the cities would set off a nationwide “General Uprising” (Tong Khoi Nghia), with South Vietnamese civilians and soldiers joining the revolution. Most people stayed out of it or fled. That left Viet Cong units exposed, and U.S. and South Vietnamese firepower destroyed many of them.',
       citationRef: 'c7-1',
     },
     {
@@ -120,7 +120,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
   flashcards: [
     {
       id: 'c7-fc1',
-      term: 'The "Wise Men"',
+      term: 'The “Wise Men”',
       phonetic: 'WYZE MEN',
       definition:
         'An informal group of senior former officials, including Dean Acheson, McGeorge Bundy and Omar Bradley. Johnson called them together in March 1968 to review the war.',
@@ -135,7 +135,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       definition:
         'A 77-day siege from January to April 1968. Two North Vietnamese divisions surrounded 6,000 U.S. Marines at an isolated base near the DMZ and the border with Laos.',
       significance:
-        'President Johnson feared an "American Dien Bien Phu" and watched it closely. The siege pulled American air power away from the coastal cities just before Tet.',
+        'President Johnson feared an “American Dien Bien Phu” and watched it closely. The siege pulled American air power away from the coastal cities just before Tet.',
       examTip: 'Heavy bombing, called Operation Niagara, held the base. The U.S. quietly abandoned it months later.',
     },
     {
@@ -146,7 +146,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
         'An Associated Press photograph taken on a Saigon street on February 1, 1968. It shows South Vietnam’s national police chief, Nguyen Ngoc Loan, shooting a captured Viet Cong officer, Nguyen Van Lem.',
       significance:
         'It won the Pulitzer Prize and became one of the best-known antiwar images in the world. For many people it stood for the war’s brutality.',
-      examTip: 'Exams often pair it with Nick Ut’s "Napalm Girl" photograph.',
+      examTip: 'Exams often pair it with Nick Ut’s “Napalm Girl” photograph.',
     },
   ],
 };

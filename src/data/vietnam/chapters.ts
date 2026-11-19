@@ -43,3 +43,35 @@ export function getAdjacentChapters(chapter: ChapterData): {
     next: VIETNAM_CHAPTERS.find((c) => c.number === chapter.number + 1),
   };
 }
+
+/**
+ * The unit read as a book in four parts. Each part starts at a chapter number
+ * and runs until the next part begins.
+ */
+export const CHAPTER_PART_DEFS = [
+  { title: 'Getting in', years: '1945–1963', firstChapter: 1 },
+  { title: 'The American war', years: '1964–1968', firstChapter: 4 },
+  { title: 'Getting out', years: '1969–1975', firstChapter: 8 },
+  { title: 'Afterward', years: '1975 to today', firstChapter: 11 },
+] as const;
+
+export interface ChapterPart {
+  number: number;
+  title: string;
+  years: string;
+  chapters: ChapterData[];
+}
+
+export const CHAPTER_PARTS: ChapterPart[] = CHAPTER_PART_DEFS.map((def, i) => {
+  const nextFirst = CHAPTER_PART_DEFS[i + 1]?.firstChapter ?? Infinity;
+  return {
+    number: i + 1,
+    title: def.title,
+    years: def.years,
+    chapters: VIETNAM_CHAPTERS.filter((c) => c.number >= def.firstChapter && c.number < nextFirst),
+  };
+});
+
+export function getChapterPart(chapter: ChapterData): ChapterPart | undefined {
+  return CHAPTER_PARTS.find((p) => p.chapters.some((c) => c.id === chapter.id));
+}

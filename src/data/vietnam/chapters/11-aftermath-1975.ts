@@ -10,12 +10,12 @@ const chapter: ChapterData = {
   title: 'After the war',
   subtitle: 'Re-education camps, the boat people, new border wars, and the reforms of 1986',
   summary:
-    'The fall of Saigon reunited Vietnam but did not bring peace right away. The years after the war brought a stalled economy, forced collective farming, re-education camps, and new wars with Cambodia and China. More than one million "boat people" fled, many of them ethnic Chinese who were being targeted. Near-famine and runaway inflation finally pushed the Communist Party to open up the economy with the Doi Moi reforms of 1986.',
+    'The fall of Saigon reunited Vietnam but did not bring peace right away. The years after the war brought a stalled economy, forced collective farming, re-education camps, and new wars with Cambodia and China. More than one million “boat people” fled, many of them ethnic Chinese who were being targeted. Near-famine and runaway inflation finally pushed the Communist Party to open up the economy with the Doi Moi reforms of 1986.',
   whatHappened: {
     narrative: [
-      'Following victory, Hanoi formally reunified the country in July 1976 as the Socialist Republic of Vietnam. The new government imposed orthodox socialist central planning, nationalizing southern private businesses and forcing agricultural collectivization in the Mekong Delta. Compounded by a U.S. trade embargo, Western aid cutoffs, and administrative mismanagement, agricultural output plummeted, resulting in widespread rationing and near-famine conditions by the late 1970s, with inflation peaking at over 700 percent in 1986.',
-      'Political consolidation was accompanied by widespread detention. Hundreds of thousands of former South Vietnamese military officers, civil servants, and religious figures were processed through "re-education camps" (trai cai tao). While initially promised short political lectures, officers and senior officials served sentences averaging 3 to 10+ years of forced labor and political indoctrination. Concurrently, the New Economic Zones program forcibly relocated roughly 750,000 to over 1 million southern urban dwellers to undeveloped jungle frontiers, while approximately 1 million northerners moved south.',
-      'Between 1975 and 1995, an estimated 800,000 to nearly 2 million refugees fled Indochina by sea. The crisis peaked in 1978–1979, driven heavily by deteriorating relations with China: Vietnam’s government targeted ethnic Chinese (Hoa), expropriating property and driving hundreds of thousands into boats across the South China Sea, where ethnic Hoa comprised 50 to 80 percent of monthly refugee camp arrivals. International agencies estimate between 200,000 and 500,000 died at sea from drowning, exposure, and piracy. Regionally, peace proved elusive: in December 1978, Vietnam invaded Cambodia to topple the genocidal Khmer Rouge, triggering a punitive Chinese invasion of northern Vietnam in February 1979. Facing economic collapse, the 6th Party Congress in December 1986 enacted *Doi Moi* (Renovation), dismantling collectivization and transitioning to a market economy.',
+      'After the victory, Hanoi formally reunited the country in July 1976 as the Socialist Republic of Vietnam. The new government ran the economy from the top. It took over private businesses in the South and forced farmers in the Mekong Delta onto collective farms. With a U.S. trade embargo, the loss of Western aid and poor management on top of that, farm output collapsed. By the late 1970s there was rationing and near-famine, and in 1986 inflation rose above 700 percent.',
+      'The new government also locked up its former enemies. Hundreds of thousands of former South Vietnamese military officers, government workers and religious leaders were sent to re-education camps, *trai cai tao* in Vietnamese. They had been told to expect a few political lectures. Instead, officers and senior officials were held for 3 to more than 10 years of forced labor and political lessons. At the same time, the New Economic Zones program forced about 750,000 to more than 1 million people from southern cities onto undeveloped land in the jungle, while about 1 million northerners moved south.',
+      'Between 1975 and 1995, somewhere between 800,000 and nearly 2 million refugees fled Indochina by sea. The crisis peaked in 1978–1979, as relations with China broke down. Vietnam’s government turned on its ethnic Chinese citizens, the Hoa. It seized their property and drove hundreds of thousands of them into boats on the South China Sea, and in some months the Hoa made up 50 to 80 percent of new arrivals at refugee camps. International agencies estimate that 200,000 to 500,000 people died at sea from drowning, exposure and pirate attacks. The region did not find peace either. In December 1978, Vietnam invaded Cambodia and overthrew the Khmer Rouge, which had committed genocide there. In February 1979, China invaded northern Vietnam to punish it. With its economy failing, Vietnam’s Communist Party adopted *Doi Moi*, or Renovation, at its 6th Congress in December 1986. It ended collective farming and moved the country toward a market economy.'
     ],
     keyEvents: [
       { date: '1975–1985', title: 'Re-education camps and collective farms', detail: 'More than 1 million people go through the camps. Southern farms are forced into collectives, and food runs short.' },
@@ -37,7 +37,7 @@ const chapter: ChapterData = {
       'Debates over normalizing relations with Vietnam stalled in the late 1970s due to Hanoi’s invasion of Cambodia and Soviet naval access to Cam Ranh Bay.',
     ],
     homeFrontConstraints: [
-      'The "Vietnam Syndrome": deep public and congressional aversion to overseas military intervention.',
+      'The “Vietnam Syndrome”: deep public and congressional aversion to overseas military intervention.',
       'Resettlement of hundreds of thousands of Vietnamese, Hmong, and Cambodian refugees across American communities.',
     ],
     primaryDocumentRef: 'ap-casualty-disclosure-1995',
@@ -92,7 +92,7 @@ const chapter: ChapterData = {
   },
   citations: [
     { id: 'c11-1', marker: 1, citation: 'Robinson, W. Courtland. Terms of Refuge: The Indochinese Exodus and the International Response. Zed Books, 1998.', sourceType: 'academic-monograph' },
-    { id: 'c11-2', marker: 2, citation: 'Hirschman, Charles, et al. "Vietnamese Casualties During the American War: A New Estimate." Population and Development Review, 1995.', sourceType: 'academic-monograph' },
+    { id: 'c11-2', marker: 2, citation: 'Hirschman, Charles, et al. “Vietnamese Casualties During the American War: A New Estimate.” Population and Development Review, 1995.', sourceType: 'academic-monograph' },
     { id: 'c11-3', marker: 3, citation: 'Evans, Grant, and Kelvin Rowley. Red Brotherhood at War: Vietnam, Cambodia and Laos since 1975. Verso, 1990.', sourceType: 'academic-monograph' },
   ],
 };

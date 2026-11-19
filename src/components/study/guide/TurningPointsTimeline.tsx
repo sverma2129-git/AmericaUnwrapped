@@ -51,10 +51,10 @@ export default function TurningPointsTimeline() {
                     />
                     <p className="sm:hidden text-sm font-semibold tabular-nums text-brand">{tp.date}</p>
                     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                      <h4 className="font-display text-base sm:text-[1.0625rem] font-semibold text-ink leading-snug">{tp.event}</h4>
+                      <h4 className="font-display text-base sm:text-base font-semibold text-ink leading-snug">{tp.event}</h4>
                       {tp.highlight && <span className="text-sm font-medium text-brand">Often on the test</span>}
                     </div>
-                    <p className="mt-1 max-w-[62ch] font-serif text-[1.0625rem] leading-relaxed text-ink-muted">{tp.significance}</p>
+                    <p className="mt-1 max-w-[62ch] font-serif text-base leading-relaxed text-ink-muted">{tp.significance}</p>
                     {chapter && (
                       <Link
                         href={`/vietnam/${chapter.id}`}

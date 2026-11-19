@@ -160,7 +160,7 @@ const chapter: ChapterData = {
     strategicObjective:
       'Contain communist expansion in Southeast Asia while preserving France as a vital NATO ally in European reconstruction.',
     underlyingAssumptions: [
-      'The Domino Theory: Eisenhower argued that if Indochina fell to communism, neighboring nations—Thailand, Burma, Malaya, and Indonesia—would inevitably topple.',
+      'The Domino Theory: Eisenhower argued that if Indochina fell to communism, neighboring nations (Thailand, Burma, Malaya and Indonesia) would inevitably topple.',
       'Ho Chi Minh was viewed fundamentally as an agent of Moscow and Beijing rather than a nationalist revolutionary.',
       'Heavy American financial underwriting could secure a French military victory without requiring direct U.S. combat troop deployment.',
     ],
@@ -170,7 +170,7 @@ const chapter: ChapterData = {
     ],
     homeFrontConstraints: [
       'Post-Korean War exhaustion: strong public and congressional reluctance to commit American ground divisions to another land conflict in Asia.',
-      'McCarthyite domestic anti-communist pressure: political vulnerability to accusations of "losing" Southeast Asia as Truman was blamed for "losing" China.',
+      'McCarthyite domestic anti-communist pressure: political vulnerability to accusations of “losing” Southeast Asia as Truman was blamed for “losing” China.',
     ],
     primaryDocumentRef: 'nsc-68-indochina',
   },
@@ -184,7 +184,7 @@ const chapter: ChapterData = {
       'French domestic instability and mounting casualty lists would make an open-ended colonial war politically untenable in Paris.',
     ],
     internalDebates: [
-      'Tactical debate at Dien Bien Phu: whether to mount a rapid "strike fast, win fast" human assault (advocated by Chinese advisers) or Giap’s deliberate "steady advance, steady strike" siege method.',
+      'Tactical debate at Dien Bien Phu: whether to mount a rapid “strike fast, win fast” human assault (advocated by Chinese advisers) or Giap’s deliberate “steady advance, steady strike” siege method.',
       'Tensions surrounding early radical land reform measures overseen by Truong Chinh in northern liberated zones.',
     ],
     homeFrontConstraints: [

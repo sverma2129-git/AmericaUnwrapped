@@ -14,7 +14,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'To keep the war in the South going, Hanoi built the Truong Son supply network, known as the Ho Chi Minh Trail. It ran through the jungle mountains of Laos and Cambodia, both neutral countries. Over 16 years it grew from a footpath into 12,000 miles of roads, truck parks, underground fuel pipelines and repair depots. The U.S. wanted to cut it without openly breaking the 1962 Geneva Accords, which guaranteed Laos’s neutrality. So it fought a "Secret War." American planes flew more than 580,000 bombing missions and dropped more than 2 million tons of bombs on Laos. That equals one planeload every eight minutes for nine years. The CIA also raised a guerrilla army of 30,000 Hmong fighters under General Vang Pao. In South Vietnam, the CIA started the Phoenix Program. It "neutralized" more than 81,000 suspected members of the Viet Cong’s civilian network by identifying, interrogating and killing them.',
+      'To keep the war in the South going, Hanoi built the Truong Son supply network, known as the Ho Chi Minh Trail. It ran through the jungle mountains of Laos and Cambodia, both neutral countries. Over 16 years it grew from a footpath into 12,000 miles of roads, truck parks, underground fuel pipelines and repair depots. The U.S. wanted to cut it without openly breaking the 1962 Geneva Accords, which guaranteed Laos’s neutrality. So it fought a “Secret War.” American planes flew more than 580,000 bombing missions and dropped more than 2 million tons of bombs on Laos. That equals one planeload every eight minutes for nine years. The CIA also raised a guerrilla army of 30,000 Hmong fighters under General Vang Pao. In South Vietnam, the CIA started the Phoenix Program. It “neutralized” more than 81,000 suspected members of the Viet Cong’s civilian network by identifying, interrogating and killing them.',
     examTakeaways: [
       'The Ho Chi Minh Trail: The supply route that kept communist forces in the South armed and reinforced through years of American bombing.',
       'Laos, the most bombed nation: To cut the trail, the U.S. bombed neutral Laos on a massive scale and did not admit it. Tens of millions of unexploded cluster bomblets were left behind.',
@@ -38,7 +38,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
         definition:
           'A joint CIA and South Vietnamese intelligence program (1967–1972). Its aim was to find and break up the Viet Cong’s civilian shadow government in southern villages.',
         significance:
-          'It "neutralized" more than 81,000 suspects and killed about 26,000 of them. It badly damaged guerrilla networks in the countryside, and Congress condemned it for torture and killings without trial.',
+          'It “neutralized” more than 81,000 suspects and killed about 26,000 of them. It badly damaged guerrilla networks in the countryside, and Congress condemned it for torture and killings without trial.',
         examTip: 'Often cited in questions about secret warfare, ethics and counterinsurgency.',
       },
       {
@@ -49,7 +49,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
           'A hidden U.S. military and CIA campaign. It backed the Royal Lao Government and Hmong guerrillas against the communist Pathet Lao and North Vietnam’s supply routes.',
         significance:
           'It was fought in secret, without approval from Congress, and made Laos the most heavily bombed country per person on Earth.',
-        examTip: 'More than 80 million unexploded cluster bomblets, called "bombies," still lie in Laotian farmland.',
+        examTip: 'More than 80 million unexploded cluster bomblets, called “bombies,” still lie in Laotian farmland.',
       },
     ],
   },
@@ -96,7 +96,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'The CIA recruited more than 30,000 Hmong fighters led by General Vang Pao. This "Secret Army" fought North Vietnamese regular divisions, rescued American pilots who had been shot down, and took very heavy losses.',
+        'The CIA recruited more than 30,000 Hmong fighters led by General Vang Pao. This “Secret Army” fought North Vietnamese regular divisions, rescued American pilots who had been shot down, and took very heavy losses.',
       citationRef: 'c6-3',
     },
     {
@@ -121,7 +121,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       term: 'General Vang Pao',
       phonetic: 'VAHNG POW',
       definition:
-        'A major general in the Royal Lao Army and the military leader of the Hmong. He commanded the CIA-funded "Secret Army" in Laos.',
+        'A major general in the Royal Lao Army and the military leader of the Hmong. He commanded the CIA-funded “Secret Army” in Laos.',
       significance:
         'He led Hmong forces against the North Vietnamese for more than ten years. After the communists took power in 1975, he helped tens of thousands of Hmong refugees resettle in the United States.',
       examTip: 'A central figure in the history of Hmong Americans, especially in Minnesota and California.',

@@ -15,7 +15,7 @@ const wordCount = (s: string) => s.trim().split(/\s+/).filter(Boolean).length;
 function TaskCard({ kicker, title, children }: { kicker: string; title: string; children: React.ReactNode }) {
   return (
     <section className="max-w-3xl">
-      <h4 className="font-display text-xl font-semibold text-ink leading-snug">{title}</h4>
+      <h4 className="font-display text-lg font-semibold text-ink leading-snug">{title}</h4>
       <p className="meta mt-1 text-ink-soft">{kicker}</p>
       <div className="mt-4">{children}</div>
     </section>
@@ -26,7 +26,7 @@ function SourceCard({ citationId }: { citationId: string }) {
   const c = CITATION_REGISTRY[citationId];
   if (!c || !isVerbatimQuotation(c)) return null;
   return (
-    <figure className="bg-parchment rounded-xl p-5">
+    <figure className="bg-parchment rounded-sm p-5">
       <blockquote className="font-display text-base sm:text-lg text-ink leading-snug">&ldquo;{c.exactQuotation}&rdquo;</blockquote>
       <figcaption className="mt-2 text-xs text-ink-muted">
         {c.authorOrInstitution}, {c.title}, {c.date}
@@ -49,7 +49,7 @@ function WritingBox({ label, value, onChange, rows = 4 }: { label: string; value
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Write your answer here. It stays on this page and is not sent anywhere."
-        className="w-full rounded-lg border border-rule bg-surface p-3 text-sm text-ink leading-relaxed focus:border-rule-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+        className="w-full rounded-sm border border-rule bg-surface p-3 text-sm text-ink leading-relaxed focus:border-rule-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-brand"
       />
     </div>
   );
@@ -61,7 +61,7 @@ function RevealButton({ ready, onClick, children }: { ready: boolean; onClick: (
       type="button"
       disabled={!ready}
       onClick={onClick}
-      className="mt-3 inline-flex items-center px-4 py-2 rounded-lg text-sm font-semibold border transition-colors disabled:cursor-not-allowed disabled:opacity-50 enabled:cursor-pointer border-ink bg-ink text-paper enabled:hover:bg-ink/90"
+      className="mt-3 inline-flex items-center px-4 py-2 rounded-sm text-sm font-semibold border transition-colors disabled:cursor-not-allowed disabled:opacity-50 enabled:cursor-pointer border-ink bg-ink text-paper enabled:hover:bg-ink/90"
     >
       {children}
     </button>
@@ -92,7 +92,7 @@ function OrderTask({ task }: { task: Extract<CourseTask, { kind: 'order' }> }) {
           return (
             <li
               key={item}
-              className={`flex items-center gap-3 rounded-lg border px-3 py-2.5 text-sm ${ right ? 'border-success-rule bg-success-tint' : wrong ? 'border-brand-rule bg-brand-tint' : 'border-rule bg-surface' }`}
+              className={`flex items-center gap-3 rounded-sm border px-3 py-2.5 text-sm ${ right ? 'border-success-rule bg-success-tint' : wrong ? 'border-brand-rule bg-brand-tint' : 'border-rule bg-surface' }`}
             >
               <span className="w-6 text-center font-semibold text-ink-soft tabular-nums">{pos + 1}</span>
               <span className="flex-1 text-ink">
@@ -100,10 +100,10 @@ function OrderTask({ task }: { task: Extract<CourseTask, { kind: 'order' }> }) {
                 {checked && <span className="ml-2 text-xs text-ink-soft">({task.items[item].date})</span>}
               </span>
               <span className="flex gap-1">
-                <button type="button" onClick={() => move(pos, -1)} disabled={pos === 0} aria-label={`Move "${task.items[item].label}" earlier`} className="w-8 h-8 rounded-md border border-rule text-ink-muted enabled:hover:text-ink enabled:cursor-pointer disabled:opacity-30">
+                <button type="button" onClick={() => move(pos, -1)} disabled={pos === 0} aria-label={`Move "${task.items[item].label}" earlier`} className="w-8 h-8 rounded-sm border border-rule text-ink-muted enabled:hover:text-ink enabled:cursor-pointer disabled:opacity-30">
                   <Icon name="chevronUp" className="w-4 h-4 inline" />
                 </button>
-                <button type="button" onClick={() => move(pos, 1)} disabled={pos === order.length - 1} aria-label={`Move "${task.items[item].label}" later`} className="w-8 h-8 rounded-md border border-rule text-ink-muted enabled:hover:text-ink enabled:cursor-pointer disabled:opacity-30">
+                <button type="button" onClick={() => move(pos, 1)} disabled={pos === order.length - 1} aria-label={`Move "${task.items[item].label}" later`} className="w-8 h-8 rounded-sm border border-rule text-ink-muted enabled:hover:text-ink enabled:cursor-pointer disabled:opacity-30">
                   <Icon name="chevronDown" className="w-4 h-4 inline" />
                 </button>
               </span>
@@ -145,7 +145,7 @@ function ExplainTask({ task }: { task: Extract<CourseTask, { kind: 'explain' }> 
         {words >= MIN_WORDS ? 'Compare with a model answer' : `Write at least ${MIN_WORDS} words to compare (${words} so far)`}
       </RevealButton>
       {shown && (
-        <div className="mt-4 rounded-lg border border-rule bg-parchment-light p-4 text-sm">
+        <div className="mt-4 rounded-sm border border-rule bg-parchment-light p-4 text-sm">
           <p className="font-semibold text-ink mb-1.5">A strong answer:</p>
           <ul className="list-disc pl-5 space-y-1 text-ink-muted">
             {task.checklist.map((c) => (
@@ -185,7 +185,7 @@ function SaqPart({ part }: { part: Extract<CourseTask, { kind: 'saq' }>['parts']
       <RevealButton ready={wordCount(text) >= 8} onClick={() => setShown(true)}>
         Show a model answer
       </RevealButton>
-      {shown && <p className="mt-3 rounded-lg border border-rule bg-parchment-light p-3 text-sm text-ink leading-relaxed">{part.model}</p>}
+      {shown && <p className="mt-3 rounded-sm border border-rule bg-parchment-light p-3 text-sm text-ink leading-relaxed">{part.model}</p>}
     </li>
   );
 }
@@ -206,7 +206,7 @@ function SaqTask({ task }: { task: Extract<CourseTask, { kind: 'saq' }> }) {
 function LeqTask({ task }: { task: Extract<CourseTask, { kind: 'leq' }> }) {
   const [notes, setNotes] = useState<Record<string, string>>({});
   return (
-    <TaskCard kicker={`Long essay plan · ${task.reasoning}`} title={task.prompt}>
+    <TaskCard kicker={`Long essay plan: ${task.reasoning}`} title={task.prompt}>
       <p className="text-sm text-ink-muted mb-4">Plan the essay before you write it. Each box is one part of a strong response.</p>
       <ol className="space-y-4">
         {task.scaffold.map((s) => (
@@ -241,7 +241,7 @@ export default function CourseTasks({ tasks }: { tasks: Record<CourseId, CourseT
   const { course } = useCourse();
   if (!course) {
     return (
-      <div className="bg-parchment rounded-xl p-6 max-w-3xl">
+      <div className="bg-parchment rounded-sm p-6 max-w-3xl">
         <p className="text-sm text-ink mb-3">Which course are you studying for? The activities are different for each.</p>
         <CourseToggle />
       </div>
@@ -267,7 +267,7 @@ export function CourseObjectives({ objectives }: { objectives: Record<CourseId, 
     <div className={`grid gap-6 ${ids.length > 1 ? 'md:grid-cols-2' : ''}`}>
       {ids.map((id) => (
         <div key={id}>
-          <span className="meta text-ink-soft block mb-2">By the end ({COURSE_LABEL[id]}), you can</span>
+          <h3 className="mb-2 text-sm font-bold text-ink">What you should be able to do in {COURSE_LABEL[id]}</h3>
           <ul className="space-y-1.5 text-sm text-ink-muted leading-relaxed list-disc pl-5">
             {objectives[id].map((o) => (
               <li key={o}>{o}</li>

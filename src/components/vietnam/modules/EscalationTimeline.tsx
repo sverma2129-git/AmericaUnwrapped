@@ -53,7 +53,7 @@ export default function EscalationTimeline() {
   const current = escalationData[selectedYear];
 
   return (
-    <figure className="my-10 border border-rule bg-parchment rounded-xs text-ink">
+    <figure className="my-10 border border-rule bg-parchment rounded-sm text-ink">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
@@ -68,7 +68,7 @@ export default function EscalationTimeline() {
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h3 className="font-display text-2xl font-bold text-ink mt-1">
+          <h3 className="font-display text-xl font-bold text-ink mt-1">
             How 875 advisers became 16,300 troops
           </h3>
           <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -83,7 +83,7 @@ export default function EscalationTimeline() {
               key={yr}
               type="button"
               onClick={() => setSelectedYear(yr)}
-              className={`p-3 text-left transition-colors cursor-pointer border rounded-xs ${ selectedYear === yr ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
+              className={`p-3 text-left transition-colors cursor-pointer border rounded-sm ${ selectedYear === yr ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
             >
               <div className="text-xs font-bold">{yr}</div>
               <div className="font-display text-xs opacity-85 mt-0.5">
@@ -94,9 +94,9 @@ export default function EscalationTimeline() {
         </div>
 
         {/* Selected Year Data Ledger */}
-        <div className="p-6 bg-paper border border-rule rounded-xs space-y-5">
+        <div className="p-6 bg-paper border border-rule rounded-sm space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
-            <h4 className="font-display text-xl font-bold text-ink">
+            <h4 className="font-display text-lg font-bold text-ink">
               {current.label}
             </h4>
             <span className="text-xs text-brand font-bold">
@@ -124,7 +124,7 @@ export default function EscalationTimeline() {
           </div>
 
           {/* Kennedy Documented Position */}
-          <div className="p-4 bg-parchment border border-rule border-l border-l-brand rounded-r-xs">
+          <div className="p-4 bg-parchment border border-rule border-l border-l-brand rounded-sm">
             <span className="text-xs text-brand font-bold block mb-1">
               Documented Administration Position (Paraphrase):
             </span>

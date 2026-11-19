@@ -26,7 +26,7 @@ export default function AttritionModel() {
       </div>
 
       <div>
-        <h3 className="font-display text-2xl font-bold text-ink">
+        <h3 className="font-display text-xl font-bold text-ink">
           Could the U.S. kill enemy soldiers faster than Hanoi replaced them?
         </h3>
         <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -37,7 +37,7 @@ export default function AttritionModel() {
       {/* Sliders & Visual Reservoir Chart */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Sliders Control Panel */}
-        <div className="md:col-span-6 space-y-6 bg-white p-5 border border-rule rounded-xs">
+        <div className="md:col-span-6 space-y-6 bg-white p-5 border border-rule rounded-sm">
           <div>
             <div className="flex justify-between text-xs mb-2">
               <span className="text-ink-muted font-bold">
@@ -101,7 +101,7 @@ export default function AttritionModel() {
 
         {/* Visual Reservoir Graphic & Calculation Feedback */}
         <div className="md:col-span-6 space-y-4">
-          <div className="p-5 bg-white border border-rule rounded-xs space-y-4">
+          <div className="p-5 bg-white border border-rule rounded-sm space-y-4">
             <span className="text-xs text-ink-soft block">
               Losses and replacements
             </span>
@@ -113,7 +113,7 @@ export default function AttritionModel() {
                   <span className="text-ink-muted">New troops Hanoi sends each month:</span>
                   <span className="font-bold text-ink">16,500 cadres</span>
                 </div>
-                <div className="h-6 w-full bg-parchment rounded-xs overflow-hidden">
+                <div className="h-6 w-full bg-parchment rounded-sm overflow-hidden">
                   <div className="h-full bg-ink-muted" style={{ width: '75%' }} />
                 </div>
               </div>
@@ -121,11 +121,11 @@ export default function AttritionModel() {
               <div>
                 <div className="flex justify-between text-xs mb-1">
                   <span className="text-ink-muted">Troops lost in combat:</span>
-                  <span className="font-bold text-red-700">{effectiveLosses.toLocaleString()} / mo</span>
+                  <span className="font-bold text-brand">{effectiveLosses.toLocaleString()} / mo</span>
                 </div>
-                <div className="h-6 w-full bg-parchment rounded-xs overflow-hidden">
+                <div className="h-6 w-full bg-parchment rounded-sm overflow-hidden">
                   <div
-                    className="h-full bg-red-700 transition-all duration-300"
+                    className="h-full bg-brand transition-all duration-300"
                     style={{ width: `${Math.min(100, (effectiveLosses / 22000) * 100)}%` }}
                   />
                 </div>
@@ -133,11 +133,11 @@ export default function AttritionModel() {
             </div>
 
             {/* Resulting Balance Card */}
-            <div className={`p-4 border rounded-xs transition-colors ${ netMonthlyChange > 0 ? 'bg-parchment border-rule' : 'bg-emerald-50 border-emerald-300' }`}>
+            <div className={`p-4 border rounded-sm transition-colors ${ netMonthlyChange > 0 ? 'bg-parchment border-rule' : 'bg-success-tint border-success-rule' }`}>
               <div className="text-xs font-bold text-ink-soft">
                 Change in enemy troops each month:
               </div>
-              <div className="font-display text-2xl font-bold mt-1 text-ink">
+              <div className="font-display text-xl font-bold mt-1 text-ink">
                 {netMonthlyChange > 0 ? `+${netMonthlyChange.toLocaleString()} cadres / mo` : `${netMonthlyChange.toLocaleString()} cadres / mo`}
               </div>
               <p className="font-display text-xs text-ink-muted mt-1">
@@ -152,7 +152,7 @@ export default function AttritionModel() {
 
       {/* Tripartite Historiographical Ledger */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-        <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+        <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
           <span className="font-bold text-ink-muted block mb-1">
             1. MACV Attrition Logic (Westmoreland)
           </span>
@@ -161,7 +161,7 @@ export default function AttritionModel() {
           </p>
         </div>
 
-        <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+        <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
           <span className="font-bold text-ink-muted block mb-1">
             2. Pentagon Systems Analysis (Enthoven)
           </span>
@@ -170,7 +170,7 @@ export default function AttritionModel() {
           </p>
         </div>
 
-        <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+        <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
           <span className="font-bold text-ink-muted block mb-1">
             3. Hanoi’s Strategic Calculation (Le Duan)
           </span>

@@ -32,12 +32,12 @@ export default function DbqOutlines() {
                 <div className="mt-5 space-y-6 sm:pl-[5.25rem]">
                   <div className="border-l-[3px] border-brand pl-5">
                     <p className="font-display text-sm font-semibold text-brand">A sample thesis</p>
-                    <p className="mt-1.5 max-w-[66ch] font-serif text-[1.0625rem] italic leading-relaxed text-ink">{dbq.thesis}</p>
+                    <p className="mt-1.5 max-w-[66ch] font-serif text-base italic leading-relaxed text-ink">{dbq.thesis}</p>
                   </div>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div>
                       <p className="font-display text-sm font-semibold text-ink">Evidence to use</p>
-                      <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[0.9375rem] leading-relaxed text-ink-muted marker:text-rule-strong">
+                      <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-ink-muted marker:text-rule-strong">
                         {dbq.evidence.map((item) => (
                           <li key={item}>{item}</li>
                         ))}
@@ -45,7 +45,7 @@ export default function DbqOutlines() {
                     </div>
                     <div>
                       <p className="font-display text-sm font-semibold text-brand">Mistakes to avoid</p>
-                      <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[0.9375rem] leading-relaxed text-ink-muted marker:text-brand-rule">
+                      <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-ink-muted marker:text-brand-rule">
                         {dbq.commonErrors.map((item) => (
                           <li key={item}>{item}</li>
                         ))}
@@ -59,9 +59,9 @@ export default function DbqOutlines() {
         </ol>
       </div>
 
-      <aside className="self-start rounded-lg bg-parchment p-5 sm:p-6">
+      <aside className="self-start rounded-sm bg-parchment p-5 sm:p-6">
         <h3 className="font-display text-lg font-bold text-ink">Vietnam on past AP exams</h3>
-        <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-muted">
+        <p className="mt-2 text-sm leading-relaxed text-ink-muted">
           These are real exam questions, described in our own words. College Board owns the exact wording and keeps older
           exams in AP Classroom, so ask your teacher for the originals and their scoring guidelines.
         </p>
@@ -71,7 +71,7 @@ export default function DbqOutlines() {
               <p className="font-semibold text-ink">
                 {q.exam}: {q.question}
               </p>
-              <p className="mt-1 text-[0.9375rem] leading-relaxed text-ink-muted">{q.summary}</p>
+              <p className="mt-1 text-sm leading-relaxed text-ink-muted">{q.summary}</p>
             </li>
           ))}
         </ul>
@@ -79,7 +79,7 @@ export default function DbqOutlines() {
           href={PAST_AP_QUESTIONS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block text-[0.9375rem] font-semibold text-brand underline decoration-brand-rule underline-offset-2 hover:decoration-brand"
+          className="mt-4 inline-block text-sm font-semibold text-brand underline decoration-brand-rule underline-offset-2 hover:decoration-brand"
         >
           College Board: past exam questions (recent years)
         </a>

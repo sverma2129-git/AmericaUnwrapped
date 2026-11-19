@@ -59,10 +59,10 @@ export default function Figure({ imageId, variant = 'full', priority = false, cl
         alt={image.alt}
         loading={priority ? 'eager' : 'lazy'}
         decoding="async"
-        className="w-full h-auto rounded-lg bg-parchment"
+        className="w-full h-auto rounded-sm bg-parchment"
       />
-      <figcaption className="mt-2.5 text-[0.8125rem] leading-relaxed text-ink-soft">
-        {variant === 'full' && <span className="text-[0.9375rem] text-ink-muted block mb-0.5">{image.caption}</span>}
+      <figcaption className="mt-2.5 text-xs leading-relaxed text-ink-soft">
+        {variant === 'full' && <span className="text-sm text-ink-muted block mb-0.5">{image.caption}</span>}
         {image.creator}, {image.date}. {image.source}. {RIGHTS_LABEL[image.rights]}.{' '}
         <a href={image.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-brand">
           Source record

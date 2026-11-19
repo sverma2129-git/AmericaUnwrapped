@@ -14,10 +14,10 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
   const labelId = useId();
 
   return (
-    <section aria-labelledby={labelId} className="bg-parchment rounded-xl p-5 sm:p-6">
+    <section aria-labelledby={labelId} className="bg-parchment rounded-sm p-5 sm:p-6">
       {question.imageId && <Figure imageId={question.imageId} variant="compact" className="mb-4" />}
-      <p id={labelId} className="font-display text-lg font-semibold text-ink leading-snug">
-        <span className="font-sans text-[0.9375rem] font-semibold text-brand">Quick check. </span>
+      <p className="text-sm text-ink-muted">Check yourself</p>
+      <p id={labelId} className="mt-1 font-display text-lg font-semibold text-ink leading-snug">
         {question.question}
       </p>
 
@@ -36,7 +36,7 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
               disabled={answered}
               aria-pressed={isPicked}
               onClick={() => setPicked(idx)}
-              className={`flex items-start gap-3 text-left text-[0.9375rem] leading-snug px-4 py-3.5 rounded-lg border transition-colors ${tone} ${
+              className={`flex items-start gap-3 text-left text-sm leading-snug px-4 py-3.5 rounded-sm border transition-colors ${tone} ${
                 answered ? 'cursor-default' : 'cursor-pointer'
               }`}
             >
@@ -62,7 +62,7 @@ export default function InlineCheck({ question }: { question: QuizQuestion }) {
 
       <div aria-live="polite">
         {answered && (
-          <p className="mt-4 text-[0.9375rem] text-ink-muted leading-relaxed">
+          <p className="mt-4 text-sm text-ink-muted leading-relaxed">
             <strong className={correct ? 'text-success' : 'text-brand'}>{correct ? 'Right.' : 'Not quite.'}</strong>{' '}
             {question.rationale}
             {question.citationRef && <CitationMarker id={question.citationRef} />}

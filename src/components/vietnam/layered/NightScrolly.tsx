@@ -47,7 +47,7 @@ function Clock({ place, time }: { place: string; time: string }) {
   return (
     <div>
       <span className="meta text-ink-soft block">{place}</span>
-      <span className="block font-display text-lg sm:text-xl font-semibold text-ink tabular-nums leading-tight">{time}</span>
+      <span className="block font-display text-lg sm:text-lg font-semibold text-ink tabular-nums leading-tight">{time}</span>
     </div>
   );
 }
@@ -71,13 +71,13 @@ export default function NightScrolly({ steps }: { steps: NightStep[] }) {
               <Clock place="Gulf of Tonkin" time={step.localTime} />
               <Clock place="Washington" time={step.washingtonTime} />
             </div>
-            <div className="mt-3 bg-parchment rounded-xl min-h-[24vh] lg:min-h-[32vh] flex items-center">
+            <div className="mt-3 bg-parchment rounded-sm min-h-[24vh] lg:min-h-[32vh] flex items-center">
               {quote ? (
                 <figure className="p-4 sm:p-6">
-                  <blockquote className="font-display text-[0.9375rem] sm:text-lg text-ink leading-snug">
+                  <blockquote className="font-display text-sm sm:text-lg text-ink leading-snug">
                     &ldquo;{quote.exactQuotation}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-2 text-[0.8125rem] text-ink-soft">
+                  <figcaption className="mt-2 text-xs text-ink-soft">
                     {quote.authorOrInstitution}, {quote.date}
                     <CitationMarker id={quote.id} />
                   </figcaption>

@@ -34,7 +34,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       },
       {
         id: 'operation-linebacker-ii',
-        term: 'Operation Linebacker II ("Christmas Bombing")',
+        term: 'Operation Linebacker II (“Christmas Bombing”)',
         imageId: 'b52-linebacker-1972',
         phonetic: 'LINE-bak-er TWO',
         definition:
@@ -59,7 +59,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c9-q1',
       question:
-        'What major concession did the United States make in the 1973 Paris Peace Accords that South Vietnamese President Thieu viewed as a "death sentence" for his country?',
+        'What major concession did the United States make in the 1973 Paris Peace Accords that South Vietnamese President Thieu viewed as a “death sentence” for his country?',
       options: [
         'North Vietnamese troops could stay in the South while U.S. forces withdrew',
         'The U.S. would pay billions of dollars in war reparations to the Viet Cong',
@@ -68,7 +68,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'The treaty set a "ceasefire in place." North Vietnamese troops could stay on the southern land they held. Thieu knew that once American air power left, the ARVN could not hold off a northern army already inside the country.',
+        'The treaty set a “ceasefire in place.” North Vietnamese troops could stay on the southern land they held. Thieu knew that once American air power left, the ARVN could not hold off a northern army already inside the country.',
       citationRef: 'c9-1',
     },
     {
@@ -126,7 +126,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c9-fc3',
-      term: 'The "Palace File"',
+      term: 'The “Palace File”',
       phonetic: 'PAL-us FYLE',
       definition:
         'A collection of 27 private letters from Presidents Nixon and Ford to President Thieu. They promised American military action if North Vietnam broke the 1973 Accords.',

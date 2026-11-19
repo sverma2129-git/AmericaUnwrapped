@@ -14,7 +14,7 @@ export default function VietnamWarRedirect() {
   return (
     <div className="max-w-xl mx-auto px-6 py-24 text-center space-y-4">
       <meta httpEquiv="refresh" content={`0; url=${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${target}`} />
-      <h1 className="font-display text-2xl font-bold text-ink">This page has moved</h1>
+      <h1 className="font-display text-xl font-bold text-ink">This page has moved</h1>
       <p className="text-sm text-ink-muted">
         The Vietnam War experience now lives at{' '}
         <Link href={target} className="text-brand underline">

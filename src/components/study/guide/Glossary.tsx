@@ -45,7 +45,7 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Try Tonkin, Tet or Nixon"
-            className="mt-1.5 h-11 w-full rounded-md border border-rule-strong bg-surface px-3.5 text-base text-ink placeholder:text-ink-soft focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand"
+            className="mt-1.5 h-11 w-full rounded-sm border border-rule-strong bg-surface px-3.5 text-base text-ink placeholder:text-ink-soft focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-brand"
           />
         </label>
         <p className="pb-2.5 text-sm text-ink-muted" aria-live="polite">
@@ -83,7 +83,7 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
                       {!chapter && <span className="block text-sm font-normal text-ink-muted">Chapter {from.number}</span>}
                     </dt>
                     <dd>
-                      <p className="max-w-[66ch] font-serif text-[1.0625rem] leading-relaxed text-ink">{term.definition}</p>
+                      <p className="max-w-[66ch] font-serif text-base leading-relaxed text-ink">{term.definition}</p>
                       <details className="group mt-1.5">
                         <summary className="inline-flex min-h-6 py-0.5 cursor-pointer list-none items-center gap-1.5 text-sm font-semibold text-ink-muted hover:text-brand [&::-webkit-details-marker]:hidden">
                           <span aria-hidden="true" className="transition-transform group-open:rotate-90 motion-reduce:transition-none">›</span>
@@ -92,7 +92,7 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
                         <div className="mt-2 max-w-[66ch] space-y-2 border-l-2 border-rule pl-4">
                           <p className="font-serif text-base leading-relaxed text-ink-muted">{term.significance}</p>
                           {term.examTip && (
-                            <p className="text-[0.9375rem] leading-relaxed text-ink-muted">
+                            <p className="text-sm leading-relaxed text-ink-muted">
                               <span className="font-semibold text-brand">On the test. </span>
                               {term.examTip}
                             </p>

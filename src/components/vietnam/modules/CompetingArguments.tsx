@@ -11,7 +11,7 @@ export default function CompetingArguments() {
     HISTORIOGRAPHICAL_SCHOOLS[0];
 
   return (
-    <figure className="my-10 border border-rule-strong bg-[#f9f7f2]">
+    <figure className="my-10 border border-rule-strong bg-paper">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
@@ -26,7 +26,7 @@ export default function CompetingArguments() {
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h3 className="font-display text-2xl font-bold text-ink mt-1">
+          <h3 className="font-display text-xl font-bold text-ink mt-1">
             Why historians still argue about what the war meant
           </h3>
           <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -57,7 +57,7 @@ export default function CompetingArguments() {
         <div className="p-6 bg-white border border-rule space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
             <div>
-              <h4 className="font-display text-2xl font-bold text-ink">
+              <h4 className="font-display text-xl font-bold text-ink">
                 {activeSchool.name}
               </h4>
               <span className="text-xs text-ink-soft">
@@ -81,7 +81,7 @@ export default function CompetingArguments() {
 
           {/* Strengths vs Blindspots */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
-            <div className="p-4 bg-[#f2ede4] border border-rule-strong space-y-2 text-xs font-sans">
+            <div className="p-4 bg-parchment border border-rule-strong space-y-2 text-xs font-sans">
               <span className="font-bold text-ink-muted block">
                 The evidence they lean on
               </span>
@@ -95,7 +95,7 @@ export default function CompetingArguments() {
               </ul>
             </div>
 
-            <div className="p-4 bg-[#f2ede4] border border-rule-strong space-y-2 text-xs font-sans">
+            <div className="p-4 bg-parchment border border-rule-strong space-y-2 text-xs font-sans">
               <span className="font-bold text-ink-muted block">
                 What critics say they miss
               </span>

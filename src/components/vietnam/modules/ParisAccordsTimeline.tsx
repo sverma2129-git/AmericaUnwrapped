@@ -31,7 +31,7 @@ export default function ParisAccordsTimeline() {
       title: 'The Accords are signed',
       timeframe: 'January 27, 1973',
       summary:
-        'The final Paris Peace Accords signed in January was virtually identical to the draft agreed in October. Nixon coerced Thieu into signing by secretly threatening to cut off all aid if he balked, while writing personal letters guaranteeing that the U.S. would "respond with full force" if Hanoi violated the ceasefire—guarantees made null and void by Watergate and the War Powers Act.',
+        'The final Paris Peace Accords signed in January was virtually identical to the draft agreed in October. Nixon coerced Thieu into signing by secretly threatening to cut off all aid if he balked, while writing personal letters guaranteeing that the U.S. would "respond with full force" if Hanoi violated the ceasefire. Those guarantees were made void by Watergate and the War Powers Act.',
       keyConcession: 'All American combat troops departed within 60 days; 591 American POWs returned home; North Vietnamese divisions remained stationed inside South Vietnam.',
     },
   };
@@ -39,7 +39,7 @@ export default function ParisAccordsTimeline() {
   const current = phases[selectedPhase];
 
   return (
-    <figure className="my-10 border border-rule-strong bg-[#f9f7f2]">
+    <figure className="my-10 border border-rule-strong bg-paper">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
@@ -54,7 +54,7 @@ export default function ParisAccordsTimeline() {
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h3 className="font-display text-2xl font-bold text-ink mt-1">
+          <h3 className="font-display text-xl font-bold text-ink mt-1">
             A deal that left 150,000 North Vietnamese troops in the South
           </h3>
           <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -79,7 +79,7 @@ export default function ParisAccordsTimeline() {
         {/* Active Phase Ledger */}
         <div className="p-6 bg-white border border-rule space-y-4">
           <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-rule pb-2">
-            <h4 className="font-display text-xl font-bold text-ink">
+            <h4 className="font-display text-lg font-bold text-ink">
               {current.title}
             </h4>
             <span className="text-xs text-ink-soft">
@@ -91,7 +91,7 @@ export default function ParisAccordsTimeline() {
             {current.summary}
           </p>
 
-          <div className="p-4 bg-[#f2ede4] border border-rule-strong text-xs font-sans">
+          <div className="p-4 bg-parchment border border-rule-strong text-xs font-sans">
             <span className="font-bold text-ink-muted block mb-1">
               What it meant:
             </span>

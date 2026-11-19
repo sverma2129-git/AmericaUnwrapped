@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { CHAPTER_COUNT, VIETNAM_CHAPTERS, getAdjacentChapters } from '@/data/vietnam/chapters';
+import { CHAPTER_COUNT, CHAPTER_PARTS, VIETNAM_CHAPTERS, getAdjacentChapters } from '@/data/vietnam/chapters';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { CITATION_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { TURNING_POINTS } from '@/data/vietnam/studyGuide';
@@ -295,6 +295,63 @@ describe('plain wording', () => {
         expect(title.includes('&'), `${chapter.id}: ${title}`).toBe(false);
         expect(title.includes(':'), `${chapter.id}: ${title}`).toBe(false);
       }
+    }
+  });
+});
+
+describe('editorial design rules', () => {
+  it('puts every chapter in exactly one part, in order', () => {
+    const ids = CHAPTER_PARTS.flatMap((p) => p.chapters.map((c) => c.id));
+    expect(ids).toEqual(VIETNAM_CHAPTERS.map((c) => c.id));
+    for (const part of CHAPTER_PARTS) expect(part.chapters.length, part.title).toBeGreaterThan(0);
+  });
+
+  it('shows a featured document only for a verified verbatim quotation', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const doc = chapter.featuredDocument;
+      if (!doc) continue;
+      const citation = CITATION_REGISTRY[doc.citationId];
+      expect(citation && isVerbatimQuotation(citation), `${chapter.id}: ${doc.citationId}`).toBe(true);
+      expect(doc.header.length, chapter.id).toBeGreaterThan(0);
+      if (doc.afterBeatId) expect(chapter.story?.beats.some((b) => b.id === doc.afterBeatId), chapter.id).toBe(true);
+    }
+  });
+
+  it('keeps the story text free of raw markdown and em dashes', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      for (const p of chapter.whatHappened.narrative) {
+        expect(p.includes('**'), chapter.id).toBe(false);
+        if (chapter.layout !== 'layered') expect(p.includes('—'), `${chapter.id}: ${p.slice(0, 60)}`).toBe(false);
+        // Italics are written *like this*: the asterisks must pair up.
+        expect((p.match(/\*/g) ?? []).length % 2, chapter.id).toBe(0);
+      }
+    }
+  });
+
+  it('uses no HTML entities or straight quotes in chapter text', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const text = JSON.stringify(chapter);
+      expect(/&[a-z]+;/.test(text), chapter.id).toBe(false);
+    }
+  });
+
+  it('sets type only from the scale: no arbitrary font sizes in components', () => {
+    const root = path.resolve(__dirname, '../..');
+    const files: string[] = [];
+    const walk = (dir: string) => {
+      for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+        const full = path.join(dir, entry.name);
+        if (entry.isDirectory()) walk(full);
+        else if (full.endsWith('.tsx')) files.push(full);
+      }
+    };
+    walk(path.join(root, 'app'));
+    walk(path.join(root, 'components'));
+    for (const file of files) {
+      const source = fs.readFileSync(file, 'utf8');
+      // SVG map labels scale with their viewBox, so px sizes inside <text> are allowed.
+      const offenders: string[] = [...(source.match(/text-\[[0-9.]+rem\]/g) ?? []), ...(source.match(/text-[4-9]xl/g) ?? [])];
+      expect(offenders, path.relative(root, file)).toEqual([]);
     }
   });
 });

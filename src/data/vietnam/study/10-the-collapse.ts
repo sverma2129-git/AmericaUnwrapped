@@ -14,7 +14,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'After American troops left in 1973, South Vietnam’s economy sank as American military spending disappeared. Congress also cut military aid from $2.3 billion to under $700 million. ARVN units had to ration artillery shells, keep helicopters on the ground for lack of spare parts, and fight short of ammunition. In December 1974, communist forces attacked Phuoc Long province to see whether the U.S. would start bombing again. When no planes came, Hanoi approved a two-year campaign planned by General Van Tien Dung. On March 10, 1975, North Vietnamese tanks took Ban Me Thuot in the Central Highlands. In a panic, President Thieu ordered the whole Central Highlands abandoned without consulting his commanders. The retreat down the dirt road Route 7B became the "Column of Tears," as soldiers left their units to rescue their families. Hue fell on March 25. Da Nang fell on March 30, crowded with 300,000 refugees. The ARVN 18th Division held at Xuan Loc for two weeks, but North Vietnam sped up its plans and launched the "Ho Chi Minh Campaign." On the morning of April 30, 1975, after the rooftop helicopter evacuations of Operation Frequent Wind, North Vietnamese Tank 843 crashed through the gates of the Presidential Palace in Saigon. The war was over.',
+      'After American troops left in 1973, South Vietnam’s economy sank as American military spending disappeared. Congress also cut military aid from $2.3 billion to under $700 million. ARVN units had to ration artillery shells, keep helicopters on the ground for lack of spare parts, and fight short of ammunition. In December 1974, communist forces attacked Phuoc Long province to see whether the U.S. would start bombing again. When no planes came, Hanoi approved a two-year campaign planned by General Van Tien Dung. On March 10, 1975, North Vietnamese tanks took Ban Me Thuot in the Central Highlands. In a panic, President Thieu ordered the whole Central Highlands abandoned without consulting his commanders. The retreat down the dirt road Route 7B became the “Column of Tears,” as soldiers left their units to rescue their families. Hue fell on March 25. Da Nang fell on March 30, crowded with 300,000 refugees. The ARVN 18th Division held at Xuan Loc for two weeks, but North Vietnam sped up its plans and launched the “Ho Chi Minh Campaign.” On the morning of April 30, 1975, after the rooftop helicopter evacuations of Operation Frequent Wind, North Vietnamese Tank 843 crashed through the gates of the Presidential Palace in Saigon. The war was over.',
     examTakeaways: [
       'Many causes: The ARVN fell apart because U.S. aid was cut, fuel and ammunition were rationed, Thieu gave panicked orders, and soldiers left to save their families.',
       'The Column of Tears: Thieu’s badly planned retreat gave up two-thirds of South Vietnam in three weeks, mostly without major battles.',
@@ -67,7 +67,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'After Ban Me Thuot fell, Thieu held a secret meeting at Cam Ranh. He suddenly ordered the whole II Corps to leave the Central Highlands down the dirt road Route 7B. The retreat became the "Column of Tears," and South Vietnam lost 75% of its tanks and artillery without a fight.',
+        'After Ban Me Thuot fell, Thieu held a secret meeting at Cam Ranh. He suddenly ordered the whole II Corps to leave the Central Highlands down the dirt road Route 7B. The retreat became the “Column of Tears,” and South Vietnam lost 75% of its tanks and artillery without a fight.',
       citationRef: 'c10-1',
     },
     {
@@ -129,7 +129,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c10-fc2',
-      term: 'The "Column of Tears"',
+      term: 'The “Column of Tears”',
       phonetic: 'KOL-um of TEERZ',
       definition:
         'The chaotic retreat of 200,000 ARVN soldiers and more than 400,000 civilian refugees down the dirt road Route 7B, from the Central Highlands to the coast in March 1975.',
@@ -139,7 +139,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c10-fc3',
-      term: 'President Duong Van Minh ("Big Minh")',
+      term: 'President Duong Van Minh (“Big Minh”)',
       phonetic: 'ZWOONG VAHN MIN',
       definition:
         'A South Vietnamese general who led the 1963 coup against Diem. He was South Vietnam’s last president, for just 48 hours in April 1975.',

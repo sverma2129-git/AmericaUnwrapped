@@ -14,7 +14,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'The 1954 Geneva Accords called for nationwide elections in July 1956 to reunite Vietnam. But neither the United States nor the new State of Vietnam signed the final statement. Prime Minister Ngo Dinh Diem had American money and help from CIA officer Edward Lansdale. He removed Emperor Bao Dai in a rigged vote and declared the Republic of Vietnam. He refused to hold the elections because he expected Ho Chi Minh to win easily. Diem’s land rules, his favoring of Catholics, and his harsh "Denounce the Communists" campaigns turned villages against him. Armed resistance grew in the South and organized as the National Liberation Front (the Viet Cong) in December 1960.',
+      'The 1954 Geneva Accords called for nationwide elections in July 1956 to reunite Vietnam. But neither the United States nor the new State of Vietnam signed the final statement. Prime Minister Ngo Dinh Diem had American money and help from CIA officer Edward Lansdale. He removed Emperor Bao Dai in a rigged vote and declared the Republic of Vietnam. He refused to hold the elections because he expected Ho Chi Minh to win easily. Diem’s land rules, his favoring of Catholics, and his harsh “Denounce the Communists” campaigns turned villages against him. Armed resistance grew in the South and organized as the National Liberation Front (the Viet Cong) in December 1960.',
     examTakeaways: [
       'No elections in 1956: U.S. and South Vietnamese officials blocked the vote because they expected Ho Chi Minh to win as much as 80% of it.',
       'Diem loses the countryside: He reversed the Viet Minh’s land handouts and replaced elected village chiefs with Catholic loyalists. Farmers resented both.',
@@ -40,7 +40,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
           'The communist-led rebel organization formed in South Vietnam in December 1960. Its goals were to overthrow Diem’s government and reunite the country.',
         significance:
           'It fought a guerrilla war in villages across South Vietnam, with heavy support from North Vietnam down the Ho Chi Minh Trail.',
-        examTip: '"Viet Cong" was an insulting label from Diem’s government that meant "Vietnamese Communist." Members called themselves the NLF.',
+        examTip: '“Viet Cong” was an insulting label from Diem’s government that meant “Vietnamese Communist.” Members called themselves the NLF.',
       },
       {
         id: 'passage-to-freedom',
@@ -89,7 +89,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c2-q3',
       question:
-        'What was the official name of the southern insurgent coalition established in December 1960, commonly referred to by American troops as the "Viet Cong"?',
+        'What was the official name of the southern insurgent coalition established in December 1960, commonly referred to by American troops as the “Viet Cong”?',
       options: [
         'The National Liberation Front (NLF)',
         'The Provisional Revolutionary Government',
@@ -126,7 +126,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
         'President Diem’s younger brother and closest adviser. He ran the secret police and the Strategic Hamlet Program.',
       significance:
         'His crackdowns on Buddhist monks and on critics in 1963 set off the crisis that led Washington to accept a coup against Diem.',
-      examTip: 'His wife, Madame Nhu, mocked the monks who burned themselves in protest, calling the deaths "barbecues."',
+      examTip: 'His wife, Madame Nhu, mocked the monks who burned themselves in protest, calling the deaths “barbecues.”',
     },
     {
       id: 'c2-fc2',

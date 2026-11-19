@@ -15,7 +15,7 @@ const chapter: ChapterData = {
   isLandmark: true,
   landmarkMoment: {
     bannerTitle: 'The 55 days that ended South Vietnam',
-    dateline: 'April 30, 1975 &bull; 11:30 AM',
+    dateline: 'April 30, 1975, 11:30 a.m.',
     location: 'The Independence Palace, Saigon',
     quote: 'On the morning of April 30, 1975, North Vietnamese armored units breached the perimeter gates of Saigon’s Presidential Palace, concluding the military collapse of the Republic of Vietnam.',
     quoteSpeaker: 'George J. Veith',
@@ -23,9 +23,9 @@ const chapter: ChapterData = {
   },
   whatHappened: {
     narrative: [
-      'Between 1973 and 1974, South Vietnam’s economy contracted severely as American military expenditures vanished. Simultaneously, the U.S. Congress, disillusioned by corruption and determined to conclude involvement, slashed military aid from $2.3 billion to under $700 million.[^c10-1] ARVN units were forced to ration artillery shells, ground helicopters for lack of spare parts, and conserve ammunition. In June 1973, Congress passed the Case-Church Amendment with veto-proof majorities, prohibiting all U.S. military activity in Indochina past August 15, 1973, legally voiding Nixon’s private promises of air support to Thieu.[^c10-1] In August 1974, Nixon resigned over the Watergate scandal, leaving President Gerald Ford with neither the authority nor the political capital to intervene.',
-      'In December 1974, communist forces attacked Phuoc Long province, 40 miles north of Saigon, specifically to test whether the U.S. would resume bombing. When Congress rejected Ford’s appeals for emergency assistance and no air strikes occurred, Hanoi concluded the U.S. would not return. General Van Tien Dung planned a two-year campaign for 1975–1976. On March 10, 1975, PAVN armor launched a surprise assault capturing Ban Me Thuot in the Central Highlands.[^c10-2] On March 14, in strategic panic, President Thieu ordered the entire Central Highlands abandoned to consolidate a defensible enclave around Saigon.[^c10-1]',
-      'The uncoordinated retreat down unpaved Route 7B degenerated into the "Column of Tears": over 200,000 soldiers and 400,000 civilian refugees were shelled along the roads, and soldiers abandoned positions to save their fleeing families.[^c10-3] Hue fell on March 25; Da Nang collapsed into pandemonium on March 30 amid 300,000 refugees. Contrary to the post-war stereotype that South Vietnamese troops universally refused to fight, the ARVN 18th Division under Brigadier General Le Minh Dao mounted a fierce two-week stand at Xuan Loc (April 9–21), inflicting heavy casualties on three PAVN divisions before being outflanked.[^c10-1] Accelerating the timetable into the "Ho Chi Minh Campaign," North Vietnamese armor crashed through the gates of Saigon’s Presidential Palace at 11:30 AM on April 30, 1975.[^c10-2]',
+      'In 1973 and 1974, South Vietnam’s economy shrank sharply as American military spending disappeared. Congress, tired of the corruption in Saigon and set on getting out, cut military aid from $2.3 billion to less than $700 million.[^c10-1] South Vietnamese units had to ration artillery shells and bullets, and helicopters sat on the ground for lack of spare parts. In June 1973, Congress passed the Case-Church Amendment by margins large enough to override a veto. It banned all U.S. military action in Indochina after August 15, 1973, so Nixon’s private promises of air support to Thieu could no longer be kept.[^c10-1] In August 1974, Nixon resigned over the Watergate scandal. President Gerald Ford had neither the legal power nor the political support to step in.',
+      'In December 1974, communist forces attacked Phuoc Long province, 40 miles north of Saigon, to test whether the United States would start bombing again. Congress turned down Ford’s requests for emergency aid, and no air strikes came. Hanoi concluded that the Americans would not come back. General Van Tien Dung planned a two-year campaign for 1975 and 1976. On March 10, 1975, North Vietnamese tanks made a surprise attack and captured Ban Me Thuot in the Central Highlands.[^c10-2] On March 14, Thieu panicked and ordered his army to abandon the whole Central Highlands so it could defend a smaller area around Saigon.[^c10-1]',
+      'The disorganized retreat down Route 7B, an unpaved road, became known as the Column of Tears. More than 200,000 soldiers and 400,000 civilian refugees were shelled along the way, and soldiers left their posts to save their families.[^c10-3] Hue fell on March 25. Da Nang collapsed into chaos on March 30, with 300,000 refugees crowding the city. After the war, many people believed that South Vietnamese troops simply refused to fight. That is not the whole story. At Xuan Loc, the ARVN 18th Division under Brigadier General Le Minh Dao held out from April 9 to 21 and inflicted heavy losses on three North Vietnamese divisions before it was outflanked.[^c10-1] Hanoi sped up its timetable and renamed the push the Ho Chi Minh Campaign. At 11:30 a.m. on April 30, 1975, North Vietnamese tanks crashed through the gates of the Presidential Palace in Saigon.[^c10-2]'
     ],
     keyEvents: [
       { date: 'June 1973', title: 'Congress bans further fighting', detail: 'The Case-Church Amendment bans U.S. military action in Indochina after August 15, 1973.' },
@@ -59,7 +59,7 @@ const chapter: ChapterData = {
       'Liberate the South completely, crush ARVN resistance, and achieve the unconditional surrender of the Saigon government.',
     underlyingAssumptions: [
       'Hanoi initially drew up a conservative two-year campaign plan (1975–1976), expecting stubborn ARVN resistance.',
-      'The speed of the ARVN collapse surprised even General Dung, who issued the famous order: "Speed, greater speed; audacity, greater audacity!"',
+      'The speed of the ARVN collapse surprised even General Dung, who issued the famous order: “Speed, greater speed; audacity, greater audacity!”',
     ],
     internalDebates: [
       'Whether to pause and consolidate supply lines after Ban Me Thuot or immediately surge all strategic reserve corps down National Route 1.',
@@ -99,7 +99,7 @@ const chapter: ChapterData = {
   nextQuestion: {
     question: 'What did peace look like in Vietnam after 1975?',
     framing:
-      'The end of the war did not bring calm. Re-education camps, New Economic Zones, border wars with Cambodia and China, and the flight of the "boat people" all followed. How did they change Vietnam?',
+      'The end of the war did not bring calm. Re-education camps, New Economic Zones, border wars with Cambodia and China, and the flight of the “boat people” all followed. How did they change Vietnam?',
   },
   citations: [
     CITATION_REGISTRY['c10-1'],

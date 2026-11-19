@@ -6,7 +6,7 @@ import { getSourceTypeBadge, isVerbatimQuotation, SourceTypeBadge } from '@/lib/
 
 const BADGE_TONE_CLASSES: Record<SourceTypeBadge['tone'], string> = {
   primary: 'bg-brand-tint text-brand border-brand-rule',
-  reporting: 'bg-parchment text-[#78350f] border-rule',
+  reporting: 'bg-parchment text-saigon border-rule',
   scholarly: 'bg-parchment text-ink border-rule',
   reference: 'bg-parchment text-ink-muted border-rule',
 };
@@ -43,7 +43,7 @@ export default function CitationModal() {
         // Clicks on the backdrop target the <dialog> element itself
         if (e.target === e.currentTarget) closeCitation();
       }}
-      className="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[90vh] overflow-y-auto bg-paper border border-rule text-ink shadow-2xl rounded-xs p-0 backdrop:bg-black/50 backdrop:backdrop-blur-xs"
+      className="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[90vh] overflow-y-auto bg-paper border border-rule text-ink shadow-2xl rounded-sm p-0 backdrop:bg-black/50 backdrop:backdrop-blur-xs"
     >
       {activeCitation && badge && (
       <div className="p-6 sm:p-8 space-y-6">
@@ -52,16 +52,16 @@ export default function CitationModal() {
           <div className="space-y-1.5">
             <div className="flex flex-wrap items-center gap-2">
               <span
-                className={`text-xs font-bold px-2 py-0.5 rounded-xs border ${BADGE_TONE_CLASSES[badge.tone]}`}
+                className={`text-xs font-bold px-2 py-0.5 rounded-sm border ${BADGE_TONE_CLASSES[badge.tone]}`}
               >
                 {badge.label}
               </span>
               {isVerbatim ? (
-                <span className="text-xs font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-sm bg-parchment text-ink border border-rule">
                   Exact quotation
                 </span>
               ) : (
-                <span className="text-xs font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-sm bg-parchment text-ink-muted border border-rule">
                   In our words
                 </span>
               )}
@@ -75,7 +75,7 @@ export default function CitationModal() {
             type="button"
             onClick={closeCitation}
             aria-label="Close citation modal"
-            className="p-1.5 text-ink-muted hover:text-brand transition-colors cursor-pointer rounded-xs"
+            className="p-1.5 text-ink-muted hover:text-brand transition-colors cursor-pointer rounded-sm"
           >
             <svg
               className="w-5 h-5"
@@ -101,7 +101,7 @@ export default function CitationModal() {
           <div className="space-y-1">
             <h3
               id="citation-modal-title"
-              className="font-display text-xl sm:text-2xl font-bold text-ink leading-snug"
+              className="font-display text-lg sm:text-xl font-bold text-ink leading-snug"
             >
               {activeCitation.title || activeCitation.citation}
             </h3>
@@ -130,7 +130,7 @@ export default function CitationModal() {
                 <strong className="text-ink-muted text-xs block">
                   Where to find it:
                 </strong>
-                <span className="bg-parchment px-2 py-0.5 rounded-xs border border-rule inline-block mt-0.5 font-medium">
+                <span className="bg-parchment px-2 py-0.5 rounded-sm border border-rule inline-block mt-0.5 font-medium">
                   {activeCitation.locator}
                 </span>
               </div>
@@ -140,7 +140,7 @@ export default function CitationModal() {
 
         {/* 2. VERBATIM EXCERPT (verified quotations with exact text only) */}
         {isVerbatim && (
-          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-xs space-y-1.5 border-l border-l-brand">
+          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-sm space-y-1.5 border-l border-l-brand">
             <span
               id="section-exact-quote"
               className="text-xs text-brand font-bold block"
@@ -177,7 +177,7 @@ export default function CitationModal() {
             >
               What it can’t tell you
             </span>
-            <p className="font-sans italic text-sm text-ink-muted leading-relaxed bg-brand-tint p-3 rounded-xs border border-brand-rule">
+            <p className="font-sans italic text-sm text-ink-muted leading-relaxed bg-brand-tint p-3 rounded-sm border border-brand-rule">
               {activeCitation.limitations}
             </p>
           </section>
@@ -194,7 +194,7 @@ export default function CitationModal() {
               href={activeCitation.originalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white font-sans text-xs font-semibold transition-colors rounded-xs"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white font-sans text-xs font-semibold transition-colors rounded-sm"
             >
               <span>View Original Archive</span>
               <svg
