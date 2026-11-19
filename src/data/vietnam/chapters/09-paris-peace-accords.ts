@@ -11,7 +11,7 @@ const chapter: ChapterData = {
   title: 'The Paris Peace Accords',
   subtitle: 'Secret talks, the Christmas Bombing, and America’s exit',
   summary:
-    'In October 1972, Henry Kissinger and Le Duc Tho secretly agreed on a draft deal. U.S. troops would leave, and North Vietnamese troops could stay where they were in the South. South Vietnam’s President Thieu rejected it, and Nixon ordered the 11-day "Christmas Bombing" of Hanoi, called Linebacker II. The treaty signed in January 1973 was essentially the same as the October draft. It ended direct American involvement and left the civil war unsettled.',
+    'In October 1972, Henry Kissinger and Le Duc Tho secretly agreed on a draft deal. U.S. troops would leave, and North Vietnamese troops could stay where they were in the South. South Vietnam’s President Thieu rejected it, and Nixon ordered the 11-day “Christmas Bombing” of Hanoi, called Linebacker II. The treaty signed in January 1973 was essentially the same as the October draft. It ended direct American involvement and left the civil war unsettled.',
   isLandmark: true,
   landmarkMoment: {
     bannerTitle: 'The Paris Peace Accords',
@@ -21,11 +21,18 @@ const chapter: ChapterData = {
     quoteSpeaker: 'Pierre Asselin',
     quoteContext: 'Historical analysis based on A Bitter Peace (2002)',
   },
+  featuredDocument: {
+    citationId: 'Q010',
+    kind: 'Agreement',
+    stamp: 'UN Treaty Series, Vol. 935',
+    header: [['Title', 'Agreement on Ending the War and Restoring Peace in Viet-Nam'], ['Article', '1'], ['Signed', 'Paris, January 27, 1973']],
+    note: 'All four sides signed: the United States, North Vietnam, South Vietnam and the Viet Cong’s Provisional Revolutionary Government. The United States agreed to pull out completely within 60 days.',
+  },
   whatHappened: {
     narrative: [
-      'Beginning in 1969, Henry Kissinger conducted secret negotiations in a villa outside Paris with Le Duc Tho, a member of Hanoi’s Politburo. For three years, the talks deadlocked on two non-negotiable demands: Washington insisted that all North Vietnamese Army (PAVN) troops withdraw completely from the South, while Hanoi insisted that South Vietnamese President Nguyen Van Thieu be removed before any political settlement.',
-      'In October 1972, the impasse broke through mutual concessions: Hanoi dropped its demand for Thieu’s immediate ouster, agreeing he could remain head of the Saigon administration. In exchange, the United States conceded that approximately 150,000 to 200,000 North Vietnamese combat troops could remain in place inside South Vietnam.[^c9-1] Weeks before the 1972 U.S. presidential election, Kissinger announced publicly: "Peace is at hand."',
-      'When presented with the draft, President Thieu vehemently rejected it, arguing that permitting foreign troops on sovereign South Vietnamese soil was a death warrant. Kissinger returned to Paris with 69 amendments demanded by Thieu, causing talks to break down. From December 18 to 29, 1972, Nixon unleashed Operation Linebacker II—the "Christmas Bombing"—dropping over 20,000 tons of explosives on Hanoi and Haiphong.[^c9-1] Historians debate the bombing’s purpose: while administration officials claimed it forced Hanoi back to the table, the final Paris Peace Accords signed on January 27, 1973 were essentially identical to the October draft. The primary effect was demonstrating violent resolve to coerce Thieu into signing under the cover of Nixon’s secret written promises of air retaliation if Hanoi violated the ceasefire.[^c9-2] All remaining U.S. combat troops departed by March 29, 1973, and 591 American POWs returned home.[^c9-3]',
+      'Starting in 1969, Henry Kissinger held secret talks in a house outside Paris with Le Duc Tho, a member of Hanoi’s ruling Politburo. For three years, the talks were stuck on two demands neither side would drop. Washington insisted that every North Vietnamese soldier leave the South. Hanoi insisted that South Vietnam’s president, Nguyen Van Thieu, be removed before any political deal.',
+      'In October 1972, both sides gave ground. Hanoi dropped its demand that Thieu go right away and agreed that he could stay in charge in Saigon. In return, the United States agreed that about 150,000 to 200,000 North Vietnamese combat troops could stay where they were inside South Vietnam.[^c9-1] A few weeks before the 1972 presidential election, Kissinger told reporters that peace was at hand.',
+      'When Thieu saw the draft, he rejected it outright. Letting North Vietnamese troops stay on South Vietnamese soil, he said, was a death sentence for his country. Kissinger went back to Paris with 69 changes Thieu wanted, and the talks broke down. From December 18 to 29, 1972, Nixon ordered Operation Linebacker II, known as the Christmas Bombing. More than 20,000 tons of bombs fell on Hanoi and Haiphong.[^c9-1] Historians argue about why. The administration said the bombing forced Hanoi back to the table, but the Paris Peace Accords signed on January 27, 1973, were almost the same as the October draft. Its main effect was on Thieu. The bombing, together with Nixon’s secret written promises to bomb again if Hanoi broke the ceasefire, pushed him into signing.[^c9-2] The last U.S. combat troops left by March 29, 1973, and 591 American prisoners of war came home.[^c9-3]'
     ],
     keyEvents: [
       { date: 'Oct 8, 1972', title: 'A breakthrough in Paris', detail: 'Hanoi drops its demand that Thieu go. The U.S. lets North Vietnamese troops stay in the South.' },
@@ -82,7 +89,7 @@ const chapter: ChapterData = {
     },
     result: {
       immediate: '591 American POWs returned home; the last U.S. combat troops left Vietnam on March 29, 1973.',
-      counterAction: 'Neither North nor South Vietnam ceased firing; a violent "war of the flags" for contested territory erupted immediately.',
+      counterAction: 'Neither North nor South Vietnam ceased firing; a violent “war of the flags” for contested territory erupted immediately.',
     },
     unintendedConsequence:
       'The Accords ended direct American participation without ending the civil war, leaving South Vietnam structurally vulnerable.',

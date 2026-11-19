@@ -12,11 +12,18 @@ const chapter: ChapterData = {
   subtitle: 'The 17th parallel, Ngo Dinh Diem, and the start of the war in the South',
   summary:
     'The 1954 Geneva Accords divided Vietnam at the 17th parallel until nationwide elections in 1956. Those elections never happened. Ngo Dinh Diem took power in Saigon and refused them, the Cold War powers did not push, the North was busy rebuilding, and nobody enforced the deal. Diem’s land policies and his campaigns against communists angered many people in the countryside. With Hanoi’s backing, his opponents formed the National Liberation Front (NLF).',
+  featuredDocument: {
+    citationId: 'Q026',
+    kind: 'Declaration',
+    stamp: 'FRUS 1952–1954, Vol. XIII',
+    header: [['From', 'The Geneva Conference'], ['Title', 'Final Declaration, paragraph 6'], ['Date', 'July 21, 1954']],
+    note: 'The conference called the line at the 17th parallel temporary, not a border. The 1956 elections that were supposed to reunite Vietnam never took place.',
+  },
   whatHappened: {
     narrative: [
-      'The Geneva Conference concluded in July 1954 with an armistice dividing Vietnam temporarily at the 17th parallel. A 300-day open-border period produced "Operation Passage to Freedom," during which roughly 890,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist families—migrated south with U.S. Navy transport, while approximately 100,000 southern Viet Minh fighters moved north for regroupment.[^c2-2]',
-      'In Saigon, Ngo Dinh Diem, an austere Catholic nationalist, became prime minister under Emperor Bao Dai. With American financial and advisory backing, Diem defeated the Binh Xuyen syndicate and religious sects, staged a rigged 1955 referendum to depose Bao Dai, and proclaimed the Republic of Vietnam (RVN). When the July 1956 deadline for nationwide reunification elections arrived, Diem refused to consult with Hanoi, asserting that genuine democratic voting was impossible in the communist North. President Eisenhower acknowledged in his memoirs that had nationwide elections occurred, Ho Chi Minh would have likely received 80 percent of the vote.[^c2-2]',
-      'Crucially, the permanent division was not caused by Diem’s refusal alone: Geneva was an international compromise where neither superpower was committed to enforcing unification; Hanoi was internally consumed by post-war economic restoration and the turbulent 1953–56 land reform campaign; and no neutral mechanism existed to oversee a nationwide vote. In the South, Diem’s regime reversed Viet Minh land reforms, returning land to traditional landlords and fueling intense rural anger, while his "Denounce the Communists" campaign decimated southern cadre networks. In January 1959, Hanoi passed Resolution 15, officially authorizing armed revolutionary struggle,[^c2-1] which culminated in the creation of the National Liberation Front (NLF / "Viet Cong") in December 1960.[^c2-3]',
+      'The Geneva Conference ended in July 1954 with a ceasefire that split Vietnam at the 17th parallel. The split was supposed to be temporary. For 300 days, people could cross the line freely. With help from U.S. Navy ships, about 890,000 people moved south in Operation Passage to Freedom. Most were Catholics, government workers and families who opposed the communists. About 100,000 Viet Minh fighters from the South went north.[^c2-2]',
+      'In Saigon, Ngo Dinh Diem became prime minister under Emperor Bao Dai. Diem was a strict Catholic and a nationalist. With American money and advisers, he defeated the Binh Xuyen crime syndicate and the armed religious sects. In 1955 he held a rigged vote that removed Bao Dai, and he declared the Republic of Vietnam. Geneva had set July 1956 as the deadline for elections across the whole country. When the deadline came, Diem refused to talk with Hanoi. He said a fair vote was impossible in the communist North. President Eisenhower later wrote in his memoirs that Ho Chi Minh would probably have won about 80 percent of the vote.[^c2-2]',
+      'Diem’s refusal was not the only reason the split became permanent. Geneva was a compromise among many countries, and neither the United States nor the Soviet Union was willing to enforce a vote. Hanoi was busy rebuilding its economy and carrying out a harsh land reform campaign from 1953 to 1956. No neutral body existed to run a nationwide election. In the South, Diem gave land that the Viet Minh had handed out back to the old landlords, and many villagers were furious. His campaign against communists wiped out much of their network in the South. In January 1959, Hanoi’s leaders passed Resolution 15, which approved armed struggle in the South.[^c2-1] In December 1960, they created the National Liberation Front, which Americans called the Viet Cong.[^c2-3]'
     ],
     keyEvents: [
       { date: 'July 21, 1954', title: 'The Geneva Accords', detail: 'A ceasefire is signed. Vietnam is split at the 17th parallel for now, with elections due in 1956.' },
@@ -41,7 +48,7 @@ const chapter: ChapterData = {
       'CIA operative Edward Lansdale and Secretary of State Dulles persuaded Eisenhower to override Collins, committing the administration firmly to Diem.',
     ],
     homeFrontConstraints: [
-      'Eisenhower’s "New Look" national security policy prioritized fiscal restraint, reliance on nuclear deterrence, and regional alliances, strictly avoiding major Asian ground troop commitments.',
+      'Eisenhower’s “New Look” national security policy prioritized fiscal restraint, reliance on nuclear deterrence, and regional alliances, strictly avoiding major Asian ground troop commitments.',
     ],
     primaryDocumentRef: 'resolution-15-1959',
   },

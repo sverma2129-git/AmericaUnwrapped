@@ -4,7 +4,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 const ModuleLoading = () => (
-  <div className="p-12 border border-rule bg-parchment text-center rounded-xs">
+  <div className="p-12 border border-rule bg-parchment text-center rounded-sm">
     <div className="text-sm text-ink-muted">
       Loading…
     </div>

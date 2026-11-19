@@ -28,18 +28,16 @@ export default function ModuleFrame({
 }: ModuleFrameProps) {
   return (
     <figure className={className}>
-      <h3 className="font-display text-xl sm:text-2xl font-semibold text-ink">{question}</h3>
-      {instruction && <p className="mt-1 text-[0.9375rem] text-ink-muted">{instruction}</p>}
+      <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">{question}</h3>
+      {instruction && <p className="mt-1 text-sm text-ink-muted">{instruction}</p>}
       <div className="mt-5">{children}</div>
       {(takeaway || caption) && (
         <figcaption className="mt-6 space-y-2 max-w-3xl">
           {takeaway && (
-            <p className="text-base text-ink leading-relaxed">
-              <strong className="font-semibold">Takeaway:</strong> {takeaway}
-            </p>
+            <p className="border-l-2 border-brand pl-4 font-serif text-lg leading-snug text-ink">{takeaway}</p>
           )}
           {caption && (
-            <p className="text-[0.8125rem] text-ink-soft">
+            <p className="text-xs text-ink-soft">
               {caption}
               {citationId && (
                 <>

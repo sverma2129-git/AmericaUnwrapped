@@ -23,11 +23,18 @@ const chapter: ChapterData = {
     quoteSpeaker: 'Walter Cronkite',
     quoteContext: 'CBS News Special Report: Who, What, When, Where, Why? (February 27, 1968)',
   },
+  featuredDocument: {
+    citationId: 'Q014',
+    kind: 'Broadcast transcript',
+    stamp: 'CBS News, Feb. 27, 1968',
+    header: [['Program', 'CBS News Special Report'], ['Speaker', 'Walter Cronkite'], ['Aired', 'February 27, 1968']],
+    note: 'Cronkite closed his report from Vietnam with these words. A month later, President Johnson announced he would not run again.',
+  },
   whatHappened: {
     narrative: [
-      'In late 1967, North Vietnamese forces besieged the Marine combat base at Khe Sanh near the DMZ, drawing Westmoreland’s attention to what Washington feared could be an "American Dien Bien Phu." Khe Sanh served partly as an operational diversion. In the early hours of January 30–31, 1968, during a holiday truce for Tet, communist forces struck 36 of 44 provincial capitals, five autonomous cities, and dozens of military installations across South Vietnam.[^c7-1]',
-      'In Saigon, a 19-man Viet Cong sapper unit breached the perimeter wall of the U.S. Embassy with satchel charges. Though all attackers were killed or captured within hours, live television broadcasts showed dead Americans on embassy grounds. In Hue, two PAVN regiments seized the Citadel, precipitating 26 days of room-to-room fighting by U.S. Marines and ARVN that leveled over 80 percent of the city. During their occupation of Hue, communist cadres executed between 2,800 and 3,000 civil servants, teachers, Catholics, and foreigners.[^c7-3]',
-      'Militarily, Tet was an asymmetric failure: Hanoi’s anticipated mass civilian uprising (*Tong Khoi Nghia*) failed to occur, and the southern Viet Cong lost upwards of 40,000 veteran fighters, shifting the burden of the war almost entirely to northern regular conscripts.[^c7-1] Yet in the United States, the psychological impact was fatal. On February 27, 1968, CBS anchor Walter Cronkite concluded that the war was "mired in stalemate."[^Q014] When the military requested 206,000 additional troops, Johnson’s senior civilian advisers—the "Wise Men"—counseled de-escalation.[^c7-2] On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.[^c7-2]',
+      'In late 1967, North Vietnamese forces surrounded the Marine base at Khe Sanh, near the DMZ. Washington feared it could become an American Dien Bien Phu, and Westmoreland’s attention stayed fixed on it. Khe Sanh was partly a diversion. In the early hours of January 30–31, 1968, during a holiday truce for Tet, the lunar new year, communist forces attacked 36 of 44 provincial capitals, five major cities and dozens of military bases across South Vietnam.[^c7-1]',
+      'In Saigon, a 19-man Viet Cong commando unit blew a hole in the wall around the U.S. Embassy. All of the attackers were killed or captured within hours, but live television showed dead Americans on the embassy grounds. In Hue, two North Vietnamese army regiments seized the old walled Citadel. U.S. Marines and South Vietnamese troops spent 26 days retaking it room by room, and more than 80 percent of the city was destroyed. While they held Hue, communist officials executed between 2,800 and 3,000 people, including government workers, teachers, Catholics and foreigners.[^c7-3]',
+      'As a battle, Tet was a failure for Hanoi. The mass uprising its leaders expected, the *Tong Khoi Nghia*, never happened. The Viet Cong lost more than 40,000 experienced fighters, and from then on, soldiers drafted in the North did most of the fighting.[^c7-1] But in the United States, Tet shook the public’s belief that the war was being won. On February 27, 1968, CBS anchor Walter Cronkite told viewers the war was “mired in stalemate.”[^Q014] When the military asked for 206,000 more troops, Johnson’s senior civilian advisers, known as the Wise Men, told him to scale back.[^c7-2] On March 31, 1968, Johnson announced a partial halt to the bombing and said he would not run for reelection.[^c7-2]'
     ],
     keyEvents: [
       { date: 'Jan 21, 1968', title: 'The siege of Khe Sanh begins', detail: 'Two North Vietnamese divisions surround 6,000 Marines for a 77-day artillery battle.' },
@@ -48,7 +55,7 @@ const chapter: ChapterData = {
     ],
     internalDebates: [
       'Westmoreland and Gen. Wheeler requested 206,000 additional troops to exploit enemy exhaustion and strike sanctuaries in Laos and Cambodia.',
-      'Defense Secretary Clark Clifford convened the "Wise Men" (senior statesmen like Dean Acheson), who advised LBJ that military victory was unattainable within domestic political limits.',
+      'Defense Secretary Clark Clifford convened the “Wise Men” (senior statesmen like Dean Acheson), who advised LBJ that military victory was unattainable within domestic political limits.',
     ],
     homeFrontConstraints: [
       'The anti-war movement surged into mainstream electoral politics; Eugene McCarthy and Robert Kennedy challenged LBJ in primary elections.',
@@ -59,7 +66,7 @@ const chapter: ChapterData = {
   hanoi: {
     keyActors: ['Le Duan', 'General Vo Nguyen Giap', 'General Van Tien Dung', 'Tran Van Tra'],
     strategicObjective:
-      'Achieve a decisive breakthrough through the "General Offensive and General Uprising" to collapse the Saigon administration and compel U.S. withdrawal.',
+      'Achieve a decisive breakthrough through the “General Offensive and General Uprising” to collapse the Saigon administration and compel U.S. withdrawal.',
     underlyingAssumptions: [
       'The South Vietnamese urban population despised the Thieu government and would rise up in armed revolution when the cities were struck.',
       'ARVN units would mutiny, disintegrate, or defect to the revolutionary side.',
@@ -85,7 +92,7 @@ const chapter: ChapterData = {
     },
     result: {
       immediate: 'Catastrophic losses for the Viet Cong; political collapse of Johnson’s presidency and the end of open-ended escalation.',
-      counterAction: 'Richard Nixon won the 1968 presidential election promising "peace with honor" and troop withdrawals.',
+      counterAction: 'Richard Nixon won the 1968 presidential election promising “peace with honor” and troop withdrawals.',
     },
     unintendedConsequence:
       'The war’s decisive center of gravity shifted irreversibly to American domestic politics and the timeline of troop withdrawal.',
@@ -101,7 +108,7 @@ const chapter: ChapterData = {
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['tet-politburo-directive']],
   nextQuestion: {
-    question: 'What did "Vietnamization" mean in practice?',
+    question: 'What did “Vietnamization” mean in practice?',
     framing:
       'Richard Nixon promised to bring American troops home while training South Vietnam’s army to defend itself. Was that a real plan for South Vietnam to stand alone, or a way to buy time for an American exit?',
   },

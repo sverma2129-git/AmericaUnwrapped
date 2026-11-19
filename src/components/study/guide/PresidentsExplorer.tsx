@@ -87,7 +87,7 @@ export default function PresidentsExplorer({ presidencies }: { presidencies: Pre
         className="mt-6 md:mt-8 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand rounded-sm"
       >
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-          <h3 className="font-display text-2xl sm:text-[1.75rem] font-bold text-ink leading-tight">{active.name}</h3>
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-ink leading-tight">{active.name}</h3>
           <p className="text-sm text-ink-muted">
             <a href={`#turning-points-${active.id}`} className="font-semibold text-brand underline underline-offset-2 hover:text-brand-hover">
               Turning points from these years
@@ -98,16 +98,16 @@ export default function PresidentsExplorer({ presidencies }: { presidencies: Pre
 
         <dl className="mt-6 grid max-w-[66ch] gap-x-10 gap-y-6 lg:max-w-none lg:grid-cols-3">
           <div>
-            <dt className="font-display text-sm font-semibold text-ink">What he did</dt>
-            <dd className="mt-1.5 font-serif text-[1.0625rem] leading-relaxed text-ink">{active.keyActions}</dd>
+            <dt className="font-display text-sm font-semibold text-ink">{active.name.includes(' and ') ? 'What they did' : 'What he did'}</dt>
+            <dd className="mt-1.5 font-serif text-base leading-relaxed text-ink">{active.keyActions}</dd>
           </div>
           <div>
             <dt className="font-display text-sm font-semibold text-ink">The turning point</dt>
-            <dd className="mt-1.5 font-serif text-[1.0625rem] leading-relaxed text-ink">{active.turningPoint}</dd>
+            <dd className="mt-1.5 font-serif text-base leading-relaxed text-ink">{active.turningPoint}</dd>
           </div>
           <div className="lg:border-l lg:border-brand-rule lg:pl-6">
             <dt className="font-display text-sm font-semibold text-brand">Mistake to avoid on the test</dt>
-            <dd className="mt-1.5 font-serif text-[1.0625rem] leading-relaxed text-ink">{active.examPitfall}</dd>
+            <dd className="mt-1.5 font-serif text-base leading-relaxed text-ink">{active.examPitfall}</dd>
           </div>
         </dl>
       </div>

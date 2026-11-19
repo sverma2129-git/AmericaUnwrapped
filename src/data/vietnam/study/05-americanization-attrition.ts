@@ -14,7 +14,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'In March 1965, President Johnson sent the first American ground combat troops, 3,500 Marines, to Da Nang. He also launched Operation Rolling Thunder, a three-year bombing campaign against North Vietnam. General William Westmoreland fought a war of attrition. He used heavy firepower, B-52 strikes and helicopter-borne troops to try to kill enemy soldiers faster than North Vietnam could replace them. That was the "crossover point." In November 1965, the Battle of the Ia Drang Valley showed that American helicopters and firepower could cause huge losses. It also taught North Vietnamese commanders to "grab them by the belt buckle," fighting so close that American air power could not be used without killing Americans. A Pentagon study found that communist forces started more than 75% of firefights. They could control their own losses, which broke the logic of attrition.',
+      'In March 1965, President Johnson sent the first American ground combat troops, 3,500 Marines, to Da Nang. He also launched Operation Rolling Thunder, a three-year bombing campaign against North Vietnam. General William Westmoreland fought a war of attrition. He used heavy firepower, B-52 strikes and helicopter-borne troops to try to kill enemy soldiers faster than North Vietnam could replace them. That was the “crossover point.” In November 1965, the Battle of the Ia Drang Valley showed that American helicopters and firepower could cause huge losses. It also taught North Vietnamese commanders to “grab them by the belt buckle,” fighting so close that American air power could not be used without killing Americans. A Pentagon study found that communist forces started more than 75% of firefights. They could control their own losses, which broke the logic of attrition.',
     examTakeaways: [
       'The war becomes American: In 1965, Johnson turned an advisory mission into an American war. Troop levels rose from 23,000 to more than 184,000 in one year, and peaked at 543,000 in 1969.',
       'The body count problem: With no front line to measure, the U.S. command counted enemy dead. That created pressure to inflate the numbers and to count dead civilians as fighters.',
@@ -29,7 +29,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
           'The U.S. command’s main ground tactic. Helicopters dropped American infantry into hostile countryside to find enemy units, hit them with artillery and air strikes, and then leave.',
         significance:
           'The troops did not stay to hold the ground. Communist forces moved back into villages as soon as the helicopters left, and farmers paid the price.',
-        examTip: 'Contrast it with "enclave" and "clear and hold" approaches.',
+        examTip: 'Contrast it with “enclave” and “clear and hold” approaches.',
       },
       {
         id: 'operation-rolling-thunder',
@@ -59,7 +59,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c5-q1',
       question:
-        'What was the primary operational objective of General William Westmoreland’s "strategy of attrition"?',
+        'What was the primary operational objective of General William Westmoreland’s “strategy of attrition”?',
       options: [
         'To capture and hold North Vietnamese territory up to the Chinese border',
         'To seal the 17th parallel and the Laos border with a fortified barrier',
@@ -68,7 +68,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Westmoreland measured victory by the "crossover point," not by ground taken. The goal was to kill enemy soldiers faster than North Vietnam could recruit and send replacements, so that Hanoi would give up the fight.',
+        'Westmoreland measured victory by the “crossover point,” not by ground taken. The goal was to kill enemy soldiers faster than North Vietnam could recruit and send replacements, so that Hanoi would give up the fight.',
       citationRef: 'c5-1',
     },
     {
@@ -83,7 +83,7 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'General Vo Nguyen Giap and the battlefield commander Chu Huy Man saw that American artillery and air power were deadliest at long range. By fighting at point-blank range ("grabbing the belt buckle"), their units took away that advantage.',
+        'General Vo Nguyen Giap and the battlefield commander Chu Huy Man saw that American artillery and air power were deadliest at long range. By fighting at point-blank range (“grabbing the belt buckle”), their units took away that advantage.',
       citationRef: 'c5-2',
     },
     {
@@ -127,11 +127,11 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
         'A four-star U.S. Army general who commanded U.S. forces in Vietnam from 1964 to 1968. He backed search-and-destroy tactics, body counts and attrition.',
       significance:
         'He assumed American technology and resources would force North Vietnam to give up. He was replaced after the 1968 Tet Offensive.',
-      examTip: 'In November 1967, shortly before Tet, he said there was "light at the end of the tunnel."',
+      examTip: 'In November 1967, shortly before Tet, he said there was “light at the end of the tunnel.”',
     },
     {
       id: 'c5-fc2',
-      term: 'The "Crossover Point"',
+      term: 'The “Crossover Point”',
       phonetic: 'KROS-oh-ver POYNT',
       definition:
         'The point at which, by the U.S. command’s math, enemy losses would be greater than North Vietnam’s ability to replace troops through the draft and recruiting.',

@@ -14,7 +14,7 @@ export const HISTORIOGRAPHICAL_SCHOOLS: HistoriographicalSchool[] = [
       'Highlighted the domestic constitutional, social, and moral costs of fighting an undeclared war.',
     ],
     blindSpotsOrCritiques: [
-      'Tended to treat Vietnamese actors—both North and South—as passive backdrops or virtuous peasants rather than political actors with their own agendas.',
+      'Tended to treat Vietnamese actors, North and South, as passive backdrops or virtuous peasants rather than political actors with their own agendas.',
       'Underestimated the extent to which Hanoi was an ideologically committed, militant Leninist police state rather than purely anti-colonial nationalist.',
       'Often dismissed the South Vietnamese Republic as merely a puppet, ignoring genuine non-communist nationalist currents.',
     ],

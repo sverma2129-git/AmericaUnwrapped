@@ -17,11 +17,11 @@ function VerbatimQuote({ citationId }: { citationId: string }) {
   const citation = CITATION_REGISTRY[citationId];
   if (!citation || !isVerbatimQuotation(citation)) return null;
   return (
-    <figure className="bg-parchment rounded-xl p-6 sm:p-8">
-      <blockquote className="font-display text-2xl sm:text-[1.75rem] font-medium text-ink leading-snug">
+    <figure className="border-l-2 border-brand pl-5 sm:pl-7">
+      <blockquote className="font-serif text-xl leading-snug text-ink">
         &ldquo;{citation.exactQuotation}&rdquo;
       </blockquote>
-      <figcaption className="mt-4 text-[0.9375rem] text-ink-muted">
+      <figcaption className="mt-4 text-sm text-ink-muted">
         <strong className="text-ink font-semibold">{citation.authorOrInstitution}</strong>, {citation.title}, {citation.date}
         <CitationMarker id={citationId} />
       </figcaption>
@@ -33,14 +33,14 @@ function ShareBar({ visual }: { visual: Extract<StoryVisual, { kind: 'share' }> 
   const range = visual.low === visual.high ? `${visual.low}%` : `${visual.low}–${visual.high}%`;
   return (
     <ModuleFrame question={visual.title} caption={visual.note} citationId={visual.citationId}>
-      <div className="flex items-baseline justify-between mb-2 text-[0.9375rem]">
+      <div className="flex items-baseline justify-between mb-2 text-sm">
         <span className="font-semibold text-ink">
           {visual.label}: about {range}
         </span>
         <span className="text-ink-muted">{visual.remainderLabel}</span>
       </div>
       <div
-        className="relative h-9 bg-parchment rounded-md overflow-hidden"
+        className="relative h-9 bg-parchment rounded-sm overflow-hidden"
         role="img"
         aria-label={`${visual.label}: about ${range}. ${visual.remainderLabel}: the rest.`}
       >
@@ -71,7 +71,7 @@ function Debate({ visual }: { visual: Extract<StoryVisual, { kind: 'debate' }> }
             <p className="font-display text-lg font-semibold text-ink leading-snug">
               <span className={i === 0 ? 'text-brand' : ''}>{side.stance}:</span> {side.who}
             </p>
-            <p className="mt-2 text-[0.9375rem] text-ink-muted leading-relaxed">{side.argument}</p>
+            <p className="mt-2 text-sm text-ink-muted leading-relaxed">{side.argument}</p>
           </div>
         ))}
       </div>
@@ -92,7 +92,7 @@ function Consequence({ chain }: { chain: CausalStep }) {
           <p className="font-semibold text-ink">
             {i + 1}. {s.label}
           </p>
-          <p className="mt-1.5 text-[0.9375rem] text-ink-muted leading-relaxed">{s.text}</p>
+          <p className="mt-1.5 text-sm text-ink-muted leading-relaxed">{s.text}</p>
         </li>
       ))}
     </ol>
@@ -109,7 +109,7 @@ function Compare({ visual }: { visual: Extract<StoryVisual, { kind: 'compare' }>
       citationId={visual.citationId}
     >
       <div className="overflow-x-auto">
-        <table className="w-full text-[0.9375rem]">
+        <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-rule-strong">
               <th className="w-[24%] py-2" />

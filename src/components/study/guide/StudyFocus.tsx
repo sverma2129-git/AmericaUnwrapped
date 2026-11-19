@@ -44,7 +44,7 @@ export function FocusSelect({ className = '' }: { className?: string }) {
         id={FOCUS_SELECT_ID}
         value={focus ?? ''}
         onChange={(e) => setFocus(e.target.value ? Number(e.target.value) : null)}
-        className="h-9 max-w-[7.5rem] sm:max-w-[10rem] lg:max-w-[16rem] truncate rounded-md border border-rule-strong bg-surface pl-2.5 pr-7 text-sm font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+        className="h-9 max-w-[7.5rem] sm:max-w-[10rem] lg:max-w-[16rem] truncate rounded-sm border border-rule-strong bg-surface pl-2.5 pr-7 text-sm font-medium text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
       >
         <option value="">All chapters</option>
         {chapters.map((c) => (

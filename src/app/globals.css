@@ -4,46 +4,77 @@
    .dark class (none is set), never from the device's color scheme. */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Design direction: a modern explainer. Confident sans headlines, a serif for
-   the story text, white space instead of rules, beige only for panels, and
-   one red used for meaning (links, the answer, turning points).
+/* Design direction: the paper trail. The war is told through its documents,
+   so the palette comes from an archive box: paper, manila folders, typewriter
+   ribbon and the red of a classification stamp. Red is used for meaning only
+   (links, the right answer, turning points, stamps).
 
    Tokens are exposed as Tailwind utilities (bg-brand, text-ink, border-rule, ...).
-   Contrast (WCAG AA needs 4.5:1): ink 17.2 and ink-muted 7.5 on paper;
-   ink-soft 5.4 on paper and 4.8 on parchment; brand 6.4 on paper. */
+   The names are historical (parchment is the manila panel color).
+   Contrast (WCAG AA needs 4.5:1): ink 16.1, ink-muted 8.5, ink-soft 6.1 and
+   brand 7.0 on paper; ink-soft 5.3 and brand 6.1 on manila. */
 @theme {
-  --color-paper: #FFFDFA;           /* page ground: clean warm white */
-  --color-surface: #FFFFFF;         /* sheets on beige panels: answers, menus */
-  --color-parchment: #F6F1E9;       /* beige panels */
-  --color-parchment-light: #FAF6F0;
-  --color-rule: #E8E2D9;            /* the one hairline, for lists and tables */
-  --color-rule-strong: #CFC8BD;
-  --color-ink: #1C1917;
-  --color-ink-muted: #57534E;
-  --color-ink-soft: #6F6863;
-  --color-brand: #B91C1C;           /* red */
-  --color-brand-hover: #991B1B;
-  --color-brand-tint: #FEF2F2;
-  --color-brand-rule: #FECACA;
-  --color-success: #166534;
-  --color-success-tint: #F0FDF4;
-  --color-success-rule: #BBF7D0;
+  --color-paper: #FBF8F2;           /* archive paper: the page */
+  --color-surface: #FFFFFF;         /* a clean sheet laid on a folder */
+  --color-parchment: #F1E7D3;       /* manila folder: the one panel color */
+  --color-parchment-light: #F7F1E5;
+  --color-rule: #E3D9C7;            /* hairline for lists and tables */
+  --color-rule-strong: #C2B49B;
+  --color-ink: #1F1B17;             /* typewriter ribbon */
+  --color-ink-muted: #4F4840;
+  --color-ink-soft: #665D53;
+  --color-brand: #A3241B;           /* classification-stamp red */
+  --color-brand-hover: #821A13;
+  --color-brand-tint: #F7E8E2;
+  --color-brand-rule: #E6B9AE;
+  --color-success: #2F6B35;
+  --color-success-tint: #ECF3E7;
+  --color-success-rule: #BFD8B6;
+  /* The sides, on maps and comparisons */
+  --color-us: #2A4470;
+  --color-saigon: #7A5216;
+  --color-olive: #596234;
   /* Map palette */
-  --color-terrain: #EFEADF;
-  --color-terrain-line: #D8CDBA;
+  --color-terrain: #ECE3CF;
+  --color-terrain-line: #CDBFA4;
   --color-water: #7FA6C4;
+
+  /* One type scale for the whole site (13, 15, 17, 19, 23, 30, 44 px).
+     Nothing else is allowed: no arbitrary text-[...] sizes. */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.4;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.55;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.6;
+  --text-xl: 1.4375rem;
+  --text-xl--line-height: 1.25;
+  --text-2xl: 1.875rem;
+  --text-2xl--line-height: 1.15;
+  --text-3xl: 2.75rem;
+  --text-3xl--line-height: 1.05;
+
+  /* Two shapes: a slight corner on everything, and circles for dots. */
+  --radius-sm: 0.1875rem;
 }
 
 /* Fonts are loaded via next/font in layout.tsx and exposed as CSS variables.
-   Bricolage Grotesque: headlines and interface. Source Serif 4: story text and quotations. */
+   Libre Franklin (after Franklin Gothic, the 1960s American news headline face):
+   headlines and interface. Source Serif 4: the story. Courier Prime: only the
+   text of a typed document, as it looked on the original. */
 @theme inline {
-  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-franklin), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-franklin), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-source-serif), "Charter", Georgia, serif;
+  --font-type: var(--font-courier), "Courier New", monospace;
 }
 
 @layer base {
   html {
+    /* Anchors and focus stop below the sticky site header. */
+    scroll-padding-top: 4.5rem;
     scroll-behavior: smooth;
     font-feature-settings: "liga" 1, "kern" 1;
     background-color: var(--color-paper);
@@ -62,6 +93,9 @@
     background-color: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
+    /* Text with no size of its own takes the base step of the scale. */
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
     font-optical-sizing: auto;
     min-height: 100vh;
     display: flex;
@@ -77,7 +111,7 @@
 
   h1, h2, h3, h4 {
     text-wrap: balance;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
   }
   p, li, figcaption { text-wrap: pretty; }
 
@@ -95,40 +129,15 @@
   summary { cursor: pointer; }
 }
 
-/* Drop cap for chapter openings. */
-.editorial-dropcap::first-letter {
-  float: left;
-  font-family: var(--font-display);
-  font-size: 3.5rem;
-  line-height: 0.85;
-  padding-top: 4px;
-  padding-right: 10px;
-  padding-bottom: 2px;
-  font-weight: 700;
-  color: var(--color-ink);
-}
-
 *:focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 3px;
 }
 
-.prose-reading {
-  max-width: 68ch;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.8;
-}
-
-.card-parchment {
-  background-color: var(--color-parchment);
-  border: 1px solid var(--color-rule);
-}
-
 /* Story text: serif, comfortable size, a real measure (about 66 characters). */
 @utility reading {
   font-family: var(--font-serif);
-  font-size: 1.1875rem;
+  font-size: var(--text-lg);
   line-height: 1.65;
   max-width: 66ch;
 }
@@ -139,67 +148,29 @@
   border: 1px solid var(--color-rule);
 }
 
-/* Linked sheets: the hairline darkens on hover. Nothing moves. */
-@utility card-interactive {
-  transition: border-color 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms cubic-bezier(0.16, 1, 0.3, 1);
-  &:hover {
-    border-color: var(--color-ink);
-  }
-}
-
 /* Small label for datelines, captions and table headers. Plain case. */
 @utility meta {
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  line-height: 1.25rem;
+  font-size: var(--text-xs);
+  line-height: 1.4;
   font-weight: 500;
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: var(--color-brand);
-  color: #FFFFFF;
-  transition: background-color 0.15s ease-out;
-}
-.btn-primary:hover {
-  background-color: var(--color-brand-hover);
-}
-
-.btn-secondary {
-  background-color: var(--color-parchment);
-  color: var(--color-ink);
-  border: 1px solid var(--color-rule);
-  transition: background-color 0.15s ease-out, border-color 0.15s ease-out;
-}
-.btn-secondary:hover {
-  background-color: var(--color-rule);
-  border-color: var(--color-rule-strong);
-}
-
-/* Actor colors used consistently on maps and comparisons. */
-.actor-us {
-  color: #1e3a8a;
-  border-color: #bfdbfe;
-  background-color: #f0f7ff;
-}
-.actor-hanoi {
-  color: var(--color-brand);
-  border-color: #fca5a5;
-  background-color: #fff5f5;
-}
-.actor-saigon {
-  color: #78350f;
-  border-color: #fde68a;
-  background-color: #fffbeb;
-}
-.actor-diplomacy {
-  color: #334155;
-  border-color: #cbd5e1;
-  background-color: #f8fafc;
 }
 
 /* Study guide: two sticky bars sit over the top of the page, so anything that
    receives focus or is scrolled to by #link stops below them (WCAG 2.4.11). */
 html:has(#study-sections) {
-  scroll-padding-top: 7.75rem;
+  scroll-padding-top: 7.25rem;
+}
+/* Chapters: the site header and the chapter bar. */
+html:has(#chapter-bar) {
+  scroll-padding-top: 7.5rem;
+}
+
+/* A typed document, set as it looked on the original: typewriter face on a
+   clean sheet. Used only for the text of real cables, telegrams and memos. */
+@utility typed {
+  font-family: var(--font-type);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  letter-spacing: 0;
 }

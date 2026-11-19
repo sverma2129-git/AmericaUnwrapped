@@ -131,7 +131,7 @@ export default function TetOffensiveMap() {
 
         <button
           onClick={() => setShowSimultaneity(!showSimultaneity)}
-          className={`px-3 py-1 rounded-xs border transition-colors cursor-pointer text-xs ${ showSimultaneity ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
+          className={`px-3 py-1 rounded-sm border transition-colors cursor-pointer text-xs ${ showSimultaneity ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
         >
           {showSimultaneity ? '36 provincial strikes: shown' : '36 provincial strikes: hidden'}
         </button>
@@ -140,18 +140,18 @@ export default function TetOffensiveMap() {
       {/* Cartographic Grid: Map on Left / Theater Audit on Right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Geographic Map of South Vietnam */}
-        <div className="lg:col-span-6 bg-parchment border border-rule rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
+        <div className="lg:col-span-6 bg-parchment border border-rule rounded-sm p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
           <svg viewBox="180 50 250 460" className="w-full h-full select-none" role="img" aria-label="Geographic map of South Vietnam during the Tet Offensive">
             {/* South Vietnam Coastline Silhouette */}
             <path
               d="M 230,70 L 260,100 L 290,130 L 330,180 L 360,230 L 400,300 L 390,340 L 360,380 L 330,410 L 270,450 L 230,480 L 220,450 L 250,420 L 250,380 L 280,340 L 270,250 L 230,160 L 200,90 Z"
-              fill="#EAE2D5"
-              stroke="#A89F91"
+              fill="var(--color-terrain)"
+              stroke="var(--color-rule-strong)"
               strokeWidth="1.5"
             />
 
             {/* 17th Parallel DMZ Marker */}
-            <line x1="180" y1="70" x2="260" y2="70" stroke="#8B252D" strokeWidth="2" strokeDasharray="4,2" />
+            <line x1="180" y1="70" x2="260" y2="70" stroke="var(--color-brand)" strokeWidth="2" strokeDasharray="4,2" />
             <text x="185" y="65" className="fill-brand text-[8px] font-bold">
               17th PARALLEL (DMZ)
             </text>
@@ -176,9 +176,9 @@ export default function TetOffensiveMap() {
                     cx={pt.x}
                     cy={pt.y}
                     r="3.5"
-                    fill="#ef4444"
+                    fill="var(--color-brand)"
                     fillOpacity="0.8"
-                    stroke="#991b1b"
+                    stroke="var(--color-brand-hover)"
                     strokeWidth="1"
                   />
                 ))}
@@ -201,7 +201,7 @@ export default function TetOffensiveMap() {
                       cy={loc.coords.y}
                       r="12"
                       fill="none"
-                      stroke="#991b1b"
+                      stroke="var(--color-brand-hover)"
                       strokeWidth="2"
                       strokeDasharray="2,2"
                     />
@@ -211,15 +211,15 @@ export default function TetOffensiveMap() {
                     cx={loc.coords.x}
                     cy={loc.coords.y}
                     r={isSelected ? '6' : '5'}
-                    fill={isSelected ? '#991b1b' : '#b91c1c'}
-                    stroke="#ffffff"
+                    fill={isSelected ? 'var(--color-brand-hover)' : 'var(--color-brand)'}
+                    stroke="var(--color-surface)"
                     strokeWidth="1.5"
                   />
                   {/* Label */}
                   <text
                     x={loc.coords.x + 8}
                     y={loc.coords.y + 3}
-                    className={`text-[8px] font-bold ${ isSelected ? 'fill-red-950 font-extrabold underline' : 'fill-ink' }`}
+                    className={`text-[8px] font-bold ${ isSelected ? 'fill-brand-hover font-extrabold underline' : 'fill-ink' }`}
                   >
                     {loc.name.split('(')[0].trim()}
                   </text>
@@ -231,8 +231,8 @@ export default function TetOffensiveMap() {
 
         {/* Selected Sector Historical Investigation */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="p-4 bg-paper border border-rule rounded-xs text-ink">
-            <h3 className="font-display text-xl font-bold text-ink">
+          <div className="p-4 bg-paper border border-rule rounded-sm text-ink">
+            <h3 className="font-display text-lg font-bold text-ink">
               {current.name}
             </h3>
             <p className="font-display text-xs text-ink-muted mt-1">
@@ -251,7 +251,7 @@ export default function TetOffensiveMap() {
 
           {/* Symmetrical Dual Repercussions */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans">
-            <div className="p-3 bg-parchment border border-rule rounded-xs">
+            <div className="p-3 bg-parchment border border-rule rounded-sm">
               <span className="text-xs font-bold text-brand block mb-1">
                 Hanoi’s Result (Battlefield):
               </span>
@@ -260,7 +260,7 @@ export default function TetOffensiveMap() {
               </p>
             </div>
 
-            <div className="p-3 bg-parchment border border-rule rounded-xs">
+            <div className="p-3 bg-parchment border border-rule rounded-sm">
               <span className="text-xs font-bold text-ink block mb-1">
                 Washington’s Result (Politics):
               </span>
@@ -273,7 +273,7 @@ export default function TetOffensiveMap() {
       </div>
 
       {/* The Central Historiographical Paradox */}
-      <div className="p-4 bg-parchment border-l border-brand border-t border-r border-b border-rule rounded-r-xs text-xs">
+      <div className="p-4 bg-parchment border-l border-brand border-t border-r border-b border-rule rounded-sm text-xs">
         <span className="font-bold text-brand block mb-1">
           Why Tet is a puzzle:
         </span>

@@ -151,7 +151,7 @@ function QuizRun({ pool, total, showChapter }: { pool: QuizItem[]; total: number
             ref={questionRef}
             id={`question-${q.id}`}
             tabIndex={-1}
-            className="mt-3 max-w-[60ch] font-display text-xl sm:text-[1.375rem] font-semibold leading-snug text-ink focus:outline-none"
+            className="mt-3 max-w-[60ch] font-display text-lg sm:text-xl font-semibold leading-snug text-ink focus:outline-none"
           >
             {q.question}
           </h3>
@@ -178,7 +178,7 @@ function QuizRun({ pool, total, showChapter }: { pool: QuizItem[]; total: number
               return (
                 <label
                   key={i}
-                  className={`flex items-start gap-3.5 rounded-lg border px-4 py-3.5 transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand ${tone} ${
+                  className={`flex items-start gap-3.5 rounded-sm border px-4 py-3.5 transition-colors has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand ${tone} ${
                     checked ? 'cursor-default' : 'cursor-pointer'
                   }`}
                 >
@@ -205,7 +205,7 @@ function QuizRun({ pool, total, showChapter }: { pool: QuizItem[]; total: number
                   >
                     {checked && isAnswer ? <Icon name="check" className="h-3.5 w-3.5" strokeWidth={3} /> : checked && isSelected ? <Icon name="x" className="h-3.5 w-3.5" strokeWidth={3} /> : LETTERS[i]}
                   </span>
-                  <span className="flex-1 text-[1.0625rem] leading-relaxed">
+                  <span className="flex-1 text-base leading-relaxed">
                     {option}
                     {note && <span className="mt-0.5 block text-sm font-semibold text-ink">{note}</span>}
                   </span>
@@ -222,7 +222,7 @@ function QuizRun({ pool, total, showChapter }: { pool: QuizItem[]; total: number
               <p className={`font-display font-semibold ${answer.correct ? 'text-success' : 'text-brand'}`}>
                 {answer.correct ? 'Right.' : `Not quite. The answer is ${LETTERS[q.correctIndex]}.`}
               </p>
-              <p className="mt-1.5 max-w-[66ch] font-serif text-[1.0625rem] leading-relaxed text-ink">{q.rationale}</p>
+              <p className="mt-1.5 max-w-[66ch] font-serif text-base leading-relaxed text-ink">{q.rationale}</p>
               {q.citationRef && (
                 <button
                   type="button"
@@ -242,30 +242,30 @@ function QuizRun({ pool, total, showChapter }: { pool: QuizItem[]; total: number
             type="button"
             onClick={() => goTo(index - 1)}
             disabled={index === 0}
-            className="rounded-md px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+            className="rounded-sm px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
           >
             Back
           </button>
           {answeredCount > 0 && (
-            <button type="button" onClick={finish} className="rounded-md px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink cursor-pointer">
+            <button type="button" onClick={finish} className="rounded-sm px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink cursor-pointer">
               Finish and see results
             </button>
           )}
           <div className="ml-auto flex items-center gap-3">
             {!checked && index < round.length - 1 && (
-              <button type="button" onClick={next} className="rounded-md px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink cursor-pointer">
+              <button type="button" onClick={next} className="rounded-sm px-3 py-2.5 text-sm font-semibold text-ink-muted hover:text-ink cursor-pointer">
                 Skip
               </button>
             )}
             {checked ? (
-              <button type="button" onClick={next} className="rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover cursor-pointer">
+              <button type="button" onClick={next} className="rounded-sm bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover cursor-pointer">
                 {index < round.length - 1 ? 'Next question' : 'See results'}
               </button>
             ) : (
               <button
                 type="submit"
                 disabled={selected === null}
-                className="rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover disabled:bg-rule disabled:text-ink-soft disabled:cursor-not-allowed cursor-pointer"
+                className="rounded-sm bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover disabled:bg-rule disabled:text-ink-soft disabled:cursor-not-allowed cursor-pointer"
               >
                 Check answer
               </button>
@@ -313,7 +313,7 @@ function QuizSummary({
 
   return (
     <div>
-      <h3 ref={headingRef} tabIndex={-1} className="font-display text-2xl sm:text-3xl font-bold text-ink focus:outline-none">
+      <h3 ref={headingRef} tabIndex={-1} className="font-display text-xl sm:text-2xl font-bold text-ink focus:outline-none">
         {retrying ? 'Retry results: ' : ''}
         {correct} of {answered.length} right
       </h3>
@@ -326,16 +326,16 @@ function QuizSummary({
 
       <div className="mt-6 flex flex-wrap gap-3">
         {missed.length > 0 && (
-          <button type="button" onClick={() => onRetryMissed(missed)} className="rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover cursor-pointer">
+          <button type="button" onClick={() => onRetryMissed(missed)} className="rounded-sm bg-brand px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-hover cursor-pointer">
             Retry the {missed.length} you missed
           </button>
         )}
         {skipped > 0 && (
-          <button type="button" onClick={onResume} className="rounded-md border border-rule-strong bg-surface px-5 py-2.5 text-sm font-semibold text-ink hover:border-ink cursor-pointer">
+          <button type="button" onClick={onResume} className="rounded-sm border border-rule-strong bg-surface px-5 py-2.5 text-sm font-semibold text-ink hover:border-ink cursor-pointer">
             Answer the rest
           </button>
         )}
-        <button type="button" onClick={onRestart} className="rounded-md border border-rule-strong bg-surface px-5 py-2.5 text-sm font-semibold text-ink hover:border-ink cursor-pointer">
+        <button type="button" onClick={onRestart} className="rounded-sm border border-rule-strong bg-surface px-5 py-2.5 text-sm font-semibold text-ink hover:border-ink cursor-pointer">
           Start over
         </button>
       </div>
@@ -375,13 +375,13 @@ function QuizSummary({
                     </span>
                   </summary>
                   <div className="mt-3 space-y-2 pl-6">
-                    <p className="text-[0.9375rem] text-ink-muted">
+                    <p className="text-sm text-ink-muted">
                       You chose {LETTERS[answers[q.id].selected]}: {q.options[answers[q.id].selected]}
                     </p>
-                    <p className="text-[0.9375rem] font-semibold text-success">
+                    <p className="text-sm font-semibold text-success">
                       Answer {LETTERS[q.correctIndex]}: {q.options[q.correctIndex]}
                     </p>
-                    <p className="max-w-[66ch] font-serif text-[1.0625rem] leading-relaxed text-ink">{q.rationale}</p>
+                    <p className="max-w-[66ch] font-serif text-base leading-relaxed text-ink">{q.rationale}</p>
                   </div>
                 </details>
               </li>

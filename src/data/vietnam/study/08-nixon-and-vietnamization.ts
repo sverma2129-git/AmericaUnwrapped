@@ -4,17 +4,17 @@ import { ChapterStudyData } from '@/types/study';
 export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
   chapterId: 'nixon-and-vietnamization',
   bigQuestion:
-    'Was Nixon’s "Vietnamization" a real plan for South Vietnam to stand alone, or a way to buy a "decent interval" before it fell?',
+    'Was Nixon’s “Vietnamization” a real plan for South Vietnam to stand alone, or a way to buy a “decent interval” before it fell?',
   whyItMatters:
     'The withdrawal took four years. Along the way the war spread into Cambodia, campus protests such as Kent State shook the country, and Congress put new limits on the president’s power.',
   whatYouWillLearn: [
-    'How the Nixon Doctrine and "Vietnamization" brought home 500,000 U.S. troops while the air war grew.',
+    'How the Nixon Doctrine and “Vietnamization” brought home 500,000 U.S. troops while the air war grew.',
     'How the secret bombing of Cambodia (Operation Menu) and the 1970 ground attack there set off protests on campuses across the country.',
     'How Operation Lam Son 719 and the 1972 Easter Offensive showed that South Vietnam’s army depended on American air power.',
   ],
   briefing: {
     summary:
-      'When Richard Nixon took office in 1969, he and National Security Adviser Henry Kissinger were under heavy pressure to stop American casualties. Under "Vietnamization" and the Nixon Doctrine, the U.S. began pulling out ground troops. Their number fell from 543,000 to 24,000 by late 1972. The fighting, and modern weapons, were handed to South Vietnam’s army, the ARVN. To destroy communist bases along the border, Nixon secretly ordered B-52s to bomb neutral Cambodia in Operation Menu. False records hid it from Congress. In April 1970, Nixon announced that ground troops were entering Cambodia, and campuses across the country went on strike. On May 4, Ohio National Guardsmen shot and killed four students at Kent State University. Congress answered with the Cooper-Church Amendment, which barred U.S. troops from Cambodia and Laos. It was the first time Congress had restricted troop deployments during a war. In 1971, the ARVN’s retreat in Operation Lam Son 719 in Laos went badly. In 1972, Hanoi launched its Easter Offensive with tanks and regular divisions. South Vietnam held with massive U.S. air support, called Operation Linebacker I. It could not have held alone.',
+      'When Richard Nixon took office in 1969, he and National Security Adviser Henry Kissinger were under heavy pressure to stop American casualties. Under “Vietnamization” and the Nixon Doctrine, the U.S. began pulling out ground troops. Their number fell from 543,000 to 24,000 by late 1972. The fighting, and modern weapons, were handed to South Vietnam’s army, the ARVN. To destroy communist bases along the border, Nixon secretly ordered B-52s to bomb neutral Cambodia in Operation Menu. False records hid it from Congress. In April 1970, Nixon announced that ground troops were entering Cambodia, and campuses across the country went on strike. On May 4, Ohio National Guardsmen shot and killed four students at Kent State University. Congress answered with the Cooper-Church Amendment, which barred U.S. troops from Cambodia and Laos. It was the first time Congress had restricted troop deployments during a war. In 1971, the ARVN’s retreat in Operation Lam Son 719 in Laos went badly. In 1972, Hanoi launched its Easter Offensive with tanks and regular divisions. South Vietnam held with massive U.S. air support, called Operation Linebacker I. It could not have held alone.',
     examTakeaways: [
       'Vietnamization: The plan was to cut American casualties and calm protests at home. South Vietnamese infantry replaced American soldiers, while U.S. air power and supplies stayed.',
       'Cambodia and Kent State: Taking the war into Cambodia set off huge protests at home. They led to the Kent State shootings and closed universities across the country.',
@@ -39,7 +39,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
           'Ohio National Guardsmen shot unarmed students at Kent State University during protests against the move into Cambodia. Four students were killed and nine were wounded.',
         significance:
           'It set off a nationwide student strike that closed more than 400 colleges and universities. It divided the country and deepened opposition to the war.',
-        examTip: 'A symbol of how divided the country was. Crosby, Stills, Nash & Young wrote the song "Ohio" about it.',
+        examTip: 'A symbol of how divided the country was. Crosby, Stills, Nash & Young wrote the song “Ohio” about it.',
       },
       {
         id: 'operation-menu',
@@ -72,7 +72,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c8-q2',
       question:
-        'What major vulnerability of "Vietnamization" was exposed during Operation Lam Son 719 in February 1971?',
+        'What major vulnerability of “Vietnamization” was exposed during Operation Lam Son 719 in February 1971?',
       options: [
         'South Vietnam’s air force ran out of jet fuel before the operation could even start',
         'North Vietnamese units pulled out of Laos without fighting the ARVN invasion',
@@ -87,7 +87,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c8-q3',
       question:
-        'What was the historiographical concept of the "Decent Interval" associated with Nixon and Kissinger’s exit strategy?',
+        'What was the historiographical concept of the “Decent Interval” associated with Nixon and Kissinger’s exit strategy?',
       options: [
         'A planned pause in bombing to let Hanoi and Saigon hold national elections',
         'Delaying South Vietnam’s fall long enough after U.S. withdrawal to avoid blame',
@@ -96,7 +96,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'Scholars such as Jeffrey Kimball and Frank Snepp argue that the White House tapes show Nixon and Kissinger knew South Vietnam could not survive for long. In this view, they wanted a "decent interval" of a year or two between the U.S. withdrawal and Saigon’s fall, so that the defeat would look like South Vietnam’s and not America’s.',
+        'Scholars such as Jeffrey Kimball and Frank Snepp argue that the White House tapes show Nixon and Kissinger knew South Vietnam could not survive for long. In this view, they wanted a “decent interval” of a year or two between the U.S. withdrawal and Saigon’s fall, so that the defeat would look like South Vietnam’s and not America’s.',
       citationRef: 'c8-1',
     },
     {
@@ -128,7 +128,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c8-fc2',
-      term: 'The "Madman Theory"',
+      term: 'The “Madman Theory”',
       phonetic: 'MAD-man THEE-uh-ree',
       definition:
         'Nixon’s negotiating tactic. He wanted communist leaders to believe he was unpredictable and might use nuclear weapons if the war went on.',
@@ -143,7 +143,7 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       definition:
         'A massive U.S. bombing campaign, along with the mining of Haiphong harbor. Nixon ordered it to stop North Vietnam’s Easter Offensive.',
       significance:
-        'It was the first large-scale use of laser-guided "smart bombs." They destroyed key rail lines and bridges and stopped Hanoi’s tanks in the South.',
+        'It was the first large-scale use of laser-guided “smart bombs.” They destroyed key rail lines and bridges and stopped Hanoi’s tanks in the South.',
       examTip: 'It showed that South Vietnam could survive an invasion only with overwhelming American air power.',
     },
   ],

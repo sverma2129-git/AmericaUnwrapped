@@ -23,7 +23,7 @@ export default function DualPerspectiveViewer({
       {/* Editorial Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-8">
         <div>
-          <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink">
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-ink">
             What Washington believed and what Hanoi believed
           </h3>
           <span className="text-xs text-ink-soft block mb-1">
@@ -63,7 +63,7 @@ export default function DualPerspectiveViewer({
                   White House, Pentagon, CIA
                 </span>
               </div>
-              <h4 className="font-display text-xl font-bold text-ink mt-1">
+              <h4 className="font-display text-lg font-bold text-ink mt-1">
                 What Washington wanted
               </h4>
               <p className="font-sans text-xs text-ink-soft mt-1">
@@ -117,7 +117,7 @@ export default function DualPerspectiveViewer({
                   Politburo, Party Central Committee
                 </span>
               </div>
-              <h4 className="font-display text-xl font-bold text-ink mt-1">
+              <h4 className="font-display text-lg font-bold text-ink mt-1">
                 What Hanoi wanted
               </h4>
               <p className="font-sans text-xs text-ink-soft mt-1">
@@ -169,7 +169,7 @@ export default function DualPerspectiveViewer({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
             {/* 1. Washington */}
-            <div className="p-5 border border-rule-strong bg-[#fbf9f5] space-y-2">
+            <div className="p-5 border border-rule-strong bg-paper space-y-2">
               <h5 className="font-display font-bold text-base text-ink">
                 Keeping America’s word
               </h5>
@@ -185,7 +185,7 @@ export default function DualPerspectiveViewer({
             </div>
 
             {/* 2. Hanoi */}
-            <div className="p-5 border border-rule-strong bg-[#fbf9f5] space-y-2">
+            <div className="p-5 border border-rule-strong bg-paper space-y-2">
               <h5 className="font-display font-bold text-base text-ink">
                 One Vietnam, however long it takes
               </h5>
@@ -201,7 +201,7 @@ export default function DualPerspectiveViewer({
             </div>
 
             {/* 3. South Vietnam */}
-            <div className="p-5 border border-rule-strong bg-[#fbf9f5] space-y-2">
+            <div className="p-5 border border-rule-strong bg-paper space-y-2">
               <h5 className="font-display font-bold text-base text-ink">
                 A government people would back
               </h5>
@@ -219,7 +219,7 @@ export default function DualPerspectiveViewer({
             </div>
 
             {/* 4. The Battlefield */}
-            <div className="p-5 border border-rule-strong bg-[#fbf9f5] space-y-2">
+            <div className="p-5 border border-rule-strong bg-paper space-y-2">
               <h5 className="font-display font-bold text-base text-ink">
                 Two different kinds of war
               </h5>
@@ -237,7 +237,7 @@ export default function DualPerspectiveViewer({
             </div>
 
             {/* 5. The Public & Diplomacy */}
-            <div className="p-5 border border-rule-strong bg-[#fbf9f5] space-y-2 sm:col-span-2 lg:col-span-2">
+            <div className="p-5 border border-rule-strong bg-paper space-y-2 sm:col-span-2 lg:col-span-2">
               <h5 className="font-display font-bold text-base text-ink">
                 How long the public would accept it
               </h5>

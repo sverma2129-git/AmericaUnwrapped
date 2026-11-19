@@ -37,6 +37,25 @@ export type VerificationCategory =
   | 'VERIFIED_PARAPHRASE'
   | 'UNVERIFIABLE';
 
+/**
+ * A primary document shown as it was typed. The text always comes from the
+ * citation registry (verified verbatim); these fields only describe the paper
+ * it was on, copied from the registry's source line.
+ */
+export interface FeaturedDocument {
+  citationId: string;
+  /** What kind of paper this is: Telegram, Letter, Declaration, Agreement, Broadcast transcript. */
+  kind: string;
+  /** Short archive reference for the red stamp, taken from the registry locator. */
+  stamp?: string;
+  /** Header lines as they appear on the original form, e.g. [['From', 'CTG 72.1'], ['To', 'CINCPACFLT']]. */
+  header: [string, string][];
+  /** One or two plain sentences: who wrote it and why it matters. */
+  note: string;
+  /** Layered chapters: the story part this document follows. Without it, it opens the sources. */
+  afterBeatId?: string;
+}
+
 export interface SourceRegistryEntry {
   id: string; // e.g. "Q001"
   chapter: number;
@@ -310,6 +329,8 @@ export interface ChapterData {
   galleryImageIds?: string[];
   isLandmark?: boolean;
   landmarkMoment?: LandmarkMoment;
+  /** One real document shown as a facsimile. Only for verified verbatim quotations. */
+  featuredDocument?: FeaturedDocument;
   personalStory?: PersonalStory;
   hookLead?: string;
   hookParadox?: string;

@@ -9,7 +9,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
     'This is when the U.S. stopped seeing Vietnam as France’s colonial problem and started seeing it as a front in the Cold War. American involvement grew from there.',
   whatYouWillLearn: [
     'How Ho Chi Minh used the American Declaration of Independence to claim independence in 1945.',
-    'How the Korean War and the "Domino Theory" led Truman and Eisenhower to pay for France’s war.',
+    'How the Korean War and the “Domino Theory” led Truman and Eisenhower to pay for France’s war.',
     'Why General Navarre’s fortress in the valley at Dien Bien Phu was beaten by Vo Nguyen Giap’s guns in the hills.',
   ],
   briefing: {
@@ -121,7 +121,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
         'A self-taught North Vietnamese general. He commanded Viet Minh forces, and later North Vietnam’s army, from 1946 into the 1970s.',
       significance:
         'He planned the siege of Dien Bien Phu (1954) and helped direct the Tet Offensive (1968).',
-      examTip: 'He was a leading voice for a long "people’s war" meant to wear down an enemy’s will to keep fighting.',
+      examTip: 'He was a leading voice for a long “people’s war” meant to wear down an enemy’s will to keep fighting.',
     },
     {
       id: 'c1-fc3',

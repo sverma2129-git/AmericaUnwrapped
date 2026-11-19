@@ -13,11 +13,11 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
       className="max-w-3xl border-l-[3px] border-brand pl-6 space-y-5"
     >
       <div className="space-y-1">
-        <h3 className="font-display text-2xl font-bold text-ink">{story.name}</h3>
+        <h3 className="font-display text-xl font-bold text-ink">{story.name}</h3>
         <p className="text-sm text-ink-muted">One person’s war: {story.role}</p>
       </div>
 
-      <div className="space-y-4 font-serif text-[1.0625rem] text-ink leading-relaxed">
+      <div className="space-y-4 font-serif text-base text-ink leading-relaxed">
         {story.paragraphs.map((p, idx) => (
           <CitedParagraph key={idx} text={p} />
         ))}

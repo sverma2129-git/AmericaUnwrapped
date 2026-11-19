@@ -6,7 +6,7 @@ export default function AftermathMetrics() {
   const [activeTab, setActiveTab] = useState<'casualties' | 'refugees' | 'environmental'>('casualties');
 
   return (
-    <figure className="my-10 border border-rule-strong bg-[#f9f7f2]">
+    <figure className="my-10 border border-rule-strong bg-paper">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
@@ -43,7 +43,7 @@ export default function AftermathMetrics() {
         {activeTab === 'casualties' && (
           <div className="space-y-6">
             <div>
-              <h3 className="font-display text-2xl font-bold text-ink mt-1">
+              <h3 className="font-display text-xl font-bold text-ink mt-1">
                 An estimated 3.1 to 3.8 million people died
               </h3>
               <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -56,7 +56,7 @@ export default function AftermathMetrics() {
                 <span className="text-xs text-ink-soft block">
                   U.S. military dead
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   58,220
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -68,7 +68,7 @@ export default function AftermathMetrics() {
                 <span className="text-xs text-ink-soft block">
                   ARVN (South) Dead
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   ~254,000
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -80,7 +80,7 @@ export default function AftermathMetrics() {
                 <span className="text-xs text-ink-soft block">
                   North Vietnamese and Viet Cong dead
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   ~1,100,000
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -92,7 +92,7 @@ export default function AftermathMetrics() {
                 <span className="text-xs text-ink-soft block">
                   Vietnamese civilians dead
                 </span>
-                <div className="mt-1 font-display text-2xl sm:text-3xl font-bold text-ink">
+                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
                   2M – 4M
                 </div>
                 <span className="text-xs text-ink-soft block mt-1">
@@ -101,7 +101,7 @@ export default function AftermathMetrics() {
               </div>
             </div>
 
-            <div className="p-5 bg-[#f2ede4] border border-rule-strong text-xs sm:text-sm font-sans space-y-2">
+            <div className="p-5 bg-parchment border border-rule-strong text-xs sm:text-sm font-sans space-y-2">
               <span className="font-bold text-ink-muted block">
                 Where the numbers come from: Hanoi’s 1995 figures
               </span>
@@ -115,7 +115,7 @@ export default function AftermathMetrics() {
         {activeTab === 'refugees' && (
           <div className="space-y-6">
             <div>
-              <h3 className="font-display text-2xl font-bold text-ink mt-1">
+              <h3 className="font-display text-xl font-bold text-ink mt-1">
                 Re-education camps and the boat people
               </h3>
               <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -126,7 +126,7 @@ export default function AftermathMetrics() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
               <div className="p-4 bg-white border border-rule space-y-1">
                 <span className="font-bold text-ink-soft block">Re-education camps</span>
-                <div className="font-display text-xl font-bold text-ink">
+                <div className="font-display text-lg font-bold text-ink">
                   1 Million Detained
                 </div>
                 <p className="text-ink-muted font-display">
@@ -136,7 +136,7 @@ export default function AftermathMetrics() {
 
               <div className="p-4 bg-white border border-rule space-y-1">
                 <span className="font-bold text-ink-soft block">The boat people</span>
-                <div className="font-display text-xl font-bold text-ink">
+                <div className="font-display text-lg font-bold text-ink">
                   1.5 – 2.0 Million Fled
                 </div>
                 <p className="text-ink-muted font-display">
@@ -146,7 +146,7 @@ export default function AftermathMetrics() {
 
               <div className="p-4 bg-white border border-rule space-y-1">
                 <span className="font-bold text-ink-soft block">Doi Moi (1986)</span>
-                <div className="font-display text-xl font-bold text-ink">
+                <div className="font-display text-lg font-bold text-ink">
                   Why Hanoi changed course
                 </div>
                 <p className="text-ink-muted font-display">
@@ -160,7 +160,7 @@ export default function AftermathMetrics() {
         {activeTab === 'environmental' && (
           <div className="space-y-6">
             <div>
-              <h3 className="font-display text-2xl font-bold text-ink mt-1">
+              <h3 className="font-display text-xl font-bold text-ink mt-1">
                 800,000 tons of unexploded bombs still in the ground
               </h3>
               <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">

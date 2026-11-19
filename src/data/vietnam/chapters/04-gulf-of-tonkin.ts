@@ -65,38 +65,38 @@ const chapter: ChapterData = {
           citationId: 'c4-1',
           steps: [
             {
-              localTime: 'Aug 4 · 9:30 p.m.',
-              washingtonTime: 'Aug 4 · 10:30 a.m.',
+              localTime: 'Aug 4, 9:30 p.m.',
+              washingtonTime: 'Aug 4, 10:30 a.m.',
               scene: 'contacts',
               headline: 'Blips in the storm',
               body: 'In rain and darkness, radar operators on the Maddox saw blips they took for enemy boats. No one on the Maddox actually saw an enemy boat.[^Q013]',
             },
             {
-              localTime: 'Aug 4 · 10:15 p.m.',
-              washingtonTime: 'Aug 4 · 11:15 a.m.',
+              localTime: 'Aug 4, 10:15 p.m.',
+              washingtonTime: 'Aug 4, 11:15 a.m.',
               scene: 'firing',
               headline: 'Firing into the dark',
               body: 'Sonar operators reported torpedoes in the water. Both destroyers fired more than 600 rounds at the radar contacts.',
             },
             {
-              localTime: 'Aug 4 · 11:00 p.m.',
-              washingtonTime: 'Aug 4 · 12:00 p.m.',
+              localTime: 'Aug 4, 11:00 p.m.',
+              washingtonTime: 'Aug 4, 12:00 p.m.',
               scene: 'overhead',
               headline: 'A pilot sees nothing',
               body: 'Navy pilot James Stockdale flew low over the destroyers, looking for the enemy. He saw the ships’ wakes and their gunfire, and nothing else.[^Q021]',
               quoteCitationId: 'Q021',
             },
             {
-              localTime: 'Aug 5 · 12:27 a.m.',
-              washingtonTime: 'Aug 4 · 1:27 p.m.',
+              localTime: 'Aug 5, 12:27 a.m.',
+              washingtonTime: 'Aug 4, 1:27 p.m.',
               scene: 'cable',
               headline: 'The commander has doubts',
               body: 'Captain John Herrick, in command at sea, sent a flash cable. He said many of the reports looked doubtful and asked for a full review before anyone acted.[^Q013]',
               quoteCitationId: 'Q013',
             },
             {
-              localTime: 'Aug 5 · 10:36 a.m.',
-              washingtonTime: 'Aug 4 · 11:36 p.m.',
+              localTime: 'Aug 5, 10:36 a.m.',
+              washingtonTime: 'Aug 4, 11:36 p.m.',
               scene: 'broadcast',
               headline: 'The president goes on TV',
               body: 'About ten hours after Herrick’s cable, President Johnson spoke on national television. He said U.S. ships had been attacked again, and that American planes were already striking back.[^Q027]',
@@ -357,11 +357,18 @@ const chapter: ChapterData = {
     afterward:
       'Released in February 1973 after seven and a half years as a prisoner of war, Stockdale received the Medal of Honor in 1976. He told the Tonkin story with his wife, Sybil, in their 1984 memoir. She had spent his captivity organizing the families of missing and imprisoned servicemen.',
   },
+  featuredDocument: {
+    citationId: 'Q013',
+    kind: 'Flash telegram',
+    stamp: 'FRUS 1964–1968, Vol. I, Doc. 117',
+    header: [['From', 'CTG 72.1 (USS Maddox)'], ['To', 'CINCPACFLT'], ['Sent', '041727Z AUG 64']],
+    note: 'Captain John Herrick sent this from the Maddox after the reported attack of August 4. CINCPACFLT is the Navy’s Pacific Fleet command. About ten hours later, President Johnson went on television to announce air strikes.',
+  },
   whatHappened: {
     narrative: [
       'Throughout 1964, South Vietnam’s military situation worsened rapidly following Diem’s death. The Johnson administration initiated OPLAN 34A—covert South Vietnamese commando raids against North Vietnamese coastal radar installations and islands, coordinated alongside U.S. Navy DeSoto intelligence patrols collecting electronic signals in the Gulf of Tonkin.',
       'On the afternoon of August 2, 1964, three North Vietnamese P-4 torpedo boats engaged the USS Maddox in international waters.[^Q024] Because South Vietnamese patrol boats had shelled radar towers on nearby Hon Me Island two days earlier, North Vietnamese naval commanders viewed the Maddox as an integral element of the operation. In the ensuing firefight, carrier aircraft from the USS Ticonderoga damaged the torpedo boats, while the Maddox was struck by a single 14.5mm machine-gun bullet.',
-      'Two nights later, on August 4, in heavy rain and total darkness, the Maddox and the USS Turner Joy reported coming under continuous torpedo attack, firing over 600 rounds at radar contacts. Hours later, task group commander Captain John Herrick cabled Washington urging caution, reporting that many reported contacts and torpedo firings appeared doubtful:[^Q013] "Review of action makes many reported contacts and torpedoes fired appear doubtful..." Subsequent declassified naval track reconstructions by Edwin Moise[^c4-1] and official NSA historical analysis by Robert Hanyok[^c4-2] demonstrated conclusively that intercepted North Vietnamese communications cited as proof of an attack actually described the salvage operations of boats damaged on August 2. Facing an election campaign against conservative Barry Goldwater, President Johnson presented the incident as an unprovoked attack, ordered retaliatory airstrikes (Operation Pierce Arrow), and secured passage of the Gulf of Tonkin Resolution.[^c4-3]',
+      'Two nights later, on August 4, in heavy rain and total darkness, the Maddox and the USS Turner Joy reported coming under continuous torpedo attack, firing over 600 rounds at radar contacts. Hours later, task group commander Captain John Herrick cabled Washington urging caution, reporting that many reported contacts and torpedo firings appeared doubtful:[^Q013] “Review of action makes many reported contacts and torpedoes fired appear doubtful...” Subsequent declassified naval track reconstructions by Edwin Moise[^c4-1] and official NSA historical analysis by Robert Hanyok[^c4-2] demonstrated conclusively that intercepted North Vietnamese communications cited as proof of an attack actually described the salvage operations of boats damaged on August 2. Facing an election campaign against conservative Barry Goldwater, President Johnson presented the incident as an unprovoked attack, ordered retaliatory airstrikes (Operation Pierce Arrow), and secured passage of the Gulf of Tonkin Resolution.[^c4-3]',
     ],
     keyEvents: [
       { date: 'Jan 1964', title: 'OPLAN 34A is approved', detail: 'Secret raids by sea along North Vietnam’s coast begin.' },
@@ -385,7 +392,7 @@ const chapter: ChapterData = {
       'Senators Wayne Morse and Ernest Gruening warned that the resolution was an unconstitutional transfer of war power based on unverified allegations.[^Q022]',
     ],
     homeFrontConstraints: [
-      'The 1964 presidential campaign: Johnson campaigned as the prudent candidate against Goldwater, promising not to send "American boys 9 or 10,000 miles away from home to do what Asian boys ought to be doing for themselves."[^Q028]',
+      'The 1964 presidential campaign: Johnson campaigned as the prudent candidate against Goldwater, promising not to send “American boys 9 or 10,000 miles away from home to do what Asian boys ought to be doing for themselves.”[^Q028]',
     ],
     primaryDocumentRef: 'tonkin-resolution-1964',
   },
@@ -436,7 +443,7 @@ const chapter: ChapterData = {
   nextQuestion: {
     question: 'Can you win a war by counting casualties?',
     framing:
-      'General William Westmoreland said the United States would reach a "crossover point," killing enemy soldiers faster than North Vietnam could replace them. Why did the math not work?',
+      'General William Westmoreland said the United States would reach a “crossover point,” killing enemy soldiers faster than North Vietnam could replace them. Why did the math not work?',
   },
   citations: [
     CITATION_REGISTRY['c4-1'],

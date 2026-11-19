@@ -39,8 +39,8 @@ export default function CausalFlowViewer({ causalChain, showHeading = true }: Ca
     <div>
       {showHeading && (
         <>
-          <h2 className="font-display text-[1.75rem] font-bold tracking-tight text-ink sm:text-[2.125rem]">Cause and effect</h2>
-          <p className="mt-2 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-2xl">Cause and effect</h2>
+          <p className="mt-2 max-w-[62ch] text-base leading-relaxed text-ink-muted">
             One decision from this chapter, followed step by step to a result nobody planned.
           </p>
         </>
@@ -64,7 +64,7 @@ export default function CausalFlowViewer({ causalChain, showHeading = true }: Ca
                 {step.meta && <p className="text-sm text-ink-muted">{step.meta}</p>}
                 <div className="mt-2 max-w-[66ch] space-y-3">
                   {step.body.map((b) => (
-                    <p key={b.text} className={`font-serif text-[1.0625rem] leading-relaxed ${b.strong ? 'text-ink' : 'text-ink-muted'}`}>
+                    <p key={b.text} className={`font-serif text-base leading-relaxed ${b.strong ? 'text-ink' : 'text-ink-muted'}`}>
                       {b.label && <span className="mr-1.5 font-sans text-sm font-semibold text-ink">{b.label}.</span>}
                       {b.text}
                     </p>
@@ -76,7 +76,7 @@ export default function CausalFlowViewer({ causalChain, showHeading = true }: Ca
         })}
       </ol>
 
-      <p className="mt-6 max-w-[66ch] border-t border-rule pt-5 text-[1.0625rem] leading-relaxed text-ink-muted">
+      <p className="mt-6 max-w-[66ch] border-t border-rule pt-5 text-base leading-relaxed text-ink-muted">
         <span className="font-semibold text-ink">The question this leaves: </span>
         {causalChain.nextDecision}
       </p>

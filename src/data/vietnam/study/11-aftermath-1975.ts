@@ -6,7 +6,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
   bigQuestion:
     'What did thirty years of war cost Vietnam’s people and land, and how did two former enemies make peace?',
   whyItMatters:
-    'About 3 million people died. Afterward came 1.5 million "boat people," re-education camps, Agent Orange damage, and finally, in 1995, normal relations between the U.S. and Vietnam.',
+    'About 3 million people died. Afterward came 1.5 million “boat people,” re-education camps, Agent Orange damage, and finally, in 1995, normal relations between the U.S. and Vietnam.',
   whatYouWillLearn: [
     'How many Americans, North Vietnamese, South Vietnamese and civilians died.',
     'Why more than one million South Vietnamese were sent to re-education camps, and why hundreds of thousands fled by sea.',
@@ -14,7 +14,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'The 1954–1975 war cost a huge number of lives. 58,220 American service members were killed. Between 200,000 and 250,000 South Vietnamese (ARVN) soldiers died. Official Vietnamese figures put North Vietnamese and Viet Cong deaths at 1.1 million, and about 2 million civilians died on both sides. After the fall of Saigon, Hanoi forced a strict socialist system on the South. About one million former southern officers, officials and intellectuals were held in harsh "re-education camps." Up to 165,000 died from hunger, disease and forced labor. From 1975 to the early 1990s, more than 1.5 million Vietnamese escaped in small wooden boats. These were the "boat people," and an estimated 200,000 to 400,000 died at sea from drowning and pirate attacks. In the 1990s, Vietnam opened its economy with market reforms called Doi Moi. Two veteran senators, John McCain and John Kerry, worked across party lines to find out what happened to soldiers missing in action (MIA). In July 1995, President Bill Clinton restored normal diplomatic relations with Vietnam.',
+      'The 1954–1975 war cost a huge number of lives. 58,220 American service members were killed. Between 200,000 and 250,000 South Vietnamese (ARVN) soldiers died. Official Vietnamese figures put North Vietnamese and Viet Cong deaths at 1.1 million, and about 2 million civilians died on both sides. After the fall of Saigon, Hanoi forced a strict socialist system on the South. About one million former southern officers, officials and intellectuals were held in harsh “re-education camps.” Up to 165,000 died from hunger, disease and forced labor. From 1975 to the early 1990s, more than 1.5 million Vietnamese escaped in small wooden boats. These were the “boat people,” and an estimated 200,000 to 400,000 died at sea from drowning and pirate attacks. In the 1990s, Vietnam opened its economy with market reforms called Doi Moi. Two veteran senators, John McCain and John Kerry, worked across party lines to find out what happened to soldiers missing in action (MIA). In July 1995, President Bill Clinton restored normal diplomatic relations with Vietnam.',
     examTakeaways: [
       'Unequal losses: More than 3 million Vietnamese soldiers and civilians died, about 8–10% of the population. 58,220 Americans died.',
       'The boat people: It was the largest refugee flight by sea in modern history. Hundreds of thousands of Vietnamese resettled in the U.S., France, Canada and Australia.',
@@ -23,7 +23,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
     keyTerms: [
       {
         id: 'boat-people',
-        term: 'The Vietnamese "Boat People"',
+        term: 'The Vietnamese “Boat People”',
         imageId: 'boat-people-1984',
         phonetic: 'BOHT PEE-pul',
         definition:
@@ -73,7 +73,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c11-q2',
       question:
-        'What was the primary human rights crisis that prompted hundreds of thousands of South Vietnamese families to flee into the South China Sea as "Boat People" after 1975?',
+        'What was the primary human rights crisis that prompted hundreds of thousands of South Vietnamese families to flee into the South China Sea as “Boat People” after 1975?',
       options: [
         'A nationwide famine after drought destroyed the Mekong Delta’s rice harvest',
         'Political persecution, re-education camps, and forced moves to rural zones',
@@ -82,13 +82,13 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'After 1975, the communist government took private property, imprisoned more than a million former South Vietnamese soldiers and officials in re-education camps, and forced city families onto barren land called "New Economic Zones." Many families risked dangerous sea voyages to escape.',
+        'After 1975, the communist government took private property, imprisoned more than a million former South Vietnamese soldiers and officials in re-education camps, and forced city families onto barren land called “New Economic Zones.” Many families risked dangerous sea voyages to escape.',
       citationRef: 'c11-2',
     },
     {
       id: 'c11-q3',
       question:
-        'Which two prominent American political leaders—both decorated Vietnam War veterans—played the decisive bipartisan role in persuading Congress and President Clinton to normalize diplomatic relations with Vietnam in 1995?',
+        'Which two American political leaders, both decorated Vietnam War veterans, played the leading role from both parties in persuading Congress and President Clinton to normalize diplomatic relations with Vietnam in 1995?',
       options: [
         'Senators Bob Dole and Strom Thurmond',
         'James Baker and Senator Sam Nunn',
@@ -97,7 +97,7 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'Republican Senator John McCain spent five and a half years as a POW in the "Hanoi Hilton," where he was tortured. Democratic Senator John Kerry was a decorated Navy swift boat commander who later opposed the war. Together they worked to find out what happened to missing soldiers. That gave President Clinton the political support to restore relations.',
+        'Republican Senator John McCain spent five and a half years as a POW in the “Hanoi Hilton,” where he was tortured. Democratic Senator John Kerry was a decorated Navy swift boat commander who later opposed the war. Together they worked to find out what happened to missing soldiers. That gave President Clinton the political support to restore relations.',
       citationRef: 'c11-3',
     },
   ],
@@ -125,10 +125,10 @@ export const AFTERMATH_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c11-fc3',
-      term: 'Doi Moi ("Renovation")',
+      term: 'Doi Moi (“Renovation”)',
       phonetic: 'DOY MOY',
       definition:
-        'Economic reforms that Vietnam’s Communist Party began in 1986. They moved the country from a Soviet-style planned economy to what it called a "socialist-oriented market economy."',
+        'Economic reforms that Vietnam’s Communist Party began in 1986. They moved the country from a Soviet-style planned economy to what it called a “socialist-oriented market economy.”',
       significance:
         'Private businesses were allowed and foreign investment was welcomed. Vietnam became one of the fastest-growing economies in Southeast Asia.',
       examTip: 'Similar to China’s economic reforms under Deng Xiaoping.',

@@ -19,7 +19,7 @@ import Glossary from '@/components/study/guide/Glossary';
 export const metadata: Metadata = {
   title: 'Vietnam War study guide',
   description:
-    'Review the Vietnam War unit from 1945 to 1975: the five presidents, the turning points, 70 flashcards, a 44-question practice quiz with explanations, essay outlines and a searchable glossary.',
+    'Review the Vietnam War unit from 1945 to 1975: the six presidents, the turning points, 70 flashcards, a 44-question practice quiz with explanations, essay outlines and a searchable glossary.',
 };
 
 const SECTIONS = [
@@ -59,11 +59,11 @@ const BIG_IDEAS: { question: string; topics: { label: string; chapterId: string 
 
 function SectionHeader({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <header className="max-w-[62ch]">
-      <h2 id={`${id}-title`} className="font-display text-[1.75rem] sm:text-[2.125rem] font-bold leading-tight tracking-tight text-ink">
+    <header className="border-t border-ink pt-4">
+      <h2 id={`${id}-title`} className="font-display text-2xl font-bold tracking-tight text-ink">
         {title}
       </h2>
-      <p className="mt-2 text-[1.0625rem] leading-relaxed text-ink-muted">{children}</p>
+      <p className="mt-2 max-w-[62ch] text-base text-ink-muted">{children}</p>
     </header>
   );
 }
@@ -103,10 +103,10 @@ export default function StudyGuidePage() {
 
           <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-14">
             <div>
-              <h1 className="font-display text-[2.5rem] sm:text-[3.25rem] font-bold leading-[1.05] tracking-tight text-ink">
+              <h1 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
                 Vietnam War study guide
               </h1>
-              <p className="mt-4 max-w-[34ch] font-serif text-xl sm:text-[1.4375rem] leading-snug text-ink">
+              <p className="mt-4 max-w-[34ch] font-serif text-lg sm:text-xl leading-snug text-ink">
                 Thirty years and six presidents, from Ho Chi Minh’s declaration of independence in 1945 to the fall of Saigon in 1975.
               </p>
               <p className="mt-4 max-w-[60ch] text-ink-muted">
@@ -119,7 +119,7 @@ export default function StudyGuidePage() {
                 {BIG_IDEAS.map((idea) => (
                   <li key={idea.question} className="border-t border-rule py-3">
                     <p className="font-display font-semibold text-ink">{idea.question}</p>
-                    <p className="mt-0.5 text-[0.9375rem] text-ink-muted">
+                    <p className="mt-0.5 text-sm text-ink-muted">
                       {idea.topics.map((t, i) => (
                         <React.Fragment key={t.label}>
                           {i > 0 && ', '}
@@ -179,7 +179,7 @@ export default function StudyGuidePage() {
 
         {/* Practice */}
         <section id="quiz" aria-labelledby="quiz-title" className="pt-16 sm:pt-24">
-          <div className="-mx-4 sm:mx-0 bg-parchment px-4 py-10 sm:rounded-2xl sm:px-10 sm:py-12">
+          <div className="-mx-4 sm:mx-0 bg-parchment px-4 py-10 sm:rounded-sm sm:px-10 sm:py-12">
             <SectionHeader id="quiz" title="Practice quiz">
               {counts.questions} multiple-choice questions, each with an explanation after you answer. {sourceBased} are
               source-based, like the AP exam: you read a photo or document first.
@@ -213,7 +213,7 @@ export default function StudyGuidePage() {
           <Link href="/vietnam" className="font-semibold text-ink-muted hover:text-brand">
             Back to the Vietnam War unit
           </Link>
-          <Link href={`/vietnam/${VIETNAM_CHAPTERS[0].id}`} className="rounded-md bg-brand px-5 py-2.5 font-semibold text-white hover:bg-brand-hover">
+          <Link href={`/vietnam/${VIETNAM_CHAPTERS[0].id}`} className="rounded-sm bg-brand px-5 py-2.5 font-semibold text-white hover:bg-brand-hover">
             Start Chapter 1
           </Link>
         </footer>

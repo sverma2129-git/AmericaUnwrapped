@@ -62,7 +62,7 @@ export default function StartHere({ counts }: { counts: Counts }) {
                 {r.need}
               </button>
             )}
-            <span className="text-[0.9375rem] text-ink-muted">{r.what}</span>
+            <span className="text-sm text-ink-muted">{r.what}</span>
           </li>
         ))}
       </ul>

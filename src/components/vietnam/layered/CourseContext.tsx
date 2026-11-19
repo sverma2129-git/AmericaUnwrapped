@@ -56,7 +56,7 @@ export function useCourse() {
 export function CourseToggle({ className = '' }: { className?: string }) {
   const { course, setCourse } = useCourse();
   return (
-    <div role="radiogroup" aria-label="Your course" className={`inline-flex rounded-lg bg-parchment p-1 ${className}`}>
+    <div role="radiogroup" aria-label="Your course" className={`inline-flex rounded-sm bg-parchment p-1 ${className}`}>
       {(Object.keys(COURSE_LABEL) as CourseId[]).map((id) => (
         <button
           key={id}
@@ -64,7 +64,7 @@ export function CourseToggle({ className = '' }: { className?: string }) {
           role="radio"
           aria-checked={course === id}
           onClick={() => setCourse(id)}
-          className={`px-4 py-1.5 rounded-md text-sm font-medium transition-colors cursor-pointer ${ course === id ? 'bg-ink text-paper' : 'text-ink-muted hover:text-ink' }`}
+          className={`px-4 py-1.5 rounded-sm text-sm font-medium transition-colors cursor-pointer ${ course === id ? 'bg-ink text-paper' : 'text-ink-muted hover:text-ink' }`}
         >
           {COURSE_LABEL[id]}
         </button>

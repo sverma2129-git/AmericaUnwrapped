@@ -7,9 +7,9 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
   whyItMatters:
     'Congress passed the Gulf of Tonkin Resolution almost unanimously, on evidence that was misleading. For nine years it worked like a declaration of war, and it changed the argument over who decides when America fights.',
   whatYouWillLearn: [
-    'Why the August 2 battle was a real fight in daylight, while the August 4 "attack" came from false radar and sonar readings.',
+    'Why the August 2 battle was a real fight in daylight, while the August 4 “attack” came from false radar and sonar readings.',
     'How secret OPLAN 34A raids and DeSoto patrols put American destroyers in the middle of the fighting.',
-    'How the resolution gave President Johnson a "blank check," and how that led to the War Powers Act of 1973.',
+    'How the resolution gave President Johnson a “blank check,” and how that led to the War Powers Act of 1973.',
   ],
   briefing: {
     summary:
@@ -95,7 +95,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'At 1:27 PM Washington time, Herrick cabled: "Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports... Suggest complete evaluation before any further action taken."',
+        'At 1:27 PM Washington time, Herrick cabled: “Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports... Suggest complete evaluation before any further action taken.”',
       citationRef: 'Q013',
     },
     {
@@ -110,7 +110,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'The resolution passed 416–0 in the House and 88–2 in the Senate. Only Senators Wayne Morse and Ernest Gruening voted against it. Critics later called it a congressional "blank check."',
+        'The resolution passed 416–0 in the House and 88–2 in the Senate. Only Senators Wayne Morse and Ernest Gruening voted against it. Critics later called it a congressional “blank check.”',
       citationRef: 'c4-3',
     },
     {

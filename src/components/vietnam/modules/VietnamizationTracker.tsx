@@ -106,7 +106,7 @@ export default function VietnamizationTracker() {
       </div>
 
       <div>
-        <h3 className="font-display text-2xl font-bold text-ink">
+        <h3 className="font-display text-xl font-bold text-ink">
           As U.S. troops left, the bombing grew
         </h3>
         <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
@@ -115,15 +115,15 @@ export default function VietnamizationTracker() {
       </div>
 
       {/* Interactive Multi-Line SVG Trend Chart */}
-      <div className="bg-white border border-rule p-4 rounded-xs">
+      <div className="bg-white border border-rule p-4 rounded-sm">
         <div className="flex flex-wrap items-center justify-end gap-4 text-xs mb-2">
           <div className="flex items-center gap-1.5">
             <span className="w-3 h-3 bg-ink rounded-full inline-block" />
             <span className="text-ink-muted">U.S. Troop Strength (536k 24k)</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-red-700 rounded-full inline-block" />
-            <span className="text-red-800 font-semibold">ARVN Combat KIA (20k 39k)</span>
+            <span className="w-3 h-3 bg-brand rounded-full inline-block" />
+            <span className="text-brand-hover font-semibold">ARVN Combat KIA (20k 39k)</span>
           </div>
         </div>
 
@@ -139,7 +139,7 @@ export default function VietnamizationTracker() {
                   y1={y}
                   x2={width - padding.right}
                   y2={y}
-                  stroke="#e7dfd1"
+                  stroke="var(--color-terrain)"
                   strokeWidth="1"
                   className=""
                 />
@@ -152,7 +152,7 @@ export default function VietnamizationTracker() {
               y1={height - padding.bottom}
               x2={width - padding.right}
               y2={height - padding.bottom}
-              stroke="#78716c"
+              stroke="var(--color-ink-soft)"
               strokeWidth="1.5"
             />
 
@@ -167,7 +167,7 @@ export default function VietnamizationTracker() {
                     y1={padding.top}
                     x2={x}
                     y2={height - padding.bottom}
-                    stroke={isSelected ? '#991b1b' : 'none'}
+                    stroke={isSelected ? 'var(--color-brand-hover)' : 'none'}
                     strokeWidth="1"
                     strokeDasharray="2,2"
                   />
@@ -184,10 +184,10 @@ export default function VietnamizationTracker() {
             })}
 
             {/* Line 1: U.S. Troop Curve (Steep decline) */}
-            <path d={usTroopsPath} fill="none" stroke="#44403c" strokeWidth="3" className="" />
+            <path d={usTroopsPath} fill="none" stroke="var(--color-ink-muted)" strokeWidth="3" className="" />
 
             {/* Line 2: ARVN Combat Deaths (Plateau / Surge) */}
-            <path d={arvnKiaPath} fill="none" stroke="#dc2626" strokeWidth="3" />
+            <path d={arvnKiaPath} fill="none" stroke="var(--color-brand)" strokeWidth="3" />
 
             {/* Interactive Points along both lines */}
             {YEARS.map((year) => {
@@ -203,8 +203,8 @@ export default function VietnamizationTracker() {
                     cx={x}
                     cy={yUs}
                     r={isSelected ? '6' : '4.5'}
-                    fill="#44403c"
-                    stroke="#ffffff"
+                    fill="var(--color-ink-muted)"
+                    stroke="var(--color-surface)"
                     strokeWidth="1.5"
                     className=""
                   />
@@ -214,8 +214,8 @@ export default function VietnamizationTracker() {
                     cx={x}
                     cy={yArvn}
                     r={isSelected ? '6' : '4.5'}
-                    fill="#dc2626"
-                    stroke="#ffffff"
+                    fill="var(--color-brand)"
+                    stroke="var(--color-surface)"
                     strokeWidth="1.5"
                   />
 
@@ -234,7 +234,7 @@ export default function VietnamizationTracker() {
                         x={x}
                         y={yArvn + 16}
                         textAnchor="middle"
-                        className="text-xs font-bold fill-red-800"
+                        className="text-xs font-bold fill-brand-hover"
                       >
                         {TRACKER_DATA[year].arvnDeaths.toLocaleString()} ARVN KIA
                       </text>
@@ -249,11 +249,11 @@ export default function VietnamizationTracker() {
 
       {/* Selected Year Data Ledger */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-4 bg-white border border-rule rounded-xs">
+        <div className="p-4 bg-white border border-rule rounded-sm">
           <div className="text-xs text-ink-soft">
             U.S. Troop Level ({selectedYear})
           </div>
-          <div className="font-display text-2xl font-bold mt-1 text-ink">
+          <div className="font-display text-xl font-bold mt-1 text-ink">
             {current.usTroops.toLocaleString()}
           </div>
           <div className="text-xs text-ink-soft mt-1">
@@ -261,11 +261,11 @@ export default function VietnamizationTracker() {
           </div>
         </div>
 
-        <div className="p-4 bg-white border border-rule rounded-xs">
-          <div className="text-xs text-red-700 font-bold">
+        <div className="p-4 bg-white border border-rule rounded-sm">
+          <div className="text-xs text-brand font-bold">
             ARVN Combat KIA ({selectedYear})
           </div>
-          <div className="font-display text-2xl font-bold mt-1 text-red-900">
+          <div className="font-display text-xl font-bold mt-1 text-brand-hover">
             {current.arvnDeaths.toLocaleString()}
           </div>
           <div className="text-xs text-ink-soft mt-1">
@@ -273,11 +273,11 @@ export default function VietnamizationTracker() {
           </div>
         </div>
 
-        <div className="p-4 bg-white border border-rule rounded-xs">
+        <div className="p-4 bg-white border border-rule rounded-sm">
           <div className="text-xs text-ink-soft">
             U.S. bomb tonnage
           </div>
-          <div className="font-display text-2xl font-bold mt-1 text-ink">
+          <div className="font-display text-xl font-bold mt-1 text-ink">
             {current.bombTonnage}
           </div>
           <div className="text-xs text-ink-soft mt-1">
@@ -287,10 +287,10 @@ export default function VietnamizationTracker() {
       </div>
 
       {/* Selected Year Milestone & Historiographical Debate */}
-      <div className="p-5 bg-white border border-rule rounded-xs space-y-4">
+      <div className="p-5 bg-white border border-rule rounded-sm space-y-4">
         <div>
           <span className="text-xs text-ink-soft font-bold block mb-1">
-            Operational Milestone · {selectedYear}
+            What happened in {selectedYear}
           </span>
           <p className="font-display text-base text-ink leading-relaxed">
             {current.milestone}

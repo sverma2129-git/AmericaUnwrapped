@@ -47,7 +47,7 @@ const CAMPAIGN_PHASES: CampaignPhase[] = [
     narrative:
       'With their southern flank exposed, ARVN forces in northern I Corps were ordered to hold Hue, then abruptly counter-ordered to retreat to Da Nang. In Da Nang, South Vietnam’s second-largest city, 100,000 demoralized troops dissolved into panic amid 300,000 fleeing refugees. The city fell on March 30 without a major battle.',
     logisticsAndAid:
-      'Billions of dollars of modern American equipment—F-5 jets, howitzers, tanks, and trucks—were captured intact on airfields and docks.',
+      'Billions of dollars of modern American equipment, including F-5 jets, howitzers, tanks and trucks, was captured intact on airfields and docks.',
     significance:
       'Hanoi realized that the southern armed forces were not executing an orderly withdrawal, but undergoing total institutional disintegration.',
   },
@@ -98,7 +98,7 @@ export default function CollapseOffensiveMap() {
             <button
               key={idx}
               onClick={() => setActivePhase(idx as PhaseIndex)}
-              className={`px-2.5 py-1 rounded-xs border transition-colors cursor-pointer whitespace-nowrap ${ activePhase === idx ? 'bg-ink text-paper border-ink font-bold' : 'bg-white text-ink-muted border-rule-strong hover:border-rule-strong' }`}
+              className={`px-2.5 py-1 rounded-sm border transition-colors cursor-pointer whitespace-nowrap ${ activePhase === idx ? 'bg-ink text-paper border-ink font-bold' : 'bg-white text-ink-muted border-rule-strong hover:border-rule-strong' }`}
             >
               Phase {idx + 1}
             </button>
@@ -109,13 +109,13 @@ export default function CollapseOffensiveMap() {
       {/* Map & Operational Ledger Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Geographic Map of South Vietnam with Highways and Advances */}
-        <div className="lg:col-span-6 bg-[#eee8db] border border-rule-strong rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
+        <div className="lg:col-span-6 bg-terrain border border-rule-strong rounded-sm p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
           <svg viewBox="180 50 250 460" className="w-full h-full select-none" role="img" aria-label="1975 Spring Offensive operational map">
             {/* South Vietnam Coastline Silhouette */}
             <path
               d="M 230,70 L 260,100 L 290,130 L 330,180 L 360,230 L 400,300 L 390,340 L 360,380 L 330,410 L 270,450 L 230,480 L 220,450 L 250,420 L 250,380 L 280,340 L 270,250 L 230,160 L 200,90 Z"
-              fill="#e7dfd1"
-              stroke="#78716c"
+              fill="var(--color-terrain)"
+              stroke="var(--color-ink-soft)"
               strokeWidth="1.5"
               className=""
             />
@@ -125,7 +125,7 @@ export default function CollapseOffensiveMap() {
             <path
               d="M 230,70 Q 280,120 330,180 T 390,300 T 360,380 T 300,395"
               fill="none"
-              stroke="#a8a29e"
+              stroke="var(--color-rule-strong)"
               strokeWidth="2"
               strokeDasharray="3,3"
             />
@@ -137,7 +137,7 @@ export default function CollapseOffensiveMap() {
             <path
               d="M 270,160 Q 300,210 310,260 T 300,395"
               fill="none"
-              stroke="#a8a29e"
+              stroke="var(--color-rule-strong)"
               strokeWidth="1.5"
               strokeDasharray="2,2"
             />
@@ -149,23 +149,23 @@ export default function CollapseOffensiveMap() {
             <path
               d="M 310,260 L 360,300"
               fill="none"
-              stroke="#dc2626"
+              stroke="var(--color-brand)"
               strokeWidth="2"
               strokeDasharray="2,2"
             />
-            <text x="325" y="275" className="fill-red-800 text-[7px] font-bold">
+            <text x="325" y="275" className="fill-brand-hover text-[7px] font-bold">
               ROUTE 7B
             </text>
 
             {/* PAVN Main Advance Vector (Progressive based on phase) */}
             {activePhase >= 1 && (
-              <line x1="310" y1="260" x2="350" y2="295" stroke="#991b1b" strokeWidth="3" markerEnd="url(#arrow)" />
+              <line x1="310" y1="260" x2="350" y2="295" stroke="var(--color-brand-hover)" strokeWidth="3" markerEnd="url(#arrow)" />
             )}
             {activePhase >= 2 && (
               <path
                 d="M 230,70 L 260,100 L 290,130"
                 fill="none"
-                stroke="#991b1b"
+                stroke="var(--color-brand-hover)"
                 strokeWidth="4"
               />
             )}
@@ -173,12 +173,12 @@ export default function CollapseOffensiveMap() {
               <path
                 d="M 290,130 L 330,180 L 390,300"
                 fill="none"
-                stroke="#991b1b"
+                stroke="var(--color-brand-hover)"
                 strokeWidth="4"
               />
             )}
             {activePhase >= 4 && (
-              <circle cx="300" cy="395" r="28" fill="none" stroke="#991b1b" strokeWidth="2" strokeDasharray="3,3" />
+              <circle cx="300" cy="395" r="28" fill="none" stroke="var(--color-brand-hover)" strokeWidth="2" strokeDasharray="3,3" />
             )}
 
             {/* Key Operational Cities */}
@@ -197,14 +197,14 @@ export default function CollapseOffensiveMap() {
                     cx={city.x}
                     cy={city.y}
                     r={isCurrent ? '7' : '4'}
-                    fill={isCurrent ? '#991b1b' : '#57534e'}
-                    stroke="#ffffff"
+                    fill={isCurrent ? 'var(--color-brand-hover)' : 'var(--color-ink-muted)'}
+                    stroke="var(--color-surface)"
                     strokeWidth="1.5"
                   />
                   <text
                     x={city.x + 8}
                     y={city.y + 3}
-                    className={`text-[8px] font-bold ${ isCurrent ? 'fill-red-950 font-extrabold underline' : 'fill-ink' }`}
+                    className={`text-[8px] font-bold ${ isCurrent ? 'fill-brand-hover font-extrabold underline' : 'fill-ink' }`}
                   >
                     {city.name}
                   </text>
@@ -216,12 +216,12 @@ export default function CollapseOffensiveMap() {
 
         {/* Phase Narrative & Logistic Analysis */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="p-4 bg-white border border-rule rounded-xs">
+          <div className="p-4 bg-white border border-rule rounded-sm">
             <div className="flex items-center justify-between text-xs text-ink-soft mb-1">
               <span>PHASE {activePhase + 1} OF 5</span>
               <span>{current.date}</span>
             </div>
-            <h3 className="font-display text-xl font-bold text-ink">
+            <h3 className="font-display text-lg font-bold text-ink">
               {current.title}
             </h3>
             <div className="text-xs text-brand font-medium mt-0.5">
@@ -239,7 +239,7 @@ export default function CollapseOffensiveMap() {
           </div>
 
           {/* Aid Cuts & Logistics Factor */}
-          <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+          <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
             <span className="font-bold text-ink-muted block mb-1">
               Logistical &amp; Aid Factors:
             </span>
@@ -249,7 +249,7 @@ export default function CollapseOffensiveMap() {
           </div>
 
           {/* Historical Consequence */}
-          <div className="p-4 bg-parchment/80 border-l border-ink rounded-r-xs text-xs">
+          <div className="p-4 bg-parchment/80 border-l border-ink rounded-sm text-xs">
             <span className="font-bold text-ink-muted block mb-1">
               Why it mattered in the 55 days:
             </span>

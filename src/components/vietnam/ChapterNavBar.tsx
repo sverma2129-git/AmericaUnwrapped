@@ -1,145 +1,71 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { VIETNAM_CHAPTERS, getAdjacentChapters } from '@/data/vietnam/chapters';
+import { getAdjacentChapters, getChapterPart } from '@/data/vietnam/chapters';
 import { ChapterData } from '@/types/vietnam';
-import Icon from '@/components/common/Icon';
 
-interface ChapterNavBarProps {
-  currentChapter: ChapterData;
-}
+/**
+ * The running head of a chapter: where you are in the book, the next and
+ * previous chapters, and a thin line showing how far through the chapter you
+ * have read. The full table of contents lives in the site header.
+ */
+export default function ChapterNavBar({ currentChapter }: { currentChapter: ChapterData }) {
+  const { prev, next } = getAdjacentChapters(currentChapter);
+  const part = getChapterPart(currentChapter);
+  const barRef = useRef<HTMLDivElement>(null);
 
-export default function ChapterNavBar({ currentChapter }: ChapterNavBarProps) {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const { prev: prevChapter, next: nextChapter } = getAdjacentChapters(currentChapter);
-
-  // Close drawer on Escape key
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setDrawerOpen(false);
+    let frame = 0;
+    function update() {
+      frame = 0;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+      if (barRef.current) barRef.current.style.transform = `scaleX(${progress})`;
+    }
+    function onScroll() {
+      if (!frame) frame = requestAnimationFrame(update);
+    }
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame) cancelAnimationFrame(frame);
     };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
-    <>
-      <nav
-        aria-label="Chapters"
-        className="sticky top-16 z-30 backdrop-blur-md bg-paper/95 border-b border-rule text-ink transition-colors"
-      >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between gap-3 text-sm">
-          {/* Left: Previous chapter or Hub */}
-          <div className="flex shrink-0 items-center gap-3">
-            <Link
-              href="/vietnam"
-              className="text-ink-muted hover:text-brand transition-colors hidden sm:inline-block font-medium"
-            >
-              All chapters
+    <nav id="chapter-bar" aria-label="Chapter" className="sticky top-14 z-30 border-b border-rule bg-paper">
+      <div className="mx-auto flex h-11 max-w-6xl items-center justify-between gap-4 px-4 text-sm sm:px-6 lg:px-8">
+        <p className="min-w-0 truncate text-ink-muted">
+          {part && <span className="hidden sm:inline">Part {part.number}, </span>}
+          Chapter {currentChapter.number}
+          <span className="hidden md:inline">
+            : <span className="font-medium text-ink">{currentChapter.title}</span>
+          </span>
+        </p>
+        <div className="flex shrink-0 items-center gap-5 font-medium">
+          {prev && (
+            <Link href={`/vietnam/${prev.id}`} className="text-ink-muted hover:text-brand" aria-label={`Previous: Chapter ${prev.number}, ${prev.title}`}>
+              Previous
             </Link>
-            {prevChapter && (
-              <Link
-                href={`/vietnam/${prevChapter.id}`}
-                className="flex shrink-0 items-center gap-1 whitespace-nowrap font-semibold text-ink hover:text-brand transition-colors"
-                title={`Previous: Chapter ${prevChapter.number} - ${prevChapter.title}`}
-              >
-                <Icon name="chevronLeft" className="w-3.5 h-3.5" />
-                <span>Ch. {prevChapter.number}</span>
-              </Link>
-            )}
-          </div>
-
-          {/* Center: Current Chapter Name & Drawer Trigger */}
-          <button
-            onClick={() => setDrawerOpen(!drawerOpen)}
-            className="flex min-w-0 items-center gap-2 rounded-md px-3 py-1.5 font-semibold text-ink hover:bg-parchment cursor-pointer"
-            aria-expanded={drawerOpen}
-            aria-controls="chapter-drawer"
-          >
-            <span className="truncate max-w-[11rem] sm:max-w-md">
-              Chapter {currentChapter.number}: {currentChapter.title}
-            </span>
-            <Icon name={drawerOpen ? 'chevronUp' : 'chevronDown'} className="w-3.5 h-3.5 text-ink-muted" />
-          </button>
-
-          {/* Right: Next chapter */}
-          <div className="flex shrink-0 items-center gap-3">
-            {nextChapter ? (
-              <Link
-                href={`/vietnam/${nextChapter.id}`}
-                className="flex shrink-0 items-center gap-1 whitespace-nowrap font-semibold text-ink hover:text-brand transition-colors"
-                title={`Next: Chapter ${nextChapter.number} - ${nextChapter.title}`}
-              >
-                <span>Ch. {nextChapter.number}</span>
-                <Icon name="chevronRight" className="w-3.5 h-3.5" />
-              </Link>
-            ) : (
-              <Link
-                href="/vietnam/study-guide"
-                className="text-brand font-semibold hover:underline"
-              >
-                Study guide
-              </Link>
-            )}
-          </div>
+          )}
+          {next ? (
+            <Link href={`/vietnam/${next.id}`} className="text-ink hover:text-brand" aria-label={`Next: Chapter ${next.number}, ${next.title}`}>
+              Next chapter
+            </Link>
+          ) : (
+            <Link href="/vietnam/study-guide" className="text-brand hover:text-brand-hover">
+              Study guide
+            </Link>
+          )}
         </div>
-      </nav>
-
-      {/* Chapter Selection Drawer */}
-      {drawerOpen && (
-        <div
-          id="chapter-drawer"
-          className="fixed inset-0 z-50 bg-ink/30 flex items-start justify-center pt-20 p-4"
-          onClick={() => setDrawerOpen(false)}
-        >
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="chapter-drawer-title"
-            className="bg-paper w-full max-w-2xl max-h-[85vh] overflow-y-auto p-6 sm:p-8 shadow-xl rounded-xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-rule">
-              <div>
-                <h3 id="chapter-drawer-title" className="font-display text-xl font-bold text-ink">
-                  Choose a chapter
-                </h3>
-              </div>
-              <button
-                onClick={() => setDrawerOpen(false)}
-                className="rounded-md px-3 py-1.5 text-sm font-semibold text-ink-muted hover:bg-parchment hover:text-ink cursor-pointer"
-              >
-                Close
-              </button>
-            </div>
-
-            <ol className="divide-y divide-rule">
-              {VIETNAM_CHAPTERS.map((ch) => {
-                const isCurrent = ch.id === currentChapter.id;
-                return (
-                  <li key={ch.id}>
-                    <Link
-                      href={`/vietnam/${ch.id}`}
-                      onClick={() => setDrawerOpen(false)}
-                      aria-current={isCurrent ? 'page' : undefined}
-                      className={`grid grid-cols-[2rem_minmax(0,1fr)_auto] items-baseline gap-3 rounded-md px-2 py-3 hover:bg-parchment ${isCurrent ? 'text-brand' : 'text-ink'}`}
-                    >
-                      <span className="text-sm tabular-nums text-ink-soft">{ch.number}</span>
-                      <span className="font-display font-semibold leading-snug">
-                        {ch.title}
-                        {isCurrent && <span className="ml-2 text-sm font-normal text-ink-muted">You are here</span>}
-                      </span>
-                      <span className="text-sm tabular-nums text-ink-soft">{ch.timeframe}</span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ol>
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+      <div aria-hidden="true" className="h-0.5 w-full">
+        <div ref={barRef} className="h-full w-full origin-left bg-brand" style={{ transform: 'scaleX(0)' }} />
+      </div>
+    </nav>
   );
 }

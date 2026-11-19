@@ -23,7 +23,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
   const lookupId = document.registryId || document.id;
 
   return (
-    <figure className="my-12 sm:my-16 border border-rule bg-parchment text-ink rounded-xs">
+    <figure className="my-12 sm:my-16 border border-rule bg-parchment text-ink rounded-sm">
       {/* Archival Docket Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
         <div className="flex items-center gap-2 text-ink-muted">
@@ -43,7 +43,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
           <button
             type="button"
             onClick={() => openCitation(lookupId)}
-            className="text-xs font-bold text-brand hover:underline px-2.5 py-0.5 border border-brand/30 bg-paper cursor-pointer rounded-xs"
+            className="text-xs font-bold text-brand hover:underline px-2.5 py-0.5 border border-brand/30 bg-paper cursor-pointer rounded-sm"
           >
             Source details
           </button>
@@ -53,7 +53,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
       {/* Artifact Identification & Editorial Significance */}
       <div className="p-6 sm:p-8 space-y-6">
         <div>
-          <h4 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-ink leading-tight">
+          <h4 className="font-display text-xl sm:text-2xl font-bold tracking-tight text-ink leading-tight">
             {document.title}
           </h4>
           <p className="mt-2 text-xs sm:text-sm text-ink-muted">
@@ -61,7 +61,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
           </p>
         </div>
 
-        {/* Why It Matters Callout — Front & Center */}
+        {/* Why it matters, first */}
         <div className="border-l border-brand pl-4 py-1">
           <span className="text-xs font-bold text-brand block mb-1">
             Why this document matters
@@ -72,7 +72,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
         </div>
 
         {/* The Archival Plate: Archival Record / Summary */}
-        <div className="relative p-5 sm:p-7 bg-paper border border-rule text-xs sm:text-sm text-ink leading-relaxed rounded-xs">
+        <div className="relative p-5 sm:p-7 bg-paper border border-rule text-xs sm:text-sm text-ink leading-relaxed rounded-sm">
           <div className="text-xs text-ink-soft mb-3 border-b border-rule pb-1.5 flex items-center justify-between">
             <span>
               {document.isVerified ? 'The exact words' : 'A summary in our words'}
@@ -111,7 +111,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
           </button>
 
           {showFullContext && (
-            <div className="mt-4 p-5 bg-paper border border-rule text-xs sm:text-sm leading-relaxed space-y-3 rounded-xs">
+            <div className="mt-4 p-5 bg-paper border border-rule text-xs sm:text-sm leading-relaxed space-y-3 rounded-sm">
               <span className="text-xs font-bold text-brand block">
                 Background
               </span>

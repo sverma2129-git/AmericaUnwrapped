@@ -6,7 +6,7 @@ export default function GenevaDivisionMap() {
   const [activeLayer, setActiveLayer] = useState<'boundary' | 'refugees' | 'elections'>('boundary');
 
   return (
-    <figure className="my-10 border border-rule bg-parchment rounded-xs text-ink">
+    <figure className="my-10 border border-rule bg-parchment rounded-sm text-ink">
       {/* Editorial Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
@@ -18,21 +18,21 @@ export default function GenevaDivisionMap() {
           <button
             type="button"
             onClick={() => setActiveLayer('boundary')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'boundary' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
+            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-sm ${ activeLayer === 'boundary' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
             The 17th Parallel
           </button>
           <button
             type="button"
             onClick={() => setActiveLayer('refugees')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'refugees' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
+            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-sm ${ activeLayer === 'refugees' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
             Operation Passage to Freedom
           </button>
           <button
             type="button"
             onClick={() => setActiveLayer('elections')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-xs ${ activeLayer === 'elections' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
+            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-sm ${ activeLayer === 'elections' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
           >
             The 1956 elections
           </button>
@@ -48,7 +48,7 @@ export default function GenevaDivisionMap() {
               ? 'Operation Passage to Freedom (1954–1955)'
               : 'Why the split stuck (1956)'}
           </span>
-          <h3 className="font-display text-2xl font-bold text-ink mt-1">
+          <h3 className="font-display text-xl font-bold text-ink mt-1">
             {activeLayer === 'boundary'
               ? 'A temporary truce line became a Cold War border'
               : activeLayer === 'refugees'
@@ -58,13 +58,13 @@ export default function GenevaDivisionMap() {
         </div>
 
         {/* Print-Cartography SVG Map */}
-        <div className="relative bg-paper border border-rule rounded-xs p-4 aspect-16/9 flex items-center justify-center overflow-hidden">
+        <div className="relative bg-paper border border-rule rounded-sm p-4 aspect-16/9 flex items-center justify-center overflow-hidden">
           <svg viewBox="0 0 800 450" className="w-full h-full select-none" role="img" aria-label="Cartographic map of partitioned Vietnam">
             {/* North Vietnam Outline */}
             <path
               d="M 280,30 Q 420,40 520,90 Q 460,180 430,220 L 290,220 Q 230,120 280,30 Z"
-              fill="#EAE2D5"
-              stroke="#A89F91"
+              fill="var(--color-terrain)"
+              stroke="var(--color-rule-strong)"
               strokeWidth="2"
             />
             <text x="360" y="110" className="fill-ink font-display text-sm font-bold">
@@ -77,8 +77,8 @@ export default function GenevaDivisionMap() {
             {/* South Vietnam Outline */}
             <path
               d="M 290,230 L 430,230 Q 480,280 510,350 Q 460,430 320,420 Q 280,340 290,230 Z"
-              fill="#E0D7C7"
-              stroke="#A89F91"
+              fill="var(--color-terrain-line)"
+              stroke="var(--color-rule-strong)"
               strokeWidth="2"
             />
             <text x="370" y="330" className="fill-ink font-display text-sm font-bold">
@@ -94,7 +94,7 @@ export default function GenevaDivisionMap() {
               y1="225"
               x2="600"
               y2="225"
-              stroke="#8B252D"
+              stroke="var(--color-brand)"
               strokeWidth="2.5"
               strokeDasharray="6,4"
             />
@@ -108,7 +108,7 @@ export default function GenevaDivisionMap() {
                 <path
                   d="M 400,140 Q 480,230 430,320"
                   fill="none"
-                  stroke="#8B252D"
+                  stroke="var(--color-brand)"
                   strokeWidth="3"
                   markerEnd="url(#arrow)"
                 />
@@ -123,8 +123,8 @@ export default function GenevaDivisionMap() {
 
             {activeLayer === 'elections' && (
               <g>
-                <rect x="230" y="195" width="340" height="60" fill="#8B252D" rx="4" className="" />
-                <text x="400" y="230" textAnchor="middle" fill="#ffffff" className="text-xs font-bold">
+                <rect x="230" y="195" width="340" height="60" fill="var(--color-brand)" rx="4" className="" />
+                <text x="400" y="230" textAnchor="middle" fill="var(--color-surface)" className="text-xs font-bold">
                   1956 Elections Cancelled &bull; Division Permanent
                 </text>
               </g>
@@ -133,7 +133,7 @@ export default function GenevaDivisionMap() {
         </div>
 
         {/* Narrative Analysis Ledger */}
-        <div className="p-6 bg-paper border border-rule rounded-xs space-y-3 font-sans text-xs sm:text-sm text-ink">
+        <div className="p-6 bg-paper border border-rule rounded-sm space-y-3 font-sans text-xs sm:text-sm text-ink">
           {activeLayer === 'boundary' && (
             <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p>
@@ -148,7 +148,7 @@ export default function GenevaDivisionMap() {
           {activeLayer === 'refugees' && (
             <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
               <p>
-                Under the Geneva agreement, a 300-day window allowed free movement between zones. Between 850,000 and 1,000,000 northern Vietnamese—predominantly Catholics, civil servants, and anti-communist landowners—fled south, heavily transported by U.S. Navy ships in <strong>Operation Passage to Freedom</strong>.
+                Under the Geneva agreement, a 300-day window allowed free movement between zones. Between 850,000 and 1,000,000 northern Vietnamese fled south, most of them Catholics, government workers and anti-communist landowners. Many sailed on U.S. Navy ships in <strong>Operation Passage to Freedom</strong>.
               </p>
               <p>
                 Roughly 90,000–100,000 southern Viet Minh fighters regathered north, though Hanoi secretly left thousands of political cadres behind to form an underground revolutionary network.
