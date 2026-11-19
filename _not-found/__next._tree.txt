@@ -1,4 +1,4 @@
-:HL["/AmericaUnwrapped/_next/static/chunks/26sdwe9xn3spt.css","style"]
+:HL["/AmericaUnwrapped/_next/static/chunks/1mg50iuk911vy.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"lQRhtQ66MkpWZMYD52QFD","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"lObLHl_YzMC1XQYdGdUs1","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
