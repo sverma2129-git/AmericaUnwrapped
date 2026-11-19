@@ -58,3 +58,62 @@ export function filterGlossary(terms: KeyTerm[], query: string): KeyTerm[] {
       t.significance?.toLowerCase().includes(q)
   );
 }
+
+/** The chapter a study item comes from, for labels, filters and links. */
+export interface ChapterRef {
+  id: string;
+  number: number;
+  title: string;
+}
+
+export interface QuizItem {
+  question: QuizQuestion;
+  chapter: ChapterRef;
+}
+
+export interface GlossaryEntry {
+  term: KeyTerm;
+  chapter: ChapterRef;
+}
+
+function chapterRef(c: ChapterData): ChapterRef {
+  return { id: c.id, number: c.number, title: c.title };
+}
+
+/** Every quiz question in chapter order, with the chapter it belongs to. */
+export function collectQuizItems(chapters: ChapterData[], studyData: Record<string, ChapterStudyData>): QuizItem[] {
+  return chapters.flatMap((c) => (studyData[c.id]?.quiz ?? []).map((question) => ({ question, chapter: chapterRef(c) })));
+}
+
+/**
+ * The same de-duplicated term list as buildGlossary, in chapter order, with the
+ * chapter where each term first appears.
+ */
+export function buildGlossaryEntries(chapters: ChapterData[], studyData: Record<string, ChapterStudyData>): GlossaryEntry[] {
+  const seen = new Set<string>();
+  const entries: GlossaryEntry[] = [];
+  for (const c of chapters) {
+    const data = studyData[c.id];
+    if (!data) continue;
+    for (const term of [...data.flashcards, ...data.briefing.keyTerms]) {
+      if (seen.has(term.term)) continue;
+      seen.add(term.term);
+      entries.push({ term, chapter: chapterRef(c) });
+    }
+  }
+  return entries;
+}
+
+/** Search a term's name, definition, significance and exam tip. */
+export function matchesTerm(term: KeyTerm, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) return true;
+  return [term.term, term.definition, term.significance, term.examTip ?? ''].some((t) => t.toLowerCase().includes(q));
+}
+
+/** "Harry Truman and Dwight Eisenhower (1945–1961)" → name and years. */
+export function splitPresidencyName(full: string): { name: string; start: number; end: number } {
+  const m = full.match(/^(.*?)\s*\((\d{4})\D+(\d{4})\)\s*$/);
+  if (!m) return { name: full, start: 0, end: 0 };
+  return { name: m[1], start: Number(m[2]), end: Number(m[3]) };
+}

@@ -27,7 +27,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
       {/* Archival Docket Header */}
       <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-3 text-xs font-sans">
         <div className="flex items-center gap-2 text-ink-muted">
-          <span className="font-semibold text-[11px]">
+          <span className="font-semibold text-xs">
             {archiveLabel}
           </span>
           {document.archiveId && (
@@ -37,13 +37,13 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
           )}
         </div>
         <div className="flex items-center gap-2">
-          <div className="text-[11px] font-bold px-2 py-0.5 border border-rule bg-paper text-ink">
+          <div className="text-xs font-bold px-2 py-0.5 border border-rule bg-paper text-ink">
             {document.classification}
           </div>
           <button
             type="button"
             onClick={() => openCitation(lookupId)}
-            className="text-[11px] font-bold text-brand hover:underline px-2.5 py-0.5 border border-brand/30 bg-paper cursor-pointer rounded-xs"
+            className="text-xs font-bold text-brand hover:underline px-2.5 py-0.5 border border-brand/30 bg-paper cursor-pointer rounded-xs"
           >
             Source details
           </button>
@@ -57,13 +57,13 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
             {document.title}
           </h4>
           <p className="mt-2 text-xs sm:text-sm text-ink-muted">
-            {document.authorOrSpeaker} &bull; {document.role} &bull; <time>{document.date}</time>
+            {document.authorOrSpeaker}, {document.role}, <time>{document.date}</time>
           </p>
         </div>
 
         {/* Why It Matters Callout — Front & Center */}
         <div className="border-l border-brand pl-4 py-1">
-          <span className="text-[11px] font-bold text-brand block mb-1">
+          <span className="text-xs font-bold text-brand block mb-1">
             Why this document matters
           </span>
           <p className="font-display text-base sm:text-lg text-ink leading-relaxed">
@@ -73,7 +73,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
 
         {/* The Archival Plate: Archival Record / Summary */}
         <div className="relative p-5 sm:p-7 bg-paper border border-rule text-xs sm:text-sm text-ink leading-relaxed rounded-xs">
-          <div className="text-[10px] text-ink-soft mb-3 border-b border-rule pb-1.5 flex items-center justify-between">
+          <div className="text-xs text-ink-soft mb-3 border-b border-rule pb-1.5 flex items-center justify-between">
             <span>
               {document.isVerified ? 'The exact words' : 'A summary in our words'}
             </span>
@@ -90,7 +90,7 @@ export default function DocumentInspector({ document }: DocumentInspectorProps) 
             </div>
           )}
 
-          <div className="mt-4 pt-3 border-t border-rule text-[11px] text-ink-muted flex flex-wrap items-center justify-between gap-2">
+          <div className="mt-4 pt-3 border-t border-rule text-xs text-ink-muted flex flex-wrap items-center justify-between gap-2">
             <span>Repository: {document.archiveSource}</span>
             <span className="italic">
               {document.isVerified

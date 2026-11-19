@@ -94,33 +94,32 @@ export default function VietnamizationTracker() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-2 text-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-2 text-xs">
         <div>
-          <span className="font-bold text-stone-900">
-            Quantitative Trajectory &bull; 1968–1972
+          <span className="font-bold text-ink">
+            1968 to 1972
           </span>
-          <span className="text-stone-500 ml-2">&bull; The Substitution Dynamic</span>
         </div>
-        <span className="text-stone-500 text-[11px]">
+        <span className="text-ink-soft text-xs">
           Tap a point to pick a year
         </span>
       </div>
 
       <div>
-        <h4 className="font-display text-2xl font-bold text-stone-900">
+        <h3 className="font-display text-2xl font-bold text-ink">
           As U.S. troops left, the bombing grew
-        </h4>
-        <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
+        </h3>
+        <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
           Between 1968 and 1972, the United States withdrew over 500,000 ground troops to de-escalate domestic political opposition. However, combat intensity did not decline proportionally: ground combat was transferred to the South Vietnamese army, subsidized by massive air bombardment.
         </p>
       </div>
 
       {/* Interactive Multi-Line SVG Trend Chart */}
-      <div className="bg-white border border-stone-200 p-4 rounded-xs">
+      <div className="bg-white border border-rule p-4 rounded-xs">
         <div className="flex flex-wrap items-center justify-end gap-4 text-xs mb-2">
           <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-stone-900 rounded-full inline-block" />
-            <span className="text-stone-700">U.S. Troop Strength (536k 24k)</span>
+            <span className="w-3 h-3 bg-ink rounded-full inline-block" />
+            <span className="text-ink-muted">U.S. Troop Strength (536k 24k)</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-3 h-3 bg-red-700 rounded-full inline-block" />
@@ -176,7 +175,7 @@ export default function VietnamizationTracker() {
                     x={x}
                     y={height - padding.bottom + 20}
                     textAnchor="middle"
-                    className={`text-xs ${ isSelected ? 'fill-stone-950 font-bold underline' : 'fill-stone-500 hover:fill-stone-900' }`}
+                    className={`text-xs ${ isSelected ? 'fill-ink font-bold underline' : 'fill-ink-soft hover:fill-ink' }`}
                   >
                     {year}
                   </text>
@@ -227,7 +226,7 @@ export default function VietnamizationTracker() {
                         x={x}
                         y={yUs - 10}
                         textAnchor="middle"
-                        className="text-[9px] font-bold fill-stone-900"
+                        className="text-xs font-bold fill-ink"
                       >
                         {TRACKER_DATA[year].usTroops.toLocaleString()} troops
                       </text>
@@ -235,7 +234,7 @@ export default function VietnamizationTracker() {
                         x={x}
                         y={yArvn + 16}
                         textAnchor="middle"
-                        className="text-[9px] font-bold fill-red-800"
+                        className="text-xs font-bold fill-red-800"
                       >
                         {TRACKER_DATA[year].arvnDeaths.toLocaleString()} ARVN KIA
                       </text>
@@ -250,59 +249,59 @@ export default function VietnamizationTracker() {
 
       {/* Selected Year Data Ledger */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-4 bg-white border border-stone-200 rounded-xs">
-          <div className="text-[10px] text-stone-500">
+        <div className="p-4 bg-white border border-rule rounded-xs">
+          <div className="text-xs text-ink-soft">
             U.S. Troop Level ({selectedYear})
           </div>
-          <div className="font-display text-2xl font-bold mt-1 text-stone-900">
+          <div className="font-display text-2xl font-bold mt-1 text-ink">
             {current.usTroops.toLocaleString()}
           </div>
-          <div className="text-xs text-stone-500 mt-1">
+          <div className="text-xs text-ink-soft mt-1">
             U.S. Deaths in {selectedYear}: {current.usDeaths.toLocaleString()}
           </div>
         </div>
 
-        <div className="p-4 bg-white border border-stone-200 rounded-xs">
-          <div className="text-[10px] text-red-700 font-bold">
+        <div className="p-4 bg-white border border-rule rounded-xs">
+          <div className="text-xs text-red-700 font-bold">
             ARVN Combat KIA ({selectedYear})
           </div>
           <div className="font-display text-2xl font-bold mt-1 text-red-900">
             {current.arvnDeaths.toLocaleString()}
           </div>
-          <div className="text-xs text-stone-500 mt-1">
+          <div className="text-xs text-ink-soft mt-1">
             South Vietnam took over the ground fighting
           </div>
         </div>
 
-        <div className="p-4 bg-white border border-stone-200 rounded-xs">
-          <div className="text-[10px] text-stone-500">
+        <div className="p-4 bg-white border border-rule rounded-xs">
+          <div className="text-xs text-ink-soft">
             U.S. bomb tonnage
           </div>
-          <div className="font-display text-2xl font-bold mt-1 text-stone-900">
+          <div className="font-display text-2xl font-bold mt-1 text-ink">
             {current.bombTonnage}
           </div>
-          <div className="text-xs text-stone-500 mt-1">
+          <div className="text-xs text-ink-soft mt-1">
             Planes replaced ground troops
           </div>
         </div>
       </div>
 
       {/* Selected Year Milestone & Historiographical Debate */}
-      <div className="p-5 bg-white border border-stone-200 rounded-xs space-y-4">
+      <div className="p-5 bg-white border border-rule rounded-xs space-y-4">
         <div>
-          <span className="text-[10px] text-stone-500 font-bold block mb-1">
+          <span className="text-xs text-ink-soft font-bold block mb-1">
             Operational Milestone · {selectedYear}
           </span>
-          <p className="font-display text-base text-stone-800 leading-relaxed">
+          <p className="font-display text-base text-ink leading-relaxed">
             {current.milestone}
           </p>
         </div>
 
-        <div className="pt-3 border-t border-stone-100">
-          <span className="text-[10px] text-brand font-bold block mb-1">
+        <div className="pt-3 border-t border-rule">
+          <span className="text-xs text-brand font-bold block mb-1">
             Historians disagree:
           </span>
-          <p className="font-display text-sm text-stone-700 leading-relaxed">
+          <p className="font-display text-sm text-ink-muted leading-relaxed">
             {current.contestedDebate}
           </p>
         </div>

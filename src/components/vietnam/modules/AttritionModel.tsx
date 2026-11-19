@@ -14,23 +14,22 @@ export default function AttritionModel() {
   return (
     <div className="space-y-6">
       {/* Editorial Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-2 text-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-2 text-xs">
         <div>
-          <span className="font-bold text-stone-900">
-            Systems Analysis &bull; Operational Model
+          <span className="font-bold text-ink">
+            The crossover point
           </span>
-          <span className="text-stone-500 ml-2">&bull; MACV Attrition &amp; The Crossover Point (1965–1967)</span>
         </div>
-        <span className="text-stone-500 text-[11px]">
+        <span className="text-ink-soft text-xs">
           Try it yourself
         </span>
       </div>
 
       <div>
-        <h4 className="font-display text-2xl font-bold text-stone-900">
+        <h3 className="font-display text-2xl font-bold text-ink">
           Could the U.S. kill enemy soldiers faster than Hanoi replaced them?
-        </h4>
-        <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
+        </h3>
+        <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
           General William Westmoreland defined American military victory through reaching the &ldquo;crossover point&rdquo;: the threshold at which allied firepower would kill or incapacitate enemy soldiers faster than North Vietnam and the Viet Cong could replenish them. Adjust the operational parameters below to examine the demographic and tactical assumptions that governed the debate.
         </p>
       </div>
@@ -38,13 +37,13 @@ export default function AttritionModel() {
       {/* Sliders & Visual Reservoir Chart */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         {/* Sliders Control Panel */}
-        <div className="md:col-span-6 space-y-6 bg-white p-5 border border-stone-200 rounded-xs">
+        <div className="md:col-span-6 space-y-6 bg-white p-5 border border-rule rounded-xs">
           <div>
             <div className="flex justify-between text-xs mb-2">
-              <span className="text-stone-700 font-bold">
+              <span className="text-ink-muted font-bold">
                 Claimed Monthly Enemy Losses (MACV):
               </span>
-              <span className="font-bold text-stone-900">
+              <span className="font-bold text-ink">
                 {usKillRate.toLocaleString()} / mo
               </span>
             </div>
@@ -58,7 +57,7 @@ export default function AttritionModel() {
               className="w-full accent-stone-900 cursor-pointer"
               aria-label="Claimed monthly enemy losses"
             />
-            <div className="flex justify-between text-[10px] text-stone-500 mt-1">
+            <div className="flex justify-between text-xs text-ink-soft mt-1">
               <span>4,000 (Early 1965)</span>
               <span>12,000 (MACV 1967 Avg)</span>
               <span>22,000 (Peak Claim)</span>
@@ -67,10 +66,10 @@ export default function AttritionModel() {
 
           <div>
             <div className="flex justify-between text-xs mb-2">
-              <span className="text-stone-700 font-bold">
+              <span className="text-ink-muted font-bold">
                 Share of firefights the enemy started:
               </span>
-              <span className="font-bold text-stone-900">
+              <span className="font-bold text-ink">
                 {combatInitiationRate}%
               </span>
             </div>
@@ -84,26 +83,26 @@ export default function AttritionModel() {
               className="w-full accent-stone-900 cursor-pointer"
               aria-label="Enemy firefight initiation rate"
             />
-            <div className="flex justify-between text-[10px] text-stone-500 mt-1">
+            <div className="flex justify-between text-xs text-ink-soft mt-1">
               <span>50% (Open warfare)</span>
               <span>78% (Pentagon Systems Study)</span>
               <span>90% (Strict guerrilla avoidance)</span>
             </div>
-            <p className="mt-2 font-display text-xs text-stone-500">
+            <p className="mt-2 font-display text-xs text-ink-soft">
               Department of Defense Systems Analysis under Alain Enthoven found that communist forces initiated over 75% of firefights, allowing them to disengage and regulate casualty rates when losses mounted.
             </p>
           </div>
 
-          <div className="pt-4 border-t border-stone-100 text-xs text-stone-600">
+          <div className="pt-4 border-t border-rule text-xs text-ink-muted">
             <div>Young men reaching draft age in the North: <strong>~200,000/yr (16,500/mo)</strong></div>
-            <div className="text-[11px] text-stone-500 mt-0.5">Demographic pool reaching age 18 annually in North Vietnam.</div>
+            <div className="text-xs text-ink-soft mt-0.5">Demographic pool reaching age 18 annually in North Vietnam.</div>
           </div>
         </div>
 
         {/* Visual Reservoir Graphic & Calculation Feedback */}
         <div className="md:col-span-6 space-y-4">
-          <div className="p-5 bg-white border border-stone-200 rounded-xs space-y-4">
-            <span className="text-[10px] text-stone-500 block">
+          <div className="p-5 bg-white border border-rule rounded-xs space-y-4">
+            <span className="text-xs text-ink-soft block">
               Losses and replacements
             </span>
 
@@ -111,20 +110,20 @@ export default function AttritionModel() {
             <div className="space-y-3 pt-2">
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-stone-600">New troops Hanoi sends each month:</span>
-                  <span className="font-bold text-stone-900">16,500 cadres</span>
+                  <span className="text-ink-muted">New troops Hanoi sends each month:</span>
+                  <span className="font-bold text-ink">16,500 cadres</span>
                 </div>
-                <div className="h-6 w-full bg-stone-200 rounded-xs overflow-hidden">
-                  <div className="h-full bg-stone-700" style={{ width: '75%' }} />
+                <div className="h-6 w-full bg-parchment rounded-xs overflow-hidden">
+                  <div className="h-full bg-ink-muted" style={{ width: '75%' }} />
                 </div>
               </div>
 
               <div>
                 <div className="flex justify-between text-xs mb-1">
-                  <span className="text-stone-600">Troops lost in combat:</span>
+                  <span className="text-ink-muted">Troops lost in combat:</span>
                   <span className="font-bold text-red-700">{effectiveLosses.toLocaleString()} / mo</span>
                 </div>
-                <div className="h-6 w-full bg-stone-200 rounded-xs overflow-hidden">
+                <div className="h-6 w-full bg-parchment rounded-xs overflow-hidden">
                   <div
                     className="h-full bg-red-700 transition-all duration-300"
                     style={{ width: `${Math.min(100, (effectiveLosses / 22000) * 100)}%` }}
@@ -135,7 +134,7 @@ export default function AttritionModel() {
 
             {/* Resulting Balance Card */}
             <div className={`p-4 border rounded-xs transition-colors ${ netMonthlyChange > 0 ? 'bg-parchment border-rule' : 'bg-emerald-50 border-emerald-300' }`}>
-              <div className="text-[10px] font-bold text-ink-soft">
+              <div className="text-xs font-bold text-ink-soft">
                 Change in enemy troops each month:
               </div>
               <div className="font-display text-2xl font-bold mt-1 text-ink">
@@ -153,29 +152,29 @@ export default function AttritionModel() {
 
       {/* Tripartite Historiographical Ledger */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-        <div className="p-4 bg-stone-50 border border-stone-200 rounded-xs text-xs">
-          <span className="font-bold text-stone-700 block mb-1">
+        <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+          <span className="font-bold text-ink-muted block mb-1">
             1. MACV Attrition Logic (Westmoreland)
           </span>
-          <p className="font-display text-stone-700 leading-relaxed text-sm">
+          <p className="font-display text-ink-muted leading-relaxed text-sm">
             Commanders argued that massive firepower (artillery, B-52 Arc Light strikes, helicopter gunships) would inflict unendurable human costs, eventually forcing Hanoi to calculate that continued military struggle was futile.
           </p>
         </div>
 
-        <div className="p-4 bg-stone-50 border border-stone-200 rounded-xs text-xs">
-          <span className="font-bold text-stone-700 block mb-1">
+        <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+          <span className="font-bold text-ink-muted block mb-1">
             2. Pentagon Systems Analysis (Enthoven)
           </span>
-          <p className="font-display text-stone-700 leading-relaxed text-sm">
+          <p className="font-display text-ink-muted leading-relaxed text-sm">
             Civilian analysts in the Defense Department calculated that because the enemy chose when and where to fight in ~78% of contacts, communist commanders could simply throttle back operations to maintain their forces indefinitely.
           </p>
         </div>
 
-        <div className="p-4 bg-stone-50 border border-stone-200 rounded-xs text-xs">
-          <span className="font-bold text-stone-700 block mb-1">
+        <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+          <span className="font-bold text-ink-muted block mb-1">
             3. Hanoi’s Strategic Calculation (Le Duan)
           </span>
-          <p className="font-display text-stone-700 leading-relaxed text-sm">
+          <p className="font-display text-ink-muted leading-relaxed text-sm">
             Operating under revolutionary war doctrine (*Chien tranh nhan dan*), Hanoi accepted casualty ratios exceeding 10-to-1, calculating that American democratic public opinion would exhaust its willingness to sustain casualties long before North Vietnam ran out of soldiers.
           </p>
         </div>

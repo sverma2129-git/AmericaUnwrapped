@@ -122,12 +122,11 @@ export default function TetOffensiveMap() {
   return (
     <div className="space-y-6">
       {/* Editorial Header Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-3 text-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-3 text-xs">
         <div>
-          <span className="font-bold text-stone-900">
+          <span className="font-bold text-ink">
             Map of the attacks
           </span>
-          <span className="text-stone-500 ml-2">&bull; South Vietnam · Tet 1968 Strike Coordinates</span>
         </div>
 
         <button
@@ -158,13 +157,13 @@ export default function TetOffensiveMap() {
             </text>
 
             {/* Region / Neighbor Labels */}
-            <text x="195" y="140" className="fill-ink-soft text-[9px] -rotate-45">
+            <text x="195" y="140" className="fill-ink-soft text-xs -rotate-45">
               LAOS
             </text>
-            <text x="210" y="320" className="fill-ink-soft text-[9px]">
+            <text x="210" y="320" className="fill-ink-soft text-xs">
               CAMBODIA
             </text>
-            <text x="350" y="110" className="fill-ink-muted text-[9px]">
+            <text x="350" y="110" className="fill-ink-muted text-xs">
               SOUTH CHINA SEA
             </text>
 
@@ -220,7 +219,7 @@ export default function TetOffensiveMap() {
                   <text
                     x={loc.coords.x + 8}
                     y={loc.coords.y + 3}
-                    className={`text-[8px] font-bold ${ isSelected ? 'fill-red-950 font-extrabold underline' : 'fill-stone-800' }`}
+                    className={`text-[8px] font-bold ${ isSelected ? 'fill-red-950 font-extrabold underline' : 'fill-ink' }`}
                   >
                     {loc.name.split('(')[0].trim()}
                   </text>
@@ -233,15 +232,15 @@ export default function TetOffensiveMap() {
         {/* Selected Sector Historical Investigation */}
         <div className="lg:col-span-6 space-y-4">
           <div className="p-4 bg-paper border border-rule rounded-xs text-ink">
-            <h4 className="font-display text-xl font-bold text-ink">
+            <h3 className="font-display text-xl font-bold text-ink">
               {current.name}
-            </h4>
+            </h3>
             <p className="font-display text-xs text-ink-muted mt-1">
               {current.significance}
             </p>
 
             <div className="mt-4 pt-3 border-t border-rule">
-              <span className="text-[10px] text-brand font-bold block mb-1">
+              <span className="text-xs text-brand font-bold block mb-1">
                 The fighting:
               </span>
               <p className="font-display text-sm text-ink leading-relaxed">
@@ -253,7 +252,7 @@ export default function TetOffensiveMap() {
           {/* Symmetrical Dual Repercussions */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans">
             <div className="p-3 bg-parchment border border-rule rounded-xs">
-              <span className="text-[10px] font-bold text-brand block mb-1">
+              <span className="text-xs font-bold text-brand block mb-1">
                 Hanoi’s Result (Battlefield):
               </span>
               <p className="font-display text-ink-muted leading-normal text-xs">
@@ -262,7 +261,7 @@ export default function TetOffensiveMap() {
             </div>
 
             <div className="p-3 bg-parchment border border-rule rounded-xs">
-              <span className="text-[10px] font-bold text-ink block mb-1">
+              <span className="text-xs font-bold text-ink block mb-1">
                 Washington’s Result (Politics):
               </span>
               <p className="font-display text-ink-muted leading-normal text-xs">

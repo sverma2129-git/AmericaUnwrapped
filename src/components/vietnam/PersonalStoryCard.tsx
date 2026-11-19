@@ -10,14 +10,14 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
   return (
     <aside
       aria-label={`One person's war: ${story.name}`}
-      className="max-w-3xl mx-auto rounded-xl border border-brand-rule bg-brand-tint p-6 sm:p-8 space-y-5"
+      className="max-w-3xl border-l-[3px] border-brand pl-6 space-y-5"
     >
       <div className="space-y-1">
         <h3 className="font-display text-2xl font-bold text-ink">{story.name}</h3>
-        <p className="text-sm text-ink-muted">One person&rsquo;s war &middot; {story.role}</p>
+        <p className="text-sm text-ink-muted">One person’s war: {story.role}</p>
       </div>
 
-      <div className="space-y-4 font-sans text-base text-ink leading-relaxed">
+      <div className="space-y-4 font-serif text-[1.0625rem] text-ink leading-relaxed">
         {story.paragraphs.map((p, idx) => (
           <CitedParagraph key={idx} text={p} />
         ))}

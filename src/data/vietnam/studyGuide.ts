@@ -14,6 +14,8 @@ export interface TurningPoint {
   event: string;
   significance: string;
   chapterId: string;
+  /** The presidency the event falls under (an id from PRESIDENCIES). */
+  presidencyId: string;
   /** Rendered with emphasis as a landmark exam topic. */
   highlight?: boolean;
 }
@@ -91,24 +93,28 @@ export const TURNING_POINTS: TurningPoint[] = [
     event: 'Fall of Dien Bien Phu',
     significance: 'Ended French colonial rule and led straight to the 1954 Geneva Accords, which split Vietnam.',
     chapterId: 'french-indochina-dien-bien-phu',
+    presidencyId: 'truman-ike',
   },
   {
     date: 'July 1954',
     event: 'Geneva Accords',
     significance: 'A temporary split at the 17th parallel. Diem called off the 1956 elections with U.S. backing.',
     chapterId: 'geneva-south-vietnam',
+    presidencyId: 'truman-ike',
   },
   {
     date: 'Nov 1963',
     event: 'Overthrow of Diem',
     significance: 'Diem’s killing left no one firmly in charge in Saigon, and the U.S. took on more responsibility.',
     chapterId: 'kennedy-and-diem',
+    presidencyId: 'kennedy',
   },
   {
     date: 'Aug 1964',
     event: 'Gulf of Tonkin Resolution',
     significance: 'Passed 504–2 after a reported attack that never happened. It let Johnson wage war without a declaration from Congress.',
     chapterId: 'gulf-of-tonkin',
+    presidencyId: 'johnson',
     highlight: true,
   },
   {
@@ -116,12 +122,14 @@ export const TURNING_POINTS: TurningPoint[] = [
     event: 'Rolling Thunder and the first ground troops',
     significance: 'The war became American. 3,500 Marines landed at Da Nang, and a three-year bombing campaign began.',
     chapterId: 'americanization-attrition',
+    presidencyId: 'johnson',
   },
   {
     date: 'Jan 1968',
     event: 'The Tet Offensive',
     significance: 'Surprise attacks on more than 100 cities and towns. Americans stopped believing victory was near, and Johnson’s presidency never recovered.',
     chapterId: 'tet-offensive',
+    presidencyId: 'johnson',
     highlight: true,
   },
   {
@@ -129,24 +137,28 @@ export const TURNING_POINTS: TurningPoint[] = [
     event: 'Vietnamization and the Silent Majority',
     significance: 'Nixon handed more of the fighting to the ARVN and asked the quiet, conservative majority of Americans to back him.',
     chapterId: 'nixon-and-vietnamization',
+    presidencyId: 'nixon',
   },
   {
     date: 'June 1971',
     event: 'The Pentagon Papers',
     significance: 'A leaked Defense Department study showed that four administrations had misled the public. The Supreme Court upheld press freedom in New York Times Co. v. United States.',
     chapterId: 'memory-and-the-argument',
+    presidencyId: 'nixon',
   },
   {
     date: 'Jan 1973',
     event: 'Paris Peace Accords',
     significance: 'All U.S. combat troops left. Hanoi kept 150,000 troops in South Vietnam.',
     chapterId: 'paris-peace-accords',
+    presidencyId: 'nixon',
   },
   {
     date: 'Nov 1973',
     event: 'War Powers Act of 1973',
     significance: 'Passed over Nixon’s veto to limit undeclared wars. Presidents must report within 48 hours and bring troops home within 60 days without approval.',
     chapterId: 'the-collapse',
+    presidencyId: 'nixon',
     highlight: true,
   },
   {
@@ -154,64 +166,70 @@ export const TURNING_POINTS: TurningPoint[] = [
     event: 'Fall of Saigon',
     significance: 'North Vietnam’s army took Saigon and Vietnam was united under communist rule. The U.S. finished the Operation Frequent Wind evacuation.',
     chapterId: 'the-collapse',
+    presidencyId: 'ford',
   },
 ];
 
 export const DBQ_PROMPTS: DbqPrompt[] = [
   {
     number: 1,
-    theme: 'Why the U.S. escalated',
+    theme: 'Tensions at home, 1964–1975',
     prompt:
-      'Evaluate whether Cold War containment or politics at home did more to drive U.S. escalation in Vietnam between 1950 and 1965.',
+      'Analyze the ways in which the Vietnam War heightened social, political, and economic tensions in the United States. Focus your answer on the period 1964 to 1975.',
     thesis:
-      'Containment and the Domino Theory gave presidents their public reason to intervene. But politics at home mattered more. After the communist victory in China, Eisenhower, Kennedy and Johnson each feared being blamed for losing Vietnam, and that fear drove escalation.',
+      'The war strained the country on all three fronts. Socially, the draft and televised combat split Americans by age and class and filled campuses with protest. Politically, the credibility gap and the Pentagon Papers destroyed trust in the president and pushed Congress to take back its war powers. Economically, paying for the war and the Great Society at the same time, without raising taxes, fed inflation.',
     evidence: [
-      'Eisenhower’s April 1954 press conference (Domino Theory)',
-      'Paying 80% of France’s military costs after the Korean War began',
-      'OPLAN 34A secret commando raids',
-      'The Gulf of Tonkin Resolution, passed just before the 1964 election against Barry Goldwater',
+      'The draft, whose burden fell hardest on working-class Americans',
+      'The Tet Offensive (1968) and Walter Cronkite’s “mired in stalemate” broadcast',
+      'The move into Cambodia and the Kent State shootings (1970)',
+      'The Pentagon Papers (1971) and New York Times Co. v. United States',
+      'Funding the war and the Great Society without raising taxes, which fed inflation',
+      'The War Powers Act, passed over Nixon’s veto in November 1973',
     ],
     commonErrors: [
-      'Treating containment as the only motive and ignoring politics at home',
-      'Leaving out the Korean War and the fear of another “loss of China”',
-      'Assuming the Gulf of Tonkin incident came out of nowhere',
+      'Covering only social tension and skipping the political and economic parts of the prompt',
+      'Listing protests without explaining what tension each one shows',
+      'Stopping in 1968 instead of following the prompt through 1975',
     ],
   },
   {
     number: 2,
-    theme: 'The news, public opinion and trust',
+    theme: 'Nixon’s challenges, 1968–1974',
     prompt:
-      'Analyze how far news coverage and leaked government secrets created the credibility gap and changed American support for the war between 1965 and 1973.',
+      'Analyze the international and domestic challenges the United States faced between 1968 and 1974, and evaluate how President Richard Nixon’s administration responded to them.',
     thesis:
-      'Uncensored television and leaked documents tore down the government’s upbeat claims. They made the 1968 Tet Offensive the turning point in public opinion and left a lasting loss of trust in the federal government.',
+      'Nixon faced a war Americans no longer supported and a country divided over it. Abroad, he answered with Vietnamization, the Nixon Doctrine and wider bombing, and he used talks with Moscow and Beijing to press Hanoi. At home, he appealed to the Silent Majority, but the secret bombing of Cambodia, Kent State and the Pentagon Papers deepened distrust, and Congress answered by limiting his power.',
     evidence: [
-      'War on the living-room TV: Morley Safer’s Cam Ne report (1965)',
-      'Walter Cronkite’s February 1968 CBS broadcast (“mired in stalemate”)',
-      'Daniel Ellsberg’s leak of the Pentagon Papers (1971)',
-      'New York Times Co. v. United States, which barred the government from blocking publication',
+      'Vietnamization: U.S. troops cut from 543,000 to about 24,000 by late 1972',
+      'The Nixon Doctrine (Guam, 1969)',
+      'Operation Menu and the 1970 move into Cambodia',
+      'The Kent State shootings and the Cooper-Church Amendment (1970)',
+      'The Christmas Bombing (1972) and the Paris Peace Accords (January 1973)',
+      'The War Powers Act (1973) and Nixon’s resignation over Watergate (1974)',
     ],
     commonErrors: [
-      'Mixing up Tet’s military result (a U.S. win) with its political result (a U.S. loss)',
-      'Calling TV news biased instead of comparing official reports with what viewers saw',
-      'Leaving out the Supreme Court’s Pentagon Papers ruling',
+      'Answering only half the prompt: describe the challenges and also evaluate the responses',
+      'Treating Vietnamization as a quick end to the war: the U.S. withdrawal took four years',
+      'Leaving out the domestic side: protest, the Pentagon Papers and Congress pushing back',
     ],
   },
   {
     number: 3,
-    theme: 'Who decides on war',
-    prompt:
-      'Evaluate how far the Vietnam War shifted the power to make war between the president and Congress for the long term.',
+    theme: 'How much did the war change America? 1960–1975',
+    prompt: 'Evaluate the extent to which the Vietnam War fostered change in the United States between 1960 and 1975.',
     thesis:
-      'Congress passed the War Powers Act of 1973 to take back control of undeclared wars after the Tonkin Resolution and the move into Cambodia. But later presidents have questioned whether the law is constitutional, so it has limited them only partly.',
+      'The war changed how far Americans trusted their government and how much power Congress gave the president to make war. It changed far less about the goal of U.S. foreign policy: containment of communism guided every president from Kennedy to Ford.',
     evidence: [
-      'Article I, Sec. 8 (Congress declares war) vs. Article II (President as Commander-in-Chief)',
-      'The Gulf of Tonkin Resolution, used as a declaration of war in practice',
-      'The secret bombing of Cambodia, hidden from Congress',
-      'Congress overriding Nixon’s veto of the War Powers Act in November 1973',
+      'The Gulf of Tonkin Resolution (1964) and the War Powers Act (1973)',
+      'The credibility gap after the Tet Offensive (1968)',
+      'The Pentagon Papers (1971) and the Supreme Court ruling on press freedom',
+      'Campus protest, the move into Cambodia and Kent State (1970)',
+      'Continuity: the Domino Theory and containment, from Kennedy to Nixon’s promises to Thieu',
     ],
     commonErrors: [
-      'Thinking the president signed the War Powers Act (Congress passed it over his veto)',
-      'Leaving out the 48-hour notice and the 60-day deadline',
+      'Only listing changes: “to what extent” asks you to weigh change against continuity',
+      'Ignoring the dates: the prompt starts in 1960, before American combat troops arrived',
+      'Describing events without saying what changed because of them',
     ],
   },
 ];

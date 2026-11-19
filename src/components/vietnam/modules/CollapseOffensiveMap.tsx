@@ -85,12 +85,11 @@ export default function CollapseOffensiveMap() {
   return (
     <div className="space-y-6">
       {/* Editorial Phase Scrubber */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-stone-200 gap-3 text-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-3 text-xs">
         <div>
-          <span className="font-bold text-stone-900">
+          <span className="font-bold text-ink">
             Map of the final offensive
           </span>
-          <span className="text-stone-500 ml-2">&bull; The 55-Day Spring 1975 Collapse</span>
         </div>
 
         {/* Phase Buttons */}
@@ -99,7 +98,7 @@ export default function CollapseOffensiveMap() {
             <button
               key={idx}
               onClick={() => setActivePhase(idx as PhaseIndex)}
-              className={`px-2.5 py-1 rounded-xs border transition-colors cursor-pointer whitespace-nowrap ${ activePhase === idx ? 'bg-stone-900 text-stone-100 border-stone-900 font-bold' : 'bg-white text-stone-700 border-stone-300 hover:border-stone-500' }`}
+              className={`px-2.5 py-1 rounded-xs border transition-colors cursor-pointer whitespace-nowrap ${ activePhase === idx ? 'bg-ink text-paper border-ink font-bold' : 'bg-white text-ink-muted border-rule-strong hover:border-rule-strong' }`}
             >
               Phase {idx + 1}
             </button>
@@ -110,7 +109,7 @@ export default function CollapseOffensiveMap() {
       {/* Map & Operational Ledger Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Geographic Map of South Vietnam with Highways and Advances */}
-        <div className="lg:col-span-6 bg-[#eee8db] border border-stone-300 rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
+        <div className="lg:col-span-6 bg-[#eee8db] border border-rule-strong rounded-xs p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
           <svg viewBox="180 50 250 460" className="w-full h-full select-none" role="img" aria-label="1975 Spring Offensive operational map">
             {/* South Vietnam Coastline Silhouette */}
             <path
@@ -130,7 +129,7 @@ export default function CollapseOffensiveMap() {
               strokeWidth="2"
               strokeDasharray="3,3"
             />
-            <text x="365" y="240" className="fill-stone-500 text-[7px] rotate-75">
+            <text x="365" y="240" className="fill-ink-soft text-[7px] rotate-75">
               ROUTE 1
             </text>
 
@@ -142,7 +141,7 @@ export default function CollapseOffensiveMap() {
               strokeWidth="1.5"
               strokeDasharray="2,2"
             />
-            <text x="275" y="210" className="fill-stone-500 text-[7px] rotate-70">
+            <text x="275" y="210" className="fill-ink-soft text-[7px] rotate-70">
               ROUTE 14
             </text>
 
@@ -205,7 +204,7 @@ export default function CollapseOffensiveMap() {
                   <text
                     x={city.x + 8}
                     y={city.y + 3}
-                    className={`text-[8px] font-bold ${ isCurrent ? 'fill-red-950 font-extrabold underline' : 'fill-stone-800' }`}
+                    className={`text-[8px] font-bold ${ isCurrent ? 'fill-red-950 font-extrabold underline' : 'fill-ink' }`}
                   >
                     {city.name}
                   </text>
@@ -217,44 +216,44 @@ export default function CollapseOffensiveMap() {
 
         {/* Phase Narrative & Logistic Analysis */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="p-4 bg-white border border-stone-200 rounded-xs">
-            <div className="flex items-center justify-between text-[10px] text-stone-500 mb-1">
+          <div className="p-4 bg-white border border-rule rounded-xs">
+            <div className="flex items-center justify-between text-xs text-ink-soft mb-1">
               <span>PHASE {activePhase + 1} OF 5</span>
               <span>{current.date}</span>
             </div>
-            <h4 className="font-display text-xl font-bold text-stone-900">
+            <h3 className="font-display text-xl font-bold text-ink">
               {current.title}
-            </h4>
+            </h3>
             <div className="text-xs text-brand font-medium mt-0.5">
               Sector: {current.location}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-stone-100">
-              <span className="text-[10px] text-stone-500 font-bold block mb-1">
+            <div className="mt-4 pt-3 border-t border-rule">
+              <span className="text-xs text-ink-soft font-bold block mb-1">
                 What happened on the ground:
               </span>
-              <p className="font-display text-sm text-stone-800 leading-relaxed">
+              <p className="font-display text-sm text-ink leading-relaxed">
                 {current.narrative}
               </p>
             </div>
           </div>
 
           {/* Aid Cuts & Logistics Factor */}
-          <div className="p-4 bg-stone-50 border border-stone-200 rounded-xs text-xs">
-            <span className="font-bold text-stone-600 block mb-1">
+          <div className="p-4 bg-parchment-light border border-rule rounded-xs text-xs">
+            <span className="font-bold text-ink-muted block mb-1">
               Logistical &amp; Aid Factors:
             </span>
-            <p className="font-display text-stone-700 leading-relaxed text-sm">
+            <p className="font-display text-ink-muted leading-relaxed text-sm">
               {current.logisticsAndAid}
             </p>
           </div>
 
           {/* Historical Consequence */}
-          <div className="p-4 bg-stone-100/80 border-l border-stone-800 rounded-r-xs text-xs">
-            <span className="font-bold text-stone-700 block mb-1">
+          <div className="p-4 bg-parchment/80 border-l border-ink rounded-r-xs text-xs">
+            <span className="font-bold text-ink-muted block mb-1">
               Why it mattered in the 55 days:
             </span>
-            <p className="font-display text-stone-800 leading-relaxed">
+            <p className="font-display text-ink leading-relaxed">
               {current.significance}
             </p>
           </div>

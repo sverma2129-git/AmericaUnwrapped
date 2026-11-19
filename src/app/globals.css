@@ -197,3 +197,9 @@
   border-color: #cbd5e1;
   background-color: #f8fafc;
 }
+
+/* Study guide: two sticky bars sit over the top of the page, so anything that
+   receives focus or is scrolled to by #link stops below them (WCAG 2.4.11). */
+html:has(#study-sections) {
+  scroll-padding-top: 7.75rem;
+}

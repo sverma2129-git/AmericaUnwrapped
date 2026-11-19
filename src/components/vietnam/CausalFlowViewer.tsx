@@ -1,101 +1,85 @@
-'use client';
-
 import React from 'react';
 import { CausalStep } from '@/types/vietnam';
 
 interface CausalFlowViewerProps {
   causalChain: CausalStep;
+  /** Off where a surrounding panel already names the section. */
+  showHeading?: boolean;
 }
 
-export default function CausalFlowViewer({ causalChain }: CausalFlowViewerProps) {
+/**
+ * One decision traced through to its consequence, as four numbered steps on a
+ * single line. The steps are a real sequence, so they are numbered.
+ */
+export default function CausalFlowViewer({ causalChain, showHeading = true }: CausalFlowViewerProps) {
+  const steps: { title: string; meta?: string; body: { label?: string; text: string; strong?: boolean }[] }[] = [
+    {
+      title: 'The decision',
+      meta: `${causalChain.decision.actor}, ${causalChain.decision.date}`,
+      body: [{ text: causalChain.decision.action, strong: true }],
+    },
+    {
+      title: 'What they missed',
+      body: [
+        { label: 'They assumed', text: causalChain.assumption.premise },
+        { label: 'The risk nobody checked', text: causalChain.assumption.blindSpot },
+      ],
+    },
+    {
+      title: 'What happened next',
+      body: [
+        { label: 'First', text: causalChain.result.immediate },
+        { label: 'The other side’s answer', text: causalChain.result.counterAction },
+      ],
+    },
+    { title: 'What it led to', body: [{ text: causalChain.unintendedConsequence, strong: true }] },
+  ];
+
   return (
-    <div className="py-8 border-t border-b border-rule">
-      {/* Kicker & Title */}
-      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-8 gap-2">
-        <div>
-          <h3 className="font-display text-2xl sm:text-3xl font-bold text-ink">
-            Cause and effect
-          </h3>
-        </div>
-        <span className="text-xs text-ink-soft">
-          Decision Blind Spot Reaction Fallout
-        </span>
-      </div>
-
-      {/* 4-Step Typographic Ledger with Hairline Dividers */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-        {/* Step 1: Decision */}
-        <div className="space-y-2 border-l border-ink pl-4 py-1">
-          <div className="flex items-center justify-between text-[11px] text-ink-soft">
-            <span className="font-bold text-ink">I. The Decision</span>
-            <span>{causalChain.decision.date}</span>
-          </div>
-          <div className="text-xs font-semibold text-ink-muted">
-            Actor: {causalChain.decision.actor}
-          </div>
-          <p className="font-display text-sm text-ink leading-relaxed">
-            {causalChain.decision.action}
+    <div>
+      {showHeading && (
+        <>
+          <h2 className="font-display text-[1.75rem] font-bold tracking-tight text-ink sm:text-[2.125rem]">Cause and effect</h2>
+          <p className="mt-2 max-w-[62ch] text-[1.0625rem] leading-relaxed text-ink-muted">
+            One decision from this chapter, followed step by step to a result nobody planned.
           </p>
-        </div>
+        </>
+      )}
 
-        {/* Step 2: Assumption & Blind Spot */}
-        <div className="space-y-2 border-l border-rule pl-4 py-1">
-          <div className="text-[11px] text-ink-soft font-bold">
-            2. What they missed
-          </div>
-          <div>
-            <div className="text-[10px] text-ink-soft">Premise:</div>
-            <p className="font-display text-xs text-ink-muted leading-normal">
-              {causalChain.assumption.premise}
-            </p>
-          </div>
-          <div className="pt-1">
-            <div className="text-[10px] text-brand font-semibold">Unexamined Risk:</div>
-            <p className="font-display text-xs text-ink leading-normal">
-              {causalChain.assumption.blindSpot}
-            </p>
-          </div>
-        </div>
+      <ol className={showHeading ? 'mt-8' : ''}>
+        {steps.map((step, i) => {
+          const last = i === steps.length - 1;
+          return (
+            <li key={step.title} className="relative grid grid-cols-[2.25rem_minmax(0,1fr)] gap-x-4 sm:gap-x-6">
+              <span
+                className={`relative z-10 flex h-9 w-9 items-center justify-center rounded-full font-display text-sm font-bold ${
+                  last ? 'bg-brand text-white' : 'border-2 border-ink bg-paper text-ink'
+                }`}
+              >
+                {i + 1}
+              </span>
+              {!last && <span aria-hidden="true" className="absolute left-[17px] top-9 bottom-0 w-0.5 bg-rule-strong" />}
+              <div className={last ? 'pb-2' : 'pb-9'}>
+                <h3 className={`pt-1.5 font-display text-lg font-bold ${last ? 'text-brand' : 'text-ink'}`}>{step.title}</h3>
+                {step.meta && <p className="text-sm text-ink-muted">{step.meta}</p>}
+                <div className="mt-2 max-w-[66ch] space-y-3">
+                  {step.body.map((b) => (
+                    <p key={b.text} className={`font-serif text-[1.0625rem] leading-relaxed ${b.strong ? 'text-ink' : 'text-ink-muted'}`}>
+                      {b.label && <span className="mr-1.5 font-sans text-sm font-semibold text-ink">{b.label}.</span>}
+                      {b.text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
 
-        {/* Step 3: Collision */}
-        <div className="space-y-2 border-l border-rule pl-4 py-1">
-          <div className="text-[11px] text-ink-soft font-bold">
-            3. What happened next
-          </div>
-          <div>
-            <div className="text-[10px] text-ink-soft">Immediate Tactical Event:</div>
-            <p className="font-display text-xs text-ink-muted leading-normal">
-              {causalChain.result.immediate}
-            </p>
-          </div>
-          <div className="pt-1">
-            <div className="text-[10px] text-ink-soft">Adversary Counter:</div>
-            <p className="font-display text-xs text-ink-muted leading-normal">
-              {causalChain.result.counterAction}
-            </p>
-          </div>
-        </div>
-
-        {/* Step 4: Consequence */}
-        <div className="space-y-2 border-l border-brand pl-4 py-1 bg-parchment border-t border-r border-b border-rule rounded-r-xs p-3">
-          <div className="text-[11px] text-brand font-bold">
-            4. What it led to
-          </div>
-          <p className="font-display text-sm text-ink leading-relaxed">
-            {causalChain.unintendedConsequence}
-          </p>
-        </div>
-      </div>
-
-      {/* Bridging Dilemma Footnote */}
-      <div className="mt-6 pt-4 border-t border-rule text-xs font-display text-ink-muted flex items-baseline gap-2">
-        <span className="font-bold text-brand text-[10px] whitespace-nowrap">
-          The next question:
-        </span>
-        <span className="italic">
-          &ldquo;{causalChain.nextDecision}&rdquo;
-        </span>
-      </div>
+      <p className="mt-6 max-w-[66ch] border-t border-rule pt-5 text-[1.0625rem] leading-relaxed text-ink-muted">
+        <span className="font-semibold text-ink">The question this leaves: </span>
+        {causalChain.nextDecision}
+      </p>
     </div>
   );
 }

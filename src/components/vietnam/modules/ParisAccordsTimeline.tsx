@@ -39,38 +39,37 @@ export default function ParisAccordsTimeline() {
   const current = phases[selectedPhase];
 
   return (
-    <figure className="my-10 border border-stone-300 bg-[#f9f7f2]">
+    <figure className="my-10 border border-rule-strong bg-[#f9f7f2]">
       {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-stone-200 bg-stone-100/90 flex flex-wrap items-center justify-between gap-2 text-xs">
+      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
         <div>
-          <span className="font-bold text-stone-900">
+          <span className="font-bold text-ink">
             How the deal was made
           </span>
-          <span className="text-stone-500 ml-2">&bull; The Paris Negotiations (1969–1973)</span>
         </div>
-        <span className="text-stone-500 text-[11px]">
-          Four Phases of Compromise &amp; Exit
+        <span className="text-ink-soft text-xs">
+          Four stages
         </span>
       </div>
 
       <div className="p-5 sm:p-7 space-y-6">
         <div>
-          <h4 className="font-display text-2xl font-bold text-stone-900 mt-1">
+          <h3 className="font-display text-2xl font-bold text-ink mt-1">
             A deal that left 150,000 North Vietnamese troops in the South
-          </h4>
-          <p className="mt-2 font-display text-base text-stone-700 leading-relaxed">
+          </h3>
+          <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
             The fundamental compromise that unlocked the Paris Peace Accords was asymmetric: the United States agreed to withdraw all American forces in exchange for American POWs, while allowing North Vietnamese combat divisions to remain stationed inside South Vietnamese territory.
           </p>
         </div>
 
         {/* Phase Buttons */}
-        <div className="flex flex-wrap gap-2 pt-2 border-t border-stone-200">
+        <div className="flex flex-wrap gap-2 pt-2 border-t border-rule">
           {(['deadlock', 'breakthrough', 'christmas', 'signing'] as const).map((key) => (
             <button
               key={key}
               type="button"
               onClick={() => setSelectedPhase(key)}
-              className={`px-3 py-1.5 text-xs transition-colors cursor-pointer border ${ selectedPhase === key ? 'border-stone-900 bg-stone-900 text-stone-100 font-bold' : 'border-stone-300 bg-white text-stone-700 hover:border-stone-500' }`}
+              className={`px-3 py-1.5 text-xs transition-colors cursor-pointer border ${ selectedPhase === key ? 'border-ink bg-ink text-paper font-bold' : 'border-rule-strong bg-white text-ink-muted hover:border-rule-strong' }`}
             >
               {phases[key].title.split('(')[0]}
             </button>
@@ -78,25 +77,25 @@ export default function ParisAccordsTimeline() {
         </div>
 
         {/* Active Phase Ledger */}
-        <div className="p-6 bg-white border border-stone-200 space-y-4">
-          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-stone-100 pb-2">
-            <h5 className="font-display text-xl font-bold text-stone-900">
+        <div className="p-6 bg-white border border-rule space-y-4">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-rule pb-2">
+            <h4 className="font-display text-xl font-bold text-ink">
               {current.title}
-            </h5>
-            <span className="text-xs text-stone-500">
+            </h4>
+            <span className="text-xs text-ink-soft">
               {current.timeframe}
             </span>
           </div>
 
-          <p className="font-display text-base text-stone-800 leading-relaxed">
+          <p className="font-display text-base text-ink leading-relaxed">
             {current.summary}
           </p>
 
-          <div className="p-4 bg-[#f2ede4] border border-stone-300 text-xs font-sans">
-            <span className="font-bold text-stone-700 block mb-1">
+          <div className="p-4 bg-[#f2ede4] border border-rule-strong text-xs font-sans">
+            <span className="font-bold text-ink-muted block mb-1">
               What it meant:
             </span>
-            <p className="font-display text-stone-800 leading-relaxed text-sm">
+            <p className="font-display text-ink leading-relaxed text-sm">
               {current.keyConcession}
             </p>
           </div>

@@ -57,11 +57,11 @@ export default function CitationModal() {
                 {badge.label}
               </span>
               {isVerbatim ? (
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink border border-rule">
                   Exact quotation
                 </span>
               ) : (
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-xs bg-parchment text-ink-muted border border-rule">
                   In our words
                 </span>
               )}
@@ -93,7 +93,7 @@ export default function CitationModal() {
         <section aria-labelledby="section-source" className="space-y-2">
           <span
             id="section-source"
-            className="text-[10px] text-brand font-bold block"
+            className="text-xs text-brand font-bold block"
           >
             Where it comes from
           </span>
@@ -127,7 +127,7 @@ export default function CitationModal() {
 
             {activeCitation.locator && (
               <div className="pt-1 text-xs text-ink">
-                <strong className="text-ink-muted text-[10px] block">
+                <strong className="text-ink-muted text-xs block">
                   Where to find it:
                 </strong>
                 <span className="bg-parchment px-2 py-0.5 rounded-xs border border-rule inline-block mt-0.5 font-medium">
@@ -143,7 +143,7 @@ export default function CitationModal() {
           <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-xs space-y-1.5 border-l border-l-brand">
             <span
               id="section-exact-quote"
-              className="text-[10px] text-brand font-bold block"
+              className="text-xs text-brand font-bold block"
             >
               Verified Exact Verbatim Excerpt
             </span>
@@ -158,7 +158,7 @@ export default function CitationModal() {
           <section aria-labelledby="section-supports" className="space-y-1.5 border-t border-rule pt-4">
             <span
               id="section-supports"
-              className="text-[10px] text-ink-muted font-bold block"
+              className="text-xs text-ink-muted font-bold block"
             >
               What this source shows
             </span>
@@ -173,7 +173,7 @@ export default function CitationModal() {
           <section aria-labelledby="section-limitations" className="space-y-1.5 border-t border-rule pt-4">
             <span
               id="section-limitations"
-              className="text-[10px] text-brand font-bold block"
+              className="text-xs text-brand font-bold block"
             >
               What it can’t tell you
             </span>
@@ -186,7 +186,7 @@ export default function CitationModal() {
         {/* 5. VIEW ORIGINAL LINK / ARCHIVE ACCESS */}
         <footer className="border-t border-rule pt-5 flex flex-wrap items-center justify-between gap-3">
           <div className="text-xs text-ink-muted">
-            America Unwrapped Citation Archive &bull; Ref [{activeCitation.marker || activeCitation.id}]
+            Source {activeCitation.marker || activeCitation.id}
           </div>
 
           {activeCitation.originalUrl ? (
