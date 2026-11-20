@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { CHAPTER_PARTS, VIETNAM_CHAPTERS, getChapter } from '@/data/vietnam/chapters';
+import { VIETNAM_CHAPTERS, getChapter } from '@/data/vietnam/chapters';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { buildGlossary, collectQuizQuestions } from '@/lib/study';
 import DocumentFacsimile from '@/components/common/DocumentFacsimile';
+import ContentsGrid from '@/components/vietnam/ContentsGrid';
+import { DBQ_PROMPTS, TURNING_POINTS } from '@/data/vietnam/studyGuide';
 
 export const metadata = {
   title: { absolute: 'America Unwrapped: the Vietnam War for high school students' },
@@ -20,17 +22,41 @@ export default function HomePage() {
   const termCount = buildGlossary(ALL_CHAPTERS_STUDY_DATA).length;
 
   const studyTools = [
-    { title: 'Presidents and turning points', href: '/vietnam/study-guide#presidents', detail: 'Who decided what, from Truman to Ford.' },
-    { title: 'Practice quiz', href: '/vietnam/study-guide#quiz', detail: `${quizCount} questions, each explained after you answer.` },
-    { title: 'Flashcards', href: '/vietnam/study-guide#flashcards', detail: `${termCount} key terms to learn.` },
-    { title: 'Essay practice', href: '/vietnam/study-guide#essays', detail: 'AP-style prompts with sample outlines.' },
+    {
+      title: 'Practice quiz',
+      count: `${quizCount} questions`,
+      detail: 'Answer, then read why. Retry the ones you miss.',
+      action: 'Start the quiz',
+      href: '/vietnam/study-guide#quiz',
+    },
+    {
+      title: 'Flashcards',
+      count: `${termCount} terms`,
+      detail: 'Flip, sort into Got it and Still learning, and come back to the hard ones.',
+      action: 'Study the cards',
+      href: '/vietnam/study-guide#flashcards',
+    },
+    {
+      title: 'Essay practice',
+      count: `${DBQ_PROMPTS.length} prompts`,
+      detail: 'AP-style prompts with a thesis, evidence and the mistakes to avoid.',
+      action: 'Plan an essay',
+      href: '/vietnam/study-guide#essays',
+    },
+    {
+      title: 'Presidents and turning points',
+      count: `${TURNING_POINTS.length} turning points`,
+      detail: 'Six presidents in order, and the events that changed the war.',
+      action: 'See the timeline',
+      href: '/vietnam/study-guide#presidents',
+    },
   ];
 
   return (
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-16 lg:px-8">
       <div className="grid gap-x-14 gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
         <section aria-labelledby="home-title">
-          <h1 id="home-title" className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+          <h1 id="home-title" className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">
             The Vietnam War, 1945–1975
           </h1>
           <p className="mt-5 max-w-[34ch] font-serif text-xl leading-snug text-ink">
@@ -71,51 +97,37 @@ export default function HomePage() {
 
       <section aria-labelledby="contents-title" className="mt-20 sm:mt-24">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <h2 id="contents-title" className="font-display text-xl font-bold text-ink">
-            Contents
+          <h2 id="contents-title" className="font-display text-2xl font-bold text-navy">
+            The story in four parts
           </h2>
           <Link href="/vietnam" className={`${textLink} text-sm`}>
-            All chapters, with photos
+            All chapters, with their questions
           </Link>
         </div>
-        <div className="mt-6 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-          {CHAPTER_PARTS.map((part) => (
-            <section key={part.number} aria-labelledby={`part-${part.number}`}>
-              <h3 id={`part-${part.number}`} className="text-sm text-ink-soft">
-                Part {part.number}, {part.years}
-              </h3>
-              <p className="mt-1 font-display text-lg font-bold leading-snug text-ink">{part.title}</p>
-              <ol className="mt-4 space-y-3">
-                {part.chapters.map((ch) => (
-                  <li key={ch.id}>
-                    <Link href={`/vietnam/${ch.id}`} className="group grid grid-cols-[1.75rem_minmax(0,1fr)] items-baseline">
-                      <span className="text-sm tabular-nums text-ink-soft">{ch.number}</span>
-                      <span>
-                        <span className="block font-serif text-lg leading-snug text-ink group-hover:text-brand">{ch.title}</span>
-                        <span className="block text-xs text-ink-soft">{ch.timeframe}</span>
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ol>
-            </section>
-          ))}
+        <div className="mt-6">
+          <ContentsGrid />
         </div>
       </section>
 
-      <section aria-labelledby="study-title" className="mt-20 sm:mt-24">
-        <div>
-          <h2 id="study-title" className="font-display text-xl font-bold text-ink">
-            Studying for a test?
-          </h2>
-        </div>
-        <ul className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+      <section aria-labelledby="study-title" className="mt-20 rounded-sm bg-parchment px-5 py-10 sm:mt-24 sm:px-10 sm:py-12">
+        <h2 id="study-title" className="font-display text-2xl font-bold text-navy">
+          Studying for a test?
+        </h2>
+        <p className="mt-2 max-w-[56ch] text-base text-ink-muted">Everything in the study guide comes from the twelve chapters.</p>
+        <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {studyTools.map((tool) => (
             <li key={tool.title}>
-              <Link href={tool.href} className={`${textLink} text-base`}>
-                {tool.title}
+              <Link
+                href={tool.href}
+                className="group flex h-full flex-col rounded-sm border border-rule bg-surface p-5 hover:border-brand-rule hover:bg-brand-tint"
+              >
+                <span className="font-mono text-xs text-ink-muted">{tool.count}</span>
+                <span className="mt-2 font-display text-xl font-bold leading-snug text-navy">{tool.title}</span>
+                <span className="mt-2 flex-1 text-sm text-ink-muted">{tool.detail}</span>
+                <span className="mt-5 text-sm font-semibold text-brand underline decoration-brand-rule underline-offset-4 group-hover:decoration-brand">
+                  {tool.action}
+                </span>
               </Link>
-              <p className="mt-1 text-sm text-ink-muted">{tool.detail}</p>
             </li>
           ))}
         </ul>

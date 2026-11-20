@@ -39,7 +39,7 @@ export default function CausalFlowViewer({ causalChain, showHeading = true }: Ca
     <div>
       {showHeading && (
         <>
-          <h2 className="font-display text-2xl font-bold tracking-tight text-ink sm:text-2xl">Cause and effect</h2>
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-2xl">Cause and effect</h2>
           <p className="mt-2 max-w-[62ch] text-base leading-relaxed text-ink-muted">
             One decision from this chapter, followed step by step to a result nobody planned.
           </p>

@@ -40,7 +40,7 @@ export default function PhoenixAnalysis() {
         {tab === 'phoenix' ? (
           <>
             <div className="max-w-[62ch]">
-              <h3 className="font-display text-xl font-bold text-ink">What the Phoenix numbers count</h3>
+              <h3 className="font-display text-xl font-bold text-navy">What the Phoenix numbers count</h3>
               <p className="mt-2 text-base text-ink-muted">
                 The CIA and the U.S. pacification office, CORDS, built the Phoenix Program (<em>Phung Hoang</em>) to break up
                 the Viet Cong’s hidden government. That network collected taxes, drafted young men and killed officials
@@ -52,14 +52,14 @@ export default function PhoenixAnalysis() {
               {PHOENIX.map((p) => (
                 <div key={p.label}>
                   <dt className="text-sm text-ink-muted">{p.label}</dt>
-                  <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-ink">{p.value}</dd>
+                  <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-navy">{p.value}</dd>
                   <dd className="text-xs text-ink-soft">{p.note}</dd>
                 </div>
               ))}
             </dl>
 
             <div className="rounded-sm bg-parchment p-5 sm:p-6">
-              <h4 className="font-display text-lg font-bold text-ink">Who actually did the killing?</h4>
+              <h4 className="font-display text-lg font-bold text-navy">Who actually did the killing?</h4>
               <div className="mt-4 grid gap-x-10 gap-y-6 sm:grid-cols-2">
                 <div>
                   <p className="font-display text-2xl font-extrabold text-brand">87%</p>
@@ -85,7 +85,7 @@ export default function PhoenixAnalysis() {
         ) : (
           <>
             <div className="max-w-[62ch]">
-              <h3 className="font-display text-xl font-bold text-ink">Operation Ranch Hand and the cost of dioxin</h3>
+              <h3 className="font-display text-xl font-bold text-navy">Operation Ranch Hand and the cost of dioxin</h3>
               <p className="mt-2 text-base text-ink-muted">
                 From 1962 to 1971, U.S. Air Force planes sprayed herbicides over South Vietnam and the Ho Chi Minh Trail to
                 strip away jungle cover and destroy the crops guerrillas ate.
@@ -95,17 +95,17 @@ export default function PhoenixAnalysis() {
             <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-3">
               <div>
                 <dt className="text-sm text-ink-muted">Sprayed</dt>
-                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">19 million gallons</dd>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-navy">19 million gallons</dd>
                 <dd className="mt-1 text-sm text-ink-muted">About 11 million gallons were Agent Orange, contaminated with the dioxin 2,3,7,8-TCDD.</dd>
               </div>
               <div>
                 <dt className="text-sm text-ink-muted">Forest stripped</dt>
-                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">5 million acres</dd>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-navy">5 million acres</dd>
                 <dd className="mt-1 text-sm text-ink-muted">Including the Rung Sat mangrove swamps outside Saigon.</dd>
               </div>
               <div>
                 <dt className="text-sm text-ink-muted">Crops destroyed</dt>
-                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">500,000 acres</dd>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-navy">500,000 acres</dd>
                 <dd className="mt-1 text-sm text-ink-muted">
                   Agent Blue, an arsenic-based herbicide, was sprayed on rice fields in Viet Cong areas. Villagers lost
                   their food, and guerrillas took much of the grain that was left.

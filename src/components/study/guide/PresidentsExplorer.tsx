@@ -87,7 +87,7 @@ export default function PresidentsExplorer({ presidencies }: { presidencies: Pre
         className="mt-6 md:mt-8 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand rounded-sm"
       >
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-          <h3 className="font-display text-xl sm:text-2xl font-bold text-ink leading-tight">{active.name}</h3>
+          <h3 className="font-display text-xl sm:text-2xl font-bold text-navy leading-tight">{active.name}</h3>
           <p className="text-sm text-ink-muted">
             <a href={`#turning-points-${active.id}`} className="font-semibold text-brand underline underline-offset-2 hover:text-brand-hover">
               Turning points from these years

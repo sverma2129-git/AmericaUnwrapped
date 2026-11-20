@@ -10,10 +10,10 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
   return (
     <aside
       aria-label={`One person's war: ${story.name}`}
-      className="max-w-3xl rounded-sm bg-parchment p-6 sm:p-8 space-y-5"
+      className="max-w-3xl paper rounded-sm border border-rule border-l-4 border-l-brand p-6 sm:p-8 space-y-5"
     >
       <div className="space-y-1">
-        <h3 className="font-display text-xl font-bold text-ink">{story.name}</h3>
+        <h3 className="font-display text-xl font-bold text-navy">{story.name}</h3>
         <p className="text-sm text-ink-muted">One person’s war: {story.role}</p>
       </div>
 
@@ -24,7 +24,7 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
       </div>
 
       {showQuote && (
-        <blockquote className="border-l border-brand pl-4 font-display text-lg text-ink leading-relaxed">
+        <blockquote className="font-serif text-xl leading-snug text-ink">
           &ldquo;{quote.exactQuotation}&rdquo;
           <footer className="mt-2 not-italic text-xs text-ink-muted">
             &mdash; {story.name} <CitationMarker id={quote.id} />

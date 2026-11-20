@@ -19,26 +19,26 @@ export default function DocumentInspector({ document }: { document: PrimarySourc
   const lookupId = document.registryId || document.id;
 
   return (
-    <article className="rounded-sm bg-parchment p-5 sm:p-7">
-      <p className="text-sm text-ink-muted">
+    <article className="paper rounded-sm border border-rule border-l-4 border-l-navy p-5 sm:p-7">
+      <p className="font-mono text-xs text-ink-muted">
         {ARCHIVE[document.side] ?? 'Document'}
         {document.classification ? `, ${document.classification}` : ''}
       </p>
-      <h4 className="mt-1 font-display text-xl font-bold text-ink">{document.title}</h4>
+      <h4 className="mt-1 font-display text-xl font-bold text-navy">{document.title}</h4>
       <p className="mt-1 text-sm text-ink-muted">
         {document.authorOrSpeaker}, {document.role}, <time>{document.date}</time>
       </p>
 
       <p className="mt-5 max-w-[66ch] font-serif text-lg leading-snug text-ink">{document.whyItMatters}</p>
 
-      <div className="mt-5 rounded-sm bg-surface p-5 sm:p-6">
-        <p className="text-xs text-ink-soft">{document.isVerified ? 'The exact words' : 'A summary in our words, not a quotation'}</p>
+      <div className="mt-5 rounded-sm border border-rule bg-parchment-light p-5 sm:p-6">
+        <p className="font-mono text-xs text-ink-soft">{document.isVerified ? 'The exact words' : 'A summary in our words, not a quotation'}</p>
         {document.isVerified ? (
           <blockquote className="typed mt-3 whitespace-pre-line text-ink">&ldquo;{document.excerpt}&rdquo;</blockquote>
         ) : (
           <p className="mt-3 whitespace-pre-line text-base text-ink">{document.excerpt}</p>
         )}
-        <p className="mt-4 text-xs text-ink-soft">Held by: {document.archiveSource}</p>
+        <p className="mt-4 font-mono text-xs text-ink-soft">Held by: {document.archiveSource}</p>
       </div>
 
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">

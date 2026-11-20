@@ -1,5 +1,6 @@
 'use client';
 
+import { PeriodBadge } from '@/components/vietnam/ContentsGrid';
 import React from 'react';
 import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
@@ -25,7 +26,7 @@ interface ChapterContentProps {
   nextChapterTitle?: string;
 }
 
-const h2 = 'font-display text-2xl font-extrabold tracking-tight text-ink';
+const h2 = 'font-display text-2xl font-extrabold tracking-tight text-navy';
 
 /**
  * The standard chapter in three movements. Read: the story in short dated
@@ -61,11 +62,12 @@ export default function ChapterContent({ chapter }: ChapterContentProps) {
         }`}
       >
         <div className="max-w-4xl">
-          <p className="text-sm text-ink-muted">
-            {part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}, {chapter.timeframe}
-            {chapter.isLandmark && <span className="text-brand">, a turning point</span>}
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
+            <span>{part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}</span>
+            <PeriodBadge>{chapter.timeframe}</PeriodBadge>
+            {chapter.isLandmark && <span className="font-medium text-brand">A turning point</span>}
           </p>
-          <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">{chapter.title}</h1>
+          <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">{chapter.title}</h1>
           <p className="mt-4 max-w-[40ch] font-serif text-xl leading-snug text-ink">{study?.bigQuestion ?? chapter.subtitle}</p>
           {study?.whyItMatters && <p className="mt-4 max-w-[62ch] text-base text-ink-muted">{study.whyItMatters}</p>}
           <nav aria-label="In this chapter" className="mt-6">
@@ -111,8 +113,8 @@ export default function ChapterContent({ chapter }: ChapterContentProps) {
                 <div key={idx}>
                   {sec && (
                     <>
-                      {sec.date && <p className="text-sm font-semibold tabular-nums text-brand">{sec.date}</p>}
-                      <h3 className="mt-1 font-display text-xl font-bold leading-snug text-ink">{sec.heading}</h3>
+                      {sec.date && <p className="font-mono text-xs font-semibold tabular-nums text-brand">{sec.date}</p>}
+                      <h3 className="mt-1 font-display text-xl font-bold leading-snug text-navy">{sec.heading}</h3>
                     </>
                   )}
                   <CitedParagraph text={paragraph} className="reading mt-3 text-ink" />
@@ -161,7 +163,7 @@ export default function ChapterContent({ chapter }: ChapterContentProps) {
               <ol className="mt-3 space-y-4">
                 {chapter.whatHappened.keyEvents.map((evt) => (
                   <li key={`${evt.date}-${evt.title}`}>
-                    <p className="text-xs font-semibold tabular-nums text-brand">{evt.date}</p>
+                    <p className="text-xs font-semibold tabular-nums text-brand font-mono">{evt.date}</p>
                     <p className="mt-0.5 text-sm font-semibold leading-snug text-ink">{evt.title}</p>
                     <p className="mt-0.5 text-sm leading-relaxed text-ink-muted">{evt.detail}</p>
                   </li>

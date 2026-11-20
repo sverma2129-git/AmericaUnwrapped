@@ -9,7 +9,7 @@ export default function DbqOutlines() {
   return (
     <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-16">
       <div>
-        <h3 className="font-display text-lg font-bold text-ink">Practice prompts</h3>
+        <h3 className="font-display text-lg font-bold text-navy">Practice prompts</h3>
         <p className="mt-1 max-w-[62ch] text-ink-muted">
           Write your own thesis and list your evidence first. Then open the outline and compare.
         </p>
@@ -60,7 +60,7 @@ export default function DbqOutlines() {
       </div>
 
       <aside className="self-start rounded-sm bg-parchment p-5 sm:p-6">
-        <h3 className="font-display text-lg font-bold text-ink">Vietnam on past AP exams</h3>
+        <h3 className="font-display text-lg font-bold text-navy">Vietnam on past AP exams</h3>
         <p className="mt-2 text-sm leading-relaxed text-ink-muted">
           These are real exam questions, described in our own words. College Board owns the exact wording and keeps older
           exams in AP Classroom, so ask your teacher for the originals and their scoring guidelines.

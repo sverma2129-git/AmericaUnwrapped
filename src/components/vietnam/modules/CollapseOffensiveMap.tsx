@@ -140,10 +140,10 @@ export default function CollapseOffensiveMap() {
         </div>
 
         <div aria-live="polite">
-          <p className="text-sm font-semibold tabular-nums text-brand">
+          <p className="text-sm font-semibold tabular-nums text-brand font-mono">
             Step {step + 1} of {STEPS.length}, {current.date}
           </p>
-          <h3 className="mt-1 font-display text-xl font-bold text-ink">{current.title}</h3>
+          <h3 className="mt-1 font-display text-xl font-bold text-navy">{current.title}</h3>
           <p className="mt-3 font-serif text-lg leading-snug text-ink">{current.story}</p>
           <dl className="mt-6 space-y-5">
             <div>

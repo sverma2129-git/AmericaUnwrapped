@@ -14,7 +14,7 @@ export default function VietnamHubPage() {
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
       <header className="grid gap-x-14 gap-y-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end">
         <div>
-          <h1 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">The Vietnam War</h1>
+          <h1 className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">The Vietnam War</h1>
           <p className="mt-4 max-w-[30ch] font-serif text-xl leading-snug text-ink">
             From Ho Chi Minh’s appeal to Truman in 1945 to the last helicopter out of Saigon in 1975.
           </p>

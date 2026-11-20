@@ -162,7 +162,7 @@ export default function TetOffensiveMap() {
           </div>
 
           <div aria-live="polite" className="mt-6">
-            <h3 className="font-display text-xl font-bold text-ink">{current.name}</h3>
+            <h3 className="font-display text-xl font-bold text-navy">{current.name}</h3>
             <p className="mt-1 text-base text-ink-muted">{current.summary}</p>
             <p className="mt-4 font-serif text-lg leading-snug text-ink">{current.fighting}</p>
             <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-2">
@@ -180,7 +180,7 @@ export default function TetOffensiveMap() {
       </div>
 
       <div className="max-w-[66ch]">
-        <h4 className="font-display text-lg font-bold text-ink">Why Tet is a puzzle</h4>
+        <h4 className="font-display text-lg font-bold text-navy">Why Tet is a puzzle</h4>
         <p className="mt-2 text-base text-ink-muted">
           On the battlefield, Tet was a disaster for the communist side. About 40,000 Viet Cong fighters were killed, and
           the uprising Hanoi expected never came. At home in the United States, the attacks on dozens of cities at once

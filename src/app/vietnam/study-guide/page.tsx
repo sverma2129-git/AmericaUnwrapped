@@ -60,7 +60,7 @@ const BIG_IDEAS: { question: string; topics: { label: string; chapterId: string 
 function SectionHeader({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <header>
-      <h2 id={`${id}-title`} className="font-display text-2xl font-bold tracking-tight text-ink">
+      <h2 id={`${id}-title`} className="font-display text-2xl font-bold tracking-tight text-navy">
         {title}
       </h2>
       <p className="mt-2 max-w-[62ch] text-base text-ink-muted">{children}</p>
@@ -103,7 +103,7 @@ export default function StudyGuidePage() {
 
           <div className="mt-6 grid gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-14">
             <div>
-              <h1 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">
+              <h1 className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">
                 Vietnam War study guide
               </h1>
               <p className="mt-4 max-w-[34ch] font-serif text-lg sm:text-xl leading-snug text-ink">
@@ -114,7 +114,7 @@ export default function StudyGuidePage() {
                 chapters, so any answer can be traced back to where it is taught.
               </p>
 
-              <h2 className="mt-10 font-display text-lg font-bold text-ink">What the test keeps asking</h2>
+              <h2 className="mt-10 font-display text-lg font-bold text-navy">What the test keeps asking</h2>
               <ul className="mt-3 grid gap-3 sm:grid-cols-2">
                 {BIG_IDEAS.map((idea) => (
                   <li key={idea.question} className="rounded-sm bg-parchment px-4 py-3">

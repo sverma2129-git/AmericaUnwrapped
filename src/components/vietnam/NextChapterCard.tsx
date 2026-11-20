@@ -28,7 +28,7 @@ export default function NextChapterCard({ next }: { next?: ChapterData }) {
         <span className="text-sm text-ink-muted">
           Next: Chapter {next.number}, {next.timeframe}
         </span>
-        <span className="mt-2 font-display text-2xl font-extrabold tracking-tight text-ink group-hover:text-brand">{next.title}</span>
+        <span className="mt-2 font-display text-2xl font-extrabold tracking-tight text-navy group-hover:text-brand">{next.title}</span>
         <span className="mt-3 font-serif text-lg leading-snug text-ink-muted">{question}</span>
         <span className="mt-6 inline-flex w-fit rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-white group-hover:bg-brand-hover">
           Read Chapter {next.number}

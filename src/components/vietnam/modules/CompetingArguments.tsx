@@ -11,7 +11,7 @@ export default function CompetingArguments() {
   return (
     <div className="rounded-sm bg-surface p-5 sm:p-8">
       <div className="max-w-[62ch]">
-        <h3 className="font-display text-xl font-bold text-ink">Four ways historians explain the war</h3>
+        <h3 className="font-display text-xl font-bold text-navy">Four ways historians explain the war</h3>
         <p className="mt-2 text-base text-ink-muted">
           Each generation of historians brought new records and new questions. Pick a school to see what it argues, what it
           leans on, and where its critics push back.
@@ -38,7 +38,7 @@ export default function CompetingArguments() {
       </div>
 
       <div aria-live="polite" className="mt-8">
-        <h4 className="font-display text-xl font-bold text-ink">{school.name}</h4>
+        <h4 className="font-display text-xl font-bold text-navy">{school.name}</h4>
         <p className="mt-1 text-sm text-ink-muted">
           {school.era}. Read: {school.keyHistorians.slice(0, 3).join(', ')}
         </p>

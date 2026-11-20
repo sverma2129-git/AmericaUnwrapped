@@ -48,7 +48,7 @@ export default function EscalationTimeline() {
   return (
     <div className="rounded-sm bg-surface p-5 sm:p-8">
       <div className="max-w-[62ch]">
-        <h3 className="font-display text-xl font-bold text-ink">How 875 advisers became 16,300</h3>
+        <h3 className="font-display text-xl font-bold text-navy">How 875 advisers became 16,300</h3>
         <p className="mt-2 text-base text-ink-muted">
           Kennedy never sent regular combat divisions. Instead he added advisers, helicopters and secret operations a little
           at a time. Pick a year.
@@ -85,7 +85,7 @@ export default function EscalationTimeline() {
 
       <div aria-live="polite" className="mt-8">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-          <h4 className="font-display text-lg font-bold text-ink">
+          <h4 className="font-display text-lg font-bold text-navy">
             {year}: {current.title}
           </h4>
           <p className="text-sm font-semibold text-brand">

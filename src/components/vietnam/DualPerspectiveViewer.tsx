@@ -9,7 +9,7 @@ interface DualPerspectiveViewerProps {
 function Side({ place, people, side }: { place: string; people: string; side: SidePerspective }) {
   return (
     <section aria-label={place} className="min-w-0">
-      <h3 className="font-display text-xl font-bold text-ink">{place}</h3>
+      <h3 className="font-display text-xl font-bold text-navy">{place}</h3>
       <p className="mt-1 text-sm text-ink-soft">
         {people}: {side.keyActors.join(', ')}
       </p>
