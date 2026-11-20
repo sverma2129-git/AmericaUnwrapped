@@ -5,7 +5,7 @@ const linkClass = 'text-ink-muted hover:text-brand';
 
 export default function Footer() {
   return (
-    <footer role="contentinfo" className="mt-auto border-t border-ink bg-paper text-ink">
+    <footer role="contentinfo" className="mt-24 bg-parchment text-ink">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)]">
           <div>
@@ -42,7 +42,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-rule pt-6 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-2 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} America Unwrapped. No ads, no tracking, no accounts.</p>
           <a href="https://github.com/sverma2129-git/AmericaUnwrapped/issues" className="underline underline-offset-2 hover:text-brand">
             Found a mistake? Tell us.

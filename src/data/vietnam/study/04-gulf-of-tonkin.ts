@@ -3,21 +3,21 @@ import { ChapterStudyData } from '@/types/study';
 export const TONKIN_STUDY_DATA: ChapterStudyData = {
   chapterId: 'gulf-of-tonkin',
   bigQuestion:
-    'What really happened in the Gulf of Tonkin in August 1964, and how did it lead to a much larger American war?',
+    'How did an attack that most likely never happened lead America into war?',
   whyItMatters:
-    'Congress passed the Gulf of Tonkin Resolution almost unanimously, on evidence that was misleading. For nine years it worked like a declaration of war, and it changed the argument over who decides when America fights.',
+    'Congress voted 504 to 2 to let Johnson use force. For nine years that resolution did the work of a declaration of war.',
   whatYouWillLearn: [
     'Why the August 2 battle was a real fight in daylight, while the August 4 “attack” came from false radar and sonar readings.',
     'How secret OPLAN 34A raids and DeSoto patrols put American destroyers in the middle of the fighting.',
-    'How the resolution gave President Johnson a “blank check,” and how that led to the War Powers Act of 1973.',
+    'How the resolution gave President Johnson a blank check, and how that led to the War Powers Act of 1973.',
   ],
   briefing: {
     summary:
       'On August 2, 1964, North Vietnamese torpedo boats attacked the USS Maddox in daylight. Secret South Vietnamese commando raids (OPLAN 34A) had hit the coast just before. Two nights later, on August 4, during a thunderstorm, sonar and radar operators reported dozens of torpedoes. The destroyers fired more than 650 shells into the night. Within hours, the commander at sea, Captain John Herrick, warned that freak weather and false radar readings explained the reports, and urged caution. President Johnson ordered 64 air strikes in response anyway. Congress then passed the Gulf of Tonkin Resolution, 416–0 in the House and 88–2 in the Senate. It gave the president broad power to use military force without a declaration of war.',
     examTakeaways: [
-      'Two incidents: August 2 was a confirmed fight in daylight. The August 4 attack was reported from radar and sonar, and it did not happen.',
-      'The blank check: The resolution let Johnson take all necessary measures to repel armed attack. Congress never declared war.',
-      'War Powers Act of 1973: Congress passed it over Nixon’s veto in response to Tonkin. Presidents must report troop deployments within 48 hours and get approval within 60 days.',
+      'There were two incidents. On August 2, North Vietnamese torpedo boats really did attack the Maddox. The August 4 attack came from radar and sonar reports, and it most likely never happened.',
+      'The Gulf of Tonkin Resolution let Johnson take all necessary measures to repel armed attack. Congress never declared war.',
+      'In 1973 Congress passed the War Powers Act over Nixon’s veto. A president now has to report troop deployments within 48 hours and get approval within 60 days.',
     ],
     keyTerms: [
       {
@@ -71,7 +71,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c4-q1',
       question:
-        'What was the critical difference between the naval incidents in the Gulf of Tonkin on August 2 and August 4, 1964?',
+        'What was the key difference between the August 2 and August 4, 1964, incidents in the Gulf of Tonkin?',
       options: [
         'August 2 was a confirmed attack; August 4 was most likely a false alarm',
         'August 2 was a radar error; August 4 was a confirmed torpedo attack',
@@ -86,7 +86,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c4-q2',
       question:
-        'What did Task Group Commander Captain John Herrick report to Washington hours after the August 4 incident?',
+        'What did Captain John Herrick report hours after the August 4 incident?',
       options: [
         'That he had sunk several torpedo boats and needed carrier air support at once',
         'That shore batteries had damaged the USS Turner Joy during the night',
@@ -95,13 +95,13 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'At 1:27 PM Washington time, Herrick cabled: “Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports... Suggest complete evaluation before any further action taken.”',
+        'At 1:27 PM Washington time, Herrick cabled: “Review of action makes many reported contacts and torpedoes fired appear doubtful. Freak weather effects on radar and overeager sonarmen may have accounted for many reports. No actual visual sightings by Maddox. Suggest complete evaluation before any further action taken.”',
       citationRef: 'Q013',
     },
     {
       id: 'c4-q3',
       question:
-        'How did Congress respond to President Johnson’s presentation of the Tonkin incident?',
+        'How did Congress respond when Johnson asked for support after the Tonkin incidents?',
       options: [
         'It delayed any vote until an independent investigation was completed',
         'It passed the Tonkin Resolution almost unanimously, 416–0 and 88–2',
@@ -110,13 +110,13 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale:
-        'The resolution passed 416–0 in the House and 88–2 in the Senate. Only Senators Wayne Morse and Ernest Gruening voted against it. Critics later called it a congressional “blank check.”',
+        'The resolution passed 416–0 in the House and 88–2 in the Senate. Only Senators Wayne Morse and Ernest Gruening voted against it. Critics later called it a congressional blank check.',
       citationRef: 'c4-3',
     },
     {
       id: 'c4-q4',
       question:
-        'Which 1973 law was enacted by Congress specifically to prevent future undeclared military interventions like the one authorized by the Tonkin Resolution?',
+        'Which 1973 law did Congress pass to stop presidents from fighting undeclared wars like the one the Tonkin Resolution allowed?',
       options: [
         'The National Security Act amendments of 1973',
         'The Case-Church Amendment on Indochina',
@@ -132,7 +132,7 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       id: 'c4-q5',
       imageId: 'lbj-tonkin-signing-1964',
       question:
-        'The signing shown in the photograph most directly made possible which development?',
+        'The signing in the photograph most directly made which development possible?',
       options: [
         'A formal declaration of war on North Vietnam by Congress',
         'Sustained bombing and U.S. combat troops in Vietnam in 1965',

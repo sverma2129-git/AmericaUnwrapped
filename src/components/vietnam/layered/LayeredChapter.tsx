@@ -1,14 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
 import type { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
-import { getChapterPart } from '@/data/vietnam/chapters';
+import { getAdjacentChapters, getChapterPart } from '@/data/vietnam/chapters';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import CitationMarker from '@/components/common/CitationMarker';
 import DocumentFacsimile from '@/components/common/DocumentFacsimile';
 import { splitTakeaway } from '@/lib/takeaways';
-import { ChapterFlashcardsBlock } from '@/components/study/ChapterPractice';
-import Icon from '@/components/common/Icon';
+import Disclosure from '@/components/common/Disclosure';
+import ChapterStudy from '@/components/study/ChapterStudy';
+import NextChapterCard from '../NextChapterCard';
 import DualPerspectiveViewer from '../DualPerspectiveViewer';
 import DocumentInspector from '../DocumentInspector';
 import CausalFlowViewer from '../CausalFlowViewer';
@@ -28,28 +28,12 @@ interface LayeredChapterProps {
 
 const NUMBER_WORDS = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 
-/** A plain disclosure row: title and one-line description, opened on demand. */
-function DeeperPanel({ title, detail, children }: { title: string; detail: string; children: React.ReactNode }) {
-  return (
-    <details className="group border-b border-rule">
-      <summary className="flex list-none items-baseline gap-4 py-4 hover:text-brand [&::-webkit-details-marker]:hidden">
-        <span className="min-w-0 flex-1">
-          <span className="block font-display text-lg font-semibold text-ink group-hover:text-brand">{title}</span>
-          <span className="mt-0.5 block text-sm text-ink-muted">{detail}</span>
-        </span>
-        <Icon name="plus" className="h-5 w-5 self-center text-ink-muted transition-transform duration-200 group-open:rotate-45 motion-reduce:transition-none" />
-      </summary>
-      <div className="pb-8 pt-2">{children}</div>
-    </details>
-  );
-}
-
 /**
  * The scrollytelling chapter. It shares its header, section names and ending
  * with the standard chapter; the story itself is told in short parts with maps
  * and timelines that change as you scroll.
  */
-export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitle }: LayeredChapterProps) {
+export default function LayeredChapter({ chapter }: LayeredChapterProps) {
   const study = ALL_CHAPTERS_STUDY_DATA[chapter.id];
   const story = chapter.story;
   const beats = story?.beats ?? [];
@@ -92,8 +76,8 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
         {chapter.leadImageId && <Figure imageId={chapter.leadImageId} priority className="mt-10" />}
 
         {/* The short version: what to know, and the dates */}
-        <section aria-labelledby="brief-title" className="mt-16">
-          <h2 id="brief-title" className="border-t border-ink pt-3 text-sm font-bold text-ink">
+        <section aria-labelledby="brief-title" className="mt-16 rounded-sm bg-parchment p-6 sm:p-8">
+          <h2 id="brief-title" className="text-sm font-bold text-ink">
             The short version
           </h2>
           <ul className="mt-4 grid gap-x-10 gap-y-6 md:grid-cols-3">
@@ -107,7 +91,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
               );
             })}
           </ul>
-          <ol aria-label="Key dates" className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-rule pt-5 sm:grid-cols-3 lg:grid-cols-6">
+          <ol aria-label="Key dates" className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-6">
             {chapter.whatHappened.keyEvents.map((e) => (
               <li key={e.title}>
                 <span className="block text-xs font-semibold tabular-nums text-brand">{e.date}</span>
@@ -138,7 +122,9 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
                     ))}
                   </div>
 
-                  {beat.imageId && <Figure imageId={beat.imageId} className="mt-8" />}
+                  {[beat.imageId, ...(beat.moreImageIds ?? [])].filter(Boolean).map((id) => (
+                    <Figure key={id} imageId={id as string} className="mt-8" />
+                  ))}
 
                   {beat.visual && (
                     <div className={`mt-8 ${wide ? '' : 'max-w-3xl'}`}>
@@ -161,7 +147,7 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
 
         <section id="sources" aria-labelledby="sources-title" className="mt-24">
           <SectionHead id="sources-title" title="Sources">
-            Everything above is backed by what is in here. Open whatever you are curious about.
+            Every claim in the story comes from something in this section.
           </SectionHead>
 
           {doc && !docInStory && <DocumentFacsimile doc={doc} className="mt-8" />}
@@ -172,38 +158,33 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
             </div>
           )}
 
-          <div className="mt-10 border-t border-rule">
+          <div className="mt-10 space-y-2 rounded-sm bg-parchment p-2">
             {story?.evidence && story.evidence.length > 0 && (
-              <DeeperPanel title="Read the sources yourself" detail={`${story.evidence.length} verified quotations, each with a question to think about`}>
+              <Disclosure title="Read the sources yourself" detail={`${story.evidence.length} verified quotations, each with a question to think about`}>
                 <EvidenceLocker citationIds={story.evidence} />
-              </DeeperPanel>
+              </Disclosure>
             )}
 
-            <DeeperPanel title="How each side saw it" detail="What Washington and Hanoi each wanted, assumed, and argued about">
-              <DualPerspectiveViewer
-                timeframe={chapter.timeframe}
-                washington={chapter.washington}
-                hanoi={chapter.hanoi}
-                ecosystem={chapter.strategicEcosystem}
-              />
-            </DeeperPanel>
+            <Disclosure title="How each side saw it" detail="What Washington and Hanoi each wanted, assumed, and argued about">
+              <DualPerspectiveViewer washington={chapter.washington} hanoi={chapter.hanoi} />
+            </Disclosure>
 
             {chapter.primaryDocuments.length > 0 && (
-              <DeeperPanel title="Read the documents" detail={`${chapter.primaryDocuments.length} primary sources, with context and limitations`}>
+              <Disclosure title="Read the documents" detail={`${chapter.primaryDocuments.length} primary sources, with context and limitations`}>
                 <div className="space-y-8">
                   {chapter.primaryDocuments.map((d) => (
                     <DocumentInspector key={d.id} document={d} />
                   ))}
                 </div>
-              </DeeperPanel>
+              </Disclosure>
             )}
 
-            <DeeperPanel title="Cause and effect" detail="The decision, the assumption behind it, and what it led to">
+            <Disclosure title="Cause and effect" detail="The decision, the assumption behind it, and what it led to">
               <CausalFlowViewer causalChain={chapter.causalChain} showHeading={false} />
-            </DeeperPanel>
+            </Disclosure>
 
             {chapter.citations.length > 0 && (
-              <DeeperPanel title="Works cited" detail={`${chapter.citations.length} works cited in this chapter`}>
+              <Disclosure title="Works cited" detail={`${chapter.citations.length} works cited in this chapter`}>
                 <ol className="max-w-3xl space-y-4">
                   {chapter.citations.map((c) => (
                     <li key={c.id} className="flex gap-3 text-sm">
@@ -216,16 +197,16 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
                     </li>
                   ))}
                 </ol>
-              </DeeperPanel>
+              </Disclosure>
             )}
           </div>
         </section>
 
-        <section id="test" aria-labelledby="test-title" className="mt-24">
-          <SectionHead id="test-title" title="For the test">
+        <section id="test" aria-labelledby="test-title" className="mt-24 rounded-sm bg-parchment p-5 sm:p-10">
+          <SectionHead id="test-title" title="Study for the test">
             {story?.tasks
-              ? 'Pick your course for activities written for it, then learn the key terms. Nothing you type leaves this page.'
-              : 'Learn the key terms, then take the full practice quiz in the study guide.'}
+              ? 'Pick your course for activities written for it. Nothing you type leaves this page.'
+              : 'Pick a tool. Your progress on the flashcards stays on this device.'}
           </SectionHead>
 
           {story?.tasks && (
@@ -247,39 +228,22 @@ export default function LayeredChapter({ chapter, nextChapterId, nextChapterTitl
             </div>
           )}
 
-          {study?.flashcards && study.flashcards.length > 0 && (
-            <div className="mt-14">
-              <h3 id="flashcards" className="font-display text-xl font-bold text-ink">
-                Flashcards
-              </h3>
-              <p className="mt-1 max-w-[62ch] text-base text-ink-muted">Look at the term, say what it means, then flip the card to check.</p>
-              <div className="mt-6">
-                <ChapterFlashcardsBlock chapter={{ id: chapter.id, number: chapter.number, title: chapter.title }} terms={study.flashcards} />
-              </div>
+          {study && (
+            <div className="mt-12">
+              <ChapterStudy
+                chapter={{ id: chapter.id, number: chapter.number, title: chapter.title }}
+                takeaways={[]}
+                keyTerms={study.briefing.keyTerms}
+                quiz={study.quiz ?? []}
+                flashcards={study.flashcards ?? []}
+              />
             </div>
           )}
-          <p className="mt-8 text-base">
-            <Link href="/vietnam/study-guide#quiz" className="font-medium text-brand underline decoration-brand-rule underline-offset-4 hover:decoration-brand">
-              Take the practice quiz in the study guide
-            </Link>
-          </p>
         </section>
 
-        <footer className="mt-20 border-t border-ink pt-10">
-          <p className="text-sm text-ink-muted">Up next</p>
-          <h2 className="mt-1 max-w-3xl font-serif text-xl leading-snug text-ink">{chapter.nextQuestion.question}</h2>
-          <p className="mt-3 max-w-[62ch] text-base text-ink-muted">{chapter.nextQuestion.framing}</p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
-            {nextChapterId && (
-              <Link href={`/vietnam/${nextChapterId}`} className="rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-hover">
-                Chapter {chapter.number + 1}: {nextChapterTitle}
-              </Link>
-            )}
-            <Link href="/vietnam" className="text-sm font-medium text-ink-muted hover:text-brand">
-              All chapters
-            </Link>
-          </div>
-        </footer>
+        <section aria-label="Next chapter" className="mt-20">
+          <NextChapterCard next={getAdjacentChapters(chapter).next} />
+        </section>
       </article>
     </CourseProvider>
   );

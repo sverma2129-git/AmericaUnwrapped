@@ -8,7 +8,7 @@ const chapter: ChapterData = {
   timeframe: '1945–1954',
   leadImageId: 'ho-telegram-1946',
   title: 'Dien Bien Phu and the end of French rule',
-  subtitle: 'How a fight against a colony became part of the Cold War',
+  subtitle: 'America paid for most of France’s war in Indochina. In 1954 France lost it anyway.',
   summary:
     'After World War II, Ho Chi Minh declared Vietnam independent, but France wanted its colony back. As the Cold War spread to Asia, the United States went from watching to paying for most of France’s war. France lost at Dien Bien Phu in 1954, and the Geneva talks split Vietnam in two for what was meant to be a short time.',
   isLandmark: true,
@@ -48,7 +48,7 @@ const chapter: ChapterData = {
       {
         id: 'siege',
         kicker: 'November 1953 – May 1954',
-        headline: 'Navarre’s bet: a fortress in a valley',
+        headline: 'General Navarre builds a fortress in a valley',
         body: [
           'French commander Henri Navarre wanted a decisive battle. He picked a remote valley near the Laos border, Dien Bien Phu, and dared the Viet Minh to attack it.',
         ],
@@ -98,7 +98,7 @@ const chapter: ChapterData = {
       {
         id: 'vulture',
         kicker: 'April 1954',
-        headline: 'Washington’s choice: bomb, or stay out?',
+        headline: 'Eisenhower weighs an air strike',
         body: [
           'As the siege tightened, France asked for American air strikes. Inside the Eisenhower administration, the request split the people around the president.[^c1-1]',
         ],
@@ -124,8 +124,9 @@ const chapter: ChapterData = {
       {
         id: 'aftermath',
         imageId: 'geneva-conference-1954',
+        moreImageIds: ['dien-bien-phu-wounded-1954'],
         kicker: 'Summer 1954',
-        headline: 'What France lost, America inherited',
+        headline: 'France leaves and America steps in',
         body: [
           'At Geneva, Vietnam was split at the 17th parallel, supposedly until nationwide elections in 1956. Washington decided not to rescue France, but to replace it.',
         ],
@@ -158,34 +159,34 @@ const chapter: ChapterData = {
   washington: {
     keyActors: ['Harry S. Truman', 'Dwight D. Eisenhower', 'Dean Acheson', 'John Foster Dulles'],
     strategicObjective:
-      'Contain communist expansion in Southeast Asia while preserving France as a vital NATO ally in European reconstruction.',
+      'Stop communism from spreading in Southeast Asia, and keep France, a NATO ally, strong enough to help rebuild Europe.',
     underlyingAssumptions: [
-      'The Domino Theory: Eisenhower argued that if Indochina fell to communism, neighboring nations (Thailand, Burma, Malaya and Indonesia) would inevitably topple.',
-      'Ho Chi Minh was viewed fundamentally as an agent of Moscow and Beijing rather than a nationalist revolutionary.',
-      'Heavy American financial underwriting could secure a French military victory without requiring direct U.S. combat troop deployment.',
+      'Eisenhower argued that if Indochina fell to communism, Thailand, Burma, Malaya and Indonesia would follow, one after another.',
+      'Washington saw Ho Chi Minh as an agent of Moscow and Beijing more than as a nationalist.',
+      'American money could buy a French victory, so no U.S. troops would be needed.',
     ],
     internalDebates: [
-      'Operation Vulture: Dulles and Admiral Radford advocated direct U.S. carrier airstrikes to relieve Dien Bien Phu.',
-      'Eisenhower and Army Chief of Staff Matthew Ridgway resisted unilateral intervention without British support and congressional sanction, mindful of the Korean War experience.',
+      'Secretary of State Dulles and Admiral Radford wanted carrier air strikes to save Dien Bien Phu, a plan called Operation Vulture.',
+      'Eisenhower and Army Chief of Staff Matthew Ridgway refused to act without Britain and Congress. Both remembered Korea.',
     ],
     homeFrontConstraints: [
       'Post-Korean War exhaustion: strong public and congressional reluctance to commit American ground divisions to another land conflict in Asia.',
-      'McCarthyite domestic anti-communist pressure: political vulnerability to accusations of “losing” Southeast Asia as Truman was blamed for “losing” China.',
+      'McCarthyite domestic anti-communist pressure: political vulnerability to accusations that it had lost Southeast Asia, as Truman had been blamed for losing China.',
     ],
     primaryDocumentRef: 'nsc-68-indochina',
   },
   hanoi: {
     keyActors: ['Ho Chi Minh', 'Vo Nguyen Giap', 'Truong Chinh', 'Pham Van Dong'],
     strategicObjective:
-      'Expel French colonial forces, achieve recognized national sovereignty, and establish an independent socialist Vietnam.',
+      'Drive out the French, win recognition as an independent country and build a socialist Vietnam.',
     underlyingAssumptions: [
-      'A protracted people’s war (Chien tranh nhan dan) would gradually exhaust French political will and domestic economic endurance.',
-      'Chinese heavy artillery, anti-aircraft guns, and logistical assistance (secured after 1950) could neutralize French technological superiority.',
-      'French domestic instability and mounting casualty lists would make an open-ended colonial war politically untenable in Paris.',
+      'A long people’s war would wear down France’s will to fight and drain its economy.',
+      'Chinese artillery, anti-aircraft guns and supplies, which arrived after 1950, could make up for France’s better weapons.',
+      'As French casualty lists grew, voters in Paris would turn against the war.',
     ],
     internalDebates: [
-      'Tactical debate at Dien Bien Phu: whether to mount a rapid “strike fast, win fast” human assault (advocated by Chinese advisers) or Giap’s deliberate “steady advance, steady strike” siege method.',
-      'Tensions surrounding early radical land reform measures overseen by Truong Chinh in northern liberated zones.',
+      'At Dien Bien Phu, Chinese advisers urged a fast, all-out assault. Giap chose a slower siege.',
+      'Truong Chinh’s harsh early land reform in the areas the Viet Minh controlled caused tension inside the movement.',
     ],
     homeFrontConstraints: [
       'Severe economic poverty and food scarcity while mobilizing a quarter-million civilian porters across trackless mountain trails under French aerial bombing.',
@@ -195,35 +196,35 @@ const chapter: ChapterData = {
   },
   causalChain: {
     decision: {
-      actor: 'Eisenhower Administration',
-      action: 'Declined direct military airstrikes to rescue Dien Bien Phu, but resolved to replace France as the external guarantor of an anti-communist zone in southern Vietnam.',
+      actor: 'President Eisenhower',
+      action: 'He refused to send bombers to save the French at Dien Bien Phu. Then he decided the United States would take France’s place in the south.',
       date: 'May–July 1954',
     },
     assumption: {
-      premise: 'With French colonial presence removed, the United States could build a durable, independent, non-communist ally in the South.',
-      blindSpot: 'Underestimated the broad revolutionary prestige Ho Chi Minh and the Viet Minh had earned through eight years of anti-colonial victory.',
+      premise: 'With France gone, Washington thought it could build a strong, independent, non-communist country in the south.',
+      blindSpot: 'Ho Chi Minh had just beaten a European army. Millions of Vietnamese saw him as the man who won their independence.',
     },
     result: {
-      immediate: 'The Geneva Accords temporarily partitioned Vietnam at the 17th parallel pending nationwide elections scheduled for July 1956.',
-      counterAction: 'Washington organized the SEATO alliance and sponsored Ngo Dinh Diem in Saigon to prevent communist takeover.',
+      immediate: 'The Geneva Accords split Vietnam at the 17th parallel until elections, which were set for July 1956.',
+      counterAction: 'Washington set up the SEATO alliance and backed Ngo Dinh Diem to run the south.',
     },
     unintendedConsequence:
-      'The United States inherited the external burden of sustaining an untested, politically fragmented southern regime without having resolved the underlying nationalist conflict.',
+      'The United States took on the job of propping up a new, untested government in Saigon, while the fight over who should rule Vietnam stayed unsettled.',
     nextDecision:
-      'How would Washington and the Diem regime handle the Geneva mandate for nationwide elections in 1956?',
+      'Would Diem and Washington allow the 1956 elections?',
   },
   interactiveModule: {
     id: 'dien-bien-phu-map',
     type: 'dien-bien-phu-map',
     title: 'The trap at Dien Bien Phu',
     prompt:
-      'See why French commanders thought the valley was safe, and how Giap’s guns in the hills cut off the airstrip.',
+      'Move through the siege to see why French commanders felt safe in the valley, and what happened once Giap’s guns in the hills could reach the airstrip.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['ho-truman-1946'], PRIMARY_DOCUMENTS['nsc-68-indochina']],
   nextQuestion: {
-    question: 'Why did a temporary line at the 17th parallel become a border?',
+    question: 'Why did a temporary line become a border?',
     framing:
-      'The 1954 Geneva agreement said the line was temporary and was not a border. So what stopped the elections that were supposed to reunite Vietnam in 1956?',
+      'The Geneva deal called the line at the 17th parallel temporary. Elections in 1956 were supposed to reunite the country, and they never took place.',
   },
   citations: [
     CITATION_REGISTRY['c1-1'],

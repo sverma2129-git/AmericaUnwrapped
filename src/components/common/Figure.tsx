@@ -1,5 +1,8 @@
 import React from 'react';
 import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
+import { LOOK_CLOSER } from '@/data/vietnam/lookCloser';
+import PhotoViewer from './PhotoViewer';
+import LookCloser from './LookCloser';
 
 /** Path to a registered image file. Raw <img> src needs the deploy base path added by hand. */
 export function imageSrc(file: string): string {
@@ -49,18 +52,14 @@ export default function Figure({ imageId, variant = 'full', priority = false, cl
   const ratio = image.height / image.width;
   const full = ratio > 1.1 ? '26rem' : ratio > 0.85 ? '34rem' : '52rem';
   const compact = ratio > 1.1 ? '15rem' : ratio > 0.85 ? '20rem' : '30rem';
+  const details = variant === 'full' ? LOOK_CLOSER[imageId] : undefined;
   return (
-    <figure className={className} style={{ maxWidth: variant === 'full' ? full : compact }}>
-      {/* eslint-disable-next-line @next/next/no-img-element -- static export: files are served as-is from /public */}
-      <img
-        src={imageSrc(image.file)}
-        width={image.width}
-        height={image.height}
-        alt={image.alt}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
-        className="w-full h-auto rounded-sm bg-parchment"
-      />
+    <figure className={className} style={{ maxWidth: variant === 'full' ? (details ? '40rem' : full) : compact }}>
+      {details ? (
+        <LookCloser imageId={imageId} entry={details} priority={priority} />
+      ) : (
+        <PhotoViewer imageId={imageId} priority={priority} />
+      )}
       <figcaption className="mt-2.5 text-xs leading-relaxed text-ink-soft">
         {variant === 'full' && <span className="text-sm text-ink-muted block mb-0.5">{image.caption}</span>}
         {image.creator}, {image.date}. {image.source}. {RIGHTS_LABEL[image.rights]}.{' '}

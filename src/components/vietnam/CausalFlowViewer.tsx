@@ -19,20 +19,20 @@ export default function CausalFlowViewer({ causalChain, showHeading = true }: Ca
       body: [{ text: causalChain.decision.action, strong: true }],
     },
     {
-      title: 'What they missed',
+      title: 'What they expected',
       body: [
-        { label: 'They assumed', text: causalChain.assumption.premise },
-        { label: 'The risk nobody checked', text: causalChain.assumption.blindSpot },
+        { text: causalChain.assumption.premise },
+        { label: 'What they got wrong', text: causalChain.assumption.blindSpot },
       ],
     },
     {
-      title: 'What happened next',
+      title: 'What happened',
       body: [
-        { label: 'First', text: causalChain.result.immediate },
-        { label: 'The other side’s answer', text: causalChain.result.counterAction },
+        { text: causalChain.result.immediate },
+        { label: 'The response', text: causalChain.result.counterAction },
       ],
     },
-    { title: 'What it led to', body: [{ text: causalChain.unintendedConsequence, strong: true }] },
+    { title: 'Where it led', body: [{ text: causalChain.unintendedConsequence, strong: true }] },
   ];
 
   return (
@@ -76,8 +76,8 @@ export default function CausalFlowViewer({ causalChain, showHeading = true }: Ca
         })}
       </ol>
 
-      <p className="mt-6 max-w-[66ch] border-t border-rule pt-5 text-base leading-relaxed text-ink-muted">
-        <span className="font-semibold text-ink">The question this leaves: </span>
+      <p className="mt-8 max-w-[66ch] rounded-sm bg-parchment p-5 text-base leading-relaxed text-ink-muted">
+        <span className="font-semibold text-ink">Next question: </span>
         {causalChain.nextDecision}
       </p>
     </div>

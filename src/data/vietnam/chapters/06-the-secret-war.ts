@@ -8,7 +8,7 @@ const chapter: ChapterData = {
   timeframe: '1961–1972',
   leadImageId: 'ranch-hand',
   title: 'The secret war',
-  subtitle: 'The Phoenix Program, herbicide spraying, and the hidden war in Laos',
+  subtitle: 'Away from the big battles, the CIA ran an army in Laos and hunted the Viet Cong’s hidden government. Air Force planes sprayed the forests with Agent Orange.',
   summary:
     'Alongside the regular battles, the United States and South Vietnam fought a quieter war. The Phoenix Program went after the Viet Cong’s political network by identifying its members and capturing or killing them. Operation Ranch Hand sprayed millions of gallons of herbicide to strip away forest cover. The harm to people and to the land has lasted for decades.',
   whatHappened: {
@@ -16,6 +16,11 @@ const chapter: ChapterData = {
       'Army sweeps could not destroy the Viet Cong’s hidden government. It collected taxes, ran schools and recruited fighters. So in 1967–1968, the CIA and South Vietnamese security agencies created the Phoenix Program, *Phung Hoang* in Vietnamese. It was run by CORDS (Civil Operations and Revolutionary Development Support). Phoenix pooled what the military and police knew in order to find the members of this hidden network and remove them by capture, persuasion or killing. Official figures given to Congress in 1971 counted 81,740 people removed: 33,358 captured, 22,013 who switched sides and 26,369 killed.[^c6-3] But testimony showed that about 87 percent of those killed died in regular military operations and artillery fire, not in targeted police actions. Monthly quotas led officials to pad their reports with ordinary combat deaths.[^c6-3]',
       'From 1962 to 1971, the U.S. Air Force ran Operation Ranch Hand. Its planes sprayed about 19 million gallons of plant-killing chemicals over the South Vietnamese countryside to strip away the jungle cover and crops the guerrillas relied on.[^c6-2] About 11 million gallons were Agent Orange, which was contaminated with 2,3,7,8-TCDD, a dioxin that causes cancer and stays in the environment for years.[^c6-2] More than 5 million acres of forest and 500,000 acres of crops were stripped bare. The harm lasted for decades, with higher rates of cancer, birth defects and long-term illness among Vietnamese civilians and American veterans. Few people know that the contaminated UC-123 planes were later handed to the Air Force Reserve, which flew them on cargo missions inside the United States from 1972 to 1982.',
       'At the same time, the CIA was running a large secret war in neighboring Laos. It organized an army of about 30,000 Hmong fighters under General Vang Pao to cut the Ho Chi Minh Trail.[^c6-1] With Air America transport planes and heavy secret B-52 raids, Laos became the most heavily bombed country per person in history.[^c6-2] Phoenix and the other pacification programs did damage the Viet Cong’s political network. But their rough methods and the civilians they killed turned many villagers against the government.'
+    ],
+    sections: [
+      { date: '1967–1971', heading: 'The Phoenix Program' },
+      { date: '1962–1971', heading: 'Operation Ranch Hand' },
+      { date: '1961–1973', heading: 'The war in Laos' },
     ],
     keyEvents: [
       { date: 'Nov 1961', title: 'Kennedy approves chemical spraying', detail: 'Diem asks for spraying from the air. Kennedy approves it one mission at a time as a test.' },
@@ -29,14 +34,14 @@ const chapter: ChapterData = {
   washington: {
     keyActors: ['Robert Komer', 'William Colby', 'Richard Helms', 'Ngo Dinh Diem'],
     strategicObjective:
-      'Eradicate the political shadow government of the Viet Cong and deny insurgents forest concealment and agricultural sustenance.',
+      'Destroy the Viet Cong’s hidden government and take away the jungle cover and crops the guerrillas lived on.',
     underlyingAssumptions: [
-      'The insurgency was sustained primarily by a coercive political infrastructure that could be dismantled through centralized intelligence collection and police action.',
-      'Herbicides were an efficient, economical weapon to protect American patrol bases and convoys without long-term ecological consequences.',
+      'The guerrillas depended on a network of officials who ruled by fear, and police work guided by good intelligence could take that network apart.',
+      'Herbicides were a cheap, efficient way to protect bases and convoys, with no lasting harm to the land.',
     ],
     internalDebates: [
-      'Controversy erupted in Congress and the media labeling Phoenix a “civilian assassination program,” leading the CIA to defend it as an essential counterinsurgency program padded by conventional combat reporting.',
-      'State Department officials initially resisted herbicide defoliation in 1961, fearing international condemnation for chemical warfare.',
+      'Critics in Congress and the press called Phoenix a program for assassinating civilians. The CIA defended it and said ordinary combat deaths had padded its numbers.',
+      'In 1961 State Department officials pushed back against spraying herbicides, because they feared the world would call it chemical warfare.',
     ],
     homeFrontConstraints: [
       'Intense public and congressional scrutiny following revelations of interrogation abuses, tiger cages at Con Son Island, and chemical contamination.',
@@ -46,13 +51,13 @@ const chapter: ChapterData = {
   hanoi: {
     keyActors: ['Le Duan', 'Central Office for South Vietnam (COSVN)', 'Nguyen Van Linh'],
     strategicObjective:
-      'Protect underground party cadres, maintain rural political control, and counter pacification programs.',
+      'Protect party members in the South, keep control of the villages and fight the pacification programs.',
     underlyingAssumptions: [
-      'The rural population’s nationalist sentiment and land grievances would enable the Viet Cong infrastructure to regenerate despite government arrests.',
-      'American chemical defoliation would reinforce anti-imperialist propaganda and drive uncommitted peasants into the revolutionary camp.',
+      'Villagers’ nationalism and anger over land would let the Viet Cong rebuild its network no matter how many people were arrested.',
+      'American spraying would push villagers who had not taken sides toward the revolution.',
     ],
     internalDebates: [
-      'COSVN recognized Phoenix as a severe operational threat that decimated southern party apparatus in many provinces between 1968 and 1971, forcing cadres to operate from remote base areas.',
+      'Communist headquarters in the South saw Phoenix as a serious threat. Between 1968 and 1971 it wrecked the party’s network in many provinces and forced officials to retreat to remote bases.',
     ],
     homeFrontConstraints: [
       'Managing heavy loss of seasoned southern organizers, requiring northern administrative cadres to be dispatched south to replace fallen personnel.',
@@ -61,35 +66,35 @@ const chapter: ChapterData = {
   },
   causalChain: {
     decision: {
-      actor: 'MACV, CIA, & South Vietnamese Authorities',
-      action: 'Institutionalized the Phoenix Program to eliminate insurgent cadres and conducted Operation Ranch Hand to defoliate rural sanctuaries.',
+      actor: 'The CIA, the U.S. command and South Vietnam’s government',
+      action: 'They set up the Phoenix Program to remove the Viet Cong’s hidden officials, and sprayed herbicides to strip away the jungle cover.',
       date: '1962–1971',
     },
     assumption: {
-      premise: 'Dismantling the political infrastructure and stripping vegetative cover would break the insurgency’s hold on the rural population.',
-      blindSpot: 'Quota-driven arrests and widespread chemical devastation generated substantial civilian alienation, reinforcing the grievances that fueled insurgency.',
+      premise: 'Take away the hidden government and the jungle cover, and the guerrillas would lose their hold on the villages.',
+      blindSpot: 'Arrest quotas and chemical spraying hurt ordinary villagers, and many of them turned against the government.',
     },
     result: {
-      immediate: 'Over 80,000 individuals were neutralized under Phoenix, and millions of forest acres were destroyed.',
-      counterAction: 'Insurgent networks adapted by shifting base areas across borders and relying increasingly on conventional northern regular units.',
+      immediate: 'Phoenix reported more than 80,000 people removed, and spraying stripped more than 5 million acres of forest.',
+      counterAction: 'The guerrillas moved their bases across the borders and leaned more on regular troops from the North.',
     },
     unintendedConsequence:
-      'The programs damaged the moral standing of the allied effort internationally and produced an enduring ecological and health crisis spanning generations.',
+      'Both programs hurt America’s standing around the world. Agent Orange left health damage that Vietnamese families and American veterans still live with.',
     nextDecision:
-      'How would the sudden urban shock of the 1968 Tet Offensive intersect with these ongoing pacification and attrition efforts?',
+      'How would these quiet campaigns hold up when the Tet Offensive hit the cities in 1968?',
   },
   interactiveModule: {
     id: 'phoenix-analysis',
     type: 'phoenix-analysis',
     title: 'Phoenix and Ranch Hand in numbers',
     prompt:
-      'Look at the Phoenix Program’s numbers, including what “neutralized” meant and the 87% of cases that came from regular combat, then at what Operation Ranch Hand left behind.',
+      'Check the Phoenix Program’s official numbers, including what the word neutralized covered and why 87% of the deaths came from regular combat. Then see what Operation Ranch Hand left behind.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['cia-memo-giap-thanh-1966']],
   nextQuestion: {
-    question: 'How did a military defeat for the Viet Cong end a presidency?',
+    question: 'How did a battle Hanoi lost end a presidency?',
     framing:
-      'In the 1968 Tet Offensive, communist forces were pushed out of every major city and lost huge numbers of fighters. So why did Tet break American support for the war and change U.S. policy?',
+      'In the 1968 Tet Offensive, communist forces were pushed out of every major city they attacked and lost more than 40,000 fighters. Two months later, Lyndon Johnson announced he would not run again.',
   },
   citations: [
     CITATION_REGISTRY['c6-1'],

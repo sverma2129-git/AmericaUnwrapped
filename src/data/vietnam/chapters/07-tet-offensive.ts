@@ -9,7 +9,7 @@ const chapter: ChapterData = {
   leadImageId: 'hue-1968',
   galleryImageIds: ['embassy-saigon-1968', 'cronkite-hue-1968', 'lbj-march-31-1968'],
   title: 'The Tet Offensive',
-  subtitle: 'Attacks on 100 cities, the battle for Hue, and the loss of trust at home',
+  subtitle: 'In January 1968, communist forces attacked more than 100 cities and towns across South Vietnam at once. Americans watched the fighting on the evening news.',
   summary:
     'During the Lunar New Year of 1968, more than 84,000 communist troops attacked over 100 cities and bases across South Vietnam at once. U.S. and South Vietnamese forces beat back the attacks and badly weakened the Viet Cong in the South. But the offensive wrecked the Johnson administration’s claim that the war was going well. After Tet, Americans stopped arguing about how to win and started arguing about how to leave.',
   isLandmark: true,
@@ -36,6 +36,11 @@ const chapter: ChapterData = {
       'In Saigon, a 19-man Viet Cong commando unit blew a hole in the wall around the U.S. Embassy. All of the attackers were killed or captured within hours, but live television showed dead Americans on the embassy grounds. In Hue, two North Vietnamese army regiments seized the old walled Citadel. U.S. Marines and South Vietnamese troops spent 26 days retaking it room by room, and more than 80 percent of the city was destroyed. While they held Hue, communist officials executed between 2,800 and 3,000 people, including government workers, teachers, Catholics and foreigners.[^c7-3]',
       'As a battle, Tet was a failure for Hanoi. The mass uprising its leaders expected, the *Tong Khoi Nghia*, never happened. The Viet Cong lost more than 40,000 experienced fighters, and from then on, soldiers drafted in the North did most of the fighting.[^c7-1] But in the United States, Tet shook the public’s belief that the war was being won. On February 27, 1968, CBS anchor Walter Cronkite told viewers the war was “mired in stalemate.”[^Q014] When the military asked for 206,000 more troops, Johnson’s senior civilian advisers, known as the Wise Men, told him to scale back.[^c7-2] On March 31, 1968, Johnson announced a partial halt to the bombing and said he would not run for reelection.[^c7-2]'
     ],
+    sections: [
+      { date: 'Late 1967 – January 1968', heading: 'Khe Sanh, and then the cities' },
+      { date: 'January–February 1968', heading: 'The embassy and Hue' },
+      { date: 'February–March 1968', heading: 'Losing the argument at home' },
+    ],
     keyEvents: [
       { date: 'Jan 21, 1968', title: 'The siege of Khe Sanh begins', detail: 'Two North Vietnamese divisions surround 6,000 Marines for a 77-day artillery battle.' },
       { date: 'Jan 30–31, 1968', title: 'The Tet Offensive begins', detail: 'Attacks hit cities across the country at once. Commandos break into the U.S. Embassy grounds in Saigon.' },
@@ -48,14 +53,14 @@ const chapter: ChapterData = {
   washington: {
     keyActors: ['Lyndon B. Johnson', 'Clark Clifford', 'Gen. William Westmoreland', 'Walter Cronkite', 'Sen. Eugene McCarthy'],
     strategicObjective:
-      'Restore civilian security in the cities, defeat the offensive militarily, and reassure an electorate stunned by the sudden violence.',
+      'Make the cities safe again, defeat the offensive and calm voters shocked by the violence.',
     underlyingAssumptions: [
-      'Because the allied counteroffensive inflicted overwhelming tactical casualties on the enemy, Tet should have been recognized as an allied victory.',
-      'The press coverage distorted a tactical military victory into a psychological defeat.',
+      'The enemy had suffered huge losses, so Americans should see Tet as a win.',
+      'News coverage had turned a battlefield win into a defeat in people’s minds.',
     ],
     internalDebates: [
-      'Westmoreland and Gen. Wheeler requested 206,000 additional troops to exploit enemy exhaustion and strike sanctuaries in Laos and Cambodia.',
-      'Defense Secretary Clark Clifford convened the “Wise Men” (senior statesmen like Dean Acheson), who advised LBJ that military victory was unattainable within domestic political limits.',
+      'Westmoreland and General Earle Wheeler asked for 206,000 more troops to strike while the enemy was weak, including bases in Laos and Cambodia.',
+      'Defense Secretary Clark Clifford called together the Wise Men, senior statesmen such as Dean Acheson. They told Johnson that Americans would not support what victory would take.',
     ],
     homeFrontConstraints: [
       'The anti-war movement surged into mainstream electoral politics; Eugene McCarthy and Robert Kennedy challenged LBJ in primary elections.',
@@ -66,14 +71,14 @@ const chapter: ChapterData = {
   hanoi: {
     keyActors: ['Le Duan', 'General Vo Nguyen Giap', 'General Van Tien Dung', 'Tran Van Tra'],
     strategicObjective:
-      'Achieve a decisive breakthrough through the “General Offensive and General Uprising” to collapse the Saigon administration and compel U.S. withdrawal.',
+      'Break Saigon’s government with a general offensive and uprising, and force the United States out.',
     underlyingAssumptions: [
-      'The South Vietnamese urban population despised the Thieu government and would rise up in armed revolution when the cities were struck.',
-      'ARVN units would mutiny, disintegrate, or defect to the revolutionary side.',
+      'People in South Vietnam’s cities hated Thieu’s government and would rise up once the attacks began.',
+      'South Vietnamese army units would mutiny, fall apart or switch sides.',
     ],
     internalDebates: [
-      'Le Duan had overruled Giap’s warnings regarding the risks of premature urban exposure, insisting that a historic breakthrough was attainable.',
-      'Field commanders faced severe recriminations over unrealistic planning, catastrophic cadre losses, and the failure of the general uprising to occur.',
+      'Le Duan overruled Giap, who had warned that attacking the cities would expose their forces.',
+      'Afterward, field commanders were blamed for the unrealistic plan, the heavy losses and the uprising that never came.',
     ],
     homeFrontConstraints: [
       'Decimation of indigenous southern Viet Cong networks, forcing Hanoi to fill southern units almost entirely with northern conscripts for the remainder of the war.',
@@ -82,35 +87,35 @@ const chapter: ChapterData = {
   },
   causalChain: {
     decision: {
-      actor: 'Hanoi Leadership (Le Duan) / Johnson Administration',
-      action: 'Hanoi launched the nationwide urban offensive during the holiday truce; Johnson halted escalation and opened preliminary peace talks.',
+      actor: 'Le Duan in Hanoi; Lyndon Johnson',
+      action: 'Hanoi attacked the cities during the Tet holiday truce. Afterward, Johnson stopped sending more troops and opened peace talks.',
       date: 'January–March 1968',
     },
     assumption: {
-      premise: 'Hanoi assumed the urban population would rise; Washington assumed its battlefield victory would restore public confidence.',
-      blindSpot: 'The southern population sought shelter rather than rising in revolt; the American public recognized that official claims of imminent victory were false.',
+      premise: 'Hanoi expected the people of the cities to rise up. Washington expected its battlefield win to restore Americans’ faith in the war.',
+      blindSpot: 'City people in the South hid instead of joining a revolt. Americans decided their leaders had misled them about how close victory was.',
     },
     result: {
-      immediate: 'Catastrophic losses for the Viet Cong; political collapse of Johnson’s presidency and the end of open-ended escalation.',
-      counterAction: 'Richard Nixon won the 1968 presidential election promising “peace with honor” and troop withdrawals.',
+      immediate: 'The Viet Cong lost more than 40,000 fighters. Johnson’s presidency fell apart, and American escalation stopped.',
+      counterAction: 'Richard Nixon won the 1968 election promising peace with honor and troop withdrawals.',
     },
     unintendedConsequence:
-      'The war’s decisive center of gravity shifted irreversibly to American domestic politics and the timeline of troop withdrawal.',
+      'From then on, the war’s outcome depended less on battles in Vietnam than on politics in the United States.',
     nextDecision:
-      'How would the newly elected Nixon administration extract half a million troops from Vietnam without appearing to abandon its ally?',
+      'How would Nixon bring half a million troops home without seeming to abandon South Vietnam?',
   },
   interactiveModule: {
     id: 'tet-offensive-map',
     type: 'tet-offensive-map',
     title: 'Tet 1968 on the map',
     prompt:
-      'See where the attacks hit: Saigon, Hue, Da Nang and Khe Sanh. Then compare what Hanoi planned, what happened, and how Washington reacted.',
+      'Find where the attacks hit, from Saigon to Hue to Khe Sanh. Then compare Hanoi’s plan with what happened and with Washington’s response.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['tet-politburo-directive']],
   nextQuestion: {
-    question: 'What did “Vietnamization” mean in practice?',
+    question: 'What did Vietnamization mean in practice?',
     framing:
-      'Richard Nixon promised to bring American troops home while training South Vietnam’s army to defend itself. Was that a real plan for South Vietnam to stand alone, or a way to buy time for an American exit?',
+      'Richard Nixon promised to bring American troops home and hand the fighting to South Vietnam’s army. Historians still argue over whether he expected that army to survive.',
   },
   citations: [
     CITATION_REGISTRY['c7-1'],

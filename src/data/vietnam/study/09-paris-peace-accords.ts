@@ -4,9 +4,9 @@ import { ChapterStudyData } from '@/types/study';
 export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
   chapterId: 'paris-peace-accords',
   bigQuestion:
-    'Why did Nixon order the Christmas Bombing of 1972, and why did the 1973 Paris Peace Accords fail to end the war?',
+    'Why didn’t the Paris Peace Accords end the war?',
   whyItMatters:
-    'The U.S. got its troops and prisoners of war out. But the deal left 150,000 North Vietnamese troops inside South Vietnam, and that decided how the war would end.',
+    'The United States got its troops and prisoners of war out. About 150,000 North Vietnamese troops stayed inside South Vietnam, and they decided how the war would end.',
   whatYouWillLearn: [
     'How secret talks between Henry Kissinger and Le Duc Tho produced a draft deal in October 1972.',
     'Why South Vietnam’s president, Nguyen Van Thieu, refused the draft and saw it as a death sentence.',
@@ -16,9 +16,9 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     summary:
       'In October 1972, secret talks in Paris between Henry Kissinger and the North Vietnamese diplomat Le Duc Tho produced a breakthrough. Hanoi dropped its demand that South Vietnam’s president, Nguyen Van Thieu, be removed. In return, the U.S. agreed that 150,000 to 200,000 North Vietnamese troops could stay where they were inside South Vietnam. Weeks before the 1972 presidential election, Kissinger announced that peace was close. When Thieu saw the draft, he rejected it in anger. He said that leaving northern troops on southern soil meant surrender. Talks broke down. From December 18 to 29, 1972, Nixon ordered Operation Linebacker II, the Christmas Bombing. B-52s dropped more than 20,000 tons of bombs on Hanoi and Haiphong, the heaviest strikes of the war. When talks resumed, the final Paris Peace Accords, signed on January 27, 1973, were almost the same as the October draft. Nixon got Thieu to sign by secretly threatening to cut off all aid. In private letters, he also promised that the U.S. would hit back hard if Hanoi broke the ceasefire. The last American combat troops left by March 29, 1973, and 591 American POWs came home.',
     examTakeaways: [
-      'The big concession: The 1973 Accords let North Vietnamese troops stay inside South Vietnam, while every American combat soldier had to leave.',
-      'Why the Christmas Bombing: Linebacker II won few new terms from Hanoi. Its main purpose was to reassure Thieu and show American force before the U.S. left.',
-      'Promises Congress cancelled: Nixon secretly promised Thieu the U.S. would strike back if Hanoi attacked. The Case-Church Amendment and the War Powers Act made that promise impossible to keep.',
+      'The 1973 Accords let North Vietnamese troops stay inside South Vietnam, while every American combat soldier had to leave.',
+      'The Christmas Bombing of December 1972 won few new terms from Hanoi. Its main purpose was to reassure Thieu and push him to sign.',
+      'Nixon secretly promised Thieu that the United States would strike back if Hanoi attacked. The Case-Church Amendment of 1973 made that promise impossible to keep.',
     ],
     keyTerms: [
       {
@@ -34,7 +34,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       },
       {
         id: 'operation-linebacker-ii',
-        term: 'Operation Linebacker II (“Christmas Bombing”)',
+        term: 'Operation Linebacker II (Christmas Bombing)',
         imageId: 'b52-linebacker-1972',
         phonetic: 'LINE-bak-er TWO',
         definition:
@@ -59,7 +59,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c9-q1',
       question:
-        'What major concession did the United States make in the 1973 Paris Peace Accords that South Vietnamese President Thieu viewed as a “death sentence” for his country?',
+        'What did the United States agree to in the 1973 Paris Peace Accords that Thieu called a death sentence for South Vietnam?',
       options: [
         'North Vietnamese troops could stay in the South while U.S. forces withdrew',
         'The U.S. would pay billions of dollars in war reparations to the Viet Cong',
@@ -68,13 +68,13 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'The treaty set a “ceasefire in place.” North Vietnamese troops could stay on the southern land they held. Thieu knew that once American air power left, the ARVN could not hold off a northern army already inside the country.',
+        'The treaty set a ceasefire in place. North Vietnamese troops could stay on the southern land they held. Thieu knew that once American air power left, the ARVN could not hold off a northern army already inside the country.',
       citationRef: 'c9-1',
     },
     {
       id: 'c9-q2',
       question:
-        'How did President Nixon convince South Vietnamese President Nguyen Van Thieu to sign the Paris Peace Accords in January 1973 despite Thieu’s fierce objections?',
+        'How did Nixon get Thieu to sign the Paris Peace Accords in January 1973?',
       options: [
         'He promised to keep 50,000 U.S. troops in South Vietnam as a permanent guarantee',
         'He agreed to keep bombing Hanoi until North Vietnam’s top leaders resigned from power',
@@ -89,7 +89,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c9-q3',
       question:
-        'What event in Washington during 1973–1974 permanently destroyed the executive branch’s ability to intervene militarily to defend South Vietnam as Nixon had promised?',
+        'What made it impossible for Nixon to keep his promise to defend South Vietnam?',
       options: [
         'A Senate vote recognizing North Vietnam as the only Vietnamese government',
         'A Supreme Court ruling that the Vietnam War was unconstitutional',
@@ -126,7 +126,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c9-fc3',
-      term: 'The “Palace File”',
+      term: 'The Palace File',
       phonetic: 'PAL-us FYLE',
       definition:
         'A collection of 27 private letters from Presidents Nixon and Ford to President Thieu. They promised American military action if North Vietnam broke the 1973 Accords.',

@@ -4,9 +4,9 @@ import { ChapterStudyData } from '@/types/study';
 export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
   chapterId: 'the-collapse',
   bigQuestion:
-    'South Vietnam’s army was one of the best-equipped in the world on paper. Why did it collapse in just 55 days in the spring of 1975?',
+    'How did South Vietnam’s army collapse in just 55 days?',
   whyItMatters:
-    'The 1975 Spring Offensive ended thirty years of war in Vietnam. It made the American withdrawal look like a defeat and united Vietnam under communist rule.',
+    'The fall of Saigon ended thirty years of war and reunited Vietnam under communist rule. For Americans, it made the withdrawal look like a defeat.',
   whatYouWillLearn: [
     'How cuts in U.S. aid, rising prices and rationed ammunition weakened the ARVN.',
     'How General Van Tien Dung’s surprise attack on Ban Me Thuot led President Thieu to order a panicked retreat.',
@@ -14,11 +14,11 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'After American troops left in 1973, South Vietnam’s economy sank as American military spending disappeared. Congress also cut military aid from $2.3 billion to under $700 million. ARVN units had to ration artillery shells, keep helicopters on the ground for lack of spare parts, and fight short of ammunition. In December 1974, communist forces attacked Phuoc Long province to see whether the U.S. would start bombing again. When no planes came, Hanoi approved a two-year campaign planned by General Van Tien Dung. On March 10, 1975, North Vietnamese tanks took Ban Me Thuot in the Central Highlands. In a panic, President Thieu ordered the whole Central Highlands abandoned without consulting his commanders. The retreat down the dirt road Route 7B became the “Column of Tears,” as soldiers left their units to rescue their families. Hue fell on March 25. Da Nang fell on March 30, crowded with 300,000 refugees. The ARVN 18th Division held at Xuan Loc for two weeks, but North Vietnam sped up its plans and launched the “Ho Chi Minh Campaign.” On the morning of April 30, 1975, after the rooftop helicopter evacuations of Operation Frequent Wind, North Vietnamese Tank 843 crashed through the gates of the Presidential Palace in Saigon. The war was over.',
+      'After American troops left in 1973, South Vietnam’s economy sank as American military spending disappeared. Congress also cut military aid from $2.3 billion to under $700 million. ARVN units had to ration artillery shells, keep helicopters on the ground for lack of spare parts, and fight short of ammunition. In December 1974, communist forces attacked Phuoc Long province to see whether the U.S. would start bombing again. When no planes came, Hanoi approved a two-year campaign planned by General Van Tien Dung. On March 10, 1975, North Vietnamese tanks took Ban Me Thuot in the Central Highlands. In a panic, President Thieu ordered the whole Central Highlands abandoned without consulting his commanders. The retreat down the dirt road Route 7B became the Column of Tears, as soldiers left their units to rescue their families. Hue fell on March 25. Da Nang fell on March 30, crowded with 300,000 refugees. The ARVN 18th Division held at Xuan Loc for two weeks, but North Vietnam sped up its plans and launched the Ho Chi Minh Campaign. On the morning of April 30, 1975, after the rooftop helicopter evacuations of Operation Frequent Wind, North Vietnamese Tank 843 crashed through the gates of the Presidential Palace in Saigon. The war was over.',
     examTakeaways: [
-      'Many causes: The ARVN fell apart because U.S. aid was cut, fuel and ammunition were rationed, Thieu gave panicked orders, and soldiers left to save their families.',
-      'The Column of Tears: Thieu’s badly planned retreat gave up two-thirds of South Vietnam in three weeks, mostly without major battles.',
-      'Operation Frequent Wind: The largest helicopter evacuation in history. Crews pushed helicopters off aircraft carriers into the sea to make room on deck.',
+      'No single cause explains the collapse. U.S. aid was cut, fuel and ammunition were rationed, Thieu gave panicked orders, and soldiers left their posts to save their families.',
+      'Thieu ordered his army out of the Central Highlands in March 1975. The retreat, known as the Column of Tears, gave up two-thirds of South Vietnam in three weeks, mostly without major battles.',
+      'In Operation Frequent Wind, the largest helicopter evacuation in history, crews pushed helicopters off aircraft carriers into the sea to make room on deck.',
     ],
     keyTerms: [
       {
@@ -58,7 +58,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c10-q1',
       question:
-        'What major strategic decision made by President Nguyen Van Thieu on March 14, 1975 transformed a localized setback into a catastrophic military collapse?',
+        'What decision did Thieu make on March 14, 1975, that turned a local defeat into a collapse?',
       options: [
         'He ordered every ARVN division north to retake Ban Me Thuot at any cost',
         'He resigned and handed command of the army to U.S. officers in Saigon',
@@ -67,13 +67,13 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 2,
       rationale:
-        'After Ban Me Thuot fell, Thieu held a secret meeting at Cam Ranh. He suddenly ordered the whole II Corps to leave the Central Highlands down the dirt road Route 7B. The retreat became the “Column of Tears,” and South Vietnam lost 75% of its tanks and artillery without a fight.',
+        'After Ban Me Thuot fell, Thieu held a secret meeting at Cam Ranh. He suddenly ordered the whole II Corps to leave the Central Highlands down the dirt road Route 7B. The retreat became the Column of Tears, and South Vietnam lost 75% of its tanks and artillery without a fight.',
       citationRef: 'c10-1',
     },
     {
       id: 'c10-q2',
       question:
-        'How did U.S. congressional actions between 1973 and 1974 directly impact the combat readiness of the South Vietnamese military (ARVN)?',
+        'How did Congress’s actions in 1973 and 1974 affect South Vietnam’s army?',
       options: [
         'Congress cut military aid sharply, leaving ARVN short of ammunition and parts',
         'Congress raised aid but required ARVN to buy only American-made weapons',
@@ -88,7 +88,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c10-q3',
       question:
-        'At 11:30 AM on April 30, 1975, what historic symbolic action marked the official end of the Republic of Vietnam?',
+        'What happened at 11:30 a.m. on April 30, 1975, that marked the end of South Vietnam?',
       options: [
         'President Ford signed a surrender agreement at the United Nations in New York',
         'A North Vietnamese tank broke through the gates of the Presidential Palace',
@@ -129,7 +129,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c10-fc2',
-      term: 'The “Column of Tears”',
+      term: 'The Column of Tears',
       phonetic: 'KOL-um of TEERZ',
       definition:
         'The chaotic retreat of 200,000 ARVN soldiers and more than 400,000 civilian refugees down the dirt road Route 7B, from the Central Highlands to the coast in March 1975.',
@@ -139,7 +139,7 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c10-fc3',
-      term: 'President Duong Van Minh (“Big Minh”)',
+      term: 'President Duong Van Minh (Big Minh)',
       phonetic: 'ZWOONG VAHN MIN',
       definition:
         'A South Vietnamese general who led the 1963 coup against Diem. He was South Vietnam’s last president, for just 48 hours in April 1975.',

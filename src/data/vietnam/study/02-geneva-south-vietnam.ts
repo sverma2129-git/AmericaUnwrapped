@@ -4,9 +4,9 @@ import { ChapterStudyData } from '@/types/study';
 export const GENEVA_STUDY_DATA: ChapterStudyData = {
   chapterId: 'geneva-south-vietnam',
   bigQuestion:
-    'Why were the elections promised at Geneva never held, and how did the war in the South begin?',
+    'Why were the 1956 elections never held?',
   whyItMatters:
-    'This is how a temporary ceasefire line became two hostile countries, and how opposition in the South grew into the National Liberation Front (the Viet Cong).',
+    'Without a vote, the line at the 17th parallel hardened into a border. By 1960 Diem’s enemies in the South had formed the National Liberation Front, which Americans called the Viet Cong.',
   whatYouWillLearn: [
     'Why Ngo Dinh Diem and the United States refused to hold the 1956 elections.',
     'How Diem took control in Saigon while turning Buddhists and farmers against him.',
@@ -14,11 +14,11 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'The 1954 Geneva Accords called for nationwide elections in July 1956 to reunite Vietnam. But neither the United States nor the new State of Vietnam signed the final statement. Prime Minister Ngo Dinh Diem had American money and help from CIA officer Edward Lansdale. He removed Emperor Bao Dai in a rigged vote and declared the Republic of Vietnam. He refused to hold the elections because he expected Ho Chi Minh to win easily. Diem’s land rules, his favoring of Catholics, and his harsh “Denounce the Communists” campaigns turned villages against him. Armed resistance grew in the South and organized as the National Liberation Front (the Viet Cong) in December 1960.',
+      'The 1954 Geneva Accords called for nationwide elections in July 1956 to reunite Vietnam. But neither the United States nor the new State of Vietnam signed the final statement. Prime Minister Ngo Dinh Diem had American money and help from CIA officer Edward Lansdale. He removed Emperor Bao Dai in a rigged vote and declared the Republic of Vietnam. He refused to hold the elections because he expected Ho Chi Minh to win easily. Diem’s land rules, his favoring of Catholics, and his harsh Denounce the Communists campaigns turned villages against him. Armed resistance grew in the South and organized as the National Liberation Front (the Viet Cong) in December 1960.',
     examTakeaways: [
-      'No elections in 1956: U.S. and South Vietnamese officials blocked the vote because they expected Ho Chi Minh to win as much as 80% of it.',
-      'Diem loses the countryside: He reversed the Viet Minh’s land handouts and replaced elected village chiefs with Catholic loyalists. Farmers resented both.',
-      'The Viet Cong forms: The National Liberation Front (NLF) was created in December 1960. It was a southern coalition, armed and reinforced from the North.',
+      'Diem and his American backers blocked the 1956 vote. They expected Ho Chi Minh to win as much as 80% of it.',
+      'Diem lost the countryside. He gave land back to the old landlords and replaced elected village chiefs with Catholic loyalists.',
+      'The National Liberation Front formed in December 1960. Its members were southerners, armed and reinforced from the North.',
     ],
     keyTerms: [
       {
@@ -40,7 +40,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
           'The communist-led rebel organization formed in South Vietnam in December 1960. Its goals were to overthrow Diem’s government and reunite the country.',
         significance:
           'It fought a guerrilla war in villages across South Vietnam, with heavy support from North Vietnam down the Ho Chi Minh Trail.',
-        examTip: '“Viet Cong” was an insulting label from Diem’s government that meant “Vietnamese Communist.” Members called themselves the NLF.',
+        examTip: 'The name Viet Cong, short for Vietnamese Communist, was an insulting label from Diem’s government. Members called themselves the NLF.',
       },
       {
         id: 'passage-to-freedom',
@@ -59,7 +59,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c2-q1',
       question:
-        'Why did South Vietnamese President Ngo Dinh Diem refuse to conduct the nationwide reunification elections scheduled for July 1956 by the Geneva Accords?',
+        'Why did Ngo Dinh Diem refuse to hold the nationwide elections set for July 1956?',
       options: [
         'The Soviet Union blocked the vote in the United Nations Security Council',
         'He and his U.S. backers expected Ho Chi Minh to win a nationwide vote',
@@ -74,7 +74,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c2-q2',
       question:
-        'Which of Diem’s internal domestic policies generated the most intense resentment among rural South Vietnamese peasants?',
+        'Which of Diem’s policies made South Vietnam’s farmers angriest?',
       options: [
         'Forcing rural families to hand over most of their rice harvest to the national army',
         'Opening South Vietnam’s villages to Chinese merchants and military advisers',
@@ -89,7 +89,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c2-q3',
       question:
-        'What was the official name of the southern insurgent coalition established in December 1960, commonly referred to by American troops as the “Viet Cong”?',
+        'The group Americans called the Viet Cong formed in December 1960. What was its official name?',
       options: [
         'The National Liberation Front (NLF)',
         'The Provisional Revolutionary Government',
@@ -105,7 +105,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       id: 'c2-q4',
       imageId: 'diem-eisenhower-1957',
       question:
-        'The 1957 welcome shown in the photograph best illustrates which U.S. policy?',
+        'The 1957 welcome in the photograph best shows which U.S. policy?',
       options: [
         'Backing an anticommunist government in South Vietnam',
         'Supporting the nationwide elections promised at Geneva',
@@ -126,7 +126,7 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
         'President Diem’s younger brother and closest adviser. He ran the secret police and the Strategic Hamlet Program.',
       significance:
         'His crackdowns on Buddhist monks and on critics in 1963 set off the crisis that led Washington to accept a coup against Diem.',
-      examTip: 'His wife, Madame Nhu, mocked the monks who burned themselves in protest, calling the deaths “barbecues.”',
+      examTip: 'His wife, Madame Nhu, mocked the monks who burned themselves in protest, dismissing the deaths as barbecues.',
     },
     {
       id: 'c2-fc2',

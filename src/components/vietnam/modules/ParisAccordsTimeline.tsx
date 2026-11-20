@@ -2,105 +2,92 @@
 
 import React, { useState } from 'react';
 
+type Phase = 'deadlock' | 'breakthrough' | 'christmas' | 'signing';
+
+const PHASES: Record<Phase, { tab: string; title: string; when: string; story: string; meaning: string }> = {
+  deadlock: {
+    tab: 'Stuck',
+    title: 'Years of stalled talks',
+    when: 'August 1969 – September 1972',
+    story:
+      'Henry Kissinger and Le Duc Tho met in secret at a house in Sainte-Gemme, outside Paris. Two demands kept them stuck. Washington wanted every North Vietnamese soldier out of the South. Hanoi wanted South Vietnam’s President Thieu removed and replaced by a coalition government before any ceasefire.',
+    meaning: 'Neither side moved, and the war went on. Between 1969 and 1972, more than 20,000 more Americans died, along with hundreds of thousands of Vietnamese.',
+  },
+  breakthrough: {
+    tab: 'The deal',
+    title: 'The secret deal of October 1972',
+    when: 'October 8, 1972',
+    story:
+      'With the American election a few weeks away, Le Duc Tho dropped Hanoi’s demand that Thieu go. In return, Kissinger dropped Washington’s main demand: about 150,000 to 200,000 North Vietnamese troops could stay where they were inside South Vietnam.',
+    meaning:
+      'On October 26, less than two weeks before the election, Kissinger announced that peace was near. Letting North Vietnamese troops stay left South Vietnam exposed for the long term.',
+  },
+  christmas: {
+    tab: 'The bombing',
+    title: 'Thieu says no, and the Christmas Bombing',
+    when: 'December 18–29, 1972',
+    story:
+      'Thieu rejected the draft. He said letting 150,000 enemy troops stay on South Vietnamese soil was a death warrant for his country. When Hanoi refused the 69 changes Thieu wanted, Nixon ordered Operation Linebacker II: 11 days of round-the-clock B-52 raids on Hanoi and Haiphong, with more than 20,000 tons of bombs.',
+    meaning: 'The bombing barely changed the treaty. Its main purpose was to push Thieu into signing and to show Hanoi that Washington would strike if provoked.',
+  },
+  signing: {
+    tab: 'Signed',
+    title: 'The Accords are signed',
+    when: 'January 27, 1973',
+    story:
+      'The final Accords were almost the same as the October draft. Nixon got Thieu to sign by secretly threatening to cut off all aid, while promising him in private letters that the United States would strike back hard if Hanoi broke the ceasefire. Those promises could not be kept. In June 1973 Congress passed the Case-Church Amendment, which banned U.S. military action in Indochina after August 15, 1973, and Watergate forced Nixon from office in August 1974.',
+    meaning: 'All American combat troops left within 60 days, and 591 American prisoners of war came home. North Vietnamese divisions stayed inside South Vietnam.',
+  },
+};
+
+const ORDER: Phase[] = ['deadlock', 'breakthrough', 'christmas', 'signing'];
+
+/** The Paris talks in four steps. */
 export default function ParisAccordsTimeline() {
-  const [selectedPhase, setSelectedPhase] = useState<'breakthrough' | 'deadlock' | 'christmas' | 'signing'>('breakthrough');
-
-  const phases = {
-    deadlock: {
-      title: 'Four years of stalled talks (1969–1972)',
-      timeframe: 'August 1969 – September 1972',
-      summary:
-        'Kissinger and Le Duc Tho met secretly in a villa in Sainte-Gemme outside Paris. Talks were paralyzed by two irreconcilable demands: Washington insisted that all North Vietnamese Army (PAVN) troops withdraw completely from the South. Hanoi insisted that South Vietnamese President Nguyen Van Thieu be removed and replaced by a coalition government before any ceasefire.',
-      keyConcession: 'Neither side would budge; the war continued for three more years with over 20,000 additional American and hundreds of thousands of Vietnamese casualties.',
-    },
-    breakthrough: {
-      title: 'The secret deal of October 1972',
-      timeframe: 'October 8, 1972',
-      summary:
-        'With the U.S. presidential election weeks away, Le Duc Tho made a dramatic concession: Hanoi dropped its demand that Thieu be removed from power. In return, Kissinger conceded the core American demand: roughly 150,000–200,000 North Vietnamese combat troops were permitted to remain in place inside South Vietnam.',
-      keyConcession: 'Kissinger publicly announced "Peace is at hand" on October 26, ensuring Nixon’s reelection landslide while secretly sealing South Vietnam’s long-term military vulnerability.',
-    },
-    christmas: {
-      title: 'Thieu says no, and the Christmas Bombing',
-      timeframe: 'December 18–29, 1972',
-      summary:
-        'President Thieu furiously rejected the draft treaty, stating that allowing 150,000 enemy troops on his sovereign soil was a death warrant. When Hanoi refused to renegotiate 69 amendments demanded by Thieu, Nixon ordered Operation Linebacker II: 11 days of around-the-clock B-52 strikes against Hanoi and Haiphong, dropping over 20,000 tons of explosives.',
-      keyConcession: 'The bombing did not alter the text of the treaty; its primary purpose was to coerce Thieu by demonstrating American ruthlessness and to convince Hanoi that Washington would strike if provoked.',
-    },
-    signing: {
-      title: 'The Accords are signed',
-      timeframe: 'January 27, 1973',
-      summary:
-        'The final Paris Peace Accords signed in January was virtually identical to the draft agreed in October. Nixon coerced Thieu into signing by secretly threatening to cut off all aid if he balked, while writing personal letters guaranteeing that the U.S. would "respond with full force" if Hanoi violated the ceasefire. Those guarantees were made void by Watergate and the War Powers Act.',
-      keyConcession: 'All American combat troops departed within 60 days; 591 American POWs returned home; North Vietnamese divisions remained stationed inside South Vietnam.',
-    },
-  };
-
-  const current = phases[selectedPhase];
+  const [phase, setPhase] = useState<Phase>('breakthrough');
+  const current = PHASES[phase];
 
   return (
-    <figure className="my-10 border border-rule-strong bg-paper">
-      {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            How the deal was made
-          </span>
-        </div>
-        <span className="text-ink-soft text-xs">
-          Four stages
-        </span>
+    <div className="rounded-sm bg-surface p-5 sm:p-8">
+      <div className="max-w-[62ch]">
+        <h3 className="font-display text-xl font-bold text-ink">A deal that left 150,000 North Vietnamese troops in the South</h3>
+        <p className="mt-2 text-base text-ink-muted">
+          The United States agreed to take out every American soldier and get its prisoners back. North Vietnam got to keep
+          its troops inside South Vietnam. Follow how the deal came together.
+        </p>
       </div>
 
-      <div className="p-5 sm:p-7 space-y-6">
+      <ol role="tablist" aria-label="Stages of the talks" className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        {ORDER.map((key, i) => {
+          const on = key === phase;
+          return (
+            <li key={key}>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={on}
+                onClick={() => setPhase(key)}
+                className={`w-full cursor-pointer rounded-sm px-3 py-3 text-left ${on ? 'bg-brand text-white' : 'bg-parchment text-ink hover:bg-brand-tint'}`}
+              >
+                <span className={`block text-xs tabular-nums ${on ? 'text-white/85' : 'text-ink-muted'}`}>Step {i + 1}</span>
+                <span className="block text-sm font-semibold">{PHASES[key].tab}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+
+      <div aria-live="polite" className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <div>
-          <h3 className="font-display text-xl font-bold text-ink mt-1">
-            A deal that left 150,000 North Vietnamese troops in the South
-          </h3>
-          <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-            The fundamental compromise that unlocked the Paris Peace Accords was asymmetric: the United States agreed to withdraw all American forces in exchange for American POWs, while allowing North Vietnamese combat divisions to remain stationed inside South Vietnamese territory.
-          </p>
+          <p className="text-sm font-semibold tabular-nums text-brand">{current.when}</p>
+          <h4 className="mt-1 font-display text-lg font-bold text-ink">{current.title}</h4>
+          <p className="mt-3 font-serif text-lg leading-snug text-ink">{current.story}</p>
         </div>
-
-        {/* Phase Buttons */}
-        <div className="flex flex-wrap gap-2 pt-2 border-t border-rule">
-          {(['deadlock', 'breakthrough', 'christmas', 'signing'] as const).map((key) => (
-            <button
-              key={key}
-              type="button"
-              onClick={() => setSelectedPhase(key)}
-              className={`px-3 py-1.5 text-xs transition-colors cursor-pointer border ${ selectedPhase === key ? 'border-ink bg-ink text-paper font-bold' : 'border-rule-strong bg-white text-ink-muted hover:border-rule-strong' }`}
-            >
-              {phases[key].title.split('(')[0]}
-            </button>
-          ))}
-        </div>
-
-        {/* Active Phase Ledger */}
-        <div className="p-6 bg-white border border-rule space-y-4">
-          <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-rule pb-2">
-            <h4 className="font-display text-lg font-bold text-ink">
-              {current.title}
-            </h4>
-            <span className="text-xs text-ink-soft">
-              {current.timeframe}
-            </span>
-          </div>
-
-          <p className="font-display text-base text-ink leading-relaxed">
-            {current.summary}
-          </p>
-
-          <div className="p-4 bg-parchment border border-rule-strong text-xs font-sans">
-            <span className="font-bold text-ink-muted block mb-1">
-              What it meant:
-            </span>
-            <p className="font-display text-ink leading-relaxed text-sm">
-              {current.keyConcession}
-            </p>
-          </div>
+        <div className="self-start rounded-sm bg-parchment p-5">
+          <p className="text-sm font-semibold text-ink">What it meant</p>
+          <p className="mt-1 text-base text-ink-muted">{current.meaning}</p>
         </div>
       </div>
-    </figure>
+    </div>
   );
 }

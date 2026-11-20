@@ -21,14 +21,14 @@ export default function ChapterIndex() {
               {part.title}
             </h3>
           </header>
-          <ol className="divide-y divide-rule border-t border-ink lg:border-t-0">
+          <ol className="space-y-2">
             {part.chapters.map((ch) => {
               const question = ALL_CHAPTERS_STUDY_DATA[ch.id]?.bigQuestion ?? ch.subtitle;
               return (
                 <li key={ch.id}>
                   <Link
                     href={`/vietnam/${ch.id}`}
-                    className="group grid grid-cols-[minmax(0,1fr)_6rem] gap-x-5 py-6 sm:grid-cols-[2.5rem_minmax(0,1fr)_12rem] sm:gap-x-6"
+                    className="group grid grid-cols-[minmax(0,1fr)_6rem] gap-x-5 rounded-sm p-3 hover:bg-parchment sm:grid-cols-[2.5rem_minmax(0,1fr)_12rem] sm:gap-x-6 sm:p-4"
                   >
                     <span className="hidden font-display text-xl font-bold tabular-nums text-ink-soft group-hover:text-brand sm:block">
                       {ch.number}

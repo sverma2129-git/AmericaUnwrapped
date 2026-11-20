@@ -50,7 +50,7 @@ export default function StartHere({ counts }: { counts: Counts }) {
   return (
     <div className="mt-10">
       <h2 className="font-display text-lg font-bold text-ink">Where do you want to start?</h2>
-      <ul className="mt-3 divide-y divide-rule border-y border-rule">
+      <ul className="mt-3 space-y-1">
         {rows.map((r) => (
           <li key={r.need} className="grid gap-x-6 gap-y-0.5 py-3 sm:grid-cols-[13rem_minmax(0,1fr)] sm:items-baseline">
             {r.href ? (

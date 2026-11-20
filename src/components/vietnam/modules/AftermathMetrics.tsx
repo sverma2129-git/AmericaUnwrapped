@@ -2,183 +2,122 @@
 
 import React, { useState } from 'react';
 
+type Tab = 'deaths' | 'refugees' | 'bombs';
+
+const DEATHS = [
+  { label: 'American military dead', value: '58,220', note: '153,303 wounded' },
+  { label: 'South Vietnamese soldiers dead', value: 'About 254,000', note: 'More than 500,000 wounded' },
+  { label: 'North Vietnamese and Viet Cong dead', value: 'About 1.1 million', note: 'Hanoi’s 1995 figure' },
+  { label: 'Vietnamese civilians dead', value: '2 to 4 million', note: 'North and South together' },
+];
+
+/** The cost of the war in people, refugees and bombs left in the ground. */
 export default function AftermathMetrics() {
-  const [activeTab, setActiveTab] = useState<'casualties' | 'refugees' | 'environmental'>('casualties');
+  const [tab, setTab] = useState<Tab>('deaths');
+  const tabs: { id: Tab; label: string }[] = [
+    { id: 'deaths', label: 'The dead' },
+    { id: 'refugees', label: 'Camps and refugees' },
+    { id: 'bombs', label: 'Bombs in the ground' },
+  ];
 
   return (
-    <figure className="my-10 border border-rule-strong bg-paper">
-      {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            What the war cost
-          </span>
-        </div>
-        <div className="flex items-center gap-1.5">
+    <div>
+      <div role="tablist" aria-label="What the war cost" className="flex gap-1 overflow-x-auto">
+        {tabs.map((t) => (
           <button
+            key={t.id}
             type="button"
-            onClick={() => setActiveTab('casualties')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border ${ activeTab === 'casualties' ? 'border-ink bg-ink text-paper font-bold' : 'border-rule-strong bg-white text-ink-muted hover:border-rule-strong' }`}
+            role="tab"
+            aria-selected={tab === t.id}
+            onClick={() => setTab(t.id)}
+            className={`shrink-0 cursor-pointer rounded-t-sm px-4 py-2.5 text-sm font-semibold ${tab === t.id ? 'bg-surface text-ink' : 'text-ink-muted hover:text-ink'}`}
           >
-            Deaths
+            {t.label}
           </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('refugees')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border ${ activeTab === 'refugees' ? 'border-ink bg-ink text-paper font-bold' : 'border-rule-strong bg-white text-ink-muted hover:border-rule-strong' }`}
-          >
-            Refugees &amp; Camps
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveTab('environmental')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border ${ activeTab === 'environmental' ? 'border-ink bg-ink text-paper font-bold' : 'border-rule-strong bg-white text-ink-muted hover:border-rule-strong' }`}
-          >
-            Unexploded bombs
-          </button>
-        </div>
+        ))}
       </div>
 
-      <div className="p-5 sm:p-7 space-y-6">
-        {activeTab === 'casualties' && (
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-display text-xl font-bold text-ink mt-1">
-                An estimated 3.1 to 3.8 million people died
-              </h3>
-              <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-                The human cost of thirty years of armed conflict devastated Vietnamese society across all regions and political lines, while claiming over 58,000 American military lives.
+      <div role="tabpanel" className="space-y-8 rounded-sm rounded-tl-none bg-surface p-5 sm:p-8">
+        {tab === 'deaths' && (
+          <>
+            <div className="max-w-[62ch]">
+              <h3 className="font-display text-xl font-bold text-ink">An estimated 3.1 to 3.8 million people died</h3>
+              <p className="mt-2 text-base text-ink-muted">
+                Thirty years of war killed Vietnamese in every region and on every side. More than 58,000 Americans died.
               </p>
             </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-              <div className="p-4 bg-white border border-rule-strong">
-                <span className="text-xs text-ink-soft block">
-                  U.S. military dead
-                </span>
-                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
-                  58,220
+            <dl className="grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
+              {DEATHS.map((d) => (
+                <div key={d.label}>
+                  <dt className="text-sm text-ink-muted">{d.label}</dt>
+                  <dd className="mt-1 font-display text-2xl font-extrabold text-ink">{d.value}</dd>
+                  <dd className="text-xs text-ink-soft">{d.note}</dd>
                 </div>
-                <span className="text-xs text-ink-soft block mt-1">
-                  153,303 wounded
-                </span>
-              </div>
-
-              <div className="p-4 bg-white border border-rule-strong">
-                <span className="text-xs text-ink-soft block">
-                  ARVN (South) Dead
-                </span>
-                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
-                  ~254,000
-                </div>
-                <span className="text-xs text-ink-soft block mt-1">
-                  500,000+ wounded
-                </span>
-              </div>
-
-              <div className="p-4 bg-white border border-rule-strong">
-                <span className="text-xs text-ink-soft block">
-                  North Vietnamese and Viet Cong dead
-                </span>
-                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
-                  ~1,100,000
-                </div>
-                <span className="text-xs text-ink-soft block mt-1">
-                  Hanoi’s 1995 figure
-                </span>
-              </div>
-
-              <div className="p-4 bg-white border border-rule-strong">
-                <span className="text-xs text-ink-soft block">
-                  Vietnamese civilians dead
-                </span>
-                <div className="mt-1 font-display text-xl sm:text-2xl font-bold text-ink">
-                  2M – 4M
-                </div>
-                <span className="text-xs text-ink-soft block mt-1">
-                  North &amp; South combined
-                </span>
-              </div>
-            </div>
-
-            <div className="p-5 bg-parchment border border-rule-strong text-xs sm:text-sm font-sans space-y-2">
-              <span className="font-bold text-ink-muted block">
-                Where the numbers come from: Hanoi’s 1995 figures
-              </span>
-              <p className="font-display text-ink leading-relaxed">
-                On April 4, 1995, preceding the formal diplomatic normalization with Washington, Hanoi officially published casualty figures for the first time: 1.1 million North Vietnamese and Viet Cong combatants killed, 600,000 wounded, and approximately 2 million civilian deaths. Independent demographic evaluations (Hirschman, Preston, and Vu, 1995) estimated total Vietnamese deaths at 3.1 million.
+              ))}
+            </dl>
+            <div className="rounded-sm bg-parchment p-5">
+              <p className="text-sm font-semibold text-ink">Where the numbers come from</p>
+              <p className="mt-1 text-base text-ink-muted">
+                On April 4, 1995, shortly before relations with Washington were restored, Hanoi published its war dead for
+                the first time: 1.1 million soldiers killed, 600,000 wounded and about 2 million civilians killed. A 1995
+                study by Hirschman, Preston and Vu put total Vietnamese deaths at about 3.1 million.
               </p>
             </div>
-          </div>
+          </>
         )}
 
-        {activeTab === 'refugees' && (
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-display text-xl font-bold text-ink mt-1">
-                Re-education camps and the boat people
-              </h3>
-              <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-                Following the collapse of the southern regime, the unified communist government subjected roughly 1 million former South Vietnamese military officers, civil servants, and intellectuals to compulsory &ldquo;re-education.&rdquo;
+        {tab === 'refugees' && (
+          <>
+            <div className="max-w-[62ch]">
+              <h3 className="font-display text-xl font-bold text-ink">Re-education camps and the boat people</h3>
+              <p className="mt-2 text-base text-ink-muted">
+                After Saigon fell, the new government sent about a million former South Vietnamese officers, officials and
+                teachers to re-education.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-sans">
-              <div className="p-4 bg-white border border-rule space-y-1">
-                <span className="font-bold text-ink-soft block">Re-education camps</span>
-                <div className="font-display text-lg font-bold text-ink">
-                  1 Million Detained
-                </div>
-                <p className="text-ink-muted font-display">
-                  Between 100,000 and 300,000 were imprisoned for up to 5 to 17 years in harsh forced-labor redoubts; an estimated 10,000 to 20,000 died of malnutrition and disease.
-                </p>
+            <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-3">
+              <div>
+                <dt className="text-sm text-ink-muted">Re-education camps</dt>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">About 1 million sent</dd>
+                <dd className="mt-1 text-sm text-ink-muted">
+                  Between 100,000 and 300,000 were held for 5 to 17 years of forced labor. An estimated 10,000 to 20,000 died of
+                  hunger and disease.
+                </dd>
               </div>
-
-              <div className="p-4 bg-white border border-rule space-y-1">
-                <span className="font-bold text-ink-soft block">The boat people</span>
-                <div className="font-display text-lg font-bold text-ink">
-                  1.5 – 2.0 Million Fled
-                </div>
-                <p className="text-ink-muted font-display">
-                  Between 1975 and 1995, over 1.5 million people fled Vietnam on overcrowded wooden vessels; the UN High Commissioner for Refugees estimated 200,000 to 400,000 drowned at sea.
-                </p>
+              <div>
+                <dt className="text-sm text-ink-muted">The boat people</dt>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">800,000 to 2 million</dd>
+                <dd className="mt-1 text-sm text-ink-muted">
+                  Fled by sea between 1975 and 1995 in crowded wooden boats. International agencies estimate 200,000 to 500,000
+                  died at sea.
+                </dd>
               </div>
-
-              <div className="p-4 bg-white border border-rule space-y-1">
-                <span className="font-bold text-ink-soft block">Doi Moi (1986)</span>
-                <div className="font-display text-lg font-bold text-ink">
-                  Why Hanoi changed course
-                </div>
-                <p className="text-ink-muted font-display">
-                  Economic collapse from collectivization and Soviet aid loss forced the Communist Party in 1986 to abandon orthodox socialism in favor of market-oriented economic reforms (<em>Doi Moi</em>).
-                </p>
+              <div>
+                <dt className="text-sm text-ink-muted">Doi Moi, 1986</dt>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">A change of course</dd>
+                <dd className="mt-1 text-sm text-ink-muted">
+                  With collective farming failing and Soviet aid shrinking, the Communist Party turned toward a market economy
+                  in 1986.
+                </dd>
               </div>
-            </div>
-          </div>
+            </dl>
+          </>
         )}
 
-        {activeTab === 'environmental' && (
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-display text-xl font-bold text-ink mt-1">
-                800,000 tons of unexploded bombs still in the ground
-              </h3>
-              <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-                The physical battlefield outlived the war. Roughly 10% to 30% of the 7.5 million tons of American bombs dropped failed to detonate upon impact, contaminating 20% of Vietnam’s arable land.
-              </p>
-            </div>
-
-            <div className="p-5 bg-white border border-rule space-y-2 text-xs sm:text-sm font-sans">
-              <span className="font-bold text-ink-muted block">
-                Post-War Casualties (1975–Present):
-              </span>
-              <p className="font-display text-ink leading-relaxed">
-                Since 1975, over <strong>40,000 Vietnamese have been killed</strong> and more than <strong>60,000 injured</strong> by unexploded cluster bomblets, landmines, and artillery shells while farming or scavenging for scrap metal.
-              </p>
-            </div>
+        {tab === 'bombs' && (
+          <div className="max-w-[62ch]">
+            <h3 className="font-display text-xl font-bold text-ink">800,000 tons of unexploded bombs</h3>
+            <p className="mt-2 text-base text-ink-muted">
+              The war stayed in the ground. Somewhere between 10% and 30% of the 7.5 million tons of American bombs dropped
+              never went off, and they made about a fifth of Vietnam’s farmland dangerous to work.
+            </p>
+            <p className="mt-6 font-serif text-xl leading-snug text-ink">
+              Since 1975, more than 40,000 Vietnamese have been killed and more than 60,000 injured by old bomblets, mines and
+              shells, many while farming or collecting scrap metal.
+            </p>
           </div>
         )}
       </div>
-    </figure>
+    </div>
   );
 }

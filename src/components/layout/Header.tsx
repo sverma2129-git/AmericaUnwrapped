@@ -51,7 +51,7 @@ export default function Header() {
     `relative items-center whitespace-nowrap py-1 text-sm font-medium ${active ? 'text-ink' : 'text-ink-muted hover:text-ink'}`;
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-40 border-b border-ink bg-paper">
+    <header ref={headerRef} className="sticky top-0 z-40 border-b border-rule bg-paper">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="whitespace-nowrap font-display text-sm font-extrabold tracking-tight text-ink hover:text-brand sm:text-lg">
           America Unwrapped
@@ -98,7 +98,7 @@ export default function Header() {
           <div className="mt-5 grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
             {CHAPTER_PARTS.map((part) => (
               <section key={part.number} aria-labelledby={`menu-part-${part.number}`}>
-                <h2 id={`menu-part-${part.number}`} className="border-t border-ink pt-2 text-sm font-bold text-ink">
+                <h2 id={`menu-part-${part.number}`} className="text-sm font-bold text-ink">
                   {part.title} <span className="font-normal text-ink-soft">{part.years}</span>
                 </h2>
                 <ol className="mt-2 space-y-1.5">

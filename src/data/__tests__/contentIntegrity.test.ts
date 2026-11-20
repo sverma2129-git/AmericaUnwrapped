@@ -8,6 +8,7 @@ import { fleschKincaidGrade } from '@/lib/readability';
 import fs from 'fs';
 import path from 'path';
 import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
+import { LOOK_CLOSER } from '@/data/vietnam/lookCloser';
 
 describe('chapters', () => {
   it('have unique ids and contiguous numbers starting at 1', () => {
@@ -299,6 +300,23 @@ describe('plain wording', () => {
   });
 });
 
+describe('look closer details', () => {
+  it('point at registered images, inside the frame, with real text', () => {
+    for (const [imageId, entry] of Object.entries(LOOK_CLOSER)) {
+      expect(IMAGE_REGISTRY[imageId], imageId).toBeTruthy();
+      expect(entry.spots.length, imageId).toBeGreaterThanOrEqual(2);
+      for (const spot of entry.spots) {
+        expect(spot.x, `${imageId}: ${spot.label}`).toBeGreaterThan(0);
+        expect(spot.x, `${imageId}: ${spot.label}`).toBeLessThan(100);
+        expect(spot.y, `${imageId}: ${spot.label}`).toBeGreaterThan(0);
+        expect(spot.y, `${imageId}: ${spot.label}`).toBeLessThan(100);
+        expect(spot.text.length, `${imageId}: ${spot.label}`).toBeGreaterThan(30);
+        expect(/[“”"]/.test(spot.text), `${imageId}: no quotation marks`).toBe(false);
+      }
+    }
+  });
+});
+
 describe('editorial design rules', () => {
   it('puts every chapter in exactly one part, in order', () => {
     const ids = CHAPTER_PARTS.flatMap((p) => p.chapters.map((c) => c.id));
@@ -317,6 +335,15 @@ describe('editorial design rules', () => {
     }
   });
 
+  it('gives every story paragraph its own heading when a chapter has headings', () => {
+    for (const chapter of VIETNAM_CHAPTERS) {
+      const sections = chapter.whatHappened.sections;
+      if (!sections) continue;
+      expect(sections.length, chapter.id).toBe(chapter.whatHappened.narrative.length);
+      for (const s of sections) expect(s.heading.length, chapter.id).toBeGreaterThan(5);
+    }
+  });
+
   it('keeps the story text free of raw markdown and em dashes', () => {
     for (const chapter of VIETNAM_CHAPTERS) {
       for (const p of chapter.whatHappened.narrative) {
@@ -326,6 +353,33 @@ describe('editorial design rules', () => {
         expect((p.match(/\*/g) ?? []).length % 2, chapter.id).toBe(0);
       }
     }
+  });
+
+  it('puts quotation marks only around words from a verified verbatim quotation', () => {
+    // The About page promises this. Names and terms go without quotation marks;
+    // titles inside bibliographic citation strings are exempt.
+    const verified = Object.values(CITATION_REGISTRY)
+      .filter(isVerbatimQuotation)
+      .map((c) => c.exactQuotation as string);
+    const dataDir = path.resolve(__dirname, '../vietnam');
+    const files = [
+      ...fs.readdirSync(path.join(dataDir, 'chapters')).map((f) => path.join(dataDir, 'chapters', f)),
+      ...fs.readdirSync(path.join(dataDir, 'study')).map((f) => path.join(dataDir, 'study', f)),
+      path.join(dataDir, 'studyGuide.ts'),
+      path.join(dataDir, 'timeline.ts'),
+      path.join(dataDir, 'arguments.ts'),
+    ];
+    const unverified: string[] = [];
+    for (const file of files) {
+      for (const line of fs.readFileSync(file, 'utf8').split('\n')) {
+        if (line.includes('citation:') || line.includes('exactQuotation')) continue;
+        for (const m of line.matchAll(/[“"]([^“”"\n]{1,400}?)[”"]/g)) {
+          const inner = m[1].replace(/^[\s,.!?]+|[\s,.!?]+$/g, '');
+          if (!verified.some((v) => v.includes(inner))) unverified.push(`${path.basename(file)}: ${m[0].slice(0, 60)}`);
+        }
+      }
+    }
+    expect(unverified).toEqual([]);
   });
 
   it('uses no HTML entities or straight quotes in chapter text', () => {

@@ -145,7 +145,7 @@ function ExplainTask({ task }: { task: Extract<CourseTask, { kind: 'explain' }> 
         {words >= MIN_WORDS ? 'Compare with a model answer' : `Write at least ${MIN_WORDS} words to compare (${words} so far)`}
       </RevealButton>
       {shown && (
-        <div className="mt-4 rounded-sm border border-rule bg-parchment-light p-4 text-sm">
+        <div className="mt-4 rounded-sm bg-surface p-4 text-sm">
           <p className="font-semibold text-ink mb-1.5">A strong answer:</p>
           <ul className="list-disc pl-5 space-y-1 text-ink-muted">
             {task.checklist.map((c) => (
@@ -185,7 +185,7 @@ function SaqPart({ part }: { part: Extract<CourseTask, { kind: 'saq' }>['parts']
       <RevealButton ready={wordCount(text) >= 8} onClick={() => setShown(true)}>
         Show a model answer
       </RevealButton>
-      {shown && <p className="mt-3 rounded-sm border border-rule bg-parchment-light p-3 text-sm text-ink leading-relaxed">{part.model}</p>}
+      {shown && <p className="mt-3 rounded-sm bg-surface p-3 text-sm text-ink leading-relaxed">{part.model}</p>}
     </li>
   );
 }

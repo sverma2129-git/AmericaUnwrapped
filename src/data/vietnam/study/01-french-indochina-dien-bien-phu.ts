@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
   chapterId: 'french-indochina-dien-bien-phu',
   bigQuestion:
-    'Why did the United States pay for 80% of France’s war in Indochina, and why did the French fortress at Dien Bien Phu fall?',
+    'Why was the United States paying for France’s war in Vietnam?',
   whyItMatters:
-    'This is when the U.S. stopped seeing Vietnam as France’s colonial problem and started seeing it as a front in the Cold War. American involvement grew from there.',
+    'Truman and Eisenhower decided Vietnam mattered in the Cold War. Every president after them inherited that decision.',
   whatYouWillLearn: [
     'How Ho Chi Minh used the American Declaration of Independence to claim independence in 1945.',
-    'How the Korean War and the “Domino Theory” led Truman and Eisenhower to pay for France’s war.',
+    'How the Korean War and the Domino Theory led Truman and Eisenhower to pay for France’s war.',
     'Why General Navarre’s fortress in the valley at Dien Bien Phu was beaten by Vo Nguyen Giap’s guns in the hills.',
   ],
   briefing: {
     summary:
       'After World War II, Ho Chi Minh declared Vietnam independent, but France went to war to take its colony back. After the communist victory in China in 1949 and the start of the Korean War, Washington came to see Ho as an agent of China and the Soviet Union. The U.S. ended up paying 80% of France’s military costs, about $2 billion. In 1954, the French general Navarre built a fortified base in the remote valley of Dien Bien Phu. He assumed heavy guns could not cross the mountains around it. General Giap used 250,000 porters to haul artillery up the ridges. The guns shelled the French airstrips, and the garrison surrendered on May 7, 1954.',
     examTakeaways: [
-      'The Domino Theory: Eisenhower warned that if Indochina fell to communism, its neighbors in Southeast Asia would fall next, like dominoes.',
-      'Who paid: By 1954, the U.S. was paying roughly 80% of France’s war costs but had no say in how France fought.',
-      'The turning point: Dien Bien Phu ended French colonial rule in Indochina. It led to the 1954 Geneva Conference, which divided Vietnam at the 17th parallel.',
+      'Eisenhower warned that if Indochina fell to communism, its neighbors would fall next, like a row of dominoes. This Domino Theory guided U.S. policy for years.',
+      'By 1954 the United States was paying about 80% of France’s war costs. It still had no say in how France fought.',
+      'France’s defeat at Dien Bien Phu in May 1954 ended its rule in Indochina. That summer, the Geneva Conference split Vietnam at the 17th parallel.',
     ],
     keyTerms: [
       {
@@ -58,7 +58,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c1-q1',
       question:
-        'What major international development between 1949 and 1950 fundamentally changed Washington’s perspective on the French war in Indochina?',
+        'What happened in 1949 and 1950 that made Washington care about France’s war in Indochina?',
       options: [
         'The signing of the Warsaw Pact and the Soviet invasion of Hungary',
         'France’s decision to grant Vietnam full independence in the French Union',
@@ -73,7 +73,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c1-q2',
       question:
-        'What fatal tactical assumption did French Commander Henri Navarre make when fortifying Dien Bien Phu?',
+        'What did French commander Henri Navarre get wrong when he built his base at Dien Bien Phu?',
       options: [
         'That heavy artillery could not be hauled over the mountains around the valley',
         'That the Viet Minh would refuse battle and retreat across the border into China',
@@ -88,7 +88,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c1-q3',
       question:
-        'How did President Eisenhower respond to proposals for direct American military intervention (Operation Vulture) to relieve the French at Dien Bien Phu?',
+        'When advisers proposed U.S. air strikes to save Dien Bien Phu, what did Eisenhower do?',
       options: [
         'He approved carrier air strikes, but they failed to break the siege in time',
         'He sent U.S. Marines to hold the ridges until French reinforcements arrived',
@@ -121,7 +121,7 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
         'A self-taught North Vietnamese general. He commanded Viet Minh forces, and later North Vietnam’s army, from 1946 into the 1970s.',
       significance:
         'He planned the siege of Dien Bien Phu (1954) and helped direct the Tet Offensive (1968).',
-      examTip: 'He was a leading voice for a long “people’s war” meant to wear down an enemy’s will to keep fighting.',
+      examTip: 'He was a leading voice for a long people’s war meant to wear down an enemy’s will to keep fighting.',
     },
     {
       id: 'c1-fc3',

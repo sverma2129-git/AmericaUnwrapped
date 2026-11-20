@@ -13,7 +13,7 @@ export default function DbqOutlines() {
         <p className="mt-1 max-w-[62ch] text-ink-muted">
           Write your own thesis and list your evidence first. Then open the outline and compare.
         </p>
-        <ol className="mt-5 divide-y divide-rule border-y border-rule">
+        <ol className="mt-5 space-y-2">
           {DBQ_PROMPTS.map((dbq) => (
             <li key={dbq.number}>
               <details className="group py-5">

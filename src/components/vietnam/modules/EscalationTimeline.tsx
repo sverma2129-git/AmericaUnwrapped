@@ -2,138 +2,111 @@
 
 import React, { useState } from 'react';
 
+const YEARS: Record<
+  number,
+  { advisers: number; deaths: number; title: string; rules: string; event: string; kennedy: string }
+> = {
+  1960: {
+    advisers: 875,
+    deaths: 9,
+    title: 'Where Eisenhower left it',
+    rules: 'Advisers trained South Vietnamese troops and were not allowed to go with them into combat.',
+    event: 'Men and supplies from the North start moving south on rough mountain trails.',
+    kennedy: 'Kennedy, newly elected, backed America’s promises abroad in public. In private he doubted how much the United States could control in former colonies.',
+  },
+  1961: {
+    advisers: 3205,
+    deaths: 16,
+    title: 'Kennedy sends more',
+    rules: 'Advisers may now go out with South Vietnamese battalions. The first U.S. Army helicopter companies arrive.',
+    event: 'Kennedy turns down regular combat divisions but approves Green Berets and other Special Forces.',
+    kennedy: 'Kennedy doubted that sending combat troops would work. He warned that once some went in, the pressure to send more would never stop.',
+  },
+  1962: {
+    advisers: 11325,
+    deaths: 53,
+    title: 'A new command and the strategic hamlets',
+    rules: 'U.S. helicopter pilots fire on enemy targets. Operation Ranch Hand begins spraying herbicides.',
+    event: 'More than 8,000 strategic hamlets go up to cut farmers off from the Viet Cong, and many farmers resent them.',
+    kennedy: 'After tense meetings with the Soviets in Vienna and the crisis over Berlin, Kennedy saw Southeast Asia as a test of whether America kept its word.',
+  },
+  1963: {
+    advisers: 16300,
+    deaths: 122,
+    title: 'The Buddhist crisis and the coup',
+    rules: 'Advisers are fighting in firefights as a matter of routine.',
+    event: 'South Vietnam’s army is beaten at Ap Bac, monks burn themselves in protest, and Cable 243 opens the way to the coup against Diem.',
+    kennedy: 'In a television interview, Kennedy said that in the end the war belonged to the South Vietnamese people and their government.',
+  },
+};
+
+/** Kennedy’s buildup, one year at a time. */
 export default function EscalationTimeline() {
-  const [selectedYear, setSelectedYear] = useState<number>(1963);
-
-  const escalationData: Record<
-    number,
-    {
-      advisors: number;
-      casualties: number;
-      label: string;
-      operationalRule: string;
-      milestone: string;
-      kennedyQuote: string;
-    }
-  > = {
-    1960: {
-      advisors: 875,
-      casualties: 9,
-      label: 'Where Eisenhower left it (MAAG)',
-      operationalRule: 'Strictly defensive training; forbidden from accompanying ARVN units on combat missions.',
-      milestone: 'Infiltration from North begins along early primitive tracks of the Truong Son mountains.',
-      kennedyQuote: 'Publicly affirmed global commitments while privately recognizing the limits of American power to manage post-colonial regional upheavals.',
-    },
-    1961: {
-      advisors: 3205,
-      casualties: 16,
-      label: 'Kennedy sends more (NSAM 111)',
-      operationalRule: 'Advisors permitted to accompany battalion-level units; first U.S. Army helicopter companies deployed.',
-      milestone: 'Kennedy rejects conventional ground combat divisions but authorizes Green Berets and Special Forces.',
-      kennedyQuote: 'Expressed skepticism regarding combat troop deployments, warning that introduction of forces creates relentless bureaucratic pressure for further escalation.',
-    },
-    1962: {
-      advisors: 11325,
-      casualties: 53,
-      label: 'MACV and the strategic hamlets',
-      operationalRule: 'U.S. helicopter pilots actively engage enemy targets; Operation Ranch Hand begins defoliation spraying.',
-      milestone: 'Over 8,000 "Strategic Hamlets" constructed to sever peasants from Viet Cong guerrillas, stirring rural resentment.',
-      kennedyQuote: 'Viewed Southeast Asia as a critical testing arena for American credibility following confrontations in Vienna and Berlin.',
-    },
-    1963: {
-      advisors: 16300,
-      casualties: 122,
-      label: 'The Buddhist Crisis and the coup',
-      operationalRule: 'Advisors routinely involved in active combat firefights; rules of engagement loosen dramatically.',
-      milestone: 'Battle of Ap Bac routs ARVN; Buddhist self-immolations; Cable 243 leads to the violent overthrow of Diem.',
-      kennedyQuote: 'Emphasized in broadcast remarks that the war was ultimately the responsibility of the South Vietnamese people and government.',
-    },
-  };
-
-  const current = escalationData[selectedYear];
+  const [year, setYear] = useState(1963);
+  const current = YEARS[year];
 
   return (
-    <figure className="my-10 border border-rule bg-parchment rounded-sm text-ink">
-      {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            How the U.S. role grew
-          </span>
-        </div>
-        <span className="text-ink-soft text-xs font-semibold">
-          Pick a year
-        </span>
+    <div className="rounded-sm bg-surface p-5 sm:p-8">
+      <div className="max-w-[62ch]">
+        <h3 className="font-display text-xl font-bold text-ink">How 875 advisers became 16,300</h3>
+        <p className="mt-2 text-base text-ink-muted">
+          Kennedy never sent regular combat divisions. Instead he added advisers, helicopters and secret operations a little
+          at a time. Pick a year.
+        </p>
       </div>
 
-      <div className="p-5 sm:p-7 space-y-6">
-        <div>
-          <h3 className="font-display text-xl font-bold text-ink mt-1">
-            How 875 advisers became 16,300 troops
-          </h3>
-          <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-            President Kennedy consistently refused to commit conventional American ground combat divisions, yet sought to prevent communist victory through incremental increases in military advisers, helicopters, and covert special operations.
+      <div role="tablist" aria-label="Year" className="mt-6 grid grid-cols-4 gap-2">
+        {Object.entries(YEARS).map(([y, d]) => {
+          const selected = Number(y) === year;
+          return (
+            <button
+              key={y}
+              type="button"
+              role="tab"
+              aria-selected={selected}
+              onClick={() => setYear(Number(y))}
+              className={`cursor-pointer rounded-sm px-3 py-3 text-left ${selected ? 'bg-brand text-white' : 'bg-parchment text-ink hover:bg-brand-tint'}`}
+            >
+              <span className="block text-sm font-bold">{y}</span>
+              <span className={`block text-xs tabular-nums ${selected ? 'text-white/85' : 'text-ink-muted'}`}>{d.advisers.toLocaleString()} advisers</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Bars show the buildup at a glance */}
+      <div aria-hidden="true" className="mt-4 flex h-16 items-end gap-2">
+        {Object.entries(YEARS).map(([y, d]) => (
+          <div key={y} className="flex-1">
+            <div className={`rounded-sm ${Number(y) === year ? 'bg-brand' : 'bg-rule-strong'}`} style={{ height: `${(d.advisers / 16300) * 64}px` }} />
+          </div>
+        ))}
+      </div>
+
+      <div aria-live="polite" className="mt-8">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+          <h4 className="font-display text-lg font-bold text-ink">
+            {year}: {current.title}
+          </h4>
+          <p className="text-sm font-semibold text-brand">
+            {current.deaths} Americans killed in {year}
           </p>
         </div>
-
-        {/* Year Buttons */}
-        <div className="grid grid-cols-4 gap-2 pt-2 border-t border-rule">
-          {[1960, 1961, 1962, 1963].map((yr) => (
-            <button
-              key={yr}
-              type="button"
-              onClick={() => setSelectedYear(yr)}
-              className={`p-3 text-left transition-colors cursor-pointer border rounded-sm ${ selectedYear === yr ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
-            >
-              <div className="text-xs font-bold">{yr}</div>
-              <div className="font-display text-xs opacity-85 mt-0.5">
-                {escalationData[yr].advisors.toLocaleString()} Personnel
-              </div>
-            </button>
-          ))}
-        </div>
-
-        {/* Selected Year Data Ledger */}
-        <div className="p-6 bg-paper border border-rule rounded-sm space-y-5">
-          <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-rule pb-3">
-            <h4 className="font-display text-lg font-bold text-ink">
-              {current.label}
-            </h4>
-            <span className="text-xs text-brand font-bold">
-              U.S. Casualties in {selectedYear}: {current.casualties} KIA
-            </span>
+        <dl className="mt-4 grid gap-x-10 gap-y-5 md:grid-cols-2">
+          <div>
+            <dt className="text-sm font-semibold text-ink">What advisers were allowed to do</dt>
+            <dd className="mt-1 text-base text-ink-muted">{current.rules}</dd>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm font-sans">
-            <div>
-              <span className="font-bold text-ink-soft block mb-1 text-xs">
-                Rules for fighting:
-              </span>
-              <p className="font-display text-ink leading-relaxed">
-                {current.operationalRule}
-              </p>
-            </div>
-            <div>
-              <span className="font-bold text-ink-soft block mb-1 text-xs">
-                Key moment:
-              </span>
-              <p className="font-display text-ink leading-relaxed">
-                {current.milestone}
-              </p>
-            </div>
+          <div>
+            <dt className="text-sm font-semibold text-ink">What happened</dt>
+            <dd className="mt-1 text-base text-ink-muted">{current.event}</dd>
           </div>
-
-          {/* Kennedy Documented Position */}
-          <div className="p-4 bg-parchment border border-rule border-l border-l-brand rounded-sm">
-            <span className="text-xs text-brand font-bold block mb-1">
-              Documented Administration Position (Paraphrase):
-            </span>
-            <p className="font-display text-ink leading-relaxed">
-              {current.kennedyQuote}
-            </p>
-          </div>
+        </dl>
+        <div className="mt-6 rounded-sm bg-parchment p-5">
+          <p className="text-sm font-semibold text-ink">Kennedy’s thinking, in our words</p>
+          <p className="mt-1 font-serif text-lg leading-snug text-ink">{current.kennedy}</p>
         </div>
       </div>
-    </figure>
+    </div>
   );
 }

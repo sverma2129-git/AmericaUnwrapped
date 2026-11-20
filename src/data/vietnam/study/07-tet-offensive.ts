@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
   chapterId: 'tet-offensive',
   bigQuestion:
-    'How did a military defeat for the Viet Cong become the turning point of the war for the United States?',
+    'Why did a battle Hanoi lost turn Americans against the war?',
   whyItMatters:
-    'The 1968 Tet Offensive ended the Johnson administration’s claim that victory was close. It split Americans at home and pushed Washington to start winding the war down.',
+    'For two years Johnson’s officials had said victory was close. After Tet, many Americans stopped believing them, and Johnson began to pull back.',
   whatYouWillLearn: [
     'How communist forces launched surprise attacks on 36 of 44 provincial capitals during a holiday truce.',
     'Why Tet was a heavy battlefield defeat for the Viet Cong and a political victory in Washington.',
-    'How Walter Cronkite’s broadcast and the advice of the “Wise Men” led Johnson to drop out of the 1968 presidential race.',
+    'How Walter Cronkite’s broadcast and the advice of the Wise Men led Johnson to drop out of the 1968 presidential race.',
   ],
   briefing: {
     summary:
-      'In late 1967, General Westmoreland told Americans the war was being won and that there was “light at the end of the tunnel.” Early on January 30–31, 1968, during the truce for Tet, the lunar new year, more than 84,000 North Vietnamese and Viet Cong troops attacked at the same time. They hit 36 of 44 provincial capitals, five major cities and dozens of bases across South Vietnam. In Saigon, a 19-man squad blew a hole in the wall of the U.S. Embassy, and morning television showed dead Americans on the grounds. In Hue, communist forces took the old Citadel and held it for 26 days. They executed nearly 3,000 civilians before U.S. Marines retook the city. As a battle, Tet was a defeat for Hanoi. The uprising it expected never came, and the Viet Cong lost more than 40,000 experienced fighters. As politics, it destroyed the administration’s credibility. CBS anchor Walter Cronkite told viewers the war was “mired in stalemate,” and Johnson is reported to have said that losing Cronkite meant losing Middle America. On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.',
+      'In late 1967, General Westmoreland told Americans the war was being won and that the end was in sight. Early on January 30–31, 1968, during the truce for Tet, the lunar new year, more than 84,000 North Vietnamese and Viet Cong troops attacked at the same time. They hit 36 of 44 provincial capitals, five major cities and dozens of bases across South Vietnam. In Saigon, a 19-man squad blew a hole in the wall of the U.S. Embassy, and morning television showed dead Americans on the grounds. In Hue, communist forces took the old Citadel and held it for 26 days. They executed nearly 3,000 civilians before U.S. Marines retook the city. As a battle, Tet was a defeat for Hanoi. The uprising it expected never came, and the Viet Cong lost more than 40,000 experienced fighters. As politics, it destroyed the administration’s credibility. CBS anchor Walter Cronkite told viewers the war was “mired in stalemate,” and Johnson is reported to have said that losing Cronkite meant losing Middle America. On March 31, 1968, Johnson announced a partial bombing halt and withdrew from the presidential race.',
     examTakeaways: [
-      'The credibility gap: The government kept promising that victory was near. Then Americans watched fighting in Saigon on television. Many stopped believing what officials said.',
-      'Lost the battle, won the argument: The Viet Cong took losses it never recovered from, and North Vietnamese draftees took over more of the fighting. But Tet broke American political will.',
-      'A turn in U.S. policy: Johnson’s senior advisers, the “Wise Men,” told him to scale back. Peace talks opened in Paris, and Vietnamization came later.',
+      'Officials kept saying the war was being won. Then Americans saw fighting on the U.S. Embassy grounds on television, and many stopped trusting what they were told. People called this the credibility gap.',
+      'Tet was a military disaster for the Viet Cong, which lost more than 40,000 experienced fighters. It still broke Americans’ willingness to keep escalating.',
+      'Johnson’s senior advisers, the Wise Men, told him to scale back. Peace talks opened in Paris in 1968.',
     ],
     keyTerms: [
       {
@@ -59,7 +59,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c7-q1',
       question:
-        'What was the primary military assumption made by Hanoi’s leadership (Le Duan faction) in planning the 1968 Tet Offensive that failed to materialize?',
+        'What did Hanoi’s leaders expect to happen during the Tet Offensive that never did?',
       options: [
         'That the Soviet Union would send combat troops to defend North Vietnam',
         'That China would open a second front by sending troops into Laos and Thailand',
@@ -68,13 +68,13 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 3,
       rationale:
-        'Hanoi’s plan, Politburo Resolution 14, predicted that attacks on the cities would set off a nationwide “General Uprising” (Tong Khoi Nghia), with South Vietnamese civilians and soldiers joining the revolution. Most people stayed out of it or fled. That left Viet Cong units exposed, and U.S. and South Vietnamese firepower destroyed many of them.',
+        'Hanoi’s plan, Politburo Resolution 14, predicted that attacks on the cities would set off a nationwide General Uprising (Tong Khoi Nghia), with South Vietnamese civilians and soldiers joining the revolution. Most people stayed out of it or fled. That left Viet Cong units exposed, and U.S. and South Vietnamese firepower destroyed many of them.',
       citationRef: 'c7-1',
     },
     {
       id: 'c7-q2',
       question:
-        'How did the Battle of Hue during the Tet Offensive illustrate the dual tragedy of urban combat in the Vietnam War?',
+        'What made the Battle of Hue so terrible for the city’s people?',
       options: [
         'The city surrendered without a fight and was later rebuilt with American aid money',
         'Foreign diplomats arranged a cease-fire that spared the old imperial citadel',
@@ -89,7 +89,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c7-q3',
       question:
-        'What dramatic announcement did President Lyndon B. Johnson make to the nation in his televised address on March 31, 1968?',
+        'What did Lyndon Johnson announce on television on March 31, 1968?',
       options: [
         'A partial bombing halt, a call for peace talks, and his exit from the 1968 race',
         'A full invasion of North Vietnam, backed by 200,000 additional U.S. troops',
@@ -105,7 +105,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       id: 'c7-q4',
       imageId: 'lbj-march-31-1968',
       question:
-        'The address shown in the photograph came two months after which event?',
+        'The address in the photograph came two months after which event?',
       options: [
         'The Gulf of Tonkin incident off North Vietnam’s coast',
         'The Tet Offensive across South Vietnam’s cities',
@@ -120,7 +120,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
   flashcards: [
     {
       id: 'c7-fc1',
-      term: 'The “Wise Men”',
+      term: 'The Wise Men',
       phonetic: 'WYZE MEN',
       definition:
         'An informal group of senior former officials, including Dean Acheson, McGeorge Bundy and Omar Bradley. Johnson called them together in March 1968 to review the war.',
@@ -135,7 +135,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       definition:
         'A 77-day siege from January to April 1968. Two North Vietnamese divisions surrounded 6,000 U.S. Marines at an isolated base near the DMZ and the border with Laos.',
       significance:
-        'President Johnson feared an “American Dien Bien Phu” and watched it closely. The siege pulled American air power away from the coastal cities just before Tet.',
+        'President Johnson feared an American Dien Bien Phu and watched it closely. The siege pulled American air power away from the coastal cities just before Tet.',
       examTip: 'Heavy bombing, called Operation Niagara, held the base. The U.S. quietly abandoned it months later.',
     },
     {
@@ -146,7 +146,7 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
         'An Associated Press photograph taken on a Saigon street on February 1, 1968. It shows South Vietnam’s national police chief, Nguyen Ngoc Loan, shooting a captured Viet Cong officer, Nguyen Van Lem.',
       significance:
         'It won the Pulitzer Prize and became one of the best-known antiwar images in the world. For many people it stood for the war’s brutality.',
-      examTip: 'Exams often pair it with Nick Ut’s “Napalm Girl” photograph.',
+      examTip: 'Exams often pair it with Nick Ut’s photograph known as Napalm Girl.',
     },
   ],
 };

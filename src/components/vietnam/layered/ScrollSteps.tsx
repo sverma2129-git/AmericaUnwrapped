@@ -42,8 +42,8 @@ export default function ScrollSteps({
             className="min-h-[60vh] lg:min-h-[75vh] flex items-center first:pt-6 last:min-h-[45vh] lg:last:min-h-[60vh]"
           >
             <div
-              className={`w-full card-surface rounded-sm p-5 sm:p-6 transition-[border-color,opacity] duration-300 ${
-                i === active ? 'border-ink opacity-100' : 'opacity-55'
+              className={`w-full rounded-sm bg-surface p-5 sm:p-6 transition-opacity duration-300 motion-reduce:transition-none ${
+                i === active ? 'opacity-100' : 'opacity-55'
               }`}
             >
               <h4 className="font-display text-lg font-semibold text-ink">{s.headline}</h4>
