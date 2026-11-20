@@ -1,4 +1,4 @@
-:HL["/AmericaUnwrapped/_next/static/chunks/1mg50iuk911vy.css","style"]
+:HL["/AmericaUnwrapped/_next/static/chunks/38w9podmabgyq.css","style"]
 :HL["/AmericaUnwrapped/_next/static/media/7172132ea3483a1a-s.p.1xmps1tcyqv34.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/AmericaUnwrapped/_next/static/media/75334fc536fdfffd-s.p.0l4a8qxfzwpm8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/AmericaUnwrapped/_next/static/media/7a01dec39b324ce3-s.p.2_7gz-nbwppeo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -6,5 +6,5 @@
 :HL["/AmericaUnwrapped/_next/static/media/7d2dd58e31d7c0b6-s.p.3a10o7es2neby.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"the-secret-war","s":["study-guide"]},"h":96,"c":"$Q3"}]]
-1:[["children",{"s":"vietnam","h":64,"c":"$Q2"}]]
-0:{"b":"lObLHl_YzMC1XQYdGdUs1","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+1:[["children",{"s":"vietnam","h":96,"c":"$Q2"}]]
+0:{"b":"i1M1ZrCKLouLS9kS-fg0n","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
