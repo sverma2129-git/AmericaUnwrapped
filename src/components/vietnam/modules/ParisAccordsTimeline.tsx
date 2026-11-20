@@ -50,7 +50,7 @@ export default function ParisAccordsTimeline() {
   return (
     <div className="rounded-sm bg-surface p-5 sm:p-8">
       <div className="max-w-[62ch]">
-        <h3 className="font-display text-xl font-bold text-ink">A deal that left 150,000 North Vietnamese troops in the South</h3>
+        <h3 className="font-display text-xl font-bold text-navy">A deal that left 150,000 North Vietnamese troops in the South</h3>
         <p className="mt-2 text-base text-ink-muted">
           The United States agreed to take out every American soldier and get its prisoners back. North Vietnam got to keep
           its troops inside South Vietnam. Follow how the deal came together.
@@ -79,8 +79,8 @@ export default function ParisAccordsTimeline() {
 
       <div aria-live="polite" className="mt-8 grid gap-x-10 gap-y-6 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <div>
-          <p className="text-sm font-semibold tabular-nums text-brand">{current.when}</p>
-          <h4 className="mt-1 font-display text-lg font-bold text-ink">{current.title}</h4>
+          <p className="text-sm font-semibold tabular-nums text-brand font-mono">{current.when}</p>
+          <h4 className="mt-1 font-display text-lg font-bold text-navy">{current.title}</h4>
           <p className="mt-3 font-serif text-lg leading-snug text-ink">{current.story}</p>
         </div>
         <div className="self-start rounded-sm bg-parchment p-5">

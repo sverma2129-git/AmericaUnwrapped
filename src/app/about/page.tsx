@@ -15,7 +15,7 @@ const textLink = 'font-medium text-brand underline decoration-brand-rule underli
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="mt-16">
-      <h2 id={`${id}-title`} className="font-display text-2xl font-extrabold tracking-tight text-ink">
+      <h2 id={`${id}-title`} className="font-display text-2xl font-extrabold tracking-tight text-navy">
         {title}
       </h2>
       <div className="reading mt-5 space-y-5 text-ink">{children}</div>
@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
       <header>
-        <h1 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">How we decide what’s true</h1>
+        <h1 className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">How we decide what’s true</h1>
         <p className="mt-4 max-w-[44ch] font-serif text-xl leading-snug text-ink">
           America Unwrapped is a history site for high school students. This page explains how it’s written and checked,
           so you can decide how far to trust it.
@@ -84,7 +84,7 @@ export default function AboutPage() {
       </Section>
 
       <section id="image-credits" aria-labelledby="image-credits-title" className="mt-16">
-        <h2 id="image-credits-title" className="font-display text-2xl font-extrabold tracking-tight text-ink">
+        <h2 id="image-credits-title" className="font-display text-2xl font-extrabold tracking-tight text-navy">
           Where every image comes from
         </h2>
         <p className="mt-3 max-w-[62ch] text-base text-ink-muted">

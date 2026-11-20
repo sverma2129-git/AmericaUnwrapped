@@ -31,7 +31,7 @@ export default function AttritionModel() {
   return (
     <div className="space-y-10">
       <div className="max-w-[62ch]">
-        <h3 className="font-display text-xl font-bold text-ink">Could the U.S. kill soldiers faster than Hanoi could replace them?</h3>
+        <h3 className="font-display text-xl font-bold text-navy">Could the U.S. kill soldiers faster than Hanoi could replace them?</h3>
         <p className="mt-2 text-base text-ink-muted">
           Westmoreland called the goal the crossover point: the month when enemy losses would outrun new recruits. Move
           the sliders to test his math.
@@ -104,7 +104,7 @@ export default function AttritionModel() {
           <div>
             <p className="flex justify-between text-sm">
               <span className="text-ink-muted">Soldiers lost each month</span>
-              <span className="font-bold tabular-nums text-brand">{lost.toLocaleString()}</span>
+              <span className="font-bold tabular-nums text-brand font-mono">{lost.toLocaleString()}</span>
             </p>
             <div className="mt-1.5 h-5 overflow-hidden rounded-sm bg-parchment">
               <div className="h-full bg-brand transition-[width] duration-300 motion-reduce:transition-none" style={{ width: `${Math.min(100, (lost / 22000) * 100)}%` }} />
@@ -112,7 +112,7 @@ export default function AttritionModel() {
           </div>
 
           <div aria-live="polite" className={`rounded-sm p-5 ${change > 0 ? 'bg-parchment' : 'bg-success-tint'}`}>
-            <p className="font-display text-xl font-bold text-ink">
+            <p className="font-display text-xl font-bold text-navy">
               {change > 0
                 ? `Hanoi’s army grows by ${change.toLocaleString()} a month`
                 : `Hanoi’s army shrinks by ${Math.abs(change).toLocaleString()} a month`}
@@ -127,7 +127,7 @@ export default function AttritionModel() {
       </div>
 
       <div>
-        <h4 className="font-display text-lg font-bold text-ink">Three ways to read the numbers</h4>
+        <h4 className="font-display text-lg font-bold text-navy">Three ways to read the numbers</h4>
         <ul className="mt-4 grid gap-x-10 gap-y-6 md:grid-cols-3">
           {VIEWS.map((v) => (
             <li key={v.who}>

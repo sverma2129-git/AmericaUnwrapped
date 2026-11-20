@@ -43,7 +43,7 @@ export default function CitationModal() {
         // Clicks on the backdrop target the <dialog> element itself
         if (e.target === e.currentTarget) closeCitation();
       }}
-      className="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[90vh] overflow-y-auto bg-paper border border-rule text-ink shadow-2xl rounded-sm p-0 backdrop:bg-black/50 backdrop:backdrop-blur-xs"
+      className="m-auto w-[calc(100%-2rem)] max-w-2xl max-h-[90vh] overflow-y-auto bg-surface border border-rule text-ink rounded-sm p-0 backdrop:bg-black/50 backdrop:backdrop-blur-xs"
     >
       {activeCitation && badge && (
       <div className="p-6 sm:p-8 space-y-6">
@@ -101,7 +101,7 @@ export default function CitationModal() {
           <div className="space-y-1">
             <h3
               id="citation-modal-title"
-              className="font-display text-lg sm:text-xl font-bold text-ink leading-snug"
+              className="font-display text-lg sm:text-xl font-bold text-navy leading-snug"
             >
               {activeCitation.title || activeCitation.citation}
             </h3>

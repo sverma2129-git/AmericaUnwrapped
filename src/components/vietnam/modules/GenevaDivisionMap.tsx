@@ -34,7 +34,7 @@ export default function GenevaDivisionMap() {
         ))}
       </div>
 
-      <h3 className="mt-6 font-display text-xl font-bold text-ink">{current.heading}</h3>
+      <h3 className="mt-6 font-display text-xl font-bold text-navy">{current.heading}</h3>
 
       <div className="mt-6 grid gap-x-10 gap-y-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-start">
         <div className="overflow-hidden rounded-sm bg-terrain/40">

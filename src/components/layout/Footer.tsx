@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)]">
           <div>
-            <Link href="/" className="font-display text-lg font-bold tracking-tight text-ink">
+            <Link href="/" className="font-display text-lg font-bold tracking-tight text-navy">
               America Unwrapped
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-muted">

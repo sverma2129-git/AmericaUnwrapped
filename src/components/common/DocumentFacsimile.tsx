@@ -26,10 +26,10 @@ export default function DocumentFacsimile({ doc, className = '' }: { doc: Featur
 
   return (
     <figure className={`max-w-2xl ${className}`}>
-      <div className="rounded-sm bg-parchment p-2.5 sm:p-4">
-        <div className="rounded-sm border border-rule-strong bg-surface px-5 pb-7 pt-6 sm:px-9 sm:pb-9 sm:pt-8">
+      <div>
+        <div className="paper rounded-sm border border-rule border-l-4 border-l-navy px-5 pb-7 pt-6 sm:px-9 sm:pb-9 sm:pt-8">
           <div className="flex flex-wrap-reverse items-start justify-between gap-x-6 gap-y-4">
-            <p className="typed pt-1 font-bold text-ink">{doc.kind.toUpperCase()}</p>
+            <p className="typed pt-1 font-bold text-navy">{doc.kind.toUpperCase()}</p>
             {stamp && (
               <p
                 aria-label={`Archive reference: ${stamp}`}
@@ -47,8 +47,8 @@ export default function DocumentFacsimile({ doc, className = '' }: { doc: Featur
               </React.Fragment>
             ))}
           </dl>
-          <hr className="my-5 border-t border-dashed border-rule-strong" />
-          <blockquote lang="en" className="typed text-base leading-[1.7] text-ink">
+          <hr className="my-5 border-t border-dashed border-rule" />
+          <blockquote lang="en" className="typed text-ink">
             {citation.exactQuotation}
           </blockquote>
         </div>

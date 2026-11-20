@@ -41,7 +41,7 @@ export default function AftermathMetrics() {
         {tab === 'deaths' && (
           <>
             <div className="max-w-[62ch]">
-              <h3 className="font-display text-xl font-bold text-ink">An estimated 3.1 to 3.8 million people died</h3>
+              <h3 className="font-display text-xl font-bold text-navy">An estimated 3.1 to 3.8 million people died</h3>
               <p className="mt-2 text-base text-ink-muted">
                 Thirty years of war killed Vietnamese in every region and on every side. More than 58,000 Americans died.
               </p>
@@ -50,7 +50,7 @@ export default function AftermathMetrics() {
               {DEATHS.map((d) => (
                 <div key={d.label}>
                   <dt className="text-sm text-ink-muted">{d.label}</dt>
-                  <dd className="mt-1 font-display text-2xl font-extrabold text-ink">{d.value}</dd>
+                  <dd className="mt-1 font-display text-2xl font-extrabold text-navy">{d.value}</dd>
                   <dd className="text-xs text-ink-soft">{d.note}</dd>
                 </div>
               ))}
@@ -69,7 +69,7 @@ export default function AftermathMetrics() {
         {tab === 'refugees' && (
           <>
             <div className="max-w-[62ch]">
-              <h3 className="font-display text-xl font-bold text-ink">Re-education camps and the boat people</h3>
+              <h3 className="font-display text-xl font-bold text-navy">Re-education camps and the boat people</h3>
               <p className="mt-2 text-base text-ink-muted">
                 After Saigon fell, the new government sent about a million former South Vietnamese officers, officials and
                 teachers to re-education.
@@ -78,7 +78,7 @@ export default function AftermathMetrics() {
             <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-3">
               <div>
                 <dt className="text-sm text-ink-muted">Re-education camps</dt>
-                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">About 1 million sent</dd>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-navy">About 1 million sent</dd>
                 <dd className="mt-1 text-sm text-ink-muted">
                   Between 100,000 and 300,000 were held for 5 to 17 years of forced labor. An estimated 10,000 to 20,000 died of
                   hunger and disease.
@@ -86,7 +86,7 @@ export default function AftermathMetrics() {
               </div>
               <div>
                 <dt className="text-sm text-ink-muted">The boat people</dt>
-                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">800,000 to 2 million</dd>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-navy">800,000 to 2 million</dd>
                 <dd className="mt-1 text-sm text-ink-muted">
                   Fled by sea between 1975 and 1995 in crowded wooden boats. International agencies estimate 200,000 to 500,000
                   died at sea.
@@ -94,7 +94,7 @@ export default function AftermathMetrics() {
               </div>
               <div>
                 <dt className="text-sm text-ink-muted">Doi Moi, 1986</dt>
-                <dd className="mt-1 font-display text-2xl font-extrabold text-ink">A change of course</dd>
+                <dd className="mt-1 font-display text-2xl font-extrabold text-navy">A change of course</dd>
                 <dd className="mt-1 text-sm text-ink-muted">
                   With collective farming failing and Soviet aid shrinking, the Communist Party turned toward a market economy
                   in 1986.
@@ -106,7 +106,7 @@ export default function AftermathMetrics() {
 
         {tab === 'bombs' && (
           <div className="max-w-[62ch]">
-            <h3 className="font-display text-xl font-bold text-ink">800,000 tons of unexploded bombs</h3>
+            <h3 className="font-display text-xl font-bold text-navy">800,000 tons of unexploded bombs</h3>
             <p className="mt-2 text-base text-ink-muted">
               The war stayed in the ground. Somewhere between 10% and 30% of the 7.5 million tons of American bombs dropped
               never went off, and they made about a fifth of Vietnam’s farmland dangerous to work.

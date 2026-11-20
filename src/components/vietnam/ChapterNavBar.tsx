@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { getAdjacentChapters, getChapterPart } from '@/data/vietnam/chapters';
 import { ChapterData } from '@/types/vietnam';
+import { markChapterRead } from '@/lib/readingProgress';
 
 /**
  * The running head of a chapter: where you are in the book, the next and
@@ -14,6 +15,7 @@ export default function ChapterNavBar({ currentChapter }: { currentChapter: Chap
   const { prev, next } = getAdjacentChapters(currentChapter);
   const part = getChapterPart(currentChapter);
   const barRef = useRef<HTMLDivElement>(null);
+  const chapterId = currentChapter.id;
 
   useEffect(() => {
     let frame = 0;
@@ -22,6 +24,7 @@ export default function ChapterNavBar({ currentChapter }: { currentChapter: Chap
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
       if (barRef.current) barRef.current.style.transform = `scaleX(${progress})`;
+      if (progress > 0.8) markChapterRead(chapterId);
     }
     function onScroll() {
       if (!frame) frame = requestAnimationFrame(update);
@@ -34,7 +37,7 @@ export default function ChapterNavBar({ currentChapter }: { currentChapter: Chap
       window.removeEventListener('resize', onScroll);
       if (frame) cancelAnimationFrame(frame);
     };
-  }, []);
+  }, [chapterId]);
 
   return (
     <nav id="chapter-bar" aria-label="Chapter" className="sticky top-14 z-30 border-b border-rule bg-paper">

@@ -25,7 +25,7 @@ export default function TurningPointsTimeline() {
               {g.start}–{String(g.end).slice(2)}
             </div>
             <div className="border-l-2 border-ink pl-5 sm:pl-8 pb-4">
-              <h3 className="font-display text-lg font-bold text-ink leading-snug">
+              <h3 className="font-display text-lg font-bold text-navy leading-snug">
                 {g.name}
                 <span className="sm:hidden ml-2 text-sm font-normal tabular-nums text-ink-soft">
                   {g.start}–{String(g.end).slice(2)}
@@ -40,7 +40,7 @@ export default function TurningPointsTimeline() {
               return (
                 <li key={tp.event} className="grid grid-cols-[1fr] sm:grid-cols-[7rem_1fr] sm:gap-x-8">
                   <div className="hidden sm:block pt-0.5 text-right">
-                    <span className="text-sm font-semibold tabular-nums text-brand">{tp.date}</span>
+                    <span className="text-sm font-semibold tabular-nums text-brand font-mono">{tp.date}</span>
                   </div>
                   <div className="relative border-l-2 border-rule pl-5 sm:pl-8 pb-8">
                     <span
@@ -49,7 +49,7 @@ export default function TurningPointsTimeline() {
                         tp.highlight ? 'border-brand bg-brand' : 'border-rule-strong bg-paper'
                       }`}
                     />
-                    <p className="sm:hidden text-sm font-semibold tabular-nums text-brand">{tp.date}</p>
+                    <p className="sm:hidden text-sm font-semibold tabular-nums text-brand font-mono">{tp.date}</p>
                     <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                       <h4 className="font-display text-base sm:text-base font-semibold text-ink leading-snug">{tp.event}</h4>
                       {tp.highlight && <span className="text-sm font-medium text-brand">Often on the test</span>}

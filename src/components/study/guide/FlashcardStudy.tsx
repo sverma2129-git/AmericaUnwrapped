@@ -195,7 +195,7 @@ export default function FlashcardStudy({ entries, showChapter = true }: { entrie
                   {card.term.imageId && (
                     <Thumb imageId={card.term.imageId} className="mb-5 h-28 w-40 rounded-sm sm:h-32 sm:w-48" />
                   )}
-                  <p className="font-display text-xl sm:text-2xl font-bold leading-tight text-ink">{card.term.term}</p>
+                  <p className="font-display text-xl sm:text-2xl font-bold leading-tight text-navy">{card.term.term}</p>
                   {card.term.phonetic && <p className="mt-2 text-sm text-ink-muted">Say it: {card.term.phonetic}</p>}
                   <p className="mt-6 text-sm text-ink-soft">Think of what it means, then tap the card or press Space.</p>
                 </div>

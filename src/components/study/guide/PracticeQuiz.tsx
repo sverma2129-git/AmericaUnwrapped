@@ -313,7 +313,7 @@ function QuizSummary({
 
   return (
     <div>
-      <h3 ref={headingRef} tabIndex={-1} className="font-display text-xl sm:text-2xl font-bold text-ink focus:outline-none">
+      <h3 ref={headingRef} tabIndex={-1} className="font-display text-xl sm:text-2xl font-bold text-navy focus:outline-none">
         {retrying ? 'Retry results: ' : ''}
         {correct} of {answered.length} right
       </h3>
@@ -342,7 +342,7 @@ function QuizSummary({
 
       {toReread.length > 0 && (
         <div className="mt-10">
-          <h4 className="font-display text-lg font-bold text-ink">Chapters to reread</h4>
+          <h4 className="font-display text-lg font-bold text-navy">Chapters to reread</h4>
           <ul className="mt-3 space-y-2">
             {toReread.map(({ chapter, right, total }) => (
               <li key={chapter.id} className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3">
@@ -360,7 +360,7 @@ function QuizSummary({
 
       {missed.length > 0 && (
         <div className="mt-10">
-          <h4 className="font-display text-lg font-bold text-ink">What you missed</h4>
+          <h4 className="font-display text-lg font-bold text-navy">What you missed</h4>
           <ul className="mt-3 space-y-2">
             {missed.map(({ question: q, chapter }) => (
               <li key={q.id}>

@@ -53,7 +53,7 @@ export default function Header() {
   return (
     <header ref={headerRef} className="sticky top-0 z-40 border-b border-rule bg-paper">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="whitespace-nowrap font-display text-sm font-extrabold tracking-tight text-ink hover:text-brand sm:text-lg">
+        <Link href="/" className="whitespace-nowrap font-display text-sm font-extrabold tracking-tight text-navy hover:text-brand sm:text-lg">
           America Unwrapped
         </Link>
 
@@ -67,7 +67,7 @@ export default function Header() {
             className={`${linkClass(inChapters || open)} inline-flex cursor-pointer gap-1 sm:gap-1.5`}
           >
             Chapters
-            <svg aria-hidden="true" viewBox="0 0 12 12" className={`h-3 w-3 ${open ? 'rotate-180' : ''}`}>
+            <svg aria-hidden="true" viewBox="0 0 12 12" className={`hidden h-3 w-3 sm:block ${open ? 'rotate-180' : ''}`}>
               <path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" />
             </svg>
           </button>
@@ -90,7 +90,7 @@ export default function Header() {
       <div id="site-contents" hidden={!open} className="border-t border-rule bg-paper">
         <div className="mx-auto max-w-6xl px-4 pb-8 pt-6 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-            <p className="font-display text-base font-bold text-ink">The Vietnam War, 1945–1975</p>
+            <p className="font-display text-base font-bold text-navy">The Vietnam War, 1945–1975</p>
             <Link href="/vietnam" className="text-sm font-medium text-brand underline decoration-brand-rule underline-offset-4 hover:decoration-brand">
               About this unit
             </Link>

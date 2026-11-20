@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CHAPTER_PARTS } from '@/data/vietnam/chapters';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { Thumb } from '@/components/common/Figure';
+import { PeriodBadge } from './ContentsGrid';
 
 /**
  * The table of contents in its four parts: each chapter with its photo, its
@@ -14,10 +15,10 @@ export default function ChapterIndex() {
       {CHAPTER_PARTS.map((part) => (
         <section key={part.number} aria-labelledby={`index-part-${part.number}`} className="grid gap-x-10 gap-y-6 lg:grid-cols-[13rem_minmax(0,1fr)]">
           <header className="lg:sticky lg:top-24 lg:self-start">
-            <p className="text-sm text-ink-soft">
-              Part {part.number}, {part.years}
+            <p className="flex items-center gap-2 text-sm text-ink-soft">
+              Part {part.number} <PeriodBadge tone="navy">{part.years}</PeriodBadge>
             </p>
-            <h3 id={`index-part-${part.number}`} className="mt-1 font-display text-xl font-bold text-ink">
+            <h3 id={`index-part-${part.number}`} className="mt-1 font-display text-xl font-bold text-navy">
               {part.title}
             </h3>
           </header>
@@ -34,12 +35,12 @@ export default function ChapterIndex() {
                       {ch.number}
                     </span>
                     <span className="min-w-0">
-                      <span className="block text-sm text-ink-soft">
-                        <span className="sm:hidden">Chapter {ch.number}, </span>
-                        {ch.timeframe}
-                        {ch.isLandmark && <span className="text-brand">, a turning point</span>}
+                      <span className="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-ink-soft">
+                        <span className="sm:hidden">Chapter {ch.number}</span>
+                        <PeriodBadge>{ch.timeframe}</PeriodBadge>
+                        {ch.isLandmark && <span className="font-medium text-brand">A turning point</span>}
                       </span>
-                      <span className="mt-1 block font-display text-xl font-bold leading-snug text-ink group-hover:text-brand">
+                      <span className="mt-1 block font-display text-xl font-bold leading-snug text-navy group-hover:text-brand">
                         {ch.title}
                       </span>
                       <span className="mt-2 block max-w-[58ch] font-serif text-base leading-relaxed text-ink-muted">{question}</span>

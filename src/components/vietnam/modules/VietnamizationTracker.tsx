@@ -73,7 +73,7 @@ export default function VietnamizationTracker() {
   return (
     <div className="space-y-8">
       <div className="max-w-[62ch]">
-        <h3 className="font-display text-xl font-bold text-ink">As American troops left, South Vietnam’s losses grew</h3>
+        <h3 className="font-display text-xl font-bold text-navy">As American troops left, South Vietnam’s losses grew</h3>
         <p className="mt-2 text-base text-ink-muted">
           From 1968 to 1972, more than 500,000 American troops came home. The fighting did not stop. South Vietnam’s army
           took it over, backed by American planes. Pick a year.
@@ -135,7 +135,7 @@ export default function VietnamizationTracker() {
         <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-3">
           <div>
             <dt className="text-sm text-ink-muted">American troops in {year}</dt>
-            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-ink">{current.usTroops.toLocaleString()}</dd>
+            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-navy">{current.usTroops.toLocaleString()}</dd>
             <dd className="text-sm text-ink-soft">{current.usDeaths.toLocaleString()} Americans killed that year</dd>
           </div>
           <div>
@@ -145,7 +145,7 @@ export default function VietnamizationTracker() {
           </div>
           <div>
             <dt className="text-sm text-ink-muted">American bombs dropped</dt>
-            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-ink">{current.bombs}</dd>
+            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-navy">{current.bombs}</dd>
             <dd className="text-sm text-ink-soft">Air power stayed after the troops left</dd>
           </div>
         </dl>
@@ -153,11 +153,11 @@ export default function VietnamizationTracker() {
 
       <div aria-live="polite" className="grid gap-x-10 gap-y-6 md:grid-cols-2">
         <div>
-          <h4 className="font-display text-lg font-bold text-ink">What happened in {year}</h4>
+          <h4 className="font-display text-lg font-bold text-navy">What happened in {year}</h4>
           <p className="mt-2 text-base text-ink-muted">{current.event}</p>
         </div>
         <div className="rounded-sm bg-parchment p-5">
-          <h4 className="font-display text-lg font-bold text-ink">What historians argue about</h4>
+          <h4 className="font-display text-lg font-bold text-navy">What historians argue about</h4>
           <p className="mt-2 text-base text-ink-muted">{current.debate}</p>
         </div>
       </div>

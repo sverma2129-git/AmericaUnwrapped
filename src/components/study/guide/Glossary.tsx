@@ -107,7 +107,7 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
               <details key={chapter.id} open={groups.length === 1} className="group rounded-sm bg-parchment">
                 <summary className="flex cursor-pointer list-none items-baseline gap-3 px-5 py-4 hover:text-brand [&::-webkit-details-marker]:hidden">
                   <span className="text-sm tabular-nums text-ink-muted">Ch. {chapter.number}</span>
-                  <span className="min-w-0 flex-1 font-display text-lg font-bold text-ink group-hover:text-brand">{chapter.title}</span>
+                  <span className="min-w-0 flex-1 font-display text-lg font-bold text-navy group-hover:text-brand">{chapter.title}</span>
                   <span className="shrink-0 text-sm text-ink-muted">{items.length} terms</span>
                 </summary>
                 <div className="rounded-b-sm bg-surface px-5 pb-2">{list}</div>

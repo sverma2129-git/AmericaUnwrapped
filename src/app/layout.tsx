@@ -1,19 +1,20 @@
 import type { Metadata } from 'next';
-import { Courier_Prime, Libre_Franklin, Source_Serif_4 } from 'next/font/google';
+import { JetBrains_Mono, Newsreader, Plus_Jakarta_Sans } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
 import CitationModal from '@/components/common/CitationModal';
 import './globals.css';
 
-const franklin = Libre_Franklin({ subsets: ['latin'], variable: '--font-franklin', display: 'swap' });
-const courier = Courier_Prime({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-courier', display: 'swap' });
-const sourceSerif = Source_Serif_4({
+const newsreader = Newsreader({
   subsets: ['latin'],
-  variable: '--font-source-serif',
+  variable: '--font-newsreader',
   style: ['normal', 'italic'],
+  axes: ['opsz'],
   display: 'swap',
 });
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta', display: 'swap' });
+const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full ${franklin.variable} ${sourceSerif.variable} ${courier.variable}`}>
+    <html lang="en" className={`h-full ${newsreader.variable} ${jakarta.variable} ${jetbrains.variable}`}>
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased">
         <CitationProvider>
           <a

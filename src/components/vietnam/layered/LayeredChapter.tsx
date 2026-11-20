@@ -1,4 +1,5 @@
 import React from 'react';
+import { PeriodBadge } from '@/components/vietnam/ContentsGrid';
 import type { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { getAdjacentChapters, getChapterPart } from '@/data/vietnam/chapters';
@@ -53,11 +54,12 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
     <CourseProvider>
       <article className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
         <header className="max-w-4xl">
-          <p className="text-sm text-ink-muted">
-            {part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}, {chapter.timeframe}
-            {chapter.isLandmark && <span className="text-brand">, a turning point</span>}
+          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
+            <span>{part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}</span>
+            <PeriodBadge>{chapter.timeframe}</PeriodBadge>
+            {chapter.isLandmark && <span className="font-medium text-brand">A turning point</span>}
           </p>
-          <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">{chapter.title}</h1>
+          <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">{chapter.title}</h1>
           <p className="mt-4 max-w-[40ch] font-serif text-xl leading-snug text-ink">{study?.bigQuestion ?? chapter.subtitle}</p>
           {study?.whyItMatters && <p className="mt-4 max-w-[62ch] text-base text-ink-muted">{study.whyItMatters}</p>}
           <nav aria-label="In this chapter" className="mt-6">
@@ -94,7 +96,7 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
           <ol aria-label="Key dates" className="mt-8 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 lg:grid-cols-6">
             {chapter.whatHappened.keyEvents.map((e) => (
               <li key={e.title}>
-                <span className="block text-xs font-semibold tabular-nums text-brand">{e.date}</span>
+                <span className="block text-xs font-semibold tabular-nums text-brand font-mono">{e.date}</span>
                 <span className="mt-1 block text-sm leading-snug text-ink">{e.title}</span>
               </li>
             ))}
@@ -113,7 +115,7 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
               return (
                 <section key={beat.id} id={`beat-${beat.id}`} aria-labelledby={`beat-${beat.id}-h`}>
                   <p className="text-sm text-ink-soft">{beat.kicker}</p>
-                  <h3 id={`beat-${beat.id}-h`} className="mt-1 max-w-2xl font-display text-xl font-bold leading-tight text-ink">
+                  <h3 id={`beat-${beat.id}-h`} className="mt-1 max-w-2xl font-display text-xl font-bold leading-tight text-navy">
                     {beat.headline}
                   </h3>
                   <div className="reading mt-4 space-y-4 text-ink">
