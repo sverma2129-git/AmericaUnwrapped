@@ -2,211 +2,136 @@
 
 import React, { useState } from 'react';
 
-type PhaseIndex = 0 | 1 | 2 | 3 | 4;
-
-interface CampaignPhase {
+interface Step {
   date: string;
-  location: string;
+  place: string;
   title: string;
-  coords: { x: number; y: number };
-  narrative: string;
-  logisticsAndAid: string;
-  significance: string;
+  x: number;
+  y: number;
+  story: string;
+  supplies: string;
+  meaning: string;
 }
 
-const CAMPAIGN_PHASES: CampaignPhase[] = [
+const STEPS: Step[] = [
   {
     date: 'March 10–12, 1975',
-    location: 'Ban Me Thuot (Central Highlands)',
+    place: 'Ban Me Thuot',
     title: 'North Vietnam breaks through at Ban Me Thuot',
-    coords: { x: 310, y: 260 },
-    narrative:
-      'General Van Tien Dung feigned a strike toward Pleiku and Kontum, but secretly concentrated three PAVN divisions against Ban Me Thuot. Soviet-supplied T-54 tanks and heavy artillery breached the defenses in 36 hours, bisecting South Vietnam.',
-    logisticsAndAid:
-      'ARVN artillery was rationed to three rounds per day per tube; helicopters were grounded due to a lack of spare parts following congressional aid cuts.',
-    significance:
-      'Exposed the severe material depletion of South Vietnamese forces and shattered strategic communications between northern and southern corps.',
+    x: 310,
+    y: 260,
+    story:
+      'General Van Tien Dung faked an attack toward Pleiku and Kontum, then massed three divisions against Ban Me Thuot. Soviet-supplied tanks and heavy artillery broke through in 36 hours and cut South Vietnam in two.',
+    supplies: 'After the aid cuts, South Vietnamese gunners were limited to three shells a day per gun, and helicopters sat grounded for lack of spare parts.',
+    meaning: 'The attack showed how short of supplies South Vietnam’s army had become, and it cut the links between its northern and southern commands.',
   },
   {
     date: 'March 14–24, 1975',
-    location: 'Route 7B & Central Highlands',
-    title: 'Thieu’s retreat and the "Column of Tears"',
-    coords: { x: 340, y: 280 },
-    narrative:
-      'In a secret meeting at Cam Ranh, President Thieu ordered General Pham Van Phu to evacuate all of II Corps to coastal enclaves without notifying civilian officials. The withdrawal down unpaved, bridge-broken Route 7B disintegrated into chaos: 200,000 soldiers and 400,000 civilian refugees were shelled by PAVN artillery along the choked roadway.',
-    logisticsAndAid:
-      'South Vietnamese soldiers abandoned their units to escort their fleeing families, destroying military cohesion without fighting a set-piece battle.',
-    significance:
-      'The complete organizational collapse of South Vietnam’s II Corps within 72 hours, surrendering two-thirds of the country’s landmass.',
+    place: 'Route 7B',
+    title: 'Thieu’s retreat and the Column of Tears',
+    x: 340,
+    y: 280,
+    story:
+      'At a secret meeting at Cam Ranh, Thieu ordered General Pham Van Phu to pull the whole II Corps out of the highlands to the coast, without telling civilian officials. The retreat down Route 7B, an unpaved road with broken bridges, fell apart. North Vietnamese artillery shelled 200,000 soldiers and 400,000 civilian refugees crowded onto the road.',
+    supplies: 'Many soldiers left their units to get their families out, and the army came apart without fighting a major battle.',
+    meaning: 'II Corps collapsed, and South Vietnam lost the Central Highlands.',
   },
   {
     date: 'March 25–30, 1975',
-    location: 'Hue & Da Nang (Northern Front)',
+    place: 'Hue and Da Nang',
     title: 'The northern front falls apart',
-    coords: { x: 260, y: 120 },
-    narrative:
-      'With their southern flank exposed, ARVN forces in northern I Corps were ordered to hold Hue, then abruptly counter-ordered to retreat to Da Nang. In Da Nang, South Vietnam’s second-largest city, 100,000 demoralized troops dissolved into panic amid 300,000 fleeing refugees. The city fell on March 30 without a major battle.',
-    logisticsAndAid:
-      'Billions of dollars of modern American equipment, including F-5 jets, howitzers, tanks and trucks, was captured intact on airfields and docks.',
-    significance:
-      'Hanoi realized that the southern armed forces were not executing an orderly withdrawal, but undergoing total institutional disintegration.',
+    x: 260,
+    y: 120,
+    story:
+      'Troops in the north were told to hold Hue, then suddenly ordered to fall back to Da Nang. In Da Nang, South Vietnam’s second-largest city, 100,000 soldiers broke into panic among 300,000 refugees. The city fell on March 30 without a major battle.',
+    supplies: 'Billions of dollars of American equipment, including F-5 jets, howitzers, tanks and trucks, was captured intact on airfields and docks.',
+    meaning: 'Hanoi’s commanders saw that South Vietnam’s army was not retreating in order. It was coming apart.',
   },
   {
     date: 'April 9–21, 1975',
-    location: 'Xuan Loc (Saigon Perimeter)',
-    title: 'The ARVN 18th Division’s stand at Xuan Loc',
-    coords: { x: 320, y: 375 },
-    narrative:
-      'Just 40 miles northeast of Saigon, the ARVN 18th Division under Brigadier General Le Minh Dao mounted a tenacious, two-week defense against the PAVN 4th Army Corps. The 18th repelled repeated human wave assaults and survived heavy artillery bombardment, inflicting an estimated 2,000 to 3,000 casualties before withdrawing in good order when outflanked.',
-    logisticsAndAid:
-      'South Vietnamese forces utilized C-130-dropped Daisy Cutter 15,000-lb fuel-air bombs in a final attempt to halt the armored advance.',
-    significance:
-      'Demonstrated that ARVN soldiers fought tenaciously where leadership and munitions held. Xuan Loc was the last major defensive stand of the war.',
+    place: 'Xuan Loc',
+    title: 'The last stand at Xuan Loc',
+    x: 320,
+    y: 375,
+    story:
+      'About 40 miles from Saigon, the ARVN 18th Division under Brigadier General Le Minh Dao held off North Vietnam’s 4th Army Corps for two weeks. It beat back attack after attack under heavy shelling, then pulled out in good order when it was outflanked.',
+    supplies: 'South Vietnam’s air force dropped a 15,000-pound bomb, the BLU-82, on North Vietnamese troops near Xuan Loc, one of its last attempts to stop the advance.',
+    meaning: 'Where leaders and ammunition held, South Vietnamese soldiers fought hard. Xuan Loc was the last major stand of the war.',
   },
   {
     date: 'April 26–30, 1975',
-    location: 'Saigon (Ho Chi Minh Campaign)',
-    title: 'Saigon falls and surrenders',
-    coords: { x: 300, y: 395 },
-    narrative:
-      'Sixteen North Vietnamese divisions converged on Saigon in the final "Ho Chi Minh Campaign." Operation Frequent Wind evacuated roughly 1,000 Americans and 7,000 vulnerable South Vietnamese by helicopter to 7th Fleet carriers. At 11:30 AM on April 30, PAVN Tank 843 crashed through the gates of the Presidential Palace, where General Duong Van Minh announced unconditional surrender.',
-    logisticsAndAid:
-      'President Ford’s request for $722 million in emergency military aid was rejected by Congress, confirming that no American intervention would occur.',
-    significance:
-      'The thirty-year conflict ended with the complete collapse of the Republic of Vietnam and the reunification of the country under Hanoi.',
+    place: 'Saigon',
+    title: 'Saigon falls',
+    x: 300,
+    y: 395,
+    story:
+      'Sixteen North Vietnamese divisions closed in on Saigon in the final push, the Ho Chi Minh Campaign. Operation Frequent Wind flew about 1,000 Americans and 7,000 South Vietnamese out by helicopter to Navy ships. At 11:30 a.m. on April 30, Tank 843 crashed through the gates of the Presidential Palace, and General Duong Van Minh surrendered.',
+    supplies: 'Congress had turned down President Ford’s request for $722 million in emergency military aid. Everyone knew the Americans were not coming back.',
+    meaning: 'Thirty years of war ended with South Vietnam gone and the country reunited under Hanoi.',
   },
 ];
 
-export default function CollapseOffensiveMap() {
-  const [activePhase, setActivePhase] = useState<PhaseIndex>(0);
+const CITIES = [
+  { name: 'Hue', x: 260, y: 100, step: 2 },
+  { name: 'Da Nang', x: 290, y: 130, step: 2 },
+  { name: 'Ban Me Thuot', x: 310, y: 260, step: 0 },
+  { name: 'Tuy Hoa', x: 360, y: 300, step: 1 },
+  { name: 'Xuan Loc', x: 320, y: 375, step: 3 },
+  { name: 'Saigon', x: 300, y: 395, step: 4 },
+];
 
-  const current = CAMPAIGN_PHASES[activePhase];
+/** The 55 days of 1975, step by step on a map. */
+export default function CollapseOffensiveMap() {
+  const [step, setStep] = useState(0);
+  const current = STEPS[step];
 
   return (
-    <div className="space-y-6">
-      {/* Editorial Phase Scrubber */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-3 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            Map of the final offensive
-          </span>
-        </div>
-
-        {/* Phase Buttons */}
-        <div className="flex items-center gap-1.5 overflow-x-auto">
-          {CAMPAIGN_PHASES.map((p, idx) => (
+    <div className="rounded-sm bg-surface p-5 sm:p-8">
+      <ol role="tablist" aria-label="Steps of the collapse" className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+        {STEPS.map((s, i) => (
+          <li key={s.title}>
             <button
-              key={idx}
-              onClick={() => setActivePhase(idx as PhaseIndex)}
-              className={`px-2.5 py-1 rounded-sm border transition-colors cursor-pointer whitespace-nowrap ${ activePhase === idx ? 'bg-ink text-paper border-ink font-bold' : 'bg-white text-ink-muted border-rule-strong hover:border-rule-strong' }`}
+              type="button"
+              role="tab"
+              aria-selected={i === step}
+              onClick={() => setStep(i)}
+              className={`w-full cursor-pointer rounded-sm px-3 py-2.5 text-left ${i === step ? 'bg-brand text-white' : 'bg-parchment text-ink hover:bg-brand-tint'}`}
             >
-              Phase {idx + 1}
+              <span className={`block text-xs tabular-nums ${i === step ? 'text-white/85' : 'text-ink-muted'}`}>{s.date.split(',')[0]}</span>
+              <span className="block text-sm font-semibold">{s.place}</span>
             </button>
-          ))}
-        </div>
-      </div>
+          </li>
+        ))}
+      </ol>
 
-      {/* Map & Operational Ledger Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Geographic Map of South Vietnam with Highways and Advances */}
-        <div className="lg:col-span-6 bg-terrain border border-rule-strong rounded-sm p-3 relative aspect-3/4 flex items-center justify-center overflow-hidden">
-          <svg viewBox="180 50 250 460" className="w-full h-full select-none" role="img" aria-label="1975 Spring Offensive operational map">
-            {/* South Vietnam Coastline Silhouette */}
+      <div className="mt-8 grid gap-x-10 gap-y-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-start">
+        <div className="overflow-hidden rounded-sm bg-terrain/40">
+          <svg viewBox="180 50 250 460" className="h-auto w-full select-none" role="img" aria-label="Map of South Vietnam showing the North Vietnamese advance in 1975">
             <path
               d="M 230,70 L 260,100 L 290,130 L 330,180 L 360,230 L 400,300 L 390,340 L 360,380 L 330,410 L 270,450 L 230,480 L 220,450 L 250,420 L 250,380 L 280,340 L 270,250 L 230,160 L 200,90 Z"
               fill="var(--color-terrain)"
-              stroke="var(--color-ink-soft)"
-              strokeWidth="1.5"
-              className=""
-            />
-
-            {/* Strategic Highways */}
-            {/* Route 1: Coastal Highway */}
-            <path
-              d="M 230,70 Q 280,120 330,180 T 390,300 T 360,380 T 300,395"
-              fill="none"
-              stroke="var(--color-rule-strong)"
-              strokeWidth="2"
-              strokeDasharray="3,3"
-            />
-            <text x="365" y="240" className="fill-ink-soft text-[7px] rotate-75">
-              ROUTE 1
-            </text>
-
-            {/* Route 14: Central Highlands Highway */}
-            <path
-              d="M 270,160 Q 300,210 310,260 T 300,395"
-              fill="none"
               stroke="var(--color-rule-strong)"
               strokeWidth="1.5"
-              strokeDasharray="2,2"
             />
-            <text x="275" y="210" className="fill-ink-soft text-[7px] rotate-70">
-              ROUTE 14
-            </text>
+            <path d="M 230,70 Q 280,120 330,180 T 390,300 T 360,380 T 300,395" fill="none" stroke="var(--color-rule-strong)" strokeWidth="2" strokeDasharray="3,3" />
+            <text x="368" y="240" className="fill-ink-soft text-[8px]">Route 1</text>
+            <path d="M 270,160 Q 300,210 310,260 T 300,395" fill="none" stroke="var(--color-rule-strong)" strokeWidth="1.5" strokeDasharray="2,2" />
+            <text x="276" y="205" className="fill-ink-soft text-[8px]">Route 14</text>
+            <path d="M 310,260 L 360,300" fill="none" stroke="var(--color-brand)" strokeWidth="2" strokeDasharray="2,2" />
+            <text x="324" y="276" className="fill-brand-hover text-[8px] font-bold">Route 7B</text>
 
-            {/* Route 7B: Retreat Corridor */}
-            <path
-              d="M 310,260 L 360,300"
-              fill="none"
-              stroke="var(--color-brand)"
-              strokeWidth="2"
-              strokeDasharray="2,2"
-            />
-            <text x="325" y="275" className="fill-brand-hover text-[7px] font-bold">
-              ROUTE 7B
-            </text>
+            {step >= 1 && <line x1="310" y1="260" x2="350" y2="295" stroke="var(--color-brand-hover)" strokeWidth="3" />}
+            {step >= 2 && <path d="M 230,70 L 260,100 L 290,130" fill="none" stroke="var(--color-brand-hover)" strokeWidth="4" />}
+            {step >= 3 && <path d="M 290,130 L 330,180 L 390,300" fill="none" stroke="var(--color-brand-hover)" strokeWidth="4" />}
+            {step >= 4 && <circle cx="300" cy="395" r="28" fill="none" stroke="var(--color-brand-hover)" strokeWidth="2" strokeDasharray="3,3" />}
 
-            {/* PAVN Main Advance Vector (Progressive based on phase) */}
-            {activePhase >= 1 && (
-              <line x1="310" y1="260" x2="350" y2="295" stroke="var(--color-brand-hover)" strokeWidth="3" markerEnd="url(#arrow)" />
-            )}
-            {activePhase >= 2 && (
-              <path
-                d="M 230,70 L 260,100 L 290,130"
-                fill="none"
-                stroke="var(--color-brand-hover)"
-                strokeWidth="4"
-              />
-            )}
-            {activePhase >= 3 && (
-              <path
-                d="M 290,130 L 330,180 L 390,300"
-                fill="none"
-                stroke="var(--color-brand-hover)"
-                strokeWidth="4"
-              />
-            )}
-            {activePhase >= 4 && (
-              <circle cx="300" cy="395" r="28" fill="none" stroke="var(--color-brand-hover)" strokeWidth="2" strokeDasharray="3,3" />
-            )}
-
-            {/* Key Operational Cities */}
-            {[
-              { name: 'Hue', x: 260, y: 100, phase: 2 },
-              { name: 'Da Nang', x: 290, y: 130, phase: 2 },
-              { name: 'Ban Me Thuot', x: 310, y: 260, phase: 0 },
-              { name: 'Tuy Hoa', x: 360, y: 300, phase: 1 },
-              { name: 'Xuan Loc', x: 320, y: 375, phase: 3 },
-              { name: 'Saigon', x: 300, y: 395, phase: 4 },
-            ].map((city, idx) => {
-              const isCurrent = current.coords.x === city.x && current.coords.y === city.y;
+            {CITIES.map((c) => {
+              const on = current.x === c.x && current.y === c.y;
               return (
-                <g key={idx} className="cursor-pointer" onClick={() => setActivePhase(city.phase as PhaseIndex)}>
-                  <circle
-                    cx={city.x}
-                    cy={city.y}
-                    r={isCurrent ? '7' : '4'}
-                    fill={isCurrent ? 'var(--color-brand-hover)' : 'var(--color-ink-muted)'}
-                    stroke="var(--color-surface)"
-                    strokeWidth="1.5"
-                  />
-                  <text
-                    x={city.x + 8}
-                    y={city.y + 3}
-                    className={`text-[8px] font-bold ${ isCurrent ? 'fill-brand-hover font-extrabold underline' : 'fill-ink' }`}
-                  >
-                    {city.name}
+                <g key={c.name} className="cursor-pointer" onClick={() => setStep(c.step)}>
+                  <circle cx={c.x} cy={c.y} r={on ? 7 : 4} fill={on ? 'var(--color-brand-hover)' : 'var(--color-ink-muted)'} stroke="var(--color-surface)" strokeWidth="1.5" />
+                  <text x={c.x + 8} y={c.y + 3} className={`text-[9px] font-bold ${on ? 'fill-brand-hover' : 'fill-ink'}`}>
+                    {c.name}
                   </text>
                 </g>
               );
@@ -214,49 +139,22 @@ export default function CollapseOffensiveMap() {
           </svg>
         </div>
 
-        {/* Phase Narrative & Logistic Analysis */}
-        <div className="lg:col-span-6 space-y-4">
-          <div className="p-4 bg-white border border-rule rounded-sm">
-            <div className="flex items-center justify-between text-xs text-ink-soft mb-1">
-              <span>PHASE {activePhase + 1} OF 5</span>
-              <span>{current.date}</span>
+        <div aria-live="polite">
+          <p className="text-sm font-semibold tabular-nums text-brand">
+            Step {step + 1} of {STEPS.length}, {current.date}
+          </p>
+          <h3 className="mt-1 font-display text-xl font-bold text-ink">{current.title}</h3>
+          <p className="mt-3 font-serif text-lg leading-snug text-ink">{current.story}</p>
+          <dl className="mt-6 space-y-5">
+            <div>
+              <dt className="text-sm font-semibold text-ink">Supplies and aid</dt>
+              <dd className="mt-1 text-base text-ink-muted">{current.supplies}</dd>
             </div>
-            <h3 className="font-display text-lg font-bold text-ink">
-              {current.title}
-            </h3>
-            <div className="text-xs text-brand font-medium mt-0.5">
-              Sector: {current.location}
+            <div className="rounded-sm bg-parchment p-5">
+              <dt className="text-sm font-semibold text-ink">Why it mattered</dt>
+              <dd className="mt-1 text-base text-ink-muted">{current.meaning}</dd>
             </div>
-
-            <div className="mt-4 pt-3 border-t border-rule">
-              <span className="text-xs text-ink-soft font-bold block mb-1">
-                What happened on the ground:
-              </span>
-              <p className="font-display text-sm text-ink leading-relaxed">
-                {current.narrative}
-              </p>
-            </div>
-          </div>
-
-          {/* Aid Cuts & Logistics Factor */}
-          <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
-            <span className="font-bold text-ink-muted block mb-1">
-              Logistical &amp; Aid Factors:
-            </span>
-            <p className="font-display text-ink-muted leading-relaxed text-sm">
-              {current.logisticsAndAid}
-            </p>
-          </div>
-
-          {/* Historical Consequence */}
-          <div className="p-4 bg-parchment/80 border-l border-ink rounded-sm text-xs">
-            <span className="font-bold text-ink-muted block mb-1">
-              Why it mattered in the 55 days:
-            </span>
-            <p className="font-display text-ink leading-relaxed">
-              {current.significance}
-            </p>
-          </div>
+          </dl>
         </div>
       </div>
     </div>

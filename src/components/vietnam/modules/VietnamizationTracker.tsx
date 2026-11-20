@@ -3,307 +3,162 @@
 import React, { useState } from 'react';
 
 interface YearData {
-  year: number;
   usTroops: number;
   arvnDeaths: number;
   usDeaths: number;
-  bombTonnage: string;
-  milestone: string;
-  contestedDebate: string;
+  bombs: string;
+  event: string;
+  debate: string;
 }
 
-const TRACKER_DATA: Record<number, YearData> = {
+const DATA: Record<number, YearData> = {
   1968: {
-    year: 1968,
     usTroops: 536100,
     arvnDeaths: 20800,
     usDeaths: 16879,
-    bombTonnage: '1,430,000 tons',
-    milestone: 'Peak U.S. ground deployment. Following the Tet Offensive, General Creighton Abrams replaces General Westmoreland and institutes the "One War" population-security doctrine.',
-    contestedDebate: 'Did Abrams’ shift to small-unit patrolling and pacification fundamentally turn the war around (Lewis Sorley thesis), or was the South Vietnamese government still structurally fragile?',
+    bombs: '1,430,000 tons',
+    event: 'American troop numbers peak. After Tet, General Creighton Abrams replaces Westmoreland and shifts toward protecting villages, a plan called One War.',
+    debate: 'Did Abrams’ small patrols and village security turn the war around, as Lewis Sorley argues, or was South Vietnam’s government still too weak?',
   },
   1969: {
-    year: 1969,
     usTroops: 475200,
     arvnDeaths: 21800,
     usDeaths: 11780,
-    bombTonnage: '1,387,000 tons',
-    milestone: 'President Nixon announces the "Nixon Doctrine" and the initial withdrawal of 25,000 U.S. troops. Operation Menu begins secret B-52 carpet bombing of communist sanctuaries inside neutral Cambodia with falsified flight logs.',
-    contestedDebate: 'Was Vietnamization designed as a genuine strategy to achieve South Vietnamese self-sufficiency, or primarily as a political mechanism to manage domestic dissent while negotiating an exit?',
+    bombs: '1,387,000 tons',
+    event: 'Nixon announces the Nixon Doctrine and the first withdrawal of 25,000 troops. B-52s begin secretly bombing communist bases in neutral Cambodia, and the flight records are falsified.',
+    debate: 'Was Vietnamization a real plan to make South Vietnam stand on its own, or a way to calm protest at home while negotiating an exit?',
   },
   1970: {
-    year: 1970,
     usTroops: 334600,
     arvnDeaths: 23300,
     usDeaths: 6173,
-    bombTonnage: '1,180,000 tons',
-    milestone: 'Joint U.S.-ARVN Cambodian Incursion (April–June) to destroy North Vietnamese logistical base areas. Sparked nationwide campus protests; 4 students shot dead at Kent State (May 4). Congress passes the Cooper-Church Amendment prohibiting ground troops in Cambodia.',
-    contestedDebate: 'Did the Cambodian incursion buy precious time for South Vietnamese military buildup, or did it destabilize neutral Cambodia and pave the way for the rise of the Khmer Rouge?',
+    bombs: '1,180,000 tons',
+    event: 'American and South Vietnamese troops invade Cambodia from April to June. Protests spread across campuses, and on May 4 National Guardsmen kill four students at Kent State. Congress passes the Cooper-Church Amendment.',
+    debate: 'Did the invasion buy South Vietnam time to build its army, or did it throw Cambodia into chaos and help the Khmer Rouge rise?',
   },
   1971: {
-    year: 1971,
     usTroops: 156800,
     arvnDeaths: 22700,
     usDeaths: 2414,
-    bombTonnage: '950,000 tons',
-    milestone: 'Operation Lam Son 719: ARVN forces invade Laos along Route 9 to sever the Ho Chi Minh Trail without accompanying U.S. ground advisors. Met by massed North Vietnamese armor and heavy artillery, the retreat degenerates into panic.',
-    contestedDebate: 'Washington claimed Lam Son 719 disrupted enemy supply lines for months; critics and Hanoi cited it as proof that ARVN could not stand alone against North Vietnamese regulars without direct U.S. air and logistical backing.',
+    bombs: '950,000 tons',
+    event: 'In Operation Lam Son 719, South Vietnamese troops cross into Laos along Route 9 to cut the Ho Chi Minh Trail, with no American advisers. North Vietnamese tanks and artillery hit back, and the retreat turns into panic.',
+    debate: 'Washington said the raid slowed enemy supplies for months. Critics, and Hanoi, said it proved South Vietnam’s army could not fight alone.',
   },
   1972: {
-    year: 1972,
     usTroops: 24200,
     arvnDeaths: 39500,
     usDeaths: 759,
-    bombTonnage: '1,120,000 tons',
-    milestone: 'The Easter Offensive: North Vietnam launches a massive conventional 14-division assault with Soviet T-54 tanks. ARVN ground forces mount fierce resistance, heavily supported by Operation Linebacker B-52 strikes and laser-guided munitions.',
-    contestedDebate: 'Did the blunting of the 1972 offensive prove ARVN had become an effective fighting force, or did it demonstrate that South Vietnam remained entirely dependent on massive American airpower to survive?',
+    bombs: '1,120,000 tons',
+    event: 'In the Easter Offensive, North Vietnam invades with 14 divisions and Soviet tanks. South Vietnamese troops fight hard, backed by B-52 strikes and laser-guided bombs.',
+    debate: 'Did stopping the offensive show that South Vietnam’s army had become a real fighting force, or that it could not survive without American air power?',
   },
 };
 
 const YEARS = [1968, 1969, 1970, 1971, 1972];
 
+/** U.S. troops leaving and South Vietnamese losses rising, year by year. */
 export default function VietnamizationTracker() {
-  const [selectedYear, setSelectedYear] = useState<number>(1971);
+  const [year, setYear] = useState(1971);
+  const current = DATA[year];
 
-  const current = TRACKER_DATA[selectedYear];
-
-  // SVG Chart Dimensions
   const width = 600;
   const height = 240;
-  const padding = { top: 30, right: 40, bottom: 40, left: 60 };
-
-  const getX = (year: number) => {
-    const idx = YEARS.indexOf(year);
-    return padding.left + (idx / (YEARS.length - 1)) * (width - padding.left - padding.right);
-  };
-
-  // Scales for US troops (0 to 550k)
-  const getYUsTroops = (val: number) => {
-    return height - padding.bottom - (val / 550000) * (height - padding.top - padding.bottom);
-  };
-
-  // Scales for ARVN KIA (0 to 45k) mapped across height
-  const getYArvnKia = (val: number) => {
-    return height - padding.bottom - (val / 45000) * (height - padding.top - padding.bottom);
-  };
-
-  // Construct SVG paths
-  const usTroopsPath = YEARS.map((y, i) => `${i === 0 ? 'M' : 'L'} ${getX(y)} ${getYUsTroops(TRACKER_DATA[y].usTroops)}`).join(' ');
-  const arvnKiaPath = YEARS.map((y, i) => `${i === 0 ? 'M' : 'L'} ${getX(y)} ${getYArvnKia(TRACKER_DATA[y].arvnDeaths)}`).join(' ');
+  const pad = { top: 30, right: 40, bottom: 40, left: 40 };
+  const x = (y: number) => pad.left + (YEARS.indexOf(y) / (YEARS.length - 1)) * (width - pad.left - pad.right);
+  const yUs = (v: number) => height - pad.bottom - (v / 550000) * (height - pad.top - pad.bottom);
+  const yArvn = (v: number) => height - pad.bottom - (v / 45000) * (height - pad.top - pad.bottom);
+  const usPath = YEARS.map((y, i) => `${i ? 'L' : 'M'} ${x(y)} ${yUs(DATA[y].usTroops)}`).join(' ');
+  const arvnPath = YEARS.map((y, i) => `${i ? 'L' : 'M'} ${x(y)} ${yArvn(DATA[y].arvnDeaths)}`).join(' ');
 
   return (
-    <div className="space-y-6">
-      {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-2 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            1968 to 1972
-          </span>
-        </div>
-        <span className="text-ink-soft text-xs">
-          Tap a point to pick a year
-        </span>
-      </div>
-
-      <div>
-        <h3 className="font-display text-xl font-bold text-ink">
-          As U.S. troops left, the bombing grew
-        </h3>
-        <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-          Between 1968 and 1972, the United States withdrew over 500,000 ground troops to de-escalate domestic political opposition. However, combat intensity did not decline proportionally: ground combat was transferred to the South Vietnamese army, subsidized by massive air bombardment.
+    <div className="space-y-8">
+      <div className="max-w-[62ch]">
+        <h3 className="font-display text-xl font-bold text-ink">As American troops left, South Vietnam’s losses grew</h3>
+        <p className="mt-2 text-base text-ink-muted">
+          From 1968 to 1972, more than 500,000 American troops came home. The fighting did not stop. South Vietnam’s army
+          took it over, backed by American planes. Pick a year.
         </p>
       </div>
 
-      {/* Interactive Multi-Line SVG Trend Chart */}
-      <div className="bg-white border border-rule p-4 rounded-sm">
-        <div className="flex flex-wrap items-center justify-end gap-4 text-xs mb-2">
-          <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-ink rounded-full inline-block" />
-            <span className="text-ink-muted">U.S. Troop Strength (536k 24k)</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="w-3 h-3 bg-brand rounded-full inline-block" />
-            <span className="text-brand-hover font-semibold">ARVN Combat KIA (20k 39k)</span>
-          </div>
+      <div className="rounded-sm bg-surface p-5 sm:p-8">
+        <div role="tablist" aria-label="Year" className="flex flex-wrap gap-2">
+          {YEARS.map((y) => (
+            <button
+              key={y}
+              type="button"
+              role="tab"
+              aria-selected={y === year}
+              onClick={() => setYear(y)}
+              className={`cursor-pointer rounded-sm px-3.5 py-1.5 text-sm font-semibold tabular-nums ${
+                y === year ? 'bg-brand text-white' : 'bg-parchment text-ink hover:bg-brand-tint'
+              }`}
+            >
+              {y}
+            </button>
+          ))}
         </div>
 
-        <div className="w-full overflow-x-auto">
-          <svg viewBox={`0 0 ${width} ${height}`} className="w-full min-w-[500px] select-none">
-            {/* Grid Lines */}
-            {[0, 0.25, 0.5, 0.75, 1].map((pct, i) => {
-              const y = padding.top + pct * (height - padding.top - padding.bottom);
-              return (
-                <line
-                  key={i}
-                  x1={padding.left}
-                  y1={y}
-                  x2={width - padding.right}
-                  y2={y}
-                  stroke="var(--color-terrain)"
-                  strokeWidth="1"
-                  className=""
-                />
-              );
+        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-1 text-sm">
+          <span className="flex items-center gap-2 text-ink-muted">
+            <span className="inline-block h-0.5 w-5 bg-ink-muted" /> American troops in Vietnam
+          </span>
+          <span className="flex items-center gap-2 text-ink-muted">
+            <span className="inline-block h-0.5 w-5 bg-brand" /> South Vietnamese soldiers killed
+          </span>
+        </div>
+
+        <div className="mt-2 overflow-x-auto">
+          <svg viewBox={`0 0 ${width} ${height}`} className="w-full min-w-[480px] select-none" role="img" aria-label="Chart of American troop levels falling and South Vietnamese combat deaths rising from 1968 to 1972">
+            {[0, 0.5, 1].map((p) => {
+              const yy = pad.top + p * (height - pad.top - pad.bottom);
+              return <line key={p} x1={pad.left} y1={yy} x2={width - pad.right} y2={yy} stroke="var(--color-terrain)" strokeWidth="1" />;
             })}
-
-            {/* X-Axis Baseline */}
-            <line
-              x1={padding.left}
-              y1={height - padding.bottom}
-              x2={width - padding.right}
-              y2={height - padding.bottom}
-              stroke="var(--color-ink-soft)"
-              strokeWidth="1.5"
-            />
-
-            {/* X-Axis Year Labels */}
-            {YEARS.map((year) => {
-              const x = getX(year);
-              const isSelected = selectedYear === year;
-              return (
-                <g key={year} className="cursor-pointer" onClick={() => setSelectedYear(year)}>
-                  <line
-                    x1={x}
-                    y1={padding.top}
-                    x2={x}
-                    y2={height - padding.bottom}
-                    stroke={isSelected ? 'var(--color-brand-hover)' : 'none'}
-                    strokeWidth="1"
-                    strokeDasharray="2,2"
-                  />
-                  <text
-                    x={x}
-                    y={height - padding.bottom + 20}
-                    textAnchor="middle"
-                    className={`text-xs ${ isSelected ? 'fill-ink font-bold underline' : 'fill-ink-soft hover:fill-ink' }`}
-                  >
-                    {year}
-                  </text>
-                </g>
-              );
-            })}
-
-            {/* Line 1: U.S. Troop Curve (Steep decline) */}
-            <path d={usTroopsPath} fill="none" stroke="var(--color-ink-muted)" strokeWidth="3" className="" />
-
-            {/* Line 2: ARVN Combat Deaths (Plateau / Surge) */}
-            <path d={arvnKiaPath} fill="none" stroke="var(--color-brand)" strokeWidth="3" />
-
-            {/* Interactive Points along both lines */}
-            {YEARS.map((year) => {
-              const x = getX(year);
-              const yUs = getYUsTroops(TRACKER_DATA[year].usTroops);
-              const yArvn = getYArvnKia(TRACKER_DATA[year].arvnDeaths);
-              const isSelected = selectedYear === year;
-
-              return (
-                <g key={year} className="cursor-pointer" onClick={() => setSelectedYear(year)}>
-                  {/* U.S. Troop Marker */}
-                  <circle
-                    cx={x}
-                    cy={yUs}
-                    r={isSelected ? '6' : '4.5'}
-                    fill="var(--color-ink-muted)"
-                    stroke="var(--color-surface)"
-                    strokeWidth="1.5"
-                    className=""
-                  />
-
-                  {/* ARVN KIA Marker */}
-                  <circle
-                    cx={x}
-                    cy={yArvn}
-                    r={isSelected ? '6' : '4.5'}
-                    fill="var(--color-brand)"
-                    stroke="var(--color-surface)"
-                    strokeWidth="1.5"
-                  />
-
-                  {/* Data Labels if Selected */}
-                  {isSelected && (
-                    <>
-                      <text
-                        x={x}
-                        y={yUs - 10}
-                        textAnchor="middle"
-                        className="text-xs font-bold fill-ink"
-                      >
-                        {TRACKER_DATA[year].usTroops.toLocaleString()} troops
-                      </text>
-                      <text
-                        x={x}
-                        y={yArvn + 16}
-                        textAnchor="middle"
-                        className="text-xs font-bold fill-brand-hover"
-                      >
-                        {TRACKER_DATA[year].arvnDeaths.toLocaleString()} ARVN KIA
-                      </text>
-                    </>
-                  )}
-                </g>
-              );
-            })}
+            {YEARS.map((y) => (
+              <g key={y} className="cursor-pointer" onClick={() => setYear(y)}>
+                {y === year && <line x1={x(y)} y1={pad.top} x2={x(y)} y2={height - pad.bottom} stroke="var(--color-brand-rule)" strokeWidth="2" />}
+                <text x={x(y)} y={height - pad.bottom + 22} textAnchor="middle" className={`text-xs ${y === year ? 'fill-ink font-bold' : 'fill-ink-soft'}`}>
+                  {y}
+                </text>
+              </g>
+            ))}
+            <path d={usPath} fill="none" stroke="var(--color-ink-muted)" strokeWidth="3" />
+            <path d={arvnPath} fill="none" stroke="var(--color-brand)" strokeWidth="3" />
+            {YEARS.map((y) => (
+              <g key={y} className="cursor-pointer" onClick={() => setYear(y)}>
+                <circle cx={x(y)} cy={yUs(DATA[y].usTroops)} r={y === year ? 6 : 4} fill="var(--color-ink-muted)" stroke="var(--color-surface)" strokeWidth="1.5" />
+                <circle cx={x(y)} cy={yArvn(DATA[y].arvnDeaths)} r={y === year ? 6 : 4} fill="var(--color-brand)" stroke="var(--color-surface)" strokeWidth="1.5" />
+              </g>
+            ))}
           </svg>
         </div>
+
+        <dl className="mt-6 grid gap-x-8 gap-y-5 sm:grid-cols-3">
+          <div>
+            <dt className="text-sm text-ink-muted">American troops in {year}</dt>
+            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-ink">{current.usTroops.toLocaleString()}</dd>
+            <dd className="text-sm text-ink-soft">{current.usDeaths.toLocaleString()} Americans killed that year</dd>
+          </div>
+          <div>
+            <dt className="text-sm text-ink-muted">South Vietnamese soldiers killed</dt>
+            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-brand">{current.arvnDeaths.toLocaleString()}</dd>
+            <dd className="text-sm text-ink-soft">South Vietnam’s army now did the ground fighting</dd>
+          </div>
+          <div>
+            <dt className="text-sm text-ink-muted">American bombs dropped</dt>
+            <dd className="mt-1 font-display text-2xl font-extrabold tabular-nums text-ink">{current.bombs}</dd>
+            <dd className="text-sm text-ink-soft">Air power stayed after the troops left</dd>
+          </div>
+        </dl>
       </div>
 
-      {/* Selected Year Data Ledger */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-4 bg-white border border-rule rounded-sm">
-          <div className="text-xs text-ink-soft">
-            U.S. Troop Level ({selectedYear})
-          </div>
-          <div className="font-display text-xl font-bold mt-1 text-ink">
-            {current.usTroops.toLocaleString()}
-          </div>
-          <div className="text-xs text-ink-soft mt-1">
-            U.S. Deaths in {selectedYear}: {current.usDeaths.toLocaleString()}
-          </div>
-        </div>
-
-        <div className="p-4 bg-white border border-rule rounded-sm">
-          <div className="text-xs text-brand font-bold">
-            ARVN Combat KIA ({selectedYear})
-          </div>
-          <div className="font-display text-xl font-bold mt-1 text-brand-hover">
-            {current.arvnDeaths.toLocaleString()}
-          </div>
-          <div className="text-xs text-ink-soft mt-1">
-            South Vietnam took over the ground fighting
-          </div>
-        </div>
-
-        <div className="p-4 bg-white border border-rule rounded-sm">
-          <div className="text-xs text-ink-soft">
-            U.S. bomb tonnage
-          </div>
-          <div className="font-display text-xl font-bold mt-1 text-ink">
-            {current.bombTonnage}
-          </div>
-          <div className="text-xs text-ink-soft mt-1">
-            Planes replaced ground troops
-          </div>
-        </div>
-      </div>
-
-      {/* Selected Year Milestone & Historiographical Debate */}
-      <div className="p-5 bg-white border border-rule rounded-sm space-y-4">
+      <div aria-live="polite" className="grid gap-x-10 gap-y-6 md:grid-cols-2">
         <div>
-          <span className="text-xs text-ink-soft font-bold block mb-1">
-            What happened in {selectedYear}
-          </span>
-          <p className="font-display text-base text-ink leading-relaxed">
-            {current.milestone}
-          </p>
+          <h4 className="font-display text-lg font-bold text-ink">What happened in {year}</h4>
+          <p className="mt-2 text-base text-ink-muted">{current.event}</p>
         </div>
-
-        <div className="pt-3 border-t border-rule">
-          <span className="text-xs text-brand font-bold block mb-1">
-            Historians disagree:
-          </span>
-          <p className="font-display text-sm text-ink-muted leading-relaxed">
-            {current.contestedDebate}
-          </p>
+        <div className="rounded-sm bg-parchment p-5">
+          <h4 className="font-display text-lg font-bold text-ink">What historians argue about</h4>
+          <p className="mt-2 text-base text-ink-muted">{current.debate}</p>
         </div>
       </div>
     </div>

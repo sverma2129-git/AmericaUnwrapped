@@ -2,175 +2,141 @@
 
 import React, { useState } from 'react';
 
+type Layer = 'boundary' | 'refugees' | 'elections';
+
+const LAYERS: { id: Layer; label: string; heading: string }[] = [
+  { id: 'boundary', label: 'The line', heading: 'A temporary truce line becomes a Cold War border' },
+  { id: 'refugees', label: 'The move south', heading: 'Nearly a million northerners, most of them Catholic, go south' },
+  { id: 'elections', label: 'The 1956 vote', heading: 'Why the elections were never held' },
+];
+
+/** The 17th parallel, the move south, and the vote that never happened. */
 export default function GenevaDivisionMap() {
-  const [activeLayer, setActiveLayer] = useState<'boundary' | 'refugees' | 'elections'>('boundary');
+  const [layer, setLayer] = useState<Layer>('boundary');
+  const current = LAYERS.find((l) => l.id === layer)!;
 
   return (
-    <figure className="my-10 border border-rule bg-parchment rounded-sm text-ink">
-      {/* Editorial Header */}
-      <div className="px-5 py-3 border-b border-rule bg-parchment-light flex flex-wrap items-center justify-between gap-2 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            Map of the split
-          </span>
-        </div>
-        <div className="flex items-center gap-1.5">
+    <div className="rounded-sm bg-surface p-5 sm:p-8">
+      <div role="tablist" aria-label="Map layers" className="flex flex-wrap gap-2">
+        {LAYERS.map((l) => (
           <button
+            key={l.id}
             type="button"
-            onClick={() => setActiveLayer('boundary')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-sm ${ activeLayer === 'boundary' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
+            role="tab"
+            aria-selected={layer === l.id}
+            onClick={() => setLayer(l.id)}
+            className={`cursor-pointer rounded-sm px-3.5 py-2 text-sm font-semibold ${
+              layer === l.id ? 'bg-brand text-white' : 'bg-parchment text-ink hover:bg-brand-tint'
+            }`}
           >
-            The 17th Parallel
+            {l.label}
           </button>
-          <button
-            type="button"
-            onClick={() => setActiveLayer('refugees')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-sm ${ activeLayer === 'refugees' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
-          >
-            Operation Passage to Freedom
-          </button>
-          <button
-            type="button"
-            onClick={() => setActiveLayer('elections')}
-            className={`px-2.5 py-1 text-xs transition-colors cursor-pointer border rounded-sm ${ activeLayer === 'elections' ? 'bg-brand text-white border-brand font-bold' : 'bg-paper text-ink-muted border-rule hover:border-brand' }`}
-          >
-            The 1956 elections
-          </button>
-        </div>
+        ))}
       </div>
 
-      <div className="p-5 sm:p-7 space-y-6">
-        <div>
-          <span className="text-xs text-brand font-bold block">
-            {activeLayer === 'boundary'
-              ? 'The temporary military line (Ben Hai River)'
-              : activeLayer === 'refugees'
-              ? 'Operation Passage to Freedom (1954–1955)'
-              : 'Why the split stuck (1956)'}
-          </span>
-          <h3 className="font-display text-xl font-bold text-ink mt-1">
-            {activeLayer === 'boundary'
-              ? 'A temporary truce line became a Cold War border'
-              : activeLayer === 'refugees'
-              ? 'Nearly 1 million northerners, most of them Catholic, go south'
-              : 'Why the elections were never held'}
-          </h3>
-        </div>
+      <h3 className="mt-6 font-display text-xl font-bold text-ink">{current.heading}</h3>
 
-        {/* Print-Cartography SVG Map */}
-        <div className="relative bg-paper border border-rule rounded-sm p-4 aspect-16/9 flex items-center justify-center overflow-hidden">
-          <svg viewBox="0 0 800 450" className="w-full h-full select-none" role="img" aria-label="Cartographic map of partitioned Vietnam">
-            {/* North Vietnam Outline */}
-            <path
-              d="M 280,30 Q 420,40 520,90 Q 460,180 430,220 L 290,220 Q 230,120 280,30 Z"
-              fill="var(--color-terrain)"
-              stroke="var(--color-rule-strong)"
-              strokeWidth="2"
-            />
+      <div className="mt-6 grid gap-x-10 gap-y-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:items-start">
+        <div className="overflow-hidden rounded-sm bg-terrain/40">
+          <svg viewBox="0 0 800 450" className="h-auto w-full select-none" role="img" aria-label="Map of Vietnam divided at the 17th parallel">
+            <path d="M 280,30 Q 420,40 520,90 Q 460,180 430,220 L 290,220 Q 230,120 280,30 Z" fill="var(--color-terrain)" stroke="var(--color-rule-strong)" strokeWidth="2" />
             <text x="360" y="110" className="fill-ink font-display text-sm font-bold">
-              Democratic Republic of Vietnam (North)
+              North Vietnam
             </text>
             <text x="360" y="130" className="fill-ink-soft text-xs">
-              Hanoi &bull; Ho Chi Minh &bull; Land Reform Era
+              Capital: Hanoi. Leader: Ho Chi Minh
             </text>
 
-            {/* South Vietnam Outline */}
-            <path
-              d="M 290,230 L 430,230 Q 480,280 510,350 Q 460,430 320,420 Q 280,340 290,230 Z"
-              fill="var(--color-terrain-line)"
-              stroke="var(--color-rule-strong)"
-              strokeWidth="2"
-            />
+            <path d="M 290,230 L 430,230 Q 480,280 510,350 Q 460,430 320,420 Q 280,340 290,230 Z" fill="var(--color-terrain-line)" stroke="var(--color-rule-strong)" strokeWidth="2" />
             <text x="370" y="330" className="fill-ink font-display text-sm font-bold">
-              State / Republic of Vietnam (South)
+              South Vietnam
             </text>
             <text x="370" y="350" className="fill-ink-soft text-xs">
-              Saigon &bull; Ngo Dinh Diem
+              Capital: Saigon. Leader: Ngo Dinh Diem
             </text>
 
-            {/* The 17th Parallel Demarcation Line */}
-            <line
-              x1="180"
-              y1="225"
-              x2="600"
-              y2="225"
-              stroke="var(--color-brand)"
-              strokeWidth="2.5"
-              strokeDasharray="6,4"
-            />
+            <line x1="180" y1="225" x2="600" y2="225" stroke="var(--color-brand)" strokeWidth="2.5" strokeDasharray="6,4" />
             <text x="400" y="215" textAnchor="middle" className="fill-brand text-xs font-bold">
-              17th Parallel &bull; Ben Hai River DMZ
+              17th parallel, along the Ben Hai River
             </text>
 
-            {/* Dynamic Overlay Elements */}
-            {activeLayer === 'refugees' && (
+            {layer === 'refugees' && (
               <g>
-                <path
-                  d="M 400,140 Q 480,230 430,320"
-                  fill="none"
-                  stroke="var(--color-brand)"
-                  strokeWidth="3"
-                  markerEnd="url(#arrow)"
-                />
+                <path d="M 400,140 Q 480,230 430,320" fill="none" stroke="var(--color-brand)" strokeWidth="3" />
+                <path d="M 422,312 L 430,322 L 438,310" fill="none" stroke="var(--color-brand)" strokeWidth="3" />
                 <text x="490" y="240" className="fill-ink text-xs font-bold">
-                  850,000–1,000,000 Refugees South
+                  850,000 to 1 million people go south
                 </text>
                 <text x="490" y="258" className="fill-ink-muted text-xs">
-                  Assisted by U.S. Navy Task Force 90
+                  Many on U.S. Navy ships
                 </text>
               </g>
             )}
 
-            {activeLayer === 'elections' && (
+            {layer === 'elections' && (
               <g>
-                <rect x="230" y="195" width="340" height="60" fill="var(--color-brand)" rx="4" className="" />
+                <rect x="250" y="195" width="300" height="60" fill="var(--color-brand)" rx="3" />
                 <text x="400" y="230" textAnchor="middle" fill="var(--color-surface)" className="text-xs font-bold">
-                  1956 Elections Cancelled &bull; Division Permanent
+                  No vote in 1956. The split stays.
                 </text>
               </g>
             )}
           </svg>
         </div>
 
-        {/* Narrative Analysis Ledger */}
-        <div className="p-6 bg-paper border border-rule rounded-sm space-y-3 font-sans text-xs sm:text-sm text-ink">
-          {activeLayer === 'boundary' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
+        <div aria-live="polite" className="space-y-3 text-base text-ink-muted">
+          {layer === 'boundary' && (
+            <>
               <p>
-                The 1954 Geneva Declaration stipulated that the military demarcation line at the 17th parallel was strictly provisional and was not to be interpreted as constituting a political or territorial boundary.
+                The 1954 Geneva Declaration called the line at the 17th parallel a temporary military line. It was not
+                supposed to be a political border.
               </p>
               <p>
-                However, neither the United States nor the State of Vietnam signed the final declaration. With French forces evacuating and Washington pledging support to Prime Minister Ngo Dinh Diem, the provisional ceasefire line immediately solidified into a fortified international Cold War boundary.
+                But neither the United States nor the State of Vietnam signed the declaration. As French troops left and
+                Washington backed Ngo Dinh Diem, the ceasefire line hardened into a fortified Cold War border.
               </p>
-            </div>
+            </>
           )}
 
-          {activeLayer === 'refugees' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
+          {layer === 'refugees' && (
+            <>
               <p>
-                Under the Geneva agreement, a 300-day window allowed free movement between zones. Between 850,000 and 1,000,000 northern Vietnamese fled south, most of them Catholics, government workers and anti-communist landowners. Many sailed on U.S. Navy ships in <strong>Operation Passage to Freedom</strong>.
+                For 300 days, people could move between the two zones. Between 850,000 and 1 million northerners went
+                south, most of them Catholics, government workers and landowners who opposed the communists. Many sailed
+                on U.S. Navy ships in Operation Passage to Freedom.
               </p>
               <p>
-                Roughly 90,000–100,000 southern Viet Minh fighters regathered north, though Hanoi secretly left thousands of political cadres behind to form an underground revolutionary network.
+                About 90,000 to 100,000 Viet Minh fighters from the South went north. Hanoi quietly left thousands of
+                party members behind to build an underground network.
               </p>
-            </div>
+            </>
           )}
 
-          {activeLayer === 'elections' && (
-            <div className="space-y-2 text-ink-muted leading-relaxed font-display text-sm sm:text-base">
-              <p className="font-bold text-ink">
-                The permanent partition was not caused by a single decision. It was a structural international failure:
-              </p>
-              <ul className="list-disc list-outside pl-4 space-y-1.5 font-sans text-xs text-ink-muted">
-                <li><strong className="text-ink">No one to enforce it:</strong> The International Control Commission (India, Canada, Poland) lacked legal authority or troops to supervise elections.</li>
-                <li><strong className="text-ink">Diem’s Refusal:</strong> Diem argued South Vietnam had not signed the accords and that free elections were impossible in a communist totalitarian state.</li>
-                <li><strong className="text-ink">Eisenhower’s Assessment:</strong> Eisenhower famously acknowledged that had elections been held, Ho Chi Minh would have won roughly 80% of the nationwide vote due to his prestige as the victor over France.</li>
-                <li><strong className="text-ink">Hanoi was busy at home:</strong> Hanoi was absorbed in a bloody and destabilizing internal land reform campaign, prioritizing northern consolidation over risking military conflict prematurely.</li>
+          {layer === 'elections' && (
+            <>
+              <p className="text-ink">No single decision made the split permanent. Several things worked together.</p>
+              <ul className="list-disc space-y-2 pl-5 marker:text-brand">
+                <li>
+                  <span className="font-semibold text-ink">Nobody could enforce the vote.</span> The International Control
+                  Commission of India, Canada and Poland had no troops and no legal power to run elections.
+                </li>
+                <li>
+                  <span className="font-semibold text-ink">Diem refused.</span> He said South Vietnam had never signed the
+                  accords and that a free vote was impossible in the communist North.
+                </li>
+                <li>
+                  <span className="font-semibold text-ink">Ho would have won.</span> Eisenhower later wrote that Ho Chi Minh
+                  would probably have taken about 80% of the vote.
+                </li>
+                <li>
+                  <span className="font-semibold text-ink">Hanoi was busy at home.</span> Its leaders were caught up in a
+                  violent land reform campaign and put the North first.
+                </li>
               </ul>
-            </div>
+            </>
           )}
         </div>
       </div>
-    </figure>
+    </div>
   );
 }

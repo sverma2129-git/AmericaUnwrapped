@@ -3,79 +3,77 @@ import { HistoriographicalSchool } from '@/types/vietnam';
 export const HISTORIOGRAPHICAL_SCHOOLS: HistoriographicalSchool[] = [
   {
     id: 'orthodox-liberal-realist',
-    name: 'Orthodox / Liberal Realist School',
-    era: '1960s – 1980s (Dominant early paradigm)',
+    name: 'Orthodox school',
+    era: '1960s to 1980s, the first view to take hold',
     coreThesis:
-      'The war was an unavoidable tragedy and an unwinnable quagmire. Blinded by rigid Cold War containment dogma, Washington misread a genuine post-colonial anti-colonial revolution as part of a monolithic Sino-Soviet conspiracy. Because the South Vietnamese government lacked indigenous political legitimacy, no amount of American military power could produce a lasting non-communist state.',
+      'The war was a tragedy that could never have been won. American leaders were blinded by a rigid belief in containing communism and mistook a real revolution against colonial rule for part of a single Soviet and Chinese plot. Because South Vietnam’s government never won its own people’s loyalty, no amount of American military power could build a lasting non-communist state.',
     keyHistorians: ['David Halberstam', 'Arthur Schlesinger Jr.', 'George C. Herring', 'Stanley Karnow', 'Frances FitzGerald'],
     strengths: [
-      'Accurately predicted the failure of military attrition to overcome Vietnamese nationalist resolve.',
-      'Documented the severe political corruption, religious persecution, and structural fragility of the Saigon regimes.',
-      'Highlighted the domestic constitutional, social, and moral costs of fighting an undeclared war.',
+      'Correctly predicted that wearing down the enemy would not break Vietnamese nationalism.',
+      'Documented the corruption, religious persecution and weakness of the governments in Saigon.',
+      'Showed what fighting an undeclared war cost Americans at home, in law, in society and in trust.',
     ],
     blindSpotsOrCritiques: [
-      'Tended to treat Vietnamese actors, North and South, as passive backdrops or virtuous peasants rather than political actors with their own agendas.',
-      'Underestimated the extent to which Hanoi was an ideologically committed, militant Leninist police state rather than purely anti-colonial nationalist.',
-      'Often dismissed the South Vietnamese Republic as merely a puppet, ignoring genuine non-communist nationalist currents.',
+      'Often treated the Vietnamese on both sides as background or as innocent farmers, not as people with their own political goals.',
+      'Underplayed how much Hanoi was a hard-line communist police state, not only a nationalist movement.',
+      'Often waved off South Vietnam as a puppet and ignored the non-communist nationalists who lived there.',
     ],
     primaryEvidenceEmphasized:
-      'The Pentagon Papers; internal CIA intelligence warnings (like the 1966 memo); transcripts of Diem-era dysfunction; public protests and battlefield casualties.',
+      'The Pentagon Papers, internal CIA warnings such as a 1966 memo, records of the dysfunction under Diem, and the protests and casualty lists at home.',
   },
   {
     id: 'revisionist-conservative',
-    name: 'Revisionist / Conservative School',
-    era: 'Late 1970s – 1990s',
+    name: 'Revisionist school',
+    era: 'Late 1970s to 1990s',
     coreThesis:
-      'The war was a noble and just cause to defend a developing ally against totalitarian communist aggression. The war was militarily winnable, but American victory was sabotaged by civilian micromanagement, sanctuary rules in Laos and Cambodia, biased media reporting, and ultimately the abandonment of South Vietnam by Congress when it cut military aid in 1974–1975.',
+      'Defending South Vietnam from communist attack was a noble cause, and the war could have been won. Victory was thrown away by civilian leaders who micromanaged the fighting, rules that kept troops out of enemy bases in Laos and Cambodia, biased news coverage and, in the end, a Congress that cut South Vietnam’s military aid in 1974 and 1975.',
     keyHistorians: ['Harry G. Summers Jr.', 'Guenter Lewy', 'Lewis Sorley', 'Norman Podhoretz', 'Mark Moyar'],
     strengths: [
-      'Demonstrated that the U.S. military never lost a major division-sized tactical battle during the war.',
-      'Highlighted how General Creighton Abrams’ "One War" strategy after 1968 successfully pacified vast areas of the countryside and defeated the 1972 Easter Offensive.',
-      'Detailed the devastating material impact of congressional aid cuts on ARVN operational readiness between 1973 and 1975.',
+      'Showed that the U.S. military never lost a major battle at the scale of a division.',
+      'Argued that General Creighton Abrams’ One War strategy secured much of the countryside after 1968 and helped stop the 1972 Easter Offensive.',
+      'Documented how badly the aid cuts of 1973 to 1975 hurt South Vietnam’s army.',
     ],
     blindSpotsOrCritiques: [
-      'Minimizes the profound political alienation of South Vietnamese society and the endemic corruption of the Thieu military hierarchy.',
-      'Downplays the risk that an invasion of North Vietnam or Laos could have triggered direct Chinese intervention (mirroring Korea in 1950).',
-      'Struggles to explain how an American democracy could sustain an open-ended, indefinite military protectorate in Southeast Asia.',
+      'Plays down how many South Vietnamese had turned against their government, and the corruption at the top of Thieu’s army.',
+      'Plays down the risk that invading North Vietnam or Laos could have brought China into the war, as happened in Korea in 1950.',
+      'Has trouble explaining how a democracy could keep protecting South Vietnam with no end date.',
     ],
     primaryEvidenceEmphasized:
-      'Military records of the 1972 Easter Offensive and Linebacker campaigns; PACV pacification metrics; letters between Nixon and Thieu; congressional aid appropriation cuts.',
+      'Military records of the 1972 Easter Offensive and the Linebacker bombing, pacification statistics, the letters between Nixon and Thieu, and the record of the aid cuts in Congress.',
   },
   {
     id: 'post-revisionist-internationalist',
-    name: 'Post-Revisionist / New Cold War School',
-    era: '2000s – Present',
+    name: 'Post-Revisionist school',
+    era: '2000s to today',
     coreThesis:
-      'Moves beyond the "winnable vs unwinnable" binary by examining newly declassified archives in Vietnam, Russia, China, and Eastern Europe. Views the war as a complex multilateral tragedy where Hanoi, Saigon, Beijing, and Moscow pursued independent agendas and manipulated their superpower sponsors, while Washington was trapped by domestic political calculations and credibility commitments.',
+      'Asking whether the war was winnable misses the point. Using archives opened in Vietnam, Russia, China and Eastern Europe, these historians show Hanoi, Saigon, Beijing and Moscow each pursuing their own goals and playing their big-power backers against each other. Washington, meanwhile, was boxed in by politics at home and by its promises abroad.',
     keyHistorians: ['Fredrik Logevall', 'Lien-Hang T. Nguyen', 'Pierre Asselin', 'Ken Hughes', 'Christian Lentz'],
     strengths: [
-      'Draws on multilingual, multi-archival research rather than relying solely on American executive branch sources.',
-      'Exposes the fierce internal factional battles inside Hanoi’s Politburo (e.g., Le Duan’s purges of moderates like Giap and Ho Chi Minh).',
-      'Restores agency to South Vietnamese civil society, religious groups, and military leadership.',
+      'Uses records in many languages and countries, not just American government files.',
+      'Shows the fierce power struggles inside Hanoi’s Politburo, such as Le Duan’s campaign against moderates allied with Giap.',
+      'Gives South Vietnamese society, its religious groups and its military leaders their own voice.',
     ],
     blindSpotsOrCritiques: [
-      'Deep archival nuance sometimes resists simple, actionable policy takeaways.',
-      'Access to top-level Hanoi Politburo archives remains restricted and selective compared to declassified American records.',
+      'Its detailed picture rarely offers simple lessons for policy.',
+      'Hanoi still keeps its top-level Politburo records closed, so the record is far thinner than the American one.',
     ],
     primaryEvidenceEmphasized:
-      'Wilson Center Cold War International History Project translations; Vietnamese Communist Party plenum resolutions (Res. 15, Res. 9); Soviet and Chinese diplomatic cables; White House tapes.',
+      'Translated documents from the Wilson Center’s Cold War International History Project, Vietnamese Communist Party resolutions such as Resolutions 15 and 9, Soviet and Chinese diplomatic cables, and the White House tapes.',
   },
   {
     id: 'vietnamese-perspectives',
-    name: 'Vietnamese Archival & Diaspora Perspectives',
-    era: '1975 – Present',
+    name: 'Vietnamese voices',
+    era: '1975 to today',
     coreThesis:
-      'Centers the war on the lived experience and political agency of the Vietnamese people themselves. Contrasts Hanoi’s official state orthodoxy ("The Great Patriotic War of National Liberation") against critical scholarship from the Vietnamese diaspora and dissident writers who document the immense human sacrifice, internal police-state repression, and the tragic erasure of South Vietnam’s independent history.',
+      'Puts the Vietnamese people at the center of their own war. It sets Hanoi’s official story, The Great Patriotic War of National Liberation, against writers in the refugee community and dissidents inside Vietnam, who record the huge loss of life, the repression at home and the way South Vietnam’s history was erased.',
     keyHistorians: ['Bao Ninh', 'Duong Thu Huong', 'Lam Quang Thi', 'Nathalie Huynh Chau Nguyen', 'Võ Phiến'],
     strengths: [
-      'Breaks the American-centric frame where Vietnamese people are merely scenery or statistics in someone else’s drama.',
-      'Captures the profound existential grief, psychological trauma, and generational cost of thirty years of total war on both sides of the 17th parallel.',
-      'Preserves the history of the Republic of Vietnam (South Vietnam) and the one million refugees who fled post-1975.',
+      'Breaks out of the American-centered story, where Vietnamese people appear only as scenery or statistics.',
+      'Captures the grief, trauma and lasting cost of thirty years of war on both sides of the 17th parallel.',
+      'Keeps alive the history of South Vietnam and of the refugees who fled after 1975.',
     ],
-    blindSpotsOrCritiques: [
-      'Often intensely polarized between strict Hanoi state orthodoxy and anti-communist diaspora memory.',
-    ],
+    blindSpotsOrCritiques: ['Often split sharply between Hanoi’s official version and the anti-communist memory of the refugee community.'],
     primaryEvidenceEmphasized:
-      'Vietnamese veterans’ memoirs (e.g., Bao Ninh’s "The Sorrow of War"); oral histories of ARVN veterans and "Boat People"; re-education camp testimonies; North Vietnamese provincial casualty registers.',
+      'Memoirs by Vietnamese veterans, such as Bao Ninh’s The Sorrow of War, oral histories of South Vietnamese veterans and boat people, accounts from re-education camps, and North Vietnamese provincial casualty records.',
   },
 ];

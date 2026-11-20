@@ -237,7 +237,7 @@ function QuizRun({ pool, total, showChapter }: { pool: QuizItem[]; total: number
         </div>
 
         {/* Navigation */}
-        <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-rule pt-5">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
           <button
             type="button"
             onClick={() => goTo(index - 1)}
@@ -343,7 +343,7 @@ function QuizSummary({
       {toReread.length > 0 && (
         <div className="mt-10">
           <h4 className="font-display text-lg font-bold text-ink">Chapters to reread</h4>
-          <ul className="mt-3 divide-y divide-rule border-y border-rule">
+          <ul className="mt-3 space-y-2">
             {toReread.map(({ chapter, right, total }) => (
               <li key={chapter.id} className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3">
                 <Link href={`/vietnam/${chapter.id}`} className="font-semibold text-ink underline decoration-rule-strong underline-offset-4 hover:text-brand hover:decoration-brand">
@@ -361,7 +361,7 @@ function QuizSummary({
       {missed.length > 0 && (
         <div className="mt-10">
           <h4 className="font-display text-lg font-bold text-ink">What you missed</h4>
-          <ul className="mt-3 divide-y divide-rule border-y border-rule">
+          <ul className="mt-3 space-y-2">
             {missed.map(({ question: q, chapter }) => (
               <li key={q.id}>
                 <details className="group py-3">

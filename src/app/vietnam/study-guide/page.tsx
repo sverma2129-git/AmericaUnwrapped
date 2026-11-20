@@ -59,7 +59,7 @@ const BIG_IDEAS: { question: string; topics: { label: string; chapterId: string 
 
 function SectionHeader({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
-    <header className="border-t border-ink pt-4">
+    <header>
       <h2 id={`${id}-title`} className="font-display text-2xl font-bold tracking-tight text-ink">
         {title}
       </h2>
@@ -115,9 +115,9 @@ export default function StudyGuidePage() {
               </p>
 
               <h2 className="mt-10 font-display text-lg font-bold text-ink">What the test keeps asking</h2>
-              <ul className="mt-3 grid gap-x-8 sm:grid-cols-2">
+              <ul className="mt-3 grid gap-3 sm:grid-cols-2">
                 {BIG_IDEAS.map((idea) => (
-                  <li key={idea.question} className="border-t border-rule py-3">
+                  <li key={idea.question} className="rounded-sm bg-parchment px-4 py-3">
                     <p className="font-display font-semibold text-ink">{idea.question}</p>
                     <p className="mt-0.5 text-sm text-ink-muted">
                       {idea.topics.map((t, i) => (
@@ -150,7 +150,7 @@ export default function StudyGuidePage() {
         {/* Understand */}
         <section id="presidents" aria-labelledby="presidents-title" className="pt-14 sm:pt-20">
           <SectionHeader id="presidents" title="The presidents">
-            Six presidents owned the war in turn; Truman and Eisenhower are paired here. Pick one to see what each did, the turning point of those years, and the mistake students most often make.
+            Six presidents dealt with Vietnam, and Truman and Eisenhower share a tab here. Pick one to see what he decided and the mistake students make most often about those years.
           </SectionHeader>
           <div className="mt-8">
             <PresidentsExplorer presidencies={PRESIDENCIES} />
@@ -209,7 +209,7 @@ export default function StudyGuidePage() {
           </div>
         </section>
 
-        <footer className="flex flex-wrap items-center justify-between gap-4 border-t border-rule py-8 text-sm">
+        <footer className="flex flex-wrap items-center justify-between gap-4 py-8 text-sm">
           <Link href="/vietnam" className="font-semibold text-ink-muted hover:text-brand">
             Back to the Vietnam War unit
           </Link>

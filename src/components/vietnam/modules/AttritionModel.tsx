@@ -2,182 +2,140 @@
 
 import React, { useState } from 'react';
 
-export default function AttritionModel() {
-  const [usKillRate, setUsKillRate] = useState<number>(12000); // monthly enemy KIA claimed by MACV
-  const [hanoiDraftFlow] = useState<number>(16500); // ~200k/year divided by 12 months = 16,666/mo
-  const [combatInitiationRate, setCombatInitiationRate] = useState<number>(78); // % of firefights initiated by communist forces
+const DRAFT_PER_MONTH = 16500; // about 200,000 young men turned 18 each year in North Vietnam
 
-  // Effective losses accounting for combat initiation & contact breaking
-  const effectiveLosses = Math.round(usKillRate * (combatInitiationRate / 100));
-  const netMonthlyChange = hanoiDraftFlow - effectiveLosses;
+const VIEWS = [
+  {
+    who: 'Westmoreland’s view',
+    text: 'Enough firepower, from artillery to B-52 strikes, would make the war too costly for Hanoi to keep fighting.',
+  },
+  {
+    who: 'The Pentagon analysts’ view',
+    text: 'The enemy chose when and where to fight in most battles, so it could slow down whenever its losses got too high.',
+  },
+  {
+    who: 'Le Duan’s view',
+    text: 'Hanoi accepted losses of ten to one or worse, betting that American voters would tire of the war before North Vietnam ran out of soldiers.',
+  },
+];
+
+/** Westmoreland’s crossover point as a model a student can push on. */
+export default function AttritionModel() {
+  const [claimed, setClaimed] = useState(12000);
+  const [enemyStarted, setEnemyStarted] = useState(78);
+
+  // The more fights the enemy started, the more it could break off and limit its losses.
+  const lost = Math.round(claimed * (enemyStarted / 100));
+  const change = DRAFT_PER_MONTH - lost;
 
   return (
-    <div className="space-y-6">
-      {/* Editorial Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-rule gap-2 text-xs">
-        <div>
-          <span className="font-bold text-ink">
-            The crossover point
-          </span>
-        </div>
-        <span className="text-ink-soft text-xs">
-          Try it yourself
-        </span>
-      </div>
-
-      <div>
-        <h3 className="font-display text-xl font-bold text-ink">
-          Could the U.S. kill enemy soldiers faster than Hanoi replaced them?
-        </h3>
-        <p className="mt-2 font-display text-base text-ink-muted leading-relaxed">
-          General William Westmoreland defined American military victory through reaching the &ldquo;crossover point&rdquo;: the threshold at which allied firepower would kill or incapacitate enemy soldiers faster than North Vietnam and the Viet Cong could replenish them. Adjust the operational parameters below to examine the demographic and tactical assumptions that governed the debate.
+    <div className="space-y-10">
+      <div className="max-w-[62ch]">
+        <h3 className="font-display text-xl font-bold text-ink">Could the U.S. kill soldiers faster than Hanoi could replace them?</h3>
+        <p className="mt-2 text-base text-ink-muted">
+          Westmoreland called the goal the crossover point: the month when enemy losses would outrun new recruits. Move
+          the sliders to test his math.
         </p>
       </div>
 
-      {/* Sliders & Visual Reservoir Chart */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-        {/* Sliders Control Panel */}
-        <div className="md:col-span-6 space-y-6 bg-white p-5 border border-rule rounded-sm">
-          <div>
-            <div className="flex justify-between text-xs mb-2">
-              <span className="text-ink-muted font-bold">
-                Claimed Monthly Enemy Losses (MACV):
-              </span>
-              <span className="font-bold text-ink">
-                {usKillRate.toLocaleString()} / mo
-              </span>
-            </div>
+      <div className="grid gap-x-10 gap-y-8 rounded-sm bg-surface p-5 sm:p-8 md:grid-cols-2">
+        <div className="space-y-8">
+          <label className="block">
+            <span className="flex items-baseline justify-between gap-4 text-sm">
+              <span className="font-semibold text-ink">Enemy deaths the U.S. command claimed each month</span>
+              <span className="shrink-0 font-bold tabular-nums text-ink">{claimed.toLocaleString()}</span>
+            </span>
             <input
               type="range"
               min={4000}
               max={22000}
               step={1000}
-              value={usKillRate}
-              onChange={(e) => setUsKillRate(Number(e.target.value))}
-              className="w-full accent-stone-900 cursor-pointer"
-              aria-label="Claimed monthly enemy losses"
+              value={claimed}
+              onChange={(e) => setClaimed(Number(e.target.value))}
+              className="mt-3 w-full cursor-pointer accent-brand"
             />
-            <div className="flex justify-between text-xs text-ink-soft mt-1">
-              <span>4,000 (Early 1965)</span>
-              <span>12,000 (MACV 1967 Avg)</span>
-              <span>22,000 (Peak Claim)</span>
-            </div>
-          </div>
+            <span className="mt-1 flex justify-between text-xs text-ink-soft">
+              <span>4,000, early 1965</span>
+              <span>12,000, 1967 average</span>
+              <span>22,000, highest claim</span>
+            </span>
+          </label>
 
-          <div>
-            <div className="flex justify-between text-xs mb-2">
-              <span className="text-ink-muted font-bold">
-                Share of firefights the enemy started:
-              </span>
-              <span className="font-bold text-ink">
-                {combatInitiationRate}%
-              </span>
-            </div>
+          <label className="block">
+            <span className="flex items-baseline justify-between gap-4 text-sm">
+              <span className="font-semibold text-ink">Share of firefights the enemy started</span>
+              <span className="shrink-0 font-bold tabular-nums text-ink">{enemyStarted}%</span>
+            </span>
             <input
               type="range"
               min={50}
               max={90}
               step={2}
-              value={combatInitiationRate}
-              onChange={(e) => setCombatInitiationRate(Number(e.target.value))}
-              className="w-full accent-stone-900 cursor-pointer"
-              aria-label="Enemy firefight initiation rate"
+              value={enemyStarted}
+              onChange={(e) => setEnemyStarted(Number(e.target.value))}
+              className="mt-3 w-full cursor-pointer accent-brand"
             />
-            <div className="flex justify-between text-xs text-ink-soft mt-1">
-              <span>50% (Open warfare)</span>
-              <span>78% (Pentagon Systems Study)</span>
-              <span>90% (Strict guerrilla avoidance)</span>
-            </div>
-            <p className="mt-2 font-display text-xs text-ink-soft">
-              Department of Defense Systems Analysis under Alain Enthoven found that communist forces initiated over 75% of firefights, allowing them to disengage and regulate casualty rates when losses mounted.
-            </p>
-          </div>
+            <span className="mt-1 flex justify-between text-xs text-ink-soft">
+              <span>50%</span>
+              <span>78%, Pentagon study</span>
+              <span>90%</span>
+            </span>
+            <span className="mt-3 block text-sm text-ink-muted">
+              Pentagon analysts under Alain Enthoven found that communist forces started more than 75% of firefights. They
+              could break off and limit their losses whenever they chose.
+            </span>
+          </label>
 
-          <div className="pt-4 border-t border-rule text-xs text-ink-muted">
-            <div>Young men reaching draft age in the North: <strong>~200,000/yr (16,500/mo)</strong></div>
-            <div className="text-xs text-ink-soft mt-0.5">Demographic pool reaching age 18 annually in North Vietnam.</div>
-          </div>
+          <p className="text-sm text-ink-muted">
+            Young men turning 18 in North Vietnam each year: about 200,000, or 16,500 a month.
+          </p>
         </div>
 
-        {/* Visual Reservoir Graphic & Calculation Feedback */}
-        <div className="md:col-span-6 space-y-4">
-          <div className="p-5 bg-white border border-rule rounded-sm space-y-4">
-            <span className="text-xs text-ink-soft block">
-              Losses and replacements
-            </span>
-
-            {/* Visual Bar Comparison */}
-            <div className="space-y-3 pt-2">
-              <div>
-                <div className="flex justify-between text-xs mb-1">
-                  <span className="text-ink-muted">New troops Hanoi sends each month:</span>
-                  <span className="font-bold text-ink">16,500 cadres</span>
-                </div>
-                <div className="h-6 w-full bg-parchment rounded-sm overflow-hidden">
-                  <div className="h-full bg-ink-muted" style={{ width: '75%' }} />
-                </div>
-              </div>
-
-              <div>
-                <div className="flex justify-between text-xs mb-1">
-                  <span className="text-ink-muted">Troops lost in combat:</span>
-                  <span className="font-bold text-brand">{effectiveLosses.toLocaleString()} / mo</span>
-                </div>
-                <div className="h-6 w-full bg-parchment rounded-sm overflow-hidden">
-                  <div
-                    className="h-full bg-brand transition-all duration-300"
-                    style={{ width: `${Math.min(100, (effectiveLosses / 22000) * 100)}%` }}
-                  />
-                </div>
-              </div>
+        <div className="space-y-5">
+          <div>
+            <p className="flex justify-between text-sm">
+              <span className="text-ink-muted">New soldiers each month</span>
+              <span className="font-bold tabular-nums text-ink">{DRAFT_PER_MONTH.toLocaleString()}</span>
+            </p>
+            <div className="mt-1.5 h-5 overflow-hidden rounded-sm bg-parchment">
+              <div className="h-full bg-ink-muted" style={{ width: `${(DRAFT_PER_MONTH / 22000) * 100}%` }} />
             </div>
-
-            {/* Resulting Balance Card */}
-            <div className={`p-4 border rounded-sm transition-colors ${ netMonthlyChange > 0 ? 'bg-parchment border-rule' : 'bg-success-tint border-success-rule' }`}>
-              <div className="text-xs font-bold text-ink-soft">
-                Change in enemy troops each month:
-              </div>
-              <div className="font-display text-xl font-bold mt-1 text-ink">
-                {netMonthlyChange > 0 ? `+${netMonthlyChange.toLocaleString()} cadres / mo` : `${netMonthlyChange.toLocaleString()} cadres / mo`}
-              </div>
-              <p className="font-display text-xs text-ink-muted mt-1">
-                {netMonthlyChange > 0
-                  ? 'At these parameters, draft replenishment exceeds effective combat attrition. Communist force strength continues to expand or stabilize.'
-                  : 'At these parameters, attrition exceeds the annual biological replenishment rate, creating a net deficit in regular cadre formations.'}
-              </p>
+          </div>
+          <div>
+            <p className="flex justify-between text-sm">
+              <span className="text-ink-muted">Soldiers lost each month</span>
+              <span className="font-bold tabular-nums text-brand">{lost.toLocaleString()}</span>
+            </p>
+            <div className="mt-1.5 h-5 overflow-hidden rounded-sm bg-parchment">
+              <div className="h-full bg-brand transition-[width] duration-300 motion-reduce:transition-none" style={{ width: `${Math.min(100, (lost / 22000) * 100)}%` }} />
             </div>
+          </div>
+
+          <div aria-live="polite" className={`rounded-sm p-5 ${change > 0 ? 'bg-parchment' : 'bg-success-tint'}`}>
+            <p className="font-display text-xl font-bold text-ink">
+              {change > 0
+                ? `Hanoi’s army grows by ${change.toLocaleString()} a month`
+                : `Hanoi’s army shrinks by ${Math.abs(change).toLocaleString()} a month`}
+            </p>
+            <p className="mt-1 text-sm text-ink-muted">
+              {change > 0
+                ? 'At these numbers, Hanoi replaces its losses and then some. The crossover point never comes.'
+                : 'At these numbers, losses outrun new recruits. This is the crossover point Westmoreland was counting on.'}
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Tripartite Historiographical Ledger */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-        <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
-          <span className="font-bold text-ink-muted block mb-1">
-            1. MACV Attrition Logic (Westmoreland)
-          </span>
-          <p className="font-display text-ink-muted leading-relaxed text-sm">
-            Commanders argued that massive firepower (artillery, B-52 Arc Light strikes, helicopter gunships) would inflict unendurable human costs, eventually forcing Hanoi to calculate that continued military struggle was futile.
-          </p>
-        </div>
-
-        <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
-          <span className="font-bold text-ink-muted block mb-1">
-            2. Pentagon Systems Analysis (Enthoven)
-          </span>
-          <p className="font-display text-ink-muted leading-relaxed text-sm">
-            Civilian analysts in the Defense Department calculated that because the enemy chose when and where to fight in ~78% of contacts, communist commanders could simply throttle back operations to maintain their forces indefinitely.
-          </p>
-        </div>
-
-        <div className="p-4 bg-parchment-light border border-rule rounded-sm text-xs">
-          <span className="font-bold text-ink-muted block mb-1">
-            3. Hanoi’s Strategic Calculation (Le Duan)
-          </span>
-          <p className="font-display text-ink-muted leading-relaxed text-sm">
-            Operating under revolutionary war doctrine (*Chien tranh nhan dan*), Hanoi accepted casualty ratios exceeding 10-to-1, calculating that American democratic public opinion would exhaust its willingness to sustain casualties long before North Vietnam ran out of soldiers.
-          </p>
-        </div>
+      <div>
+        <h4 className="font-display text-lg font-bold text-ink">Three ways to read the numbers</h4>
+        <ul className="mt-4 grid gap-x-10 gap-y-6 md:grid-cols-3">
+          {VIEWS.map((v) => (
+            <li key={v.who}>
+              <p className="font-semibold text-ink">{v.who}</p>
+              <p className="mt-1 text-base text-ink-muted">{v.text}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

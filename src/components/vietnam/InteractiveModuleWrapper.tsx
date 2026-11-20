@@ -4,10 +4,8 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 const ModuleLoading = () => (
-  <div className="p-12 border border-rule bg-parchment text-center rounded-sm">
-    <div className="text-sm text-ink-muted">
-      Loading…
-    </div>
+  <div aria-busy="true" className="flex min-h-[24rem] items-center justify-center rounded-sm bg-surface text-sm text-ink-muted">
+    Loading the interactive…
   </div>
 );
 

@@ -12,17 +12,17 @@ export default function VietnamHubPage() {
   const first = VIETNAM_CHAPTERS[0];
   return (
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
-      <header className="grid gap-x-14 gap-y-6 border-b border-ink pb-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end">
+      <header className="grid gap-x-14 gap-y-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end">
         <div>
           <h1 className="font-display text-2xl font-extrabold tracking-tight text-ink sm:text-3xl">The Vietnam War</h1>
           <p className="mt-4 max-w-[30ch] font-serif text-xl leading-snug text-ink">
-            Thirty years, six American presidents, and a war nobody could end.
+            From Ho Chi Minh’s appeal to Truman in 1945 to the last helicopter out of Saigon in 1975.
           </p>
         </div>
         <div>
           <p className="max-w-[56ch] text-base text-ink-muted">
-            The {CHAPTER_COUNT} chapters run in order, from Ho Chi Minh’s declaration of independence in 1945 to how
-            historians argue about the war today. Each one asks a single question and answers it with the evidence.
+            Read the {CHAPTER_COUNT} chapters in order, or jump to the one your class is on. Each chapter starts with one
+            question and answers it from the record.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
             <Link

@@ -4,21 +4,21 @@ import { ChapterStudyData } from '@/types/study';
 export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
   chapterId: 'kennedy-and-diem',
   bigQuestion:
-    'How did Kennedy’s plan to fight guerrillas fail at Ap Bac, and why did Washington back the coup that killed Ngo Dinh Diem?',
+    'Why did the United States help remove the leader it had backed for nine years?',
   whyItMatters:
-    'The 1963 coup broke South Vietnam’s government. After it, the United States was far more responsible for keeping Saigon standing.',
+    'After the coup, one general after another tried to run South Vietnam. Having helped push Diem out, the United States now had to hold Saigon together itself.',
   whatYouWillLearn: [
-    'How Kennedy raised the number of military advisers from 900 to more than 16,000 under “Flexible Response.”',
+    'How Kennedy raised the number of military advisers from 900 to more than 16,000 under Flexible Response.',
     'What the Strategic Hamlet Program and the 1963 Battle of Ap Bac showed about South Vietnam’s army.',
     'How the Buddhist Crisis and Cable 243 led to Diem’s overthrow, weeks before Kennedy himself was killed.',
   ],
   briefing: {
     summary:
-      'President John F. Kennedy did not want to send large numbers of regular troops. He tried to beat the Viet Cong with “Flexible Response”: Green Berets, helicopters, chemical defoliants such as Agent Orange, and the Strategic Hamlet Program, which moved farmers into fortified villages. In January 1963, at the Battle of Ap Bac, 350 Viet Cong guerrillas beat 1,500 South Vietnamese (ARVN) troops who had American armored vehicles and helicopters. That spring, Diem’s government banned Buddhist flags and crushed protests. The monk Thich Quang Duc burned himself to death in Saigon in protest. The Kennedy administration decided Diem could not lead and sent Cable 243, which signaled support for a coup. On November 1–2, 1963, ARVN generals overthrew and killed Diem and his brother Nhu. A series of unstable military governments followed.',
+      'President John F. Kennedy did not want to send large numbers of regular troops. He tried to beat the Viet Cong with Flexible Response: Green Berets, helicopters, chemical defoliants such as Agent Orange, and the Strategic Hamlet Program, which moved farmers into fortified villages. In January 1963, at the Battle of Ap Bac, 350 Viet Cong guerrillas beat 1,500 South Vietnamese (ARVN) troops who had American armored vehicles and helicopters. That spring, Diem’s government banned Buddhist flags and crushed protests. The monk Thich Quang Duc burned himself to death in Saigon in protest. The Kennedy administration decided Diem could not lead and sent Cable 243, which signaled support for a coup. On November 1–2, 1963, ARVN generals overthrew and killed Diem and his brother Nhu. A series of unstable military governments followed.',
     examTakeaways: [
-      'More advisers: Under Kennedy, American military “advisers” grew from about 900 to more than 16,000, and many took part in combat.',
-      'The Buddhist Crisis: The monk Thich Quang Duc burned himself to death in public. The outrage around the world cost Diem’s government its standing abroad.',
-      'After the coup: Diem was killed on November 2, 1963, three weeks before Kennedy. South Vietnam lost its one steady leader, and the U.S. was tied more closely to its defense.',
+      'Under Kennedy, American military advisers in South Vietnam went from about 900 to more than 16,000. Many of them fought in combat.',
+      'In June 1963 the monk Thich Quang Duc burned himself to death on a Saigon street to protest Diem’s treatment of Buddhists. Photos of it turned world opinion against Diem.',
+      'Generals killed Diem on November 2, 1963. Three weeks later Kennedy was assassinated, and Lyndon Johnson inherited a government in chaos.',
     ],
     keyTerms: [
       {
@@ -26,7 +26,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
         term: 'Flexible Response',
         phonetic: 'FLEK-suh-bul rih-SPONS',
         definition:
-          'Kennedy’s defense policy. It replaced Eisenhower’s nuclear “Massive Retaliation” with more options: counterinsurgency, Special Forces (Green Berets), and regular forces matched to the size of the threat.',
+          'Kennedy’s defense policy. It replaced Eisenhower’s nuclear Massive Retaliation with more options: counterinsurgency, Special Forces (Green Berets), and regular forces matched to the size of the threat.',
         significance:
           'It set the United States up to step into guerrilla wars like Vietnam a little at a time.',
         examTip: 'Exams often contrast it with Eisenhower’s nuclear brinkmanship.',
@@ -57,7 +57,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c3-q1',
       question:
-        'What was the primary military significance of the January 1963 Battle of Ap Bac?',
+        'Why did the Battle of Ap Bac in January 1963 worry American advisers?',
       options: [
         'It was the first battle between U.S. ground troops and North Vietnamese regulars',
         'Viet Cong forces overran Saigon’s outer defenses and ended the hamlet program',
@@ -72,7 +72,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c3-q2',
       question:
-        'What event in June 1963 crystallized global opposition to the Diem regime and prompted President Kennedy to state that “no news picture in history has generated so much emotion around the world”?',
+        'Which event in June 1963 turned much of the world against Diem’s government?',
       options: [
         'The Battle of Ap Bac, filmed by American reporters in the Mekong Delta',
         'Buddhist monk Thich Quang Duc’s self-immolation on a Saigon street',
@@ -87,7 +87,7 @@ export const KENNEDY_DIEM_STUDY_DATA: ChapterStudyData = {
     {
       id: 'c3-q3',
       question:
-        'What immediate political consequence followed the November 1–2, 1963 coup and execution of President Ngo Dinh Diem?',
+        'What happened in South Vietnam right after generals overthrew and killed Diem in November 1963?',
       options: [
         'A civilian government held nationwide elections within six months',
         'The Viet Cong agreed to a cease-fire and joined a coalition government',

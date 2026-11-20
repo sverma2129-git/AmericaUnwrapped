@@ -105,7 +105,7 @@ export default function PresidentsExplorer({ presidencies }: { presidencies: Pre
             <dt className="font-display text-sm font-semibold text-ink">The turning point</dt>
             <dd className="mt-1.5 font-serif text-base leading-relaxed text-ink">{active.turningPoint}</dd>
           </div>
-          <div className="lg:border-l lg:border-brand-rule lg:pl-6">
+          <div className="rounded-sm bg-brand-tint p-4">
             <dt className="font-display text-sm font-semibold text-brand">Mistake to avoid on the test</dt>
             <dd className="mt-1.5 font-serif text-base leading-relaxed text-ink">{active.examPitfall}</dd>
           </div>

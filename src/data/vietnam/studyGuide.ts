@@ -66,7 +66,7 @@ export const PRESIDENCIES: PresidencySummary[] = [
   {
     id: 'nixon',
     name: 'Richard M. Nixon (1969–1974)',
-    doctrine: 'Vietnamization and “Peace with Honor”',
+    doctrine: 'Vietnamization and Peace with Honor',
     keyActions:
       'Pulled out U.S. ground troops while increasing bombing. Secretly bombed Cambodia (Operation Menu), then sent troops in, which set off the protests that led to the Kent State shootings (1970). The Pentagon Papers leaked in 1971.',
     turningPoint:
@@ -227,7 +227,7 @@ export const DBQ_PROMPTS: DbqPrompt[] = [
       'Continuity: the Domino Theory and containment, from Kennedy to Nixon’s promises to Thieu',
     ],
     commonErrors: [
-      'Only listing changes: “to what extent” asks you to weigh change against continuity',
+      'Only listing changes: a prompt that asks to what extent wants you to weigh change against continuity',
       'Ignoring the dates: the prompt starts in 1960, before American combat troops arrived',
       'Describing events without saying what changed because of them',
     ],

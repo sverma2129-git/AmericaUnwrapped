@@ -10,7 +10,7 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
   return (
     <aside
       aria-label={`One person's war: ${story.name}`}
-      className="max-w-3xl border-l-[3px] border-brand pl-6 space-y-5"
+      className="max-w-3xl rounded-sm bg-parchment p-6 sm:p-8 space-y-5"
     >
       <div className="space-y-1">
         <h3 className="font-display text-xl font-bold text-ink">{story.name}</h3>
@@ -33,7 +33,7 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
       )}
 
       {story.afterward && (
-        <p className="pt-4 border-t border-brand-rule text-sm text-ink-muted leading-relaxed">
+        <p className="text-sm text-ink-muted leading-relaxed">
           <strong className="text-ink">Afterward:</strong> {story.afterward}
         </p>
       )}

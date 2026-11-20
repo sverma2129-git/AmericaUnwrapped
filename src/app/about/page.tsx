@@ -15,7 +15,7 @@ const textLink = 'font-medium text-brand underline decoration-brand-rule underli
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="mt-16">
-      <h2 id={`${id}-title`} className="border-t border-ink pt-4 font-display text-2xl font-bold tracking-tight text-ink">
+      <h2 id={`${id}-title`} className="font-display text-2xl font-extrabold tracking-tight text-ink">
         {title}
       </h2>
       <div className="reading mt-5 space-y-5 text-ink">{children}</div>
@@ -84,7 +84,7 @@ export default function AboutPage() {
       </Section>
 
       <section id="image-credits" aria-labelledby="image-credits-title" className="mt-16">
-        <h2 id="image-credits-title" className="border-t border-ink pt-4 font-display text-2xl font-bold tracking-tight text-ink">
+        <h2 id="image-credits-title" className="font-display text-2xl font-extrabold tracking-tight text-ink">
           Where every image comes from
         </h2>
         <p className="mt-3 max-w-[62ch] text-base text-ink-muted">
@@ -111,7 +111,7 @@ export default function AboutPage() {
         </ul>
       </section>
 
-      <div className="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-rule pt-8">
+      <div className="mt-16 flex flex-wrap items-center gap-x-6 gap-y-3">
         <Link href="/vietnam" className="rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-hover">
           Start reading
         </Link>

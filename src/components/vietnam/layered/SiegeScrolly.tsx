@@ -12,9 +12,9 @@ export default function SiegeScrolly({ steps }: { steps: SiegeStep[] }) {
       steps={steps.map((s) => ({ key: s.state, label: s.date, headline: s.headline, body: s.body }))}
       renderFigure={(active) => (
         <>
-          <div className="relative rounded-sm border border-rule overflow-hidden bg-terrain h-[32vh] sm:h-[40vh] lg:h-[60vh]">
+          <div className="relative rounded-sm overflow-hidden bg-terrain h-[32vh] sm:h-[40vh] lg:h-[60vh]">
             <SiegeMap state={steps[active].state} />
-            <span className="absolute top-3 left-3 meta px-2.5 py-1 rounded-sm bg-surface/90 border border-rule text-ink">
+            <span className="absolute top-3 left-3 meta px-2.5 py-1 rounded-sm bg-surface/90 text-ink">
               {steps[active].date}
             </span>
           </div>

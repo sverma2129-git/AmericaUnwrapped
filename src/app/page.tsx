@@ -34,11 +34,12 @@ export default function HomePage() {
             The Vietnam War, 1945–1975
           </h1>
           <p className="mt-5 max-w-[34ch] font-serif text-xl leading-snug text-ink">
-            How the United States got into Vietnam, why it couldn’t get out, and why people still argue about it.
+            In 1945 Ho Chi Minh asked Harry Truman for help. Thirty years later, the last Americans left Saigon by
+            helicopter.
           </p>
           <p className="mt-5 max-w-[52ch] text-base text-ink-muted">
-            Twelve chapters, told through the cables, letters and photographs of the time. Every quotation is checked
-            word for word against the original, and the documents are a click away.
+            Twelve chapters follow the war through the cables and photographs of the time. We check every quotation word
+            for word against the original, and you can open the documents yourself.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             <Link
@@ -69,7 +70,7 @@ export default function HomePage() {
       </div>
 
       <section aria-labelledby="contents-title" className="mt-20 sm:mt-24">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-b border-ink pb-3">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
           <h2 id="contents-title" className="font-display text-xl font-bold text-ink">
             Contents
           </h2>
@@ -103,7 +104,7 @@ export default function HomePage() {
       </section>
 
       <section aria-labelledby="study-title" className="mt-20 sm:mt-24">
-        <div className="border-b border-ink pb-3">
+        <div>
           <h2 id="study-title" className="font-display text-xl font-bold text-ink">
             Studying for a test?
           </h2>

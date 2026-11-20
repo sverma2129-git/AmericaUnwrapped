@@ -8,7 +8,7 @@ const chapter: ChapterData = {
   timeframe: '1964',
   leadImageId: 'tonkin-p4-1964',
   title: 'The Gulf of Tonkin',
-  subtitle: 'Two nights at sea and the vote that followed',
+  subtitle: 'Two nights at sea in August 1964, and the vote in Congress that followed',
   summary:
     'On August 2, 1964, North Vietnamese torpedo boats fought the destroyer USS Maddox in daylight. That clash was real. On August 4, in a storm, U.S. ships reported a second attack. Navy commanders and NSA analysts soon doubted it, but the Johnson administration presented it as a clear attack. Congress passed the Gulf of Tonkin Resolution almost unanimously.',
   isLandmark: true,
@@ -109,7 +109,7 @@ const chapter: ChapterData = {
       {
         id: 'two-nights',
         kicker: 'August 2 vs. August 4',
-        headline: 'Two nights, two different stories',
+        headline: 'The two nights compared',
         body: [
           'Historians agree on what happened on August 2. Using records released decades later, they also agree that the August 4 attack most likely never happened.[^c4-2]',
         ],
@@ -173,7 +173,7 @@ const chapter: ChapterData = {
       {
         id: 'blank-check',
         kicker: '1965–1973',
-        headline: 'A blank check, then a correction',
+        headline: 'Congress hands over its war power, then takes it back',
         body: [
           'The resolution did not declare war, but it worked like one. When Viet Cong forces attacked U.S. barracks at Pleiku in February 1965, Johnson already had the power to escalate. Within weeks, steady bombing began and U.S. combat troops landed.',
           'Years later, Congress tried to take that power back. The War Powers Resolution of 1973 says a president can send troops into combat only after a declaration of war, a specific law, or an attack on the United States.[^Q029] It passed over President Nixon’s veto.',
@@ -382,14 +382,14 @@ const chapter: ChapterData = {
   washington: {
     keyActors: ['Lyndon B. Johnson', 'Robert S. McNamara', 'Dean Rusk', 'Adm. U.S. Grant Sharp Jr.', 'Sen. Wayne Morse'],
     strategicObjective:
-      'Demonstrate American resolve to deter Hanoi, stabilize the Saigon government, and neutralize Barry Goldwater’s charges of administration weakness during the 1964 presidential campaign.',
+      'Show Hanoi that America meant business, steady the Saigon government and answer Barry Goldwater’s charge that Johnson was weak.',
     underlyingAssumptions: [
-      'A targeted display of American airpower would convince Hanoi that the cost of pursuing the southern insurgency was prohibitive.',
-      'Broad congressional war-making authority could be obtained and held in reserve without requiring a formal declaration of war or extended public debate.',
+      'A sharp show of American air power would convince Hanoi that backing the southern guerrillas cost too much.',
+      'Congress could hand the president broad power to use force, to be held in reserve, without a declaration of war or a long debate.',
     ],
     internalDebates: [
-      'McNamara and military commanders relied on selectively summarized SIGINT intercepts that appeared to confirm an attack, dismissing Captain Herrick’s urgent cables urging delay.',
-      'Senators Wayne Morse and Ernest Gruening warned that the resolution was an unconstitutional transfer of war power based on unverified allegations.[^Q022]',
+      'McNamara and the military relied on radio intercepts that seemed to confirm an attack, and set aside Captain Herrick’s cables asking them to wait.',
+      'Senators Wayne Morse and Ernest Gruening warned that the resolution gave away Congress’s war power on the basis of unchecked claims.[^Q022]',
     ],
     homeFrontConstraints: [
       'The 1964 presidential campaign: Johnson campaigned as the prudent candidate against Goldwater, promising not to send “American boys 9 or 10,000 miles away from home to do what Asian boys ought to be doing for themselves.”[^Q028]',
@@ -399,14 +399,14 @@ const chapter: ChapterData = {
   hanoi: {
     keyActors: ['Le Duan', 'Ho Chi Minh', 'General Vo Nguyen Giap', 'Nguyen Chi Thanh'],
     strategicObjective:
-      'Defend coastal territorial waters against OPLAN 34A raids and maintain supply lines to the southern insurgency.',
+      'Defend the coast against the OPLAN 34A raids and keep supplies moving to the guerrillas in the South.',
     underlyingAssumptions: [
-      'U.S. naval intelligence patrols and South Vietnamese commando raids were an indivisible joint operation violating DRV sovereignty.',
-      'Open American military escalation was increasingly probable regardless of North Vietnamese restraint.',
+      'The American spy patrols and the South Vietnamese commando raids were one operation against North Vietnam.',
+      'An open American war was coming whether or not Hanoi held back.',
     ],
     internalDebates: [
-      'Local naval commanders acted aggressively on August 2, believing the Maddox was directly guiding the 34A raiding boats.',
-      'Hanoi confirmed that its naval vessels did not participate in any engagement on the night of August 4.',
+      'On August 2, local naval commanders attacked because they believed the Maddox was guiding the commando boats.',
+      'Hanoi said its boats took part in no fighting on the night of August 4.',
     ],
     homeFrontConstraints: [
       'Constructing extensive civil defense networks, digging sidewalk bomb shelters, and preparing northern infrastructure for sustained American aerial bombardment.',
@@ -415,35 +415,35 @@ const chapter: ChapterData = {
   },
   causalChain: {
     decision: {
-      actor: 'Johnson Administration & U.S. Congress',
-      action: 'Passed the Gulf of Tonkin Resolution based on selectively presented intelligence of a second naval engagement.',
+      actor: 'Lyndon Johnson and Congress',
+      action: 'Congress passed the Gulf of Tonkin Resolution after the administration presented doubtful reports of a second attack as fact.',
       date: 'August 7, 1964',
     },
     assumption: {
-      premise: 'The resolution was a deterrent tool and political insurance policy that would prevent war rather than initiate it.',
-      blindSpot: 'Hanoi interpreted the retaliatory airstrikes not as a deterrent, but as proof that direct American war was inevitable, triggering preemptive escalation.',
+      premise: 'Johnson saw the resolution as a warning to Hanoi and political cover in an election year. He thought it would help prevent a wider war.',
+      blindSpot: 'Hanoi read the American air strikes as proof that a full war was coming, and got ready for one.',
     },
     result: {
-      immediate: 'LBJ won the 1964 presidential election by a historic landslide; the resolution provided legal authority for open-ended military action.',
-      counterAction: 'Hanoi dispatched the first full regular PAVN infantry regiments south down the Ho Chi Minh Trail.',
+      immediate: 'Johnson won the November 1964 election in a landslide, holding open-ended legal authority to use force.',
+      counterAction: 'Hanoi sent its first full regiments of regular troops south on the Ho Chi Minh Trail.',
     },
     unintendedConsequence:
-      'When the Viet Cong attacked American barracks at Pleiku in February 1965, LBJ had a blank check in hand and few diplomatic off-ramps remaining.',
+      'When the Viet Cong attacked the U.S. base at Pleiku in February 1965, Johnson already had the power to escalate and few easy ways to back down.',
     nextDecision:
-      'With the Saigon government near collapse in early 1965, would the U.S. introduce ground combat troops and launch sustained strategic bombing?',
+      'With Saigon’s government close to collapse in early 1965, would Johnson send in ground troops?',
   },
   interactiveModule: {
     id: 'tonkin-reconstruction',
     type: 'tonkin-reconstruction',
     title: 'August 2 and August 4, side by side',
     prompt:
-      'Compare the two nights: why August 2 was a real fight, and how weather, radar errors and selective use of intelligence produced the August 4 reports.',
+      'Put the two nights next to each other. See why August 2 was a real fight, and how bad weather, radar errors and selective use of intelligence produced the reports of August 4.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['tonkin-resolution-1964'], PRIMARY_DOCUMENTS['hanyok-tonkin-nsa']],
   nextQuestion: {
-    question: 'Can you win a war by counting casualties?',
+    question: 'Can you win a war by counting the dead?',
     framing:
-      'General William Westmoreland said the United States would reach a “crossover point,” killing enemy soldiers faster than North Vietnam could replace them. Why did the math not work?',
+      'General William Westmoreland believed the United States could kill North Vietnamese soldiers faster than Hanoi could replace them. He called that moment the crossover point, and it never came.',
   },
   citations: [
     CITATION_REGISTRY['c4-1'],

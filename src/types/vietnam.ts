@@ -296,6 +296,8 @@ export interface StoryBeat {
   body: string[];
   /** Id of a registered image shown with this beat. */
   imageId?: string;
+  /** More registered images, shown after the first. */
+  moreImageIds?: string[];
   visual?: StoryVisual;
   /** Id of a quiz question in this chapter's study data, asked inline after the beat. */
   checkId?: string;
@@ -341,6 +343,8 @@ export interface ChapterData {
   transitionLead?: string;
   whatHappened: {
     narrative: string[];
+    /** A dateline and a short heading for each narrative paragraph, in the same order. */
+    sections?: { date?: string; heading: string }[];
     keyEvents: { date: string; title: string; detail: string }[];
   };
   washington: SidePerspective;

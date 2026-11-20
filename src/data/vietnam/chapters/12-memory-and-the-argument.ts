@@ -8,7 +8,7 @@ const chapter: ChapterData = {
   leadImageId: 'mcnamara-map-1965',
   galleryImageIds: ['memorial-dedication-1982'],
   title: 'How historians argue about the war',
-  subtitle: 'Four ways of explaining Vietnam, and the evidence behind each',
+  subtitle: 'Was the war unwinnable, or lost at home? Four groups of historians answer differently, using different evidence.',
   summary:
     'Fifty years after the war ended, historians and citizens still argue about why it happened, how it was fought, and what it means. There are four main schools of thought: Orthodox, Revisionist, Post-Revisionist, and one built on Vietnamese archives. Learning them shows how the same evidence can be read in different ways, and why no single account of the war is accepted by everyone.',
   whatHappened: {
@@ -17,6 +17,12 @@ const chapter: ChapterData = {
       'The Orthodox school, also called the liberal realist school, includes David Halberstam, Arthur Schlesinger Jr. and George Herring. These historians see the war as a quagmire that could never be won. In their view, American leaders were blinded by a rigid belief in containing communism. They mistook a real nationalist revolution against colonial rule for part of a single Soviet and Chinese plot. Because South Vietnam’s government never won the loyalty of its own people, no amount of American military power could build a lasting non-communist state.',
       'The Revisionist school, also called the conservative school, includes Guenter Lewy, Harry Summers and Lewis Sorley. These historians argue that defending South Vietnam from communist attack was a noble cause, and that the war could have been won. They say General Creighton Abrams’ One War strategy had made the countryside largely secure after 1968. In their view, South Vietnam fell in 1975 because Congress cut aid, the press was biased and the United States walked away, and not because its army was beaten.',
       'In the past twenty years, archives in Vietnam, the former Soviet Union and China have opened. That has produced a Post-Revisionist or international school, including Fredrik Logevall, Lien-Hang Nguyen and Pierre Asselin. These historians move past the question of whether the war was winnable. They treat the Vietnamese on every side as people who made their own choices and played their big-power backers against each other. Their work shows Hanoi under Le Duan as a hard-line government that crushed moderates at home, and it gives South Vietnamese society back its own voice. Vietnamese writers have challenged the official heroic story too, among them the North Vietnamese veterans Bao Ninh, author of *The Sorrow of War*, and Duong Thu Huong. Even the war museum in Ho Chi Minh City has changed its name three times, from *Exhibition House for US and Puppet Crimes* to *War Crimes Museum* to *War Remnants Museum*, as relations with the United States returned to normal in 1995.'
+    ],
+    sections: [
+      { heading: 'Why historians still disagree' },
+      { heading: 'The Orthodox school' },
+      { heading: 'The Revisionist school' },
+      { date: 'Since the 1990s', heading: 'The Post-Revisionist school' },
     ],
     keyEvents: [
       { date: '1972', title: 'Halberstam publishes The Best and the Brightest', detail: 'A founding orthodox book about how smart, confident officials led the country into war.' },
@@ -29,14 +35,14 @@ const chapter: ChapterData = {
   washington: {
     keyActors: ['Historians, Veterans, & Citizens: Realists vs Revisionists vs Internationalists'],
     strategicObjective:
-      'Derive military and foreign policy lessons from the conflict to guide modern national security doctrine.',
+      'Learn from the war in ways that guide how the United States uses force today.',
     underlyingAssumptions: [
-      'Orthodox: Military power cannot substitute for local political legitimacy in counterinsurgency.',
-      'Revisionist: Political restrictions and civilian micromanagement prevented the military from achieving victory.',
+      'Orthodox historians: military power cannot make up for a government its own people will not support.',
+      'Revisionist historians: politicians tied the military’s hands and kept it from winning.',
     ],
     internalDebates: [
-      'Whether Kennedy would have withdrawn had he lived past 1963.',
-      'Whether the “decent interval” was a deliberate Nixon strategy or an ex-post facto critique.',
+      'Would Kennedy have pulled out of Vietnam if he had lived past 1963?',
+      'Did Nixon plan the decent interval on purpose, or is that an idea critics came up with later?',
     ],
     homeFrontConstraints: [
       'The cultural legacy: how the memory of Vietnam shaped American public debates over military interventions in the Persian Gulf, the Balkans, Afghanistan, and Iraq.',
@@ -46,13 +52,13 @@ const chapter: ChapterData = {
   hanoi: {
     keyActors: ['Official State Historians vs Independent Researchers & Diaspora Voices'],
     strategicObjective:
-      'Balance official party triumphalism (“The Great Patriotic Resistance Against American Imperialism”) with archival evidence and diaspora accounts.',
+      'Square the party’s official story of a great patriotic victory with what the archives and the refugees have to say.',
     underlyingAssumptions: [
-      'Official Party History: Victory was the inevitable triumph of Marxism-Leninism and national unity under the Communist Party.',
-      'Archival & Diaspora Scholarship: Explores the immense human sacrifice, internal political repression, and the distinct non-communist identity of South Vietnam.',
+      'The party’s official history calls victory the certain result of Marxism-Leninism and national unity under the Communist Party.',
+      'Scholars working from archives and from refugee accounts stress the huge human cost, repression inside the North and South Vietnam’s separate, non-communist identity.',
     ],
     internalDebates: [
-      'Ongoing official sensitivity regarding controversial episodes: the 1968 Hue civilian massacres, the 1979 Sino-Vietnamese War, and re-education camp conditions.',
+      'Some topics are still sensitive in Vietnam today, among them the killings of civilians at Hue in 1968, the 1979 war with China and conditions in the re-education camps.',
     ],
     homeFrontConstraints: [
       'Generational transition: a youthful population focused on economic development and global integration rather than wartime ideology.',
@@ -61,35 +67,35 @@ const chapter: ChapterData = {
   },
   causalChain: {
     decision: {
-      actor: 'Historians & Readers',
-      action: 'Interrogate historical evidence critically, recognizing multiple perspectives and documented causal chains.',
-      date: 'Present Day',
+      actor: 'Congress and later presidents',
+      action: 'Congress passed the War Powers Act in 1973, and American leaders grew wary of long wars abroad.',
+      date: '1973–1991',
     },
     assumption: {
-      premise: 'History can be reduced to a single moral verdict or partisan talking point.',
-      blindSpot: 'Treating historical actors as heroes or villains obscures the real constraints, assumptions, and unintended consequences that drove decisions.',
+      premise: 'Limits on presidential power and a cautious public would keep the country out of another Vietnam.',
+      blindSpot: 'One war’s lessons do not fit every war, and leaders argued for decades over what Vietnam had taught.',
     },
     result: {
-      immediate: 'Deeper historical understanding: the reader departs thinking, “I understand how this happened,” rather than merely reciting facts.',
-      counterAction: 'Ongoing scholarly debate enriched by newly declassified archival collections worldwide.',
+      immediate: 'For almost twenty years, the United States avoided large ground wars abroad.',
+      counterAction: 'In 1984 Defense Secretary Caspar Weinberger set out conditions for using force, and Colin Powell later built on them.',
     },
     unintendedConsequence:
-      'Understanding how decisions produced consequences on both sides fosters intellectual rigor and historical humility.',
+      'After the 1991 Gulf War, President George H.W. Bush declared that the country had put the Vietnam Syndrome behind it. The argument over Vietnam’s lessons came back with the wars after 9/11.',
     nextDecision:
-      'Explore the primary source documents and interactive evidence modules above.',
+      'Which lesson of Vietnam holds up best, and what evidence would you use to prove it?',
   },
   interactiveModule: {
     id: 'competing-arguments',
     type: 'competing-arguments',
     title: 'Four schools of thought',
     prompt:
-      'Compare what each of the four schools claims, what evidence it relies on, and how other historians have criticized it.',
+      'Compare the four schools: what each one claims, the evidence it leans on and how other historians push back.',
   },
   primaryDocuments: [PRIMARY_DOCUMENTS['ap-casualty-disclosure-1995']],
   nextQuestion: {
-    question: 'How does the story change when both sides get the same scrutiny?',
+    question: 'What would you have decided?',
     framing:
-      'You have followed thirty years of decisions from 1945 to 1975, and what came after. Go back to any turning point on the timeline, or read the original documents again.',
+      'You have followed thirty years of decisions. Pick a turning point, read its documents again and test your answer in the study guide.',
   },
   citations: [
     { id: 'c12-1', marker: 1, citation: 'Halberstam, David. The Best and the Brightest. Random House, 1972.', sourceType: 'academic-monograph' },

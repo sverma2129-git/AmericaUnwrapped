@@ -54,7 +54,7 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
       </div>
 
       {results.length === 0 ? (
-        <div className="mt-6 border-y border-rule py-8">
+        <div className="mt-6 py-4">
           <p className="font-display font-semibold text-ink">No terms match “{query.trim()}”.</p>
           <p className="mt-1 text-ink-muted">
             Check the spelling or try a shorter word{focus !== null ? ', or switch to all 12 chapters' : ''}.
@@ -64,18 +64,10 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
           </button>
         </div>
       ) : (
-        <div className="mt-6 space-y-10">
-          {groups.map(({ chapter, items }) => (
-            <section key={chapter?.id ?? 'results'} aria-label={chapter ? undefined : 'Search results'} aria-labelledby={chapter ? `glossary-ch-${chapter.number}` : undefined}>
-              {chapter ? (
-                <h3 id={`glossary-ch-${chapter.number}`} className="flex items-baseline gap-3 border-b border-ink pb-2">
-                  <span className="text-sm tabular-nums text-ink-muted">Ch. {chapter.number}</span>
-                  <span className="font-display text-lg font-bold text-ink">{chapter.title}</span>
-                </h3>
-              ) : (
-                <div className="border-b border-ink" />
-              )}
-              <dl className="divide-y divide-rule">
+        <div className="mt-6 space-y-2">
+          {groups.map(({ chapter, items }) => {
+            const list = (
+              <dl className="space-y-1">
                 {items.map(({ term, chapter: from }) => (
                   <div key={term.term} className="grid gap-x-8 gap-y-1 py-4 md:grid-cols-[minmax(0,15rem)_minmax(0,1fr)]">
                     <dt className="font-display font-semibold leading-snug text-ink">
@@ -89,7 +81,7 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
                           <span aria-hidden="true" className="transition-transform group-open:rotate-90 motion-reduce:transition-none">›</span>
                           {term.examTip ? 'Why it matters and test tip' : 'Why it matters'}
                         </summary>
-                        <div className="mt-2 max-w-[66ch] space-y-2 border-l-2 border-rule pl-4">
+                        <div className="mt-2 max-w-[66ch] space-y-2 rounded-sm bg-parchment p-4">
                           <p className="font-serif text-base leading-relaxed text-ink-muted">{term.significance}</p>
                           {term.examTip && (
                             <p className="text-sm leading-relaxed text-ink-muted">
@@ -103,8 +95,25 @@ export default function Glossary({ entries }: { entries: GlossaryEntry[] }) {
                   </div>
                 ))}
               </dl>
-            </section>
-          ))}
+            );
+            if (!chapter) {
+              return (
+                <section key="results" aria-label="Search results">
+                  {list}
+                </section>
+              );
+            }
+            return (
+              <details key={chapter.id} open={groups.length === 1} className="group rounded-sm bg-parchment">
+                <summary className="flex cursor-pointer list-none items-baseline gap-3 px-5 py-4 hover:text-brand [&::-webkit-details-marker]:hidden">
+                  <span className="text-sm tabular-nums text-ink-muted">Ch. {chapter.number}</span>
+                  <span className="min-w-0 flex-1 font-display text-lg font-bold text-ink group-hover:text-brand">{chapter.title}</span>
+                  <span className="shrink-0 text-sm text-ink-muted">{items.length} terms</span>
+                </summary>
+                <div className="rounded-b-sm bg-surface px-5 pb-2">{list}</div>
+              </details>
+            );
+          })}
         </div>
       )}
     </div>
