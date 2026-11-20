@@ -1,9 +1,8 @@
-:HL["/AmericaUnwrapped/_next/static/chunks/38w9podmabgyq.css","style"]
-:HL["/AmericaUnwrapped/_next/static/media/7172132ea3483a1a-s.p.1xmps1tcyqv34.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/AmericaUnwrapped/_next/static/media/75334fc536fdfffd-s.p.0l4a8qxfzwpm8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/AmericaUnwrapped/_next/static/media/7a01dec39b324ce3-s.p.2_7gz-nbwppeo.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/AmericaUnwrapped/_next/static/media/7c42b85337e0c4bb-s.p.012bmydply3go.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/AmericaUnwrapped/_next/static/media/7d2dd58e31d7c0b6-s.p.3a10o7es2neby.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/chunks/36iykfriy32t-.css","style"]
+:HL["/AmericaUnwrapped/_next/static/media/53897e768d329f66-s.p.3t6q91iet4nsy.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/61e56fd33ece1ad8-s.p.0op912u62qdhl.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/cf9a11b6772b9533-s.p.1elj1f4z6aq4a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/d8aeca813a9ab546-s.p.18rizl4rsrl42.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"about","h":96,"c":"$Q2"}]]
-0:{"b":"i1M1ZrCKLouLS9kS-fg0n","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"pGj8ZOY_SgMykaghGmrgH","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
