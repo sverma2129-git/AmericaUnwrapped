@@ -5,4 +5,4 @@
 :HL["/AmericaUnwrapped/_next/static/media/d8aeca813a9ab546-s.p.18rizl4rsrl42.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"vietnam-war","h":96,"c":"$Q2"}]]
-0:{"b":"pGj8ZOY_SgMykaghGmrgH","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"ZyQm0TzlF1jst36uBzrIi","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
