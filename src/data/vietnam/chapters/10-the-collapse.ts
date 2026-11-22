@@ -7,7 +7,7 @@ const chapter: ChapterData = {
   number: 10,
   timeframe: '1973–1975',
   leadImageId: 'frequent-wind-1975',
-  galleryImageIds: ['ford-nsc-1975', 'tan-son-nhut-evacuation-1975', 'babylift-ford-1975'],
+  galleryImageIds: ['ford-nsc-1975', 'babylift-ford-1975', 'kissinger-evacuation-1975', 'tan-son-nhut-evacuation-1975', 'hancock-pilots-1975', 'hancock-girl-1975'],
   title: 'The fall of Saigon',
   subtitle: 'In the spring of 1975, North Vietnam’s army took the South in 55 days. On April 30, its tanks rolled through the gates of the Presidential Palace in Saigon.',
   summary:

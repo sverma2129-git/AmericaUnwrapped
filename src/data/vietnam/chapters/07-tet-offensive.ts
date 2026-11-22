@@ -7,7 +7,7 @@ const chapter: ChapterData = {
   number: 7,
   timeframe: '1968',
   leadImageId: 'hue-1968',
-  galleryImageIds: ['embassy-saigon-1968', 'cronkite-hue-1968', 'lbj-march-31-1968'],
+  galleryImageIds: ['embassy-saigon-1968', 'hue-refugees-1968', 'cronkite-hue-1968', 'lbj-march-31-1968'],
   title: 'The Tet Offensive',
   subtitle: 'In January 1968, communist forces attacked more than 100 cities and towns across South Vietnam at once. Americans watched the fighting on the evening news.',
   summary:

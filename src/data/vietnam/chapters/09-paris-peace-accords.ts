@@ -7,7 +7,7 @@ const chapter: ChapterData = {
   number: 9,
   timeframe: '1972–1973',
   leadImageId: 'paris-signing-1973',
-  galleryImageIds: ['b52-linebacker-1972', 'homecoming-1973'],
+  galleryImageIds: ['b52-linebacker-1972', 'paris-accords-text-1973', 'loc-ninh-exchange-1973', 'homecoming-1973', 'hoa-lo-prison-1973', 'nixon-thieu-1973', 'calc-ceasefire-poster-1973'],
   title: 'The Paris Peace Accords',
   subtitle: 'Kissinger negotiated in secret for years. The deal he signed in 1973 brought Americans home and let North Vietnamese troops stay in the South.',
   summary:

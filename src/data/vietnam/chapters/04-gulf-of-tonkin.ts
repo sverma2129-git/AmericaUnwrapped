@@ -145,6 +145,7 @@ const chapter: ChapterData = {
       {
         id: 'resolution',
         imageId: 'lbj-tonkin-signing-1964',
+        moreImageIds: ['tonkin-resolution-1964'],
         kicker: 'August 4–7, 1964',
         headline: 'Washington acts fast',
         body: [

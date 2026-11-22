@@ -7,7 +7,7 @@ const chapter: ChapterData = {
   number: 2,
   timeframe: '1954–1960',
   leadImageId: 'diem-eisenhower-1957',
-  galleryImageIds: ['passage-to-freedom-1954'],
+  galleryImageIds: ['dmz-map-1957', 'passage-to-freedom-1954', 'arvn-commandments-1956'],
   title: 'Geneva splits Vietnam in two',
   subtitle: 'The Geneva deal promised elections in 1956. Ngo Dinh Diem refused to hold them, and the South slid toward civil war.',
   summary:
