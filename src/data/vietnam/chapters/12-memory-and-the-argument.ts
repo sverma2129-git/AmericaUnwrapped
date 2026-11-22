@@ -6,7 +6,7 @@ const chapter: ChapterData = {
   number: 12,
   timeframe: '1975 to today',
   leadImageId: 'mcnamara-map-1965',
-  galleryImageIds: ['memorial-dedication-1982'],
+  galleryImageIds: ['memorial-dedication-1982', 'reagan-wall-1988', 'remembering-vietnam-exhibit-2017'],
   title: 'How historians argue about the war',
   subtitle: 'Was the war unwinnable, or lost at home? Four groups of historians answer differently, using different evidence.',
   summary:

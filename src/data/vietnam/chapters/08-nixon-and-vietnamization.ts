@@ -7,7 +7,7 @@ const chapter: ChapterData = {
   number: 8,
   timeframe: '1969–1972',
   leadImageId: 'nixon-cambodia-1970',
-  galleryImageIds: ['moratorium-vigil-1969', 'midway-1969', 'huey-handover-1970'],
+  galleryImageIds: ['coretta-king-1969', 'midway-1969', 'huey-handover-1970', 'valtman-veterans-1971'],
   title: 'Nixon and Vietnamization',
   subtitle: 'Nixon brought American troops home over four years. Meanwhile he widened the war into Cambodia and Laos.',
   summary:

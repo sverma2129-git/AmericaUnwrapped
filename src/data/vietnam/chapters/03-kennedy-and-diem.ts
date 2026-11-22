@@ -7,6 +7,7 @@ const chapter: ChapterData = {
   number: 3,
   timeframe: '1961–1963',
   leadImageId: 'jfk-laos-1961',
+  galleryImageIds: ['saigon-street-1961', 'madame-nhu-1963', 'pentagon-papers-diem'],
   title: 'Kennedy, Diem and the coup',
   subtitle: 'Kennedy sent 16,000 advisers to save Diem’s government. In November 1963, South Vietnamese generals killed Diem, and Washington knew the coup was coming.',
   summary:

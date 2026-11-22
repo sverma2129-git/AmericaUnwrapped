@@ -6,7 +6,7 @@ const chapter: ChapterData = {
   number: 11,
   timeframe: '1975–1995',
   leadImageId: 'vietnam-memorial-wall',
-  galleryImageIds: ['boat-people-1984', 'camp-pendleton-1975', 'cargo-net-rescue-1979'],
+  galleryImageIds: ['boat-people-1984', 'camp-pendleton-1975', 'indiantown-gap-1975', 'cargo-net-rescue-1979'],
   title: 'After the war',
   subtitle: 'After 1975 came re-education camps, the boat people and new wars. Relations with the United States did not return to normal until 1995.',
   summary:

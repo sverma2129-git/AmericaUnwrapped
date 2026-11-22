@@ -7,7 +7,7 @@ const chapter: ChapterData = {
   number: 5,
   timeframe: '1965–1967',
   leadImageId: 'da-nang-1965',
-  galleryImageIds: ['rolling-thunder-1966', 'lbj-cam-ranh-1966', 'ia-drang-1965', 'pentagon-flower-1967'],
+  galleryImageIds: ['aggression-north-1965', 'rolling-thunder-1966', 'lbj-cam-ranh-1966', 'ia-drang-1965', 'morse-fulbright-1966', 'king-antiwar-1967', 'pentagon-flower-1967'],
   title: 'America takes over the war',
   subtitle: 'In 1965 Lyndon Johnson sent combat troops and started bombing the North. By the end of 1967, about 485,000 Americans were in Vietnam.',
   summary:
