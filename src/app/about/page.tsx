@@ -10,8 +10,6 @@ export const metadata: Metadata = {
     'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
 };
 
-const textLink = 'font-medium text-brand underline decoration-brand-rule underline-offset-4 hover:decoration-brand';
-
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="mt-16">
@@ -62,24 +60,6 @@ export default function AboutPage() {
         <p>
           Washington, Hanoi and Saigon get the same hard look. We judge people by what they knew at the time, not by
           what we know now, and we try not to sort them into heroes and villains.
-        </p>
-      </Section>
-
-      <Section id="making" title="How the site is made">
-        <p>
-          We use AI tools to help build and check the site. They are never a source of history. The facts come from
-          archives and published scholarship, and every quotation is checked against the original.
-        </p>
-        <p>
-          There are no ads, trackers or accounts. Nothing about you is collected, and the pages are plain files, so they
-          load quickly on a school Chromebook.
-        </p>
-        <p>
-          If you find a mistake,{' '}
-          <a href="https://github.com/sverma2129-git/AmericaUnwrapped/issues" className={textLink}>
-            tell us
-          </a>
-          . We’ll check it against the sources, fix it, and note what changed.
         </p>
       </Section>
 
