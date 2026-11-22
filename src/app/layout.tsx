@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono, Newsreader, Plus_Jakarta_Sans } from 'next/font/google';
+import { Instrument_Serif, JetBrains_Mono, Newsreader, Source_Sans_3 } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
@@ -13,7 +13,14 @@ const newsreader = Newsreader({
   axes: ['opsz'],
   display: 'swap',
 });
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-jakarta', display: 'swap' });
+const instrument = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-instrument',
+  display: 'swap',
+});
+const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-source-sans', display: 'swap' });
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 export const metadata: Metadata = {
@@ -31,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full ${newsreader.variable} ${jakarta.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`h-full ${newsreader.variable} ${instrument.variable} ${sourceSans.variable} ${jetbrains.variable}`}>
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased">
         <CitationProvider>
           <a
