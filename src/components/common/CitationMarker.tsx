@@ -32,7 +32,7 @@ export default function CitationMarker({
       }}
       title={hoverTitle}
       aria-label={`Citation [${displayLabel}]: ${hoverTitle}`}
-      className={`inline-flex items-center justify-center font-mono text-xs font-bold text-brand hover:text-brand-hover align-super px-0.5 mx-0.5 rounded-sm transition-colors focus:outline-hidden focus:ring-1 focus:ring-brand cursor-pointer ${className}`}
+      className={`relative after:absolute after:-inset-2 after:content-[''] inline-flex items-center justify-center font-mono text-xs font-bold text-brand hover:text-brand-hover align-super px-0.5 mx-0.5 rounded-sm transition-colors focus:outline-hidden focus:ring-1 focus:ring-brand cursor-pointer ${className}`}
     >
       <span className="hover:underline">
         [{displayLabel}]

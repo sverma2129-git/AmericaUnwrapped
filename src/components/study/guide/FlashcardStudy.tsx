@@ -193,7 +193,7 @@ export default function FlashcardStudy({ entries, showChapter = true }: { entrie
                   className="[grid-area:1/1] flex min-h-[15rem] flex-col justify-center rounded-sm border border-rule-strong bg-surface px-6 py-8 sm:px-10 [backface-visibility:hidden]"
                 >
                   {card.term.imageId && (
-                    <Thumb imageId={card.term.imageId} className="mb-5 h-28 w-40 rounded-sm sm:h-32 sm:w-48" />
+                    <Thumb imageId={card.term.imageId} size="sm" className="mb-5 h-28 w-40 rounded-sm sm:h-32 sm:w-48" />
                   )}
                   <p className="font-display text-xl sm:text-2xl font-bold leading-tight text-navy">{card.term.term}</p>
                   {card.term.phonetic && <p className="mt-2 text-sm text-ink-muted">Say it: {card.term.phonetic}</p>}
