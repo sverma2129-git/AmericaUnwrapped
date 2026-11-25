@@ -114,6 +114,71 @@ export const VIETNAMIZATION_STUDY_DATA: ChapterStudyData = {
       rationale:
         'Nixon announced the move into Cambodia on April 30, 1970. Protests spread across college campuses within days, and on May 4 National Guard troops shot and killed four students at Kent State.',
     },
+    {
+      id: 'c8-q5',
+      question: 'Nixon began bringing American ground troops home. About how many were left in Vietnam by late 1972, down from a peak of 543,000 in 1969?',
+      options: [
+        'About 24,000',
+        'About 124,000',
+        'About 224,000',
+        'About 324,000',
+      ],
+      correctIndex: 0,
+      rationale: 'Under Vietnamization, the number of American ground troops fell from a peak of 543,000 in 1969 to about 24,000 by late 1972. The plan was to hand the fighting to South Vietnam’s army.',
+      citationRef: 'c8-1',
+    },
+    {
+      id: 'c8-q6',
+      question: 'What was kept secret about Operation Menu, which began in March 1969?',
+      options: [
+        'U.S. ground troops fought inside North Vietnam for the first time in the war',
+        'B-52s bombed neutral Cambodia, and Congress was given false records',
+        'The CIA ran a Hmong army of 30,000 fighters in Laos',
+        'South Vietnamese troops were trained in secret camps in Cambodia',
+      ],
+      correctIndex: 1,
+      rationale: 'B-52s secretly carpet-bombed neutral Cambodia, and the raids were hidden from Congress with a second set of records. In April 1970, U.S. and South Vietnamese troops then invaded Cambodia openly.',
+      citationRef: 'c8-1',
+    },
+    {
+      id: 'c8-q7',
+      question: 'After U.S. and South Vietnamese troops invaded Cambodia in April 1970, protests broke out. What happened at Kent State on May 4?',
+      options: [
+        'Students took over the campus and shut down all classes for weeks',
+        'The National Guard arrested hundreds of protesters at the gates',
+        'Congress held a hearing on the campus about the Cambodia invasion',
+        'Ohio National Guardsmen shot and killed four students',
+      ],
+      correctIndex: 3,
+      rationale: 'Ohio National Guardsmen shot and killed four students at Kent State. Ten days later students were shot and killed at Jackson State. Hundreds of colleges closed, and Congress passed the Cooper-Church Amendment.',
+      citationRef: 'c8-1',
+    },
+    {
+      id: 'c8-q8',
+      question: 'What kept South Vietnamese forces in cities like An Loc and Quang Tri during the 1972 Easter Offensive?',
+      options: [
+        'New U.S. ground divisions sent back to Vietnam from Okinawa and Hawaii',
+        'Heavy U.S. air power and the mining of Haiphong harbor',
+        'A Chinese decision to pull out of the fight and recall its advisers',
+        'A peace deal reached with Hanoi before the invasion began',
+      ],
+      correctIndex: 1,
+      rationale: 'South Vietnam held key cities only because of massive American bombing in Operation Linebacker I and the mining of Haiphong harbor. The South’s army could hold with American air power, but not without it.',
+      citationRef: 'c8-2',
+    },
+    {
+      id: 'c8-q9',
+      question: 'What did Nixon announce at this meeting with South Vietnam’s President Thieu on Midway Island in June 1969?',
+      imageId: 'midway-1969',
+      options: [
+        'The first withdrawal of 25,000 U.S. troops',
+        'An invasion of Cambodia by U.S. and South Vietnamese forces',
+        'The end of the draft for the rest of the war',
+        'A peace treaty with North Vietnam signed in Paris',
+      ],
+      correctIndex: 0,
+      rationale: 'At Midway, Nixon announced the first withdrawal of 25,000 American troops. It was the start of Vietnamization.',
+    },
   ],
   flashcards: [
     {

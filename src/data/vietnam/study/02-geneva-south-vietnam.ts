@@ -116,6 +116,71 @@ export const GENEVA_STUDY_DATA: ChapterStudyData = {
       rationale:
         'President Eisenhower welcomed Ngo Dinh Diem to Washington in person in May 1957. The United States had backed Diem’s government in South Vietnam since 1954 as a barrier to communism.',
     },
+    {
+      id: 'c2-q5',
+      question: 'About how many people moved from North to South Vietnam in Operation Passage to Freedom?',
+      imageId: 'passage-to-freedom-1954',
+      options: [
+        'About 90,000',
+        'About 890,000',
+        'About 2 million',
+        'About 8 million',
+      ],
+      correctIndex: 1,
+      rationale: 'With help from U.S. Navy ships, about 890,000 people moved south, most of them Catholics, government workers and families who opposed the communists. About 100,000 Viet Minh fighters went north.',
+    },
+    {
+      id: 'c2-q6',
+      question: 'With American money and advisers, whom did Ngo Dinh Diem defeat to take control in Saigon?',
+      options: [
+        'The Viet Minh army that had crossed into the South after Geneva',
+        'French paratroopers who refused to leave Saigon',
+        'Buddhist monks and student protesters in Saigon and Hue',
+        'The Binh Xuyen crime syndicate and armed religious sects',
+      ],
+      correctIndex: 3,
+      rationale: 'Diem used U.S. support to defeat the Binh Xuyen crime syndicate and the armed religious sects. In 1955 he then held a rigged vote that removed Bao Dai and declared the Republic of Vietnam.',
+      citationRef: 'c2-2',
+    },
+    {
+      id: 'c2-q7',
+      question: 'What did President Eisenhower later write in his memoirs about a fair nationwide election in 1956?',
+      options: [
+        'Ho Chi Minh would have won about 80 percent',
+        'Diem would have won in a landslide',
+        'The vote would have been too close to call',
+        'The Soviet Union would have blocked the vote',
+      ],
+      correctIndex: 0,
+      rationale: 'Eisenhower wrote that Ho Chi Minh would probably have won about 80 percent of the vote. Diem refused to talk with Hanoi about the election, and it was never held.',
+      citationRef: 'c2-1',
+    },
+    {
+      id: 'c2-q8',
+      question: 'In January 1959 Hanoi’s leaders passed Resolution 15. What did it approve?',
+      options: [
+        'A peace treaty with Diem’s government',
+        'Land reform in the South',
+        'Armed struggle in the South',
+        'Chinese troops entering Vietnam',
+      ],
+      correctIndex: 2,
+      rationale: 'Resolution 15 approved armed struggle in the South. Group 559 then began building the Ho Chi Minh Trail, and the National Liberation Front formed in December 1960.',
+      citationRef: 'c2-1',
+    },
+    {
+      id: 'c2-q9',
+      question: 'This CIA map shows the demilitarized zone created by the 1954 Geneva Accords. Which river did the dividing line follow?',
+      imageId: 'dmz-map-1957',
+      options: [
+        'The Mekong River',
+        'The Red River',
+        'The Perfume River',
+        'The Ben Hai River',
+      ],
+      correctIndex: 3,
+      rationale: 'The line ran along the Ben Hai River near the 17th parallel. The Geneva Accords called it temporary, but when the 1956 elections never happened it hardened into a Cold War border.',
+    },
   ],
   flashcards: [
     {

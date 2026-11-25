@@ -100,6 +100,94 @@ export const DIEN_BIEN_PHU_STUDY_DATA: ChapterStudyData = {
         'With the Korean War fresh in mind, Eisenhower refused to act alone. He wanted approval from Congress and British troops alongside. British Prime Minister Churchill said no, and congressional leaders such as Lyndon B. Johnson rejected another land war in Asia.',
       citationRef: 'c1-1',
     },
+    {
+      id: 'c1-q4',
+      question: 'By 1954, about how much of France’s war costs in Indochina was the United States paying?',
+      options: ['About 10 percent', 'About 25 percent', 'About 50 percent', 'About 80 percent'],
+      correctIndex: 3,
+      rationale:
+        'By 1954 the United States was paying roughly 78 to 80 percent of France’s war costs, nearly $2 billion in all. Washington paid most of the bill but had almost no say in how France fought.',
+      citationRef: 'c1-3',
+    },
+    {
+      id: 'c1-q5',
+      question: 'On September 2, 1945, Ho Chi Minh declared Vietnam independent. Which document did he quote in his speech?',
+      options: [
+        'The Magna Carta',
+        'The French Declaration of the Rights of Man',
+        'The American Declaration of Independence',
+        'The Communist Manifesto',
+      ],
+      correctIndex: 2,
+      rationale:
+        'Ho spoke in Hanoi’s Ba Dinh Square and quoted the American Declaration of Independence directly. He was claiming Vietnam’s independence in language Americans would recognize.',
+      citationRef: 'c1-1',
+    },
+    {
+      id: 'c1-q6',
+      question: 'In early 1950 Moscow and Beijing recognized Ho Chi Minh’s government. What did President Truman do?',
+      options: [
+        'He recognized Ho’s government to pull him away from China',
+        'He approved the first direct U.S. military aid for France',
+        'He sent U.S. Marines to Hanoi to help the French',
+        'He cut off aid to France to force it to leave',
+      ],
+      correctIndex: 1,
+      rationale:
+        'After the communist victory in China and the start of the Korean War, Truman saw the Viet Minh as part of a communist push across Asia. He approved the first direct military aid for France in early 1950.',
+      citationRef: 'c1-1',
+    },
+    {
+      id: 'c1-q7',
+      question: 'About how long did the siege of Dien Bien Phu last before the French fortress fell on May 7, 1954?',
+      options: ['55 days', '13 days', 'Six months', 'Two years'],
+      correctIndex: 0,
+      rationale:
+        'The siege ran from March 13 to May 7, 1954, about 55 days. Giap’s guns in the hills wrecked the French airstrips and strongpoints, and the garrison surrendered.',
+      citationRef: 'c1-2',
+    },
+    {
+      id: 'c1-q8',
+      question: 'Which two U.S. leaders wanted carrier air strikes, called Operation Vulture, to save Dien Bien Phu?',
+      options: [
+        'President Eisenhower and Army chief Matthew Ridgway',
+        'Former president Truman and Dean Acheson',
+        'Senator Lyndon Johnson and British leader Winston Churchill',
+        'Secretary of State Dulles and Admiral Radford',
+      ],
+      correctIndex: 3,
+      rationale:
+        'Dulles and Admiral Radford pushed for air strikes. Eisenhower and Ridgway refused to act without Britain and Congress, because both remembered Korea. The strikes never happened.',
+      citationRef: 'c1-1',
+    },
+    {
+      id: 'c1-q9',
+      question: 'This telegram was sent by Ho Chi Minh to President Truman in 1946. What did he ask the United States to do?',
+      imageId: 'ho-telegram-1946',
+      options: [
+        'Send American troops to Hanoi',
+        'Support Vietnamese independence',
+        'Recognize French rule over Indochina',
+        'Join an alliance with the Soviet Union',
+      ],
+      correctIndex: 1,
+      rationale:
+        'Ho asked the United States to support Vietnamese independence. Truman did not reply.',
+    },
+    {
+      id: 'c1-q10',
+      question: 'What was the main problem with how the United States helped France before Dien Bien Phu?',
+      options: [
+        'It sent troops to Indochina but kept them out of the fighting',
+        'It refused to give France any weapons until the war ended',
+        'It paid most of the cost but had almost no say in French strategy',
+        'It secretly helped the Viet Minh as well as France, hoping to hedge its bets',
+      ],
+      correctIndex: 2,
+      rationale:
+        'Washington paid about 80 percent of the cost, yet it had almost no say in how France fought. The United States hoped money would buy a French victory without sending American troops.',
+      citationRef: 'c1-3',
+    },
   ],
   flashcards: [
     {

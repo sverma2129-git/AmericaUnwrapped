@@ -19,7 +19,7 @@ import Glossary from '@/components/study/guide/Glossary';
 export const metadata: Metadata = {
   title: 'Vietnam War study guide',
   description:
-    'Review the Vietnam War unit from 1945 to 1975: the six presidents, the turning points, 70 flashcards, a 44-question practice quiz with explanations, essay outlines and a searchable glossary.',
+    'Review the Vietnam War unit from 1945 to 1975: the six presidents, the turning points, 70 flashcards, a 106-question practice quiz with explanations, essay outlines and a searchable glossary.',
 };
 
 const SECTIONS = [

@@ -143,6 +143,71 @@ export const TONKIN_STUDY_DATA: ChapterStudyData = {
       rationale:
         'Johnson signed the Gulf of Tonkin Resolution on August 10, 1964. He used it as legal authority to begin sustained bombing and send combat troops in 1965, without a declaration of war.',
     },
+    {
+      id: 'c4-q6',
+      question: 'What was OPLAN 34A, begun in early 1964?',
+      options: [
+        'A plan to send U.S. combat troops to guard Saigon and the nearby air bases',
+        'Secret South Vietnamese commando raids along North Vietnam’s coast',
+        'A peace offer to Hanoi passed through the Soviet Union and France',
+        'A plan to bomb the Ho Chi Minh Trail with B-52s from Thailand',
+      ],
+      correctIndex: 1,
+      rationale: 'OPLAN 34A was a set of covert raids on North Vietnamese coastal radar sites and islands, run alongside U.S. Navy intelligence patrols in the Gulf of Tonkin.',
+      citationRef: 'c4-1',
+    },
+    {
+      id: 'c4-q7',
+      question: 'Why did North Vietnamese commanders treat the USS Maddox as part of the raids on August 2, 1964?',
+      options: [
+        'It had earlier fired on a North Vietnamese fishing fleet near the coast',
+        'It was carrying South Vietnamese commandos ashore at night',
+        'South Vietnamese boats had shelled Hon Me Island radar towers',
+        'It was sailing inside North Vietnam’s main harbor at Haiphong',
+      ],
+      correctIndex: 2,
+      rationale: 'On July 31, South Vietnamese patrol boats shelled radar sites on Hon Me Island. Two days later the Maddox was nearby, so Hanoi’s commanders saw it as part of the operation. The Maddox sailed in international waters.',
+      citationRef: 'c4-2',
+    },
+    {
+      id: 'c4-q8',
+      question: 'Which two senators voted against the Gulf of Tonkin Resolution?',
+      options: [
+        'J. William Fulbright and Barry Goldwater',
+        'Mike Mansfield and Richard Russell',
+        'Wayne Morse and Ernest Gruening',
+        'Wayne Morse and Barry Goldwater',
+      ],
+      correctIndex: 2,
+      rationale: 'The vote was 416–0 in the House and 88–2 in the Senate. Wayne Morse and Ernest Gruening were the only two members of Congress to vote no.',
+      citationRef: 'c4-3',
+    },
+    {
+      id: 'c4-q9',
+      question: 'Johnson was running for president in 1964 when the Tonkin incidents happened. Whom was he running against?',
+      options: [
+        'Richard Nixon',
+        'Hubert Humphrey',
+        'Barry Goldwater',
+        'Nelson Rockefeller',
+      ],
+      correctIndex: 2,
+      rationale: 'Johnson faced conservative Barry Goldwater, who called the administration weak on communism. Johnson presented the August 4 incident as an unprovoked attack and ordered air strikes.',
+      citationRef: 'c4-3',
+    },
+    {
+      id: 'c4-q10',
+      question: 'What power did the signed Gulf of Tonkin Resolution give the president?',
+      imageId: 'tonkin-resolution-1964',
+      options: [
+        'To declare war on North Vietnam on his own authority, without asking Congress',
+        'To use armed force in Southeast Asia without a declaration of war',
+        'To draft soldiers without a vote in Congress, for as long as he chose',
+        'To end the war through a treaty with Hanoi and the Soviet Union',
+      ],
+      correctIndex: 1,
+      rationale: 'The resolution let the president use armed force to repel attacks and prevent further aggression, without Congress declaring war. The 1973 War Powers Act was Congress’s later attempt to limit that kind of power.',
+    },
   ],
   flashcards: [
     {
