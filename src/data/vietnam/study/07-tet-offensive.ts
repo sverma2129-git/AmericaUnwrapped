@@ -116,6 +116,71 @@ export const TET_OFFENSIVE_STUDY_DATA: ChapterStudyData = {
       rationale:
         'The Tet Offensive began at the end of January 1968. On March 31, Johnson announced a partial bombing halt and said he would not seek reelection.',
     },
+    {
+      id: 'c7-q5',
+      question: 'What did Washington fear the siege of Khe Sanh in early 1968 could become?',
+      options: [
+        'A site for peace talks with Hanoi',
+        'An American Dien Bien Phu',
+        'A second Ia Drang Valley victory',
+        'The main base for B-52 raids',
+      ],
+      correctIndex: 1,
+      rationale: 'Two North Vietnamese divisions surrounded about 6,000 Marines at Khe Sanh, and Washington feared an American Dien Bien Phu. Westmoreland’s attention stayed fixed on it, and it was partly a diversion before the Tet attacks.',
+      citationRef: 'c7-1',
+    },
+    {
+      id: 'c7-q6',
+      question: 'All the Viet Cong attackers at the U.S. Embassy in Saigon were killed or captured within hours. Why did the attack still shock Americans?',
+      options: [
+        'The ambassador was taken hostage and held for several weeks by the attackers',
+        'The embassy building was burned to the ground',
+        'Live television showed dead Americans on the embassy grounds',
+        'It proved that China had entered the war openly',
+      ],
+      correctIndex: 2,
+      rationale: 'A 19-man Viet Cong commando unit blew a hole in the embassy wall. The fight was over quickly, but live television showed dead Americans on the grounds just after officials had been saying the war was being won.',
+      citationRef: 'c7-2',
+    },
+    {
+      id: 'c7-q7',
+      question: 'As a battle, how did the Tet Offensive turn out for the Viet Cong?',
+      options: [
+        'It lost more than 40,000 experienced fighters',
+        'It took control of Saigon and Hue for good',
+        'It forced the Marines out of Khe Sanh',
+        'It drove South Vietnam’s army out of the cities',
+      ],
+      correctIndex: 0,
+      rationale: 'The mass uprising Hanoi expected never happened, and the Viet Cong lost more than 40,000 experienced fighters. From then on, soldiers drafted in the North did most of the fighting. Tet still changed how Americans saw the war.',
+      citationRef: 'c7-3',
+    },
+    {
+      id: 'c7-q8',
+      question: 'What did CBS anchor Walter Cronkite tell viewers about the war on February 27, 1968?',
+      options: [
+        'That the United States was clearly winning',
+        'That the United States should invade North Vietnam',
+        'That it was stuck in a stalemate',
+        'That all U.S. troops should come home at once',
+      ],
+      correctIndex: 2,
+      rationale: 'Cronkite gave his own view that the war was stuck in a stalemate, and many Americans agreed. Tet shook the public’s belief that the war was being won.',
+      citationRef: 'c7-2',
+    },
+    {
+      id: 'c7-q9',
+      question: 'The military asked for 206,000 more troops after Tet. What did Johnson’s senior civilian advisers, the Wise Men, tell him?',
+      options: [
+        'To send all 206,000 at once',
+        'To scale back',
+        'To ask Congress to declare war',
+        'To invade North Vietnam',
+      ],
+      correctIndex: 1,
+      rationale: 'The Wise Men told Johnson to scale back. On March 31, 1968, he announced a partial halt to the bombing and said he would not run for reelection.',
+      citationRef: 'c7-2',
+    },
   ],
   flashcards: [
     {

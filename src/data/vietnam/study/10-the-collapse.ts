@@ -115,6 +115,71 @@ export const THE_COLLAPSE_STUDY_DATA: ChapterStudyData = {
       rationale:
         'In Operation Frequent Wind, April 29–30, 1975, helicopters carried Americans and South Vietnamese to Navy ships as Saigon fell. Crews pushed helicopters overboard to clear the decks.',
     },
+    {
+      id: 'c10-q5',
+      question: 'What did the Case-Church Amendment, passed in June 1973, ban?',
+      options: [
+        'Sales of American weapons to South Vietnam after 1973',
+        'All U.S. military action in Indochina after August 15, 1973',
+        'U.S. ground troops in Cambodia and Laos, but not air power',
+        'Bombing of North Vietnam north of the 20th parallel by B-52s',
+      ],
+      correctIndex: 1,
+      rationale: 'Congress passed it by margins large enough to override a veto. It banned all U.S. military action in Indochina after August 15, 1973, so Nixon’s private promises of air support to Thieu could no longer be kept.',
+      citationRef: 'c10-1',
+    },
+    {
+      id: 'c10-q6',
+      question: 'Congress cut military aid to South Vietnam from $2.3 billion to less than what?',
+      options: [
+        '$1.5 billion',
+        '$1 billion',
+        '$700 million',
+        '$100 million',
+      ],
+      correctIndex: 2,
+      rationale: 'Aid fell from $2.3 billion to less than $700 million. South Vietnamese units had to ration artillery shells and bullets, and helicopters sat on the ground for lack of spare parts.',
+      citationRef: 'c10-1',
+    },
+    {
+      id: 'c10-q7',
+      question: 'Why did communist forces attack Phuoc Long province in December 1974?',
+      options: [
+        'To capture Saigon before the end of the year',
+        'To seize rice-growing land in the Mekong Delta region',
+        'To open a new route for the refugees of the Column of Tears',
+        'To test whether the United States would bomb again',
+      ],
+      correctIndex: 3,
+      rationale: 'Hanoi wanted to see if the United States would start bombing again. Congress turned down Ford’s requests for emergency aid and no air strikes came, so Hanoi concluded the Americans would not come back.',
+      citationRef: 'c10-2',
+    },
+    {
+      id: 'c10-q8',
+      question: 'What was the Column of Tears?',
+      options: [
+        'The panicked retreat down Route 7B from the Highlands',
+        'A march of Buddhist monks to the Presidential Palace',
+        'The airlift of Vietnamese children to the United States',
+        'The march of North Vietnamese prisoners back to the North',
+      ],
+      correctIndex: 0,
+      rationale: 'After Thieu ordered the army out of the Central Highlands, more than 200,000 soldiers and 400,000 civilians fled down an unpaved road, Route 7B, and were shelled along the way.',
+      citationRef: 'c10-1',
+    },
+    {
+      id: 'c10-q9',
+      question: 'What did the ARVN 18th Division’s stand at Xuan Loc in April 1975 show?',
+      options: [
+        'That the U.S. Air Force was still flying missions',
+        'That some South Vietnamese units fought hard before falling',
+        'That Hanoi could not take any city without help from Chinese troops',
+        'That Thieu had stopped giving orders to the army',
+      ],
+      correctIndex: 1,
+      rationale: 'Under Brigadier General Le Minh Dao, the 18th Division held out from April 9 to 21 and inflicted heavy losses on three North Vietnamese divisions before it was outflanked. It shows that the idea that South Vietnamese troops simply refused to fight is not the whole story.',
+      citationRef: 'c10-1',
+    },
   ],
   flashcards: [
     {

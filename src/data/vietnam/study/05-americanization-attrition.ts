@@ -116,6 +116,71 @@ export const ATTRITION_STUDY_DATA: ChapterStudyData = {
       rationale:
         'By October 1967, with nearly half a million U.S. troops in Vietnam, tens of thousands of demonstrators marched on the Pentagon. Protest grew as the war escalated.',
     },
+    {
+      id: 'c5-q5',
+      question: 'What was the idea behind Operation Rolling Thunder, which began in March 1965?',
+      options: [
+        'Raise the bombing step by step until Hanoi would talk',
+        'Destroy every North Vietnamese city in one week of raids',
+        'Cut the Ho Chi Minh Trail at the Laos border with ground troops',
+        'Prepare the way for an invasion of Hanoi by Marines',
+      ],
+      correctIndex: 0,
+      rationale: 'The idea was graduated pressure: raise the bombing step by step until Hanoi agreed to talk, without pulling China or the Soviet Union into the war. The campaign lasted about three years.',
+      citationRef: 'c5-2',
+    },
+    {
+      id: 'c5-q6',
+      question: 'Why was the March 8, 1965, landing of Marines at Da Nang a turning point?',
+      options: [
+        'They were the first U.S. military advisers sent to Saigon',
+        'They arrived to guard the U.S. embassy and nothing more',
+        'They were the first U.S. ground combat troops in Vietnam',
+        'They were South Korean troops paid for by the United States',
+      ],
+      correctIndex: 2,
+      rationale: 'About 3,500 Marines landed at Da Nang. They were the first American ground combat troops, and the U.S. role changed from advising to fighting.',
+      citationRef: 'c5-2',
+    },
+    {
+      id: 'c5-q7',
+      question: 'What did President Johnson announce on July 28, 1965?',
+      options: [
+        'He asked Congress to declare war on North Vietnam that week',
+        'He sent 125,000 more troops and doubled the monthly draft',
+        'He stopped the bombing to open peace talks in Geneva',
+        'He ordered all U.S. troops home by the end of 1966',
+      ],
+      correctIndex: 1,
+      rationale: 'Johnson committed 125,000 troops and doubled the monthly draft, without declaring a national emergency. The war grew quickly, but he did not ask Congress for a declaration of war.',
+      citationRef: 'c5-2',
+    },
+    {
+      id: 'c5-q8',
+      question: 'By the mid-1960s, who made the big decisions in Hanoi?',
+      options: [
+        'Ho Chi Minh, the president',
+        'General Vo Nguyen Giap',
+        'Prime Minister Pham Van Dong',
+        'First Secretary Le Duan',
+      ],
+      correctIndex: 3,
+      rationale: 'Ho Chi Minh’s role was mostly ceremonial by then. Le Duan wanted big offensives, while Giap and others wanted a slow guerrilla war. Le Duan won by arresting hundreds of moderates in what became known as the Anti-Party Affair.',
+      citationRef: 'c5-1',
+    },
+    {
+      id: 'c5-q9',
+      question: 'This 1965 U.S. government poster says nearly 37,000 trained Viet Cong had slipped into South Vietnam since 1959. What was it trying to show?',
+      imageId: 'aggression-north-1965',
+      options: [
+        'That the Viet Cong were losing the war',
+        'That the South Vietnamese army had won a major battle',
+        'That North Vietnam was invading the South',
+        'That China was about to send troops',
+      ],
+      correctIndex: 2,
+      rationale: 'The poster, called Aggression from the North, was meant to make the case that North Vietnam was invading South Vietnam. It was a government message made to persuade people, so it states a claim that historians weigh against other evidence.',
+    },
   ],
   flashcards: [
     {

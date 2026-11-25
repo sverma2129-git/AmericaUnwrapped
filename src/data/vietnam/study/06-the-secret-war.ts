@@ -114,6 +114,71 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       rationale:
         'Operation Ranch Hand sprayed herbicides over South Vietnam from 1962 to 1971 to remove the forest cover that hid enemy forces and to destroy crops that fed them.',
     },
+    {
+      id: 'c6-q5',
+      question: 'Testimony in Congress showed how most of the people counted as killed by the Phoenix Program actually died?',
+      options: [
+        'In regular military operations and artillery fire',
+        'In secret prisons run by the CIA and its allies',
+        'In Viet Cong ambushes on Phoenix teams',
+        'During targeted police arrests carried out at night',
+      ],
+      correctIndex: 0,
+      rationale: 'About 87 percent of those killed died in regular military operations and artillery fire, not in targeted police actions. Monthly quotas led officials to pad their reports with ordinary combat deaths.',
+      citationRef: 'c6-3',
+    },
+    {
+      id: 'c6-q6',
+      question: 'Agent Orange, sprayed in Operation Ranch Hand, was contaminated with what?',
+      options: [
+        'Radioactive waste from American nuclear tests in the Pacific',
+        'A nerve agent also used in bombs and artillery shells',
+        'A dioxin that causes cancer and lingers in the soil',
+        'Napalm left over from earlier burning missions',
+      ],
+      correctIndex: 2,
+      rationale: 'Agent Orange was contaminated with a dioxin called 2,3,7,8-TCDD. About 11 million gallons were sprayed, and the harm lasted for decades, with higher rates of cancer and birth defects among Vietnamese civilians and American veterans.',
+      citationRef: 'c6-2',
+    },
+    {
+      id: 'c6-q7',
+      question: 'What did CORDS, set up under Robert Komer in May 1967, do?',
+      options: [
+        'Moved farmers into fortified villages across the countryside',
+        'Began spraying plant-killing chemicals over South Vietnamese crops',
+        'Trained and paid Hmong fighters in the mountains of Laos',
+        'Merged civilian and military pacification work under MACV',
+      ],
+      correctIndex: 3,
+      rationale: 'CORDS brought the civilian and military pacification efforts together under MACV. The Phoenix Program, which went after the Viet Cong’s hidden network, was run through it.',
+      citationRef: 'c6-3',
+    },
+    {
+      id: 'c6-q8',
+      question: 'Who led the army of about 30,000 Hmong fighters that the CIA organized in Laos?',
+      options: [
+        'Nguyen Van Thieu',
+        'General Vang Pao',
+        'Le Duan',
+        'William Colby',
+      ],
+      correctIndex: 1,
+      rationale: 'General Vang Pao led the Hmong army, which the CIA organized to cut the Ho Chi Minh Trail. With Air America planes and secret B-52 raids, Laos became the most heavily bombed country per person in history.',
+      citationRef: 'c6-1',
+    },
+    {
+      id: 'c6-q9',
+      question: 'This CIA map of South Vietnam uses figures from the Hamlet Evaluation System. What did U.S. officials use that system for?',
+      imageId: 'hamlet-population-map-1972',
+      options: [
+        'To count enemy soldiers killed each month',
+        'To track the number of U.S. troops',
+        'To rate how secure each village was',
+        'To plan bombing runs in Laos',
+      ],
+      correctIndex: 2,
+      rationale: 'The Hamlet Evaluation System was how U.S. officials rated how secure each village was. Its ratings, like body counts, were used to show progress in the war, and historians debate how reliable they were.',
+    },
   ],
   flashcards: [
     {
