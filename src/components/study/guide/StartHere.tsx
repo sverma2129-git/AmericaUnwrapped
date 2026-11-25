@@ -18,9 +18,9 @@ interface Counts {
 export default function StartHere({ counts }: { counts: Counts }) {
   const rows: { need: string; what: string; href?: string; action?: () => void }[] = [
     {
-      need: 'Learn the whole war',
-      what: `The presidents, then ${counts.turningPoints} turning points in order`,
-      href: '#presidents',
+      need: 'Practice for the test',
+      what: `${counts.questions} questions with explanations. Each shows the chapter to reread if you miss it.`,
+      href: '#quiz',
     },
     {
       need: 'Review one topic for a test',
@@ -37,9 +37,14 @@ export default function StartHere({ counts }: { counts: Counts }) {
     },
     { need: 'Memorize the vocabulary', what: `${counts.terms} flashcards you can shuffle and sort`, href: '#flashcards' },
     {
-      need: 'Practice for the test',
-      what: `${counts.questions} questions with explanations, and ${counts.essays} essay prompts`,
-      href: '#quiz',
+      need: 'Learn the whole war',
+      what: `The presidents, then ${counts.turningPoints} turning points in order`,
+      href: '#presidents',
+    },
+    {
+      need: 'Write an essay (AP classes)',
+      what: `${counts.essays} practice prompts with sample outlines`,
+      href: '#essays',
     },
     { need: 'Look something up', what: 'Search every term in the unit', href: '#glossary' },
   ];

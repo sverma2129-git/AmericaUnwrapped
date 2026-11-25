@@ -113,6 +113,10 @@ export default function StudyGuidePage() {
                 Built for U.S. History and AP U.S. History (Period 8). Everything here comes from the {counts.chapters}{' '}
                 chapters, so any answer can be traced back to where it is taught.
               </p>
+              <p className="mt-3 max-w-[60ch] text-ink-muted">
+                In a regular class? The quiz, flashcards and timeline are for you. The essay section is for AP classes,
+                so you can skip it.
+              </p>
 
               <h2 className="mt-10 font-display text-lg font-bold text-navy">What the test keeps asking</h2>
               <ul className="mt-3 grid gap-3 sm:grid-cols-2">
@@ -182,7 +186,9 @@ export default function StudyGuidePage() {
           <div className="-mx-4 sm:mx-0 bg-parchment px-4 py-10 sm:rounded-sm sm:px-10 sm:py-12">
             <SectionHeader id="quiz" title="Practice quiz">
               {counts.questions} multiple-choice questions, each with an explanation after you answer. {sourceBased} are
-              source-based, like the AP exam: you read a photo or document first.
+              source-based, like the AP exam: you read a photo or document first. Every question names its chapter, and
+              the results list which chapters to reread. Your teacher writes your test, so pick the chapters your class
+              covered and use these to check what you know.
             </SectionHeader>
             <div className="mt-8">
               <PracticeQuiz items={quizItems} />
@@ -192,7 +198,7 @@ export default function StudyGuidePage() {
 
         <section id="essays" aria-labelledby="essays-title" className="pt-16 sm:pt-24">
           <SectionHeader id="essays" title="Essay practice">
-            For AP U.S. History. Three practice prompts with sample outlines, and the Vietnam questions from past AP exams.
+            For AP U.S. History classes. Three practice prompts with sample outlines, and the Vietnam questions from past AP exams. Not writing essays? Skip to the glossary.
           </SectionHeader>
           <div className="mt-8">
             <DbqOutlines />

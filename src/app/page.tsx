@@ -64,20 +64,25 @@ export default function HomePage() {
             helicopter.
           </p>
           <p className="mt-5 max-w-[52ch] text-base text-ink-muted">
-            Twelve chapters follow the war through the cables and photographs of the time. We check every quotation word
-            for word against the original, and you can open the documents yourself.
+            Have a test coming up? Start with the study guide: {quizCount} practice questions, {termCount} flashcards and
+            a timeline. Want the whole story? Twelve chapters follow the war through the cables and photographs of the
+            time.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             <Link
-              href={`/vietnam/${firstChapter.id}`}
+              href="/vietnam/study-guide"
               className="rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-hover"
             >
-              Start with Chapter 1
+              Study for your test
             </Link>
-            <Link href="/vietnam/study-guide" className={`${textLink} text-sm`}>
-              Go to the study guide
+            <Link href={`/vietnam/${firstChapter.id}`} className={`${textLink} text-sm`}>
+              Read the story from Chapter 1
             </Link>
           </div>
+          <p className="mt-6 max-w-[52ch] text-sm text-ink-muted">
+            Free, with no account. We check every quotation word for word against the
+            original, and every image links to its archive record.
+          </p>
         </section>
 
         {featured?.featuredDocument && (
@@ -95,25 +100,14 @@ export default function HomePage() {
         )}
       </div>
 
-      <section aria-labelledby="contents-title" className="mt-20 sm:mt-24">
-        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
-          <h2 id="contents-title" className="font-display text-2xl font-bold text-navy">
-            The story in four parts
-          </h2>
-          <Link href="/vietnam" className={`${textLink} text-sm`}>
-            All chapters, with their questions
-          </Link>
-        </div>
-        <div className="mt-6">
-          <ContentsGrid />
-        </div>
-      </section>
-
-      <section aria-labelledby="study-title" className="mt-20 rounded-sm bg-parchment px-5 py-10 sm:mt-24 sm:px-10 sm:py-12">
+      <section aria-labelledby="study-title" className="mt-16 rounded-sm bg-parchment px-5 py-10 sm:mt-20 sm:px-10 sm:py-12">
         <h2 id="study-title" className="font-display text-2xl font-bold text-navy">
           Studying for a test?
         </h2>
-        <p className="mt-2 max-w-[56ch] text-base text-ink-muted">Everything in the study guide comes from the twelve chapters.</p>
+        <p className="mt-2 max-w-[56ch] text-base text-ink-muted">
+          Start here. Everything in the study guide comes from the twelve chapters, and each question shows which chapter
+          to reread if you miss it. Your teacher writes your test, so use these to check what you know.
+        </p>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {studyTools.map((tool) => (
             <li key={tool.title}>
@@ -131,6 +125,20 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section aria-labelledby="contents-title" className="mt-20 sm:mt-24">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+          <h2 id="contents-title" className="font-display text-2xl font-bold text-navy">
+            The story in four parts
+          </h2>
+          <Link href="/vietnam" className={`${textLink} text-sm`}>
+            All chapters, with their questions
+          </Link>
+        </div>
+        <div className="mt-6">
+          <ContentsGrid />
+        </div>
       </section>
     </div>
   );

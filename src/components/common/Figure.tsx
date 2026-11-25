@@ -9,17 +9,34 @@ export function imageSrc(file: string): string {
   return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/vietnam/${file}`;
 }
 
+/** Path to a small copy of a registered image (public/images/thumbs/{sm,md}/name.jpg). */
+export function thumbSrc(file: string, size: 'sm' | 'md'): string {
+  const stem = file.replace(/\.[^.]+$/, '');
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/images/thumbs/${size}/${stem}.jpg`;
+}
+
 /**
  * A registered image without its caption, cropped to fill its box. Used on
  * cards and lists; every image is credited in full on the About page.
  */
-export function Thumb({ imageId, className = '', priority = false }: { imageId: string; className?: string; priority?: boolean }) {
+export function Thumb({
+  imageId,
+  className = '',
+  priority = false,
+  size = 'md',
+}: {
+  imageId: string;
+  className?: string;
+  priority?: boolean;
+  /** 'sm' (320px) for tiny list pictures, 'md' (800px) for cards. Full photos load only in Figure. */
+  size?: 'sm' | 'md';
+}) {
   const image = IMAGE_REGISTRY[imageId];
   if (!image) return null;
   return (
     // eslint-disable-next-line @next/next/no-img-element -- static export: files are served as-is from /public
     <img
-      src={imageSrc(image.file)}
+      src={thumbSrc(image.file, size)}
       width={image.width}
       height={image.height}
       alt={image.alt}

@@ -75,7 +75,7 @@ export default function AboutPage() {
         <ul className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2">
           {images.map((image) => (
             <li key={image.id} className="flex gap-4">
-              <Thumb imageId={image.id} className="h-24 w-24 shrink-0 rounded-sm" />
+              <Thumb imageId={image.id} size="sm" className="h-24 w-24 shrink-0 rounded-sm" />
               <div className="text-sm leading-relaxed text-ink-muted">
                 <p className="leading-snug text-ink">{image.caption}</p>
                 <p className="mt-1">
