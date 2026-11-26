@@ -5,6 +5,7 @@ import { VIETNAM_CHAPTERS, getAdjacentChapters, getChapter } from '@/data/vietna
 import ChapterNavBar from '@/components/vietnam/ChapterNavBar';
 import ChapterContent from '@/components/vietnam/ChapterContent';
 import LayeredChapter from '@/components/vietnam/layered/LayeredChapter';
+import { socialMeta } from '@/lib/social';
 
 interface ChapterPageProps {
   params: Promise<{ slug: string }>;
@@ -26,9 +27,11 @@ export async function generateMetadata({ params }: ChapterPageProps): Promise<Me
     };
   }
 
+  const title = `Chapter ${chapter.number}: ${chapter.title}`;
   return {
-    title: `Chapter ${chapter.number}: ${chapter.title}`,
+    title,
     description: chapter.summary,
+    ...socialMeta(title, chapter.subtitle, chapter.id),
   };
 }
 

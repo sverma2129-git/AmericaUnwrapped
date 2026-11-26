@@ -81,7 +81,7 @@ const chapter: ChapterData = {
       'Afterward, field commanders were blamed for the unrealistic plan, the heavy losses and the uprising that never came.',
     ],
     homeFrontConstraints: [
-      'Decimation of indigenous southern Viet Cong networks, forcing Hanoi to fill southern units almost entirely with northern conscripts for the remainder of the war.',
+      'Tet destroyed much of the Viet Cong in the South. For the rest of the war, Hanoi filled southern units almost entirely with draftees from the North.',
     ],
     primaryDocumentRef: 'tet-politburo-directive',
   },

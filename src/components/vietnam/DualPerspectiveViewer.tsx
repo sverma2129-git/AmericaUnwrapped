@@ -1,5 +1,6 @@
 import React from 'react';
 import { SidePerspective } from '@/types/vietnam';
+import CitedParagraph from '@/components/common/CitedParagraph';
 
 interface DualPerspectiveViewerProps {
   washington: SidePerspective;
@@ -20,16 +21,33 @@ function Side({ place, people, side }: { place: string; people: string; side: Si
       <h4 className="mt-6 text-sm font-bold text-ink">What they assumed</h4>
       <ul className="mt-2 list-disc space-y-2 pl-5 text-base text-ink-muted marker:text-brand">
         {side.underlyingAssumptions.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}>
+            <CitedParagraph text={item} />
+          </li>
         ))}
       </ul>
 
       <h4 className="mt-6 text-sm font-bold text-ink">What they argued about</h4>
       <ul className="mt-2 list-disc space-y-2 pl-5 text-base text-ink-muted marker:text-brand">
         {side.internalDebates.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item}>
+            <CitedParagraph text={item} />
+          </li>
         ))}
       </ul>
+
+      {side.homeFrontConstraints.length > 0 && (
+        <>
+          <h4 className="mt-6 text-sm font-bold text-ink">Pressures at home</h4>
+          <ul className="mt-2 list-disc space-y-2 pl-5 text-base text-ink-muted marker:text-brand">
+            {side.homeFrontConstraints.map((item) => (
+              <li key={item}>
+                <CitedParagraph text={item} />
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
     </section>
   );
 }

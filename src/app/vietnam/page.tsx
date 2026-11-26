@@ -2,10 +2,15 @@ import React from 'react';
 import Link from 'next/link';
 import ChapterIndex from '@/components/vietnam/ChapterIndex';
 import { CHAPTER_COUNT, VIETNAM_CHAPTERS } from '@/data/vietnam/chapters';
+import { socialMeta } from '@/lib/social';
 
 export const metadata = {
   title: 'The Vietnam War, 1945–1975',
   description: 'The Vietnam War in 12 chapters and four parts, with maps, original documents and practice questions.',
+  ...socialMeta(
+    'The Vietnam War, 1945–1975',
+    'The Vietnam War in 12 chapters and four parts, with maps, original documents and practice questions.',
+  ),
 };
 
 export default function VietnamHubPage() {

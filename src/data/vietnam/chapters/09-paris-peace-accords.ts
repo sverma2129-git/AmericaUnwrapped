@@ -32,7 +32,7 @@ const chapter: ChapterData = {
     narrative: [
       'Starting in 1969, Henry Kissinger held secret talks in a house outside Paris with Le Duc Tho, a member of Hanoi’s ruling Politburo. For three years, the talks were stuck on two demands neither side would drop. Washington insisted that every North Vietnamese soldier leave the South. Hanoi insisted that South Vietnam’s president, Nguyen Van Thieu, be removed before any political deal.',
       'In October 1972, both sides gave ground. Hanoi dropped its demand that Thieu go right away and agreed that he could stay in charge in Saigon. In return, the United States agreed that about 150,000 to 200,000 North Vietnamese combat troops could stay where they were inside South Vietnam.[^c9-1] A few weeks before the 1972 presidential election, Kissinger told reporters that peace was at hand.',
-      'When Thieu saw the draft, he rejected it outright. Letting North Vietnamese troops stay on South Vietnamese soil, he said, was a death sentence for his country. Kissinger went back to Paris with 69 changes Thieu wanted, and the talks broke down. From December 18 to 29, 1972, Nixon ordered Operation Linebacker II, known as the Christmas Bombing. More than 20,000 tons of bombs fell on Hanoi and Haiphong.[^c9-1] Historians argue about why. The administration said the bombing forced Hanoi back to the table, but the Paris Peace Accords signed on January 27, 1973, were almost the same as the October draft. Its main effect was on Thieu. The bombing, together with Nixon’s secret written promises to bomb again if Hanoi broke the ceasefire, pushed him into signing.[^c9-2] The last U.S. combat troops left by March 29, 1973, and 591 American prisoners of war came home.[^c9-3]'
+      'When Thieu saw the draft, he rejected it outright. Letting North Vietnamese troops stay on South Vietnamese soil, he said, was a death sentence for his country. Kissinger went back to Paris with 69 changes Thieu wanted, and the talks broke down. From December 18 to 29, 1972, Nixon ordered Operation Linebacker II, known as the Christmas Bombing. More than 20,000 tons of bombs fell on Hanoi and Haiphong.[^c9-1] Historians argue about why. The administration said the bombing forced Hanoi back to the table, but the Paris Peace Accords signed on January 27, 1973, were almost the same as the October draft. Its main effect was on Thieu. The bombing, together with Nixon’s secret written promises to bomb again if Hanoi broke the ceasefire, pushed him into signing.[^c9-2] The last U.S. combat troops left by March 29, 1973, and 591 American prisoners of war came home.[^c9-4]'
     ],
     sections: [
       { date: '1969–1972', heading: 'Secret talks outside Paris' },
@@ -61,8 +61,8 @@ const chapter: ChapterData = {
       'Nixon told Thieu that if he refused to sign, the United States would make its own deal with Hanoi and cut off all aid.',
     ],
     homeFrontConstraints: [
-      'The incoming 93rd Congress in January 1973 had decisive majorities prepared to legislate an immediate end to all war funding.',
-      'Watergate: the June 1972 break-in began metastasizing into a constitutional crisis that rapidly eroded Nixon’s executive authority.',
+      'The new Congress that met in January 1973 had enough votes to cut off all money for the war.',
+      'Watergate: the June 1972 break-in grew into a crisis that weakened Nixon’s power.',
     ],
     primaryDocumentRef: 'paris-accords-treaty-1973',
   },
@@ -78,7 +78,7 @@ const chapter: ChapterData = {
       'Hanoi rode out Linebacker II. Its leaders bet that shooting down B-52s and waiting out American patience would protect what they had won at the table.',
     ],
     homeFrontConstraints: [
-      'Severe devastation of urban infrastructure and rail lines from the Christmas bombing; air defense missile stockpiles were near total exhaustion by December 29.',
+      'The Christmas bombing wrecked city buildings and rail lines, and by December 29 North Vietnam had almost no air defense missiles left.',
     ],
     primaryDocumentRef: 'paris-accords-treaty-1973',
   },
@@ -118,6 +118,7 @@ const chapter: ChapterData = {
     CITATION_REGISTRY['c9-1'],
     CITATION_REGISTRY['c9-2'],
     CITATION_REGISTRY['c9-3'],
+    CITATION_REGISTRY['c9-4'],
   ],
 };
 

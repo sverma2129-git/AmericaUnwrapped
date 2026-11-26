@@ -410,7 +410,7 @@ const chapter: ChapterData = {
       'Hanoi said its boats took part in no fighting on the night of August 4.',
     ],
     homeFrontConstraints: [
-      'Constructing extensive civil defense networks, digging sidewalk bomb shelters, and preparing northern infrastructure for sustained American aerial bombardment.',
+      'Hanoi built civil defense networks and dug bomb shelters along the sidewalks to get ready for American bombing.',
     ],
     primaryDocumentRef: 'hanyok-tonkin-nsa',
   },

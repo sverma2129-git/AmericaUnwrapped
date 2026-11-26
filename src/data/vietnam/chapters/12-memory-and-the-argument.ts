@@ -26,14 +26,14 @@ const chapter: ChapterData = {
     ],
     keyEvents: [
       { date: '1972', title: 'Halberstam publishes The Best and the Brightest', detail: 'A founding orthodox book about how smart, confident officials led the country into war.' },
-      { date: '1981', title: 'Summers publishes On Strategy', detail: 'A revisionist book arguing the military should have focused on blocking invasion routes from the North.' },
+      { date: '1982', title: 'Summers publishes On Strategy', detail: 'A revisionist book arguing the military should have focused on blocking invasion routes from the North.' },
       { date: '1990', title: 'Bao Ninh publishes The Sorrow of War', detail: 'A North Vietnamese veteran’s novel shows the war as grief and trauma, not the heroic story the state told.' },
       { date: '1995', title: 'The U.S. and Vietnam restore relations', detail: 'President Bill Clinton and Prime Minister Vo Van Kiet restore full relations between the two countries.' },
       { date: '2012', title: 'Lien-Hang Nguyen publishes Hanoi’s War', detail: 'A study based on Vietnamese records of Le Duan’s police state, his purges and his wartime diplomacy.' },
     ],
   },
   washington: {
-    keyActors: ['Historians, Veterans, & Citizens: Realists vs Revisionists vs Internationalists'],
+    keyActors: ['Historians, veterans and citizens'],
     strategicObjective:
       'Learn from the war in ways that guide how the United States uses force today.',
     underlyingAssumptions: [
@@ -45,7 +45,7 @@ const chapter: ChapterData = {
       'Did Nixon plan the decent interval on purpose, or is that an idea critics came up with later?',
     ],
     homeFrontConstraints: [
-      'The cultural legacy: how the memory of Vietnam shaped American public debates over military interventions in the Persian Gulf, the Balkans, Afghanistan, and Iraq.',
+      'Memories of Vietnam shaped how Americans argued about sending troops to the Persian Gulf, the Balkans, Afghanistan and Iraq.',
     ],
     primaryDocumentRef: 'ap-casualty-disclosure-1995',
   },
@@ -61,7 +61,7 @@ const chapter: ChapterData = {
       'Some topics are still sensitive in Vietnam today, among them the killings of civilians at Hue in 1968, the 1979 war with China and conditions in the re-education camps.',
     ],
     homeFrontConstraints: [
-      'Generational transition: a youthful population focused on economic development and global integration rather than wartime ideology.',
+      'Most Vietnamese are now too young to remember the war. They care more about jobs and trade with the world than about wartime politics.',
     ],
     primaryDocumentRef: 'ap-casualty-disclosure-1995',
   },

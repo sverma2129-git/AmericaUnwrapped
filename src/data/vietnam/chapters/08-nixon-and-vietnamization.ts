@@ -16,7 +16,7 @@ const chapter: ChapterData = {
     narrative: [
       'When Richard Nixon took office in 1969, Americans wanted the casualties to stop. Under the Nixon Doctrine and a policy called Vietnamization, he began bringing American ground troops home. Their number fell from a peak of 543,000 in 1969 to 24,000 by late 1972.[^c8-1] Historians still argue about what Nixon was really after. Revisionist scholars say General Creighton Abrams’ One War plan to secure the countryside was actually working.[^c8-2] Critics say Nixon and Henry Kissinger mainly wanted a decent interval: enough time between the American exit and South Vietnam’s fall that the fall would not look like an American defeat.[^c8-1]',
       'To hit communist supply bases across the border, Nixon started Operation Menu in March 1969. B-52s secretly carpet-bombed neutral Cambodia, and the raids were hidden from Congress with a second set of records. In April 1970, American and South Vietnamese troops openly invaded Cambodia. Protests broke out on campuses across the country. On May 4, Ohio National Guardsmen shot and killed four students at Kent State University, and ten days later students were shot and killed at Jackson State. Congress answered with the Cooper-Church Amendment, which banned U.S. ground troops and advisers from Cambodia and Laos. It was the first time Congress had limited where troops could go during a war against a president’s wishes.[^c8-1]',
-      'In February 1971, Operation Lam Son 719 put Vietnamization to the test. Three South Vietnamese divisions crossed into Laos along Route 9 to cut the Ho Chi Minh Trail, with no American ground troops or advisers going along. North Vietnam struck back with masses of tanks and heavy artillery. The South Vietnamese pullback became a panicked retreat, with soldiers clinging to the skids of helicopters.[^c8-3] Washington said the raid slowed supplies from the North for a year. But it showed how exposed South Vietnam’s army was without American troops beside it. In March 1972, Hanoi launched the Easter Offensive, a full-scale invasion with hundreds of Soviet-supplied tanks. South Vietnamese forces held key cities like An Loc and Quang Tri only because of massive American bombing in Operation Linebacker I and the mining of Haiphong harbor. The South’s army could hold with American airpower. Without it, it could not.'
+      'In February 1971, Operation Lam Son 719 put Vietnamization to the test. Three South Vietnamese divisions crossed into Laos along Route 9 to cut the Ho Chi Minh Trail, with no American ground troops or advisers going along. North Vietnam struck back with masses of tanks and heavy artillery. The South Vietnamese pullback became a panicked retreat, with soldiers clinging to the skids of helicopters.[^c8-3] Washington said the raid slowed supplies from the North for a year. But it showed how exposed South Vietnam’s army was without American troops beside it. In March 1972, Hanoi launched the Easter Offensive, a full-scale invasion with hundreds of Soviet-supplied tanks. South Vietnamese forces held An Loc and Kontum, and won back Quang Tri after losing it, only because of massive American bombing in Operation Linebacker I and the mining of Haiphong harbor. The South’s army could hold with American airpower. Without it, it could not.'
     ],
     sections: [
       { date: '1969', heading: 'Bringing the troops home' },
@@ -45,8 +45,8 @@ const chapter: ChapterData = {
       'Nixon and Kissinger preferred heavy bombing to keep the upper hand in the secret talks in Paris.',
     ],
     homeFrontConstraints: [
-      'Epidemic disciplinary and morale issues among remaining U.S. troops: drug abuse, combat refusals, racial tensions, and fragging.',
-      'Publication of the Pentagon Papers by Daniel Ellsberg in June 1971, exposing decades of government deception regarding the war.',
+      'Morale fell among the U.S. troops still there. Soldiers abused drugs, refused orders to fight and clashed along racial lines, and some attacked their own officers, which was called fragging.',
+      'In June 1971 Daniel Ellsberg leaked the Pentagon Papers, which showed that the government had misled the public about the war for years.',
     ],
     primaryDocumentRef: 'mccarthy-hanoi-1968',
   },
@@ -63,7 +63,7 @@ const chapter: ChapterData = {
       'They argued over whether to launch a big tank offensive, which became the Easter Offensive, or save their forces for a longer war.',
     ],
     homeFrontConstraints: [
-      'Severe logistical bottlenecks caused by the mining of Haiphong Harbor and destruction of northern transport networks under Linebacker I.',
+      'Mines in Haiphong Harbor and bombed roads and rails under Linebacker I made it hard to move supplies.',
     ],
     primaryDocumentRef: 'cia-memo-giap-thanh-1966',
   },

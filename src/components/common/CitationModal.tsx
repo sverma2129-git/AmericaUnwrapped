@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { useCitation } from './CitationContext';
-import { getSourceTypeBadge, isVerbatimQuotation, SourceTypeBadge } from '@/lib/citations';
+import { getSourceLinkLabel, getSourceTypeBadge, isVerbatimQuotation, SourceTypeBadge } from '@/lib/citations';
 
 const BADGE_TONE_CLASSES: Record<SourceTypeBadge['tone'], string> = {
   primary: 'bg-brand-tint text-brand border-brand-rule',
@@ -62,7 +62,7 @@ export default function CitationModal() {
                 </span>
               ) : (
                 <span className="text-xs font-semibold px-2 py-0.5 rounded-sm bg-parchment text-ink-muted border border-rule">
-                  In our words
+                  Summarized in our words
                 </span>
               )}
             </div>
@@ -74,7 +74,7 @@ export default function CitationModal() {
           <button
             type="button"
             onClick={closeCitation}
-            aria-label="Close citation modal"
+            aria-label="Close"
             className="p-1.5 text-ink-muted hover:text-brand transition-colors cursor-pointer rounded-sm"
           >
             <svg
@@ -108,7 +108,7 @@ export default function CitationModal() {
 
             {activeCitation.authorOrInstitution && (
               <p className="font-sans text-xs sm:text-sm text-ink-muted">
-                <span className="font-semibold text-ink">Author / Creator:</span> {activeCitation.authorOrInstitution}
+                <span className="font-semibold text-ink">By:</span> {activeCitation.authorOrInstitution}
               </p>
             )}
 
@@ -120,7 +120,7 @@ export default function CitationModal() {
               )}
               {activeCitation.publicationOrArchive && (
                 <span>
-                  <strong className="text-ink">Archive / Publication:</strong> {activeCitation.publicationOrArchive}
+                  <strong className="text-ink">Published by or held at:</strong> {activeCitation.publicationOrArchive}
                 </span>
               )}
             </div>
@@ -145,7 +145,7 @@ export default function CitationModal() {
               id="section-exact-quote"
               className="text-xs text-brand font-bold block"
             >
-              Verified Exact Verbatim Excerpt
+              The exact words
             </span>
             <blockquote className="font-display text-base sm:text-lg text-ink leading-relaxed pl-1 py-0.5">
               &ldquo;{activeCitation.exactQuotation}&rdquo;
@@ -196,7 +196,7 @@ export default function CitationModal() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand hover:bg-brand-hover text-white font-sans text-xs font-semibold transition-colors rounded-sm"
             >
-              <span>View Original Archive</span>
+              <span>{getSourceLinkLabel(activeCitation.originalUrl)}</span>
               <svg
                 className="w-3.5 h-3.5"
                 fill="none"
@@ -209,7 +209,7 @@ export default function CitationModal() {
             </a>
           ) : (
             <span className="font-sans text-xs text-ink-muted italic">
-              The original is held in an archive
+              No copy online. A library can find it from the details above.
             </span>
           )}
         </footer>

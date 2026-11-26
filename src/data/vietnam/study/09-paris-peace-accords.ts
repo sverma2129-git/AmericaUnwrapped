@@ -99,7 +99,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       correctIndex: 3,
       rationale:
         'In June 1973, Congress passed the Case-Church Amendment, which barred all military action in Indochina. At the same time, the Watergate scandal weakened Nixon until he resigned in August 1974. President Gerald Ford had no legal power to send air support.',
-      citationRef: 'c9-3',
+      citationRef: 'c10-1',
     },
     {
       id: 'c9-q4',
@@ -151,7 +151,7 @@ export const PARIS_ACCORDS_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 1,
       rationale: 'The signed accords were almost the same as the October draft, even though more than 20,000 tons of bombs fell on Hanoi and Haiphong in between. Historians argue about why, but the bombing’s main effect was on Thieu, who was pushed into signing.',
-      citationRef: 'c9-3',
+      citationRef: 'c9-1',
     },
     {
       id: 'c9-q8',

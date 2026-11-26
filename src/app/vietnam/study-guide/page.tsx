@@ -15,11 +15,17 @@ import FlashcardStudy from '@/components/study/guide/FlashcardStudy';
 import PracticeQuiz from '@/components/study/guide/PracticeQuiz';
 import DbqOutlines from '@/components/study/guide/DbqOutlines';
 import Glossary from '@/components/study/guide/Glossary';
+import { socialMeta } from '@/lib/social';
 
 export const metadata: Metadata = {
   title: 'Vietnam War study guide',
   description:
     'Review the Vietnam War unit from 1945 to 1975: the six presidents, the turning points, 70 flashcards, a 106-question practice quiz with explanations, essay outlines and a searchable glossary.',
+  ...socialMeta(
+    'Vietnam War study guide',
+    'A 106-question practice quiz with explanations, flashcards, the turning points and essay outlines for the Vietnam War unit test. Free, no account.',
+    'study-guide',
+  ),
 };
 
 const SECTIONS = [
