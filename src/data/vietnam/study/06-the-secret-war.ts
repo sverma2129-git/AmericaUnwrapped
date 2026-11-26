@@ -14,7 +14,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
   ],
   briefing: {
     summary:
-      'To keep the war in the South going, Hanoi built the Truong Son supply network, known as the Ho Chi Minh Trail. It ran through the jungle mountains of Laos and Cambodia, both neutral countries. Over 16 years it grew from a footpath into 12,000 miles of roads, truck parks, underground fuel pipelines and repair depots. The U.S. wanted to cut it without openly breaking the 1962 Geneva Accords, which guaranteed Laos’s neutrality. So it fought a Secret War. American planes flew more than 580,000 bombing missions and dropped more than 2 million tons of bombs on Laos. That equals one planeload every eight minutes for nine years. The CIA also raised a guerrilla army of 30,000 Hmong fighters under General Vang Pao. In South Vietnam, the CIA started the Phoenix Program. It neutralized more than 81,000 suspected members of the Viet Cong’s civilian network by identifying, interrogating and killing them.',
+      'To keep the war in the South going, Hanoi built the Truong Son supply network, known as the Ho Chi Minh Trail. It ran through the jungle mountains of Laos and Cambodia, both neutral countries. Over 16 years it grew from a footpath into 12,000 miles of roads, truck parks, underground fuel pipelines and repair depots. The U.S. wanted to cut it without openly breaking the 1962 Geneva Accords, which guaranteed Laos’s neutrality. So it fought a Secret War. American planes flew more than 580,000 bombing missions and dropped more than 2 million tons of bombs on Laos. That equals one planeload every eight minutes for nine years. The CIA also raised a guerrilla army of thousands of Hmong fighters under General Vang Pao. In South Vietnam, the CIA started the Phoenix Program. It neutralized more than 81,000 suspected members of the Viet Cong’s civilian network by identifying, interrogating and killing them.',
     examTakeaways: [
       'The Ho Chi Minh Trail carried soldiers and supplies from North Vietnam to the South through Laos and Cambodia. Years of American bombing never shut it down.',
       'To cut the trail, the United States bombed neutral Laos on a huge scale and did not admit it. Tens of millions of unexploded cluster bomblets were left behind.',
@@ -67,7 +67,6 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       correctIndex: 1,
       rationale:
         'In 1962, the U.S. signed the Declaration on the Neutrality of Laos in Geneva. North Vietnam broke the agreement by running the Ho Chi Minh Trail through Laos. The U.S. answered with massive air strikes that it hid from the public through false record-keeping and CIA cover.',
-      citationRef: 'c6-1',
     },
     {
       id: 'c6-q2',
@@ -82,7 +81,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       correctIndex: 2,
       rationale:
         'The Phoenix Program went after the Viet Cong’s civilian network, not its soldiers in the jungle. These were the people who collected taxes, recruited young people, spread propaganda and ran villages at night.',
-      citationRef: 'c6-2',
+      citationRef: 'c6-3',
     },
     {
       id: 'c6-q3',
@@ -96,8 +95,8 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
       ],
       correctIndex: 0,
       rationale:
-        'The CIA recruited more than 30,000 Hmong fighters led by General Vang Pao. This Secret Army fought North Vietnamese regular divisions, rescued American pilots who had been shot down, and took very heavy losses.',
-      citationRef: 'c6-3',
+        'The CIA recruited thousands of Hmong fighters led by General Vang Pao. This Secret Army fought North Vietnamese regular divisions, rescued American pilots who had been shot down, and took very heavy losses.',
+      citationRef: 'c6-4',
     },
     {
       id: 'c6-q4',
@@ -155,7 +154,7 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
     },
     {
       id: 'c6-q8',
-      question: 'Who led the army of about 30,000 Hmong fighters that the CIA organized in Laos?',
+      question: 'Who led the army of Hmong fighters that the CIA organized in Laos?',
       options: [
         'Nguyen Van Thieu',
         'General Vang Pao',
@@ -163,8 +162,8 @@ export const SECRET_WAR_STUDY_DATA: ChapterStudyData = {
         'William Colby',
       ],
       correctIndex: 1,
-      rationale: 'General Vang Pao led the Hmong army, which the CIA organized to cut the Ho Chi Minh Trail. With Air America planes and secret B-52 raids, Laos became the most heavily bombed country per person in history.',
-      citationRef: 'c6-1',
+      rationale: 'General Vang Pao led the Hmong army, which the CIA organized to fight North Vietnamese forces in Laos. With Air America planes and secret B-52 raids, Laos became the most heavily bombed country per person in history.',
+      citationRef: 'c6-4',
     },
     {
       id: 'c6-q9',

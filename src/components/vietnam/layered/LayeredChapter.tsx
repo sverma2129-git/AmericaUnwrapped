@@ -162,12 +162,12 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
 
           <div className="mt-10 space-y-2 rounded-sm bg-parchment p-2">
             {story?.evidence && story.evidence.length > 0 && (
-              <Disclosure title="Read the sources yourself" detail={`${story.evidence.length} verified quotations, each with a question to think about`}>
+              <Disclosure title="Read the sources yourself" detail={`${story.evidence.length} quotations from the original sources, each with a question to think about`}>
                 <EvidenceLocker citationIds={story.evidence} />
               </Disclosure>
             )}
 
-            <Disclosure title="How each side saw it" detail="What Washington and Hanoi each wanted, assumed, and argued about">
+            <Disclosure title="How each side saw it" detail="What Washington and Hanoi each wanted and assumed, what they argued about, and the pressures at home">
               <DualPerspectiveViewer washington={chapter.washington} hanoi={chapter.hanoi} />
             </Disclosure>
 

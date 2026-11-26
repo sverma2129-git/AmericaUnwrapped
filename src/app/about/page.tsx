@@ -3,11 +3,16 @@ import Link from 'next/link';
 import { Thumb } from '@/components/common/Figure';
 import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
 import { SOURCE_REGISTRY } from '@/data/vietnam/sourceRegistry';
+import { socialMeta } from '@/lib/social';
 
 export const metadata: Metadata = {
   title: 'How we decide what’s true',
   description:
     'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
+  ...socialMeta(
+    'How we decide what’s true',
+    'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
+  ),
 };
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {

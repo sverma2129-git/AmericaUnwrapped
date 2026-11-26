@@ -53,7 +53,7 @@ const chapter: ChapterData = {
       'CIA officer Edward Lansdale and Secretary of State Dulles persuaded Eisenhower to stick with Diem.',
     ],
     homeFrontConstraints: [
-      'Eisenhower’s New Look national security policy prioritized fiscal restraint, reliance on nuclear deterrence, and regional alliances, strictly avoiding major Asian ground troop commitments.',
+      'Eisenhower’s New Look policy kept military spending down and relied on nuclear weapons and alliances. It avoided sending large ground armies to Asia.',
     ],
     primaryDocumentRef: 'resolution-15-1959',
   },
@@ -70,7 +70,7 @@ const chapter: ChapterData = {
       'Le Duan’s side won in 1959 with Resolution 15, which approved armed struggle in the South.',
     ],
     homeFrontConstraints: [
-      'Severe rural disruption caused by the 1953–1956 northern land reform campaign, which resulted in widespread excesses, rural unrest in Nghe An, and public apologies from Ho Chi Minh.',
+      'The land reform campaign of 1953 to 1956 went too far in many villages. Farmers rose up in Nghe An, and Ho Chi Minh publicly apologized.',
     ],
     primaryDocumentRef: 'resolution-15-1959',
   },

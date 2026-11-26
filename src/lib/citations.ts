@@ -44,28 +44,50 @@ export function getSourceTypeBadge(type?: ChapterCitation['sourceType']): Source
     case 'archival':
     case 'declassified':
       return {
-        label: 'Primary Archival Source',
+        label: 'Primary source',
         tone: 'primary',
-        description: 'Contemporary government cable, resolution, treaty, or declassified record.',
+        description: 'Made at the time by people involved: a document, cable, law, speech or letter.',
       };
     case 'CONTEMPORARY_REPORTING':
       return {
-        label: 'Contemporary Reporting',
+        label: 'News report',
         tone: 'reporting',
-        description: 'Journalistic dispatch, broadcast news, or wire filed during the war.',
+        description: 'Written by journalists at the time of the events it describes.',
       };
     case 'SCHOLARLY_SECONDARY_SOURCE':
     case 'academic-monograph':
       return {
-        label: 'Scholarly Secondary Source',
+        label: 'History book or study',
         tone: 'scholarly',
-        description: 'Peer-reviewed academic monograph, university press publication, or archival study.',
+        description: 'Written later by a historian, journalist or researcher who studied the evidence.',
+      };
+    case 'LATER_HISTORICAL_ANALYSIS':
+    case 'official-history':
+      return {
+        label: 'Later account',
+        tone: 'reference',
+        description: 'Written after the events by someone who took part, or by a government office looking back.',
       };
     default:
       return {
-        label: 'Historical Reference',
+        label: 'Article or summary',
         tone: 'reference',
-        description: 'Historical monograph, official documentation, or archive.',
+        description: 'A later article that sums up the history. Useful, but a step further from the evidence.',
       };
   }
+}
+
+/** What the source link opens, said plainly: a catalog record is not the original. */
+export function getSourceLinkLabel(url: string): string {
+  let host = '';
+  try {
+    host = new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return 'Open the source';
+  }
+  if (/openlibrary\.org|worldcat\.org/.test(host)) return 'Find the book in a library';
+  if (/aljazeera\.com|army\.mil|history\.com|nybooks\.com|apnews\.com|cbsnews\.com/.test(host)) return 'Read the article';
+  if (/nationalacademies\.org|jstor\.org/.test(host)) return 'Read the study';
+  if (/\.pdf($|\?)/i.test(url)) return 'Open the PDF';
+  return 'Read the original';
 }

@@ -42,8 +42,8 @@ const chapter: ChapterData = {
       'Talks about restoring relations stalled in the late 1970s, after Vietnam invaded Cambodia and gave the Soviet navy use of Cam Ranh Bay.',
     ],
     homeFrontConstraints: [
-      'The Vietnam Syndrome: deep public and congressional aversion to overseas military intervention.',
-      'Resettlement of hundreds of thousands of Vietnamese, Hmong, and Cambodian refugees across American communities.',
+      'The Vietnam syndrome: many Americans and members of Congress did not want to send troops overseas again.',
+      'Hundreds of thousands of Vietnamese, Hmong and Cambodian refugees settled in American towns and cities.',
     ],
     primaryDocumentRef: 'ap-casualty-disclosure-1995',
   },
@@ -59,7 +59,7 @@ const chapter: ChapterData = {
       'Hardliners feared that markets would water down the party’s ideas. Southern reformers such as Vo Van Kiet and Nguyen Van Linh showed that private markets and family farms were needed to keep people fed.',
     ],
     homeFrontConstraints: [
-      'Severe inflation reaching 700% in 1986, near-famine in rural provinces, and heavy military casualties in Cambodia and along the Chinese border.',
+      'Prices rose about 700% in 1986, some rural provinces came close to famine, and soldiers kept dying in Cambodia and along the Chinese border.',
     ],
     primaryDocumentRef: 'ap-casualty-disclosure-1995',
   },

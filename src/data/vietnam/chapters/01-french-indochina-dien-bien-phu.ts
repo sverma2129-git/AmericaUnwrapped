@@ -170,8 +170,8 @@ const chapter: ChapterData = {
       'Eisenhower and Army Chief of Staff Matthew Ridgway refused to act without Britain and Congress. Both remembered Korea.',
     ],
     homeFrontConstraints: [
-      'Post-Korean War exhaustion: strong public and congressional reluctance to commit American ground divisions to another land conflict in Asia.',
-      'McCarthyite domestic anti-communist pressure: political vulnerability to accusations that it had lost Southeast Asia, as Truman had been blamed for losing China.',
+      'After Korea, the public and Congress did not want to send American ground troops to another war in Asia.',
+      'Senator Joseph McCarthy and others attacked leaders who seemed soft on communism. Eisenhower feared being blamed for losing Southeast Asia, as Truman had been blamed for losing China.',
     ],
     primaryDocumentRef: 'nsc-68-indochina',
   },
@@ -189,8 +189,8 @@ const chapter: ChapterData = {
       'Truong Chinh’s harsh early land reform in the areas the Viet Minh controlled caused tension inside the movement.',
     ],
     homeFrontConstraints: [
-      'Severe economic poverty and food scarcity while mobilizing a quarter-million civilian porters across trackless mountain trails under French aerial bombing.',
-      'Heavy material dependence on Chinese munitions and Soviet military supplies.',
+      'The Viet Minh were poor and short of food, yet they gathered about 250,000 civilian porters to carry supplies over mountain trails while French planes bombed them.',
+      'They depended on China and the Soviet Union for weapons and ammunition.',
     ],
     primaryDocumentRef: 'ho-truman-1946',
   },

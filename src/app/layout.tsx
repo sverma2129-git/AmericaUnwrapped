@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
 import CitationModal from '@/components/common/CitationModal';
+import { SITE_ORIGIN, socialMeta } from '@/lib/social';
 import './globals.css';
 
 const newsreader = Newsreader({
@@ -24,6 +25,11 @@ const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-source-
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_ORIGIN),
+  ...socialMeta(
+    'America Unwrapped',
+    'Free U.S. history for high school students, told through the original records: the Vietnam War in 12 chapters, with a study guide for the unit test.',
+  ),
   title: {
     template: '%s | America Unwrapped',
     default: 'America Unwrapped',

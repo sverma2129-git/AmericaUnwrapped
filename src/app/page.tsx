@@ -6,11 +6,16 @@ import { buildGlossary, collectQuizQuestions } from '@/lib/study';
 import DocumentFacsimile from '@/components/common/DocumentFacsimile';
 import ContentsGrid from '@/components/vietnam/ContentsGrid';
 import { DBQ_PROMPTS, TURNING_POINTS } from '@/data/vietnam/studyGuide';
+import { socialMeta } from '@/lib/social';
 
 export const metadata = {
   title: { absolute: 'America Unwrapped: the Vietnam War for high school students' },
   description:
     'The Vietnam War from 1945 to 1975 in twelve chapters, told through the cables, letters and photographs of the time, with a study guide for the unit test.',
+  ...socialMeta(
+    'America Unwrapped: the Vietnam War',
+    'The Vietnam War from 1945 to 1975 in twelve chapters, told through the cables, letters and photographs of the time, with a study guide for the unit test.',
+  ),
 };
 
 const textLink = 'font-medium text-brand underline decoration-brand-rule underline-offset-4 hover:decoration-brand';

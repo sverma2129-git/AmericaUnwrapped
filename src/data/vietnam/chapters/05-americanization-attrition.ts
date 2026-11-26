@@ -15,7 +15,7 @@ const chapter: ChapterData = {
   whatHappened: {
     narrative: [
       'In February 1965, the Viet Cong attacked the U.S. base at Pleiku. President Johnson answered with Operation Rolling Thunder, a long bombing campaign against North Vietnam. The idea was called graduated pressure: raise the bombing step by step until Hanoi agreed to talk, without pulling China or the Soviet Union into the war. On March 8, 1965, two battalions of Marines landed at Da Nang. They were the first U.S. ground combat troops in Vietnam, and the American role changed from advising to fighting.[^c5-3]',
-      'General William Westmoreland’s plan was attrition: kill enemy soldiers faster than they could be replaced. His troops went on search-and-destroy missions backed by heavy firepower, and progress was measured in body counts.[^c5-2] In November 1965, the 1st Cavalry Division fought North Vietnamese army regiments in the Ia Drang Valley. The Americans killed more than ten enemy soldiers for every one they lost. Westmoreland took this as proof that he could reach the crossover point, when the enemy would lose men faster than it could replace them. But the communist side started about 75 to 80 percent of the firefights. That let them choose when to fight and when to slip back across the border to safety. About 200,000 young men came of draft age in North Vietnam every year, more than enough to replace the losses. In 1967, the U.S. command in Saigon quietly stopped publishing its estimates of how many enemy troops were coming south.[^c5-1]',
+      'General William Westmoreland’s plan was attrition: kill enemy soldiers faster than they could be replaced. His troops went on search-and-destroy missions backed by heavy firepower, and progress was measured in body counts.[^c5-2] In November 1965, the 1st Cavalry Division fought North Vietnamese army regiments in the Ia Drang Valley. By U.S. body counts, the Americans killed more than ten enemy soldiers for every one they lost. Westmoreland took this as proof that he could reach the crossover point, when the enemy would lose men faster than it could replace them. But the communist side started about 75 to 80 percent of the firefights. That let them choose when to fight and when to slip back across the border to safety. About 200,000 young men came of draft age in North Vietnam every year, more than enough to replace the losses. In 1967, the U.S. command in Saigon quietly stopped publishing its estimates of how many enemy troops were coming south.[^c5-1]',
       'In Hanoi, a power struggle was going on that Washington barely saw. By the mid-1960s, Ho Chi Minh’s role was mostly ceremonial, and First Secretary Le Duan made the big decisions.[^c5-1] General Vo Nguyen Giap and others wanted a slow guerrilla war. Le Duan wanted big offensives, and he won by arresting hundreds of moderates in what became known as the Anti-Party Affair. At home, all of North Vietnam was organized for war. Concrete one-person shelters lined Hanoi’s sidewalks, and city people were moved to the countryside. More than 230,000 Youth Volunteers, over half of them women, kept the Ho Chi Minh Trail open under constant bombing.[^c5-1]'
     ],
     sections: [
@@ -46,7 +46,7 @@ const chapter: ChapterData = {
     ],
     homeFrontConstraints: [
       'Rising anti-war sentiment, draft card burnings, and the March on the Pentagon in October 1967.',
-      'Budgetary strain: funding both the Great Society and the war without raising taxes ignited severe domestic inflation.',
+      'Johnson paid for both the Great Society and the war without raising taxes, and prices at home began to climb.',
     ],
     primaryDocumentRef: 'cia-memo-giap-thanh-1966',
   },
@@ -63,7 +63,7 @@ const chapter: ChapterData = {
       'Le Duan’s side overruled the moderates, arrested officers who disagreed and began planning a nationwide offensive.',
     ],
     homeFrontConstraints: [
-      'Surviving Operation Rolling Thunder: dispersing factories and hospitals into caves and rural areas, and enduring severe civilian rationing.',
+      'Operation Rolling Thunder bombed the North, so Hanoi moved factories and hospitals into caves and the countryside, and families lived on rations.',
     ],
     primaryDocumentRef: 'mccarthy-hanoi-1968',
   },

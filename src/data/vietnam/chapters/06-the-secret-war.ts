@@ -14,9 +14,9 @@ const chapter: ChapterData = {
     'Alongside the regular battles, the United States and South Vietnam fought a quieter war. The Phoenix Program went after the Viet Cong’s political network by identifying its members and capturing or killing them. Operation Ranch Hand sprayed millions of gallons of herbicide to strip away forest cover. The harm to people and to the land has lasted for decades.',
   whatHappened: {
     narrative: [
-      'Army sweeps could not destroy the Viet Cong’s hidden government. It collected taxes, ran schools and recruited fighters. So in 1967–1968, the CIA and South Vietnamese security agencies created the Phoenix Program, *Phung Hoang* in Vietnamese. It was run by CORDS (Civil Operations and Revolutionary Development Support). Phoenix pooled what the military and police knew in order to find the members of this hidden network and remove them by capture, persuasion or killing. Official figures given to Congress in 1971 counted 81,740 people removed: 33,358 captured, 22,013 who switched sides and 26,369 killed.[^c6-3] But testimony showed that about 87 percent of those killed died in regular military operations and artillery fire, not in targeted police actions. Monthly quotas led officials to pad their reports with ordinary combat deaths.[^c6-3]',
-      'From 1962 to 1971, the U.S. Air Force ran Operation Ranch Hand. Its planes sprayed about 19 million gallons of plant-killing chemicals over the South Vietnamese countryside to strip away the jungle cover and crops the guerrillas relied on.[^c6-2] About 11 million gallons were Agent Orange, which was contaminated with 2,3,7,8-TCDD, a dioxin that causes cancer and stays in the environment for years.[^c6-2] More than 5 million acres of forest and 500,000 acres of crops were stripped bare. The harm lasted for decades, with higher rates of cancer, birth defects and long-term illness among Vietnamese civilians and American veterans. Few people know that the contaminated UC-123 planes were later handed to the Air Force Reserve, which flew them on cargo missions inside the United States from 1972 to 1982.',
-      'At the same time, the CIA was running a large secret war in neighboring Laos. It organized an army of about 30,000 Hmong fighters under General Vang Pao to cut the Ho Chi Minh Trail.[^c6-1] With Air America transport planes and heavy secret B-52 raids, Laos became the most heavily bombed country per person in history.[^c6-2] Phoenix and the other pacification programs did damage the Viet Cong’s political network. But their rough methods and the civilians they killed turned many villagers against the government.'
+      'Army sweeps could not destroy the Viet Cong’s hidden government. It collected taxes, ran schools and recruited fighters. So in 1967–1968, the CIA and South Vietnamese security agencies created the Phoenix Program, *Phung Hoang* in Vietnamese. It was run by CORDS (Civil Operations and Revolutionary Development Support). Phoenix pooled what the military and police knew in order to find the members of this hidden network and remove them by capture, persuasion or killing. American figures for 1968 to 1972 counted 81,740 people removed: 33,358 captured, 22,013 who switched sides and 26,369 killed. But testimony showed that about 87 percent of those killed died in regular military operations and artillery fire, not in targeted police actions. Monthly quotas led officials to pad their reports with ordinary combat deaths.[^c6-3]',
+      'From 1962 to 1971, the U.S. Air Force ran Operation Ranch Hand. Its planes sprayed about 19 million gallons of plant-killing chemicals over the South Vietnamese countryside to strip away the jungle cover and crops the guerrillas relied on.[^c6-2] About 11 million gallons were Agent Orange, which was contaminated with 2,3,7,8-TCDD, a dioxin that causes cancer and stays in the environment for years.[^c6-2] More than 5 million acres of forest and 500,000 acres of crops were stripped bare. The harm lasted for decades, with higher rates of cancer, birth defects and long-term illness among Vietnamese civilians and American veterans. Some of the contaminated UC-123 planes were later handed to the Air Force Reserve, which flew them inside the United States from 1972 to 1982.[^c6-6]',
+      'At the same time, the CIA was running a large secret war in neighboring Laos. It organized an army of Hmong fighters under General Vang Pao. By the end of 1963, a reported 20,000 of them were armed, and they raided North Vietnamese supply depots and ambushed trucks.[^c6-4] With Air America transport planes and heavy secret B-52 raids, Laos became the most heavily bombed country per person in history.[^c6-5] Phoenix and the other pacification programs did damage the Viet Cong’s political network. But their rough methods and the civilians they killed turned many villagers against the government.'
     ],
     sections: [
       { date: '1967–1971', heading: 'The Phoenix Program' },
@@ -29,7 +29,7 @@ const chapter: ChapterData = {
       { date: 'May 1967', title: 'CORDS is set up', detail: 'Robert Komer brings the civilian and military pacification efforts together under MACV.' },
       { date: 'July 1968', title: 'The Phoenix Program starts', detail: 'President Thieu orders Phung Hoang to find and break up the Viet Cong’s civilian network.' },
       { date: 'July 1971', title: 'Congress holds hearings on Phoenix', detail: 'William Colby and former intelligence soldiers tell the House about quotas and abuses.' },
-      { date: '1971–1972', title: 'Ranch Hand ends', detail: 'Spraying stops after scientific studies on dioxin poisoning and protests at home.' },
+      { date: '1971', title: 'Ranch Hand ends', detail: 'Spraying stops after scientific studies on dioxin poisoning and protests at home.' },
     ],
   },
   washington: {
@@ -45,7 +45,7 @@ const chapter: ChapterData = {
       'In 1961 State Department officials pushed back against spraying herbicides, because they feared the world would call it chemical warfare.',
     ],
     homeFrontConstraints: [
-      'Intense public and congressional scrutiny following revelations of interrogation abuses, tiger cages at Con Son Island, and chemical contamination.',
+      'News of abuse during interrogations, the tiger cages on Con Son Island and chemical poisoning brought hard questions from the public and from Congress.',
     ],
     primaryDocumentRef: 'cia-memo-giap-thanh-1966',
   },
@@ -61,7 +61,7 @@ const chapter: ChapterData = {
       'Communist headquarters in the South saw Phoenix as a serious threat. Between 1968 and 1971 it wrecked the party’s network in many provinces and forced officials to retreat to remote bases.',
     ],
     homeFrontConstraints: [
-      'Managing heavy loss of seasoned southern organizers, requiring northern administrative cadres to be dispatched south to replace fallen personnel.',
+      'The party lost many experienced organizers in the South, so Hanoi sent officials from the North to take their place.',
     ],
     primaryDocumentRef: 'resolution-15-1959',
   },
@@ -98,9 +98,11 @@ const chapter: ChapterData = {
       'In the 1968 Tet Offensive, communist forces were pushed out of every major city they attacked and lost more than 40,000 fighters. Two months later, Lyndon Johnson announced he would not run again.',
   },
   citations: [
-    CITATION_REGISTRY['c6-1'],
+    CITATION_REGISTRY['c6-4'],
     CITATION_REGISTRY['c6-2'],
     CITATION_REGISTRY['c6-3'],
+    CITATION_REGISTRY['c6-5'],
+    CITATION_REGISTRY['c6-6'],
   ],
 };
 

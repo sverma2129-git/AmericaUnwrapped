@@ -54,7 +54,7 @@ const chapter: ChapterData = {
       'President Ford asked Congress for $722 million in emergency military aid. Congressional leaders turned him down, treating the war as finished.',
     ],
     homeFrontConstraints: [
-      'The American public and Congress were entirely unwilling to risk further casualties or expend additional funds in Southeast Asia.',
+      'Americans and Congress did not want to lose more soldiers or spend more money in Southeast Asia.',
     ],
     primaryDocumentRef: 'paris-accords-treaty-1973',
   },
@@ -70,7 +70,7 @@ const chapter: ChapterData = {
       'After Ban Me Thuot fell, commanders debated whether to pause and bring up supplies, or send every reserve unit down Route 1 at once.',
     ],
     homeFrontConstraints: [
-      'Extremely stretched logistical lines racing hundreds of trucks, tanks, and fuel pipelines south over hundreds of miles of captured highway.',
+      'Supply lines stretched thin as hundreds of trucks and tanks, and fuel pipelines, moved south over hundreds of miles of captured highway.',
     ],
     primaryDocumentRef: 'paris-accords-treaty-1973',
   },

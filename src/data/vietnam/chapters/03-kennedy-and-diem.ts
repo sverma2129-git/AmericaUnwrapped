@@ -53,7 +53,7 @@ const chapter: ChapterData = {
       'Vice President Johnson, General Maxwell Taylor and CIA Director John McCone warned that removing Diem would bring chaos.',
     ],
     homeFrontConstraints: [
-      'Emergence of critical investigative reporting from Saigon correspondents (David Halberstam, Neil Sheehan, Malcolm Browne) challenging official military optimism.',
+      'Reporters in Saigon, including David Halberstam, Neil Sheehan and Malcolm Browne, wrote that the war was going worse than officials said.',
     ],
     primaryDocumentRef: 'cable-243-diem',
   },
@@ -70,7 +70,7 @@ const chapter: ChapterData = {
       'Party leaders who urged caution about fighting American forces lost influence.',
     ],
     homeFrontConstraints: [
-      'Managing escalating Sino-Soviet ideological friction while ensuring steady logistical deliveries of weapons from both communist powers.',
+      'China and the Soviet Union were quarreling with each other, but Hanoi still needed weapons from both.',
     ],
     primaryDocumentRef: 'cable-243-diem',
   },
