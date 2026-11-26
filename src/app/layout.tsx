@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Instrument_Serif, JetBrains_Mono, Newsreader, Source_Sans_3 } from 'next/font/google';
+import { Instrument_Serif, Newsreader } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { CitationProvider } from '@/components/common/CitationContext';
@@ -21,8 +21,6 @@ const instrument = Instrument_Serif({
   variable: '--font-instrument',
   display: 'swap',
 });
-const sourceSans = Source_Sans_3({ subsets: ['latin'], variable: '--font-source-sans', display: 'swap' });
-const jetbrains = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains', display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
@@ -44,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`h-full ${newsreader.variable} ${instrument.variable} ${sourceSans.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={`h-full ${newsreader.variable} ${instrument.variable}`}>
       <body className="min-h-full flex flex-col bg-paper text-ink font-sans antialiased">
         <CitationProvider>
           <a

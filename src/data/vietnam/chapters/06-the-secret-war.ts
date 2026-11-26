@@ -8,7 +8,7 @@ const chapter: ChapterData = {
   timeframe: '1961–1972',
   leadImageId: 'ranch-hand',
   galleryImageIds: ['korean-marines-rice-1966', 'vc-prisoner-1967', 'chieu-hoi-poster', 'long-my-poster-1967', 'hamlet-population-map-1972'],
-  title: 'The secret war',
+  title: 'The Secret War',
   subtitle: 'Away from the big battles, the CIA ran an army in Laos and hunted the Viet Cong’s hidden government. Air Force planes sprayed the forests with Agent Orange.',
   summary:
     'Alongside the regular battles, the United States and South Vietnam fought a quieter war. The Phoenix Program went after the Viet Cong’s political network by identifying its members and capturing or killing them. Operation Ranch Hand sprayed millions of gallons of herbicide to strip away forest cover. The harm to people and to the land has lasted for decades.',

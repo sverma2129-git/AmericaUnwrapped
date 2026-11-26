@@ -8,7 +8,7 @@ const chapter: ChapterData = {
   timeframe: '1973–1975',
   leadImageId: 'frequent-wind-1975',
   galleryImageIds: ['ford-nsc-1975', 'babylift-ford-1975', 'kissinger-evacuation-1975', 'tan-son-nhut-evacuation-1975', 'hancock-pilots-1975', 'hancock-girl-1975'],
-  title: 'The fall of Saigon',
+  title: 'The Fall of Saigon',
   subtitle: 'In the spring of 1975, North Vietnam’s army took the South in 55 days. On April 30, its tanks rolled through the gates of the Presidential Palace in Saigon.',
   summary:
     'After the U.S. left, South Vietnam’s economy shrank, prices soared, and Congress cut aid so sharply that the army had to ration ammunition and fuel. In June 1973, Congress passed the Case-Church Amendment, which made it illegal for U.S. forces to go back in. In late 1974, Hanoi tested America’s will at Phuoc Long. No response came, so it sped up its campaign. President Thieu’s sudden order to retreat from the Central Highlands turned into a rout. South Vietnam fell in 55 days, and Saigon was captured on April 30, 1975.',

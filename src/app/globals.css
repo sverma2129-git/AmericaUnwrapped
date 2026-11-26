@@ -63,15 +63,16 @@
 }
 
 /* Fonts are loaded via next/font in layout.tsx and exposed as CSS variables.
-   Newsreader: headlines, unit titles and the story text (a high-contrast serif).
-   Source Sans 3: interface, labels, captions and summaries (open shapes, easy to read).
-   JetBrains Mono: archive stamps, dates and citation tags. */
+   One text face everywhere: Newsreader, the font of the chapter story text, sets
+   body copy, labels, buttons, captions and dates. Instrument Serif is used only for
+   the big h1/h2 titles (see the end of this file). The sans and mono names are kept
+   so existing classes still work, but they all point to Newsreader. */
 @theme inline {
-  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-newsreader), Georgia, serif;
   --font-display: var(--font-newsreader), Georgia, serif;
   --font-serif: var(--font-newsreader), Georgia, serif;
-  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
-  --font-type: var(--font-jetbrains), ui-monospace, monospace;
+  --font-mono: var(--font-newsreader), Georgia, serif;
+  --font-type: var(--font-newsreader), Georgia, serif;
 }
 
 @layer base {
