@@ -1,11 +1,9 @@
-:HL["/AmericaUnwrapped/_next/static/chunks/2ysmn1vrqc80s.css","style"]
-:HL["/AmericaUnwrapped/_next/static/media/53897e768d329f66-s.p.3t6q91iet4nsy.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/chunks/0pi9f5-4i7yco.css","style"]
 :HL["/AmericaUnwrapped/_next/static/media/61e56fd33ece1ad8-s.p.0op912u62qdhl.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/AmericaUnwrapped/_next/static/media/6873f4f49904bdbd-s.p.2adce56gso3ku.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/AmericaUnwrapped/_next/static/media/cf9a11b6772b9533-s.p.1elj1f4z6aq4a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/AmericaUnwrapped/_next/static/media/d902bc2bfdd0a4cb-s.p.1g73gv09-xcb6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/AmericaUnwrapped/_next/static/media/e63b65bb308a9351-s.p.3j3877k49yy0l.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"paris-peace-accords","s":["study-guide"]},"h":96,"c":"$Q3"}]]
-1:[["children",{"s":"vietnam","h":64,"c":"$Q2"}]]
-0:{"b":"JORuQHrzL0RGQ9I1nCcak","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+1:[["children",{"s":"vietnam","h":96,"c":"$Q2"}]]
+0:{"b":"D5BSpeAhKeLp6caGRqCsS","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
