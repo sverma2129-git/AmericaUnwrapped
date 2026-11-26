@@ -6,11 +6,11 @@ import { SOURCE_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { socialMeta } from '@/lib/social';
 
 export const metadata: Metadata = {
-  title: 'How we decide what’s true',
+  title: 'About Us',
   description:
     'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
   ...socialMeta(
-    'How we decide what’s true',
+    'About Us',
     'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
   ),
 };
@@ -33,7 +33,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
       <header>
-        <h1 className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">How we decide what’s true</h1>
+        <h1 className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">About Us</h1>
         <p className="mt-4 max-w-[44ch] font-serif text-xl leading-snug text-ink">
           America Unwrapped is a history site for high school students. This page explains how it’s written and checked,
           so you can decide how far to trust it.

@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li><Link href="/vietnam" className={linkClass}>The Vietnam War, all {CHAPTER_COUNT} chapters</Link></li>
               <li><Link href={`/vietnam/${VIETNAM_CHAPTERS[0].id}`} className={linkClass}>Start at Chapter 1</Link></li>
-              <li><Link href="/about" className={linkClass}>How we decide what’s true</Link></li>
+              <li><Link href="/about" className={linkClass}>About Us</Link></li>
               <li><Link href="/about#image-credits" className={linkClass}>Image credits</Link></li>
             </ul>
           </nav>
