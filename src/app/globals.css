@@ -57,6 +57,9 @@
   --text-2xl--line-height: 1.15;
   --text-3xl: 2.75rem;
   --text-3xl--line-height: 1.05;
+  /* Home page headline over the opening photograph only. */
+  --text-hero: clamp(2.75rem, 7vw, 4.5rem);
+  --text-hero--line-height: 1.02;
 
   /* Two shapes: a slight corner on everything, and circles for dots. */
   --radius-sm: 0.1875rem;

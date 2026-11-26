@@ -4,7 +4,9 @@ import { VIETNAM_CHAPTERS, getChapter } from '@/data/vietnam/chapters';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { buildGlossary, collectQuizQuestions } from '@/lib/study';
 import DocumentFacsimile from '@/components/common/DocumentFacsimile';
+import { imageSrc } from '@/components/common/Figure';
 import ContentsGrid from '@/components/vietnam/ContentsGrid';
+import { IMAGE_REGISTRY } from '@/data/vietnam/images';
 import { DBQ_PROMPTS, TURNING_POINTS } from '@/data/vietnam/studyGuide';
 import { socialMeta } from '@/lib/social';
 
@@ -25,6 +27,7 @@ export default function HomePage() {
   const featured = getChapter('gulf-of-tonkin');
   const quizCount = collectQuizQuestions(VIETNAM_CHAPTERS, ALL_CHAPTERS_STUDY_DATA).length;
   const termCount = buildGlossary(ALL_CHAPTERS_STUDY_DATA).length;
+  const hero = IMAGE_REGISTRY['frequent-wind-1975'];
 
   const studyTools = [
     {
@@ -58,54 +61,60 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-16 lg:px-8">
-      <div className="grid gap-x-14 gap-y-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)]">
-        <section aria-labelledby="home-title">
-          <h1 id="home-title" className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">
-            The Vietnam War, 1945–1975
-          </h1>
-          <p className="mt-5 max-w-[34ch] font-serif text-xl leading-snug text-ink">
-            In 1945 Ho Chi Minh asked Harry Truman for help. Thirty years later, the last Americans left Saigon by
-            helicopter.
-          </p>
-          <p className="mt-5 max-w-[52ch] text-base text-ink-muted">
-            Have a test coming up? Start with the study guide: {quizCount} practice questions, {termCount} flashcards and
-            a timeline. Want the whole story? Twelve chapters follow the war through the cables and photographs of the
-            time.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
-            <Link
-              href="/vietnam/study-guide"
-              className="rounded-sm bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-hover"
+    <>
+      {/* The opening: one photograph, full width */}
+      <section aria-labelledby="home-title" className="relative isolate">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={imageSrc(hero.file)}
+          alt={hero.alt}
+          fetchPriority="high"
+          className="h-[80vh] min-h-[34rem] w-full object-cover object-[center_30%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0">
+          <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-6 sm:pb-10 lg:px-8">
+            {/* color is set inline because the base heading style is navy */}
+            <h1
+              id="home-title"
+              className="font-display max-w-[16ch] text-hero"
+              style={{ color: '#fff' }}
             >
-              Study for your test
-            </Link>
-            <Link href={`/vietnam/${firstChapter.id}`} className={`${textLink} text-sm`}>
-              Read the story from Chapter 1
-            </Link>
-          </div>
-          <p className="mt-6 max-w-[52ch] text-sm text-ink-muted">
-            Free, with no account. We check every quotation word for word against the
-            original, and every image links to its archive record.
-          </p>
-        </section>
-
-        {featured?.featuredDocument && (
-          <section aria-labelledby="home-document" className="lg:pt-1">
-            <h2 id="home-document" className="sr-only">
-              A document from Chapter {featured.number}
-            </h2>
-            <DocumentFacsimile doc={featured.featuredDocument} />
-            <p className="mt-4 text-sm">
-              <Link href={`/vietnam/${featured.id}`} className={textLink}>
-                Read Chapter {featured.number}, {featured.title}
-              </Link>
+              Thirty years of war ended like this.
+            </h1>
+            <p className="mt-4 max-w-[52ch] text-lg text-white/90">
+              April 1975: a ship’s crew pushes a helicopter into the sea to make room for more evacuation flights from
+              Saigon. See how the Vietnam War came to this, through the records of the time.
             </p>
-          </section>
-        )}
-      </div>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-4">
+              <Link
+                href={`/vietnam/${firstChapter.id}`}
+                className="rounded-sm bg-brand px-6 py-3 text-base font-semibold text-white hover:bg-brand-hover"
+              >
+                Read the story
+              </Link>
+              <Link href="/vietnam/study-guide" className="text-base font-semibold text-white underline underline-offset-4">
+                Study for your test
+              </Link>
+            </div>
+            <p className="mt-5 text-sm text-white/75">
+              Photo: {hero.creator}, {hero.date}.{' '}
+              <a href={hero.sourceUrl} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+                Source record
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <section aria-labelledby="study-title" className="mt-16 rounded-sm bg-parchment px-5 py-10 sm:mt-20 sm:px-10 sm:py-12">
+    <div className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
+      <p className="max-w-[70ch] text-base text-ink-muted">
+        Have a test coming up? Start with the study guide: {quizCount} practice questions, {termCount} flashcards and a
+        timeline. Want the whole story? Twelve chapters follow the war from 1945 to 1975. Free, with no account. We check
+        every quotation word for word against the original, and every image links to its archive record.
+      </p>
+
+      <section aria-labelledby="study-title" className="mt-10 rounded-sm bg-parchment px-5 py-10 sm:mt-12 sm:px-10 sm:py-12">
         <h2 id="study-title" className="font-display text-2xl font-bold text-navy">
           Studying for a test?
         </h2>
@@ -132,6 +141,26 @@ export default function HomePage() {
         </ul>
       </section>
 
+      {featured?.featuredDocument && (
+        <section aria-labelledby="home-document" className="mt-20 grid gap-x-14 gap-y-8 sm:mt-24 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)]">
+          <div>
+            <h2 id="home-document" className="font-display text-2xl font-bold text-navy">
+              This attack probably never happened
+            </h2>
+            <p className="mt-3 max-w-[44ch] text-base text-ink-muted">
+              On August 4, 1964, U.S. ships reported a second attack. Read what the commander at sea cabled home that
+              day, then see how it helped lead America into war.
+            </p>
+            <p className="mt-4">
+              <Link href={`/vietnam/${featured.id}`} className={textLink}>
+                Read Chapter {featured.number}, {featured.title}
+              </Link>
+            </p>
+          </div>
+          <DocumentFacsimile doc={featured.featuredDocument} />
+        </section>
+      )}
+
       <section aria-labelledby="contents-title" className="mt-20 sm:mt-24">
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
           <h2 id="contents-title" className="font-display text-2xl font-bold text-navy">
@@ -146,5 +175,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
