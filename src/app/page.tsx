@@ -110,8 +110,8 @@ export default function HomePage() {
     <div className="mx-auto max-w-6xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
       <p className="max-w-[70ch] text-base text-ink-muted">
         Have a test coming up? Start with the study guide: {quizCount} practice questions, {termCount} flashcards and a
-        timeline. Want the whole story? Twelve chapters follow the war from 1945 to 1975. Free, with no account. We check
-        every quotation word for word against the original, and every image links to its archive record.
+        timeline. Want the whole story? Twelve chapters follow the war from 1945 to 1975. Free, with no account. Quotations have footnotes
+        naming their sources, and every image links to its archive record.
       </p>
 
       <section aria-labelledby="study-title" className="mt-10 rounded-sm bg-parchment px-5 py-10 sm:mt-12 sm:px-10 sm:py-12">

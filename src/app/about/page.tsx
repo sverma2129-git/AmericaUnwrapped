@@ -2,16 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Thumb } from '@/components/common/Figure';
 import { IMAGE_REGISTRY, RIGHTS_LABEL } from '@/data/vietnam/images';
-import { SOURCE_REGISTRY } from '@/data/vietnam/sourceRegistry';
 import { socialMeta } from '@/lib/social';
 
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
+    'How America Unwrapped is written: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
   ...socialMeta(
     'About Us',
-    'How America Unwrapped is written and checked: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
+    'How America Unwrapped is written: where the facts come from, when we use quotation marks, and how we handle questions historians still argue about.',
   ),
 };
 
@@ -27,7 +26,6 @@ function Section({ id, title, children }: { id: string; title: string; children:
 }
 
 export default function AboutPage() {
-  const verified = SOURCE_REGISTRY.filter((e) => e.verificationCategory === 'VERIFIED_QUOTATION').length;
   const images = Object.values(IMAGE_REGISTRY);
 
   return (
@@ -35,7 +33,7 @@ export default function AboutPage() {
       <header>
         <h1 className="font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">About Us</h1>
         <p className="mt-4 max-w-[44ch] font-serif text-xl leading-snug text-ink">
-          America Unwrapped is a history site for high school students. This page explains how it’s written and checked,
+          America Unwrapped is a history site for high school students. This page explains how it’s written and where it comes from,
           so you can decide how far to trust it.
         </p>
       </header>
@@ -47,9 +45,9 @@ export default function AboutPage() {
           number to see the source, what it supports, and what it doesn’t prove.
         </p>
         <p>
-          We put words in quotation marks only when we have checked them word for word against the original. If we
-          couldn’t check a quotation, we say it in our own words and cite where it comes from. Right now {verified}{' '}
-          quotations on the site have been checked this way.
+          Words in quotation marks are meant to be the exact words of the source. Where we paraphrase, we leave the
+          quotation marks off and cite where the idea comes from. Footnotes name the source, so you can compare it with
+          the original yourself.
         </p>
       </Section>
 
