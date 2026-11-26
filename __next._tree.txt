@@ -5,4 +5,4 @@
 :HL["/AmericaUnwrapped/_next/static/media/e63b65bb308a9351-s.p.3j3877k49yy0l.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/AmericaUnwrapped/images/vietnam/frequent-wind-1975.jpg","image",{"fetchPriority":"high"}]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"Ig-rO3ZXmZs8ag8bitwub","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"KDVAe57h61a-oBw7I6DBC","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

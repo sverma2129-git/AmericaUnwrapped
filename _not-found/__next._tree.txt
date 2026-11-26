@@ -1,4 +1,4 @@
 :HL["/AmericaUnwrapped/_next/static/chunks/27omf_2z7im_p.css","style"]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":96,"c":"$Q2"}]]
-0:{"b":"Ig-rO3ZXmZs8ag8bitwub","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"KDVAe57h61a-oBw7I6DBC","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
