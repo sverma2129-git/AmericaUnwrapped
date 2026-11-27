@@ -34,7 +34,7 @@ export default function ModuleFrame({
       {(takeaway || caption) && (
         <figcaption className="mt-6 space-y-2 max-w-3xl">
           {takeaway && (
-            <p className="border-l-2 border-brand pl-4 font-serif text-lg leading-snug text-ink">{takeaway}</p>
+            <p className="font-serif text-lg leading-snug text-ink">{takeaway}</p>
           )}
           {caption && (
             <p className="text-xs text-ink-soft">

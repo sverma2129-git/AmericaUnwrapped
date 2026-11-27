@@ -27,7 +27,7 @@ export default function DocumentFacsimile({ doc, className = '' }: { doc: Featur
   return (
     <figure className={`max-w-2xl ${className}`}>
       <div>
-        <div className="paper rounded-sm border border-rule border-l-4 border-l-navy px-5 pb-7 pt-6 sm:px-9 sm:pb-9 sm:pt-8">
+        <div className="paper rounded-sm border border-rule px-5 pb-7 pt-6 sm:px-9 sm:pb-9 sm:pt-8">
           <div className="flex flex-wrap-reverse items-start justify-between gap-x-6 gap-y-4">
             <p className="typed pt-1 font-bold text-navy">{doc.kind.toUpperCase()}</p>
             {stamp && (

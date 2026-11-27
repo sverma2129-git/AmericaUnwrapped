@@ -1,10 +1,9 @@
 'use client';
 
-import { PeriodBadge } from '@/components/vietnam/ContentsGrid';
 import React from 'react';
 import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
-import { getAdjacentChapters, getChapterPart } from '@/data/vietnam/chapters';
+import { getAdjacentChapters } from '@/data/vietnam/chapters';
 import { LOOK_CLOSER } from '@/data/vietnam/lookCloser';
 import { IMAGE_REGISTRY } from '@/data/vietnam/images';
 import InteractiveModuleWrapper from './InteractiveModuleWrapper';
@@ -36,7 +35,6 @@ const h2 = 'font-display text-2xl font-extrabold tracking-tight text-navy';
  */
 export default function ChapterContent({ chapter }: ChapterContentProps) {
   const study = ALL_CHAPTERS_STUDY_DATA[chapter.id];
-  const part = getChapterPart(chapter);
   const { next } = getAdjacentChapters(chapter);
   const ref = { id: chapter.id, number: chapter.number, title: chapter.title };
   const narrative = chapter.whatHappened.narrative;
@@ -62,10 +60,8 @@ export default function ChapterContent({ chapter }: ChapterContentProps) {
         }`}
       >
         <div className="max-w-4xl">
-          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
-            <span>{part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}</span>
-            <PeriodBadge>{chapter.timeframe}</PeriodBadge>
-            {chapter.isLandmark && <span className="font-medium text-brand">A turning point</span>}
+          <p className="text-sm text-ink-muted">
+            Chapter {chapter.number}, {chapter.timeframe}
           </p>
           <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">{chapter.title}</h1>
           <p className="mt-4 max-w-[40ch] font-serif text-xl leading-snug text-ink">{study?.bigQuestion ?? chapter.subtitle}</p>

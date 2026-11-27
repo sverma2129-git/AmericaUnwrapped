@@ -140,7 +140,7 @@ export default function CitationModal() {
 
         {/* 2. VERBATIM EXCERPT (verified quotations with exact text only) */}
         {isVerbatim && (
-          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-sm space-y-1.5 border-l border-l-brand">
+          <section aria-labelledby="section-exact-quote" className="p-4 bg-parchment border border-rule rounded-sm space-y-1.5">
             <span
               id="section-exact-quote"
               className="text-xs text-brand font-bold block"

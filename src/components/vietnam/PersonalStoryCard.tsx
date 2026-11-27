@@ -10,7 +10,7 @@ export default function PersonalStoryCard({ story }: { story: PersonalStory }) {
   return (
     <aside
       aria-label={`One person's war: ${story.name}`}
-      className="max-w-3xl paper rounded-sm border border-rule border-l-4 border-l-brand p-6 sm:p-8 space-y-5"
+      className="max-w-3xl paper rounded-sm border border-rule p-6 sm:p-8 space-y-5"
     >
       <div className="space-y-1">
         <h3 className="font-display text-xl font-bold text-navy">{story.name}</h3>

@@ -19,7 +19,7 @@ export default function DocumentInspector({ document }: { document: PrimarySourc
   const lookupId = document.registryId || document.id;
 
   return (
-    <article className="paper rounded-sm border border-rule border-l-4 border-l-navy p-5 sm:p-7">
+    <article className="paper rounded-sm border border-rule p-5 sm:p-7">
       <p className="font-mono text-xs text-ink-muted">
         {ARCHIVE[document.side] ?? 'Document'}
         {document.classification ? `, ${document.classification}` : ''}

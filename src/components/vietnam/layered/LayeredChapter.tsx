@@ -1,8 +1,7 @@
 import React from 'react';
-import { PeriodBadge } from '@/components/vietnam/ContentsGrid';
 import type { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
-import { getAdjacentChapters, getChapterPart } from '@/data/vietnam/chapters';
+import { getAdjacentChapters } from '@/data/vietnam/chapters';
 import CitedParagraph from '@/components/common/CitedParagraph';
 import CitationMarker from '@/components/common/CitationMarker';
 import DocumentFacsimile from '@/components/common/DocumentFacsimile';
@@ -38,7 +37,6 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
   const study = ALL_CHAPTERS_STUDY_DATA[chapter.id];
   const story = chapter.story;
   const beats = story?.beats ?? [];
-  const part = getChapterPart(chapter);
   const questions = new Map(study?.quiz.map((q) => [q.id, q]));
   const doc = chapter.featuredDocument;
   const docInStory = doc?.afterBeatId && beats.some((b) => b.id === doc.afterBeatId);
@@ -54,10 +52,8 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
     <CourseProvider>
       <article className="mx-auto max-w-6xl px-4 pb-20 pt-10 sm:px-6 sm:pt-14 lg:px-8">
         <header className="max-w-4xl">
-          <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
-            <span>{part ? `Part ${part.number}, ` : ''}Chapter {chapter.number}</span>
-            <PeriodBadge>{chapter.timeframe}</PeriodBadge>
-            {chapter.isLandmark && <span className="font-medium text-brand">A turning point</span>}
+          <p className="text-sm text-ink-muted">
+            Chapter {chapter.number}, {chapter.timeframe}
           </p>
           <h1 className="mt-3 font-display text-2xl font-extrabold tracking-tight text-navy sm:text-3xl">{chapter.title}</h1>
           <p className="mt-4 max-w-[40ch] font-serif text-xl leading-snug text-ink">{study?.bigQuestion ?? chapter.subtitle}</p>

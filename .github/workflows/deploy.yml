@@ -7,18 +7,24 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+# Nothing gets write access unless a job asks for it.
 permissions:
-  contents: write
+  contents: read
+
+# Outside actions are pinned to an exact commit so their code can't change under us.
+# Dependabot (.github/dependabot.yml) proposes updates to these pins.
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -34,13 +40,43 @@ jobs:
         run: npm test
 
       - name: Build Next.js
-        run: |
-          GITHUB_ACTIONS=true GITHUB_REPOSITORY=${{ github.repository }} npm run build
-          touch ./out/.nojekyll
+        run: GITHUB_ACTIONS=true npm run build
+
+      - name: Keep the built site for publishing
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: site
+          path: out
+          if-no-files-found: error
+          retention-days: 3
+
+  # The only job that can write to the repository. It runs none of the project's code
+  # or packages, and never runs for pull requests.
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: deploy-pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+
+      - name: Fetch the built site
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: site
+          path: out
+
+      - name: Tell GitHub Pages to serve files as they are
+        run: touch ./out/.nojekyll
 
       - name: Deploy to gh-pages branch
-        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out

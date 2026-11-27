@@ -1,0 +1,19 @@
+# Weekly checks for newer versions of the packages and actions the site is built with.
+# Each proposed update arrives as a pull request; nothing changes until it is merged.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      npm-minor-and-patch:
+        update-types: [minor, patch]
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]

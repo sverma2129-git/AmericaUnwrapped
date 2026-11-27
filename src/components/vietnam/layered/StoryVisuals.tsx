@@ -17,7 +17,7 @@ function VerbatimQuote({ citationId }: { citationId: string }) {
   const citation = CITATION_REGISTRY[citationId];
   if (!citation || !isVerbatimQuotation(citation)) return null;
   return (
-    <figure className="paper rounded-sm border border-rule border-l-4 border-l-brand p-6 sm:p-8">
+    <figure className="paper rounded-sm border border-rule p-6 sm:p-8">
       <blockquote className="font-serif text-xl leading-snug text-ink">
         &ldquo;{citation.exactQuotation}&rdquo;
       </blockquote>
