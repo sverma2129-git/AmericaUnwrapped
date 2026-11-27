@@ -1,0 +1,8 @@
+:HL["/AmericaUnwrapped/_next/static/chunks/282el9ewjpw-n.css","style"]
+:HL["/AmericaUnwrapped/_next/static/media/61e56fd33ece1ad8-s.p.0op912u62qdhl.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/cf9a11b6772b9533-s.p.1elj1f4z6aq4a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/d902bc2bfdd0a4cb-s.p.1g73gv09-xcb6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/AmericaUnwrapped/_next/static/media/e63b65bb308a9351-s.p.3j3877k49yy0l.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":"teachers","h":96,"c":"$Q2"}]]
+0:{"b":"edO_GMyRzCZESPCxCarsX","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
