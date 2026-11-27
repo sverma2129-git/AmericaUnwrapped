@@ -1,4 +1,5 @@
 import React from 'react';
+import CopyLinkButton from '@/components/common/CopyLinkButton';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
@@ -196,6 +197,7 @@ export default function StudyGuidePage() {
               the results list which chapters to reread. Your teacher writes your test, so pick the chapters your class
               covered and use these to check what you know.
             </SectionHeader>
+            <CopyLinkButton anchor="quiz" label="Copy link to the quiz" className="mt-4" />
             <div className="mt-8">
               <PracticeQuiz items={quizItems} />
             </div>

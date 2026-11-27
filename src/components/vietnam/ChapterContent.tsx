@@ -1,5 +1,6 @@
 'use client';
 
+import CopyLinkButton from '@/components/common/CopyLinkButton';
 import React from 'react';
 import { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
@@ -87,6 +88,7 @@ export default function ChapterContent({ chapter }: ChapterContentProps) {
                 })}
             </ul>
           </nav>
+          <CopyLinkButton className="mt-5" />
         </div>
         {chapter.leadImageId && (
           <div className={portraitLead ? 'mt-10 lg:mt-0' : 'mt-10'}>

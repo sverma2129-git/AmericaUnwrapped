@@ -1,4 +1,5 @@
 import React from 'react';
+import CopyLinkButton from '@/components/common/CopyLinkButton';
 import type { ChapterData } from '@/types/vietnam';
 import { ALL_CHAPTERS_STUDY_DATA } from '@/data/vietnam/studyData';
 import { getAdjacentChapters } from '@/data/vietnam/chapters';
@@ -69,6 +70,7 @@ export default function LayeredChapter({ chapter }: LayeredChapterProps) {
               ))}
             </ul>
           </nav>
+          <CopyLinkButton className="mt-5" />
         </header>
 
         {chapter.leadImageId && <Figure imageId={chapter.leadImageId} priority className="mt-10" />}
