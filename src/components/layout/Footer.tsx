@@ -13,7 +13,7 @@ export default function Footer() {
               America Unwrapped
             </Link>
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-muted">
-              American history for high school students, told through the documents, with every quotation checked against the original.
+              American history for high school students, told through the documents.
             </p>
           </div>
 
@@ -24,6 +24,7 @@ export default function Footer() {
             <ul className="mt-3 space-y-2 text-sm">
               <li><Link href="/vietnam" className={linkClass}>The Vietnam War, all {CHAPTER_COUNT} chapters</Link></li>
               <li><Link href={`/vietnam/${VIETNAM_CHAPTERS[0].id}`} className={linkClass}>Start at Chapter 1</Link></li>
+              <li><Link href="/teachers" className={linkClass}>For teachers</Link></li>
               <li><Link href="/about" className={linkClass}>About Us</Link></li>
               <li><Link href="/about#image-credits" className={linkClass}>Image credits</Link></li>
             </ul>

@@ -5,15 +5,24 @@ import React, { useEffect, useRef, useState } from 'react';
 type Status = 'idle' | 'copied' | 'manual';
 
 /**
- * Copies the address of this page (or of one section of it) so a student can paste it
- * into a chat or Google Classroom. Nothing is sent anywhere. If the browser blocks
+ * Copies the address of a page on this site (or of one section of it), or a ready-made
+ * note that ends with that address, for pasting into a chat or Google Classroom. Nothing is sent anywhere. If the browser blocks
  * copying, the address is shown so it can be selected by hand.
  */
 export default function CopyLinkButton({
   anchor,
+  path,
+  message,
   label = 'Copy link',
+  context,
   className = '',
 }: {
+  /** Site path to link to, such as /vietnam. Defaults to the current page. */
+  path?: string;
+  /** Text to copy ahead of the address. */
+  message?: string;
+  /** Names the target for screen readers when several buttons share a label. */
+  context?: string;
   /** Id of a section to link straight to, without the #. */
   anchor?: string;
   label?: string;
@@ -31,7 +40,9 @@ export default function CopyLinkButton({
 
   async function copy() {
     const { origin, pathname } = window.location;
-    const link = `${origin}${pathname}${anchor ? `#${anchor}` : ''}`;
+    const target = path ? `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}${path}` : pathname;
+    const address = `${origin}${target}${anchor ? `#${anchor}` : ''}`;
+    const link = message ? `${message} ${address}` : address;
     setUrl(link);
     clearTimeout(timer.current);
     try {
@@ -48,6 +59,7 @@ export default function CopyLinkButton({
       <button
         type="button"
         onClick={copy}
+        aria-label={context ? `${status === 'copied' ? 'Link copied' : label}: ${context}` : undefined}
         className="inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-sm border border-rule-strong bg-surface px-4 text-sm font-semibold text-ink hover:border-brand hover:text-brand"
       >
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -61,11 +73,11 @@ export default function CopyLinkButton({
         {status === 'copied' ? 'Link copied' : label}
       </button>
       <span role="status" className="sr-only">
-        {status === 'copied' ? 'Link copied' : ''}
+        {status === 'copied' ? 'Copied' : ''}
       </span>
       {status === 'manual' && (
         <label className="flex w-full max-w-md flex-col gap-1 text-sm text-ink-muted">
-          Copy this address:
+          Copy this:
           <input
             ref={field}
             readOnly

@@ -85,6 +85,22 @@ export function collectQuizItems(chapters: ChapterData[], studyData: Record<stri
   return chapters.flatMap((c) => (studyData[c.id]?.quiz ?? []).map((question) => ({ question, chapter: chapterRef(c) })));
 }
 
+/** A careful reading pace for history text, in words per minute. */
+const WORDS_PER_MINUTE = 180;
+
+/**
+ * Rough minutes to read a chapter's story text (not its sources or practice questions).
+ * Layered chapters are read as story beats; standard chapters as the narrative.
+ */
+export function storyMinutes(chapter: ChapterData): number {
+  const text =
+    chapter.layout === 'layered' && chapter.story
+      ? chapter.story.beats.flatMap((b) => [b.headline, ...b.body])
+      : chapter.whatHappened.narrative;
+  const words = text.join(' ').replace(/\[\^[^\]]+\]/g, '').split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.ceil(words / WORDS_PER_MINUTE));
+}
+
 /**
  * The same de-duplicated term list as buildGlossary, in chapter order, with the
  * chapter where each term first appears.

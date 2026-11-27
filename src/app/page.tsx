@@ -122,6 +122,11 @@ export default function HomePage() {
           Start here. Everything in the study guide comes from the twelve chapters, and each question shows which chapter
           to reread if you miss it. Your teacher writes your test, so use these to check what you know.
         </p>
+        <p className="mt-3 text-base">
+          <Link href="/teachers" className={textLink}>
+            Teaching this unit? Get the links for your class
+          </Link>
+        </p>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {studyTools.map((tool) => (
             <li key={tool.title}>
