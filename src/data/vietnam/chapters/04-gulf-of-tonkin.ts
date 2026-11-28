@@ -207,7 +207,7 @@ const chapter: ChapterData = {
         },
       ],
     },
-    evidence: ['Q024', 'Q013', 'Q021', 'Q027', 'Q006', 'Q022', 'Q028', 'Q005', 'Q023', 'Q029'],
+    evidence: ['Q024', 'Q013', 'Q021', 'Q027', 'Q006', 'Q022', 'Q028', 'Q023', 'Q029'],
     tasks: {
       ah1: [
         {
@@ -297,18 +297,18 @@ const chapter: ChapterData = {
         },
         {
           kind: 'saq',
-          citationId: 'Q005',
-          intro: 'Answer (a), (b), and (c) using the excerpt from a historian.',
+          citationId: 'Q023',
+          intro: 'Answer (a), (b), and (c) using the excerpt from a former secretary of defense.',
           parts: [
             {
               label: 'a',
-              prompt: 'Briefly describe the historian’s argument in the excerpt.',
+              prompt: 'Briefly describe McNamara’s argument in the excerpt.',
               model:
-                'The historian, Robert Hanyok of the NSA, argues that the second attack on August 4, 1964 did not happen at all, not just that it happened differently than reported.',
+                'Robert McNamara argues that confusion led officials to judge that U.S. ships were attacked on August 4, 1964, and that later events showed the attack did not happen.',
             },
             {
               label: 'b',
-              prompt: 'Briefly explain ONE piece of historical evidence that supports the argument.',
+              prompt: 'Briefly explain ONE piece of evidence from August 1964 that supports the argument.',
               model:
                 'Captain Herrick’s flash cable that night said many contacts looked doubtful and that the Maddox had no visual sightings. A Navy pilot flying overhead also saw no enemy boats.',
             },
@@ -361,9 +361,9 @@ const chapter: ChapterData = {
   featuredDocument: {
     citationId: 'Q013',
     kind: 'Flash telegram',
-    stamp: 'FRUS 1964–1968, Vol. I, Doc. 117',
+    stamp: 'FRUS 1964–1968, Vol. I, Doc. 276',
     header: [['From', 'CTG 72.1 (USS Maddox)'], ['To', 'CINCPACFLT'], ['Sent', '041727Z AUG 64']],
-    note: 'Captain John Herrick sent this from the Maddox after the reported attack of August 4. CINCPACFLT is the Navy’s Pacific Fleet command. About ten hours later, President Johnson went on television to announce air strikes.',
+    note: 'Captain John Herrick sent this from the Maddox after the reported attack of August 4. CINCPACFLT is the Navy’s Pacific Fleet command. About ten hours later, President Johnson went on television to announce air strikes. The full wording comes from a published reprint; the State Department volume quotes parts of it.',
   },
   whatHappened: {
     narrative: [

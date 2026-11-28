@@ -13,14 +13,6 @@ const chapter: ChapterData = {
   summary:
     'After the U.S. left, South Vietnam’s economy shrank, prices soared, and Congress cut aid so sharply that the army had to ration ammunition and fuel. In June 1973, Congress passed the Case-Church Amendment, which made it illegal for U.S. forces to go back in. In late 1974, Hanoi tested America’s will at Phuoc Long. No response came, so it sped up its campaign. President Thieu’s sudden order to retreat from the Central Highlands turned into a rout. South Vietnam fell in 55 days, and Saigon was captured on April 30, 1975.',
   isLandmark: true,
-  landmarkMoment: {
-    bannerTitle: 'The 55 days that ended South Vietnam',
-    dateline: 'April 30, 1975, 11:30 a.m.',
-    location: 'The Independence Palace, Saigon',
-    quote: 'On the morning of April 30, 1975, North Vietnamese armored units breached the perimeter gates of Saigon’s Presidential Palace, concluding the military collapse of the Republic of Vietnam.',
-    quoteSpeaker: 'George J. Veith',
-    quoteContext: 'Historical account based on Black April (2012)',
-  },
   whatHappened: {
     narrative: [
       'In 1973 and 1974, South Vietnam’s economy shrank sharply as American military spending disappeared. Congress, tired of the corruption in Saigon and set on getting out, cut military aid from $2.3 billion to less than $700 million.[^c10-1] South Vietnamese units had to ration artillery shells and bullets, and helicopters sat on the ground for lack of spare parts. In June 1973, Congress passed the Case-Church Amendment by margins large enough to override a veto. It banned all U.S. military action in Indochina after August 15, 1973, so Nixon’s private promises of air support to Thieu could no longer be kept.[^c10-1] In August 1974, Nixon resigned over the Watergate scandal. President Gerald Ford had neither the legal power nor the political support to step in.',

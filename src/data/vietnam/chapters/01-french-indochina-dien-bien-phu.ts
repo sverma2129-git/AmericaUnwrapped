@@ -134,14 +134,6 @@ const chapter: ChapterData = {
       },
     ],
   },
-  landmarkMoment: {
-    bannerTitle: 'The siege of Dien Bien Phu',
-    dateline: 'March 13 – May 7, 1954',
-    location: 'Muong Thanh Valley Basin, Northwestern Vietnam',
-    quote: 'Navarre’s entrenched valley bastion was systematically overwhelmed by artillery assembled on surrounding heights, turning the French stronghold into an untenable siege position.',
-    quoteSpeaker: 'Bernard B. Fall',
-    quoteContext: 'Historical synthesis from Hell in a Very Small Place (1966)',
-  },
   whatHappened: {
     narrative: [
       'On September 2, 1945, in Hanoi’s Ba Dinh Square, Ho Chi Minh proclaimed the establishment of the Democratic Republic of Vietnam (DRV), quoting directly from the American Declaration of Independence. French colonial authorities, determined to reassert sovereignty after wartime Japanese occupation, launched a military campaign to regain control, driving Ho’s Viet Minh into the northern mountains and initiating the First Indochina War in late 1946.',

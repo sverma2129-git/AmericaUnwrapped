@@ -15,7 +15,7 @@ const chapter: ChapterData = {
   featuredDocument: {
     citationId: 'Q004',
     kind: 'Telegram',
-    stamp: 'FRUS 1961–1963, Vol. IV, Doc. 268',
+    stamp: 'FRUS 1961–1963, Vol. III, Doc. 281',
     header: [['From', 'Department of State'], ['To', 'Embassy Saigon'], ['Number', '243'], ['Date', 'August 24, 1963']],
     note: 'Written by Roger Hilsman, Averell Harriman and George Ball, this cable told the embassy that Washington could live without Diem. On November 1–2, South Vietnamese generals overthrew him and killed him.',
   },

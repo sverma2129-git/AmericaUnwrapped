@@ -14,7 +14,7 @@ export const PRIMARY_DOCUMENTS: Record<string, PrimarySourceExcerpt> = {
     classification: 'Archival Diplomatic Cable (Unanswered)',
     archiveSource: 'U.S. National Archives and Records Administration (NARA), Record Group 226',
     archiveId: 'NARA RG 226, Entry 140, Box 39 / DocsTeach ID 595462',
-    excerpt: `I therefore earnestly appeal to you personally and to the American people to interfere urgently in support of our independence and help making the negotiations more in keeping with the principles of the Atlantic and San Francisco charters.`,
+    excerpt: `I therefore most earnestly appeal to you personally and to the American people to interfere urgently in support of our independence and help making the negotiations more in keeping with the principles of the Atlantic and San Francisco charters.`,
     historicalContext:
       'In the months immediately following World War II, Ho Chi Minh wrote multiple letters to President Truman appealing to the Atlantic Charter and American principles of national self-determination. Washington, prioritizing French cooperation in post-war European reconstruction and the emergent containment of the Soviet Union, never formally replied.',
     whyItMatters:
@@ -72,20 +72,20 @@ export const PRIMARY_DOCUMENTS: Record<string, PrimarySourceExcerpt> = {
     side: 'washington',
     date: 'August 24, 1963',
     classification: 'TOP SECRET // OPERATIONAL IMMEDIATE',
-    archiveSource: 'Foreign Relations of the United States (FRUS), 1961–1963, Vol. IV',
-    archiveId: 'FRUS 1961–1963, Vol. IV, Document 268 (Telegram 243)',
+    archiveSource: 'Foreign Relations of the United States (FRUS), 1961–1963, Vol. III',
+    archiveId: 'FRUS 1961–1963, Vol. III, Document 281 (Telegram 243)',
     excerpt: `US Government cannot tolerate situation in which power lies in Nhu's hands. Diem must be given chance to rid himself of Nhu and his coterie and replace them with best military and political personalities available. If, in spite of all of your efforts, Diem remains obdurate and refuses, then we must face the possibility that Diem himself cannot be preserved.`,
     historicalContext:
       'Drafted over a weekend when President Kennedy, Dean Rusk, and Robert McNamara were away from Washington, this cable signaled to South Vietnamese generals that the U.S. would not oppose a military coup against Ngo Dinh Diem following the raids on Buddhist pagodas.',
     whyItMatters:
       'The ensuing November 1, 1963 coup and assassination of Diem eliminated the civilian leadership of South Vietnam, creating a cycle of military juntas that drew Washington into direct institutional ownership of the regime.',
-    originalDocumentUrl: 'https://history.state.gov/historicaldocuments/frus1961-63v04/d268',
+    originalDocumentUrl: 'https://history.state.gov/historicaldocuments/frus1961-63v03/d281',
   },
   'hanyok-tonkin-nsa': {
     id: 'hanyok-tonkin-nsa',
     registryId: 'Q005',
-    isVerified: true,
-    transcriptionStatus: 'source_transcription',
+    isVerified: false,
+    transcriptionStatus: 'unverified_paraphrase',
     title: 'Cryptologic Analysis: "Skunks, Bogies, Silent Hounds, and the Flying Fish"',
     authorOrSpeaker: 'Robert J. Hanyok',
     role: 'Historian, National Security Agency (Center for Cryptologic History)',
@@ -94,7 +94,7 @@ export const PRIMARY_DOCUMENTS: Record<string, PrimarySourceExcerpt> = {
     classification: 'TOP SECRET // COMINT-CHANNELS (Declassified)',
     archiveSource: 'National Security Archive Electronic Briefing Book No. 132 / NSA Cryptologic Quarterly',
     archiveId: 'Cryptologic Quarterly, Vol. 19/20, p. 1 / NSA-EBB-132',
-    excerpt: `First, it is not simply that there is a different story as to what happened; it is that no attack happened that night.`,
+    excerpt: `The NSA historian Robert Hanyok concluded that no attack happened on the night of August 4, 1964, which is more than saying it happened differently than reported.`,
     historicalContext:
       'An exhaustive internal NSA investigation into the cryptologic records of August 4, 1964. Hanyok demonstrated that intercepted North Vietnamese communications cited by the Johnson administration as "proof" of an attack actually described the tow operations of torpedo boats damaged two days earlier.',
     whyItMatters:

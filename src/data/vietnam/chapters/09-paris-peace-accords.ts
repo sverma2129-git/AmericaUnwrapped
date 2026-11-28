@@ -13,14 +13,6 @@ const chapter: ChapterData = {
   summary:
     'In October 1972, Henry Kissinger and Le Duc Tho secretly agreed on a draft deal. U.S. troops would leave, and North Vietnamese troops could stay where they were in the South. South Vietnam’s President Thieu rejected it, and Nixon ordered the 11-day Christmas Bombing of Hanoi, called Linebacker II. The treaty signed in January 1973 was essentially the same as the October draft. It ended direct American involvement and left the civil war unsettled.',
   isLandmark: true,
-  landmarkMoment: {
-    bannerTitle: 'The Paris Peace Accords',
-    dateline: 'January 27, 1973',
-    location: 'International Conference Center, Avenue Kléber, Paris',
-    quote: 'The diplomatic settlement permitted an estimated 150,000 to 200,000 North Vietnamese combat troops to remain in South Vietnam while concluding the total withdrawal of American combat forces.',
-    quoteSpeaker: 'Pierre Asselin',
-    quoteContext: 'Historical analysis based on A Bitter Peace (2002)',
-  },
   featuredDocument: {
     citationId: 'Q010',
     kind: 'Agreement',
